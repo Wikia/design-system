@@ -1,0 +1,19 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "Design System developed for Wikia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wikia/design-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wikia/design-system/issues"
+  },
+  "homepage": "https://github.com/Wikia/design-system#readme"
+}
