@@ -5,8 +5,6 @@ gulp.task("default", function () {
 	gulp.src(
 		"styles/index.scss"
 	).pipe(
-		scss({
-			"bundleExec": true
-		}
-	)).pipe(gulp.dest("www"));
+		scss()
+	).pipe(gulp.dest("www"));
 });
