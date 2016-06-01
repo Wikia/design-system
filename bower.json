@@ -1,0 +1,18 @@
+{
+  "name": "design-system-reference-page",
+  "homepage": "https://github.com/Wikia/design-system-reference-page",
+  "authors": [
+    "Bogna Knychala <bogna.ka@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
