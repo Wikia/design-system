@@ -8,7 +8,6 @@
   "description": "Design System developed for Wikia",
   "main": "",
   "license": "UNLICENSED",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
