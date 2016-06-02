@@ -1,0 +1,244 @@
+/**
+ * Styledown
+ *
+ * This is the basic styles to make a Styledown document look like a proper
+ * style guide. Recommendation: use and remove any pieces as you see fit.
+ */
+
+/**
+ * Basic normalize
+ */
+
+h2.sg, h3.sg, ul.sg, p.sg {
+  margin: 20px 0;
+  line-height: 1.55;
+}
+h2.sg {
+  font-size: 2.2em;
+  font-weight: 100;
+  margin-top: 3em;
+}
+h3.sg {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+h3.sg + .sg {
+  margin-top: -20px;
+}
+
+/* Colors */
+p.sg, ul.sg {
+  color: #555;
+}
+h2.sg {
+  color: #111;
+}
+h3.sg {
+  color: #333;
+}
+
+code.sg {
+  background: rgba(250, 250, 250, 0.5);
+  color: #579;
+
+  padding: 2px 5px;
+  margin: 0 1px;
+  border-radius: 2px;
+  font-size: 0.8em;
+  font-family: menlo, monospace;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.01), inset -1px -1px rgba(0,0,0,0.01);
+}
+
+code.sg:first-child {
+  background: rgba(0, 100, 250, 0.1);
+  box-shadow: none;
+  color: #357;
+}
+
+.sg-block, .sg-code, .sg-canvas, .sg-text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * An <h3> block.
+ *
+ * It looks like:
+ *
+ *     .sg-block
+ *       .sg-text       - text items
+ *         h3
+ *         p
+ *         ...
+ *       .sg-example
+ *         .sg-canvas   - canvas where its displayed
+ *         .sg-code     - code snippet
+ */
+
+.sg-block {
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  margin: 20px 0;
+}
+
+.sg-block:last-of-type {
+  padding-bottom: 20px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.sg-block:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/**
+ * Text element
+ */
+
+@media (min-width: 768px) {
+  .sg-text {
+    float: left;
+    width: 26%;
+  }
+
+  .sg-text + .sg-example,
+  .sg-text + .sg-code {
+    float: right;
+    width: 70%;
+  }
+}
+
+.sg-text > :first-child {
+  margin-top: 0;
+}
+
+
+/**
+ * An example's canvas.
+ */
+
+.sg-canvas {
+  margin-bottom: 20px;
+}
+
+.sg-padded .sg-canvas {
+  padding: 20px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow-x: auto;
+}
+
+/**
+ * The <pre> code that shows the sample.
+ */
+
+.sg-code {
+  border: solid 1px transparent;
+  overflow-x: auto;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  margin: 0;
+  padding: 20px;
+
+  font-size: 0.85em;
+  font-family: menlo, monospace;
+  line-height: 1.5;
+  background: #fafaff;
+  color: #333;
+}
+
+/*
+ * Syntax highlighting
+ */
+
+.sg .hljs-tag,
+.sg .hljs-comment {
+  color: #999;
+}
+
+.sg .hljs-keyword,
+.sg .hljs-title {
+  color: #345;
+}
+
+.sg .hljs-attribute {
+  color: #59a;
+}
+
+.sg .hljs-string,
+.sg .hljs-number,
+.sg .hljs-value {
+  color: #3ac;
+}
+
+/*
+ * Code expansion
+ *
+ *     .sg-example
+ *       .sg-canvas
+ *       pre.sg-code
+ *       button.sg-expando
+ */
+
+.sg-code.sg-hidden {
+  display: none;
+}
+
+.sg-expando {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  background: transparent;
+
+  position: relative;
+  top: -10px;
+  left: -10px;
+  padding: 5px 10px;
+  margin-bottom: -20px;
+}
+
+.sg-expando-contract {
+  top: 0;
+  margin-bottom: 0;
+}
+
+.sg-expando:before {
+  content: '•••';
+  display: inline-block;
+
+  height: 16px;
+  width: 36px;
+  line-height: 16px;
+  text-align: center;
+
+  font-size: 10px;
+  background: #fafafa;
+  border-radius: 3px;
+  color: #888;
+
+}
+
+.sg-expando:hover:before,
+.sg-expando:focus:before {
+  color: #222;
+  background: #ddd;
+}
+
+.sg-expando:active:before {
+  color: #fff;
+  background: #111;
+}
+
+.sg-expando-contract:before {
+  content: '\2715';
+}
+
+/*
+ * hover behavior
+ */
+

@@ -1,4 +1,5 @@
-.idea
-node_modules
-bower_components
-www
+.idea/
+bower_components/
+node_modules/
+www/
+npm-debug.log
