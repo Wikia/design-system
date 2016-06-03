@@ -8,7 +8,7 @@
     "Bartosz V. Bentkowski <me@bartoszbentkowski.com>"
   ],
   "scripts": {
-    "build": "styledown styles/*.scss styleguide/config.md > index.html"
+    "build": "gulp && styledown styles/*.scss styleguide/config.md > index.html"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Wikia/design-system-reference-page#readme",
   "devDependencies": {
+    "gulp": "3.9.1",
     "gulp-sass": "^2.3.1",
     "styledown": "1.0.2"
   }
