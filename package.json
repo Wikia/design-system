@@ -5,7 +5,8 @@
   "main": "index.js",
   "contributors": [
     "Bogna Knychala <bogna.ka@gmail.com>",
-    "Bartosz V. Bentkowski <me@bartoszbentkowski.com>"
+    "Bartosz V. Bentkowski <me@bartoszbentkowski.com>",
+    "Mateusz Warkocki <warkot@wikia-inc.com>"
   ],
   "scripts": {
     "build": "gulp && styledown styles/*.scss styleguide/config.md > index.html"
