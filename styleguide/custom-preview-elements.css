@@ -1,4 +1,5 @@
 .color-preview-group {
+	align-items: flex-start;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -8,6 +9,9 @@
 	--color-preview-height: 100px;
 	--color-preview-width: 110px;
 	margin: 10px;
+	transition-duration: 500ms;
+	transition-property: background-color, box-shadow;
+	transition-timing-function: ease-in-out;
 }
 
 .color-preview-box {
@@ -32,4 +36,9 @@
 .color-preview-variable,
 .color-preview-reference  {
 	font-family: monospace;
+}
+
+.highlight {
+	background-color: #e6e6e6;
+	box-shadow: 0 0 20px 0px #1a1a1a;
 }
