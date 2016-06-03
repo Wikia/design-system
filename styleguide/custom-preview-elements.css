@@ -1,0 +1,13 @@
+.color-preview-box {
+	border: 1px solid gray;
+	height: 64px;
+	width: 64px;
+}
+
+.color-preview-code {
+	border: solid gray;
+	border-width: 0 1px 1px;
+	font-family: monospace;
+	text-align: center;
+	width: 64px;
+}

@@ -23,6 +23,18 @@
   background-color: #09d3bf; }
 
 /**
+ * Color Barney:
+ * `$color-barney`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-barney
+ *       div.color-preview-code #c819ad
+ */
+.color-barney {
+  background-color: #c819ad; }
+
+/**
  * Component name:
  * `.your-component-here` - documentation on what your
  * component is goes here. Markdown is encouraged.
@@ -37,5 +49,5 @@
   background-color: #00b7e0; }
 
 body {
-  background: #39424d;
-  color: #ffffff; }
+  background: #ffffff;
+  color: #39424d; }

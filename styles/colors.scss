@@ -2,6 +2,7 @@
 
 /////////////////////////
 //// common colors' names (from the DS)
+
 /**
  * Color Aqua Blue:
  * `$color-aqua-blue`
@@ -30,7 +31,20 @@
   background-color: $color-aquamarine;
 }
 
-$color-barney: #c819ad;
+/**
+ * Color Barney:
+ * `$color-barney`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-barney
+ *       div.color-preview-code #c819ad
+ */
+
+.color-barney {
+  background-color: $color-barney;
+}
+
 $color-black-one: #333333;
 $color-black-three: #262626;
 $color-black-two: #1a1a1a;
