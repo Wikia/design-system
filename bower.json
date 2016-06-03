@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "design-system": "Wikia/design-system#^0.0.1"
+    "design-system": "Wikia/design-system#master"
   }
 }

@@ -1,38 +1,4 @@
-/**
- * Color Aqua Blue:
- * `$color-aqua-blue`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-aqua-blue
- *       div.color-preview-code #00b7e0
- */
-.color-aqua-blue {
-  background-color: #00b7e0; }
-
-/**
- * Color Aquamarine:
- * `$color-aquamarine`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-aquamarine
- *       div.color-preview-code #09d3bf
- */
-.color-aquamarine {
-  background-color: #09d3bf; }
-
-/**
- * Color Barney:
- * `$color-barney`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-barney
- *       div.color-preview-code #c819ad
- */
-.color-barney {
-  background-color: #c819ad; }
+@import '../bower_components/design-system/index';
 
 /**
  * Typescale:
@@ -72,50 +38,63 @@
  *       div.typescale-size-minus-3 This is headline
  *       code.sg $typograghy-minus-3
  */
+
 .typescale-size-base {
-  font-size: 16px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-base;
+	line-height: $line-height;
+}
 
 .typescale-size-minus-1 {
-  font-size: 14px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-minus-1;
+	line-height: $line-height;
+}
 
 .typescale-size-minus-2 {
-  font-size: 12px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-minus-2;
+	line-height: $line-height;
+}
 
 .typescale-size-minus-3 {
-  font-size: 10px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-minus-3;
+	line-height: $line-height;
+}
 
 .typescale-size-plus-1 {
-  font-size: 18px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-plus-1;
+	line-height: $line-height;
+}
 
 .typescale-size-plus-2 {
-  font-size: 24px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-plus-2;
+	line-height: $line-height;
+}
 
 .typescale-size-plus-3 {
-  font-size: 28px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-plus-3;
+	line-height: $line-height;
+}
 
 .typescale-size-plus-4 {
-  font-size: 36px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-plus-4;
+	line-height: $line-height;
+}
 
 .typescale-size-plus-5 {
-  font-size: 40px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-plus-5;
+	line-height: $line-height;
+}
 
 .typescale-size-plus-6 {
-  font-size: 48px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-plus-6;
+	line-height: $line-height;
+}
 
 .typescale-size-plus-7 {
-  font-size: 54px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-plus-7;
+	line-height: $line-height;
+}
 
 .typescale-size-minus-3 {
-  font-size: 10px;
-  line-height: 1.5em; }
+	font-size: $typescale-size-minus-3;
+	line-height: $line-height;
+}

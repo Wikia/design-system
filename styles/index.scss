@@ -1,7 +1,3 @@
 @import '../bower_components/design-system/index';
 @import 'colors';
-
-body {
-	background: $color-wikia-white;
-	color: $color-wikia-dark-blue-gray;
-}
+@import 'typography';
