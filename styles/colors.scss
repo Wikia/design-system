@@ -1,1006 +1,539 @@
 @import '../bower_components/design-system/index';
 
-/////////////////////////
-//// common colors' names (from the DS)
-
 /**
- * Color Aqua Blue:
- * `$color-aqua-blue`
+ * Common Colors:
  *
  *     @example
- *     div
+ *     div.color-preview-wrapper
  *       div.color-preview-box.color-aqua-blue
  *       div.color-preview-code #00b7e0
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-aquamarine
+ *       div.color-preview-code #00b7e0
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-barney
+ *       div.color-preview-code #c819ad
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-black-one
+ *       div.color-preview-code #333333
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-black-three
+ *       div.color-preview-code #262626
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-black-two
+ *       div.color-preview-code #1a1a1a
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-blue-blue
+ *       div.color-preview-code #1a5eb8
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-bright-orange
+ *       div.color-preview-code #ff5400
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-charcoal-grey
+ *       div.color-preview-code #39424d
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-cloudy-blue
+ *       div.color-preview-code #c5ced9
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dark-indigo
+ *       div.color-preview-code #092344
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dark-sky-blue
+ *       div.color-preview-code #4a90e2
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dusty-orange
+ *       div.color-preview-code #f08a24
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-faint-grey
+ *       div.color-preview-code #cccccc
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-kermit-green
+ *       div.color-preview-code #5ba200
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-light-grey
+ *       div.color-preview-code #999999
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-mango
+ *       div.color-preview-code #ff7f26
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-medium-grey
+ *       div.color-preview-code #666666
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-mist-grey
+ *       div.color-preview-code #e6e6e6
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-off-white
+ *       div.color-preview-code #f6f6f6
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-pale-grey-one
+ *       div.color-preview-code #e6ebf2
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-pale-grey-two
+ *       div.color-preview-code #f2f6fa
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-pea
+ *       div.color-preview-code #94d11f
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-pinkish-red
+ *       div.color-preview-code #ed1c24
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-slate-grey
+ *       div.color-preview-code #656e78
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-sunflower-yellow
+ *       div.color-preview-code #ffd000
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-ugly-yellow
+ *       div.color-preview-code #e3bd00
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-white
+ *       div.color-preview-code #ffffff
  */
 
 .color-aqua-blue {
-  background-color: $color-aqua-blue;
+	background-color: $color-aqua-blue;
 }
-
-/**
- * Color Aquamarine:
- * `$color-aquamarine`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-aquamarine
- *       div.color-preview-code #09d3bf
- */
 
 .color-aquamarine {
-  background-color: $color-aquamarine;
+	background-color: $color-aquamarine;
 }
-
-/**
- * Color Barney:
- * `$color-barney`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-barney
- *       div.color-preview-code #c819ad
- */
 
 .color-barney {
 	background-color: $color-barney;
 }
 
-/**
- * Color black one: 
- * `$color-black-one`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-black-one
- *       div.color-preview-code #333333
- */
-
 .color-black-one {
 	background-color: $color-black-one;
 }
-
-/**
- * Color black three: 
- * `$color-black-three`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-black-three
- *       div.color-preview-code #262626
- */
 
 .color-black-three {
 	background-color: $color-black-three;
 }
 
-/**
- * Color black two: 
- * `$color-black-two`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-black-two
- *       div.color-preview-code #1a1a1a
- */
-
 .color-black-two {
 	background-color: $color-black-two;
 }
-
-/**
- * Color blue blue: 
- * `$color-blue-blue`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-blue-blue
- *       div.color-preview-code #1a5eb8
- */
 
 .color-blue-blue {
 	background-color: $color-blue-blue;
 }
 
-/**
- * Color bright orange: 
- * `$color-bright-orange`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-bright-orange
- *       div.color-preview-code #ff5400
- */
-
 .color-bright-orange {
 	background-color: $color-bright-orange;
 }
-
-/**
- * Color charcoal grey: 
- * `$color-charcoal-grey`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-charcoal-grey
- *       div.color-preview-code #39424d
- */
 
 .color-charcoal-grey {
 	background-color: $color-charcoal-grey;
 }
 
-/**
- * Color cloudy blue: 
- * `$color-cloudy-blue`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-cloudy-blue
- *       div.color-preview-code #c5ced9
- */
-
 .color-cloudy-blue {
 	background-color: $color-cloudy-blue;
 }
-
-/**
- * Color dark indigo: 
- * `$color-dark-indigo`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dark-indigo
- *       div.color-preview-code #092344
- */
 
 .color-dark-indigo {
 	background-color: $color-dark-indigo;
 }
 
-/**
- * Color dark-sky-blue: 
- * `$color-dark-sky-blue`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dark-sky-blue
- *       div.color-preview-code #4a90e2
- */
-
 .color-dark-sky-blue {
 	background-color: $color-dark-sky-blue;
 }
-
-/**
- * Color dusty orange: 
- * `$color-dusty-orange`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dusty-orange
- *       div.color-preview-code #f08a24
- */
 
 .color-dusty-orange {
 	background-color: $color-dusty-orange;
 }
 
-/**
- * Color faint grey: 
- * `$color-faint-grey`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-faint-grey
- *       div.color-preview-code #cccccc
- */
-
 .color-faint-grey {
 	background-color: $color-faint-grey;
 }
-
-/**
- * Color kermit green: 
- * `$color-kermit-green`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-kermit-green
- *       div.color-preview-code #5ba200
- */
 
 .color-kermit-green {
 	background-color: $color-kermit-green;
 }
 
-/**
- * Color light grey: 
- * `$color-light-grey`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-light-grey
- *       div.color-preview-code #999999
- */
-
 .color-light-grey {
 	background-color: $color-light-grey;
 }
-
-/**
- * Color mango: 
- * `$color-mango`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-mango
- *       div.color-preview-code #ff7f26
- */
 
 .color-mango {
 	background-color: $color-mango;
 }
 
-/**
- * Color medium grey: 
- * `$color-medium-grey`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-medium-grey
- *       div.color-preview-code #666666
- */
-
 .color-medium-grey {
 	background-color: $color-medium-grey;
 }
-
-/**
- * Color mist grey: 
- * `$color-mist-grey`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-mist-grey
- *       div.color-preview-code #e6e6e6
- */
 
 .color-mist-grey {
 	background-color: $color-mist-grey;
 }
 
-/**
- * Color off white: 
- * `$color-off-white`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-off-white
- *       div.color-preview-code #f6f6f6
- */
-
 .color-off-white {
 	background-color: $color-off-white;
 }
-
-/**
- * Color pale-grey-one: 
- * `$color-pale-grey-one`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-pale-grey-one
- *       div.color-preview-code #e6ebf2
- */
 
 .color-pale-grey-one {
 	background-color: $color-pale-grey-one;
 }
 
-/**
- * Color pale-grey-two: 
- * `$color-pale-grey-two`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-pale-grey-two
- *       div.color-preview-code #f2f6fa
- */
-
 .color-pale-grey-two {
 	background-color: $color-pale-grey-two;
 }
-
-/**
- * Color pea: 
- * `$color-pea`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-pea
- *       div.color-preview-code #94d11f
- */
 
 .color-pea {
 	background-color: $color-pea;
 }
 
-/**
- * Color pinkish red: 
- * `$color-pinkish-red`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-pinkish-red
- *       div.color-preview-code #ed1c24
- */
-
 .color-pinkish-red {
 	background-color: $color-pinkish-red;
 }
-
-/**
- * Color slate grey: 
- * `$color-slate-grey`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-slate-grey
- *       div.color-preview-code #656e78
- */
 
 .color-slate-grey {
 	background-color: $color-slate-grey;
 }
 
-/**
- * Color sunflower yellow: 
- * `$color-sunflower-yellow`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-sunflower-yellow
- *       div.color-preview-code #ffd000
- */
-
 .color-sunflower-yellow {
 	background-color: $color-sunflower-yellow;
 }
-
-/**
- * Color ugly yellow: 
- * `$color-ugly-yellow`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-ugly-yellow
- *       div.color-preview-code #e3bd00
- */
 
 .color-ugly-yellow {
 	background-color: $color-ugly-yellow;
 }
 
-/**
- * Color white: 
- * `$color-white`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-white
- *       div.color-preview-code #ffffff
- */
-
 .color-white {
 	background-color: $color-white;
 }
 
-
 /////////////////////////
 // # Wikia Brand Colors
-
-// ## Corporate Colors
 /**
- * Color wikia-dark-blue: 
- * `$color-wikia-dark-blue`
+ * Wikia Corporate Colors:
  *
  *     @example
- *     div
+ *     div.color-preview-wrapper
  *       div.color-preview-box.color-wikia-dark-blue
  *       div.color-preview-code $color-dark-indigo
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-light-blue
+ *       div.color-preview-code $color-blue-blue
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-dark-blue-gray
+ *       div.color-preview-code $color-charcoal-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-medium-gray
+ *       div.color-preview-code $color-slate-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-blue-gray
+ *       div.color-preview-code $color-cloudy-blue
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-light-blue-gray
+ *       div.color-preview-code $color-pale-grey-one
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-gray
+ *       div.color-preview-code $color-pale-grey-two
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-white
+ *       div.color-preview-code $color-white
  */
 
 .color-wikia-dark-blue {
 	background-color: $color-wikia-dark-blue;
 }
 
-/**
- * Color wikia-light-blue: 
- * `$color-wikia-light-blue`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-light-blue
- *       div.color-preview-code $color-blue-blue
- */
-
 .color-wikia-light-blue {
 	background-color: $color-wikia-light-blue;
 }
-
-/**
- * Color wikia-dark-blue-gray: 
- * `$color-wikia-dark-blue-gray`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-dark-blue-gray
- *       div.color-preview-code $color-charcoal-grey
- */
 
 .color-wikia-dark-blue-gray {
 	background-color: $color-wikia-dark-blue-gray;
 }
 
-/**
- * Color wikia-medium-gray: 
- * `$color-wikia-medium-gray`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-medium-gray
- *       div.color-preview-code $color-slate-grey
- */
-
 .color-wikia-medium-gray {
 	background-color: $color-wikia-medium-gray;
 }
-
-/**
- * Color wikia-blue-gray: 
- * `$color-wikia-blue-gray`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-blue-gray
- *       div.color-preview-code $color-cloudy-blue
- */
 
 .color-wikia-blue-gray {
 	background-color: $color-wikia-blue-gray;
 }
 
-/**
- * Color wikia-light-blue-gray: 
- * `$color-wikia-light-blue-gray`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-light-blue-gray
- *       div.color-preview-code $color-pale-grey-one
- */
-
 .color-wikia-light-blue-gray {
 	background-color: $color-wikia-light-blue-gray;
 }
-
-/**
- * Color wikia gray: 
- * `$color-wikia-gray`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-gray
- *       div.color-preview-code $color-pale-grey-two
- */
 
 .color-wikia-gray {
 	background-color: $color-wikia-gray;
 }
 
-/**
- * Color wikia white: 
- * `$color-wikia-white`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-white
- *       div.color-preview-code $color-white
- */
-
 .color-wikia-white {
 	background-color: $color-wikia-white;
 }
 
-
-// ## Vertical Colors
 /**
- * Color wikia comics: 
- * `$color-wikia-comics`
+ * Vertical Colors:
  *
  *     @example
- *     div
+ *     div.color-preview-wrapper
  *       div.color-preview-box.color-wikia-comics
  *       div.color-preview-code $color-bright-orange
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-games
+ *       div.color-preview-code $color-pea
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-books
+ *       div.color-preview-code $color-mango
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-movies
+ *       div.color-preview-code $color-aquamarine
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-lifestyle
+ *       div.color-preview-code $color-sunflower-yellow
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-music
+ *       div.color-preview-code $color-barney
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-tv
+ *       div.color-preview-code $color-aqua-blue
  */
 
 .color-wikia-comics {
 	background-color: $color-wikia-comics;
 }
 
-/**
- * Color wikia games: 
- * `$color-wikia-games`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-games
- *       div.color-preview-code $color-pea
- */
-
 .color-wikia-games {
 	background-color: $color-wikia-games;
 }
-
-/**
- * Color wikia books: 
- * `$color-wikia-books`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-books
- *       div.color-preview-code $color-mango
- */
 
 .color-wikia-books {
 	background-color: $color-wikia-books;
 }
 
-/**
- * Color wikia movies: 
- * `$color-wikia-movies`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-movies
- *       div.color-preview-code $color-aquamarine
- */
-
 .color-wikia-movies {
 	background-color: $color-wikia-movies;
 }
-
-/**
- * Color wikia lifestyle: 
- * `$color-wikia-lifestyle`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-lifestyle
- *       div.color-preview-code $color-sunflower-yellow
- */
 
 .color-wikia-lifestyle {
 	background-color: $color-wikia-lifestyle;
 }
 
-/**
- * Color wikia music: 
- * `$color-wikia-music`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-music
- *       div.color-preview-code $color-barney
- */
-
 .color-wikia-music {
 	background-color: $color-wikia-music;
 }
-
-/**
- * Color wikia tv: 
- * `$color-wikia-tv`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-tv
- *       div.color-preview-code $color-aqua-blue
- */
 
 .color-wikia-tv {
 	background-color: $color-wikia-tv;
 }
 
-
-// ## Alerts
 /**
- * Color wikia alert: 
- * `$color-wikia-alert`
+ * Alerts:
  *
  *     @example
- *     div
+ *     div.color-preview-wrapper
  *       div.color-preview-box.color-wikia-alert
  *       div.color-preview-code $color-pinkish-red
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-warning
+ *       div.color-preview-code $color-dusty-orange
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-success
+ *       div.color-preview-code $color-kermit-green
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-wikia-message
+ *       div.color-preview-code $color-blue-blue
  */
 
 .color-wikia-alert {
 	background-color: $color-wikia-alert;
 }
 
-/**
- * Color wikia warning: 
- * `$color-wikia-warning`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-warning
- *       div.color-preview-code $color-dusty-orange
- */
-
 .color-wikia-warning {
 	background-color: $color-wikia-warning;
 }
-
-/**
- * Color wikia success: 
- * `$color-wikia-success`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-success
- *       div.color-preview-code $color-kermit-green
- */
 
 .color-wikia-success {
 	background-color: $color-wikia-success;
 }
 
-/**
- * Color wikia message: 
- * `$color-wikia-message`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-wikia-message
- *       div.color-preview-code $color-blue-blue
- */
-
 .color-wikia-message {
 	background-color: $color-wikia-message;
 }
 
-
 /////////////////////////
 // # Fandom Brand Colors
-
-// ## Corporate Colors
 /**
- * Color fandom games: 
- * `$color-fandom-games`
+ * Fandom Corporate Colors:
  *
  *     @example
- *     div
+ *     div.color-preview-wrapper
  *       div.color-preview-box.color-fandom-games
  *       div.color-preview-code $color-pea
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-fandom-movies
+ *       div.color-preview-code $color-aquamarine
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-fandom-tv
+ *       div.color-preview-code $color-aqua-blue
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-fandom-dark-blue-gray
+ *       div.color-preview-code $color-charcoal-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-fandom-medium-gray
+ *       div.color-preview-code $color-slate-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-fandom-blue-gray
+ *       div.color-preview-code $color-cloudy-blue
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-fandom-off-white
+ *       div.color-preview-code $color-off-white
  */
 
 .color-fandom-games {
 	background-color: $color-fandom-games;
 }
 
-/**
- * Color fandom movies: 
- * `$color-fandom-movies`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-fandom-movies
- *       div.color-preview-code $color-aquamarine
- */
-
 .color-fandom-movies {
 	background-color: $color-fandom-movies;
 }
-
-/**
- * Color fandom tv: 
- * `$color-fandom-tv`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-fandom-tv
- *       div.color-preview-code $color-aqua-blue
- */
 
 .color-fandom-tv {
 	background-color: $color-fandom-tv;
 }
 
-/**
- * Color fandom-dark-blue-gray: 
- * `$color-fandom-dark-blue-gray`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-fandom-dark-blue-gray
- *       div.color-preview-code $color-charcoal-grey
- */
-
 .color-fandom-dark-blue-gray {
 	background-color: $color-fandom-dark-blue-gray;
 }
-
-/**
- * Color fandom-medium-gray: 
- * `$color-fandom-medium-gray`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-fandom-medium-gray
- *       div.color-preview-code $color-slate-grey
- */
 
 .color-fandom-medium-gray {
 	background-color: $color-fandom-medium-gray;
 }
 
-/**
- * Color fandom-blue-gray: 
- * `$color-fandom-blue-gray`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-fandom-blue-gray
- *       div.color-preview-code $color-cloudy-blue
- */
-
 .color-fandom-blue-gray {
 	background-color: $color-fandom-blue-gray;
 }
-
-/**
- * Color fandom-off-white: 
- * `$color-fandom-off-white`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-fandom-off-white
- *       div.color-preview-code $color-off-white
- */
 
 .color-fandom-off-white {
 	background-color: $color-fandom-off-white;
 }
 
-
 /////////////////////////
 // # Theming Colors
-
-// ## Light Theme
 /**
- * Color light-c1:
- * `$color-light-c1`
+ * Light Theme:
  *
  *     @example
- *     div
+ *     div.color-preview-wrapper
  *       div.color-preview-box.color-light-c1
  *       div.color-preview-code $color-white
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-light-c2
+ *       div.color-preview-code $color-off-white
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-light-c3
+ *       div.color-preview-code $color-mist-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-light-c4
+ *       div.color-preview-code $color-faint-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-light-c5
+ *       div.color-preview-code $color-light-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-light-c6
+ *       div.color-preview-code $color-black-one
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-light-c7
+ *       div.color-preview-code $color-medium-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-light-c8
+ *       div.color-preview-code $color-ugly-yellow
  */
 
 .color-light-c1 {
 	background-color: $color-light-c1;
 }
 
-/**
- * Color light-c2: 
- * `$color-light-c2`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-light-c2
- *       div.color-preview-code $color-off-white
- */
-
 .color-light-c2 {
 	background-color: $color-light-c2;
 }
-
-/**
- * Color light-c3: 
- * `$color-light-c3`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-light-c3
- *       div.color-preview-code $color-mist-grey
- */
 
 .color-light-c3 {
 	background-color: $color-light-c3;
 }
 
-/**
- * Color light-c4: 
- * `$color-light-c4`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-light-c4
- *       div.color-preview-code $color-faint-grey
- */
-
 .color-light-c4 {
 	background-color: $color-light-c4;
 }
-
-/**
- * Color light-c5: 
- * `$color-light-c5`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-light-c5
- *       div.color-preview-code $color-light-grey
- */
 
 .color-light-c5 {
 	background-color: $color-light-c5;
 }
 
-/**
- * Color light-c6: 
- * `$color-light-c6`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-light-c6
- *       div.color-preview-code $color-black-one
- */
-
 .color-light-c6 {
 	background-color: $color-light-c6;
 }
-
-/**
- * Color light-c7: 
- * `$color-light-c7`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-light-c7
- *       div.color-preview-code $color-medium-grey
- */
 
 .color-light-c7 {
 	background-color: $color-light-c7;
 }
 
-/**
- * Color light-c8: 
- * `$color-light-c8`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-light-c8
- *       div.color-preview-code $color-ugly-yellow
- */
-
 .color-light-c8 {
 	background-color: $color-light-c8;
 }
 
-
-// ## Dark Theme
 /**
- * Color dark-c1: 
- * `$color-dark-c1`
+ * Dark Theme:
  *
  *     @example
- *     div
+ *     div.color-preview-wrapper
  *       div.color-preview-box.color-dark-c1
  *       div.color-preview-code $color-black-three
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dark-c2
+ *       div.color-preview-code $color-black-two
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dark-c3
+ *       div.color-preview-code $color-black-one
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dark-c4
+ *       div.color-preview-code $color-medium-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dark-c5
+ *       div.color-preview-code $color-light-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dark-c6
+ *       div.color-preview-code $color-faint-grey
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dark-c7
+ *       div.color-preview-code $color-white
+ *     div.color-preview-wrapper
+ *       div.color-preview-box.color-dark-c8
+ *       div.color-preview-code $color-ugly-yellow
  */
 
 .color-dark-c1 {
 	background-color: $color-dark-c1;
 }
 
-/**
- * Color dark-c2: 
- * `$color-dark-c2`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dark-c2
- *       div.color-preview-code $color-black-two
- */
-
 .color-dark-c2 {
 	background-color: $color-dark-c2;
 }
-
-/**
- * Color dark-c3: 
- * `$color-dark-c3`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dark-c3
- *       div.color-preview-code $color-black-one
- */
 
 .color-dark-c3 {
 	background-color: $color-dark-c3;
 }
 
-/**
- * Color dark-c4: 
- * `$color-dark-c4`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dark-c4
- *       div.color-preview-code $color-medium-grey
- */
-
 .color-dark-c4 {
 	background-color: $color-dark-c4;
 }
-
-/**
- * Color dark-c5: 
- * `$color-dark-c5`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dark-c5
- *       div.color-preview-code $color-light-grey
- */
 
 .color-dark-c5 {
 	background-color: $color-dark-c5;
 }
 
-/**
- * Color dark-c6: 
- * `$color-dark-c6`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dark-c6
- *       div.color-preview-code $color-faint-grey
- */
-
 .color-dark-c6 {
 	background-color: $color-dark-c6;
 }
-
-/**
- * Color dark-c7: 
- * `$color-dark-c7`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dark-c7
- *       div.color-preview-code $color-white
- */
 
 .color-dark-c7 {
 	background-color: $color-dark-c7;
 }
 
-/**
- * Color dark-c8: 
- * `$color-dark-c8`
- *
- *     @example
- *     div
- *       div.color-preview-box.color-dark-c8
- *       div.color-preview-code $color-ugly-yellow
- */
-
 .color-dark-c8 {
 	background-color: $color-dark-c8;
 }
-
