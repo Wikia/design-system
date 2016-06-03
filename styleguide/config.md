@@ -2,9 +2,9 @@
 
 ### Head
 
-    link(rel='stylesheet' href='/styleguide/styleguide.css')
-    link(rel='stylesheet' href='/www/index.css')
-    script(src='/styleguide/styleguide.js')
+    link(rel='stylesheet' href='./styleguide/styleguide.css')
+    link(rel='stylesheet' href='./tmp/colors.css')
+    script(src='./styleguide/styleguide.js')
 
 ### Body
 

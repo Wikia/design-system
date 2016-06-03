@@ -1,6 +1,7 @@
-@import "../bower_components/design-system/index";
+@import '../bower_components/design-system/index';
+@import 'colors';
 
 body {
-	background: $color-wikia-dark-blue-gray;
-	color: $color-wikia-white;
+  background: $color-wikia-dark-blue-gray;
+  color: $color-wikia-white;
 }

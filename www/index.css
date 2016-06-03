@@ -1,3 +1,41 @@
+/**
+ * Color Aqua Blue:
+ * `$color-aqua-blue`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-aqua-blue
+ *       div.color-preview-code #00b7e0
+ */
+.color-aqua-blue {
+  background-color: #00b7e0; }
+
+/**
+ * Color Aquamarine:
+ * `$color-aquamarine`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-aquamarine
+ *       div.color-preview-code #09d3bf
+ */
+.color-aquamarine {
+  background-color: #09d3bf; }
+
+/**
+ * Component name:
+ * `.your-component-here` - documentation on what your
+ * component is goes here. Markdown is encouraged.
+ *
+ *     @example
+ *     div.your-component-here
+ *       h3 Sample code
+ *       p goes here
+ */
+.your-component-here {
+  display: block;
+  background-color: #00b7e0; }
+
 body {
   background: #39424d;
   color: #ffffff; }
