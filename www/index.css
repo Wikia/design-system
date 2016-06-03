@@ -35,6 +35,810 @@
   background-color: #c819ad; }
 
 /**
+ * Color black one: 
+ * `$color-black-one`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-black-one
+ *       div.color-preview-code #333333
+ */
+.color-black-one {
+  background-color: #333333; }
+
+/**
+ * Color black three: 
+ * `$color-black-three`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-black-three
+ *       div.color-preview-code #262626
+ */
+.color-black-three {
+  background-color: #262626; }
+
+/**
+ * Color black two: 
+ * `$color-black-two`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-black-two
+ *       div.color-preview-code #1a1a1a
+ */
+.color-black-two {
+  background-color: #1a1a1a; }
+
+/**
+ * Color blue blue: 
+ * `$color-blue-blue`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-blue-blue
+ *       div.color-preview-code #1a5eb8
+ */
+.color-blue-blue {
+  background-color: #1a5eb8; }
+
+/**
+ * Color bright orange: 
+ * `$color-bright-orange`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-bright-orange
+ *       div.color-preview-code #ff5400
+ */
+.color-bright-orange {
+  background-color: #ff5400; }
+
+/**
+ * Color charcoal grey: 
+ * `$color-charcoal-grey`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-charcoal-grey
+ *       div.color-preview-code #39424d
+ */
+.color-charcoal-grey {
+  background-color: #39424d; }
+
+/**
+ * Color cloudy blue: 
+ * `$color-cloudy-blue`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-cloudy-blue
+ *       div.color-preview-code #c5ced9
+ */
+.color-cloudy-blue {
+  background-color: #c5ced9; }
+
+/**
+ * Color dark indigo: 
+ * `$color-dark-indigo`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-indigo
+ *       div.color-preview-code #092344
+ */
+.color-dark-indigo {
+  background-color: #092344; }
+
+/**
+ * Color dark-sky-blue: 
+ * `$color-dark-sky-blue`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-sky-blue
+ *       div.color-preview-code #4a90e2
+ */
+.color-dark-sky-blue {
+  background-color: #4a90e2; }
+
+/**
+ * Color dusty orange: 
+ * `$color-dusty-orange`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dusty-orange
+ *       div.color-preview-code #f08a24
+ */
+.color-dusty-orange {
+  background-color: #f08a24; }
+
+/**
+ * Color faint grey: 
+ * `$color-faint-grey`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-faint-grey
+ *       div.color-preview-code #cccccc
+ */
+.color-faint-grey {
+  background-color: #cccccc; }
+
+/**
+ * Color kermit green: 
+ * `$color-kermit-green`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-kermit-green
+ *       div.color-preview-code #5ba200
+ */
+.color-kermit-green {
+  background-color: #5ba200; }
+
+/**
+ * Color light grey: 
+ * `$color-light-grey`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-light-grey
+ *       div.color-preview-code #999999
+ */
+.color-light-grey {
+  background-color: #999999; }
+
+/**
+ * Color mango: 
+ * `$color-mango`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-mango
+ *       div.color-preview-code #ff7f26
+ */
+.color-mango {
+  background-color: #ff7f26; }
+
+/**
+ * Color medium grey: 
+ * `$color-medium-grey`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-medium-grey
+ *       div.color-preview-code #666666
+ */
+.color-medium-grey {
+  background-color: #666666; }
+
+/**
+ * Color mist grey: 
+ * `$color-mist-grey`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-mist-grey
+ *       div.color-preview-code #e6e6e6
+ */
+.color-mist-grey {
+  background-color: #e6e6e6; }
+
+/**
+ * Color off white: 
+ * `$color-off-white`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-off-white
+ *       div.color-preview-code #f6f6f6
+ */
+.color-off-white {
+  background-color: #f6f6f6; }
+
+/**
+ * Color pale-grey-one: 
+ * `$color-pale-grey-one`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-pale-grey-one
+ *       div.color-preview-code #e6ebf2
+ */
+.color-pale-grey-one {
+  background-color: #e6ebf2; }
+
+/**
+ * Color pale-grey-two: 
+ * `$color-pale-grey-two`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-pale-grey-two
+ *       div.color-preview-code #f2f6fa
+ */
+.color-pale-grey-two {
+  background-color: #f2f6fa; }
+
+/**
+ * Color pea: 
+ * `$color-pea`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-pea
+ *       div.color-preview-code #94d11f
+ */
+.color-pea {
+  background-color: #94d11f; }
+
+/**
+ * Color pinkish red: 
+ * `$color-pinkish-red`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-pinkish-red
+ *       div.color-preview-code #ed1c24
+ */
+.color-pinkish-red {
+  background-color: #ed1c24; }
+
+/**
+ * Color slate grey: 
+ * `$color-slate-grey`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-slate-grey
+ *       div.color-preview-code #656e78
+ */
+.color-slate-grey {
+  background-color: #656e78; }
+
+/**
+ * Color sunflower yellow: 
+ * `$color-sunflower-yellow`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-sunflower-yellow
+ *       div.color-preview-code #ffd000
+ */
+.color-sunflower-yellow {
+  background-color: #ffd000; }
+
+/**
+ * Color ugly yellow: 
+ * `$color-ugly-yellow`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-ugly-yellow
+ *       div.color-preview-code #e3bd00
+ */
+.color-ugly-yellow {
+  background-color: #e3bd00; }
+
+/**
+ * Color white: 
+ * `$color-white`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-white
+ *       div.color-preview-code #ffffff
+ */
+.color-white {
+  background-color: #ffffff; }
+
+/**
+ * Color wikia-dark-blue: 
+ * `$color-wikia-dark-blue`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-dark-blue
+ *       div.color-preview-code $color-dark-indigo
+ */
+.color-wikia-dark-blue {
+  background-color: #092344; }
+
+/**
+ * Color wikia-light-blue: 
+ * `$color-wikia-light-blue`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-light-blue
+ *       div.color-preview-code $color-blue-blue
+ */
+.color-wikia-light-blue {
+  background-color: #1a5eb8; }
+
+/**
+ * Color wikia-dark-blue-gray: 
+ * `$color-wikia-dark-blue-gray`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-dark-blue-gray
+ *       div.color-preview-code $color-charcoal-grey
+ */
+.color-wikia-dark-blue-gray {
+  background-color: #39424d; }
+
+/**
+ * Color wikia-medium-gray: 
+ * `$color-wikia-medium-gray`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-medium-gray
+ *       div.color-preview-code $color-slate-grey
+ */
+.color-wikia-medium-gray {
+  background-color: #656e78; }
+
+/**
+ * Color wikia-blue-gray: 
+ * `$color-wikia-blue-gray`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-blue-gray
+ *       div.color-preview-code $color-cloudy-blue
+ */
+.color-wikia-blue-gray {
+  background-color: #c5ced9; }
+
+/**
+ * Color wikia-light-blue-gray: 
+ * `$color-wikia-light-blue-gray`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-light-blue-gray
+ *       div.color-preview-code $color-pale-grey-one
+ */
+.color-wikia-light-blue-gray {
+  background-color: #e6ebf2; }
+
+/**
+ * Color wikia gray: 
+ * `$color-wikia-gray`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-gray
+ *       div.color-preview-code $color-pale-grey-two
+ */
+.color-wikia-gray {
+  background-color: #f2f6fa; }
+
+/**
+ * Color wikia white: 
+ * `$color-wikia-white`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-white
+ *       div.color-preview-code $color-white
+ */
+.color-wikia-white {
+  background-color: #ffffff; }
+
+/**
+ * Color wikia comics: 
+ * `$color-wikia-comics`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-comics
+ *       div.color-preview-code $color-bright-orange
+ */
+.color-wikia-comics {
+  background-color: #ff5400; }
+
+/**
+ * Color wikia games: 
+ * `$color-wikia-games`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-games
+ *       div.color-preview-code $color-pea
+ */
+.color-wikia-games {
+  background-color: #94d11f; }
+
+/**
+ * Color wikia books: 
+ * `$color-wikia-books`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-books
+ *       div.color-preview-code $color-mango
+ */
+.color-wikia-books {
+  background-color: #ff7f26; }
+
+/**
+ * Color wikia movies: 
+ * `$color-wikia-movies`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-movies
+ *       div.color-preview-code $color-aquamarine
+ */
+.color-wikia-movies {
+  background-color: #09d3bf; }
+
+/**
+ * Color wikia lifestyle: 
+ * `$color-wikia-lifestyle`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-lifestyle
+ *       div.color-preview-code $color-sunflower-yellow
+ */
+.color-wikia-lifestyle {
+  background-color: #ffd000; }
+
+/**
+ * Color wikia music: 
+ * `$color-wikia-music`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-music
+ *       div.color-preview-code $color-barney
+ */
+.color-wikia-music {
+  background-color: #c819ad; }
+
+/**
+ * Color wikia tv: 
+ * `$color-wikia-tv`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-tv
+ *       div.color-preview-code $color-aqua-blue
+ */
+.color-wikia-tv {
+  background-color: #00b7e0; }
+
+/**
+ * Color wikia alert: 
+ * `$color-wikia-alert`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-alert
+ *       div.color-preview-code $color-pinkish-red
+ */
+.color-wikia-alert {
+  background-color: #ed1c24; }
+
+/**
+ * Color wikia warning: 
+ * `$color-wikia-warning`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-warning
+ *       div.color-preview-code $color-dusty-orange
+ */
+.color-wikia-warning {
+  background-color: #f08a24; }
+
+/**
+ * Color wikia success: 
+ * `$color-wikia-success`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-success
+ *       div.color-preview-code $color-kermit-green
+ */
+.color-wikia-success {
+  background-color: #5ba200; }
+
+/**
+ * Color wikia message: 
+ * `$color-wikia-message`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-wikia-message
+ *       div.color-preview-code $color-blue-blue
+ */
+.color-wikia-message {
+  background-color: #1a5eb8; }
+
+/**
+ * Color fandom games: 
+ * `$color-fandom-games`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-fandom-games
+ *       div.color-preview-code $color-pea
+ */
+.color-fandom-games {
+  background-color: #94d11f; }
+
+/**
+ * Color fandom movies: 
+ * `$color-fandom-movies`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-fandom-movies
+ *       div.color-preview-code $color-aquamarine
+ */
+.color-fandom-movies {
+  background-color: #09d3bf; }
+
+/**
+ * Color fandom tv: 
+ * `$color-fandom-tv`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-fandom-tv
+ *       div.color-preview-code $color-aqua-blue
+ */
+.color-fandom-tv {
+  background-color: #00b7e0; }
+
+/**
+ * Color fandom-dark-blue-gray: 
+ * `$color-fandom-dark-blue-gray`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-fandom-dark-blue-gray
+ *       div.color-preview-code $color-charcoal-grey
+ */
+.color-fandom-dark-blue-gray {
+  background-color: #39424d; }
+
+/**
+ * Color fandom-medium-gray: 
+ * `$color-fandom-medium-gray`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-fandom-medium-gray
+ *       div.color-preview-code $color-slate-grey
+ */
+.color-fandom-medium-gray {
+  background-color: #656e78; }
+
+/**
+ * Color fandom-blue-gray: 
+ * `$color-fandom-blue-gray`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-fandom-blue-gray
+ *       div.color-preview-code $color-cloudy-blue
+ */
+.color-fandom-blue-gray {
+  background-color: #c5ced9; }
+
+/**
+ * Color fandom-off-white: 
+ * `$color-fandom-off-white`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-fandom-off-white
+ *       div.color-preview-code $color-off-white
+ */
+.color-fandom-off-white {
+  background-color: #f6f6f6; }
+
+/**
+ * Color light-c1:
+ * `$color-light-c1`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-light-c1
+ *       div.color-preview-code $color-white
+ */
+.color-light-c1 {
+  background-color: #ffffff; }
+
+/**
+ * Color light-c2: 
+ * `$color-light-c2`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-light-c2
+ *       div.color-preview-code $color-off-white
+ */
+.color-light-c2 {
+  background-color: #f6f6f6; }
+
+/**
+ * Color light-c3: 
+ * `$color-light-c3`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-light-c3
+ *       div.color-preview-code $color-mist-grey
+ */
+.color-light-c3 {
+  background-color: #e6e6e6; }
+
+/**
+ * Color light-c4: 
+ * `$color-light-c4`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-light-c4
+ *       div.color-preview-code $color-faint-grey
+ */
+.color-light-c4 {
+  background-color: #cccccc; }
+
+/**
+ * Color light-c5: 
+ * `$color-light-c5`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-light-c5
+ *       div.color-preview-code $color-light-grey
+ */
+.color-light-c5 {
+  background-color: #999999; }
+
+/**
+ * Color light-c6: 
+ * `$color-light-c6`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-light-c6
+ *       div.color-preview-code $color-black-one
+ */
+.color-light-c6 {
+  background-color: #333333; }
+
+/**
+ * Color light-c7: 
+ * `$color-light-c7`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-light-c7
+ *       div.color-preview-code $color-medium-grey
+ */
+.color-light-c7 {
+  background-color: #666666; }
+
+/**
+ * Color light-c8: 
+ * `$color-light-c8`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-light-c8
+ *       div.color-preview-code $color-ugly-yellow
+ */
+.color-light-c8 {
+  background-color: #e3bd00; }
+
+/**
+ * Color dark-c1: 
+ * `$color-dark-c1`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-c1
+ *       div.color-preview-code $color-black-three
+ */
+.color-dark-c1 {
+  background-color: #262626; }
+
+/**
+ * Color dark-c2: 
+ * `$color-dark-c2`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-c2
+ *       div.color-preview-code $color-black-two
+ */
+.color-dark-c2 {
+  background-color: #1a1a1a; }
+
+/**
+ * Color dark-c3: 
+ * `$color-dark-c3`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-c3
+ *       div.color-preview-code $color-black-one
+ */
+.color-dark-c3 {
+  background-color: #333333; }
+
+/**
+ * Color dark-c4: 
+ * `$color-dark-c4`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-c4
+ *       div.color-preview-code $color-medium-grey
+ */
+.color-dark-c4 {
+  background-color: #666666; }
+
+/**
+ * Color dark-c5: 
+ * `$color-dark-c5`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-c5
+ *       div.color-preview-code $color-light-grey
+ */
+.color-dark-c5 {
+  background-color: #999999; }
+
+/**
+ * Color dark-c6: 
+ * `$color-dark-c6`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-c6
+ *       div.color-preview-code $color-faint-grey
+ */
+.color-dark-c6 {
+  background-color: #cccccc; }
+
+/**
+ * Color dark-c7: 
+ * `$color-dark-c7`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-c7
+ *       div.color-preview-code $color-white
+ */
+.color-dark-c7 {
+  background-color: #ffffff; }
+
+/**
+ * Color dark-c8: 
+ * `$color-dark-c8`
+ *
+ *     @example
+ *     div
+ *       div.color-preview-box.color-dark-c8
+ *       div.color-preview-code $color-ugly-yellow
+ */
+.color-dark-c8 {
+  background-color: #e3bd00; }
+
+/**
  * Typescale:
  *
  *     @example
