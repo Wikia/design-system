@@ -5,115 +5,143 @@
  *     div.color-preview-card
  *       div.color-preview-box.color-aqua-blue
  *       div.color-preview-name Aqua Blue
- *       div.color-preview-code #00b7e0
+ *       div.color-preview-variable $color-aqua-blue
+ *       div.color-preview-reference #00b7e0
  *     div.color-preview-card
  *       div.color-preview-box.color-aquamarine
  *       div.color-preview-name Aquamarine
- *       div.color-preview-code #00b7e0
+ *       div.color-preview-variable $color-aquamarine
+ *       div.color-preview-reference #00b7e0
  *     div.color-preview-card
  *       div.color-preview-box.color-barney
  *       div.color-preview-name Barney
- *       div.color-preview-code #c819ad
+ *       div.color-preview-variable $color-barney
+ *       div.color-preview-reference #c819ad
  *     div.color-preview-card
  *       div.color-preview-box.color-black-one
  *       div.color-preview-name Black One
- *       div.color-preview-code #333333
+ *       div.color-preview-variable $color-black-one
+ *       div.color-preview-reference #333333
  *     div.color-preview-card
  *       div.color-preview-box.color-black-three
  *       div.color-preview-name Black Three
- *       div.color-preview-code #262626
+ *       div.color-preview-variable $color-black-three
+ *       div.color-preview-reference #262626
  *     div.color-preview-card
  *       div.color-preview-box.color-black-two
  *       div.color-preview-name Black Two
- *       div.color-preview-code #1a1a1a
+ *       div.color-preview-variable $color-black-two
+ *       div.color-preview-reference #1a1a1a
  *     div.color-preview-card
  *       div.color-preview-box.color-blue-blue
  *       div.color-preview-name Blue Blue
- *       div.color-preview-code #1a5eb8
+ *       div.color-preview-variable $color-blue-blue
+ *       div.color-preview-reference #1a5eb8
  *     div.color-preview-card
  *       div.color-preview-box.color-bright-orange
  *       div.color-preview-name Bright Orange
- *       div.color-preview-code #ff5400
+ *       div.color-preview-variable $color-bright-orange
+ *       div.color-preview-reference #ff5400
  *     div.color-preview-card
  *       div.color-preview-box.color-charcoal-grey
  *       div.color-preview-name Charcoal Grey
- *       div.color-preview-code #39424d
+ *       div.color-preview-variable $color-charcoal-grey
+ *       div.color-preview-reference #39424d
  *     div.color-preview-card
  *       div.color-preview-box.color-cloudy-blue
  *       div.color-preview-name Cloudy Blue
- *       div.color-preview-code #c5ced9
+ *       div.color-preview-variable $color-cloudy-blue
+ *       div.color-preview-reference #c5ced9
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-indigo
  *       div.color-preview-name Dark Indigo
- *       div.color-preview-code #092344
+ *       div.color-preview-variable $color-dark-indigo
+ *       div.color-preview-reference #092344
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-sky-blue
  *       div.color-preview-name Dark Sky Blue
- *       div.color-preview-code #4a90e2
+ *       div.color-preview-variable $color-dark-sky-blue
+ *       div.color-preview-reference #4a90e2
  *     div.color-preview-card
  *       div.color-preview-box.color-dusty-orange
  *       div.color-preview-name Dusty Orange
- *       div.color-preview-code #f08a24
+ *       div.color-preview-variable $color-dusty-orange
+ *       div.color-preview-reference #f08a24
  *     div.color-preview-card
  *       div.color-preview-box.color-faint-grey
  *       div.color-preview-name Faint Grey
- *       div.color-preview-code #cccccc
+ *       div.color-preview-variable $color-faint-grey
+ *       div.color-preview-reference #cccccc
  *     div.color-preview-card
  *       div.color-preview-box.color-kermit-green
  *       div.color-preview-name Kermit Green
- *       div.color-preview-code #5ba200
+ *       div.color-preview-variable $color-kermit-green
+ *       div.color-preview-reference #5ba200
  *     div.color-preview-card
  *       div.color-preview-box.color-light-grey
  *       div.color-preview-name Light Grey
- *       div.color-preview-code #999999
+ *       div.color-preview-variable $color-light-grey
+ *       div.color-preview-reference #999999
  *     div.color-preview-card
  *       div.color-preview-box.color-mango
  *       div.color-preview-name Mango
- *       div.color-preview-code #ff7f26
+ *       div.color-preview-variable $color-mango
+ *       div.color-preview-reference #ff7f26
  *     div.color-preview-card
  *       div.color-preview-box.color-medium-grey
  *       div.color-preview-name Medium Grey
- *       div.color-preview-code #666666
+ *       div.color-preview-variable $color-medium-grey
+ *       div.color-preview-reference #666666
  *     div.color-preview-card
  *       div.color-preview-box.color-mist-grey
  *       div.color-preview-name Mist Grey
- *       div.color-preview-code #e6e6e6
+ *       div.color-preview-variable $color-mist-grey
+ *       div.color-preview-reference #e6e6e6
  *     div.color-preview-card
  *       div.color-preview-box.color-off-white
  *       div.color-preview-name Off-White 96%
- *       div.color-preview-code #f6f6f6
+ *       div.color-preview-variable $color-off-white
+ *       div.color-preview-reference #f6f6f6
  *     div.color-preview-card
  *       div.color-preview-box.color-pale-grey-one
  *       div.color-preview-name Pale Grey One
- *       div.color-preview-code #e6ebf2
+ *       div.color-preview-variable $color-pale-grey-one
+ *       div.color-preview-reference #e6ebf2
  *     div.color-preview-card
  *       div.color-preview-box.color-pale-grey-two
  *       div.color-preview-name Pale Grey Two
- *       div.color-preview-code #f2f6fa
+ *       div.color-preview-variable $color-pale-grey-two
+ *       div.color-preview-reference #f2f6fa
  *     div.color-preview-card
  *       div.color-preview-box.color-pea
  *       div.color-preview-name Pea
- *       div.color-preview-code #94d11f
+ *       div.color-preview-variable $color-pea
+ *       div.color-preview-reference #94d11f
  *     div.color-preview-card
  *       div.color-preview-box.color-pinkish-red
  *       div.color-preview-name Pinkish Red
- *       div.color-preview-code #ed1c24
+ *       div.color-preview-variable $color-pinkish-red
+ *       div.color-preview-reference #ed1c24
  *     div.color-preview-card
  *       div.color-preview-box.color-slate-grey
  *       div.color-preview-name Slate Grey
- *       div.color-preview-code #656e78
+ *       div.color-preview-variable $color-slate-grey
+ *       div.color-preview-reference #656e78
  *     div.color-preview-card
  *       div.color-preview-box.color-sunflower-yellow
  *       div.color-preview-name Sunflower Yellow
- *       div.color-preview-code #ffd000
+ *       div.color-preview-variable $color-sunflower-yellow
+ *       div.color-preview-reference #ffd000
  *     div.color-preview-card
  *       div.color-preview-box.color-ugly-yellow
  *       div.color-preview-name Ugly Yellow
- *       div.color-preview-code #e3bd00
+ *       div.color-preview-variable $color-ugly-yellow
+ *       div.color-preview-reference #e3bd00
  *     div.color-preview-card
  *       div.color-preview-box.color-white
  *       div.color-preview-name White
- *       div.color-preview-code #ffffff
+ *       div.color-preview-variable $color-white
+ *       div.color-preview-reference #ffffff
  */
 .color-aqua-blue {
   background-color: #00b7e0; }
@@ -206,35 +234,43 @@
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-dark-blue
  *       div.color-preview-name Dark Blue
- *       div.color-preview-code $color-dark-indigo
+ *       div.color-preview-variable $color-wikia-dark-blue
+ *       div.color-preview-reference $color-dark-indigo
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-light-blue
  *       div.color-preview-name Light Blue
- *       div.color-preview-code $color-blue-blue
+ *       div.color-preview-variable $color-wikia-light-blue
+ *       div.color-preview-reference $color-blue-blue
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-dark-blue-gray
  *       div.color-preview-name Dark Blue Gray
- *       div.color-preview-code $color-charcoal-grey
+ *       div.color-preview-variable $color-wikia-dark-blue-gray
+ *       div.color-preview-reference $color-charcoal-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-medium-gray
  *       div.color-preview-name Medium Gray
- *       div.color-preview-code $color-slate-grey
+ *       div.color-preview-variable $color-wikia-medium-gray
+ *       div.color-preview-reference $color-slate-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-blue-gray
  *       div.color-preview-name Blue Gray
- *       div.color-preview-code $color-cloudy-blue
+ *       div.color-preview-variable $color-wikia-blue-gray
+ *       div.color-preview-reference $color-cloudy-blue
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-light-blue-gray
  *       div.color-preview-name Light Blue Gray
- *       div.color-preview-code $color-pale-grey-one
+ *       div.color-preview-variable $color-wikia-light-blue-gray
+ *       div.color-preview-reference $color-pale-grey-one
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-gray
  *       div.color-preview-name Gray
- *       div.color-preview-code $color-pale-grey-two
+ *       div.color-preview-variable $color-wikia-gray
+ *       div.color-preview-reference $color-pale-grey-two
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-white
  *       div.color-preview-name White
- *       div.color-preview-code $color-white
+ *       div.color-preview-variable $color-wikia-white
+ *       div.color-preview-reference $color-white
  */
 .color-wikia-dark-blue {
   background-color: #092344; }
@@ -267,31 +303,38 @@
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-comics
  *       div.color-preview-name Comics
- *       div.color-preview-code $color-bright-orange
+ *       div.color-preview-variable $color-wikia-comics
+ *       div.color-preview-reference $color-bright-orange
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-games
  *       div.color-preview-name Games
- *       div.color-preview-code $color-pea
+ *       div.color-preview-variable $color-wikia-games
+ *       div.color-preview-reference $color-pea
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-books
  *       div.color-preview-name Books
- *       div.color-preview-code $color-mango
+ *       div.color-preview-variable $color-wikia-books
+ *       div.color-preview-reference $color-mango
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-movies
  *       div.color-preview-name Movies
- *       div.color-preview-code $color-aquamarine
+ *       div.color-preview-variable $color-wikia-movies
+ *       div.color-preview-reference $color-aquamarine
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-lifestyle
  *       div.color-preview-name Lifestyle
- *       div.color-preview-code $color-sunflower-yellow
+ *       div.color-preview-variable $color-wikia-lifestyle
+ *       div.color-preview-reference $color-sunflower-yellow
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-music
  *       div.color-preview-name Music
- *       div.color-preview-code $color-barney
+ *       div.color-preview-variable $color-wikia-music
+ *       div.color-preview-reference $color-barney
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-tv
  *       div.color-preview-name TV
- *       div.color-preview-code $color-aqua-blue
+ *       div.color-preview-variable $color-wikia-tv
+ *       div.color-preview-reference $color-aqua-blue
  */
 .color-wikia-comics {
   background-color: #ff5400; }
@@ -321,19 +364,23 @@
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-alert
  *       div.color-preview-name Alert/Delete
- *       div.color-preview-code $color-pinkish-red
+ *       div.color-preview-variable $color-wikia-alert
+ *       div.color-preview-reference $color-pinkish-red
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-warning
  *       div.color-preview-name Warning/Reported
- *       div.color-preview-code $color-dusty-orange
+ *       div.color-preview-variable $color-wikia-warning
+ *       div.color-preview-reference $color-dusty-orange
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-success
  *       div.color-preview-name Success/Approve
- *       div.color-preview-code $color-kermit-green
+ *       div.color-preview-variable $color-wikia-success
+ *       div.color-preview-reference $color-kermit-green
  *     div.color-preview-card
  *       div.color-preview-box.color-wikia-message
  *       div.color-preview-name Wikia Message
- *       div.color-preview-code $color-blue-blue
+ *       div.color-preview-variable $color-wikia-message
+ *       div.color-preview-reference $color-blue-blue
  */
 .color-wikia-alert {
   background-color: #ed1c24; }
@@ -354,31 +401,38 @@
  *     div.color-preview-card
  *       div.color-preview-box.color-fandom-games
  *       div.color-preview-name Games
- *       div.color-preview-code $color-pea
+ *       div.color-preview-variable $color-fandom-games
+ *       div.color-preview-reference $color-pea
  *     div.color-preview-card
  *       div.color-preview-box.color-fandom-movies
  *       div.color-preview-name Movies
- *       div.color-preview-code $color-aquamarine
+ *       div.color-preview-variable $color-fandom-movies
+ *       div.color-preview-reference $color-aquamarine
  *     div.color-preview-card
  *       div.color-preview-box.color-fandom-tv
  *       div.color-preview-name TV
- *       div.color-preview-code $color-aqua-blue
+ *       div.color-preview-variable $color-fandom-tv
+ *       div.color-preview-reference $color-aqua-blue
  *     div.color-preview-card
  *       div.color-preview-box.color-fandom-dark-blue-gray
  *       div.color-preview-name Dark Blue Gray
- *       div.color-preview-code $color-charcoal-grey
+ *       div.color-preview-variable $color-fandom-dark-blue-gray
+ *       div.color-preview-reference $color-charcoal-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-fandom-medium-gray
  *       div.color-preview-name Medium Gray
- *       div.color-preview-code $color-slate-grey
+ *       div.color-preview-variable $color-fandom-medium-gray
+ *       div.color-preview-reference $color-slate-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-fandom-blue-gray
  *       div.color-preview-name Blue Gray
- *       div.color-preview-code $color-cloudy-blue
+ *       div.color-preview-variable $color-fandom-blue-gray
+ *       div.color-preview-reference $color-cloudy-blue
  *     div.color-preview-card
  *       div.color-preview-box.color-fandom-off-white
  *       div.color-preview-name Off-White 96%
- *       div.color-preview-code $color-off-white
+ *       div.color-preview-variable $color-fandom-off-white
+ *       div.color-preview-reference $color-off-white
  */
 .color-fandom-games {
   background-color: #94d11f; }
@@ -408,35 +462,43 @@
  *     div.color-preview-card
  *       div.color-preview-box.color-light-c1
  *       div.color-preview-name Light C1
- *       div.color-preview-code $color-white
+ *       div.color-preview-variable $color-light-c1
+ *       div.color-preview-reference $color-white
  *     div.color-preview-card
  *       div.color-preview-box.color-light-c2
  *       div.color-preview-name Light C2
- *       div.color-preview-code $color-off-white
+ *       div.color-preview-variable $color-light-c2
+ *       div.color-preview-reference $color-off-white
  *     div.color-preview-card
  *       div.color-preview-box.color-light-c3
  *       div.color-preview-name Light C3
- *       div.color-preview-code $color-mist-grey
+ *       div.color-preview-variable $color-light-c3
+ *       div.color-preview-reference $color-mist-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-light-c4
  *       div.color-preview-name Light C4
- *       div.color-preview-code $color-faint-grey
+ *       div.color-preview-variable $color-light-c4
+ *       div.color-preview-reference $color-faint-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-light-c5
  *       div.color-preview-name Light C5
- *       div.color-preview-code $color-light-grey
+ *       div.color-preview-variable $color-light-c5
+ *       div.color-preview-reference $color-light-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-light-c6
  *       div.color-preview-name Light C6
- *       div.color-preview-code $color-black-one
+ *       div.color-preview-variable $color-light-c6
+ *       div.color-preview-reference $color-black-one
  *     div.color-preview-card
  *       div.color-preview-box.color-light-c7
  *       div.color-preview-name Light C7
- *       div.color-preview-code $color-medium-grey
+ *       div.color-preview-variable $color-light-c7
+ *       div.color-preview-reference $color-medium-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-light-c8
  *       div.color-preview-name Light C8
- *       div.color-preview-code $color-ugly-yellow
+ *       div.color-preview-variable $color-light-c8
+ *       div.color-preview-reference $color-ugly-yellow
  */
 .color-light-c1 {
   background-color: #ffffff; }
@@ -469,35 +531,43 @@
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-c1
  *       div.color-preview-name Dark C1
- *       div.color-preview-code $color-black-three
+ *       div.color-preview-variable $color-dark-c1
+ *       div.color-preview-reference $color-black-three
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-c2
  *       div.color-preview-name Dark C2
- *       div.color-preview-code $color-black-two
+ *       div.color-preview-variable $color-dark-c2
+ *       div.color-preview-reference $color-black-two
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-c3
  *       div.color-preview-name Dark C3
- *       div.color-preview-code $color-black-one
+ *       div.color-preview-variable $color-dark-c3
+ *       div.color-preview-reference $color-black-one
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-c4
  *       div.color-preview-name Dark C4
- *       div.color-preview-code $color-medium-grey
+ *       div.color-preview-variable $color-dark-c4
+ *       div.color-preview-reference $color-medium-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-c5
  *       div.color-preview-name Dark C5
- *       div.color-preview-code $color-light-grey
+ *       div.color-preview-variable $color-dark-c5
+ *       div.color-preview-reference $color-light-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-c6
  *       div.color-preview-name Dark C6
- *       div.color-preview-code $color-faint-grey
+ *       div.color-preview-variable $color-dark-c6
+ *       div.color-preview-reference $color-faint-grey
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-c7
  *       div.color-preview-name Dark C7
- *       div.color-preview-code $color-white
+ *       div.color-preview-variable $color-dark-c7
+ *       div.color-preview-reference $color-white
  *     div.color-preview-card
  *       div.color-preview-box.color-dark-c8
  *       div.color-preview-name Dark C8
- *       div.color-preview-code $color-ugly-yellow
+ *       div.color-preview-variable $color-dark-c8
+ *       div.color-preview-reference $color-ugly-yellow
  */
 .color-dark-c1 {
   background-color: #262626; }
