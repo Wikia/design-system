@@ -1,10 +1,13 @@
+.color-preview-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .color-preview-card {
 	--border-color: #ccc;
 	--color-preview-height: 100px;
 	--color-preview-width: 110px;
-	display: inline-block;
-	margin: 5px 20px;
-	vertical-align: top;
+	margin: 10px;
 }
 
 .color-preview-box {
