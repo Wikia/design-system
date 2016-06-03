@@ -21,6 +21,7 @@
 	padding: var(--padding);
 	text-align: center;
 	width: calc(var(--color-preview-width) - 2 * var(--padding));
+	word-wrap: break-word;
 }
 
 .color-preview-code {
