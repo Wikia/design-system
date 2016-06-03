@@ -14,5 +14,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "design-system": "Wikia/design-system#^0.0.1"
+  }
 }

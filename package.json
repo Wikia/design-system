@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Wikia/design-system-reference-page#readme",
   "devDependencies": {
-    "styledown": "1.0.2"
+    "styledown": "1.0.2",
+    "gulp-sass": "^2.3.1"
   }
 }
