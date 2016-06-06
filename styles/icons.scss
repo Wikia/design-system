@@ -172,12 +172,11 @@
  **/
 
 .icon {
-	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 24px;
 	margin: 5px;
-	width: 110px;
+	//width: 110px;
 }
 
 .icon-name {
@@ -411,12 +410,13 @@
 /**
  * Small Set (18x18):
  *     @example
- *     div.icon-preview-card
- *       div.icon.icon-small.guide-small
- *       div.icon-name guide-small
- *     div.icon-preview-card
- *       div.icon.icon-small.home-small
- *       div.icon-name home-small
+ *     div.icon-preview-group
+ *       div.icon-preview-card
+ *         div.icon.icon-small.guide-small
+ *         div.icon-name guide-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.home-small
+ *         div.icon-name home-small
  *
  **/
 
@@ -437,84 +437,85 @@
  * Social Icons:
  *
  *     @example
- *     div.icon-preview-card
- *       div.icon.facebook-active
- *       div.icon-name facebook-active
- *     div.icon-preview-card
- *       div.icon.facebook-default
- *       div.icon-name facebook-default
- *     div.icon-preview-card
- *       div.icon.google-plus-active
- *       div.icon-name google-plus-active
- *     div.icon-preview-card
- *       div.icon.google-plus-default
- *       div.icon-name google-plus-default
- *     div.icon-preview-card
- *       div.icon.instagram-default
- *       div.icon-name instagram-default
- *     div.icon-preview-card
- *       div.icon.line-active
- *       div.icon-name line-active
- *     div.icon-preview-card
- *       div.icon.line-default
- *       div.icon-name line-default
- *     div.icon-preview-card
- *       div.icon.meneame-default
- *       div.icon-name meneame-default
- *     div.icon-preview-card
- *       div.icon.nk-active
- *       div.icon-name nk-active
- *     div.icon-preview-card
- *       div.icon.nk-default
- *       div.icon-name nk-default
- *     div.icon-preview-card
- *       div.icon.odnoklassniki-active
- *       div.icon-name odnoklassniki-active
- *     div.icon-preview-card
- *       div.icon.odnoklassniki-default
- *       div.icon-name odnoklassniki-default
- *     div.icon-preview-card
- *       div.icon.qzone-active
- *       div.icon-name qzone-active
- *     div.icon-preview-card
- *       div.icon.qzone-default
- *       div.icon-name qzone-default
- *     div.icon-preview-card
- *       div.icon.reddit-active
- *       div.icon-name reddit-active
- *     div.icon-preview-card
- *       div.icon.reddit-default
- *       div.icon-name reddit-default
- *     div.icon-preview-card
- *       div.icon.tumblr-active
- *       div.icon-name tumblr-active
- *     div.icon-preview-card
- *       div.icon.tumblr-default
- *       div.icon-name tumblr-default
- *     div.icon-preview-card
- *       div.icon.twitter-active
- *       div.icon-name twitter-active
- *     div.icon-preview-card
- *       div.icon.twitter-default
- *       div.icon-name twitter-default
- *     div.icon-preview-card
- *       div.icon.vkontakte-active
- *       div.icon-name vkontakte-active
- *     div.icon-preview-card
- *       div.icon.vkontakte-default
- *       div.icon-name vkontakte-default
- *     div.icon-preview-card
- *       div.icon.weibo-active
- *       div.icon-name weibo-active
- *     div.icon-preview-card
- *       div.icon.weibo-default
- *       div.icon-name weibo-default
- *     div.icon-preview-card
- *       div.icon.youtube-active
- *       div.icon-name youtube-active
- *     div.icon-preview-card
- *       div.icon.youtube-default
- *       div.icon-name youtube-default
+ *     div.icon-preview-group
+ *       div.icon-preview-card
+ *         div.icon.facebook-active
+ *         div.icon-name facebook-active
+ *       div.icon-preview-card
+ *         div.icon.facebook-default
+ *         div.icon-name facebook-default
+ *       div.icon-preview-card
+ *         div.icon.google-plus-active
+ *         div.icon-name google-plus-active
+ *       div.icon-preview-card
+ *         div.icon.google-plus-default
+ *         div.icon-name google-plus-default
+ *       div.icon-preview-card
+ *         div.icon.instagram-default
+ *         div.icon-name instagram-default
+ *       div.icon-preview-card
+ *         div.icon.line-active
+ *         div.icon-name line-active
+ *       div.icon-preview-card
+ *         div.icon.line-default
+ *         div.icon-name line-default
+ *       div.icon-preview-card
+ *         div.icon.meneame-default
+ *         div.icon-name meneame-default
+ *       div.icon-preview-card
+ *         div.icon.nk-active
+ *         div.icon-name nk-active
+ *       div.icon-preview-card
+ *         div.icon.nk-default
+ *         div.icon-name nk-default
+ *       div.icon-preview-card
+ *         div.icon.odnoklassniki-active
+ *         div.icon-name odnoklassniki-active
+ *       div.icon-preview-card
+ *         div.icon.odnoklassniki-default
+ *         div.icon-name odnoklassniki-default
+ *       div.icon-preview-card
+ *         div.icon.qzone-active
+ *         div.icon-name qzone-active
+ *       div.icon-preview-card
+ *         div.icon.qzone-default
+ *         div.icon-name qzone-default
+ *       div.icon-preview-card
+ *         div.icon.reddit-active
+ *         div.icon-name reddit-active
+ *       div.icon-preview-card
+ *         div.icon.reddit-default
+ *         div.icon-name reddit-default
+ *       div.icon-preview-card
+ *         div.icon.tumblr-active
+ *         div.icon-name tumblr-active
+ *       div.icon-preview-card
+ *         div.icon.tumblr-default
+ *         div.icon-name tumblr-default
+ *       div.icon-preview-card
+ *         div.icon.twitter-active
+ *         div.icon-name twitter-active
+ *       div.icon-preview-card
+ *         div.icon.twitter-default
+ *         div.icon-name twitter-default
+ *       div.icon-preview-card
+ *         div.icon.vkontakte-active
+ *         div.icon-name vkontakte-active
+ *       div.icon-preview-card
+ *         div.icon.vkontakte-default
+ *         div.icon-name vkontakte-default
+ *       div.icon-preview-card
+ *         div.icon.weibo-active
+ *         div.icon-name weibo-active
+ *       div.icon-preview-card
+ *         div.icon.weibo-default
+ *         div.icon-name weibo-default
+ *       div.icon-preview-card
+ *         div.icon.youtube-active
+ *         div.icon-name youtube-active
+ *       div.icon-preview-card
+ *         div.icon.youtube-default
+ *         div.icon-name youtube-default
  */
 
 .facebook-active {
@@ -557,37 +558,70 @@
 	background-image: url(../bower_components/design-system/assets/icons/nk-default.svg);
 }
 
-.odnoklassnik-active {
+.odnoklassniki-active {
 	background-image: url(../bower_components/design-system/assets/icons/odnoklassniki-active.svg);
 }
 
-.odnoklassnik-default {
+.odnoklassniki-default {
 	background-image: url(../bower_components/design-system/assets/icons/odnoklassniki-default.svg);
 }
 
 .qzone-active {
-	background-image: url(../bower_components/design-system/assets/icons/qzone-default.svg);
-}
-
-.qzone-default {
 	background-image: url(../bower_components/design-system/assets/icons/qzone-active.svg);
 }
 
-.reddit-active {
-	background-image: url(../bower_components/design-system/assets/icons/reddit-default.svg);
+.qzone-default {
+	background-image: url(../bower_components/design-system/assets/icons/qzone-default.svg);
 }
 
-.reddit-default {
+.reddit-active {
 	background-image: url(../bower_components/design-system/assets/icons/reddit-active.svg);
 }
 
+.reddit-default {
+	background-image: url(../bower_components/design-system/assets/icons/reddit-default.svg);
+}
+
 .tumblr-active {
-	background-image: url(../bower_components/design-system/assets/icons/tumblr-default.svg);
+	background-image: url(../bower_components/design-system/assets/icons/tumblr-active.svg);
 }
 
 .tumblr-default {
+	background-image: url(../bower_components/design-system/assets/icons/tumblr-default.svg);
+}
+
+.twitter-active {
 	background-image: url(../bower_components/design-system/assets/icons/tumblr-active.svg);
 }
+
+.twitter-default {
+	background-image: url(../bower_components/design-system/assets/icons/twitter-default.svg);
+}
+
+.vkontakte-active {
+	background-image: url(../bower_components/design-system/assets/icons/vkontakte-active.svg);
+}
+
+.vkontakte-default {
+	background-image: url(../bower_components/design-system/assets/icons/vkontakte-default.svg);
+}
+
+.weibo-active {
+	background-image: url(../bower_components/design-system/assets/icons/weibo-active.svg);
+}
+
+.weibo-default {
+	background-image: url(../bower_components/design-system/assets/icons/weibo-default.svg);
+}
+
+.youtube-active {
+	background-image: url(../bower_components/design-system/assets/icons/youtube-active.svg);
+}
+
+.youtube-default {
+	background-image: url(../bower_components/design-system/assets/icons/youtube-default.svg);
+}
+
 
 
 
