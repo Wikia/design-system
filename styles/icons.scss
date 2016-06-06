@@ -1,0 +1,593 @@
+/**
+ * Standard Set (24x24):
+ *
+ *     @example
+ *     div.icon-preview-group
+ *       div.icon-preview-card
+ *         div.icon.alert
+ *         div.icon-name alert
+ *       div.icon-preview-card
+ *         div.icon.arrow-left
+ *         div.icon-name arrow-left
+ *       div.icon-preview-card
+ *         div.icon.arrow-right
+ *         div.icon-name arrow-right
+ *       div.icon-preview-card
+ *         div.icon.bell
+ *         div.icon-name bell
+ *       div.icon-preview-card
+ *         div.icon.bookmark
+ *         div.icon-name bookmark
+ *       div.icon-preview-card
+ *         div.icon.bullet-list
+ *         div.icon-name bullet-list
+ *       div.icon-preview-card
+ *         div.icon.camera
+ *         div.icon-name camera
+ *       div.icon-preview-card
+ *         div.icon.checkbox
+ *         div.icon-name checkbox
+ *       div.icon-preview-card
+ *         div.icon.checkmark
+ *         div.icon-name checkmark
+ *       div.icon-preview-card
+ *         div.icon.checkmark-circle
+ *         div.icon-name checkmark-circle
+ *       div.icon-preview-card
+ *         div.icon.clipboard
+ *         div.icon-name clipboard
+ *       div.icon-preview-card
+ *         div.icon.community
+ *         div.icon-name community
+ *       div.icon-preview-card
+ *         div.icon.controls
+ *         div.icon-name controls
+ *       div.icon-preview-card
+ *         div.icon.cross
+ *         div.icon-name cross
+ *       div.icon-preview-card
+ *         div.icon.document
+ *         div.icon-name document
+ *       div.icon-preview-card
+ *         div.icon.dropdown
+ *         div.icon-name dropdown
+ *       div.icon-preview-card
+ *         div.icon.eye
+ *         div.icon-name eye
+ *       div.icon-preview-card
+ *         div.icon.eye-crossed
+ *         div.icon-name eye-crossed
+ *       div.icon-preview-card
+ *         div.icon.flag
+ *         div.icon-name flag
+ *       div.icon-preview-card
+ *         div.icon.grid
+ *         div.icon-name grid
+ *       div.icon-preview-card
+ *         div.icon.gear
+ *         div.icon-name gear
+ *       div.icon-preview-card
+ *         div.icon.gift
+ *         div.icon-name gift
+ *       div.icon-preview-card
+ *         div.icon.house
+ *         div.icon-name house
+ *       div.icon-preview-card
+ *         div.icon.image
+ *         div.icon-name image
+ *       div.icon-preview-card
+ *         div.icon.image-add
+ *         div.icon-name image-add
+ *       div.icon-preview-card
+ *         div.icon.image-remove
+ *         div.icon-name image-remove
+ *       div.icon-preview-card
+ *         div.icon.information
+ *         div.icon-name information
+ *       div.icon-preview-card
+ *         div.icon.link
+ *         div.icon-name link
+ *       div.icon-preview-card
+ *         div.icon.loading
+ *         div.icon-name loading
+ *       div.icon-preview-card
+ *         div.icon.lock
+ *         div.icon-name lock
+ *       div.icon-preview-card
+ *         div.icon.magnifying-glass
+ *         div.icon-name magnifying-glass
+ *       div.icon-preview-card
+ *         div.icon.mail
+ *         div.icon-name mail
+ *       div.icon-preview-card
+ *         div.icon.map
+ *         div.icon-name map
+ *       div.icon-preview-card
+ *         div.icon.menu
+ *         div.icon-name menu
+ *       div.icon-preview-card
+ *         div.icon.menu-down
+ *         div.icon-name menu-down
+ *       div.icon-preview-card
+ *         div.icon.menu-left
+ *         div.icon-name menu-left
+ *       div.icon-preview-card
+ *         div.icon.menu-right
+ *         div.icon-name menu-right
+ *       div.icon-preview-card
+ *         div.icon.menu-up
+ *         div.icon-name menu-up
+ *       div.icon-preview-card
+ *         div.icon.more
+ *         div.icon-name more
+ *       div.icon-preview-card
+ *         div.icon.page
+ *         div.icon-name page
+ *       div.icon-preview-card
+ *         div.icon.pencil
+ *         div.icon-name pencil
+ *       div.icon-preview-card
+ *         div.icon.play
+ *         div.icon-name play
+ *       div.icon-preview-card
+ *         div.icon.plus
+ *         div.icon-name plus
+ *       div.icon-preview-card
+ *         div.icon.question
+ *         div.icon-name question
+ *       div.icon-preview-card
+ *         div.icon.refresh
+ *         div.icon-name refresh
+ *       div.icon-preview-card
+ *         div.icon.reply
+ *         div.icon-name reply
+ *       div.icon-preview-card
+ *         div.icon.share
+ *         div.icon-name share
+ *       div.icon-preview-card
+ *         div.icon.text
+ *         div.icon-name text
+ *       div.icon-preview-card
+ *         div.icon.trash
+ *         div.icon-name trash
+ *       div.icon-preview-card
+ *         div.icon.trash-open
+ *         div.icon-name trash-open
+ *       div.icon-preview-card
+ *         div.icon.undo
+ *         div.icon-name undo
+ *       div.icon-preview-card
+ *         div.icon.upload
+ *         div.icon-name upload
+ *       div.icon-preview-card
+ *         div.icon.upvote
+ *         div.icon-name upvote
+ *       div.icon-preview-card
+ *         div.icon.upvote-reply
+ *         div.icon-name upvote-reply
+ *       div.icon-preview-card
+ *         div.icon.user
+ *         div.icon-name user
+ *
+ **/
+
+.icon {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 24px;
+	margin: 5px;
+	width: 110px;
+}
+
+.icon-name {
+	padding: 5px;
+}
+
+.alert {
+	background-image: url(../bower_components/design-system/assets/icons/alert.svg);
+}
+
+.arrow-left {
+	background-image: url(../bower_components/design-system/assets/icons/arrow-left.svg);
+}
+
+.arrow-right {
+	background-image: url(../bower_components/design-system/assets/icons/arrow-right.svg);
+}
+
+.bell {
+	background-image: url(../bower_components/design-system/assets/icons/bell.svg);
+}
+
+.bookmark {
+	background-image: url(../bower_components/design-system/assets/icons/bookmark.svg);
+}
+
+.bullet-list {
+	background-image: url(../bower_components/design-system/assets/icons/bullet-list.svg);
+}
+
+.camera {
+	background-image: url(../bower_components/design-system/assets/icons/camera.svg);
+}
+
+.checkbox {
+	background-image: url(../bower_components/design-system/assets/icons/checkbox.svg);
+}
+
+.checkmark {
+	background-image: url(../bower_components/design-system/assets/icons/checkmark.svg);
+}
+
+.checkmark-circle {
+	background-image: url(../bower_components/design-system/assets/icons/checkmark-circle.svg);
+}
+
+.clipboard {
+	background-image: url(../bower_components/design-system/assets/icons/clipboard.svg);
+}
+
+.community {
+	background-image: url(../bower_components/design-system/assets/icons/community.svg);
+}
+
+.controls {
+	background-image: url(../bower_components/design-system/assets/icons/controls.svg);
+}
+
+.cross {
+	background-image: url(../bower_components/design-system/assets/icons/cross.svg);
+}
+
+.document {
+	background-image: url(../bower_components/design-system/assets/icons/document.svg);
+}
+
+.dropdown {
+	background-image: url(../bower_components/design-system/assets/icons/dropdown.svg);
+}
+
+.eye {
+	background-image: url(../bower_components/design-system/assets/icons/eye.svg);
+}
+
+.eye-crossed {
+	background-image: url(../bower_components/design-system/assets/icons/eye-crossed.svg);
+}
+
+.flag {
+	background-image: url(../bower_components/design-system/assets/icons/flag.svg);
+}
+
+.gear {
+	background-image: url(../bower_components/design-system/assets/icons/gear.svg);
+}
+
+.gift {
+	background-image: url(../bower_components/design-system/assets/icons/gift.svg);
+}
+
+.grid {
+	background-image: url(../bower_components/design-system/assets/icons/grid.svg);
+}
+
+.house {
+	background-image: url(../bower_components/design-system/assets/icons/house.svg);
+}
+
+.image {
+	background-image: url(../bower_components/design-system/assets/icons/image.svg);
+}
+
+.image-add {
+	background-image: url(../bower_components/design-system/assets/icons/image-add.svg);
+}
+
+.image-remove {
+	background-image: url(../bower_components/design-system/assets/icons/image-remove.svg);
+}
+
+.information {
+	background-image: url(../bower_components/design-system/assets/icons/information.svg);
+}
+
+.link {
+	background-image: url(../bower_components/design-system/assets/icons/link.svg);
+}
+
+.loading {
+	background-image: url(../bower_components/design-system/assets/icons/loading.svg);
+}
+
+.lock {
+	background-image: url(../bower_components/design-system/assets/icons/lock.svg);
+}
+
+.magnifying-glass {
+	background-image: url(../bower_components/design-system/assets/icons/magnifying-glass.svg);
+}
+
+.mail {
+	background-image: url(../bower_components/design-system/assets/icons/mail.svg);
+}
+
+.map {
+	background-image: url(../bower_components/design-system/assets/icons/map.svg);
+}
+
+.menu {
+	background-image: url(../bower_components/design-system/assets/icons/menu.svg);
+}
+
+.menu-down {
+	background-image: url(../bower_components/design-system/assets/icons/menu-down.svg);
+}
+
+.menu-left {
+	background-image: url(../bower_components/design-system/assets/icons/menu-left.svg);
+}
+
+.menu-right {
+	background-image: url(../bower_components/design-system/assets/icons/menu-right.svg);
+}
+
+.menu-up {
+	background-image: url(../bower_components/design-system/assets/icons/menu-up.svg);
+}
+
+.more {
+	background-image: url(../bower_components/design-system/assets/icons/more.svg);
+}
+
+.note {
+	background-image: url(../bower_components/design-system/assets/icons/note.svg);
+}
+
+.page {
+	background-image: url(../bower_components/design-system/assets/icons/page.svg);
+}
+
+.pencil {
+	background-image: url(../bower_components/design-system/assets/icons/pencil.svg);
+}
+
+.play {
+	background-image: url(../bower_components/design-system/assets/icons/play.svg);
+}
+
+.plus {
+	background-image: url(../bower_components/design-system/assets/icons/plus.svg);
+}
+
+.question {
+	background-image: url(../bower_components/design-system/assets/icons/question.svg);
+}
+
+.refresh {
+	background-image: url(../bower_components/design-system/assets/icons/refresh.svg);
+}
+
+.reply {
+	background-image: url(../bower_components/design-system/assets/icons/reply.svg);
+}
+
+.share {
+	background-image: url(../bower_components/design-system/assets/icons/share.svg);
+}
+
+.text {
+	background-image: url(../bower_components/design-system/assets/icons/text.svg);
+}
+
+.trash {
+	background-image: url(../bower_components/design-system/assets/icons/trash.svg);
+}
+
+.trash-open {
+	background-image: url(../bower_components/design-system/assets/icons/trash-open.svg);
+}
+
+.undo {
+	background-image: url(../bower_components/design-system/assets/icons/undo.svg);
+}
+
+.upload {
+	background-image: url(../bower_components/design-system/assets/icons/upload.svg);
+}
+
+.upvote {
+	background-image: url(../bower_components/design-system/assets/icons/upvote.svg);
+}
+
+.upvote-reply {
+	background-image: url(../bower_components/design-system/assets/icons/upvote-reply.svg);
+}
+
+.user {
+	background-image: url(../bower_components/design-system/assets/icons/user.svg);
+}
+
+/**
+ * Small Set (18x18):
+ *     @example
+ *     div.icon-preview-card
+ *       div.icon.icon-small.guide-small
+ *       div.icon-name guide-small
+ *     div.icon-preview-card
+ *       div.icon.icon-small.home-small
+ *       div.icon-name home-small
+ *
+ **/
+
+.icon-small {
+	height: 18px;
+	width: 18px;
+}
+
+.guide-small {
+	background-image: url(../bower_components/design-system/assets/icons/guide-small.svg);
+}
+
+.home-small {
+	background-image: url(../bower_components/design-system/assets/icons/home-small.svg);
+}
+
+/**
+ * Social Icons:
+ *
+ *     @example
+ *     div.icon-preview-card
+ *       div.icon.facebook-active
+ *       div.icon-name facebook-active
+ *     div.icon-preview-card
+ *       div.icon.facebook-default
+ *       div.icon-name facebook-default
+ *     div.icon-preview-card
+ *       div.icon.google-plus-active
+ *       div.icon-name google-plus-active
+ *     div.icon-preview-card
+ *       div.icon.google-plus-default
+ *       div.icon-name google-plus-default
+ *     div.icon-preview-card
+ *       div.icon.instagram-default
+ *       div.icon-name instagram-default
+ *     div.icon-preview-card
+ *       div.icon.line-active
+ *       div.icon-name line-active
+ *     div.icon-preview-card
+ *       div.icon.line-default
+ *       div.icon-name line-default
+ *     div.icon-preview-card
+ *       div.icon.meneame-default
+ *       div.icon-name meneame-default
+ *     div.icon-preview-card
+ *       div.icon.nk-active
+ *       div.icon-name nk-active
+ *     div.icon-preview-card
+ *       div.icon.nk-default
+ *       div.icon-name nk-default
+ *     div.icon-preview-card
+ *       div.icon.odnoklassniki-active
+ *       div.icon-name odnoklassniki-active
+ *     div.icon-preview-card
+ *       div.icon.odnoklassniki-default
+ *       div.icon-name odnoklassniki-default
+ *     div.icon-preview-card
+ *       div.icon.qzone-active
+ *       div.icon-name qzone-active
+ *     div.icon-preview-card
+ *       div.icon.qzone-default
+ *       div.icon-name qzone-default
+ *     div.icon-preview-card
+ *       div.icon.reddit-active
+ *       div.icon-name reddit-active
+ *     div.icon-preview-card
+ *       div.icon.reddit-default
+ *       div.icon-name reddit-default
+ *     div.icon-preview-card
+ *       div.icon.tumblr-active
+ *       div.icon-name tumblr-active
+ *     div.icon-preview-card
+ *       div.icon.tumblr-default
+ *       div.icon-name tumblr-default
+ *     div.icon-preview-card
+ *       div.icon.twitter-active
+ *       div.icon-name twitter-active
+ *     div.icon-preview-card
+ *       div.icon.twitter-default
+ *       div.icon-name twitter-default
+ *     div.icon-preview-card
+ *       div.icon.vkontakte-active
+ *       div.icon-name vkontakte-active
+ *     div.icon-preview-card
+ *       div.icon.vkontakte-default
+ *       div.icon-name vkontakte-default
+ *     div.icon-preview-card
+ *       div.icon.weibo-active
+ *       div.icon-name weibo-active
+ *     div.icon-preview-card
+ *       div.icon.weibo-default
+ *       div.icon-name weibo-default
+ *     div.icon-preview-card
+ *       div.icon.youtube-active
+ *       div.icon-name youtube-active
+ *     div.icon-preview-card
+ *       div.icon.youtube-default
+ *       div.icon-name youtube-default
+ */
+
+.facebook-active {
+	background-image: url(../bower_components/design-system/assets/icons/facebook-active.svg);
+}
+
+.facebook-default {
+	background-image: url(../bower_components/design-system/assets/icons/facebook-default.svg);
+}
+
+.google-plus-default {
+	background-image: url(../bower_components/design-system/assets/icons/google-plus-default.svg);
+}
+
+.google-plus-active {
+	background-image: url(../bower_components/design-system/assets/icons/google-plus-active.svg);
+}
+
+.instagram-default {
+	background-image: url(../bower_components/design-system/assets/icons/instagram-default.svg);
+}
+
+.line-active {
+	background-image: url(../bower_components/design-system/assets/icons/line-active.svg);
+}
+
+.line-default {
+	background-image: url(../bower_components/design-system/assets/icons/line-default.svg);
+}
+
+.meneame-default {
+	background-image: url(../bower_components/design-system/assets/icons/meneame-default.svg);
+}
+
+.nk-active {
+	background-image: url(../bower_components/design-system/assets/icons/nk-active.svg);
+}
+
+.nk-default {
+	background-image: url(../bower_components/design-system/assets/icons/nk-default.svg);
+}
+
+.odnoklassnik-active {
+	background-image: url(../bower_components/design-system/assets/icons/odnoklassniki-active.svg);
+}
+
+.odnoklassnik-default {
+	background-image: url(../bower_components/design-system/assets/icons/odnoklassniki-default.svg);
+}
+
+.qzone-active {
+	background-image: url(../bower_components/design-system/assets/icons/qzone-default.svg);
+}
+
+.qzone-default {
+	background-image: url(../bower_components/design-system/assets/icons/qzone-active.svg);
+}
+
+.reddit-active {
+	background-image: url(../bower_components/design-system/assets/icons/reddit-default.svg);
+}
+
+.reddit-default {
+	background-image: url(../bower_components/design-system/assets/icons/reddit-active.svg);
+}
+
+.tumblr-active {
+	background-image: url(../bower_components/design-system/assets/icons/tumblr-default.svg);
+}
+
+.tumblr-default {
+	background-image: url(../bower_components/design-system/assets/icons/tumblr-active.svg);
+}
+
+
+
