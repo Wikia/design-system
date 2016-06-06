@@ -8,7 +8,7 @@
     "Bartosz V. Bentkowski <me@bartoszbentkowski.com>"
   ],
   "scripts": {
-    "optimize-svg": "./node_modules/.bin/svgo --config .svgo.yml assets/icons"
+    "optimize-svg": "./node_modules/.bin/svgo --precision 3 --config .svgo.yml assets/icons"
   },
   "repository": {
     "type": "git",

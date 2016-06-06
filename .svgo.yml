@@ -1,13 +1,13 @@
 plugins:
   - removeDoctype
   - removeXMLProcInst
-  - removeComments
+  - removeComments: true
   - removeMetadata
   - removeEditorsNSData
   - cleanupAttrs
   - minifyStyles
   - convertStyleToAttrs
-  - cleanupIDs: false
+  - cleanupIDs: true
   - removeRasterImages
   - removeUselessDefs
   - cleanupNumericValues
@@ -22,9 +22,9 @@ plugins:
   - removeEmptyText
   - convertShapeToPath
   - moveElemsAttrsToGroup
-  - moveGroupAttrsToElems
+  - moveGroupAttrsToElems: true
   - collapseGroups
-  - convertPathData: false
+  - convertPathData: true
   - convertTransform
   - removeEmptyAttrs
   - removeEmptyContainers
@@ -32,7 +32,7 @@ plugins:
   - removeUnusedNS
   - transformsWithOnePath
   - sortAttrs
-  - removeTitle
+  - removeTitle: true
   - removeDesc
   - removeDimensions
   - removeAttrs

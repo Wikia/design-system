@@ -1,7 +1,3 @@
 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <g id="Styleguide" fill="none" fill-rule="evenodd">
-    <g id="Base-Style---Icons" transform="translate(-920 -810)" fill="#999">
-      <path d="M24,13 L24,22 C24,22.553 24.447,23 25,23 C25.553,23 26,22.553 26,22 L26,13 L35,13 C35.553,13 36,12.553 36,12 C36,11.447 35.553,11 35,11 L26,11 L26,2 C26,1.447 25.553,1 25,1 C24.447,1 24,1.447 24,2 L24,11 L15,11 C14.447,11 14,11.447 14,12 C14,12.553 14.447,13 15,13 L24,13 Z" transform="translate(907 810)" id="Plus"/>
-    </g>
-  </g>
+  <path d="M11 13v9a1 1 0 1 0 2 0v-9h9a1 1 0 1 0 0-2h-9V2a1 1 0 1 0-2 0v9H2a1 1 0 1 0 0 2h9z" fill="#999" fill-rule="evenodd"/>
 </svg>
