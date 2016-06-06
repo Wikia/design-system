@@ -1,0 +1,9 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <g id="Styleguide" fill="none" fill-rule="evenodd">
+    <g id="Base-Style---Icons" transform="translate(-720 -455)" fill="#999">
+      <g id="Bookmark" transform="translate(699 455)">
+        <path d="M41,0 L33,0 L25,0 C24.4,0 24,0.4 24,1 L24,23 C24,23.4 24.2,23.7 24.5,23.9 C24.7,24 24.8,24 25,24 C25.2,24 25.3,23.9 25.5,23.8 L33,19.1 L40.5,23.8 C40.7,23.9 40.8,24 41,24 C41.2,24 41.3,24 41.5,23.9 C41.8,23.7 42,23.4 42,23 L42,1 C42,0.4 41.6,0 41,0" id="bookmark"/>
+      </g>
+    </g>
+  </g>
+</svg>
