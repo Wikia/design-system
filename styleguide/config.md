@@ -10,5 +10,5 @@
 
 ### Body
 
-    h1 Wikia Styleguide
+    h1 Wikia Design System
     div#styleguides(sg-content)
