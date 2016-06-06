@@ -962,8 +962,7 @@
  *
  **/
 .icon-small {
-  height: 18px;
-  width: 18px; }
+  height: 18px; }
 
 .guide-small {
   background-image: url(../bower_components/design-system/assets/icons/guide-small.svg); }
