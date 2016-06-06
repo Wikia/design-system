@@ -2,7 +2,9 @@
   "name": "design-system-reference-page",
   "homepage": "https://github.com/Wikia/design-system-reference-page",
   "authors": [
-    "Bogna Knychala <bogna.ka@gmail.com>"
+    "Bogna Knychala <bogna.ka@gmail.com>",
+    "Bartosz V. Bentkowski <me@bartoszbentkowski.com>",
+    "Mateusz Warkocki <warkot@wikia-inc.com>"
   ],
   "description": "",
   "main": "",
@@ -14,5 +16,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "design-system": "Wikia/design-system#master"
+  }
 }

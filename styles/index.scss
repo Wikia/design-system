@@ -1,6 +1,3 @@
-@import "../bower_components/design-system/index";
-
-
-body {
-	background: $color-kermit-green;
-}
+@import '../bower_components/design-system/index';
+@import 'colors';
+@import 'typography';

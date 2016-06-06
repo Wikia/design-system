@@ -144,90 +144,121 @@
  *         div.color-preview-variable $color-white
  *         div.color-preview-reference #ffffff
  */
+
 .color-aqua-blue {
-  background-color: #00b7e0; }
+	background-color: $color-aqua-blue;
+}
 
 .color-aquamarine {
-  background-color: #09d3bf; }
+	background-color: $color-aquamarine;
+}
 
 .color-barney {
-  background-color: #c819ad; }
+	background-color: $color-barney;
+}
 
 .color-black-one {
-  background-color: #333333; }
+	background-color: $color-black-one;
+}
 
 .color-black-three {
-  background-color: #262626; }
+	background-color: $color-black-three;
+}
 
 .color-black-two {
-  background-color: #1a1a1a; }
+	background-color: $color-black-two;
+}
 
 .color-blue-blue {
-  background-color: #1a5eb8; }
+	background-color: $color-blue-blue;
+}
 
 .color-bright-orange {
-  background-color: #ff5400; }
+	background-color: $color-bright-orange;
+}
 
 .color-charcoal-grey {
-  background-color: #39424d; }
+	background-color: $color-charcoal-grey;
+}
 
 .color-cloudy-blue {
-  background-color: #c5ced9; }
+	background-color: $color-cloudy-blue;
+}
 
 .color-dark-indigo {
-  background-color: #092344; }
+	background-color: $color-dark-indigo;
+}
 
 .color-dark-sky-blue {
-  background-color: #4a90e2; }
+	background-color: $color-dark-sky-blue;
+}
 
 .color-dusty-orange {
-  background-color: #f08a24; }
+	background-color: $color-dusty-orange;
+}
 
 .color-faint-grey {
-  background-color: #cccccc; }
+	background-color: $color-faint-grey;
+}
 
 .color-kermit-green {
-  background-color: #5ba200; }
+	background-color: $color-kermit-green;
+}
 
 .color-light-grey {
-  background-color: #999999; }
+	background-color: $color-light-grey;
+}
 
 .color-mango {
-  background-color: #ff7f26; }
+	background-color: $color-mango;
+}
 
 .color-medium-grey {
-  background-color: #666666; }
+	background-color: $color-medium-grey;
+}
 
 .color-mist-grey {
-  background-color: #e6e6e6; }
+	background-color: $color-mist-grey;
+}
 
 .color-off-white {
-  background-color: #f6f6f6; }
+	background-color: $color-off-white;
+}
 
 .color-pale-grey-one {
-  background-color: #e6ebf2; }
+	background-color: $color-pale-grey-one;
+}
 
 .color-pale-grey-two {
-  background-color: #f2f6fa; }
+	background-color: $color-pale-grey-two;
+}
 
 .color-pea {
-  background-color: #94d11f; }
+	background-color: $color-pea;
+}
 
 .color-pinkish-red {
-  background-color: #ed1c24; }
+	background-color: $color-pinkish-red;
+}
 
 .color-slate-grey {
-  background-color: #656e78; }
+	background-color: $color-slate-grey;
+}
 
 .color-sunflower-yellow {
-  background-color: #ffd000; }
+	background-color: $color-sunflower-yellow;
+}
 
 .color-ugly-yellow {
-  background-color: #e3bd00; }
+	background-color: $color-ugly-yellow;
+}
 
 .color-white {
-  background-color: #ffffff; }
+	background-color: $color-white;
+}
 
+/////////////////////////
+// # Wikia Brand Colors
 /**
  * Wikia Corporate Colors:
  *
@@ -274,29 +305,38 @@
  *         div.color-preview-variable $color-wikia-white
  *         a(href="#color-white").color-preview-reference $color-white
  */
+
 .color-wikia-dark-blue {
-  background-color: #092344; }
+	background-color: $color-wikia-dark-blue;
+}
 
 .color-wikia-light-blue {
-  background-color: #1a5eb8; }
+	background-color: $color-wikia-light-blue;
+}
 
 .color-wikia-dark-blue-gray {
-  background-color: #39424d; }
+	background-color: $color-wikia-dark-blue-gray;
+}
 
 .color-wikia-medium-gray {
-  background-color: #656e78; }
+	background-color: $color-wikia-medium-gray;
+}
 
 .color-wikia-blue-gray {
-  background-color: #c5ced9; }
+	background-color: $color-wikia-blue-gray;
+}
 
 .color-wikia-light-blue-gray {
-  background-color: #e6ebf2; }
+	background-color: $color-wikia-light-blue-gray;
+}
 
 .color-wikia-gray {
-  background-color: #f2f6fa; }
+	background-color: $color-wikia-gray;
+}
 
 .color-wikia-white {
-  background-color: #ffffff; }
+	background-color: $color-wikia-white;
+}
 
 /**
  * Vertical Colors:
@@ -339,26 +379,34 @@
  *         div.color-preview-variable $color-wikia-tv
  *         a(href="#color-aqua-blue").color-preview-reference $color-aqua-blue
  */
+
 .color-wikia-comics {
-  background-color: #ff5400; }
+	background-color: $color-wikia-comics;
+}
 
 .color-wikia-games {
-  background-color: #94d11f; }
+	background-color: $color-wikia-games;
+}
 
 .color-wikia-books {
-  background-color: #ff7f26; }
+	background-color: $color-wikia-books;
+}
 
 .color-wikia-movies {
-  background-color: #09d3bf; }
+	background-color: $color-wikia-movies;
+}
 
 .color-wikia-lifestyle {
-  background-color: #ffd000; }
+	background-color: $color-wikia-lifestyle;
+}
 
 .color-wikia-music {
-  background-color: #c819ad; }
+	background-color: $color-wikia-music;
+}
 
 .color-wikia-tv {
-  background-color: #00b7e0; }
+	background-color: $color-wikia-tv;
+}
 
 /**
  * Alerts:
@@ -386,18 +434,25 @@
  *         div.color-preview-variable $color-wikia-message
  *         a(href="#color-blue-blue").color-preview-reference $color-blue-blue
  */
+
 .color-wikia-alert {
-  background-color: #ed1c24; }
+	background-color: $color-wikia-alert;
+}
 
 .color-wikia-warning {
-  background-color: #f08a24; }
+	background-color: $color-wikia-warning;
+}
 
 .color-wikia-success {
-  background-color: #5ba200; }
+	background-color: $color-wikia-success;
+}
 
 .color-wikia-message {
-  background-color: #1a5eb8; }
+	background-color: $color-wikia-message;
+}
 
+/////////////////////////
+// # Fandom Brand Colors
 /**
  * Fandom Corporate Colors:
  *
@@ -439,27 +494,37 @@
  *         div.color-preview-variable $color-fandom-off-white
  *         a(href="#color-off-white").color-preview-reference $color-off-white
  */
+
 .color-fandom-games {
-  background-color: #94d11f; }
+	background-color: $color-fandom-games;
+}
 
 .color-fandom-movies {
-  background-color: #09d3bf; }
+	background-color: $color-fandom-movies;
+}
 
 .color-fandom-tv {
-  background-color: #00b7e0; }
+	background-color: $color-fandom-tv;
+}
 
 .color-fandom-dark-blue-gray {
-  background-color: #39424d; }
+	background-color: $color-fandom-dark-blue-gray;
+}
 
 .color-fandom-medium-gray {
-  background-color: #656e78; }
+	background-color: $color-fandom-medium-gray;
+}
 
 .color-fandom-blue-gray {
-  background-color: #c5ced9; }
+	background-color: $color-fandom-blue-gray;
+}
 
 .color-fandom-off-white {
-  background-color: #f6f6f6; }
+	background-color: $color-fandom-off-white;
+}
 
+/////////////////////////
+// # Theming Colors
 /**
  * Light Theme:
  *
@@ -506,29 +571,38 @@
  *         div.color-preview-variable $color-light-c8
  *         a(href="#color-ugly-yellow").color-preview-reference $color-ugly-yellow
  */
+
 .color-light-c1 {
-  background-color: #ffffff; }
+	background-color: $color-light-c1;
+}
 
 .color-light-c2 {
-  background-color: #f6f6f6; }
+	background-color: $color-light-c2;
+}
 
 .color-light-c3 {
-  background-color: #e6e6e6; }
+	background-color: $color-light-c3;
+}
 
 .color-light-c4 {
-  background-color: #cccccc; }
+	background-color: $color-light-c4;
+}
 
 .color-light-c5 {
-  background-color: #999999; }
+	background-color: $color-light-c5;
+}
 
 .color-light-c6 {
-  background-color: #333333; }
+	background-color: $color-light-c6;
+}
 
 .color-light-c7 {
-  background-color: #666666; }
+	background-color: $color-light-c7;
+}
 
 .color-light-c8 {
-  background-color: #e3bd00; }
+	background-color: $color-light-c8;
+}
 
 /**
  * Dark Theme:
@@ -576,112 +650,35 @@
  *         div.color-preview-variable $color-dark-c8
  *         a(href="#color-ugly-yellow").color-preview-reference $color-ugly-yellow
  */
+
 .color-dark-c1 {
-  background-color: #262626; }
+	background-color: $color-dark-c1;
+}
 
 .color-dark-c2 {
-  background-color: #1a1a1a; }
+	background-color: $color-dark-c2;
+}
 
 .color-dark-c3 {
-  background-color: #333333; }
+	background-color: $color-dark-c3;
+}
 
 .color-dark-c4 {
-  background-color: #666666; }
+	background-color: $color-dark-c4;
+}
 
 .color-dark-c5 {
-  background-color: #999999; }
+	background-color: $color-dark-c5;
+}
 
 .color-dark-c6 {
-  background-color: #cccccc; }
+	background-color: $color-dark-c6;
+}
 
 .color-dark-c7 {
-  background-color: #ffffff; }
+	background-color: $color-dark-c7;
+}
 
 .color-dark-c8 {
-  background-color: #e3bd00; }
-
-/**
- * Typescale:
- *
- *     @example
- *     p
- *       div.typescale-size-plus-7 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-size-plus-7
- *     p
- *       div.typescale-size-plus-6 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-size-plus-6
- *     p
- *       div.typescale-size-plus-5 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-size-plus-5
- *     p
- *       div.typescale-size-plus-4 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-size-plus-4
- *     p
- *       div.typescale-size-plus-3 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-size-plus-3
- *     p
- *       div.typescale-size-plus-2 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-size-plus-2
- *     p
- *       div.typescale-size-plus-1 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-size-plus-1
- *     p
- *       div.typescale-size-base The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-size-base
- *     p
- *       div.typescale-size-minus-1 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-minus-1
- *     p
- *       div.typescale-size-minus-2 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-minus-2
- *     p
- *       div.typescale-size-minus-3 The quick brown fox jumps over the lazy dog
- *       code.sg $typograghy-minus-3
- */
-.typescale-size-base {
-  font-size: 16px;
-  line-height: 1.5em; }
-
-.typescale-size-minus-1 {
-  font-size: 14px;
-  line-height: 1.5em; }
-
-.typescale-size-minus-2 {
-  font-size: 12px;
-  line-height: 1.5em; }
-
-.typescale-size-minus-3 {
-  font-size: 10px;
-  line-height: 1.5em; }
-
-.typescale-size-plus-1 {
-  font-size: 18px;
-  line-height: 1.5em; }
-
-.typescale-size-plus-2 {
-  font-size: 24px;
-  line-height: 1.5em; }
-
-.typescale-size-plus-3 {
-  font-size: 28px;
-  line-height: 1.5em; }
-
-.typescale-size-plus-4 {
-  font-size: 36px;
-  line-height: 1.5em; }
-
-.typescale-size-plus-5 {
-  font-size: 40px;
-  line-height: 1.5em; }
-
-.typescale-size-plus-6 {
-  font-size: 48px;
-  line-height: 1.5em; }
-
-.typescale-size-plus-7 {
-  font-size: 54px;
-  line-height: 1.5em; }
-
-.typescale-size-minus-3 {
-  font-size: 10px;
-  line-height: 1.5em; }
+	background-color: $color-dark-c8;
+}

@@ -1,4 +1,6 @@
-.idea
-node_modules
-bower_components
-www
+.idea/
+bower_components/
+node_modules/
+npm-debug.log
+*.DS_Store
+*._.DS_Store
