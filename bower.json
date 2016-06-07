@@ -18,6 +18,6 @@
     "tests"
   ],
   "dependencies": {
-    "design-system": "Wikia/design-system#DAT-4359"
+    "design-system": "Wikia/design-system#master"
   }
 }
