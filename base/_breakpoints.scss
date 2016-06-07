@@ -1,0 +1,21 @@
+$breakpoint-small: 320px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1440px;
+
+$screen: 'only screen';
+
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+$breakpoint-small-up: $screen;
+$breakpoint-small-only: "#{$screen} and (max-width: #{$breakpoint-small})";
+
+$breakpoint-medium-up: "#{$screen} and (min-width:#{$breakpoint-small + 1})";
+$breakpoint-medium-only: "#{$screen} and (min-width:#{$breakpoint-small + 1}) and (max-width:#{$breakpoint-medium})";
+
+$breakpoint-large-up: "#{$screen} and (min-width:#{$breakpoint-medium + 1})";
+$breakpoint-large-only: "#{$screen} and (min-width:#{$breakpoint-medium + 1}) and (max-width:#{$breakpoint-large})";
+
+$breakpoint-xlarge-up: "#{$screen} and (min-width:#{$breakpoint-large + 1})";
+$breakpoint-xlarge-only: "#{$screen} and (min-width:#{$breakpoint-large + 1}) and (max-width:#{$breakpoint-xlarge})";
