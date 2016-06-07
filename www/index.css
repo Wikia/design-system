@@ -744,6 +744,9 @@
  *         div.icon.reply
  *         div.icon-name reply
  *       div.icon-preview-card
+ *         div.icon.reply-arrow
+ *         div.icon-name reply-arrow
+ *       div.icon-preview-card
  *         div.icon.share
  *         div.icon-name share
  *       div.icon-preview-card
@@ -758,6 +761,9 @@
  *       div.icon-preview-card
  *         div.icon.undo
  *         div.icon-name undo
+ *       div.icon-preview-card
+ *         div.icon.unlock
+ *         div.icon-name unlock
  *       div.icon-preview-card
  *         div.icon.upload
  *         div.icon-name upload
@@ -775,8 +781,9 @@
 .icon {
   background-position: center;
   background-repeat: no-repeat;
-  height: 24px;
-  margin: 5px; }
+  background-size: 24px;
+  height: 36px;
+  width: 110px; }
 
 .icon-name {
   padding: 5px; }
@@ -883,6 +890,9 @@
 .menu {
   background-image: url(../bower_components/design-system/assets/icons/menu.svg); }
 
+.menu-up {
+  background-image: url(../bower_components/design-system/assets/icons/menu-up.svg); }
+
 .menu-down {
   background-image: url(../bower_components/design-system/assets/icons/menu-down.svg); }
 
@@ -891,9 +901,6 @@
 
 .menu-right {
   background-image: url(../bower_components/design-system/assets/icons/menu-right.svg); }
-
-.menu-up {
-  background-image: url(../bower_components/design-system/assets/icons/menu-up.svg); }
 
 .more {
   background-image: url(../bower_components/design-system/assets/icons/more.svg); }
@@ -922,6 +929,9 @@
 .reply {
   background-image: url(../bower_components/design-system/assets/icons/reply.svg); }
 
+.reply-arrow {
+  background-image: url(../bower_components/design-system/assets/icons/reply-arrow.svg); }
+
 .share {
   background-image: url(../bower_components/design-system/assets/icons/share.svg); }
 
@@ -936,6 +946,9 @@
 
 .undo {
   background-image: url(../bower_components/design-system/assets/icons/undo.svg); }
+
+.unlock {
+  background-image: url(../bower_components/design-system/assets/icons/unlock.svg); }
 
 .upload {
   background-image: url(../bower_components/design-system/assets/icons/upload.svg); }
@@ -954,21 +967,116 @@
  *     @example
  *     div.icon-preview-group
  *       div.icon-preview-card
- *         div.icon.icon-small.guide-small
- *         div.icon-name guide-small
+ *         div.icon.icon-small.alert-small
+ *         div.icon-name alert-small
  *       div.icon-preview-card
- *         div.icon.icon-small.home-small
- *         div.icon-name home-small
- *
+ *         div.icon.icon-small.bookmark-small
+ *         div.icon-name bookmark-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.checkmark-small
+ *         div.icon-name checkmark-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.clipboard-small
+ *         div.icon-name clipboard-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.community-small
+ *         div.icon-name community-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.eye-small
+ *         div.icon-name eye-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.eye-crossed-small
+ *         div.icon-name eye-crossed-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.house-small
+ *         div.icon-name house-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.lock-small
+ *         div.icon-name lock-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.menu-small
+ *         div.icon-name menu-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.pencil-small
+ *         div.icon-name pencil-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.reply-small
+ *         div.icon-name reply-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.reply-arrow-small
+ *         div.icon-name reply-arrow-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.share-small
+ *         div.icon-name share-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.trash-small
+ *         div.icon-name trash-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.trash-open-small
+ *         div.icon-name trash-open-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.upvote-small
+ *         div.icon-name upvote-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.unlock-small
+ *         div.icon-name unlock-small
  **/
 .icon-small {
-  height: 18px; }
+  background-size: 18px; }
 
-.guide-small {
-  background-image: url(../bower_components/design-system/assets/icons/guide-small.svg); }
+.alert-small {
+  background-image: url(../bower_components/design-system/assets/icons/alert-small.svg); }
 
-.home-small {
-  background-image: url(../bower_components/design-system/assets/icons/home-small.svg); }
+.bookmark-small {
+  background-image: url(../bower_components/design-system/assets/icons/bookmark-small.svg); }
+
+.checkmark-small {
+  background-image: url(../bower_components/design-system/assets/icons/checkmark-small.svg); }
+
+.clipboard-small {
+  background-image: url(../bower_components/design-system/assets/icons/clipboard-small.svg); }
+
+.community-small {
+  background-image: url(../bower_components/design-system/assets/icons/community-small.svg); }
+
+.eye-small {
+  background-image: url(../bower_components/design-system/assets/icons/eye-small.svg); }
+
+.eye-crossed-small {
+  background-image: url(../bower_components/design-system/assets/icons/eye-crossed-small.svg); }
+
+.house-small {
+  background-image: url(../bower_components/design-system/assets/icons/house-small.svg); }
+
+.lock-small {
+  background-image: url(../bower_components/design-system/assets/icons/lock-small.svg); }
+
+.menu-small {
+  background-image: url(../bower_components/design-system/assets/icons/menu-small.svg); }
+
+.pencil-small {
+  background-image: url(../bower_components/design-system/assets/icons/pencil-small.svg); }
+
+.reply-small {
+  background-image: url(../bower_components/design-system/assets/icons/reply-small.svg); }
+
+.reply-arrow-small {
+  background-image: url(../bower_components/design-system/assets/icons/reply-arrow-small.svg); }
+
+.share-small {
+  background-image: url(../bower_components/design-system/assets/icons/share-small.svg); }
+
+.trash-small {
+  background-image: url(../bower_components/design-system/assets/icons/trash-small.svg); }
+
+.trash-open-small {
+  background-image: url(../bower_components/design-system/assets/icons/trash-open-small.svg); }
+
+.upvote-small {
+  background-image: url(../bower_components/design-system/assets/icons/upvote-small.svg); }
+
+.unlock-small {
+  background-image: url(../bower_components/design-system/assets/icons/unlock-small.svg); }
 
 /**
  * Social Icons:
@@ -988,6 +1096,9 @@
  *         div.icon.google-plus-default
  *         div.icon-name google-plus-default
  *       div.icon-preview-card
+ *         div.icon.instagram-active
+ *         div.icon-name instagram-active
+ *       div.icon-preview-card
  *         div.icon.instagram-default
  *         div.icon-name instagram-default
  *       div.icon-preview-card
@@ -996,6 +1107,9 @@
  *       div.icon-preview-card
  *         div.icon.line-default
  *         div.icon-name line-default
+ *       div.icon-preview-card
+ *         div.icon.meneame-active
+ *         div.icon-name meneame-active
  *       div.icon-preview-card
  *         div.icon.meneame-default
  *         div.icon-name meneame-default
@@ -1048,6 +1162,12 @@
  *         div.icon.weibo-default
  *         div.icon-name weibo-default
  *       div.icon-preview-card
+ *         div.icon.wykop-active
+ *         div.icon-name wykop-active
+ *       div.icon-preview-card
+ *         div.icon.wykop-default
+ *         div.icon-name wykop-default
+ *       div.icon-preview-card
  *         div.icon.youtube-active
  *         div.icon-name youtube-active
  *       div.icon-preview-card
@@ -1066,6 +1186,9 @@
 .google-plus-active {
   background-image: url(../bower_components/design-system/assets/icons/google-plus-active.svg); }
 
+.instagram-active {
+  background-image: url(../bower_components/design-system/assets/icons/instagram-active.svg); }
+
 .instagram-default {
   background-image: url(../bower_components/design-system/assets/icons/instagram-default.svg); }
 
@@ -1074,6 +1197,9 @@
 
 .line-default {
   background-image: url(../bower_components/design-system/assets/icons/line-default.svg); }
+
+.meneame-active {
+  background-image: url(../bower_components/design-system/assets/icons/meneame-active.svg); }
 
 .meneame-default {
   background-image: url(../bower_components/design-system/assets/icons/meneame-default.svg); }
@@ -1125,6 +1251,12 @@
 
 .weibo-default {
   background-image: url(../bower_components/design-system/assets/icons/weibo-default.svg); }
+
+.wykop-active {
+  background-image: url(../bower_components/design-system/assets/icons/wykop-active.svg); }
+
+.wykop-default {
+  background-image: url(../bower_components/design-system/assets/icons/wykop-default.svg); }
 
 .youtube-active {
   background-image: url(../bower_components/design-system/assets/icons/youtube-active.svg); }
