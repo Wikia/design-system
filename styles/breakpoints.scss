@@ -1,0 +1,66 @@
+/**
+ * Breakpoints:
+ *
+ *     @example
+ *     h4.breakpoint-preview-current-header Currently displayed breakpoint:&nbsp;
+ *     div.breakpoint-preview-current
+ *     h4.breakpoint-preview-list-header All supported breakpoint media queries:&nbsp;
+ *     ul.breakpoint-preview-list
+ *       li.breakpoint-preview-mobile-up
+ *       li.breakpoint-preview-mobile-only
+ *       li.breakpoint-preview-tablet-up
+ *       li.breakpoint-preview-tablet-only
+ *       li.breakpoint-preview-desktop-up
+ *       li.breakpoint-preview-desktop-only
+ *       li.breakpoint-preview-desktop-xl-up
+ */
+
+@mixin display-breakpoint-content($breakpoint-name, $breakpoint-media-query) {
+	content: '$breakpoint-#{$breakpoint-name}: #{$breakpoint-media-query}';
+}
+
+.breakpoint-preview-current-header,
+.breakpoint-preview-list-header {
+	font-weight: bold;
+}
+
+.breakpoint-preview-current::after,
+.breakpoint-preview-list ::after {
+	font-family: monospace;
+}
+
+/////////////////////////////////////////////
+// All supported breakpoint media queries list
+@each $breakpoint-name, $breakpoint-media-query in (
+	mobile-up: $breakpoint-mobile-up,
+	mobile-only: $breakpoint-mobile-only,
+	tablet-up: $breakpoint-tablet-up,
+	tablet-only: $breakpoint-tablet-only,
+	desktop-up: $breakpoint-desktop-up,
+	desktop-only: $breakpoint-desktop-only,
+	desktop-xl-up: $breakpoint-desktop-xl-up
+) {
+	.breakpoint-preview-#{$breakpoint-name}::after {
+		@include display-breakpoint-content($breakpoint-name, $breakpoint-media-query);
+	}
+}
+
+/////////////////////////////////////////////
+// Currently displayed breakpoint/media query
+.breakpoint-preview-current::after {
+	@include display-breakpoint-content('$breakpoint-mobile-up (default)', $breakpoint-mobile-up);
+	color: $color-blue-blue;
+}
+
+@each $breakpoint-name, $breakpoint-data in (
+	tablet-up: (query: $breakpoint-tablet-up, color: $color-kermit-green),
+	desktop-up: (query: $breakpoint-desktop-up, color: $color-dusty-orange),
+	desktop-xl-up: (query: $breakpoint-desktop-xl-up, color: $color-pinkish-red)
+) {
+	@media #{map-get($breakpoint-data, query)} {
+		.breakpoint-preview-current::after {
+			@include display-breakpoint-content($breakpoint-name, map-get($breakpoint-data, query));
+			color: #{map-get($breakpoint-data, color)};
+		}
+	}
+}

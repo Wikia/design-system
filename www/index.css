@@ -1,4 +1,69 @@
 /**
+ * Breakpoints:
+ *
+ *     @example
+ *     h4.breakpoint-preview-current-header Currently displayed breakpoint:&nbsp;
+ *     div.breakpoint-preview-current
+ *     h4.breakpoint-preview-list-header All supported breakpoint media queries:&nbsp;
+ *     ul.breakpoint-preview-list
+ *       li.breakpoint-preview-mobile-up
+ *       li.breakpoint-preview-mobile-only
+ *       li.breakpoint-preview-tablet-up
+ *       li.breakpoint-preview-tablet-only
+ *       li.breakpoint-preview-desktop-up
+ *       li.breakpoint-preview-desktop-only
+ *       li.breakpoint-preview-desktop-xl-up
+ */
+.breakpoint-preview-current-header,
+.breakpoint-preview-list-header {
+  font-weight: bold; }
+
+.breakpoint-preview-current::after,
+.breakpoint-preview-list ::after {
+  display: inline;
+  font-family: monospace; }
+
+.breakpoint-preview-mobile-up::after {
+  content: "$breakpoint-mobile-up: only screen"; }
+
+.breakpoint-preview-mobile-only::after {
+  content: "$breakpoint-mobile-only: only screen and (max-width:767px)"; }
+
+.breakpoint-preview-tablet-up::after {
+  content: "$breakpoint-tablet-up: only screen and (min-width:768px)"; }
+
+.breakpoint-preview-tablet-only::after {
+  content: "$breakpoint-tablet-only: only screen and (min-width:768px) and (max-width:1023px)"; }
+
+.breakpoint-preview-desktop-up::after {
+  content: "$breakpoint-desktop-up: only screen and (min-width:1024px)"; }
+
+.breakpoint-preview-desktop-only::after {
+  content: "$breakpoint-desktop-only: only screen and (min-width:1024px) and (max-width:1439px)"; }
+
+.breakpoint-preview-desktop-xl-up::after {
+  content: "$breakpoint-desktop-xl-up: only screen and (min-width:1440px)"; }
+
+.breakpoint-preview-current::after {
+  content: "$breakpoint-$breakpoint-mobile-up (default): only screen";
+  color: #1a5eb8; }
+
+@media only screen and (min-width: 768px) {
+  .breakpoint-preview-current::after {
+    content: "$breakpoint-tablet-up: only screen and (min-width:768px)";
+    color: #5ba200; } }
+
+@media only screen and (min-width: 1024px) {
+  .breakpoint-preview-current::after {
+    content: "$breakpoint-desktop-up: only screen and (min-width:1024px)";
+    color: #f08a24; } }
+
+@media only screen and (min-width: 1440px) {
+  .breakpoint-preview-current::after {
+    content: "$breakpoint-desktop-xl-up: only screen and (min-width:1440px)";
+    color: #ed1c24; } }
+
+/**
  * Common Colors:
  *
  *     @example
