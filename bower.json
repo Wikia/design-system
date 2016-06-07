@@ -18,6 +18,6 @@
     "tests"
   ],
   "dependencies": {
-    "design-system": "Wikia/design-system#master"
+    "design-system": "Wikia/design-system#colors-update"
   }
 }
