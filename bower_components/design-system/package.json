@@ -1,0 +1,20 @@
+{
+  "name": "design-system",
+  "version": "0.0.1",
+  "description": "Design System developed for Wikia",
+  "scripts": {
+    "svgo": "svgo --precision 3 --config .svgo.yml assets/icons"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wikia/design-system.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Wikia/design-system/issues"
+  },
+  "homepage": "https://github.com/Wikia/design-system#readme",
+  "devDependencies": {
+    "svgo": "0.6.6"
+  }
+}
