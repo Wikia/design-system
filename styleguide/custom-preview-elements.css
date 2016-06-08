@@ -1,4 +1,5 @@
-.color-preview-group {
+.color-preview-group,
+.icon-preview-group {
 	align-items: flex-start;
 	display: flex;
 	flex-wrap: wrap;
@@ -34,14 +35,7 @@
 	font-family: monospace;
 }
 
-.icon-preview-group {
-	align-items: flex-start;
-	display: flex;
-	flex-wrap: wrap;
-}
-
 .icon-preview-card {
-	display: inline-block;
 	margin: 10px;
 	text-align: center;
 	width: 110px;
