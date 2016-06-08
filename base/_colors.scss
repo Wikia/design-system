@@ -1,75 +1,42 @@
 /////////////////////////
-//// common colors' names (from the DS)
-$color-alert: #ed1c24;
-$color-black: #1a1a1a;
-$color-blue-blue: #1a5eb8;
+// # Wikia Brand Colors
+// ## Corporate Colors
 $color-blue-gray: #c5ced9;
-$color-books: #ff7f26;
-$color-comics: #ff5400;
 $color-dark-blue-gray: #39424d;
 $color-dark-blue: #092344;
-$color-dark-gray: #333;
 $color-faint-blue-gray: #f2f6fa;
-$color-faint-grey: #ccc;
-$color-games: #94d11f;
-$color-gold: #e3bd00;
-$color-lifestyle: #ffd000;
 $color-light-blue-gray: #e6ebf2;
-$color-light-grey: #999;
-$color-medium-grey: #666;
-$color-mist-grey: #e6e6e6;
-$color-movies: #09d3bf;
-$color-music: #c819ad;
-$color-night-sky: #262626;
-$color-off-white: #f6f6f6;
-$color-slate-grey: #656e78;
-$color-success: #5ba200;
-$color-tv: #00b7e0;
-$color-warning: #f08a24;
-$color-white: #fff;
-
-/////////////////////////
-// # Wikia Brand Colors
-
-// ## Corporate Colors
-$color-wikia-dark-blue: $color-dark-blue;
-$color-wikia-light-blue: $color-blue-blue;
-$color-wikia-dark-blue-gray: $color-dark-blue-gray;
-$color-wikia-medium-gray: $color-slate-grey;
-$color-wikia-blue-gray: $color-blue-gray;
-$color-wikia-light-blue-gray: $color-light-blue-gray;
-$color-wikia-gray: $color-faint-blue-gray;
-$color-wikia-white: $color-white;
+$color-light-blue: #1a5eb8;
+$color-slate-gray: #656e78;
 
 // ## Vertical Colors
-$color-wikia-comics: $color-comics;
-$color-wikia-games: $color-games;
-$color-wikia-books: $color-books;
-$color-wikia-movies: $color-movies;
-$color-wikia-lifestyle: $color-lifestyle;
-$color-wikia-music: $color-music;
-$color-wikia-tv: $color-tv;
+$color-books: #ff7f26;
+$color-comics: #ff5400;
+$color-games: #94d11f;
+$color-lifestyle: #ffd000;
+$color-movies: #09d3bf;
+$color-music: #c819ad;
+$color-tv: #00b7e0;
 
 // ## Alerts
-$color-wikia-alert: $color-alert;
-$color-wikia-warning: $color-warning;
-$color-wikia-success: $color-success;
-$color-wikia-message: $color-blue-blue;
-
-/////////////////////////
-// # Fandom Brand Colors
-
-// ## Corporate Colors
-$color-fandom-games: $color-games;
-$color-fandom-movies: $color-movies;
-$color-fandom-tv: $color-tv;
-$color-fandom-dark-blue-gray: $color-dark-blue-gray;
-$color-fandom-medium-gray: $color-slate-grey;
-$color-fandom-blue-gray: $color-blue-gray;
-$color-fandom-off-white: $color-off-white;
+$color-alert: #ed1c24;
+$color-message: #1a5eb8;
+$color-success: #5ba200;
+$color-warning: #f08a24;
 
 /////////////////////////
 // # Theming Colors
+// ## Color Names
+$color-black: #1a1a1a;
+$color-dark-gray: #333;
+$color-faint-grey: #ccc;
+$color-gold: #e3bd00;
+$color-light-grey: #999;
+$color-medium-grey: #666;
+$color-mist-grey: #e6e6e6;
+$color-night-sky: #262626;
+$color-off-white: #f6f6f6;
+$color-white: #fff;
 
 // ## Light Theme
 $color-light-c1: $color-white;
