@@ -15,13 +15,13 @@
     "test",
     "tests"
   ],
-  "_release": "59da8ee093",
+  "_release": "8b2375ff5c",
   "_resolution": {
     "type": "branch",
-    "branch": "DAT-4450",
-    "commit": "59da8ee093fd5075560145df74ff2f7f5ba8546f"
+    "branch": "master",
+    "commit": "8b2375ff5c77b29f23bc2c0d949db49e8521921f"
   },
   "_source": "git://github.com/Wikia/design-system.git",
-  "_target": "DAT-4450",
+  "_target": "master",
   "_originalSource": "Wikia/design-system"
 }
