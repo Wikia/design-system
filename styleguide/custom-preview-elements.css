@@ -9,9 +9,6 @@
 	--color-preview-height: 100px;
 	--color-preview-width: 110px;
 	margin: 10px;
-	transition-duration: 500ms;
-	transition-property: background-color, box-shadow;
-	transition-timing-function: ease-in-out;
 }
 
 .color-preview-box {
@@ -22,11 +19,10 @@
 
 .color-preview-name,
 .color-preview-variable,
-.color-preview-reference {
+.color-preview-value {
 	--padding: 5px;
 	border: solid var(--border-color);
 	border-width: 0 1px 1px;
-	display: block;
 	padding: var(--padding);
 	text-align: center;
 	width: calc(var(--color-preview-width) - 2 * var(--padding));
@@ -34,13 +30,8 @@
 }
 
 .color-preview-variable,
-.color-preview-reference  {
+.color-preview-value  {
 	font-family: monospace;
-}
-
-.highlight {
-	background-color: #e6e6e6;
-	box-shadow: 0 0 20px 0px #1a1a1a;
 }
 
 .icon-preview-group {

@@ -7,42 +7,42 @@
  *         div.color-preview-box.color-dark-blue
  *         div.color-preview-name Dark Blue
  *         div.color-preview-variable $color-dark-blue
- *         a(href="#color-dark-blue").color-preview-reference $color-dark-blue
+ *         div.color-preview-value #092344
  *       div#color-light-blue.color-preview-card
  *         div.color-preview-box.color-light-blue
  *         div.color-preview-name Light Blue
  *         div.color-preview-variable $color-light-blue
- *         a(href="#color-blue-blue").color-preview-reference $color-blue-blue
+ *         div.color-preview-value #1a5eb8
  *       div#color-dark-blue-gray.color-preview-card
  *         div.color-preview-box.color-dark-blue-gray
  *         div.color-preview-name Dark Blue Gray
  *         div.color-preview-variable $color-dark-blue-gray
- *         a(href="#color-dark-blue-gray").color-preview-reference $color-dark-blue-gray
+ *         div.color-preview-value #39424d
  *       div#color-slate-gray.color-preview-card
  *         div.color-preview-box.color-slate-gray
  *         div.color-preview-name Medium Gray
  *         div.color-preview-variable $color-slate-gray
- *         a(href="#color-slate-grey").color-preview-reference $color-slate-grey
+ *         div.color-preview-value #656e78
  *       div#color-blue-gray.color-preview-card
  *         div.color-preview-box.color-blue-gray
  *         div.color-preview-name Blue Gray
  *         div.color-preview-variable $color-blue-gray
- *         a(href="#color-blue-gray").color-preview-reference $color-blue-gray
+ *         div.color-preview-value #c5ced9
  *       div#color-light-blue-gray.color-preview-card
  *         div.color-preview-box.color-light-blue-gray
  *         div.color-preview-name Light Blue Gray
  *         div.color-preview-variable $color-light-blue-gray
- *         a(href="#color-light-blue-gray").color-preview-reference $color-light-blue-gray
+ *         div.color-preview-value #e6ebf2
  *       div#color-faint-blue-gray.color-preview-card
  *         div.color-preview-box.color-faint-blue-gray
  *         div.color-preview-name Gray
  *         div.color-preview-variable $color-faint-blue-gray
- *         a(href="#color-faint-blue-gray").color-preview-reference $color-faint-blue-gray
+ *         div.color-preview-value #f2f6fa
  *       div#color-white.color-preview-card
  *         div.color-preview-box.color-white
  *         div.color-preview-name White
  *         div.color-preview-variable $color-white
- *         a(href="#color-white").color-preview-reference $color-white
+ *         div.color-preview-value #fff
  */
 .color-dark-blue {
   background-color: #092344; }
@@ -77,37 +77,37 @@
  *         div.color-preview-box.color-comics
  *         div.color-preview-name Comics
  *         div.color-preview-variable $color-comics
- *         a(href="#color-comics").color-preview-reference $color-comics
+ *         div.color-preview-value #ff5400
  *       div#color-games.color-preview-card
  *         div.color-preview-box.color-games
  *         div.color-preview-name Games
  *         div.color-preview-variable $color-games
- *         a(href="#color-games").color-preview-reference $color-games
+ *         div.color-preview-value #94d11f
  *       div#color-books.color-preview-card
  *         div.color-preview-box.color-books
  *         div.color-preview-name Books
  *         div.color-preview-variable $color-books
- *         a(href="#color-books").color-preview-reference $color-books
+ *         div.color-preview-value #ff7f26
  *       div#color-movies.color-preview-card
  *         div.color-preview-box.color-movies
  *         div.color-preview-name Movies
  *         div.color-preview-variable $color-movies
- *         a(href="#color-movies").color-preview-reference $color-movies
+ *         div.color-preview-value #09d3bf
  *       div#color-lifestyle.color-preview-card
  *         div.color-preview-box.color-lifestyle
  *         div.color-preview-name Lifestyle
  *         div.color-preview-variable $color-lifestyle
- *         a(href="#color-lifestyle").color-preview-reference $color-lifestyle
+ *         div.color-preview-value #ffd000
  *       div#color-music.color-preview-card
  *         div.color-preview-box.color-music
  *         div.color-preview-name Music
  *         div.color-preview-variable $color-music
- *         a(href="#color-music").color-preview-reference $color-music
+ *         div.color-preview-value #c819ad
  *       div#color-tv.color-preview-card
  *         div.color-preview-box.color-tv
  *         div.color-preview-name TV
  *         div.color-preview-variable $color-tv
- *         a(href="#color-tv").color-preview-reference $color-tv
+ *         div.color-preview-value #00b7e0
  */
 .color-comics {
   background-color: #ff5400; }
@@ -139,22 +139,22 @@
  *         div.color-preview-box.color-alert
  *         div.color-preview-name Alert/Delete
  *         div.color-preview-variable $color-alert
- *         a(href="#color-alert").color-preview-reference $color-alert
+ *         div.color-preview-value #ed1c24
  *       div#color-warning.color-preview-card
  *         div.color-preview-box.color-warning
  *         div.color-preview-name Warning/Reported
  *         div.color-preview-variable $color-warning
- *         a(href="#color-warning").color-preview-reference $color-warning
+ *         div.color-preview-value #f08a24
  *       div#color-success.color-preview-card
  *         div.color-preview-box.color-success
  *         div.color-preview-name Success/Approve
  *         div.color-preview-variable $color-success
- *         a(href="#color-success").color-preview-reference $color-success
+ *         div.color-preview-value #5ba200
  *       div#color-message.color-preview-card
  *         div.color-preview-box.color-message
  *         div.color-preview-name Message
  *         div.color-preview-variable $color-message
- *         a(href="#color-blue-blue").color-preview-reference $color-message
+ *         div.color-preview-value #1a5eb8
  */
 .color-alert {
   background-color: #ed1c24; }
@@ -177,56 +177,38 @@
  *         div.color-preview-box.color-games
  *         div.color-preview-name Games
  *         div.color-preview-variable $color-games
- *         a(href="#color-games").color-preview-reference $color-games
+ *         div.color-preview-value #94d11f
  *       div#color-movies.color-preview-card
  *         div.color-preview-box.color-movies
  *         div.color-preview-name Movies
  *         div.color-preview-variable $color-movies
- *         a(href="#color-movies").color-preview-reference $color-movies
+ *         div.color-preview-value #09d3bf
  *       div#color-tv.color-preview-card
  *         div.color-preview-box.color-tv
  *         div.color-preview-name TV
  *         div.color-preview-variable $color-tv
- *         a(href="#color-tv").color-preview-reference $color-tv
+ *         div.color-preview-value #00b7e0
  *       div#color-dark-blue-gray.color-preview-card
  *         div.color-preview-box.color-dark-blue-gray
  *         div.color-preview-name Dark Blue Gray
  *         div.color-preview-variable $color-dark-blue-gray
- *         a(href="#color-dark-blue-gray").color-preview-reference $color-dark-blue-gray
- *       div#color-medium-gray.color-preview-card
- *         div.color-preview-box.color-medium-gray
+ *         div.color-preview-value #39424d
+ *       div#color-slate-gray.color-preview-card
+ *         div.color-preview-box.color-slate-gray
  *         div.color-preview-name Medium Gray
- *         div.color-preview-variable $color-medium-gray
- *         a(href="#color-slate-grey").color-preview-reference $color-slate-grey
+ *         div.color-preview-variable $color-slate-gray
+ *         div.color-preview-value #656e78
  *       div#color-blue-gray.color-preview-card
  *         div.color-preview-box.color-blue-gray
  *         div.color-preview-name Blue Gray
  *         div.color-preview-variable $color-blue-gray
- *         a(href="#color-blue-gray").color-preview-reference $color-blue-gray
+ *         div.color-preview-value #c5ced9
  *       div#color-off-white.color-preview-card
  *         div.color-preview-box.color-off-white
  *         div.color-preview-name Off-White 96%
  *         div.color-preview-variable $color-off-white
- *         a(href="#color-off-white").color-preview-reference $color-off-white
+ *         div.color-preview-value #f6f6f6
  */
-.color-games {
-  background-color: #94d11f; }
-
-.color-movies {
-  background-color: #09d3bf; }
-
-.color-tv {
-  background-color: #00b7e0; }
-
-.color-dark-blue-gray {
-  background-color: #39424d; }
-
-.color-medium-gray {
-  background-color: #656e78; }
-
-.color-blue-gray {
-  background-color: #c5ced9; }
-
 .color-off-white {
   background-color: #f6f6f6; }
 
@@ -239,42 +221,42 @@
  *         div.color-preview-box.color-light-c1
  *         div.color-preview-name White 100%
  *         div.color-preview-variable $color-light-c1
- *         a(href="#color-white").color-preview-reference $color-white
+ *         div.color-preview-value #fff
  *       div#color-light-c2.color-preview-card
  *         div.color-preview-box.color-light-c2
  *         div.color-preview-name Off-White 96%
  *         div.color-preview-variable $color-light-c2
- *         a(href="#color-off-white").color-preview-reference $color-off-white
+ *         div.color-preview-value #f6f6f6
  *       div#color-light-c3.color-preview-card
  *         div.color-preview-box.color-light-c3
  *         div.color-preview-name Mist Gray 90%
  *         div.color-preview-variable $color-light-c3
- *         a(href="#color-mist-grey").color-preview-reference $color-mist-grey
+ *         div.color-preview-value #e6e6e6
  *       div#color-light-c4.color-preview-card
  *         div.color-preview-box.color-light-c4
  *         div.color-preview-name Faint Gray 80%
  *         div.color-preview-variable $color-light-c4
- *         a(href="#color-faint-grey").color-preview-reference $color-faint-grey
+ *         div.color-preview-value #ccc
  *       div#color-light-c5.color-preview-card
  *         div.color-preview-box.color-light-c5
- *         div.color-preview-name Light gray 60%
+ *         div.color-preview-name Light Gray 60%
  *         div.color-preview-variable $color-light-c5
- *         a(href="#color-light-grey").color-preview-reference $color-light-grey
+ *         div.color-preview-value #999
  *       div#color-light-c6.color-preview-card
  *         div.color-preview-box.color-light-c6
  *         div.color-preview-name Dark Gray 20%
  *         div.color-preview-variable $color-light-c6
- *         a(href="#color-dark-gray").color-preview-reference $color-dark-gray
+ *         div.color-preview-value #333
  *       div#color-light-c7.color-preview-card
  *         div.color-preview-box.color-light-c7
  *         div.color-preview-name Medium Gray 40%
  *         div.color-preview-variable $color-light-c7
- *         a(href="#color-medium-grey").color-preview-reference $color-medium-grey
+ *         div.color-preview-value #666
  *       div#color-light-c8.color-preview-card
  *         div.color-preview-box.color-light-c8
  *         div.color-preview-name Gold
  *         div.color-preview-variable $color-light-c8
- *         a(href="#color-gold").color-preview-reference $color-gold
+ *         div.color-preview-value #e3bd00
  */
 .color-light-c1 {
   background-color: #fff; }
@@ -309,42 +291,42 @@
  *         div.color-preview-box.color-dark-c1
  *         div.color-preview-name Dark Gray 15%
  *         div.color-preview-variable $color-dark-c1
- *         a(href="#color-night-sky").color-preview-reference $color-night-sky
+ *         div.color-preview-value #262626
  *       div#color-dark-c2.color-preview-card
  *         div.color-preview-box.color-dark-c2
  *         div.color-preview-name Dark Gray 10%
  *         div.color-preview-variable $color-dark-c2
- *         a(href="#color-black").color-preview-reference $color-black
+ *         div.color-preview-value #1a1a1a
  *       div#color-dark-c3.color-preview-card
  *         div.color-preview-box.color-dark-c3
  *         div.color-preview-name Dark Gray 20%
  *         div.color-preview-variable $color-dark-c3
- *         a(href="#color-dark-gray").color-preview-reference $color-dark-gray
+ *         div.color-preview-value #333
  *       div#color-dark-c4.color-preview-card
  *         div.color-preview-box.color-dark-c4
  *         div.color-preview-name Medium Gray 40%
  *         div.color-preview-variable $color-dark-c4
- *         a(href="#color-medium-grey").color-preview-reference $color-medium-grey
+ *         div.color-preview-value #666
  *       div#color-dark-c5.color-preview-card
  *         div.color-preview-box.color-dark-c5
  *         div.color-preview-name Light Gray 60%
  *         div.color-preview-variable $color-dark-c5
- *         a(href="#color-light-grey").color-preview-reference $color-light-grey
+ *         div.color-preview-value #999
  *       div#color-dark-c6.color-preview-card
  *         div.color-preview-box.color-dark-c6
  *         div.color-preview-name Faint Gray 80%
  *         div.color-preview-variable $color-dark-c6
- *         a(href="#color-faint-grey").color-preview-reference $color-faint-grey
+ *         div.color-preview-value #ccc
  *       div#color-dark-c7.color-preview-card
  *         div.color-preview-box.color-dark-c7
  *         div.color-preview-name White 100%
  *         div.color-preview-variable $color-dark-c7
- *         a(href="#color-white").color-preview-reference $color-white
+ *         div.color-preview-value #fff
  *       div#color-dark-c8.color-preview-card
  *         div.color-preview-box.color-dark-c8
  *         div.color-preview-name Gold
  *         div.color-preview-variable $color-dark-c8
- *         a(href="#color-gold").color-preview-reference $color-gold
+ *         div.color-preview-value #e3bd00
  */
 .color-dark-c1 {
   background-color: #262626; }
