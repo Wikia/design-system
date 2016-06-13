@@ -425,14 +425,14 @@
  *         div.icon.icon-alert
  *         div.icon-name alert
  *       div.icon-preview-card
- *         div.icon.icon-arrow-left
- *         div.icon-name arrow-left
- *       div.icon-preview-card
- *         div.icon.icon-arrow-right
- *         div.icon-name arrow-right
+ *         div.icon.icon-arrow
+ *         div.icon-name arrow
  *       div.icon-preview-card
  *         div.icon.icon-bell
  *         div.icon-name bell
+ *       div.icon-preview-card
+ *         div.icon.icon-bold
+ *         div.icon-name bold
  *       div.icon-preview-card
  *         div.icon.icon-bookmark
  *         div.icon-name bookmark
@@ -479,14 +479,14 @@
  *         div.icon.icon-flag
  *         div.icon-name flag
  *       div.icon-preview-card
- *         div.icon.icon-grid
- *         div.icon-name grid
- *       div.icon-preview-card
  *         div.icon.icon-gear
  *         div.icon-name gear
  *       div.icon-preview-card
  *         div.icon.icon-gift
  *         div.icon-name gift
+ *       div.icon-preview-card
+ *         div.icon.icon-grid
+ *         div.icon-name grid
  *       div.icon-preview-card
  *         div.icon.icon-house
  *         div.icon-name house
@@ -502,6 +502,9 @@
  *       div.icon-preview-card
  *         div.icon.icon-information
  *         div.icon-name information
+ *       div.icon-preview-card
+ *         div.icon.icon-italics
+ *         div.icon-name italics
  *       div.icon-preview-card
  *         div.icon.icon-link
  *         div.icon-name link
@@ -524,20 +527,17 @@
  *         div.icon.icon-menu
  *         div.icon-name menu
  *       div.icon-preview-card
- *         div.icon.icon-menu-down
- *         div.icon-name menu-down
- *       div.icon-preview-card
- *         div.icon.icon-menu-left
- *         div.icon-name menu-left
- *       div.icon-preview-card
- *         div.icon.icon-menu-right
- *         div.icon-name menu-right
- *       div.icon-preview-card
- *         div.icon.icon-menu-up
- *         div.icon-name menu-up
+ *         div.icon.icon-menu-control
+ *         div.icon-name menu-control
  *       div.icon-preview-card
  *         div.icon.icon-more
  *         div.icon-name more
+ *       div.icon-preview-card
+ *         div.icon.icon-note
+ *         div.icon-name note
+ *       div.icon-preview-card
+ *         div.icon.icon-numbered-list
+ *         div.icon-name numbered-list
  *       div.icon-preview-card
  *         div.icon.icon-page
  *         div.icon-name page
@@ -553,6 +553,9 @@
  *       div.icon-preview-card
  *         div.icon.icon-question
  *         div.icon-name question
+ *       div.icon-preview-card
+ *         div.icon.icon-quote
+ *         div.icon-name quote
  *       div.icon-preview-card
  *         div.icon.icon-refresh
  *         div.icon-name refresh
@@ -587,12 +590,11 @@
  *         div.icon.icon-upvote
  *         div.icon-name upvote
  *       div.icon-preview-card
- *         div.icon.icon-upvote-reply
- *         div.icon-name upvote-reply
- *       div.icon-preview-card
  *         div.icon.icon-user
  *         div.icon-name user
- *
+ *       div.icon-preview-card
+ *         div.icon.icon-video-camera
+ *         div.icon-name video-camera
  **/
 .icon {
   background-position: center;
@@ -607,14 +609,14 @@
 .icon-alert {
   background-image: url(../bower_components/design-system/assets/icons/alert.svg); }
 
-.icon-arrow-left {
-  background-image: url(../bower_components/design-system/assets/icons/arrow-left.svg); }
-
-.icon-arrow-right {
-  background-image: url(../bower_components/design-system/assets/icons/arrow-right.svg); }
+.icon-arrow {
+  background-image: url(../bower_components/design-system/assets/icons/arrow.svg); }
 
 .icon-bell {
   background-image: url(../bower_components/design-system/assets/icons/bell.svg); }
+
+.icon-bold {
+  background-image: url(../bower_components/design-system/assets/icons/bold.svg); }
 
 .icon-bookmark {
   background-image: url(../bower_components/design-system/assets/icons/bookmark.svg); }
@@ -685,6 +687,9 @@
 .icon-information {
   background-image: url(../bower_components/design-system/assets/icons/information.svg); }
 
+.icon-italics {
+  background-image: url(../bower_components/design-system/assets/icons/italics.svg); }
+
 .icon-link {
   background-image: url(../bower_components/design-system/assets/icons/link.svg); }
 
@@ -706,23 +711,17 @@
 .icon-menu {
   background-image: url(../bower_components/design-system/assets/icons/menu.svg); }
 
-.icon-menu-up {
-  background-image: url(../bower_components/design-system/assets/icons/menu-up.svg); }
-
-.icon-menu-down {
-  background-image: url(../bower_components/design-system/assets/icons/menu-down.svg); }
-
-.icon-menu-left {
-  background-image: url(../bower_components/design-system/assets/icons/menu-left.svg); }
-
-.icon-menu-right {
-  background-image: url(../bower_components/design-system/assets/icons/menu-right.svg); }
+.icon-menu-control {
+  background-image: url(../bower_components/design-system/assets/icons/menu-control.svg); }
 
 .icon-more {
   background-image: url(../bower_components/design-system/assets/icons/more.svg); }
 
 .icon-note {
   background-image: url(../bower_components/design-system/assets/icons/note.svg); }
+
+.icon-numbered-list {
+  background-image: url(../bower_components/design-system/assets/icons/numbered-list.svg); }
 
 .icon-page {
   background-image: url(../bower_components/design-system/assets/icons/page.svg); }
@@ -738,6 +737,9 @@
 
 .icon-question {
   background-image: url(../bower_components/design-system/assets/icons/question.svg); }
+
+.icon-quote {
+  background-image: url(../bower_components/design-system/assets/icons/quote.svg); }
 
 .icon-refresh {
   background-image: url(../bower_components/design-system/assets/icons/refresh.svg); }
@@ -772,11 +774,11 @@
 .icon-upvote {
   background-image: url(../bower_components/design-system/assets/icons/upvote.svg); }
 
-.icon-upvote-reply {
-  background-image: url(../bower_components/design-system/assets/icons/upvote-reply.svg); }
-
 .icon-user {
   background-image: url(../bower_components/design-system/assets/icons/user.svg); }
+
+.icon-video-camera {
+  background-image: url(../bower_components/design-system/assets/icons/video-camera.svg); }
 
 /**
  * Small Set (18x18):
@@ -786,8 +788,14 @@
  *         div.icon.icon-small.icon-alert-small
  *         div.icon-name alert-small
  *       div.icon-preview-card
+ *         div.icon.icon-small.icon-bold-small
+ *         div.icon-name bold-small
+ *       div.icon-preview-card
  *         div.icon.icon-small.icon-bookmark-small
  *         div.icon-name bookmark-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.icon-bullet-list-small
+ *         div.icon-name bullet-list-small
  *       div.icon-preview-card
  *         div.icon.icon-small.icon-checkmark-small
  *         div.icon-name checkmark-small
@@ -807,14 +815,23 @@
  *         div.icon.icon-small.icon-house-small
  *         div.icon-name house-small
  *       div.icon-preview-card
+ *         div.icon.icon-small.icon-italics-small
+ *         div.icon-name italics-small
+ *       div.icon-preview-card
  *         div.icon.icon-small.icon-lock-small
  *         div.icon-name lock-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-menu-small
- *         div.icon-name menu-small
+ *         div.icon.icon-small.icon-menu-control-small
+ *         div.icon-name menu-control-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.icon-numbered-list-small
+ *         div.icon-name numbered-list-small
  *       div.icon-preview-card
  *         div.icon.icon-small.icon-pencil-small
  *         div.icon-name pencil-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.icon-quote-small
+ *         div.icon-name quote-small
  *       div.icon-preview-card
  *         div.icon.icon-small.icon-reply-small
  *         div.icon-name reply-small
@@ -824,6 +841,9 @@
  *       div.icon-preview-card
  *         div.icon.icon-small.icon-share-small
  *         div.icon-name share-small
+ *       div.icon-preview-card
+ *         div.icon.icon-small.icon-text-small
+ *         div.icon-name text-small
  *       div.icon-preview-card
  *         div.icon.icon-small.icon-trash-small
  *         div.icon-name trash-small
@@ -843,8 +863,14 @@
 .icon-alert-small {
   background-image: url(../bower_components/design-system/assets/icons/alert-small.svg); }
 
+.icon-bold-small {
+  background-image: url(../bower_components/design-system/assets/icons/bold-small.svg); }
+
 .icon-bookmark-small {
   background-image: url(../bower_components/design-system/assets/icons/bookmark-small.svg); }
+
+.icon-bullet-list-small {
+  background-image: url(../bower_components/design-system/assets/icons/bullet-list-small.svg); }
 
 .icon-checkmark-small {
   background-image: url(../bower_components/design-system/assets/icons/checkmark-small.svg); }
@@ -864,14 +890,23 @@
 .icon-house-small {
   background-image: url(../bower_components/design-system/assets/icons/house-small.svg); }
 
+.icon-italics-small {
+  background-image: url(../bower_components/design-system/assets/icons/italics-small.svg); }
+
 .icon-lock-small {
   background-image: url(../bower_components/design-system/assets/icons/lock-small.svg); }
 
-.icon-menu-small {
-  background-image: url(../bower_components/design-system/assets/icons/menu-small.svg); }
+.icon-menu-control-small {
+  background-image: url(../bower_components/design-system/assets/icons/menu-control-small.svg); }
+
+.icon-numbered-list-small {
+  background-image: url(../bower_components/design-system/assets/icons/numbered-list-small.svg); }
 
 .icon-pencil-small {
   background-image: url(../bower_components/design-system/assets/icons/pencil-small.svg); }
+
+.icon-quote-small {
+  background-image: url(../bower_components/design-system/assets/icons/quote-small.svg); }
 
 .icon-reply-small {
   background-image: url(../bower_components/design-system/assets/icons/reply-small.svg); }
@@ -881,6 +916,9 @@
 
 .icon-share-small {
   background-image: url(../bower_components/design-system/assets/icons/share-small.svg); }
+
+.icon-text-small {
+  background-image: url(../bower_components/design-system/assets/icons/text-small.svg); }
 
 .icon-trash-small {
   background-image: url(../bower_components/design-system/assets/icons/trash-small.svg); }
@@ -893,6 +931,38 @@
 
 .icon-unlock-small {
   background-image: url(../bower_components/design-system/assets/icons/unlock-small.svg); }
+
+/**
+ * Tiny Set (12x12):
+ *     @example
+ *     div.icon-preview-group
+ *       div.icon-preview-card
+ *         div.icon.icon-small.icon-menu-control-tiny
+ *         div.icon-name menu-control-tiny
+ *       div.icon-preview-card
+ *         div.icon.icon-small.icon-reply-tiny
+ *         div.icon-name reply-tiny
+ *       div.icon-preview-card
+ *         div.icon.icon-small.icon-upvote-tiny
+ *         div.icon-name upvote-tiny
+ *       div.icon-preview-card
+ *         div.icon.icon-small.icon-upvote-reply-tiny
+ *         div.icon-name upvote-reply-tiny
+ **/
+.icon-tiny {
+  background-size: 12px; }
+
+.icon-menu-control-tiny {
+  background-image: url(../bower_components/design-system/assets/icons/menu-control-tiny.svg); }
+
+.icon-reply-tiny {
+  background-image: url(../bower_components/design-system/assets/icons/reply-tiny.svg); }
+
+.icon-upvote-tiny {
+  background-image: url(../bower_components/design-system/assets/icons/upvote-tiny.svg); }
+
+.icon-upvote-reply-tiny {
+  background-image: url(../bower_components/design-system/assets/icons/upvote-reply-tiny.svg); }
 
 /**
  * Social Icons:
