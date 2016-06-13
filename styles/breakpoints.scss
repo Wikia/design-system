@@ -49,13 +49,13 @@
 // Currently displayed breakpoint/media query
 .breakpoint-preview-current::after {
 	@include display-breakpoint-content('$breakpoint-mobile-up (default)', $breakpoint-mobile-up);
-	color: $color-blue-blue;
+	color: $color-message;
 }
 
 @each $breakpoint-name, $breakpoint-data in (
-	tablet-up: (query: $breakpoint-tablet-up, color: $color-kermit-green),
-	desktop-up: (query: $breakpoint-desktop-up, color: $color-dusty-orange),
-	desktop-xl-up: (query: $breakpoint-desktop-xl-up, color: $color-pinkish-red)
+	tablet-up: (query: $breakpoint-tablet-up, color: $color-success),
+	desktop-up: (query: $breakpoint-desktop-up, color: $color-warning),
+	desktop-xl-up: (query: $breakpoint-desktop-xl-up, color: $color-alert)
 ) {
 	@media #{map-get($breakpoint-data, query)} {
 		.breakpoint-preview-current::after {
