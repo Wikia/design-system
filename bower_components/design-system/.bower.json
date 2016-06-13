@@ -15,13 +15,13 @@
     "test",
     "tests"
   ],
-  "_release": "2595ff8e59",
+  "_release": "e2986cf552",
   "_resolution": {
     "type": "branch",
-    "branch": "colors-update",
-    "commit": "2595ff8e594ecee7d710df4c9b2147f81463a47a"
+    "branch": "master",
+    "commit": "e2986cf55245dcac68ab4471416184998b67fba8"
   },
   "_source": "git://github.com/Wikia/design-system.git",
-  "_target": "colors-update",
+  "_target": "master",
   "_originalSource": "Wikia/design-system"
 }
