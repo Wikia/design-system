@@ -6,7 +6,6 @@
     link(rel='stylesheet' href='./styleguide/custom-preview-elements.css')
     link(rel='stylesheet' href='./www/index.css')
     script(src='./styleguide/styleguide.js')
-    script(src='./styleguide/custom-interactions.js')
 
 ### Body
 
