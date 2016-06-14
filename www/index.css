@@ -1244,10 +1244,10 @@
  *     footer
  *       header
  *         svg Wikia Home of Fandom
- *       section.fandom
+ *       section
  *         header
  *           svg Fandom
- *         section.verticals
+ *         section
  *           ul
  *             li
  *               a Games
@@ -1257,7 +1257,7 @@
  *               a TV
  *             li
  *               a Fan Communities
- *         section.social-links
+ *         section
  *           header Follow Us
  *           ul
  *             li
@@ -1270,10 +1270,10 @@
  *               a YouTube
  *             li
  *               a Instagram
- *       section.wikia
+ *       section
  *         header
  *           svg Wikia
- *         section.overview
+ *         section
  *           header Overview
  *           ul
  *             li
@@ -1286,7 +1286,7 @@
  *               a Contact
  *             li
  *               a Wikia Gives Back
- *         section.overview-extended
+ *         section
  *           ul
  *             li
  *               a Terms of Use
@@ -1296,7 +1296,7 @@
  *               a Global Sitemap
  *             li
  *               a API
- *         section.community
+ *         section
  *           header Community
  *           ul
  *             li
@@ -1309,17 +1309,17 @@
  *               a WAM Score
  *             li
  *               a Help
- *         section.community-extended
+ *         section
  *           p Find communities you love or create your own.  Start something epic.
  *           button START A WIKIA
- *         section.apps
+ *         section
  *           header Community Apps
  *           p Take your favorite fandoms with you and never miss a beat.
  *           a
  *             svg App Store
  *           a
  *             svg Google Play
- *         section.advertise
+ *         section
  *           header Advertise
  *           ul
  *             li
