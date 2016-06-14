@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Breakpoints:
  *
@@ -1235,3 +1236,95 @@
 .typescale-size-minus-3 {
   font-size: 10px;
   line-height: 1.5em; }
+
+/**
+ * Footer markup:
+ *
+ *     @example
+ *     footer
+ *       header
+ *         svg Wikia Home of Fandom
+ *       section.fandom
+ *         header
+ *           svg Fandom
+ *         section.verticals
+ *           ul
+ *             li
+ *               a Games
+ *             li
+ *               a Movies
+ *             li
+ *               a TV
+ *             li
+ *               a Fan Communities
+ *         section.social-links
+ *           header Follow Us
+ *           ul
+ *             li
+ *               a Facebook
+ *             li
+ *               a Twitter
+ *             li
+ *               a Reddit
+ *             li
+ *               a YouTube
+ *             li
+ *               a Instagram
+ *       section.wikia
+ *         header
+ *           svg Wikia
+ *         section.overview
+ *           header Overview
+ *           ul
+ *             li
+ *               a About
+ *             li
+ *               a Careers
+ *             li
+ *               a News
+ *             li
+ *               a Contact
+ *             li
+ *               a Wikia Gives Back
+ *         section.overview-extended
+ *           ul
+ *             li
+ *               a Terms of Use
+ *             li
+ *               a Privacy Policy
+ *             li
+ *               a Global Sitemap
+ *             li
+ *               a API
+ *         section.community
+ *           header Community
+ *           ul
+ *             li
+ *               a Community Central
+ *             li
+ *               a Support
+ *             li
+ *               a Fan Contributor Program
+ *             li
+ *               a WAM Score
+ *             li
+ *               a Help
+ *         section.community-extended
+ *           p Find communities you love or create your own.  Start something epic.
+ *           button START A WIKIA
+ *         section.apps
+ *           header Community Apps
+ *           p Take your favorite fandoms with you and never miss a beat.
+ *           a
+ *             svg App Store
+ *           a
+ *             svg Google Play
+ *         section.advertise
+ *           header Advertise
+ *           ul
+ *             li
+ *               a Media Kit
+ *             li
+ *               a Contact
+ *       footer ${community} is powered by ${vertical}. Content is available under ${license}.
+ */

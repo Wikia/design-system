@@ -6,7 +6,8 @@
   "contributors": [
     "Bogna Knychala <bogna.ka@gmail.com>",
     "Bartosz V. Bentkowski <me@bartoszbentkowski.com>",
-    "Mateusz Warkocki <warkot@wikia-inc.com>"
+    "Mateusz Warkocki <warkot@wikia-inc.com>",
+    "Tomasz Napieralski <tomasz.napieralski@wikia-inc.com>"
   ],
   "scripts": {
     "build": "gulp && styledown styles/*.scss styleguide/config.md > index.html"
