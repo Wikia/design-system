@@ -1243,10 +1243,12 @@
  *     @example
  *     footer
  *       header
- *         svg Wikia Home of Fandom
+ *         svg Wikia
+ *         div Home of Fandom
  *       section
  *         header
- *           svg Fandom
+ *           a
+ *             svg Fandom
  *         section
  *           ul
  *             li
