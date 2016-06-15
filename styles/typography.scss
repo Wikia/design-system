@@ -37,6 +37,10 @@
  *       code.sg $typograghy-minus-3
  */
 
+body {
+	font-family: $font-family;
+}
+
 .typescale-size-base {
 	font-size: $typescale-size-base;
 	line-height: $line-height;
