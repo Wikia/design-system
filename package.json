@@ -9,7 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/Wikia/design-system.git"
   },
-  "license": "UNLICENSED",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Wikia/design-system/issues"
   },
