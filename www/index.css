@@ -1189,6 +1189,9 @@
  *       div.typescale-size-minus-3 The quick brown fox jumps over the lazy dog
  *       code.sg $typograghy-minus-3
  */
+body {
+  font-family: "San Francisco", "Helvetica Neue", "Roboto", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif; }
+
 .typescale-size-base {
   font-size: 16px;
   line-height: 1.5em; }

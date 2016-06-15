@@ -7,7 +7,7 @@
   ],
   "description": "Design System developed for Wikia",
   "main": "",
-  "license": "UNLICENSED",
+  "license": "GPL-3.0",
   "ignore": [
     "**/.*",
     "node_modules",
