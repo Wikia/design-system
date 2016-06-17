@@ -89,4 +89,3 @@
 			<p>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</p>
 		</div>
 	</footer>
-
