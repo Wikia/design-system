@@ -50,12 +50,14 @@ footer {
 	}
 
 	// left (Fandom) section and its header
-	> div > :nth-of-type(1) {
+	> div > h2:nth-of-type(1),
+	> div > div:nth-of-type(1) {
 		width: 25%;
 	}
 
 	// right (Wikia) section and its header
-	> div > :nth-of-type(2) {
+	> div > h2:nth-of-type(2),
+	> div > div:nth-of-type(2) {
 		width: 75%;
 	}
 
@@ -75,16 +77,18 @@ footer {
 
 	// items in Wikia section
 	> div > div:nth-of-type(2) {
-		> div:nth-of-type(1) {
-			width: 160px;
-		}
-
+		> div:nth-of-type(1),
 		> div:nth-of-type(2) {
-			width: 290px;
+			width: 160px;
 		}
 
 		> div:nth-of-type(3),
 		> div:nth-of-type(4) {
+			width: 290px;
+		}
+
+		> div:nth-of-type(5),
+		> div:nth-of-type(6) {
 			width: 200px;
 		}
 	}
