@@ -2,8 +2,6 @@ footer {
 	background-color: $color-dark-blue-gray;
 	border: 1px solid $color-black;
 	color: $color-white;
-	width: 1060px;
-
 	// borders help with debugging
 	// border-box sizing feels natural
 	&,
@@ -34,63 +32,21 @@ footer {
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		height: 500px;
-		justify-content: space-around;
 	}
 
 	// left (Fandom) and right (Wikia) sections
 	> div > div {
-		align-items: center;
 		border: 1px solid $color-games;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		height: 400px;
 		justify-content: space-around;
-	}
-
-	// left (Fandom) section and its header
-	> div > h2:nth-of-type(1),
-	> div > div:nth-of-type(1) {
-		width: 25%;
-	}
-
-	// right (Wikia) section and its header
-	> div > h2:nth-of-type(2),
-	> div > div:nth-of-type(2) {
-		width: 75%;
 	}
 
 	// lowest level sections - items in the Fandom and Wikia sections
 	> div > div > div {
 		border: 1px solid $color-lifestyle;
 		//height: 150px;
-	}
-
-	// items in Fandom section
-	> div > div:nth-of-type(1) {
-		> ul,
-		> div {
-			width: 200px;
-		}
-	}
-
-	// items in Wikia section
-	> div > div:nth-of-type(2) {
-		> div:nth-of-type(1),
-		> div:nth-of-type(2) {
-			width: 160px;
-		}
-
-		> div:nth-of-type(3),
-		> div:nth-of-type(4) {
-			width: 290px;
-		}
-
-		> div:nth-of-type(5),
-		> div:nth-of-type(6) {
-			width: 200px;
-		}
 	}
 
 	ul {
@@ -100,7 +56,59 @@ footer {
 	}
 }
 
+@media #{$breakpoint-desktop-up} {
+	footer {
+		width: 1060px;
 
+		// main content
+		> div:nth-of-type(1) {
+			height: 500px;
+		}
+
+		// left (Fandom) and right (Wikia) sections
+		> div > div {
+			height: 400px;
+		}
+
+		// left (Fandom) section and its header
+		> div > h2:nth-of-type(1),
+		> div > div:nth-of-type(1) {
+			width: 25%;
+		}
+
+		// right (Wikia) section and its header
+		> div > h2:nth-of-type(2),
+		> div > div:nth-of-type(2) {
+			width: 75%;
+		}
+
+		// items in Fandom section
+		> div > div:nth-of-type(1) {
+			> ul,
+			> div {
+				width: 200px;
+			}
+		}
+
+		// items in Wikia section
+		> div > div:nth-of-type(2) {
+			> div:nth-of-type(1),
+			> div:nth-of-type(2) {
+				width: 160px;
+			}
+
+			> div:nth-of-type(3),
+			> div:nth-of-type(4) {
+				width: 290px;
+			}
+
+			> div:nth-of-type(5),
+			> div:nth-of-type(6) {
+				width: 200px;
+			}
+		}
+	}
+}
 
 
 
