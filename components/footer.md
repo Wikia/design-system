@@ -56,23 +56,21 @@
 			<div>
 				<div class="standard-section">
 					<h3>Overview</h3>
-					<div>
-						<ul>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">News</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">Wikia Gives Back</a></li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<li><a href="#">Terms Of Use</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Global Sitemap</a></li>
-							<li><a href="#">API</a></li>
-						</ul>
-					</div>
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Wikia Gives Back</a></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><a href="#">Terms Of Use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Global Sitemap</a></li>
+						<li><a href="#">API</a></li>
+					</ul>
 				</div>
 				<div class="standard-section">
 					<h3>Community</h3>
