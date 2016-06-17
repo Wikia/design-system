@@ -1260,132 +1260,125 @@ body {
  *               a TV
  *             li
  *               a Fan Communities
- *         div
- *           h3 Follow Us
- *           ul
- *             li
- *               a Facebook
- *             li
- *               a Twitter
- *             li
- *               a Reddit
- *             li
- *               a YouTube
- *             li
- *               a Instagram
- *       div
+ *           div
+ *             h3 Follow Us
+ *             ul
+ *               li
+ *                   a Facebook
+ *               li
+ *                   a Twitter
+ *               li
+ *                 a Reddit
+ *               li
+ *                 a YouTube
+ *               li
+ *                 a Instagram
  *         h2 Wikia
  *         div
- *           h3 Overview
- *           ul
- *             li
- *               a About
- *             li
- *               a Careers
- *             li
- *               a News
- *             li
- *               a Contact
- *             li
- *               a Wikia Gives Back
- *         div
- *           ul
- *             li
- *               a Terms of Use
- *             li
- *               a Privacy Policy
- *             li
- *               a Global Sitemap
- *             li
- *               a API
- *         div
- *           h3 Community
- *           ul
- *             li
- *               a Community Central
- *             li
- *               a Support
- *             li
- *               a Fan Contributor Program
- *             li
- *               a WAM Score
- *             li
- *               a Help
- *         div
- *           p Find communities you love or create your own. Start something epic.
- *           button START A WIKIA
- *         div
- *           h3 Community Apps
- *           p Take your favorite fandoms with you and never miss a beat.
- *           a
- *             svg App Store
- *           a
- *             svg Google Play
- *         div
- *           h3 Advertise
- *           ul
- *             li
- *               a Media Kit
- *             li
- *               a Contact
+ *           div
+ *             div
+ *               h3 Overview
+ *               ul
+ *                 li
+ *                     a About
+ *                 li
+ *                     a Careers
+ *                 li
+ *                     a News
+ *                 li
+ *                     a Contact
+ *                 li
+ *                     a Wikia Gives Back
+ *             div
+ *               ul
+ *                 li
+ *                     a Terms of Use
+ *                 li
+ *                     a Privacy Policy
+ *                 li
+ *                     a Global Sitemap
+ *                 li
+ *                     a API
+ *           div
+ *             h3 Community
+ *             ul
+ *               li
+ *                   a Community Central
+ *               li
+ *                   a Support
+ *               li
+ *                   a Fan Contributor Program
+ *               li
+ *                   a WAM Score
+ *               li
+ *                   a Help
+ *           div
+ *             p Find communities you love or create your own. Start something epic.
+ *             button START A WIKIA
+ *           div
+ *             h3 Community Apps
+ *             p Take your favorite fandoms with you and never miss a beat.
+ *             a
+ *               svg App Store
+ *             a
+ *               svg Google Play
+ *           div
+ *             h3 Advertise
+ *             ul
+ *               li
+ *                   a Media Kit
+ *               li
+ *                   a Contact
  *       div ${community} is powered by ${vertical}. Content is available under ${license}.
  */
 footer {
   background-color: #39424d;
   border: 1px solid #1a1a1a;
   color: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  height: 600px;
-  justify-content: space-around;
   width: 1060px; }
-  footer, footer * {
+  footer,
+  footer * {
     border: 1px solid #c819ad;
     box-sizing: border-box; }
   footer svg {
     display: none; }
-  footer h2,
+  footer > :first-child,
   footer > :last-child {
     border: 1px solid #ff7f26;
     width: 100%; }
   footer h2 div {
     display: inline-block; }
-  footer > div {
+  footer > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px;
+    justify-content: space-around; }
+  footer > div > div {
+    align-items: center;
     border: 1px solid #94d11f;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    height: 400px;
     justify-content: space-around; }
-    footer > div:nth-of-type(1) {
-      width: 25%; }
-    footer > div:nth-of-type(2) {
-      width: 75%; }
-  footer > div div {
-    border: 1px solid #ffd000;
-    width: 250px; }
-  footer > div:nth-of-type(1) div:nth-of-type(1),
-  footer > div:nth-of-type(1) div:nth-of-type(2) {
-    width: 290px; }
-  footer > div:nth-of-type(2) div:nth-of-type(1),
-  footer > div:nth-of-type(2) div:nth-of-type(2) {
-    width: 160px; }
-  footer > div:nth-of-type(2) div:nth-of-type(3),
-  footer > div:nth-of-type(2) div:nth-of-type(4) {
-    width: 290px; }
-  footer > div:nth-of-type(2) div:nth-of-type(5),
-  footer > div:nth-of-type(2) div:nth-of-type(6) {
+  footer > div > :nth-of-type(1) {
+    width: 25%; }
+  footer > div > :nth-of-type(2) {
+    width: 75%; }
+  footer > div > div > div {
+    border: 1px solid #ffd000; }
+  footer > div > div:nth-of-type(1) > ul,
+  footer > div > div:nth-of-type(1) > div {
     width: 200px; }
-  footer > div div:nth-of-type(1) {
-    order: 1; }
-  footer > div div:nth-of-type(2) {
-    order: 4; }
-  footer > div div:nth-of-type(3) {
-    order: 2; }
-  footer > div div:nth-of-type(4) {
-    order: 5; }
-  footer > div div:nth-of-type(5) {
-    order: 3; }
-  footer > div div:nth-of-type(6) {
-    order: 6; }
+  footer > div > div:nth-of-type(2) > div:nth-of-type(1) {
+    width: 160px; }
+  footer > div > div:nth-of-type(2) > div:nth-of-type(2),
+  footer > div > div:nth-of-type(2) > div:nth-of-type(3) {
+    width: 290px; }
+  footer > div > div:nth-of-type(2) > div:nth-of-type(4),
+  footer > div > div:nth-of-type(2) > div:nth-of-type(5) {
+    width: 200px; }
   footer ul {
     color: #c5ced9;
     list-style-type: none;
