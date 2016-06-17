@@ -1239,45 +1239,60 @@ body {
   font-size: 10px;
   line-height: 1.5em; }
 
-.ds-footer a {
-  text-decoration: none; }
-
-.ds-footer section {
+.ds-footer {
+  background-color: #39424d;
+  font-family: "Helvetica Neue";
   margin: 0;
   padding: 0; }
-
-.ds-footer .verticals {
-  background-color: #39424d;
-  display: inline-block;
-  font-family: "Helvetica Neue";
-  font-size: 18px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px; }
-  .ds-footer .verticals li a, .ds-footer .verticals li a:hover, .ds-footer .verticals li a:active, .ds-footer .verticals li a:visited {
-    color: #fff; }
-  .ds-footer .verticals li a {
-    align-content: flex-start;
-    align-items: flex-start;
-    border-top: solid 4px #656e78;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 8px 0 30px 0; }
-    .ds-footer .verticals li a[data-vertical='games'] {
-      border-color: #94d11f; }
-    .ds-footer .verticals li a[data-vertical='movies'] {
-      border-color: #09d3bf; }
-    .ds-footer .verticals li a[data-vertical='tv'] {
-      border-color: #00b7e0; }
-  .ds-footer .verticals li .vertical-background-arrow {
-    background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
-    background-size: 27px 18px;
-    display: inline-block;
-    height: 18px;
+  .ds-footer a {
+    text-decoration: none; }
+  .ds-footer ul {
     margin: 0;
-    padding: 0;
-    transform: rotate(180deg);
-    width: 27px; }
+    padding: 0; }
+  .ds-footer li {
+    list-style-type: none; }
+  .ds-footer .standard-section {
+    border-top: solid 4px #656e78;
+    padding: 8px 0 30px 0; }
+    .ds-footer .standard-section h3 {
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+      padding: 0; }
+    .ds-footer .standard-section a, .ds-footer .standard-section a:hover, .ds-footer .standard-section a:active, .ds-footer .standard-section a:visited {
+      color: #c5ced9;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 2em; }
+  .ds-footer .verticals {
+    display: inline-block;
+    width: 200px; }
+    .ds-footer .verticals li a, .ds-footer .verticals li a:hover, .ds-footer .verticals li a:active, .ds-footer .verticals li a:visited {
+      align-content: flex-start;
+      align-items: flex-start;
+      border-top: solid 4px #656e78;
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      font-size: 18px;
+      font-weight: bold;
+      justify-content: space-between;
+      margin: 0;
+      padding: 8px 0 30px 0; }
+      .ds-footer .verticals li a[data-vertical='games'], .ds-footer .verticals li a:hover[data-vertical='games'], .ds-footer .verticals li a:active[data-vertical='games'], .ds-footer .verticals li a:visited[data-vertical='games'] {
+        border-color: #94d11f; }
+      .ds-footer .verticals li a[data-vertical='movies'], .ds-footer .verticals li a:hover[data-vertical='movies'], .ds-footer .verticals li a:active[data-vertical='movies'], .ds-footer .verticals li a:visited[data-vertical='movies'] {
+        border-color: #09d3bf; }
+      .ds-footer .verticals li a[data-vertical='tv'], .ds-footer .verticals li a:hover[data-vertical='tv'], .ds-footer .verticals li a:active[data-vertical='tv'], .ds-footer .verticals li a:visited[data-vertical='tv'] {
+        border-color: #00b7e0; }
+    .ds-footer .verticals li .vertical-background-arrow {
+      background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
+      background-size: 27px 18px;
+      display: inline-block;
+      height: 18px;
+      margin: 0;
+      padding: 0;
+      transform: rotate(180deg);
+      width: 27px; }
