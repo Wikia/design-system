@@ -10,7 +10,7 @@
     "Tomasz Napieralski <tomasz.napieralski@wikia-inc.com>"
   ],
   "scripts": {
-    "build": "gulp && styledown styles/*.scss styleguide/config.md > index.html"
+    "build": "gulp && styledown styles/*.scss components/*.md styleguide/config.md > index.html"
   },
   "repository": {
     "type": "git",
