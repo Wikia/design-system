@@ -38,9 +38,12 @@ footer {
 	> div > div {
 		border: 1px solid $color-games;
 		display: flex;
-		flex-direction: column;
 		flex-wrap: wrap;
-		justify-content: space-around;
+
+		> div,
+		> ul {
+			width: 100%;
+		}
 	}
 
 	// lowest level sections - items in the Fandom and Wikia sections
@@ -49,10 +52,47 @@ footer {
 		//height: 150px;
 	}
 
+	// items in Wikia section
+	> div > div:nth-of-type(2) {
+		> div:nth-of-type(1) {
+			order: 5;
+			width: 50%;
+
+			> h3 {
+				display: none;
+			}
+		}
+
+		> div:nth-of-type(2) {
+			order: 6;
+			width: 50%;
+		}
+
+		> div:nth-of-type(3) {
+			order: 2;
+		}
+
+		> div:nth-of-type(4) {
+			display: none;
+		}
+
+		> div:nth-of-type(5) {
+			order: 4;
+		}
+
+		> div:nth-of-type(6) {
+			order: 1;
+		}
+	}
+
 	ul {
-		color: $color-blue-gray;
 		list-style-type: none;
 		padding: 0;
+
+		a {
+			color: $color-blue-gray;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -67,6 +107,7 @@ footer {
 
 		// left (Fandom) and right (Wikia) sections
 		> div > div {
+			flex-direction: column;
 			height: 400px;
 		}
 
@@ -84,14 +125,43 @@ footer {
 
 		// items in Fandom section
 		> div > div:nth-of-type(1) {
-			> ul,
-			> div {
+			> div,
+			> ul {
 				width: 200px;
 			}
 		}
 
 		// items in Wikia section
 		> div > div:nth-of-type(2) {
+			> div:nth-of-type(1) {
+				order: 1;
+
+				> h3 {
+					display: block;
+				}
+			}
+
+			> div:nth-of-type(2) {
+				order: 2;
+			}
+
+			> div:nth-of-type(3) {
+				order: 3;
+			}
+
+			> div:nth-of-type(4) {
+				display: block;
+				order: 4;
+			}
+
+			> div:nth-of-type(5) {
+				order: 5;
+			}
+
+			> div:nth-of-type(6) {
+				order: 6;
+			}
+
 			> div:nth-of-type(1),
 			> div:nth-of-type(2) {
 				width: 160px;
