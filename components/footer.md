@@ -9,49 +9,49 @@
 		<div>
 			<h2>
 				<a href="#">
-					<svg>Fandom</svg>
+					&lt;svg&gt;Fandom&lt;/svg&gt;
 				</a>
 			</h2>
-			<ul class="verticals">
-				<li>
-					<a href="#" data-vertical="games">
-						<div>Games</div>
-						<div class="vertical-background-arrow"></div>
-					</a>
-				</li>
-				<li>
-					<a href="#" data-vertical="movies">
-						<div>Movies</div>
-						<div class="vertical-background-arrow"></div>
-					</a>
-				</li>
-				<li>
-					<a href="#" data-vertical="tv">
-						<div>TV</div>
-						<div class="vertical-background-arrow"></div>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div>Fan Communities</div>
-						<div class="vertical-background-arrow"></div>
-					</a>
-				</li>
-			</ul>
-			<div class="standard-section">
-				<h3>Follow Us</h3>
-				<ul>
-					<li><a href="#">Facebook</a></li>
-					<li><a href="#">Twitter</a></li>
-					<li><a href="#">Reddit</a></li>
-					<li><a href="#">Youtube</a></li>
-					<li><a href="#">Instagram</a></li>
+			<div>
+				<ul class="verticals">
+					<li>
+						<a href="#" data-vertical="games">
+							<div>Games</div>
+							<div class="vertical-background-arrow"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-vertical="movies">
+							<div>Movies</div>
+							<div class="vertical-background-arrow"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-vertical="tv">
+							<div>TV</div>
+							<div class="vertical-background-arrow"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div>Fan Communities</div>
+							<div class="vertical-background-arrow"></div>
+						</a>
+					</li>
 				</ul>
+				<div>
+					<h3>Follow Us</h3>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Reddit</a></li>
+						<li><a href="#">Youtube</a></li>
+						<li><a href="#">Instagram</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div>
 			<h2>
-				<svg>Wikia</svg>
+				&lt;svg&gt;Wikia&lt;/svg&gt;
 			</h2>
 			<div>
 				<div class="standard-section">
