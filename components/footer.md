@@ -9,29 +9,29 @@
 		<div>
 			<h2>
 				<a href="#">
-					<svg>Fandom</svg>
+					&lt;svg&gt;Fandom&lt;/svg&gt;
 				</a>
 			</h2>
-			<ul>
-				<li><a href="#">Games</a></li>
-				<li><a href="#">Movies</a></li>
-				<li><a href="#">TV</a></li>
-				<li><a href="#">Fan Communities</a></li>
-			</ul>
 			<div>
-				<h3>Follow Us</h3>
 				<ul>
-					<li><a href="#">Facebook</a></li>
-					<li><a href="#">Twitter</a></li>
-					<li><a href="#">Reddit</a></li>
-					<li><a href="#">Youtube</a></li>
-					<li><a href="#">Instagram</a></li>
+					<li><a href="#">Games</a></li>
+					<li><a href="#">Movies</a></li>
+					<li><a href="#">TV</a></li>
+					<li><a href="#">Fan Communities</a></li>
 				</ul>
+				<div>
+					<h3>Follow Us</h3>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Reddit</a></li>
+						<li><a href="#">Youtube</a></li>
+						<li><a href="#">Instagram</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div>
 			<h2>
-				<svg>Wikia</svg>
+				&lt;svg&gt;Wikia&lt;/svg&gt;
 			</h2>
 			<div>
 				<div>
@@ -89,4 +89,3 @@
 			<p>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</p>
 		</div>
 	</footer>
-
