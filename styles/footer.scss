@@ -3,14 +3,13 @@
  *
  *     @example
  *     footer
- *       header
+ *       h2
  *         svg Wikia
  *         div Home of Fandom
- *       section
- *         header
- *           a
- *             svg Fandom
- *         section
+ *       div
+ *         h2
+ *           a Fandom
+ *         div
  *           ul
  *             li
  *               a Games
@@ -20,8 +19,8 @@
  *               a TV
  *             li
  *               a Fan Communities
- *         section
- *           header Follow Us
+ *         div
+ *           h3 Follow Us
  *           ul
  *             li
  *               a Facebook
@@ -33,11 +32,10 @@
  *               a YouTube
  *             li
  *               a Instagram
- *       section
- *         header
- *           svg Wikia
- *         section
- *           header Overview
+ *       div
+ *         h2 Wikia
+ *         div
+ *           h3 Overview
  *           ul
  *             li
  *               a About
@@ -49,7 +47,7 @@
  *               a Contact
  *             li
  *               a Wikia Gives Back
- *         section
+ *         div
  *           ul
  *             li
  *               a Terms of Use
@@ -59,8 +57,8 @@
  *               a Global Sitemap
  *             li
  *               a API
- *         section
- *           header Community
+ *         div
+ *           h3 Community
  *           ul
  *             li
  *               a Community Central
@@ -72,22 +70,133 @@
  *               a WAM Score
  *             li
  *               a Help
- *         section
- *           p Find communities you love or create your own.  Start something epic.
+ *         div
+ *           p Find communities you love or create your own. Start something epic.
  *           button START A WIKIA
- *         section
- *           header Community Apps
+ *         div
+ *           h3 Community Apps
  *           p Take your favorite fandoms with you and never miss a beat.
  *           a
  *             svg App Store
  *           a
  *             svg Google Play
- *         section
- *           header Advertise
+ *         div
+ *           h3 Advertise
  *           ul
  *             li
  *               a Media Kit
  *             li
  *               a Contact
- *       footer ${community} is powered by ${vertical}. Content is available under ${license}.
+ *       div ${community} is powered by ${vertical}. Content is available under ${license}.
  */
+
+footer {
+	background-color: $color-dark-blue-gray;
+	border: 1px solid $color-black;
+	color: $color-white;
+	display: flex;
+	flex-wrap: wrap;
+	height: 600px;
+	justify-content: space-around;
+	width: 1060px;
+
+	&, * {
+		border: 1px solid $color-music;
+		box-sizing: border-box;
+	}
+
+	svg {
+		display: none;
+	}
+
+	h2,
+	> :last-child {
+		border: 1px solid $color-books;
+		width: 100%;
+	}
+
+	h2 div {
+		display: inline-block;
+	}
+
+	> div {
+		border: 1px solid $color-games;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		&:nth-of-type(1) {
+			width: 25%;
+		}
+
+		&:nth-of-type(2) {
+			width: 75%;
+		}
+	}
+
+	> div div {
+		border: 1px solid $color-lifestyle;
+		//height: 150px;
+		width: 250px;
+	}
+
+	> div:nth-of-type(1) {
+		div:nth-of-type(1),
+		div:nth-of-type(2) {
+			width: 290px;
+		}
+	}
+
+	> div:nth-of-type(2) {
+		div:nth-of-type(1),
+		div:nth-of-type(2) {
+			width: 160px;
+		}
+
+		div:nth-of-type(3),
+		div:nth-of-type(4) {
+			width: 290px;
+		}
+
+		div:nth-of-type(5),
+		div:nth-of-type(6) {
+			width: 200px;
+		}
+	}
+
+	> div div:nth-of-type(1) {
+		order: 1;
+	}
+
+	> div div:nth-of-type(2) {
+		order: 4;
+	}
+
+	> div div:nth-of-type(3) {
+		order: 2;
+	}
+
+	> div div:nth-of-type(4) {
+		order: 5;
+	}
+
+	> div div:nth-of-type(5) {
+		order: 3;
+	}
+
+	> div div:nth-of-type(6) {
+		order: 6;
+	}
+
+	ul {
+		color: $color-blue-gray;
+		list-style-type: none;
+		padding: 0;
+	}
+}
+
+
+
+
+
+
