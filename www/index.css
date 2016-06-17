@@ -1303,18 +1303,18 @@ body {
  *             h3 Community
  *             ul
  *               li
- *                   a Community Central
+ *                 a Community Central
  *               li
- *                   a Support
+ *                 a Support
  *               li
- *                   a Fan Contributor Program
+ *                 a Fan Contributor Program
  *               li
- *                   a WAM Score
+ *                 a WAM Score
  *               li
- *                   a Help
- *           div
- *             p Find communities you love or create your own. Start something epic.
- *             button START A WIKIA
+ *                 a Help
+ *             div
+ *               p Find communities you love or create your own. Start something epic.
+ *               button START A WIKIA
  *           div
  *             h3 Community Apps
  *             p Take your favorite fandoms with you and never miss a beat.
@@ -1373,11 +1373,10 @@ footer {
     width: 200px; }
   footer > div > div:nth-of-type(2) > div:nth-of-type(1) {
     width: 160px; }
-  footer > div > div:nth-of-type(2) > div:nth-of-type(2),
-  footer > div > div:nth-of-type(2) > div:nth-of-type(3) {
+  footer > div > div:nth-of-type(2) > div:nth-of-type(2) {
     width: 290px; }
-  footer > div > div:nth-of-type(2) > div:nth-of-type(4),
-  footer > div > div:nth-of-type(2) > div:nth-of-type(5) {
+  footer > div > div:nth-of-type(2) > div:nth-of-type(3),
+  footer > div > div:nth-of-type(2) > div:nth-of-type(4) {
     width: 200px; }
   footer ul {
     color: #c5ced9;
