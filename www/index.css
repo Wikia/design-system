@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Breakpoints:
  *
@@ -1245,13 +1246,14 @@ body {
  *     @example
  *
  *     footer
- *       h2
+ *       header
  *         svg Wikia
  *         div Home of Fandom
- *       div
- *         h2
- *           a Fandom
- *         div
+ *       section
+ *         header
+ *           a
+ *             svg Fandom
+ *         section
  *           ul
  *             li
  *               a Games
@@ -1261,125 +1263,74 @@ body {
  *               a TV
  *             li
  *               a Fan Communities
- *           div
- *             h3 Follow Us
- *             ul
- *               li
- *                   a Facebook
- *               li
- *                   a Twitter
- *               li
- *                 a Reddit
- *               li
- *                 a YouTube
- *               li
- *                 a Instagram
- *         h2 Wikia
- *         div
- *           div
- *             div
- *               h3 Overview
- *               ul
- *                 li
- *                     a About
- *                 li
- *                     a Careers
- *                 li
- *                     a News
- *                 li
- *                     a Contact
- *                 li
- *                     a Wikia Gives Back
- *             div
- *               ul
- *                 li
- *                     a Terms of Use
- *                 li
- *                     a Privacy Policy
- *                 li
- *                     a Global Sitemap
- *                 li
- *                     a API
- *           div
- *             h3 Community
- *             ul
- *               li
- *                 a Community Central
- *               li
- *                 a Support
- *               li
- *                 a Fan Contributor Program
- *               li
- *                 a WAM Score
- *               li
- *                 a Help
- *             div
- *               p Find communities you love or create your own. Start something epic.
- *               button START A WIKIA
- *           div
- *             h3 Community Apps
- *             p Take your favorite fandoms with you and never miss a beat.
- *             a
- *               svg App Store
- *             a
- *               svg Google Play
- *           div
- *             h3 Advertise
- *             ul
- *               li
- *                   a Media Kit
- *               li
- *                   a Contact
- *       div ${community} is powered by ${vertical}. Content is available under ${license}.
+ *         section
+ *           header Follow Us
+ *           ul
+ *             li
+ *               a Facebook
+ *             li
+ *               a Twitter
+ *             li
+ *               a Reddit
+ *             li
+ *               a YouTube
+ *             li
+ *               a Instagram
+ *       section
+ *         header
+ *           svg Wikia
+ *         section
+ *           header Overview
+ *           ul
+ *             li
+ *               a About
+ *             li
+ *               a Careers
+ *             li
+ *               a News
+ *             li
+ *               a Contact
+ *             li
+ *               a Wikia Gives Back
+ *         section
+ *           ul
+ *             li
+ *               a Terms of Use
+ *             li
+ *               a Privacy Policy
+ *             li
+ *               a Global Sitemap
+ *             li
+ *               a API
+ *         section
+ *           header Community
+ *           ul
+ *             li
+ *               a Community Central
+ *             li
+ *               a Support
+ *             li
+ *               a Fan Contributor Program
+ *             li
+ *               a WAM Score
+ *             li
+ *               a Help
+ *         section
+ *           p Find communities you love or create your own.  Start something epic.
+ *           button START A WIKIA
+ *         section
+ *           header Community Apps
+ *           p Take your favorite fandoms with you and never miss a beat.
+ *           a
+ *             svg App Store
+ *           a
+ *             svg Google Play
+ *         section
+ *           header Advertise
+ *           ul
+ *             li
+ *               a Media Kit
+ *             li
+ *               a Contact
+ *       footer ${community} is powered by ${vertical}. Content is available under ${license}.
  */
-footer {
-  background-color: #39424d;
-  border: 1px solid #1a1a1a;
-  color: #fff;
-  width: 1060px; }
-  footer,
-  footer * {
-    border: 1px solid #c819ad;
-    box-sizing: border-box; }
-  footer svg {
-    display: none; }
-  footer > :first-child,
-  footer > :last-child {
-    border: 1px solid #ff7f26;
-    width: 100%; }
-  footer h2 div {
-    display: inline-block; }
-  footer > div:nth-of-type(1) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 500px;
-    justify-content: space-around; }
-  footer > div > div {
-    align-items: center;
-    border: 1px solid #94d11f;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 400px;
-    justify-content: space-around; }
-  footer > div > :nth-of-type(1) {
-    width: 25%; }
-  footer > div > :nth-of-type(2) {
-    width: 75%; }
-  footer > div > div > div {
-    border: 1px solid #ffd000; }
-  footer > div > div:nth-of-type(1) > ul,
-  footer > div > div:nth-of-type(1) > div {
-    width: 200px; }
-  footer > div > div:nth-of-type(2) > div:nth-of-type(1) {
-    width: 160px; }
-  footer > div > div:nth-of-type(2) > div:nth-of-type(2) {
-    width: 290px; }
-  footer > div > div:nth-of-type(2) > div:nth-of-type(3),
-  footer > div > div:nth-of-type(2) > div:nth-of-type(4) {
-    width: 200px; }
-  footer ul {
-    color: #c5ced9;
-    list-style-type: none;
-    padding: 0; }
