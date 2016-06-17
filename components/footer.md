@@ -1,7 +1,7 @@
 ###Footer:
 
 	@example
-	<footer>
+	<footer class="ds-footer">
 		<h2>
 			<svg>Wikia</svg>
 			<div>The Home Of Fandom</div>
@@ -12,13 +12,33 @@
 					<svg>Fandom</svg>
 				</a>
 			</h2>
-			<ul>
-				<li><a href="#">Games</a></li>
-				<li><a href="#">Movies</a></li>
-				<li><a href="#">TV</a></li>
-				<li><a href="#">Fan Communities</a></li>
+			<ul class="verticals">
+				<li>
+					<a href="#" data-vertical="games">
+						<div>Games</div>
+						<div class="vertical-background-arrow"></div>
+					</a>
+				</li>
+				<li>
+					<a href="#" data-vertical="movies">
+						<div>Movies</div>
+						<div class="vertical-background-arrow"></div>
+					</a>
+				</li>
+				<li>
+					<a href="#" data-vertical="tv">
+						<div>TV</div>
+						<div class="vertical-background-arrow"></div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>Fan Communities</div>
+						<div class="vertical-background-arrow"></div>
+					</a>
+				</li>
 			</ul>
-			<div>
+			<div class="standard-section">
 				<h3>Follow Us</h3>
 				<ul>
 					<li><a href="#">Facebook</a></li>
@@ -34,7 +54,7 @@
 				<svg>Wikia</svg>
 			</h2>
 			<div>
-				<div>
+				<div class="standard-section">
 					<h3>Overview</h3>
 					<div>
 						<ul>
@@ -54,7 +74,7 @@
 						</ul>
 					</div>
 				</div>
-				<div>
+				<div class="standard-section">
 					<h3>Community</h3>
 					<ul>
 						<li><a href="#">Community Central</a></li>
@@ -64,13 +84,13 @@
 						<li><a href="#">Help</a></li>
 					</ul>
 				</div>
-				<div>
+				<div class="standard-section">
 					<p>Find communities you love or create your own. Start Something epic.</p>
 					<ul>
 						<li><a href="#">START A WIKIA</a></li>
 					</ul>
 				</div>
-				<div>
+				<div class="standard-section">
 					<h3>Community Apps</h3>
 					<p>Take your favorite fandoms with you and never miss a beat.</p>
 					<ul>
@@ -91,4 +111,3 @@
 			<p>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</p>
 		</div>
 	</footer>
-

@@ -1,0 +1,80 @@
+$font-desktop: 'Helvetica Neue';
+$font-size-header: 18px;
+$font-size-normal: 14px;
+
+.ds-footer {
+	$block-large-size-1: 200px;
+	$block-large-size-2: 120px;
+	$block-large-size-3: 290px;
+	$block-large-size-4: 205px;
+
+	background-color: $color-dark-blue-gray;
+	font-family: $font-desktop;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	a {
+		text-decoration: none;
+	}
+
+	.standard-section{
+		h3 {
+			color: $color-white;
+			font-size: $font-size-header;
+		}
+
+
+	}
+
+	.verticals {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		width: $block-large-size-1;
+
+		li {
+			a, a:hover, a:active, a:visited {
+				color: $color-white;
+			}
+
+			a {
+				align-content: flex-start;
+				align-items: flex-start;
+				border-top: solid 4px $color-slate-gray;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				font-size: $font-size-header;
+				justify-content: space-between;
+				padding: 8px 0 30px 0;
+
+				&[data-vertical='games'] {
+					border-color: $color-games;
+				}
+
+				&[data-vertical='movies'] {
+					border-color: $color-movies;
+				}
+
+				&[data-vertical='tv'] {
+					border-color: $color-tv;
+				}
+			}
+
+			.vertical-background-arrow {
+				$background-arrow-height: 18px;
+				$background-arrow-width: 27px;
+
+				background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
+				background-size: $background-arrow-width $background-arrow-height;
+				display: inline-block;
+				height: $background-arrow-height;
+				margin: 0;
+				padding: 0;
+				transform: rotate(180deg);
+				width: $background-arrow-width;
+			}
+		}
+	}
+}
