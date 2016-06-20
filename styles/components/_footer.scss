@@ -3,15 +3,22 @@ $font-size-header: 18px;
 $font-size-normal: 14px;
 
 .ds-footer {
-	$block-large-size-1: 200px;
-	$block-large-size-2: 120px;
-	$block-large-size-3: 290px;
-	$block-large-size-4: 205px;
+	$block-desktop-col-1: 200px;
+	$block-desktop-col-2: 120px;
+	$block-desktop-col-3: 290px;
+	$block-desktop-col-4: 205px;
+
+	$block-desktop-row-1: 300px;
+	$block-desktop-row-2: 200px;
 
 	background-color: $color-dark-blue-gray;
 	font-family: $font-desktop;
 	margin: 0;
 	padding: 0;
+
+	* {
+		box-sizing: border-box;
+	}
 
 	a {
 		text-decoration: none;
@@ -24,6 +31,41 @@ $font-size-normal: 14px;
 
 	li {
 		list-style-type: none;
+	}
+
+	.follow-us {
+		height: $block-desktop-row-2;
+		width: $block-desktop-col-1;
+	}
+
+	.overview {
+		height: $block-desktop-row-1;
+		width: $block-desktop-col-2;
+	}
+
+	.overview-extended {
+		height: $block-desktop-row-2;
+		width: $block-desktop-col-2;
+	}
+
+	.community {
+		height: $block-desktop-row-1;
+		width: $block-desktop-col-3;
+	}
+
+	.community-extended {
+		height: $block-desktop-row-2;
+		width: $block-desktop-col-3;
+	}
+
+	.community-apps {
+		height: $block-desktop-row-1;
+		width: $block-desktop-col-4;
+	}
+
+	.advertise {
+		height: $block-desktop-row-2;
+		width: $block-desktop-col-4;
 	}
 
 	.standard-section{
@@ -44,11 +86,22 @@ $font-size-normal: 14px;
 			font-weight: normal;
 			line-height: 2em;
 		}
+
+		p {
+			color: $color-white;
+			font-size: $font-size-normal;
+			line-height: 1.3em;
+			padding: 0;
+			margin: 0;
+		}
 	}
 
 	.verticals {
-		display: inline-block;
-		width: $block-large-size-1;
+		display: flex;
+		flex-direction: column;
+		height: $block-desktop-row-1;
+		justify-content: space-between;
+		width: $block-desktop-col-1;
 
 		li {
 			a, a:hover, a:active, a:visited {

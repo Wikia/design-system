@@ -1244,6 +1244,8 @@ body {
   font-family: "Helvetica Neue";
   margin: 0;
   padding: 0; }
+  .ds-footer * {
+    box-sizing: border-box; }
   .ds-footer a {
     text-decoration: none; }
   .ds-footer ul {
@@ -1251,6 +1253,27 @@ body {
     padding: 0; }
   .ds-footer li {
     list-style-type: none; }
+  .ds-footer .follow-us {
+    height: 200px;
+    width: 200px; }
+  .ds-footer .overview {
+    height: 300px;
+    width: 120px; }
+  .ds-footer .overview-extended {
+    height: 200px;
+    width: 120px; }
+  .ds-footer .community {
+    height: 300px;
+    width: 290px; }
+  .ds-footer .community-extended {
+    height: 200px;
+    width: 290px; }
+  .ds-footer .community-apps {
+    height: 300px;
+    width: 205px; }
+  .ds-footer .advertise {
+    height: 200px;
+    width: 205px; }
   .ds-footer .standard-section {
     border-top: solid 4px #656e78;
     padding: 8px 0 30px 0; }
@@ -1265,8 +1288,17 @@ body {
       font-size: 14px;
       font-weight: normal;
       line-height: 2em; }
+    .ds-footer .standard-section p {
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.3em;
+      padding: 0;
+      margin: 0; }
   .ds-footer .verticals {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
     width: 200px; }
     .ds-footer .verticals li a, .ds-footer .verticals li a:hover, .ds-footer .verticals li a:active, .ds-footer .verticals li a:visited {
       align-content: flex-start;

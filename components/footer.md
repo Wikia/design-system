@@ -39,7 +39,7 @@
 						</a>
 					</li>
 				</ul>
-				<div>
+				<div class="standard-section follow-us">
 					<h3>Follow Us</h3>
 					<ul>
 						<li><a href="#">Facebook</a></li>
@@ -54,7 +54,7 @@
 				&lt;svg&gt;Wikia&lt;/svg&gt;
 			</h2>
 			<div>
-				<div class="standard-section">
+				<div class="standard-section overview">
 					<h3>Overview</h3>
 					<ul>
 						<li><a href="#">About</a></li>
@@ -64,7 +64,7 @@
 						<li><a href="#">Wikia Gives Back</a></li>
 					</ul>
 				</div>
-				<div>
+				<div class="standard-section overview-extended">
 					<ul>
 						<li><a href="#">Terms Of Use</a></li>
 						<li><a href="#">Privacy Policy</a></li>
@@ -72,7 +72,7 @@
 						<li><a href="#">API</a></li>
 					</ul>
 				</div>
-				<div class="standard-section">
+				<div class="standard-section community">
 					<h3>Community</h3>
 					<ul>
 						<li><a href="#">Community Central</a></li>
@@ -82,13 +82,13 @@
 						<li><a href="#">Help</a></li>
 					</ul>
 				</div>
-				<div class="standard-section">
+				<div class="standard-section community-extended">
 					<p>Find communities you love or create your own. Start Something epic.</p>
 					<ul>
 						<li><a href="#">START A WIKIA</a></li>
 					</ul>
 				</div>
-				<div class="standard-section">
+				<div class="standard-section community-apps">
 					<h3>Community Apps</h3>
 					<p>Take your favorite fandoms with you and never miss a beat.</p>
 					<ul>
@@ -96,7 +96,7 @@
 						<li><a href="#">Google Play</a></li>
 					</ul>
 				</div>
-				<div>
+				<div class="standard-section advertise">
 					<h3>Advertise</h3>
 					<ul>
 						<li><a href="#">Media Kit</a></li>
