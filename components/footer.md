@@ -13,12 +13,14 @@
 				</a>
 			</h2>
 			<div>
-				<ul>
-					<li><a href="#">Games</a></li>
-					<li><a href="#">Movies</a></li>
-					<li><a href="#">TV</a></li>
-					<li><a href="#">Fan Communities</a></li>
-				</ul>
+			 	<div>
+					<ul>
+						<li><a href="#">Games</a></li>
+						<li><a href="#">Movies</a></li>
+						<li><a href="#">TV</a></li>
+						<li><a href="#">Fan Communities</a></li>
+					</ul>
+			 	</div>
 				<div>
 					<h3>Follow Us</h3>
 					<ul>
@@ -63,14 +65,14 @@
 					</ul>
 				</div>
 				<div>
-					<p>Find communities you love or create your own. Start Something epic.</p>
+					<span>Find communities you love or create your own. Start Something epic.</span>
 					<ul>
 						<li><a href="#">START A WIKIA</a></li>
 					</ul>
 				</div>
 				<div>
 					<h3>Community Apps</h3>
-					<p>Take your favorite fandoms with you and never miss a beat.</p>
+					<span>Take your favorite fandoms with you and never miss a beat.</span>
 					<ul>
 						<li><a href="#">App Store</a></li>
 						<li><a href="#">Google Play</a></li>
@@ -86,6 +88,6 @@
 			</div>
 		</div>
 		<div>
-			<p>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</p>
+			Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.
 		</div>
 	</footer>
