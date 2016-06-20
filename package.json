@@ -10,7 +10,7 @@
     "Tomasz Napieralski <tomasz.napieralski@wikia-inc.com>"
   ],
   "scripts": {
-    "build": "gulp && styledown styles/*.scss components/*.md styleguide/config.md > index.html"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "gulp": "3.9.1",
     "gulp-sass": "2.3.1",
+    "gulp-styledown": "0.0.2",
     "styledown": "1.0.2"
   }
 }
