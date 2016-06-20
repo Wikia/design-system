@@ -8,8 +8,6 @@ See https://github.com/Wikia/design-system
 
 After you change source files in `styles/` and/or update DS package run `npm run build`. This will rebuild `index.html` file. 
 
-**NOTE**: This will not work on Windows.
-
 ## After clone
 
 * `npm install`
