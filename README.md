@@ -6,7 +6,7 @@ See https://github.com/Wikia/design-system
 
 ## Update Reference Page
 
-After you change source files in `styles/` and/or update DS package run `npm run build`. This will rebuild `index.html` file. 
+After you change source files in `styles/` and/or update DS package run `gulp`. This will rebuild `index.html` file. 
 
 ## After clone
 
