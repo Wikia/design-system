@@ -1,13 +1,13 @@
 footer {
 	background-color: $color-dark-blue-gray;
 	border: 1px solid $color-black;
+	box-sizing: border-box;
 	color: $color-white;
 	// borders help with debugging
 	// border-box sizing feels natural
-	&,
-	* {
+	> * {
 		border: 1px solid $color-music;
-		box-sizing: border-box;
+		box-sizing: inherit;
 	}
 
 	// hide svg until they have correct markup
@@ -124,11 +124,8 @@ footer {
 		}
 
 		// items in Fandom section
-		> div > div:nth-of-type(1) {
-			> div,
-			> ul {
-				width: 200px;
-			}
+		> div > div:nth-of-type(1) > div {
+			width: 200px;
 		}
 
 		// items in Wikia section
