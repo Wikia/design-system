@@ -1,0 +1,182 @@
+footer {
+	background-color: $color-dark-blue-gray;
+	border: 1px solid $color-black;
+	box-sizing: border-box;
+	color: $color-white;
+	// borders help with debugging
+	// border-box sizing feels natural
+	> * {
+		border: 1px solid $color-music;
+		box-sizing: inherit;
+	}
+
+	// hide svg until they have correct markup
+	svg {
+		display: none;
+	}
+
+	// main title and license
+	> :first-child,
+	> :last-child {
+		border: 1px solid $color-books;
+		width: 100%;
+	}
+
+	// "Home of Fandom" subtitle
+	h2 div {
+		display: inline-block;
+	}
+
+	// main content
+	> div:nth-of-type(1) {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	// left (Fandom) and right (Wikia) sections
+	> div > div {
+		border: 1px solid $color-games;
+		display: flex;
+		flex-wrap: wrap;
+
+		> div,
+		> ul {
+			width: 100%;
+		}
+	}
+
+	// lowest level sections - items in the Fandom and Wikia sections
+	> div > div > div {
+		border: 1px solid $color-lifestyle;
+		//height: 150px;
+	}
+
+	// items in Wikia section
+	> div > div:nth-of-type(2) {
+		> div:nth-of-type(1) {
+			order: 5;
+			width: 50%;
+
+			> h3 {
+				display: none;
+			}
+		}
+
+		> div:nth-of-type(2) {
+			order: 6;
+			width: 50%;
+		}
+
+		> div:nth-of-type(3) {
+			order: 2;
+		}
+
+		> div:nth-of-type(4) {
+			display: none;
+		}
+
+		> div:nth-of-type(5) {
+			order: 4;
+		}
+
+		> div:nth-of-type(6) {
+			order: 1;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+
+		a {
+			color: $color-blue-gray;
+			text-decoration: none;
+		}
+	}
+}
+
+@media #{$breakpoint-desktop-up} {
+	footer {
+		width: 1060px;
+
+		// main content
+		> div:nth-of-type(1) {
+			height: 500px;
+		}
+
+		// left (Fandom) and right (Wikia) sections
+		> div > div {
+			flex-direction: column;
+			height: 400px;
+		}
+
+		// left (Fandom) section and its header
+		> div > h2:nth-of-type(1),
+		> div > div:nth-of-type(1) {
+			width: 25%;
+		}
+
+		// right (Wikia) section and its header
+		> div > h2:nth-of-type(2),
+		> div > div:nth-of-type(2) {
+			width: 75%;
+		}
+
+		// items in Fandom section
+		> div > div:nth-of-type(1) > div {
+			width: 200px;
+		}
+
+		// items in Wikia section
+		> div > div:nth-of-type(2) {
+			> div:nth-of-type(1) {
+				order: 1;
+
+				> h3 {
+					display: block;
+				}
+			}
+
+			> div:nth-of-type(2) {
+				order: 2;
+			}
+
+			> div:nth-of-type(3) {
+				order: 3;
+			}
+
+			> div:nth-of-type(4) {
+				display: block;
+				order: 4;
+			}
+
+			> div:nth-of-type(5) {
+				order: 5;
+			}
+
+			> div:nth-of-type(6) {
+				order: 6;
+			}
+
+			> div:nth-of-type(1),
+			> div:nth-of-type(2) {
+				width: 160px;
+			}
+
+			> div:nth-of-type(3),
+			> div:nth-of-type(4) {
+				width: 290px;
+			}
+
+			> div:nth-of-type(5),
+			> div:nth-of-type(6) {
+				width: 200px;
+			}
+		}
+	}
+}
+
+
+
+

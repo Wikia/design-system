@@ -3,8 +3,8 @@
 	@example
 	<footer class="ds-footer">
 		<h2>
-			<svg>Wikia</svg>
-			<div>The Home Of Fandom</div>
+			&lt;svg&gt;Wikia&lt;/svg&gt;
+			<span>The Home Of Fandom</span>
 		</h2>
 		<div>
 			<h2>
@@ -13,32 +13,34 @@
 				</a>
 			</h2>
 			<div>
-				<ul class="verticals">
-					<li>
-						<a href="#" data-vertical="games">
-							<div>Games</div>
-							<div class="vertical-background-arrow"></div>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-vertical="movies">
-							<div>Movies</div>
-							<div class="vertical-background-arrow"></div>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-vertical="tv">
-							<div>TV</div>
-							<div class="vertical-background-arrow"></div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div>Fan Communities</div>
-							<div class="vertical-background-arrow"></div>
-						</a>
-					</li>
-				</ul>
+				<div>
+					<ul class="verticals">
+						<li>
+							<a href="#" data-vertical="games">
+								<div>Games</div>
+								<div class="vertical-background-arrow"></div>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-vertical="movies">
+								<div>Movies</div>
+								<div class="vertical-background-arrow"></div>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-vertical="tv">
+								<div>TV</div>
+								<div class="vertical-background-arrow"></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div>Fan Communities</div>
+								<div class="vertical-background-arrow"></div>
+							</a>
+						</li>
+					</ul>
+				</div>
 				<div class="standard-section follow-us">
 					<h3>Follow Us</h3>
 					<ul>
@@ -83,14 +85,14 @@
 					</ul>
 				</div>
 				<div class="standard-section community-extended">
-					<p>Find communities you love or create your own. Start Something epic.</p>
+					<span>Find communities you love or create your own. Start Something epic.</span>
 					<ul>
 						<li><a href="#">START A WIKIA</a></li>
 					</ul>
 				</div>
 				<div class="standard-section community-apps">
 					<h3>Community Apps</h3>
-					<p>Take your favorite fandoms with you and never miss a beat.</p>
+					<span>Take your favorite fandoms with you and never miss a beat.</span>
 					<ul>
 						<li><a href="#">App Store</a></li>
 						<li><a href="#">Google Play</a></li>
@@ -106,6 +108,6 @@
 			</div>
 		</div>
 		<div>
-			<p>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</p>
+			Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.
 		</div>
 	</footer>
