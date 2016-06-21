@@ -1,48 +1,48 @@
 ###Footer:
 
 	@example
-	<footer class="ds-footer">
-		<h2>
+	<footer class="global-footer">
+		<h2 class="global-footer__header">
 			&lt;svg&gt;Wikia&lt;/svg&gt;
-			<span>The Home Of Fandom</span>
+			<span class="global-navigation__home-of-fandom">The Home Of Fandom</span>
 		</h2>
-		<div>
-			<h2>
+		<div class="global-footer__main">
+			<h2 class="global-footer__fandom-header">
 				<a href="#">
 					&lt;svg&gt;Fandom&lt;/svg&gt;
 				</a>
 			</h2>
-			<div>
-				<div>
-					<ul class="verticals">
+			<div class="global-footer__fandom-sections">
+				<div class="global-footer__fandom-section has-verticals">
+					<ul class="global-footer__verticals">
 						<li>
-							<a href="#" data-vertical="games">
+							<a href="#" class="global-footer__vertical-games" data-vertical="games">
 								<div>Games</div>
-								<div class="vertical-background-arrow"></div>
+								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a href="#" data-vertical="movies">
+							<a href="#" class="global-footer__vertical-movies" data-vertical="movies">
 								<div>Movies</div>
-								<div class="vertical-background-arrow"></div>
+								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a href="#" data-vertical="tv">
+							<a href="#" class="global-footer__vertical-tv" data-vertical="tv">
 								<div>TV</div>
-								<div class="vertical-background-arrow"></div>
+								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a class="global-footer__vertical" href="#">
 								<div>Fan Communities</div>
-								<div class="vertical-background-arrow"></div>
+								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 					</ul>
 				</div>
-				<div class="standard-section follow-us">
-					<h3>Follow Us</h3>
+				<div class="global-footer__fandom-section">
+					<h3 class="global-footer__section-header">Follow Us</h3>
 					<ul>
 						<li><a href="#">Facebook</a></li>
 						<li><a href="#">Twitter</a></li>
@@ -52,12 +52,12 @@
 					</ul>
 				</div>
 			</div>
-			<h2>
+			<h2 class="global-footer__wikia-header">
 				&lt;svg&gt;Wikia&lt;/svg&gt;
 			</h2>
-			<div>
-				<div class="standard-section overview">
-					<h3>Overview</h3>
+			<div class="global-footer__wikia-sections">
+				<div class="global-footer__wikia-section-overview">
+					<h3 class="global-footer__section-header">Overview</h3>
 					<ul>
 						<li><a href="#">About</a></li>
 						<li><a href="#">Careers</a></li>
@@ -66,7 +66,7 @@
 						<li><a href="#">Wikia Gives Back</a></li>
 					</ul>
 				</div>
-				<div class="standard-section overview-extended">
+				<div class="global-footer__wikia-section-overview-extended">
 					<ul>
 						<li><a href="#">Terms Of Use</a></li>
 						<li><a href="#">Privacy Policy</a></li>
@@ -74,8 +74,8 @@
 						<li><a href="#">API</a></li>
 					</ul>
 				</div>
-				<div class="standard-section community">
-					<h3>Community</h3>
+				<div class="global-footer__wikia-section-community">
+					<h3 class="global-footer__section-header">Community</h3>
 					<ul>
 						<li><a href="#">Community Central</a></li>
 						<li><a href="#">Support</a></li>
@@ -84,22 +84,24 @@
 						<li><a href="#">Help</a></li>
 					</ul>
 				</div>
-				<div class="standard-section community-extended">
-					<span>Find communities you love or create your own. Start Something epic.</span>
+				<div class="global-footer__wikia-section-community-extended">
+					<span class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
 					<ul>
-						<li><a href="#">START A WIKIA</a></li>
+						<li>
+							<a href="#" class="global-navigation__start-a-wikia">START A WIKIA</a>
+						</li>
 					</ul>
 				</div>
-				<div class="standard-section community-apps">
-					<h3>Community Apps</h3>
-					<span>Take your favorite fandoms with you and never miss a beat.</span>
+				<div class="global-footer__wikia-section-community-apps">
+					<h3 class="global-footer__section-header">Community Apps</h3>
+					<span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
 					<ul>
 						<li><a href="#">App Store</a></li>
 						<li><a href="#">Google Play</a></li>
 					</ul>
 				</div>
-				<div class="standard-section advertise">
-					<h3>Advertise</h3>
+				<div class="global-footer__wikia-section-advertise">
+					<h3 class="global-footer__section-header">Advertise</h3>
 					<ul>
 						<li><a href="#">Media Kit</a></li>
 						<li><a href="#">Contact</a></li>
@@ -107,7 +109,7 @@
 				</div>
 			</div>
 		</div>
-		<div>
+		<div class="global-footer__license">
 			Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.
 		</div>
 	</footer>

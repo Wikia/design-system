@@ -10,27 +10,6 @@ $font-size-normal: 14px;
 	$block-desktop-row-1: 300px;
 	$block-desktop-row-2: 200px;
 
-	background-color: $color-dark-blue-gray;
-	margin: 0;
-	padding: 0;
-
-	* {
-		box-sizing: border-box;
-	}
-
-	a {
-		text-decoration: none;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	li {
-		list-style-type: none;
-	}
-
 	.follow-us {
 		height: $block-desktop-row-2;
 		width: $block-desktop-col-1;
@@ -67,30 +46,11 @@ $font-size-normal: 14px;
 	}
 
 	.standard-section{
-		border-top: solid 4px $color-slate-gray;
-		padding: 8px 0 30px 0;
-
-		h3 {
-			color: $color-white;
-			font-size: $font-size-header;
-			font-weight: bold;
-			margin: 0 0 10px 0;
-			padding: 0;
-		}
-
 		a, a:hover, a:active, a:visited {
 			color: $color-blue-gray;
 			font-size: $font-size-normal;
 			font-weight: normal;
 			line-height: 2em;
-		}
-
-		p {
-			color: $color-white;
-			font-size: $font-size-normal;
-			line-height: 1.3em;
-			padding: 0;
-			margin: 0;
 		}
 	}
 
@@ -127,20 +87,6 @@ $font-size-normal: 14px;
 				&[data-vertical='tv'] {
 					border-color: $color-tv;
 				}
-			}
-
-			.vertical-background-arrow {
-				$background-arrow-height: 18px;
-				$background-arrow-width: 27px;
-
-				background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
-				background-size: $background-arrow-width $background-arrow-height;
-				display: inline-block;
-				height: $background-arrow-height;
-				margin: 0;
-				padding: 0;
-				transform: rotate(180deg);
-				width: $background-arrow-width;
 			}
 		}
 	}

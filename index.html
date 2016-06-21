@@ -1702,48 +1702,48 @@
       </div>
       <div class="sg-example">
         <div class="sg-canvas">
-          <footer class="ds-footer">
-            <h2>
+          <footer class="global-footer">
+            <h2 class="global-footer__header">
               &lt;svg&gt;Wikia&lt;/svg&gt;
-              <span>The Home Of Fandom</span>
+              <span class="global-navigation__home-of-fandom">The Home Of Fandom</span>
             </h2>
-            <div>
-              <h2>
+            <div class="global-footer__main">
+              <h2 class="global-footer__fandom-header">
                 <a href="#">
                   &lt;svg&gt;Fandom&lt;/svg&gt;
                 </a>
               </h2>
-              <div>
-                <div>
-                  <ul class="verticals">
+              <div class="global-footer__fandom-sections">
+                <div class="global-footer__fandom-section has-verticals">
+                  <ul class="global-footer__verticals">
                     <li>
-                      <a href="#" data-vertical="games">
+                      <a href="#" class="global-footer__vertical-games" data-vertical="games">
                         <div>Games</div>
-                        <div class="vertical-background-arrow"></div>
+                        <div class="global-footer__vertical-arrow"></div>
                       </a>
                     </li>
                     <li>
-                      <a href="#" data-vertical="movies">
+                      <a href="#" class="global-footer__vertical-movies" data-vertical="movies">
                         <div>Movies</div>
-                        <div class="vertical-background-arrow"></div>
+                        <div class="global-footer__vertical-arrow"></div>
                       </a>
                     </li>
                     <li>
-                      <a href="#" data-vertical="tv">
+                      <a href="#" class="global-footer__vertical-tv" data-vertical="tv">
                         <div>TV</div>
-                        <div class="vertical-background-arrow"></div>
+                        <div class="global-footer__vertical-arrow"></div>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a class="global-footer__vertical" href="#">
                         <div>Fan Communities</div>
-                        <div class="vertical-background-arrow"></div>
+                        <div class="global-footer__vertical-arrow"></div>
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="standard-section follow-us">
-                  <h3>Follow Us</h3>
+                <div class="global-footer__fandom-section">
+                  <h3 class="global-footer__section-header">Follow Us</h3>
                   <ul>
                     <li>
                       <a href="#">Facebook</a>
@@ -1763,12 +1763,12 @@
                   </ul>
                 </div>
               </div>
-              <h2>
+              <h2 class="global-footer__wikia-header">
                 &lt;svg&gt;Wikia&lt;/svg&gt;
               </h2>
-              <div>
-                <div class="standard-section overview">
-                  <h3>Overview</h3>
+              <div class="global-footer__wikia-sections">
+                <div class="global-footer__wikia-section-overview">
+                  <h3 class="global-footer__section-header">Overview</h3>
                   <ul>
                     <li>
                       <a href="#">About</a>
@@ -1787,7 +1787,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="standard-section overview-extended">
+                <div class="global-footer__wikia-section-overview-extended">
                   <ul>
                     <li>
                       <a href="#">Terms Of Use</a>
@@ -1803,8 +1803,8 @@
                     </li>
                   </ul>
                 </div>
-                <div class="standard-section community">
-                  <h3>Community</h3>
+                <div class="global-footer__wikia-section-community">
+                  <h3 class="global-footer__section-header">Community</h3>
                   <ul>
                     <li>
                       <a href="#">Community Central</a>
@@ -1823,17 +1823,17 @@
                     </li>
                   </ul>
                 </div>
-                <div class="standard-section community-extended">
-                  <span>Find communities you love or create your own. Start Something epic.</span>
+                <div class="global-footer__wikia-section-community-extended">
+                  <span class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
                   <ul>
                     <li>
-                      <a href="#">START A WIKIA</a>
+                      <a href="#" class="global-navigation__start-a-wikia">START A WIKIA</a>
                     </li>
                   </ul>
                 </div>
-                <div class="standard-section community-apps">
-                  <h3>Community Apps</h3>
-                  <span>Take your favorite fandoms with you and never miss a beat.</span>
+                <div class="global-footer__wikia-section-community-apps">
+                  <h3 class="global-footer__section-header">Community Apps</h3>
+                  <span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
                   <ul>
                     <li>
                       <a href="#">App Store</a>
@@ -1843,8 +1843,8 @@
                     </li>
                   </ul>
                 </div>
-                <div class="standard-section advertise">
-                  <h3>Advertise</h3>
+                <div class="global-footer__wikia-section-advertise">
+                  <h3 class="global-footer__section-header">Advertise</h3>
                   <ul>
                     <li>
                       <a href="#">Media Kit</a>
@@ -1856,53 +1856,53 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div class="global-footer__license">
               Community is powered by &quot;Vertical&quot;. Content is available under
               <a href="#">CC-BY-SA</a>.
             </div>
           </footer>
-        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">footer</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ds-footer&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">footer</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__header&quot;</span>&gt;</span>
     &amp;lt;svg&amp;gt;Wikia&amp;lt;/svg&amp;gt;
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>The Home Of Fandom<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-navigation__home-of-fandom&quot;</span>&gt;</span>The Home Of Fandom<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__main&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__fandom-header&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>
         &amp;lt;svg&amp;gt;Fandom&amp;lt;/svg&amp;gt;
       <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;verticals&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__fandom-sections&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__fandom-section has-verticals&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__verticals&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">data-vertical</span>=<span class="hljs-value">&quot;games&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__vertical-games&quot;</span> <span class="hljs-attribute">data-vertical</span>=<span class="hljs-value">&quot;games&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Games<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;vertical-background-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__vertical-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">data-vertical</span>=<span class="hljs-value">&quot;movies&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__vertical-movies&quot;</span> <span class="hljs-attribute">data-vertical</span>=<span class="hljs-value">&quot;movies&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;vertical-background-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__vertical-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">data-vertical</span>=<span class="hljs-value">&quot;tv&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__vertical-tv&quot;</span> <span class="hljs-attribute">data-vertical</span>=<span class="hljs-value">&quot;tv&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;vertical-background-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__vertical-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__vertical&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Fan Communities<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;vertical-background-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__vertical-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;standard-section follow-us&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Follow Us<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__fandom-section&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__section-header&quot;</span>&gt;</span>Follow Us<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Facebook<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -1922,12 +1922,12 @@
         <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__wikia-header&quot;</span>&gt;</span>
       &amp;lt;svg&amp;gt;Wikia&amp;lt;/svg&amp;gt;
     <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;standard-section overview&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Overview<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__wikia-sections&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__wikia-section-overview&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__section-header&quot;</span>&gt;</span>Overview<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -1946,7 +1946,7 @@
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;standard-section overview-extended&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__wikia-section-overview-extended&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Terms Of Use<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -1962,8 +1962,8 @@
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;standard-section community&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Community<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__wikia-section-community&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__section-header&quot;</span>&gt;</span>Community<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Community Central<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -1982,17 +1982,17 @@
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;standard-section community-extended&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Find communities you love or create your own. Start Something epic.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__wikia-section-community-extended&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__section-description&quot;</span>&gt;</span>Find communities you love or create your own. Start Something epic.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>START A WIKIA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-navigation__start-a-wikia&quot;</span>&gt;</span>START A WIKIA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;standard-section community-apps&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Community Apps<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Take your favorite fandoms with you and never miss a beat.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__wikia-section-community-apps&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__section-header&quot;</span>&gt;</span>Community Apps<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__section-description&quot;</span>&gt;</span>Take your favorite fandoms with you and never miss a beat.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>App Store<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -2002,8 +2002,8 @@
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;standard-section advertise&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Advertise<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__wikia-section-advertise&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__section-header&quot;</span>&gt;</span>Advertise<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Media Kit<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -2015,7 +2015,7 @@
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;global-footer__license&quot;</span>&gt;</span>
     Community is powered by &quot;Vertical&quot;. Content is available under
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>CC-BY-SA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>

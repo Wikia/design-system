@@ -14,9 +14,12 @@
     width: auto !important;
 }
 
-
-[class*='sg-section-footer-'] .sg-canvas > footer,
-[class^='sg-section-footer-'] .sg-canvas > footer {
-    margin: 0 auto !important;
+[class*='sg-section-footer-'] .sg-canvas,
+[class^='sg-section-footer-'] .sg-canvas {
+	background: #39424d;
 }
 
+[class*='sg-section-footer-'] .sg-canvas > .global-footer,
+[class^='sg-section-footer-'] .sg-canvas > .global-footer {
+    margin: 0 auto !important;
+}
