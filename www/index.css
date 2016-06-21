@@ -1332,67 +1332,67 @@ body {
   font-size: 10px;
   line-height: 1.5em; }
 
-.ds-footer {
+.ds-fooxter {
   background-color: #39424d;
   margin: 0;
   padding: 0; }
-  .ds-footer * {
+  .ds-fooxter * {
     box-sizing: border-box; }
-  .ds-footer a {
+  .ds-fooxter a {
     text-decoration: none; }
-  .ds-footer ul {
+  .ds-fooxter ul {
     margin: 0;
     padding: 0; }
-  .ds-footer li {
+  .ds-fooxter li {
     list-style-type: none; }
-  .ds-footer .follow-us {
+  .ds-fooxter .follow-us {
     height: 200px;
     width: 200px; }
-  .ds-footer .overview {
+  .ds-fooxter .overview {
     height: 300px;
     width: 120px; }
-  .ds-footer .overview-extended {
+  .ds-fooxter .overview-extended {
     height: 200px;
     width: 120px; }
-  .ds-footer .community {
+  .ds-fooxter .community {
     height: 300px;
     width: 290px; }
-  .ds-footer .community-extended {
+  .ds-fooxter .community-extended {
     height: 200px;
     width: 290px; }
-  .ds-footer .community-apps {
+  .ds-fooxter .community-apps {
     height: 300px;
     width: 205px; }
-  .ds-footer .advertise {
+  .ds-fooxter .advertise {
     height: 200px;
     width: 205px; }
-  .ds-footer .standard-section {
+  .ds-fooxter .standard-section {
     border-top: solid 4px #656e78;
     padding: 8px 0 30px 0; }
-    .ds-footer .standard-section h3 {
+    .ds-fooxter .standard-section h3 {
       color: #fff;
       font-size: 18px;
       font-weight: bold;
       margin: 0 0 10px 0;
       padding: 0; }
-    .ds-footer .standard-section a, .ds-footer .standard-section a:hover, .ds-footer .standard-section a:active, .ds-footer .standard-section a:visited {
+    .ds-fooxter .standard-section a, .ds-fooxter .standard-section a:hover, .ds-fooxter .standard-section a:active, .ds-fooxter .standard-section a:visited {
       color: #c5ced9;
       font-size: 14px;
       font-weight: normal;
       line-height: 2em; }
-    .ds-footer .standard-section p {
+    .ds-fooxter .standard-section p {
       color: #fff;
       font-size: 14px;
       line-height: 1.3em;
       padding: 0;
       margin: 0; }
-  .ds-footer .verticals {
+  .ds-fooxter .verticals {
     display: flex;
     flex-direction: column;
     height: 300px;
     justify-content: space-between;
     width: 200px; }
-    .ds-footer .verticals li a, .ds-footer .verticals li a:hover, .ds-footer .verticals li a:active, .ds-footer .verticals li a:visited {
+    .ds-fooxter .verticals li a, .ds-fooxter .verticals li a:hover, .ds-fooxter .verticals li a:active, .ds-fooxter .verticals li a:visited {
       align-content: flex-start;
       align-items: flex-start;
       border-top: solid 4px #656e78;
@@ -1405,13 +1405,13 @@ body {
       justify-content: space-between;
       margin: 0;
       padding: 8px 0 30px 0; }
-      .ds-footer .verticals li a[data-vertical='games'], .ds-footer .verticals li a:hover[data-vertical='games'], .ds-footer .verticals li a:active[data-vertical='games'], .ds-footer .verticals li a:visited[data-vertical='games'] {
+      .ds-fooxter .verticals li a[data-vertical='games'], .ds-fooxter .verticals li a:hover[data-vertical='games'], .ds-fooxter .verticals li a:active[data-vertical='games'], .ds-fooxter .verticals li a:visited[data-vertical='games'] {
         border-color: #94d11f; }
-      .ds-footer .verticals li a[data-vertical='movies'], .ds-footer .verticals li a:hover[data-vertical='movies'], .ds-footer .verticals li a:active[data-vertical='movies'], .ds-footer .verticals li a:visited[data-vertical='movies'] {
+      .ds-fooxter .verticals li a[data-vertical='movies'], .ds-fooxter .verticals li a:hover[data-vertical='movies'], .ds-fooxter .verticals li a:active[data-vertical='movies'], .ds-fooxter .verticals li a:visited[data-vertical='movies'] {
         border-color: #09d3bf; }
-      .ds-footer .verticals li a[data-vertical='tv'], .ds-footer .verticals li a:hover[data-vertical='tv'], .ds-footer .verticals li a:active[data-vertical='tv'], .ds-footer .verticals li a:visited[data-vertical='tv'] {
+      .ds-fooxter .verticals li a[data-vertical='tv'], .ds-fooxter .verticals li a:hover[data-vertical='tv'], .ds-fooxter .verticals li a:active[data-vertical='tv'], .ds-fooxter .verticals li a:visited[data-vertical='tv'] {
         border-color: #00b7e0; }
-    .ds-footer .verticals li .vertical-background-arrow {
+    .ds-fooxter .verticals li .vertical-background-arrow {
       background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
       background-size: 27px 18px;
       display: inline-block;
