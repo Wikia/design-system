@@ -6,7 +6,7 @@ footer {
 	// borders help with debugging
 	// border-box sizing feels natural
 	> * {
-		border: 1px solid $color-music;
+		//border: 1px solid $color-music;
 		box-sizing: inherit;
 	}
 
@@ -18,7 +18,7 @@ footer {
 	// main title and license
 	> :first-child,
 	> :last-child {
-		border: 1px solid $color-books;
+		//border: 1px solid $color-books;
 		width: 100%;
 	}
 
@@ -36,7 +36,7 @@ footer {
 
 	// left (Fandom) and right (Wikia) sections
 	> div > div {
-		border: 1px solid $color-games;
+		//border: 1px solid $color-games;
 		display: flex;
 		flex-wrap: wrap;
 
@@ -48,7 +48,7 @@ footer {
 
 	// lowest level sections - items in the Fandom and Wikia sections
 	> div > div > div {
-		border: 1px solid $color-lifestyle;
+		//border: 1px solid $color-lifestyle;
 		//height: 150px;
 	}
 

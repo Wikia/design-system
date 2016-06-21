@@ -4,13 +4,11 @@ footer {
   box-sizing: border-box;
   color: #fff; }
   footer > * {
-    border: 1px solid #c819ad;
     box-sizing: inherit; }
   footer svg {
     display: none; }
   footer > :first-child,
   footer > :last-child {
-    border: 1px solid #ff7f26;
     width: 100%; }
   footer h2 div {
     display: inline-block; }
@@ -19,14 +17,11 @@ footer {
     flex-direction: column;
     flex-wrap: wrap; }
   footer > div > div {
-    border: 1px solid #94d11f;
     display: flex;
     flex-wrap: wrap; }
     footer > div > div > div,
     footer > div > div > ul {
       width: 100%; }
-  footer > div > div > div {
-    border: 1px solid #ffd000; }
   footer > div > div:nth-of-type(2) > div:nth-of-type(1) {
     order: 5;
     width: 50%; }
