@@ -52,35 +52,15 @@
   border-top: solid 4px #656e78;
   margin-right: 55px;
   padding: 8px 0 30px 0; }
-  .global-footer__fandom-section a, .global-footer__fandom-section a:hover, .global-footer__fandom-section a:active, .global-footer__fandom-section a:visited,
-  .global-footer__wikia-section-overview a,
-  .global-footer__wikia-section-overview a:hover,
-  .global-footer__wikia-section-overview a:active,
-  .global-footer__wikia-section-overview a:visited,
-  .global-footer__wikia-section-overview-extended a,
-  .global-footer__wikia-section-overview-extended a:hover,
-  .global-footer__wikia-section-overview-extended a:active,
-  .global-footer__wikia-section-overview-extended a:visited,
-  .global-footer__wikia-section-community a,
-  .global-footer__wikia-section-community a:hover,
-  .global-footer__wikia-section-community a:active,
-  .global-footer__wikia-section-community a:visited,
-  .global-footer__wikia-section-community-extended a,
-  .global-footer__wikia-section-community-extended a:hover,
-  .global-footer__wikia-section-community-extended a:active,
-  .global-footer__wikia-section-community-extended a:visited,
-  .global-footer__wikia-section-community-apps a,
-  .global-footer__wikia-section-community-apps a:hover,
-  .global-footer__wikia-section-community-apps a:active,
-  .global-footer__wikia-section-community-apps a:visited,
-  .global-footer__wikia-section-advertise a,
-  .global-footer__wikia-section-advertise a:hover,
-  .global-footer__wikia-section-advertise a:active,
-  .global-footer__wikia-section-advertise a:visited {
-    color: #c5ced9;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 2em; }
+
+.global-footer__link,
+.global-footer__link:hover,
+.global-footer__link:active,
+.global-footer__link:visited {
+  color: #c5ced9;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 2em; }
 
 .global-footer__fandom-section.has-verticals {
   border: 0;
@@ -129,6 +109,18 @@
 
 .global-footer__vertical.is-tv {
   border-color: #00b7e0; }
+
+.global-footer__start-a-wikia {
+  border: solid 1px #c5ced9;
+  color: #c5ced9;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  margin-top: 13px;
+  padding: 16px 18px;
+  text-decoration: none;
+  text-transform: uppercase; }
 
 @media screen and (max-width: 1023px) {
   .global-footer__fandom-sections > div,

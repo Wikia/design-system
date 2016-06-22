@@ -89,13 +89,17 @@ $global-footer-section-line-width: 4px;
 	border-top: solid $global-footer-section-line-width $color-slate-gray;
 	margin-right: 55px;
 	padding: 8px 0 30px 0;
+}
 
-	a, a:hover, a:active, a:visited {
-		color: $color-blue-gray;
-		font-size: 16px;
-		font-weight: normal;
-		line-height: 2em;
-	}
+.global-footer__link,
+.global-footer__link:hover,
+.global-footer__link:active,
+.global-footer__link:visited  {
+	color: $color-blue-gray;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 2em;
+
 }
 
 .global-footer__fandom-section.has-verticals {
@@ -154,6 +158,19 @@ $global-footer-section-line-width: 4px;
 
 .global-footer__vertical.is-tv {
 	border-color: $color-tv;
+}
+
+.global-footer__start-a-wikia {
+	border: solid 1px $color-blue-gray;
+	color: $color-blue-gray;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0.3px;
+	margin-top: 13px;
+	padding: 16px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 @media screen and (max-width:#{$breakpoint-desktop - 1}) {
