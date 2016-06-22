@@ -18,8 +18,3 @@
 [class^='sg-section-footer-'] .sg-canvas {
 	background: #39424d;
 }
-
-[class*='sg-section-footer-'] .sg-canvas > .global-footer,
-[class^='sg-section-footer-'] .sg-canvas > .global-footer {
-    margin: 0 auto !important;
-}

@@ -4,7 +4,7 @@
 	<footer class="global-footer">
 		<h2 class="global-footer__header">
 			&lt;svg&gt;Wikia&lt;/svg&gt;
-			<span class="global-navigation__home-of-fandom">The Home Of Fandom</span>
+			<span class="global-footer__home-of-fandom">The Home Of Fandom</span>
 		</h2>
 		<div class="global-footer__main">
 			<h2 class="global-footer__fandom-header">
@@ -88,7 +88,7 @@
 					<span class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
 					<ul>
 						<li>
-							<a href="#" class="global-navigation__start-a-wikia">START A WIKIA</a>
+							<a href="#" class="global-footer__start-a-wikia">START A WIKIA</a>
 						</li>
 					</ul>
 				</div>
