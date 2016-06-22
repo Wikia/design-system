@@ -14,21 +14,21 @@
 			</h2>
 			<div class="global-footer__fandom-sections">
 				<div class="global-footer__fandom-section has-verticals">
-					<ul class="global-footer__verticals">
+					<ul>
 						<li>
-							<a href="#" class="global-footer__vertical-games" data-vertical="games">
+							<a href="#" class="global-footer__vertical is-games" data-vertical="games">
 								<div>Games</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__vertical-movies" data-vertical="movies">
+							<a href="#" class="global-footer__vertical is-movies" data-vertical="movies">
 								<div>Movies</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__vertical-tv" data-vertical="tv">
+							<a href="#" class="global-footer__vertical is-tv" data-vertical="tv">
 								<div>TV</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>

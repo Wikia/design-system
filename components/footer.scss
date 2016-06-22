@@ -103,12 +103,6 @@ $global-footer-section-line-width: 4px;
 	padding: 0;
 }
 
-.global-footer__verticals {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
 .global-footer__section-header {
 	color: $color-white;
 	font-size: 18px;
@@ -138,17 +132,11 @@ $global-footer-section-line-width: 4px;
 	width: $background-arrow-width;
 }
 
-.global-footer__vertical,
-.global-footer__vertical-games,
-.global-footer__vertical-movies,
-.global-footer__vertical-tv {
-	align-content: flex-start;
-	align-items: flex-start;
+.global-footer__vertical {
+	align-items: center;
 	border-top: solid $global-footer-section-line-width $color-slate-gray;
 	color: $color-white;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
 	font-size: 18px;
 	font-weight: bold;
 	justify-content: space-between;
@@ -156,15 +144,15 @@ $global-footer-section-line-width: 4px;
 	padding: 8px 0 30px 0;
 }
 
-.global-footer__vertical-games {
+.global-footer__vertical.is-games {
 	border-color: $color-games;
 }
 
-.global-footer__vertical-movies {
+.global-footer__vertical.is-movies {
 	border-color: $color-movies;
 }
 
-.global-footer__vertical-tv {
+.global-footer__vertical.is-tv {
 	border-color: $color-tv;
 }
 
