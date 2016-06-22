@@ -16,25 +16,25 @@
 				<div class="global-footer__fandom-section has-verticals">
 					<ul>
 						<li>
-							<a href="#" class="global-footer__link global-footer__vertical is-games" data-vertical="games">
+							<a href="#" class="global-footer__vertical is-games" data-vertical="games">
 								<div>Games</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__link global-footer__vertical is-movies" data-vertical="movies">
+							<a href="#" class="global-footer__vertical is-movies" data-vertical="movies">
 								<div>Movies</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__link global-footer__vertical is-tv" data-vertical="tv">
+							<a href="#" class="global-footer__vertical is-tv" data-vertical="tv">
 								<div>TV</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a class="global-footer__link global-footer__vertical" href="#">
+							<a class="global-footer__vertical" href="#">
 								<div>Fan Communities</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>
