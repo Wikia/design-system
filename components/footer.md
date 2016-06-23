@@ -91,14 +91,10 @@
 				<div class="global-footer__wikia-section-community-apps">
 					<h3 class="global-footer__section-header">Community Apps</h3>
 					<span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
-					<ul>
-						<li>
-							<a href="#">
-								App Store
-							</a>
-						</li>
-						<li><a href="#">Google Play</a></li>
-					</ul>
+					<div class="global-footer__app-badges">
+						<a href="#" class="global-footer__app-badge-appstore" alt="App Store"></a>
+						<a href="#" class="global-footer__app-badge-googleplay" alt="Google Play"></a>
+					</div>
 				</div>
 				<div class="global-footer__wikia-section-advertise">
 					<h3 class="global-footer__section-header">Advertise</h3>

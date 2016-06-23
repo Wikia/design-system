@@ -167,13 +167,57 @@ $global-footer-section-line-width: 4px;
 	text-transform: uppercase;
 }
 
+.global-footer__app-badges {
+	display: flex;
+}
+
+%global-footer__app-badge {
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: block;
+	line-height: 1;
+	height: 53px;
+	width: 119px;
+}
+
+.global-footer__app-badge-appstore {
+	@extend %global-footer__app-badge;
+
+	background-image: url(../bower_components/design-system/assets/company/store-appstore.svg);
+}
+
+.global-footer__app-badge-googleplay {
+	@extend %global-footer__app-badge;
+
+	background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg);
+}
+
+.global-footer__vertical-arrow {
+	$background-arrow-height: 18px;
+	$background-arrow-width: 27px;
+
+	background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
+	background-size: $background-arrow-width $background-arrow-height;
+	display: inline-block;
+	height: $background-arrow-height;
+	margin: 0;
+	padding: 0;
+	transform: rotate(180deg);
+	width: $background-arrow-width;
+}
+
 @media screen and (max-width:#{$breakpoint-desktop - 1}) {
 	.global-footer__main {
 		margin: 0 20px;
 	}
+
 	.global-footer__fandom-header,
 	.global-footer__wikia-header {
 		margin: 20px 0;
+	}
+
+	.global-footer__app-badges {
+		justify-content: space-between;
 	}
 
 	// left (Fandom) and right (Wikia) sections
@@ -250,6 +294,10 @@ $global-footer-section-line-width: 4px;
 		flex-direction: column;
 		height: $global-footer-desktop-height-sections;
 		width: $global-footer-desktop-column-wikia;
+	}
+
+	.global-footer__app-badges {
+		flex-direction: column;
 	}
 
 	// items in Fandom section

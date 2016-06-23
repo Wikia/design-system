@@ -125,12 +125,41 @@
   text-decoration: none;
   text-transform: uppercase; }
 
+.global-footer__app-badges {
+  display: flex; }
+
+.global-footer__app-badge-appstore, .global-footer__app-badge-googleplay {
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  line-height: 1;
+  height: 53px;
+  width: 119px; }
+
+.global-footer__app-badge-appstore {
+  background-image: url(../bower_components/design-system/assets/company/store-appstore.svg); }
+
+.global-footer__app-badge-googleplay {
+  background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg); }
+
+.global-footer__vertical-arrow {
+  background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
+  background-size: 27px 18px;
+  display: inline-block;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  transform: rotate(180deg);
+  width: 27px; }
+
 @media screen and (max-width: 1023px) {
   .global-footer__main {
     margin: 0 20px; }
   .global-footer__fandom-header,
   .global-footer__wikia-header {
     margin: 20px 0; }
+  .global-footer__app-badges {
+    justify-content: space-between; }
   .global-footer__fandom-sections > div,
   .global-footer__fandom-sections > ul,
   .global-footer__wikia-sections > div,
@@ -174,6 +203,8 @@
     flex-direction: column;
     height: 500px;
     width: 75%; }
+  .global-footer__app-badges {
+    flex-direction: column; }
   .global-footer__fandom-section {
     width: 200px; }
   .global-footer__wikia-section-overview {
