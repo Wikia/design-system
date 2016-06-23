@@ -16,19 +16,19 @@
 				<div class="global-footer__fandom-section has-verticals">
 					<ul>
 						<li>
-							<a href="#" class="global-footer__vertical is-games" data-vertical="games">
+							<a href="#" class="global-footer__vertical is-games">
 								<div>Games</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__vertical is-movies" data-vertical="movies">
+							<a href="#" class="global-footer__vertical is-movies">
 								<div>Movies</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__vertical is-tv" data-vertical="tv">
+							<a href="#" class="global-footer__vertical is-tv">
 								<div>TV</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>
@@ -92,7 +92,11 @@
 					<h3 class="global-footer__section-header">Community Apps</h3>
 					<span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
 					<ul>
-						<li><a href="#">App Store</a></li>
+						<li>
+							<a href="#">
+								App Store
+							</a>
+						</li>
 						<li><a href="#">Google Play</a></li>
 					</ul>
 				</div>
@@ -106,6 +110,6 @@
 			</div>
 		</div>
 		<div class="global-footer__license">
-			Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.
+			<span>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</span>
 		</div>
 	</footer>

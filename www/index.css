@@ -11,19 +11,22 @@
     .global-footer ul a {
       color: #c5ced9;
       text-decoration: none; }
-  .global-footer svg {
-    display: none; }
 
 .global-footer__header {
-  height: 100px; }
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin: 0; }
 
 .global-footer__license {
-  height: 50px;
   color: #fff;
   background: #262626;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  min-height: 50px;
+  padding: 16px 20px; }
 
 .global-footer__home-of-fandom {
   display: inline-block; }
@@ -123,19 +126,25 @@
   text-transform: uppercase; }
 
 @media screen and (max-width: 1023px) {
+  .global-footer__main {
+    margin: 0 20px; }
+  .global-footer__fandom-header,
+  .global-footer__wikia-header {
+    margin: 20px 0; }
   .global-footer__fandom-sections > div,
   .global-footer__fandom-sections > ul,
   .global-footer__wikia-sections > div,
   .global-footer__wikia-sections > ul {
-    width: 100%; }
+    width: 100%;
+    margin: 0; }
   .global-footer__wikia-section-overview {
     order: 5;
-    width: 50%; }
+    width: 50% !important; }
   .global-footer__wikia-section-overview .global-footer__section-header {
     display: none; }
   .global-footer__wikia-section-overview-extended {
     order: 6;
-    width: 50%; }
+    width: 50% !important; }
   .global-footer__wikia-section-community {
     order: 2; }
   .global-footer__wikia-section-community-extended {
