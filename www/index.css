@@ -152,6 +152,43 @@
   transform: rotate(180deg);
   width: 27px; }
 
+.global-footer__social-icons-list {
+  display: flex;
+  flex-wrap: nowrap; }
+
+.global-footer__social-icon-facebook, .global-footer__social-icon-twitter, .global-footer__social-icon-reddit, .global-footer__social-icon-youtube, .global-footer__social-icon-instagram {
+  background: no-repeat center;
+  background-size: 24px;
+  display: inline-block;
+  height: 24px;
+  margin-right: 20px;
+  width: 24px; }
+
+.global-footer__social-icon-facebook {
+  background-image: url(../bower_components/design-system/assets/icons/facebook-default.svg); }
+  .global-footer__social-icon-facebook:hover {
+    background-image: url(../bower_components/design-system/assets/icons/facebook-active.svg); }
+
+.global-footer__social-icon-twitter {
+  background-image: url(../bower_components/design-system/assets/icons/twitter-default.svg); }
+  .global-footer__social-icon-twitter:hover {
+    background-image: url(../bower_components/design-system/assets/icons/twitter-active.svg); }
+
+.global-footer__social-icon-reddit {
+  background-image: url(../bower_components/design-system/assets/icons/reddit-default.svg); }
+  .global-footer__social-icon-reddit:hover {
+    background-image: url(../bower_components/design-system/assets/icons/reddit-active.svg); }
+
+.global-footer__social-icon-youtube {
+  background-image: url(../bower_components/design-system/assets/icons/youtube-default.svg); }
+  .global-footer__social-icon-youtube:hover {
+    background-image: url(../bower_components/design-system/assets/icons/youtube-active.svg); }
+
+.global-footer__social-icon-instagram {
+  background-image: url(../bower_components/design-system/assets/icons/instagram-default.svg); }
+  .global-footer__social-icon-instagram:hover {
+    background-image: url(../bower_components/design-system/assets/icons/instagram-active.svg); }
+
 @media screen and (max-width: 1023px) {
   .global-footer__main {
     margin: 0 20px; }

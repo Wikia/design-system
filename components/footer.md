@@ -43,12 +43,12 @@
 				</div>
 				<div class="global-footer__fandom-section">
 					<h3 class="global-footer__section-header">Follow Us</h3>
-					<ul>
-						<li><a href="#">Facebook</a></li>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Reddit</a></li>
-						<li><a href="#">Youtube</a></li>
-						<li><a href="#">Instagram</a></li>
+					<ul class="global-footer__social-icons-list">
+						<li><a href="#" class="global-footer__social-icon-facebook"></a></li>
+						<li><a href="#" class="global-footer__social-icon-twitter"></a></li>
+						<li><a href="#" class="global-footer__social-icon-reddit"></a></li>
+						<li><a href="#" class="global-footer__social-icon-youtube"></a></li>
+						<li><a href="#" class="global-footer__social-icon-instagram"></a></li>
 					</ul>
 				</div>
 			</div>

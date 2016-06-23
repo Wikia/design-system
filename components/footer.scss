@@ -7,6 +7,8 @@ $global-footer-desktop-row-height-bottom: 200px;
 $global-footer-desktop-height-sections: $global-footer-desktop-row-height-top + $global-footer-desktop-row-height-bottom;
 $global-footer-desktop-height: $global-footer-desktop-row-height-header + $global-footer-desktop-height-sections;
 $global-footer-section-line-width: 4px;
+$global-footer-social-icon-size: 24px;
+$global-footer-social-icon-spacing: 20px;
 
 .global-footer {
 	background-color: $color-dark-blue-gray;
@@ -204,6 +206,71 @@ $global-footer-section-line-width: 4px;
 	padding: 0;
 	transform: rotate(180deg);
 	width: $background-arrow-width;
+}
+
+//Follow us section
+.global-footer__social-icons-list {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+%global-footer__social-icon {
+	background: no-repeat center;
+	background-size: $global-footer-social-icon-size;
+	display: inline-block;
+	height: $global-footer-social-icon-size;
+	margin-right: $global-footer-social-icon-spacing;
+	width: $global-footer-social-icon-size;
+}
+
+.global-footer__social-icon-facebook {
+	@extend %global-footer__social-icon;
+
+	background-image: url(../bower_components/design-system/assets/icons/facebook-default.svg);
+
+	&:hover {
+		background-image: url(../bower_components/design-system/assets/icons/facebook-active.svg);
+	}
+}
+
+.global-footer__social-icon-twitter {
+	@extend %global-footer__social-icon;
+
+	background-image: url(../bower_components/design-system/assets/icons/twitter-default.svg);
+
+	&:hover {
+		background-image: url(../bower_components/design-system/assets/icons/twitter-active.svg);
+	}
+}
+
+.global-footer__social-icon-reddit {
+	@extend %global-footer__social-icon;
+
+	background-image: url(../bower_components/design-system/assets/icons/reddit-default.svg);
+
+	&:hover {
+		background-image: url(../bower_components/design-system/assets/icons/reddit-active.svg);
+	}
+}
+
+.global-footer__social-icon-youtube {
+	@extend %global-footer__social-icon;
+
+	background-image: url(../bower_components/design-system/assets/icons/youtube-default.svg);
+
+	&:hover {
+		background-image: url(../bower_components/design-system/assets/icons/youtube-active.svg);
+	}
+}
+
+.global-footer__social-icon-instagram {
+	@extend %global-footer__social-icon;
+
+	background-image: url(../bower_components/design-system/assets/icons/instagram-default.svg);
+
+	&:hover {
+		background-image: url(../bower_components/design-system/assets/icons/instagram-active.svg);
+	}
 }
 
 @media screen and (max-width:#{$breakpoint-desktop - 1}) {
