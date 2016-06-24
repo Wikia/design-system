@@ -108,14 +108,14 @@ $global-footer-social-icon-spacing: 20px;
 	color: $color-white;
 	font-size: 16px;
 	line-height: $line-height;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 .global-footer__vertical-arrow {
 	$background-arrow-height: 18px;
 	$background-arrow-width: 27px;
-
+	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 	background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
 	background-size: $background-arrow-width $background-arrow-height;
 	display: inline-block;
@@ -179,12 +179,14 @@ $global-footer-social-icon-spacing: 20px;
 .global-footer__app-badge-appstore {
 	@extend %global-footer__app-badge;
 
+	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 	background-image: url(../bower_components/design-system/assets/company/store-appstore.svg);
 }
 
 .global-footer__app-badge-googleplay {
 	@extend %global-footer__app-badge;
 
+	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 	background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg);
 }
 
@@ -192,6 +194,7 @@ $global-footer-social-icon-spacing: 20px;
 	$background-arrow-height: 18px;
 	$background-arrow-width: 27px;
 
+	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 	background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
 	background-size: $background-arrow-width $background-arrow-height;
 	display: inline-block;
@@ -217,6 +220,7 @@ $global-footer-social-icon-spacing: 20px;
 	width: $global-footer-social-icon-size;
 
 	&.is-facebook {
+		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 		background-image: url(../bower_components/design-system/assets/icons/facebook-default.svg);
 
 		&:hover {
@@ -225,6 +229,7 @@ $global-footer-social-icon-spacing: 20px;
 	}
 
 	&.is-twitter {
+		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 		background-image: url(../bower_components/design-system/assets/icons/twitter-default.svg);
 
 		&:hover {
@@ -233,6 +238,7 @@ $global-footer-social-icon-spacing: 20px;
 	}
 
 	&.is-reddit {
+		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 		background-image: url(../bower_components/design-system/assets/icons/reddit-default.svg);
 
 		&:hover {
@@ -241,6 +247,7 @@ $global-footer-social-icon-spacing: 20px;
 	}
 
 	&.is-youtube {
+		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 		background-image: url(../bower_components/design-system/assets/icons/youtube-default.svg);
 
 		&:hover {
@@ -249,6 +256,7 @@ $global-footer-social-icon-spacing: 20px;
 	}
 
 	&.is-instagram {
+		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 		background-image: url(../bower_components/design-system/assets/icons/instagram-default.svg);
 
 		&:hover {
