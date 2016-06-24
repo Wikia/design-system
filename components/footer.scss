@@ -53,7 +53,16 @@ $global-footer-social-icon-spacing: 20px;
 
 // "Home of Fandom" subtitle
 .global-footer__home-of-fandom {
-	display: inline-block;
+	border-bottom: 1px solid $color-blue-gray;
+	border-top: 1px solid $color-blue-gray;
+	color: #7f90a1;
+	display: block;
+	letter-spacing: 0.5px;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px 0;
+	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 // main content
