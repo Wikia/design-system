@@ -44,11 +44,11 @@
 				<div class="global-footer__fandom-section">
 					<h3 class="global-footer__section-header">Follow Us</h3>
 					<ul class="global-footer__social-icons-list">
-						<li><a href="#" class="global-footer__social-icon-facebook"></a></li>
-						<li><a href="#" class="global-footer__social-icon-twitter"></a></li>
-						<li><a href="#" class="global-footer__social-icon-reddit"></a></li>
-						<li><a href="#" class="global-footer__social-icon-youtube"></a></li>
-						<li><a href="#" class="global-footer__social-icon-instagram"></a></li>
+						<li><a href="#" class="global-footer__social-icon is-facebook"></a></li>
+						<li><a href="#" class="global-footer__social-icon is-twitter"></a></li>
+						<li><a href="#" class="global-footer__social-icon is-reddit"></a></li>
+						<li><a href="#" class="global-footer__social-icon is-youtube"></a></li>
+						<li><a href="#" class="global-footer__social-icon is-instagram"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -86,7 +86,7 @@
 				</div>
 				<div class="global-footer__wikia-section is-community-extended">
 					<span class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
-					<a href="#" class="global-footer__start-a-wikia">START A WIKIA</a>
+					<a href="#" class="global-footer__start-a-wikia">Start a wikia</a>
 				</div>
 				<div class="global-footer__wikia-section is-community-apps">
 					<h3 class="global-footer__section-header">Community Apps</h3>
