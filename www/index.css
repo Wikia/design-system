@@ -1,16 +1,15 @@
+.global-footer * {
+  box-sizing: inherit; }
+
+.global-footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
 .global-footer {
   background-color: #39424d;
   box-sizing: border-box;
   color: #fff; }
-  .global-footer * {
-    box-sizing: inherit; }
-  .global-footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0; }
-    .global-footer ul a {
-      color: #c5ced9;
-      text-decoration: none; }
 
 .global-footer__header {
   align-items: center;
@@ -58,7 +57,8 @@
   color: #c5ced9;
   font-size: 16px;
   font-weight: normal;
-  line-height: 2em; }
+  line-height: 2em;
+  text-decoration: none; }
 
 .global-footer__fandom-section.has-verticals {
   border: 0;
@@ -75,8 +75,8 @@
   color: #fff;
   font-size: 16px;
   line-height: 1.5em;
-  padding: 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 .global-footer__vertical-arrow {
   background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
@@ -97,16 +97,14 @@
   font-weight: bold;
   justify-content: space-between;
   margin: 0;
-  padding: 8px 0 30px 0; }
-
-.global-footer__vertical.is-games {
-  border-color: #94d11f; }
-
-.global-footer__vertical.is-movies {
-  border-color: #09d3bf; }
-
-.global-footer__vertical.is-tv {
-  border-color: #00b7e0; }
+  padding: 8px 0 30px 0;
+  text-decoration: none; }
+  .global-footer__vertical.is-games {
+    border-color: #94d11f; }
+  .global-footer__vertical.is-movies {
+    border-color: #09d3bf; }
+  .global-footer__vertical.is-tv {
+    border-color: #00b7e0; }
 
 .global-footer__start-a-wikia {
   border: solid 1px #c5ced9;
@@ -124,7 +122,7 @@
   display: flex; }
 
 .global-footer__app-badge-appstore, .global-footer__app-badge-googleplay {
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   display: block;
   line-height: 1;

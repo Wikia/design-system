@@ -10,26 +10,26 @@ $global-footer-section-line-width: 4px;
 $global-footer-social-icon-size: 24px;
 $global-footer-social-icon-spacing: 20px;
 
+
+// reset and set some defaults (that should be set in DS)
 .global-footer {
-	background-color: $color-dark-blue-gray;
-	box-sizing: border-box;
-	color: $color-white;
-	// borders help with debugging
-	// border-box sizing feels natural
 	* {
 		box-sizing: inherit;
 	}
 
+	// we should have class that removes defaults from UL
 	ul {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
-
-		a {
-			color: $color-blue-gray;
-			text-decoration: none;
-		}
 	}
+}
+// end of reset
+
+.global-footer {
+	background-color: $color-dark-blue-gray;
+	box-sizing: border-box;
+	color: $color-white;
 }
 
 // main title and license
@@ -85,11 +85,12 @@ $global-footer-social-icon-spacing: 20px;
 .global-footer__link,
 .global-footer__link:hover,
 .global-footer__link:active,
-.global-footer__link:visited  {
+.global-footer__link:visited {
 	color: $color-blue-gray;
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 2em;
+	text-decoration: none;
 }
 
 .global-footer__fandom-section.has-verticals {
@@ -136,18 +137,19 @@ $global-footer-social-icon-spacing: 20px;
 	justify-content: space-between;
 	margin: 0;
 	padding: 8px 0 30px 0;
-}
+	text-decoration: none;
 
-.global-footer__vertical.is-games {
-	border-color: $color-games;
-}
+	&.is-games {
+		border-color: $color-games;
+	}
 
-.global-footer__vertical.is-movies {
-	border-color: $color-movies;
-}
+	&.is-movies {
+		border-color: $color-movies;
+	}
 
-.global-footer__vertical.is-tv {
-	border-color: $color-tv;
+	&.is-tv {
+		border-color: $color-tv;
+	}
 }
 
 .global-footer__start-a-wikia {
@@ -168,7 +170,7 @@ $global-footer-social-icon-spacing: 20px;
 }
 
 %global-footer__app-badge {
-	background-position: center center;
+	background-position: center;
 	background-repeat: no-repeat;
 	display: block;
 	line-height: 1;
