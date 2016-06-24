@@ -3,7 +3,7 @@
 	@example
 	<footer class="global-footer">
 		<h2 class="global-footer__header">
-			&lt;svg&gt;Wikia&lt;/svg&gt;
+			<img class="global-footer__large-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" />
 			<span class="global-footer__home-of-fandom">The Home Of Fandom</span>
 		</h2>
 		<div class="global-footer__main">
