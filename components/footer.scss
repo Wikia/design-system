@@ -128,7 +128,7 @@ $global-footer-social-icon-spacing: 20px;
 
 .global-footer__vertical {
 	align-items: center;
-	border-top: solid $global-footer-section-line-width $color-slate-gray;
+	border-top: $global-footer-section-line-width solid $color-slate-gray;
 	color: $color-white;
 	display: flex;
 	font-size: 18px;

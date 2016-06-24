@@ -90,7 +90,7 @@
 
 .global-footer__vertical {
   align-items: center;
-  border-top: solid 4px #656e78;
+  border-top: 4px solid #656e78;
   color: #fff;
   display: flex;
   font-size: 18px;
