@@ -27,6 +27,10 @@
   min-height: 50px;
   padding: 16px 20px; }
 
+.global-footer__small-wikia-logo,
+.global-footer__fandom-logo {
+  height: 24px; }
+
 .global-footer__home-of-fandom {
   display: inline-block; }
 
@@ -215,14 +219,15 @@
     width: 1060px; }
   .global-footer__main {
     height: 600px; }
+  .global-footer__fandom-header,
+  .global-footer__wikia-header {
+    height: 60px; }
   .global-footer__fandom-header {
-    height: 100px;
     width: 25%; }
   .global-footer__fandom-sections {
     height: 500px;
     width: 25%; }
   .global-footer__wikia-header {
-    height: 100px;
     width: 75%; }
   .global-footer__wikia-sections {
     flex-direction: column;
