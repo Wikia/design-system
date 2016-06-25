@@ -84,13 +84,13 @@
 
 .global-footer__vertical-arrow {
   background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
-  background-size: 27px 18px;
+  background-size: 18px;
   display: inline-block;
-  height: 18px;
+  height: 24px;
   margin: 0;
   padding: 0;
   transform: rotate(180deg);
-  width: 27px; }
+  width: 24px; }
 
 .global-footer__vertical {
   align-items: center;
@@ -138,16 +138,6 @@
 
 .global-footer__app-badge-googleplay {
   background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg); }
-
-.global-footer__vertical-arrow {
-  background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
-  background-size: 27px 18px;
-  display: inline-block;
-  height: 18px;
-  margin: 0;
-  padding: 0;
-  transform: rotate(180deg);
-  width: 27px; }
 
 .global-footer__social-icons-list {
   display: flex;

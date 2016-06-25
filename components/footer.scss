@@ -1,3 +1,5 @@
+$global-footer-icon-size: 24px;
+
 $global-footer-desktop-width: 1060px;
 $global-footer-desktop-column-fandom: 25%;
 $global-footer-desktop-column-wikia: 75%;
@@ -9,7 +11,7 @@ $global-footer-desktop-logo-height: 24px;
 $global-footer-desktop-height-sections: $global-footer-desktop-row-height-top + $global-footer-desktop-row-height-bottom;
 $global-footer-desktop-height: $global-footer-desktop-row-height-header + $global-footer-desktop-height-sections;
 $global-footer-section-line-width: 4px;
-$global-footer-social-icon-size: 24px;
+$global-footer-social-icon-size: $global-footer-icon-size;
 $global-footer-social-icon-spacing: 20px;
 
 
@@ -122,17 +124,15 @@ $global-footer-social-icon-spacing: 20px;
 }
 
 .global-footer__vertical-arrow {
-	$background-arrow-height: 18px;
-	$background-arrow-width: 27px;
 	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 	background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
-	background-size: $background-arrow-width $background-arrow-height;
+	background-size: 18px;
 	display: inline-block;
-	height: $background-arrow-height;
+	height: $global-footer-icon-size;
 	margin: 0;
 	padding: 0;
 	transform: rotate(180deg);
-	width: $background-arrow-width;
+	width: $global-footer-icon-size;
 }
 
 .global-footer__vertical {
@@ -198,21 +198,6 @@ $global-footer-social-icon-spacing: 20px;
 
 	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
 	background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg);
-}
-
-.global-footer__vertical-arrow {
-	$background-arrow-height: 18px;
-	$background-arrow-width: 27px;
-
-	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-	background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
-	background-size: $background-arrow-width $background-arrow-height;
-	display: inline-block;
-	height: $background-arrow-height;
-	margin: 0;
-	padding: 0;
-	transform: rotate(180deg);
-	width: $background-arrow-width;
 }
 
 //Follow us section
