@@ -9,7 +9,7 @@
 		<div class="global-footer__main">
 			<h2 class="global-footer__fandom-header">
 				<a href="#">
-					&lt;svg&gt;Fandom&lt;/svg&gt;
+					<img class="global-footer__fandom-logo" src="bower_components/design-system/assets/company/logo-fandom.svg" />
 				</a>
 			</h2>
 			<div class="global-footer__fandom-sections">
@@ -53,7 +53,7 @@
 				</div>
 			</div>
 			<h2 class="global-footer__wikia-header">
-				&lt;svg&gt;Wikia&lt;/svg&gt;
+				<img class="global-footer__small-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" />
 			</h2>
 			<div class="global-footer__wikia-sections">
 				<div class="global-footer__wikia-section is-overview">
