@@ -4,7 +4,7 @@ $global-footer-desktop-width: 1060px;
 $global-footer-desktop-column-fandom: 25%;
 $global-footer-desktop-column-wikia: 75%;
 $global-footer-desktop-row-height-header: 100px;
-$global-footer-desktop-row-height-top: 300px;
+$global-footer-desktop-row-height-top: 250px;
 $global-footer-desktop-row-height-bottom: 200px;
 $global-footer-desktop-logo-section-height: 60px;
 $global-footer-desktop-logo-height: 24px;
@@ -144,7 +144,7 @@ $global-footer-social-icon-spacing: 20px;
 	font-weight: bold;
 	justify-content: space-between;
 	margin: 0;
-	padding: 8px 0 30px 0;
+	padding: 8px 0 36px 0;
 	text-decoration: none;
 
 	&.is-games {
