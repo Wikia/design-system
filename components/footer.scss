@@ -303,13 +303,10 @@ $global-footer-section-line-width: 4px;
 	}
 
 	// left (Fandom) and right (Wikia) sections
-	.global-footer__fandom-sections,
-	.global-footer__wikia-sections {
-		> div,
-		> ul {
-			width: 100%;
-			margin: 0;
-		}
+	.global-footer__fandom-section,
+	.global-footer__wikia-section {
+		margin: 0;
+		width: 100%;
 	}
 
 	// items in Wikia section
