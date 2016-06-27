@@ -187,6 +187,10 @@
   .global-footer__fandom-header,
   .global-footer__wikia-header {
     margin: 20px 0; }
+  .global-footer__social-icon {
+    height: 42px;
+    margin-right: 10px;
+    width: 42px; }
   .global-footer__app-badge {
     margin-right: 25px; }
   .global-footer__fandom-sections > div,
@@ -210,11 +214,7 @@
   .global-footer__wikia-section.is-community-apps {
     order: 4; }
   .global-footer__wikia-section.is-advertise {
-    order: 1; }
-  .global-footer__social-icon {
-    height: 42px;
-    margin-right: 10px;
-    width: 42px; } }
+    order: 1; } }
 
 @media only screen and (min-width: 1024px) {
   .global-footer__main,
