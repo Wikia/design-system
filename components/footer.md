@@ -92,8 +92,8 @@
 					<h3 class="global-footer__section-header">Community Apps</h3>
 					<span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
 					<div class="global-footer__app-badges">
-						<a href="#" class="global-footer__app-badge-appstore" alt="App Store"></a>
-						<a href="#" class="global-footer__app-badge-googleplay" alt="Google Play"></a>
+						<a href="#" class="global-footer__app-badge is-appstore" alt="App Store"></a>
+						<a href="#" class="global-footer__app-badge is-googleplay" alt="Google Play"></a>
 					</div>
 				</div>
 				<div class="global-footer__wikia-section is-advertise">

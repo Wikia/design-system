@@ -177,27 +177,23 @@ $global-footer-social-icon-spacing: 20px;
 	display: flex;
 }
 
-%global-footer__app-badge {
+.global-footer__app-badge {
 	background-position: center;
 	background-repeat: no-repeat;
 	display: block;
 	line-height: 1;
 	height: 53px;
 	width: 119px;
-}
 
-.global-footer__app-badge-appstore {
-	@extend %global-footer__app-badge;
+	&.is-appstore {
+		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
+		background-image: url(../bower_components/design-system/assets/company/store-appstore.svg);
+	}
 
-	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-	background-image: url(../bower_components/design-system/assets/company/store-appstore.svg);
-}
-
-.global-footer__app-badge-googleplay {
-	@extend %global-footer__app-badge;
-
-	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-	background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg);
+	&.is-googleplay {
+		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
+		background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg);
+	}
 }
 
 //Follow us section

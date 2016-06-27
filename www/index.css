@@ -125,19 +125,17 @@
 .global-footer__app-badges {
   display: flex; }
 
-.global-footer__app-badge-appstore, .global-footer__app-badge-googleplay {
+.global-footer__app-badge {
   background-position: center;
   background-repeat: no-repeat;
   display: block;
   line-height: 1;
   height: 53px;
   width: 119px; }
-
-.global-footer__app-badge-appstore {
-  background-image: url(../bower_components/design-system/assets/company/store-appstore.svg); }
-
-.global-footer__app-badge-googleplay {
-  background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg); }
+  .global-footer__app-badge.is-appstore {
+    background-image: url(../bower_components/design-system/assets/company/store-appstore.svg); }
+  .global-footer__app-badge.is-googleplay {
+    background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg); }
 
 .global-footer__social-icons-list {
   display: flex;
