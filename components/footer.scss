@@ -48,12 +48,24 @@ $global-footer-social-icon-spacing: 20px;
 .global-footer__license {
 	align-items: center;
 	color: $color-white;
-	background: $color-night-sky;
+	background: rgba($color-night-sky, .5);
 	display: flex;
 	font-size: 12px;
 	justify-content: center;
 	min-height: 50px;
+	opacity: .5;
 	padding: 16px 20px;
+
+	/**
+	 * Note: The following rule is an exception on DS Class Naming because whole
+	 * text is user-supplied and we don't insert class names there.
+	 */
+	a,
+	a:visited,
+	a:hover {
+		color: $color-light-blue;
+		text-decoration: none;
+	}
 }
 
 .global-footer__small-wikia-logo,
