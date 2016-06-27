@@ -21,12 +21,21 @@
 .global-footer__license {
   align-items: center;
   color: #fff;
-  background: #262626;
+  background: rgba(38, 38, 38, 0.5);
   display: flex;
   font-size: 12px;
   justify-content: center;
   min-height: 50px;
-  padding: 16px 20px; }
+  padding: 16px 20px;
+  /**
+	 * Note: The following rule is an exception on DS Class Naming because whole
+	 * text is user-supplied and we don't insert class names there.
+	 */ }
+  .global-footer__license a,
+  .global-footer__license a:visited,
+  .global-footer__license a:hover {
+    color: #1a5eb8;
+    text-decoration: none; }
 
 .global-footer__small-wikia-logo,
 .global-footer__fandom-logo {
@@ -86,7 +95,7 @@
   padding: 0; }
 
 .global-footer__vertical-arrow {
-  background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
+  background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat center;
   background-size: 18px;
   display: inline-block;
   height: 24px;
@@ -209,27 +218,27 @@
     margin: 0 auto;
     width: 1060px; }
   .global-footer__main {
-    height: 550px; }
+    height: 515px; }
   .global-footer__fandom-header,
   .global-footer__wikia-header {
     height: 60px; }
   .global-footer__fandom-header {
     width: 25%; }
   .global-footer__fandom-sections {
-    height: 450px;
+    height: 415px;
     width: 25%; }
   .global-footer__wikia-header {
     width: 75%; }
   .global-footer__wikia-sections {
     flex-direction: column;
-    height: 450px;
+    height: 415px;
     width: 75%; }
   .global-footer__app-badges {
     flex-direction: column; }
   .global-footer__fandom-section {
     width: 200px; }
   .global-footer__wikia-section.is-overview {
-    height: 250px;
+    height: 215px;
     order: 1;
     width: 160px; }
   .global-footer__wikia-section.is-overview-extended {
@@ -237,7 +246,7 @@
     order: 2;
     width: 160px; }
   .global-footer__wikia-section.is-community {
-    height: 250px;
+    height: 215px;
     order: 3;
     width: 290px; }
   .global-footer__wikia-section.is-community-extended {
@@ -246,7 +255,7 @@
     order: 4;
     width: 290px; }
   .global-footer__wikia-section.is-community-apps {
-    height: 250px;
+    height: 215px;
     order: 5;
     width: 200px; }
   .global-footer__wikia-section.is-advertise {
