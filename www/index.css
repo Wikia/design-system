@@ -19,17 +19,20 @@
   margin: 0; }
 
 .global-footer__license {
+  align-items: center;
   color: #fff;
   background: #262626;
   display: flex;
-  align-items: center;
+  font-size: 12px;
   justify-content: center;
   min-height: 50px;
   padding: 16px 20px; }
 
 .global-footer__small-wikia-logo,
 .global-footer__fandom-logo {
-  height: 24px; }
+  height: 48px;
+  padding-bottom: 12px;
+  padding-top: 12px; }
 
 .global-footer__home-of-fandom {
   display: inline-block; }

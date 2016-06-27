@@ -7,7 +7,7 @@ $global-footer-desktop-row-height-header: 100px;
 $global-footer-desktop-row-height-top: 250px;
 $global-footer-desktop-row-height-bottom: 200px;
 $global-footer-desktop-logo-section-height: 60px;
-$global-footer-desktop-logo-height: 24px;
+$global-footer-desktop-logo-height: 48px;
 $global-footer-desktop-height-sections: $global-footer-desktop-row-height-top + $global-footer-desktop-row-height-bottom;
 $global-footer-desktop-height: $global-footer-desktop-row-height-header + $global-footer-desktop-height-sections;
 $global-footer-section-line-width: 4px;
@@ -60,6 +60,10 @@ $global-footer-social-icon-spacing: 20px;
 .global-footer__fandom-logo
 {
 	height: $global-footer-desktop-logo-height;
+	padding: {
+		bottom: 12px;
+		top: 12px;
+	}
 }
 
 // "Home of Fandom" subtitle
