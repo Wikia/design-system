@@ -4,7 +4,7 @@ $global-footer-desktop-width: 1060px;
 $global-footer-desktop-column-fandom: 25%;
 $global-footer-desktop-column-wikia: 75%;
 $global-footer-desktop-row-height-header: 100px;
-$global-footer-desktop-row-height-top: 250px;
+$global-footer-desktop-row-height-top: 215px;
 $global-footer-desktop-row-height-bottom: 200px;
 $global-footer-desktop-logo-section-height: 60px;
 $global-footer-desktop-logo-height: 24px;
@@ -138,7 +138,7 @@ $global-footer-social-icon-spacing: 20px;
 
 .global-footer__vertical-arrow {
 	//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-	background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat left top;
+	background: url(../bower_components/design-system/assets/icons/arrow.svg) no-repeat center;
 	background-size: 18px;
 	display: inline-block;
 	height: $global-footer-icon-size;
