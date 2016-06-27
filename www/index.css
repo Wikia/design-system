@@ -18,7 +18,7 @@
   justify-content: center;
   margin: 0; }
 
-.global-footer__license {
+.global-footer__licensing-and-vertical {
   align-items: center;
   color: #fff;
   background: rgba(38, 38, 38, 0.5);
@@ -31,9 +31,9 @@
 	 * Note: The following rule is an exception on DS Class Naming because whole
 	 * text is user-supplied and we don't insert class names there.
 	 */ }
-  .global-footer__license a,
-  .global-footer__license a:visited,
-  .global-footer__license a:hover {
+  .global-footer__licensing-and-vertical a,
+  .global-footer__licensing-and-vertical a:visited,
+  .global-footer__licensing-and-vertical a:hover {
     color: #1a5eb8;
     text-decoration: none; }
 
@@ -90,7 +90,7 @@
   line-height: 2em;
   text-decoration: none; }
 
-.global-footer__fandom-section.has-verticals {
+.global-footer__fandom-section.is-fandom {
   border: 0;
   padding: 0; }
 
@@ -211,17 +211,17 @@
   .global-footer__wikia-section {
     margin: 0;
     width: 100%; }
-  .global-footer__wikia-section.is-overview {
+  .global-footer__wikia-section.is-company-overview {
     order: 5;
     width: 50% !important; }
-  .global-footer__wikia-section.is-overview > .global-footer__section-header {
+  .global-footer__wikia-section.is-company-overview > .global-footer__section-header {
     display: none; }
-  .global-footer__wikia-section.is-overview-extended {
+  .global-footer__wikia-section.is-site-overview {
     order: 6;
     width: 50% !important; }
   .global-footer__wikia-section.is-community {
     order: 2; }
-  .global-footer__wikia-section.is-community-extended {
+  .global-footer__wikia-section.is-start-wikia {
     display: none; }
   .global-footer__wikia-section.is-community-apps {
     order: 4; }
@@ -253,11 +253,11 @@
     flex-direction: column; }
   .global-footer__fandom-section {
     width: 200px; }
-  .global-footer__wikia-section.is-overview {
+  .global-footer__wikia-section.is-company-overview {
     height: 215px;
     order: 1;
     width: 160px; }
-  .global-footer__wikia-section.is-overview-extended {
+  .global-footer__wikia-section.is-site-overview {
     height: 200px;
     order: 2;
     width: 160px; }
@@ -265,7 +265,7 @@
     height: 215px;
     order: 3;
     width: 290px; }
-  .global-footer__wikia-section.is-community-extended {
+  .global-footer__wikia-section.is-start-wikia {
     height: 200px;
     display: block;
     order: 4;

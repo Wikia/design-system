@@ -13,7 +13,7 @@
 				</a>
 			</h2>
 			<div class="global-footer__fandom-sections">
-				<section class="global-footer__fandom-section has-verticals">
+				<section class="global-footer__fandom-section is-fandom">
 					<ul>
 						<li>
 							<a href="#" class="global-footer__vertical is-games">
@@ -56,7 +56,7 @@
 				<img class="global-footer__small-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" />
 			</h2>
 			<div class="global-footer__wikia-sections">
-				<section class="global-footer__wikia-section is-overview">
+				<section class="global-footer__wikia-section is-company-overview">
 					<h3 class="global-footer__section-header">Overview</h3>
 					<ul>
 						<li><a class="global-footer__link" href="#">About</a></li>
@@ -66,7 +66,7 @@
 						<li><a class="global-footer__link" href="#">Wikia Gives Back</a></li>
 					</ul>
 				</section>
-				<section class="global-footer__wikia-section is-overview-extended">
+				<section class="global-footer__wikia-section is-site-overview">
 					<ul>
 						<li><a class="global-footer__link" href="#">Terms Of Use</a></li>
 						<li><a class="global-footer__link" href="#">Privacy Policy</a></li>
@@ -84,7 +84,7 @@
 						<li><a class="global-footer__link" href="#">Help</a></li>
 					</ul>
 				</section>
-				<section class="global-footer__wikia-section is-community-extended">
+				<section class="global-footer__wikia-section is-start-wikia">
 					<div class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</div>
 					<a href="#" class="global-footer__start-a-wikia">Start a wikia</a>
 				</section>
@@ -105,7 +105,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="global-footer__license">
+		<div class="global-footer__licensing-and-vertical">
 			<span>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</span>
 		</div>
 	</footer>
