@@ -85,7 +85,7 @@
 					</ul>
 				</section>
 				<section class="global-footer__wikia-section is-community-extended">
-					<span class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
+					<div class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</div>
 					<a href="#" class="global-footer__start-a-wikia">Start a wikia</a>
 				</section>
 				<section class="global-footer__wikia-section is-community-apps">
