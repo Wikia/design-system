@@ -1,5 +1,4 @@
 $global-footer-icon-size: 24px;
-$global-footer-font-size: 14px;
 $global-footer-desktop-width: 1060px;
 $global-footer-desktop-column-fandom: 25%;
 $global-footer-desktop-column-wikia: 75%;
@@ -7,12 +6,9 @@ $global-footer-desktop-row-height-header: 100px;
 $global-footer-desktop-row-height-top: 215px;
 $global-footer-desktop-row-height-bottom: 200px;
 $global-footer-desktop-logo-section-height: 60px;
-$global-footer-desktop-logo-height: 48px;
 $global-footer-desktop-height-sections: $global-footer-desktop-row-height-top + $global-footer-desktop-row-height-bottom;
 $global-footer-desktop-height: $global-footer-desktop-row-height-header + $global-footer-desktop-height-sections;
 $global-footer-section-line-width: 4px;
-$global-footer-social-icon-size: $global-footer-icon-size;
-$global-footer-social-icon-spacing: 20px;
 
 
 // reset and set some defaults (that should be set in DS)
@@ -50,7 +46,7 @@ $global-footer-social-icon-spacing: 20px;
 	color: $color-white;
 	background: rgba($color-night-sky, .5);
 	display: flex;
-	font-size: 12px;
+	font-size: $typescale-size-minus-2;
 	justify-content: center;
 	min-height: 50px;
 	padding: 16px 20px;
@@ -68,9 +64,8 @@ $global-footer-social-icon-spacing: 20px;
 }
 
 .global-footer__small-wikia-logo,
-.global-footer__fandom-logo
-{
-	height: $global-footer-desktop-logo-height;
+.global-footer__fandom-logo {
+	height: 48px;
 	padding: {
 		bottom: 12px;
 		top: 12px;
@@ -113,7 +108,7 @@ $global-footer-social-icon-spacing: 20px;
 .global-footer__link:active,
 .global-footer__link:visited {
 	color: $color-blue-gray;
-	font-size: $global-footer-font-size;
+	font-size: $typescale-size-minus-1;
 	font-weight: normal;
 	line-height: 2em;
 	text-decoration: none;
@@ -126,14 +121,14 @@ $global-footer-social-icon-spacing: 20px;
 
 .global-footer__section-header {
 	color: $color-white;
-	font-size: 18px;
+	font-size: $typescale-size-plus-1;
 	font-weight: bold;
 	margin: 0 0 10px 0;
 	padding: 0;
 }
 .global-footer__section-description {
 	color: $color-white;
-	font-size: $global-footer-font-size;
+	font-size: $typescale-size-minus-1;
 	line-height: $line-height;
 	margin: 0;
 	padding: 0;
@@ -156,7 +151,7 @@ $global-footer-social-icon-spacing: 20px;
 	border-top: $global-footer-section-line-width solid $color-slate-gray;
 	color: $color-white;
 	display: flex;
-	font-size: 18px;
+	font-size: $typescale-size-plus-1;
 	font-weight: bold;
 	justify-content: space-between;
 	margin: 0;
@@ -180,7 +175,7 @@ $global-footer-social-icon-spacing: 20px;
 	border: solid 1px $color-blue-gray;
 	color: $color-blue-gray;
 	display: inline-block;
-	font-size: 12px;
+	font-size: $typescale-size-minus-2;
 	font-weight: bold;
 	letter-spacing: 0.3px;
 	margin-top: 13px;
@@ -220,11 +215,11 @@ $global-footer-social-icon-spacing: 20px;
 
 .global-footer__social-icon {
 	background: no-repeat center;
-	background-size: $global-footer-social-icon-size;
+	background-size: $global-footer-icon-size;
 	display: inline-block;
-	height: $global-footer-social-icon-size;
-	margin-right: $global-footer-social-icon-spacing;
-	width: $global-footer-social-icon-size;
+	height: $global-footer-icon-size;
+	margin-right: 20px;
+	width: $global-footer-icon-size;
 
 	&.is-facebook {
 		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
