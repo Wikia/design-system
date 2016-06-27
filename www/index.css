@@ -21,7 +21,7 @@
 .global-footer__license {
   align-items: center;
   color: #fff;
-  background: #262626;
+  background: rgba(38, 38, 38, 0.5);
   display: flex;
   font-size: 12px;
   justify-content: center;
