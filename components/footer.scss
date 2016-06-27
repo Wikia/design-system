@@ -1,5 +1,5 @@
 $global-footer-icon-size: 24px;
-
+$global-footer-font-size: 14px;
 $global-footer-desktop-width: 1060px;
 $global-footer-desktop-column-fandom: 25%;
 $global-footer-desktop-column-wikia: 75%;
@@ -46,10 +46,11 @@ $global-footer-social-icon-spacing: 20px;
 }
 
 .global-footer__license {
+	align-items: center;
 	color: $color-white;
 	background: $color-night-sky;
 	display: flex;
-	align-items: center;
+	font-size: 12px;
 	justify-content: center;
 	min-height: 50px;
 	padding: 16px 20px;
@@ -97,7 +98,7 @@ $global-footer-social-icon-spacing: 20px;
 .global-footer__link:active,
 .global-footer__link:visited {
 	color: $color-blue-gray;
-	font-size: 16px;
+	font-size: $global-footer-font-size;
 	font-weight: normal;
 	line-height: 2em;
 	text-decoration: none;
@@ -117,7 +118,7 @@ $global-footer-social-icon-spacing: 20px;
 }
 .global-footer__section-description {
 	color: $color-white;
-	font-size: 16px;
+	font-size: $global-footer-font-size;
 	line-height: $line-height;
 	margin: 0;
 	padding: 0;
