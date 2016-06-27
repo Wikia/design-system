@@ -44,7 +44,16 @@
   padding-top: 12px; }
 
 .global-footer__home-of-fandom {
-  display: inline-block; }
+  border-bottom: 1px solid #c5ced9;
+  border-top: 1px solid #c5ced9;
+  color: #7f90a1;
+  display: block;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 0;
+  text-transform: uppercase;
+  white-space: nowrap; }
 
 .global-footer__main {
   display: flex;
