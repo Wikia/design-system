@@ -210,7 +210,11 @@
   .global-footer__wikia-section.is-community-apps {
     order: 4; }
   .global-footer__wikia-section.is-advertise {
-    order: 1; } }
+    order: 1; }
+  .global-footer__social-icon {
+    height: 42px;
+    margin-right: 10px;
+    width: 42px; } }
 
 @media only screen and (min-width: 1024px) {
   .global-footer__main,
