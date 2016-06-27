@@ -175,10 +175,8 @@
   .global-footer__fandom-header,
   .global-footer__wikia-header {
     margin: 20px 0; }
-  .global-footer__app-badges {
-    justify-content: space-between; }
-  .global-footer__app-badges > a + a {
-    margin-left: 25px; }
+  .global-footer__app-badge {
+    margin-right: 25px; }
   .global-footer__fandom-sections > div,
   .global-footer__fandom-sections > ul,
   .global-footer__wikia-sections > div,
