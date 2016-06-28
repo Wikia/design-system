@@ -10,7 +10,7 @@
 				</a>
 			</h2>
 			<div class="global-footer__fandom-sections">
-				<section class="global-footer__fandom-section is-fandom">
+				<section class="global-footer__fandom-section is-fandom-overview">
 					<ul>
 						<li>
 							<a href="#" class="global-footer__vertical is-games">
@@ -138,7 +138,7 @@
 		</h2>
 		<div class="global-footer__main">
 			<div class="global-footer__fandom-sections">
-				<section class="global-footer__fandom-section is-fandom">
+				<section class="global-footer__fandom-section is-fandom-overview">
 					<ul>
 						<li>
 							<a href="#" class="global-footer__vertical is-games">
@@ -226,7 +226,7 @@
 						<li><a class="global-footer__link" href="#">Help</a></li>
 					</ul>
 				</section>
-				<section class="global-footer__wikia-section is-start-wikia">
+				<section class="global-footer__wikia-section is-create-wiki">
 					<div class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</div>
 					<a href="#" class="global-footer__start-a-wikia">Start a wikia</a>
 				</section>
