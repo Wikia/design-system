@@ -43,27 +43,27 @@
 					<ul class="global-footer__social-icons-list">
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/facebook-default.svg" />
+								<img src="bower_components/design-system/assets/icons/facebook-default.svg" alt="Facebook" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/twitter-default.svg" />
+								<img src="bower_components/design-system/assets/icons/twitter-default.svg" alt="Twitter" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/reddit-default.svg" />
+								<img src="bower_components/design-system/assets/icons/reddit-default.svg" alt="Reddit" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/youtube-default.svg" />
+								<img src="bower_components/design-system/assets/icons/youtube-default.svg" alt="Youtube" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/instagram-default.svg" />
+								<img src="bower_components/design-system/assets/icons/instagram-default.svg" alt="Instagram" />
 							</a>
 						</li>
 					</ul>
@@ -109,8 +109,12 @@
 					<h3 class="global-footer__section-header">Community Apps</h3>
 					<span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
 					<div class="global-footer__app-badges">
-						<a href="#" class="global-footer__app-badge is-appstore" alt="App Store"></a>
-						<a href="#" class="global-footer__app-badge is-googleplay" alt="Google Play"></a>
+						<a href="#" class="global-footer__app-badge">
+							<img src="bower_components/design-system/assets/company/store-appstore.svg" alt="App Store" />
+						</a>
+						<a href="#" class="global-footer__app-badge">
+							<img src="bower_components/design-system/assets/company/store-googleplay.svg" alt="Google Play" />
+						</a>
 					</div>
 				</section>
 				<div class="global-footer__wikia-section is-advertise">
@@ -167,27 +171,27 @@
 					<ul class="global-footer__social-icons-list">
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/facebook-default.svg" />
+								<img src="bower_components/design-system/assets/icons/facebook-default.svg" alt="Facebook" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/twitter-default.svg" />
+								<img src="bower_components/design-system/assets/icons/twitter-default.svg" alt="Twitter" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/reddit-default.svg" />
+								<img src="bower_components/design-system/assets/icons/reddit-default.svg" alt="Reddit" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/youtube-default.svg" />
+								<img src="bower_components/design-system/assets/icons/youtube-default.svg" alt="Youtube" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__social-icon">
-								<img src="bower_components/design-system/assets/icons/instagram-default.svg" />
+								<img src="bower_components/design-system/assets/icons/instagram-default.svg" alt="Instagram" />
 							</a>
 						</li>
 					</ul>
@@ -230,8 +234,12 @@
 					<h3 class="global-footer__section-header">Community Apps</h3>
 					<span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
 					<div class="global-footer__app-badges">
-						<a href="#" class="global-footer__app-badge is-appstore" alt="App Store"></a>
-						<a href="#" class="global-footer__app-badge is-googleplay" alt="Google Play"></a>
+						<a href="#" class="global-footer__app-badge">
+							<img src="bower_components/design-system/assets/company/store-appstore.svg" alt="App Store" />
+						</a>
+						<a href="#" class="global-footer__app-badge">
+							<img src="bower_components/design-system/assets/company/store-googleplay.svg" alt="Google Play" />
+						</a>
 					</div>
 				</section>
 				<div class="global-footer__wikia-section is-advertise">

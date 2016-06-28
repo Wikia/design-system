@@ -211,22 +211,9 @@ $global-footer-section-line-width: 4px;
 }
 
 .global-footer__app-badge {
-	background-position: center;
-	background-repeat: no-repeat;
 	display: block;
-	line-height: 1;
-	height: 53px;
+	margin: 9px 0;
 	width: 119px;
-
-	&.is-appstore {
-		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-		background-image: url(../bower_components/design-system/assets/company/store-appstore.svg);
-	}
-
-	&.is-googleplay {
-		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-		background-image: url(../bower_components/design-system/assets/company/store-googleplay.svg);
-	}
 }
 
 //Follow us section
