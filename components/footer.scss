@@ -251,7 +251,7 @@ $global-footer-section-line-width: 4px;
 	// items in Wikia section
 	.global-footer__wikia-section.is-company-overview {
 		order: 5;
-		width: 50% !important;
+		width: 50%;
 	}
 
 	.global-footer__wikia-section.is-company-overview > .global-footer__section-header {
@@ -260,7 +260,7 @@ $global-footer-section-line-width: 4px;
 
 	.global-footer__wikia-section.is-site-overview {
 		order: 6;
-		width: 50% !important;
+		width: 50%;
 	}
 
 	.global-footer__wikia-section.is-community {
