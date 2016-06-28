@@ -178,26 +178,6 @@
   height: 24px;
   margin-right: 20px;
   width: 24px; }
-  .global-footer__social-icon.is-facebook {
-    background-image: url(../bower_components/design-system/assets/icons/facebook-default.svg); }
-    .global-footer__social-icon.is-facebook:hover {
-      background-image: url(../bower_components/design-system/assets/icons/facebook-active.svg); }
-  .global-footer__social-icon.is-twitter {
-    background-image: url(../bower_components/design-system/assets/icons/twitter-default.svg); }
-    .global-footer__social-icon.is-twitter:hover {
-      background-image: url(../bower_components/design-system/assets/icons/twitter-active.svg); }
-  .global-footer__social-icon.is-reddit {
-    background-image: url(../bower_components/design-system/assets/icons/reddit-default.svg); }
-    .global-footer__social-icon.is-reddit:hover {
-      background-image: url(../bower_components/design-system/assets/icons/reddit-active.svg); }
-  .global-footer__social-icon.is-youtube {
-    background-image: url(../bower_components/design-system/assets/icons/youtube-default.svg); }
-    .global-footer__social-icon.is-youtube:hover {
-      background-image: url(../bower_components/design-system/assets/icons/youtube-active.svg); }
-  .global-footer__social-icon.is-instagram {
-    background-image: url(../bower_components/design-system/assets/icons/instagram-default.svg); }
-    .global-footer__social-icon.is-instagram:hover {
-      background-image: url(../bower_components/design-system/assets/icons/instagram-active.svg); }
 
 @media screen and (max-width: 1023px) {
   .global-footer__main {

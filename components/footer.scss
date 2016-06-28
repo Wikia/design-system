@@ -242,51 +242,6 @@ $global-footer-section-line-width: 4px;
 	height: $global-footer-icon-size;
 	margin-right: 20px;
 	width: $global-footer-icon-size;
-
-	&.is-facebook {
-		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-		background-image: url(../bower_components/design-system/assets/icons/facebook-default.svg);
-
-		&:hover {
-			background-image: url(../bower_components/design-system/assets/icons/facebook-active.svg);
-		}
-	}
-
-	&.is-twitter {
-		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-		background-image: url(../bower_components/design-system/assets/icons/twitter-default.svg);
-
-		&:hover {
-			background-image: url(../bower_components/design-system/assets/icons/twitter-active.svg);
-		}
-	}
-
-	&.is-reddit {
-		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-		background-image: url(../bower_components/design-system/assets/icons/reddit-default.svg);
-
-		&:hover {
-			background-image: url(../bower_components/design-system/assets/icons/reddit-active.svg);
-		}
-	}
-
-	&.is-youtube {
-		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-		background-image: url(../bower_components/design-system/assets/icons/youtube-default.svg);
-
-		&:hover {
-			background-image: url(../bower_components/design-system/assets/icons/youtube-active.svg);
-		}
-	}
-
-	&.is-instagram {
-		//@todo this URL solution will be fixed in https://wikia-inc.atlassian.net/browse/DAT-4523
-		background-image: url(../bower_components/design-system/assets/icons/instagram-default.svg);
-
-		&:hover {
-			background-image: url(../bower_components/design-system/assets/icons/instagram-active.svg);
-		}
-	}
 }
 
 @media screen and (max-width:#{$breakpoint-desktop - 1}) {

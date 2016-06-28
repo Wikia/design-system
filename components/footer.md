@@ -41,11 +41,31 @@
 				<section class="global-footer__fandom-section">
 					<h3 class="global-footer__section-header">Follow Us</h3>
 					<ul class="global-footer__social-icons-list">
-						<li><a href="#" class="global-footer__social-icon is-facebook"></a></li>
-						<li><a href="#" class="global-footer__social-icon is-twitter"></a></li>
-						<li><a href="#" class="global-footer__social-icon is-reddit"></a></li>
-						<li><a href="#" class="global-footer__social-icon is-youtube"></a></li>
-						<li><a href="#" class="global-footer__social-icon is-instagram"></a></li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/facebook-default.svg" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/twitter-default.svg" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/reddit-default.svg" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/youtube-default.svg" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/instagram-default.svg" />
+							</a>
+						</li>
 					</ul>
 				</section>
 			</div>
@@ -145,11 +165,31 @@
 				<section class="global-footer__fandom-section">
 					<h3 class="global-footer__section-header">Follow Us</h3>
 					<ul class="global-footer__social-icons-list">
-						<li><a href="#" class="global-footer__social-icon is-facebook"></a></li>
-						<li><a href="#" class="global-footer__social-icon is-twitter"></a></li>
-						<li><a href="#" class="global-footer__social-icon is-reddit"></a></li>
-						<li><a href="#" class="global-footer__social-icon is-youtube"></a></li>
-						<li><a href="#" class="global-footer__social-icon is-instagram"></a></li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/facebook-default.svg" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/twitter-default.svg" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/reddit-default.svg" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/youtube-default.svg" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__social-icon">
+								<img src="bower_components/design-system/assets/icons/instagram-default.svg" />
+							</a>
+						</li>
 					</ul>
 				</section>
 			</div>
