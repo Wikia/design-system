@@ -343,6 +343,11 @@ $global-footer-section-line-width: 4px;
 	.global-footer__wikia-section.is-advertise {
 		order: 1;
 	}
+
+	// on international version mobile hide verticals
+	.global-footer.is-international .global-footer__fandom-section.is-fandom {
+		display: none;
+	}
 }
 
 @media #{$breakpoint-desktop-up} {

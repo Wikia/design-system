@@ -230,7 +230,9 @@
   .global-footer__wikia-section.is-community-apps {
     order: 4; }
   .global-footer__wikia-section.is-advertise {
-    order: 1; } }
+    order: 1; }
+  .global-footer.is-international .global-footer__fandom-section.is-fandom {
+    display: none; } }
 
 @media only screen and (min-width: 1024px) {
   .global-footer__main,

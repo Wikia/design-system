@@ -106,7 +106,7 @@
 			<span>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</span>
 		</div>
 	</footer>
-	<h1>International version<h1>
+	<h1>International version</h1>
 	<footer class="global-footer is-international">
 		<h2 class="global-footer__header">
 			<img class="global-footer__large-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" />
@@ -114,6 +114,34 @@
 		</h2>
 		<div class="global-footer__main">
 			<div class="global-footer__fandom-sections">
+				<section class="global-footer__fandom-section is-fandom">
+					<ul>
+						<li>
+							<a href="#" class="global-footer__vertical is-games">
+								<div>Games</div>
+								<div class="global-footer__vertical-arrow"></div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__vertical is-movies">
+								<div>Movies</div>
+								<div class="global-footer__vertical-arrow"></div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="global-footer__vertical is-tv">
+								<div>TV</div>
+								<div class="global-footer__vertical-arrow"></div>
+							</a>
+						</li>
+						<li>
+							<a class="global-footer__fandom-communities" href="#">
+								<div>Fan Communities</div>
+								<div class="global-footer__vertical-arrow"></div>
+							</a>
+						</li>
+					</ul>
+				</section>
 				<section class="global-footer__fandom-section">
 					<h3 class="global-footer__section-header">Follow Us</h3>
 					<ul class="global-footer__social-icons-list">
