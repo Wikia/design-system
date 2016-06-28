@@ -13,27 +13,27 @@
 				<section class="global-footer__fandom-section is-fandom-overview">
 					<ul>
 						<li>
-							<a href="#" class="global-footer__vertical is-games">
+							<a href="#" class="global-footer__branded is-games">
 								<div>Games</div>
-								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__vertical is-movies">
+							<a href="#" class="global-footer__branded is-movies">
 								<div>Movies</div>
-								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__vertical is-tv">
+							<a href="#" class="global-footer__branded is-tv">
 								<div>TV</div>
-								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
-							<a class="global-footer__fandom-communities" href="#">
+							<a href="#" class="global-footer__branded is-fan-communities">
 								<div>Fan Communities</div>
-								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 					</ul>
@@ -101,7 +101,7 @@
 						<li><a class="global-footer__link" href="#">Help</a></li>
 					</ul>
 				</section>
-				<section class="global-footer__wikia-section is-start-wikia">
+				<section class="global-footer__wikia-section is-create-wiki">
 					<div class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</div>
 					<a href="#" class="global-footer__start-a-wikia">Start a wikia</a>
 				</section>
@@ -141,27 +141,27 @@
 				<section class="global-footer__fandom-section is-fandom-overview">
 					<ul>
 						<li>
-							<a href="#" class="global-footer__vertical is-games">
+							<a href="#" class="global-footer__branded is-games">
 								<div>Games</div>
-								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__vertical is-movies">
+							<a href="#" class="global-footer__branded is-movies">
 								<div>Movies</div>
-								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
-							<a href="#" class="global-footer__vertical is-tv">
+							<a href="#" class="global-footer__branded is-tv">
 								<div>TV</div>
-								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
-							<a class="global-footer__fandom-communities" href="#">
+							<a href="#" class="global-footer__branded is-fan-communities">
 								<div>Fan Communities</div>
-								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 					</ul>

@@ -151,12 +151,11 @@ $global-footer-section-line-width: 4px;
 	padding: 0;
 }
 
-.global-footer__vertical-arrow {
+.global-footer__branded-arrow {
 	transform: rotate(180deg);
 }
 
-.global-footer__fandom-communities,
-.global-footer__vertical {
+.global-footer__branded {
 	align-items: center;
 	border-top: $global-footer-section-line-width solid $color-slate-gray;
 	color: $color-white;
@@ -168,9 +167,6 @@ $global-footer-section-line-width: 4px;
 	padding: 8px 0 36px 0;
 	text-decoration: none;
 
-}
-
-.global-footer__vertical {
 	&.is-games {
 		border-color: $color-games;
 	}
@@ -282,7 +278,7 @@ $global-footer-section-line-width: 4px;
 		order: 1;
 	}
 
-	// on international version mobile hide verticals
+	// on international version mobile hide branded links
 	.global-footer.is-international .global-footer__fandom-section.is-fandom-overview {
 		display: none;
 	}
