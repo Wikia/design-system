@@ -232,7 +232,7 @@
 				</section>
 				<section class="global-footer__wikia-section is-community-apps">
 					<h3 class="global-footer__section-header">Community Apps</h3>
-					<span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
+					<div class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</div>
 					<div class="global-footer__app-badges">
 						<a href="#" class="global-footer__app-badge">
 							<img src="bower_components/design-system/assets/company/store-appstore.svg" alt="App Store" />
