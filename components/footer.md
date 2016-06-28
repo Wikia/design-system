@@ -15,25 +15,25 @@
 						<li>
 							<a href="#" class="global-footer__vertical is-games">
 								<div>Games</div>
-								<div class="global-footer__vertical-arrow"></div>
+								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__vertical is-movies">
 								<div>Movies</div>
-								<div class="global-footer__vertical-arrow"></div>
+								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__vertical is-tv">
 								<div>TV</div>
-								<div class="global-footer__vertical-arrow"></div>
+								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
 							<a class="global-footer__fandom-communities" href="#">
 								<div>Fan Communities</div>
-								<div class="global-footer__vertical-arrow"></div>
+								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 					</ul>
@@ -143,25 +143,25 @@
 						<li>
 							<a href="#" class="global-footer__vertical is-games">
 								<div>Games</div>
-								<div class="global-footer__vertical-arrow"></div>
+								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__vertical is-movies">
 								<div>Movies</div>
-								<div class="global-footer__vertical-arrow"></div>
+								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__vertical is-tv">
 								<div>TV</div>
-								<div class="global-footer__vertical-arrow"></div>
+								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 						<li>
 							<a class="global-footer__fandom-communities" href="#">
 								<div>Fan Communities</div>
-								<div class="global-footer__vertical-arrow"></div>
+								<img class="global-footer__vertical-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
 							</a>
 						</li>
 					</ul>
