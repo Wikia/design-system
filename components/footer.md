@@ -6,7 +6,7 @@
 		<div class="global-footer__main">
 			<h2 class="global-footer__fandom-header">
 				<a href="#">
-					<img class="global-footer__fandom-logo" src="bower_components/design-system/assets/company/logo-fandom.svg" />
+					<img class="global-footer__fandom-logo" src="bower_components/design-system/assets/company/logo-fandom.svg" alt="Fandom" />
 				</a>
 			</h2>
 			<div class="global-footer__fandom-sections">
@@ -70,7 +70,7 @@
 				</section>
 			</div>
 			<h2 class="global-footer__wikia-header">
-				<img class="global-footer__small-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" />
+				<img class="global-footer__small-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" alt="Wikia"  />
 			</h2>
 			<div class="global-footer__wikia-sections">
 				<section class="global-footer__wikia-section is-company-overview">
@@ -133,7 +133,7 @@
 	<h1>International version</h1>
 	<footer class="global-footer is-international">
 		<h2 class="global-footer__header">
-			<img class="global-footer__large-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" />
+			<img class="global-footer__large-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" alt="Wikia"  />
 			<span class="global-footer__home-of-fandom">The Home Of Fandom</span>
 		</h2>
 		<div class="global-footer__main">
