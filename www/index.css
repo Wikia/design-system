@@ -129,31 +129,33 @@
   .global-footer__branded.is-tv {
     border-color: #00b7e0; }
 
-.global-footer__start-a-wikia {
+.global-footer__link.is-create-wiki {
   border: solid 1px #c5ced9;
   color: #c5ced9;
   display: inline-block;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.3px;
+  line-height: normal;
   margin-top: 13px;
   padding: 16px 18px;
   text-decoration: none;
   text-transform: uppercase; }
 
-.global-footer__app-badges {
+.global-footer__links.is-community-apps {
   display: flex; }
 
-.global-footer__app-badge {
+.global-footer__link.is-community-apps {
   display: block;
+  line-height: normal;
   margin: 9px 0;
   width: 119px; }
 
-.global-footer__social-icons-list {
+.global-footer__links.is-follow-us {
   display: flex;
   flex-wrap: nowrap; }
 
-.global-footer__social-icon {
+.global-footer__link.is-follow-us {
   background: no-repeat center;
   background-size: 24px;
   display: inline-block;
@@ -167,11 +169,11 @@
   .global-footer__fandom-header,
   .global-footer__wikia-header {
     margin: 20px 0; }
-  .global-footer__social-icon {
+  .global-footer__link.is-follow-us {
     height: 42px;
     margin-right: 10px;
     width: 42px; }
-  .global-footer__app-badge {
+  .global-footer__link.is-community-apps {
     margin-right: 25px; }
   .global-footer__fandom-section,
   .global-footer__wikia-section {
@@ -220,7 +222,7 @@
     flex-direction: column;
     height: 355px;
     width: 75%; }
-  .global-footer__app-badges {
+  .global-footer__links.is-community-apps {
     flex-direction: column; }
   .global-footer__fandom-section {
     width: 200px; }
