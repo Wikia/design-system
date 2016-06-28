@@ -161,6 +161,7 @@ $global-footer-section-line-width: 4px;
 	width: $global-footer-icon-size;
 }
 
+.global-footer__fandom-communities,
 .global-footer__vertical {
 	align-items: center;
 	border-top: $global-footer-section-line-width solid $color-slate-gray;
@@ -173,6 +174,9 @@ $global-footer-section-line-width: 4px;
 	padding: 8px 0 36px 0;
 	text-decoration: none;
 
+}
+
+.global-footer__vertical {
 	&.is-games {
 		border-color: $color-games;
 	}

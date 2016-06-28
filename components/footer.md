@@ -34,7 +34,7 @@
 							</a>
 						</li>
 						<li>
-							<a class="global-footer__vertical" href="#">
+							<a class="global-footer__fandom-communities" href="#">
 								<div>Fan Communities</div>
 								<div class="global-footer__vertical-arrow"></div>
 							</a>

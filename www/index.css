@@ -118,6 +118,7 @@
   transform: rotate(180deg);
   width: 24px; }
 
+.global-footer__fandom-communities,
 .global-footer__vertical {
   align-items: center;
   border-top: 4px solid #656e78;
@@ -129,12 +130,15 @@
   margin: 0;
   padding: 8px 0 36px 0;
   text-decoration: none; }
-  .global-footer__vertical.is-games {
-    border-color: #94d11f; }
-  .global-footer__vertical.is-movies {
-    border-color: #09d3bf; }
-  .global-footer__vertical.is-tv {
-    border-color: #00b7e0; }
+
+.global-footer__vertical.is-games {
+  border-color: #94d11f; }
+
+.global-footer__vertical.is-movies {
+  border-color: #09d3bf; }
+
+.global-footer__vertical.is-tv {
+  border-color: #00b7e0; }
 
 .global-footer__start-a-wikia {
   border: solid 1px #c5ced9;
