@@ -2,6 +2,9 @@ $global-footer-icon-size: 24px;
 $global-footer-desktop-width: 1024px;
 $global-footer-desktop-column-fandom: 25%;
 $global-footer-desktop-column-wikia: 75%;
+$global-footer-desktop-second-column-width: 124px;
+$global-footer-desktop-third-column-width: 290px;
+$global-footer-desktop-fourth-column-width: 200px;
 $global-footer-desktop-row-height-header: 100px;
 $global-footer-desktop-row-height-top: 215px;
 $global-footer-desktop-row-height-bottom: 140px;
@@ -399,39 +402,41 @@ $global-footer-section-line-width: 4px;
 	// items in Wikia section
 	.global-footer__wikia-section.is-company-overview {
 		height: $global-footer-desktop-row-height-top;
+		margin-right: 50px;
 		order: 1;
-		width: 160px;
+		width: $global-footer-desktop-second-column-width;
 	}
 
 	.global-footer__wikia-section.is-site-overview {
 		height: $global-footer-desktop-row-height-bottom;
+		margin-right: 50px;
 		order: 2;
-		width: 160px;
+		width: $global-footer-desktop-second-column-width;
 	}
 
 	.global-footer__wikia-section.is-community {
 		height: $global-footer-desktop-row-height-top;
 		order: 3;
-		width: 290px;
+		width: $global-footer-desktop-third-column-width;
 	}
 
 	.global-footer__wikia-section.is-start-wikia {
 		height: $global-footer-desktop-row-height-bottom;
 		display: block;
 		order: 4;
-		width: 290px;
+		width: $global-footer-desktop-third-column-width;
 	}
 
 	.global-footer__wikia-section.is-community-apps {
 		height: $global-footer-desktop-row-height-top;
 		order: 5;
-		width: 200px;
+		width: $global-footer-desktop-fourth-column-width;
 	}
 
 	.global-footer__wikia-section.is-advertise {
 		height: $global-footer-desktop-row-height-bottom;
 		order: 6;
-		width: 200px;
+		width: $global-footer-desktop-fourth-column-width;
 	}
 }
 

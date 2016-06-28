@@ -261,12 +261,14 @@
     width: 200px; }
   .global-footer__wikia-section.is-company-overview {
     height: 215px;
+    margin-right: 50px;
     order: 1;
-    width: 160px; }
+    width: 124px; }
   .global-footer__wikia-section.is-site-overview {
     height: 140px;
+    margin-right: 50px;
     order: 2;
-    width: 160px; }
+    width: 124px; }
   .global-footer__wikia-section.is-community {
     height: 215px;
     order: 3;
