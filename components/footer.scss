@@ -369,6 +369,7 @@ $global-footer-section-line-width: 4px;
 	.global-footer__fandom-header,
 	.global-footer__wikia-header {
 		height: $global-footer-desktop-logo-section-height;
+		margin: 12px 0;
 	}
 
 	.global-footer__fandom-header {
@@ -376,7 +377,7 @@ $global-footer-section-line-width: 4px;
 	}
 
 	.global-footer__fandom-sections {
-		height: $global-footer-desktop-height-sections;
+		height: $global-footer-desktop-height-sections - 10px;
 		width: $global-footer-desktop-column-fandom;
 	}
 

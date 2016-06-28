@@ -243,11 +243,12 @@
     height: 455px; }
   .global-footer__fandom-header,
   .global-footer__wikia-header {
-    height: 60px; }
+    height: 60px;
+    margin: 12px 0; }
   .global-footer__fandom-header {
     width: 25%; }
   .global-footer__fandom-sections {
-    height: 355px;
+    height: 345px;
     width: 25%; }
   .global-footer__wikia-header {
     width: 75%; }
