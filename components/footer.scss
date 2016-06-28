@@ -361,8 +361,12 @@ $global-footer-section-line-width: 4px;
 	}
 
 	// main content
-	.global-footer__main {
+	.global-footer.is-en .global-footer__main {
 		height: $global-footer-desktop-height;
+	}
+
+	.global-footer.is-international .global-footer__main {
+		height: $global-footer-desktop-height - $global-footer-desktop-logo-section-height;
 	}
 
 	// left (Fandom) and right (Wikia) headers and sections

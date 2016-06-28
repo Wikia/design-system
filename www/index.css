@@ -239,8 +239,10 @@
   .global-footer__header {
     margin: 0 auto;
     width: 1024px; }
-  .global-footer__main {
+  .global-footer.is-en .global-footer__main {
     height: 455px; }
+  .global-footer.is-international .global-footer__main {
+    height: 395px; }
   .global-footer__fandom-header,
   .global-footer__wikia-header {
     height: 60px;
