@@ -12,3 +12,9 @@ After you change source files in `styles/` and/or update DS package run `gulp`. 
 
 * `npm install`
 * `bower install`
+
+## Development
+
+You can use `gulp watch` to rebuild project on every change.
+
+If you want your browser to reload the page on every rebuild you have to install [livereload browser extension](http://livereload.com/extensions/). 
