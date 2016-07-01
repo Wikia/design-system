@@ -70,7 +70,7 @@
 				</section>
 			</div>
 			<h2 class="global-footer__wikia-header">
-				<img class="global-footer__small-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" alt="Wikia"  />
+				<img class="global-footer__wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" alt="Wikia"  />
 			</h2>
 			<div class="global-footer__wikia-sections">
 				<section class="global-footer__wikia-section is-company-overview">
@@ -136,11 +136,11 @@
 			<span>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</span>
 		</div>
 	</footer>
-	
+
 	<h1>International version</h1>
 	<footer class="global-footer is-international">
 		<h2 class="global-footer__header">
-			<img class="global-footer__large-wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" alt="Wikia"  />
+			<img class="global-footer__wikia-logo is-large" src="bower_components/design-system/assets/company/logo-wikia.svg" alt="Wikia"  />
 			<span class="global-footer__home-of-fandom">The Home Of Fandom</span>
 		</h2>
 		<div class="global-footer__main">
