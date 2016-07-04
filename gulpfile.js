@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+	inject = require('gulp-inject'),
 	livereload = require('gulp-livereload'),
 	scss = require('gulp-sass'),
 	styledown = require('gulp-styledown'),
@@ -21,7 +22,20 @@ gulp.task('styledown', ['scss'], function () {
 	})).pipe(gulp.dest('./'));
 });
 
-gulp.task('build', ['scss', 'styledown']);
+gulp.task('svg', ['styledown'], function () {
+	gulp.src('./index.html')
+		.pipe(inject(
+			gulp.src('./bower_components/design-system/dist/symbols.svg'), {
+				relative: true,
+				transform: function (filePath, file) {
+					return file.contents.toString('utf8');
+				}
+			}
+		))
+		.pipe(gulp.dest('./'));
+});
+
+gulp.task('build', ['scss', 'styledown', 'svg']);
 
 gulp.task('default', ['build']);
 
