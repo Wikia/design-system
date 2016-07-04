@@ -1,22 +1,4 @@
-[class*='sg-section-footer-'],
-[class^='sg-section-footer-'] {
-    margin: 0 auto !important;
+/* Remove default body margin on the footer element */
+.global-footer {
+	margin: 0 -8px;
 }
-
-[class*='sg-section-footer-'] > .sg-text,
-[class^='sg-section-footer-'] > .sg-text {
-    display: none !important;
-}
-
-[class*='sg-section-footer-'] > .sg-example,
-[class^='sg-section-footer-'] > .sg-example {
-    float: none !important;
-    width: auto !important;
-}
-
-
-[class*='sg-section-footer-'] .sg-canvas > footer,
-[class^='sg-section-footer-'] .sg-canvas > footer {
-    margin: 0 auto !important;
-}
-

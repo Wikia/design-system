@@ -97,19 +97,6 @@ code.sg:first-child {
  * Text element
  */
 
-@media (min-width: 768px) {
-  .sg-text {
-    float: left;
-    width: 26%;
-  }
-
-  .sg-text + .sg-example,
-  .sg-text + .sg-code {
-    float: right;
-    width: 70%;
-  }
-}
-
 .sg-text > :first-child {
   margin-top: 0;
 }
