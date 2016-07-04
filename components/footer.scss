@@ -75,19 +75,19 @@ $global-footer-section-line-width: 4px;
 	}
 }
 
-.global-footer__wikia-logo,
 .global-footer__fandom-logo {
 	height: 48px;
-	padding: {
-		bottom: 12px;
-		top: 12px;
-	}
+	width: 122px;
 }
 
 .global-footer__wikia-logo {
+	height: 48px;
+	width: 67px;
+
 	&.is-large {
 		height: 30px;
 		padding: 0;
+		width: 84px;
 	}
 }
 
@@ -206,6 +206,17 @@ $global-footer-section-line-width: 4px;
 	}
 }
 
+.global-footer__image {
+	&.is-fandom-overview {
+		transform: rotate(180deg);
+	}
+
+	&.is-community-apps {
+		height: 35px;
+		width: 119px;
+	}
+}
+
 .global-footer__fandom-section.is-fandom-overview {
 	border: 0;
 	padding: 0;
@@ -227,10 +238,6 @@ $global-footer-section-line-width: 4px;
 	line-height: $line-height;
 	margin: 0;
 	padding: 0;
-}
-
-.global-footer__branded-arrow {
-	transform: rotate(180deg);
 }
 
 .global-footer__branded {
