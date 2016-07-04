@@ -7,7 +7,7 @@ plugins:
   - cleanupAttrs
   - minifyStyles
   - convertStyleToAttrs
-  - cleanupIDs: true
+  - cleanupIDs: false
   - removeRasterImages
   - removeUselessDefs
   - cleanupNumericValues
