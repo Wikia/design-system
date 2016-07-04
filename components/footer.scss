@@ -265,9 +265,43 @@ $global-footer-section-line-width: 4px;
 		margin: 0 20px;
 	}
 
+	.global-footer__header {
+		height: 80px;
+		margin-bottom: 10px;
+	}
+
 	.global-footer__fandom-header,
 	.global-footer__wikia-header {
 		margin: 20px 0;
+	}
+
+	.global-footer__fandom-logo {
+		height: inherit;
+		padding-top: 0;
+	}
+
+	.global-footer__links {
+		& > li {
+			margin-bottom: 10px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		&.is-follow-us > li,
+		&.is-fandom-overview > li {
+			margin-bottom: 0;
+		}
+
+		&.is-community-apps {
+			margin-top: 5px;
+			margin-bottom: 0;
+		}
+	}
+
+	.global-footer__branded {
+		padding-bottom: 30px;
 	}
 
 	.global-footer__link {
@@ -311,6 +345,10 @@ $global-footer-section-line-width: 4px;
 	// on international version mobile hide branded links
 	.global-footer.is-international .global-footer__fandom-section.is-fandom-overview {
 		display: none;
+	}
+
+	.global-footer__licensing-and-vertical {
+		text-align: center;
 	}
 }
 
