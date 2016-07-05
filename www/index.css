@@ -42,15 +42,17 @@
   .global-footer__licensing-and-vertical a:hover {
     color: #fff; }
 
-.global-footer__wikia-logo,
 .global-footer__fandom-logo {
   height: 48px;
-  padding-bottom: 12px;
-  padding-top: 12px; }
+  width: 122px; }
 
-.global-footer__wikia-logo.is-large {
-  height: 30px;
-  padding: 0; }
+.global-footer__wikia-logo {
+  height: 48px;
+  width: 67px; }
+  .global-footer__wikia-logo.is-large {
+    height: 30px;
+    padding: 0;
+    width: 84px; }
 
 .global-footer__home-of-fandom {
   border-bottom: 1px solid #c5ced9;
@@ -132,6 +134,13 @@
   display: flex;
   flex-wrap: nowrap; }
 
+.global-footer__image.is-fandom-overview {
+  transform: rotate(180deg); }
+
+.global-footer__image.is-community-apps {
+  height: 35px;
+  width: 119px; }
+
 .global-footer__fandom-section.is-fandom-overview {
   border: 0;
   padding: 0; }
@@ -149,9 +158,6 @@
   line-height: 1.5em;
   margin: 0;
   padding: 0; }
-
-.global-footer__branded-arrow {
-  transform: rotate(180deg); }
 
 .global-footer__branded {
   align-items: center;
@@ -687,553 +693,381 @@
 .color-dark-c8 {
   background-color: #e3bd00; }
 
+.icon-preview-card .icon {
+  width: 110px; }
+
+.icon-preview-card .icon-name {
+  padding: 5px; }
+
 /**
  * Standard Set (24x24):
  *
  *     @example
  *     div.icon-preview-group
  *       div.icon-preview-card
- *         div.icon.icon-alert
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-alert")
  *         div.icon-name alert
  *       div.icon-preview-card
- *         div.icon.icon-arrow
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow")
  *         div.icon-name arrow
  *       div.icon-preview-card
- *         div.icon.icon-bell
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bell")
  *         div.icon-name bell
  *       div.icon-preview-card
- *         div.icon.icon-bold
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bold")
  *         div.icon-name bold
  *       div.icon-preview-card
- *         div.icon.icon-bookmark
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bookmark")
  *         div.icon-name bookmark
  *       div.icon-preview-card
- *         div.icon.icon-bullet-list
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bullet-list")
  *         div.icon-name bullet-list
  *       div.icon-preview-card
- *         div.icon.icon-camera
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-camera")
  *         div.icon-name camera
  *       div.icon-preview-card
- *         div.icon.icon-checkbox
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkbox")
  *         div.icon-name checkbox
  *       div.icon-preview-card
- *         div.icon.icon-checkmark
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkmark")
  *         div.icon-name checkmark
  *       div.icon-preview-card
- *         div.icon.icon-checkmark-circle
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkmark-circle")
  *         div.icon-name checkmark-circle
  *       div.icon-preview-card
- *         div.icon.icon-clipboard
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-clipboard")
  *         div.icon-name clipboard
  *       div.icon-preview-card
- *         div.icon.icon-community
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-community")
  *         div.icon-name community
  *       div.icon-preview-card
- *         div.icon.icon-controls
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-controls")
  *         div.icon-name controls
  *       div.icon-preview-card
- *         div.icon.icon-cross
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-cross")
  *         div.icon-name cross
  *       div.icon-preview-card
- *         div.icon.icon-document
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-document")
  *         div.icon-name document
  *       div.icon-preview-card
- *         div.icon.icon-dropdown
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-dropdown")
  *         div.icon-name dropdown
  *       div.icon-preview-card
- *         div.icon.icon-eye
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye")
  *         div.icon-name eye
  *       div.icon-preview-card
- *         div.icon.icon-eye-crossed
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye-crossed")
  *         div.icon-name eye-crossed
  *       div.icon-preview-card
- *         div.icon.icon-flag
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-flag")
  *         div.icon-name flag
  *       div.icon-preview-card
- *         div.icon.icon-gear
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-gear")
  *         div.icon-name gear
  *       div.icon-preview-card
- *         div.icon.icon-gift
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-gift")
  *         div.icon-name gift
  *       div.icon-preview-card
- *         div.icon.icon-grid
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-grid")
  *         div.icon-name grid
  *       div.icon-preview-card
- *         div.icon.icon-house
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-house")
  *         div.icon-name house
  *       div.icon-preview-card
- *         div.icon.icon-image
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-image")
  *         div.icon-name image
  *       div.icon-preview-card
- *         div.icon.icon-image-add
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-image-add")
  *         div.icon-name image-add
  *       div.icon-preview-card
- *         div.icon.icon-image-remove
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-image-remove")
  *         div.icon-name image-remove
  *       div.icon-preview-card
- *         div.icon.icon-information
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-information")
  *         div.icon-name information
  *       div.icon-preview-card
- *         div.icon.icon-italics
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-italics")
  *         div.icon-name italics
  *       div.icon-preview-card
- *         div.icon.icon-link
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-link")
  *         div.icon-name link
  *       div.icon-preview-card
- *         div.icon.icon-loading
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-loading")
  *         div.icon-name loading
  *       div.icon-preview-card
- *         div.icon.icon-lock
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-lock")
  *         div.icon-name lock
  *       div.icon-preview-card
- *         div.icon.icon-magnifying-glass
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-magnifying-glass")
  *         div.icon-name magnifying-glass
  *       div.icon-preview-card
- *         div.icon.icon-mail
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-mail")
  *         div.icon-name mail
  *       div.icon-preview-card
- *         div.icon.icon-map
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-map")
  *         div.icon-name map
  *       div.icon-preview-card
- *         div.icon.icon-menu
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu")
  *         div.icon-name menu
  *       div.icon-preview-card
- *         div.icon.icon-menu-control
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu-control")
  *         div.icon-name menu-control
  *       div.icon-preview-card
- *         div.icon.icon-more
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-more")
  *         div.icon-name more
  *       div.icon-preview-card
- *         div.icon.icon-note
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-note")
  *         div.icon-name note
  *       div.icon-preview-card
- *         div.icon.icon-numbered-list
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-numbered-list")
  *         div.icon-name numbered-list
  *       div.icon-preview-card
- *         div.icon.icon-page
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-page")
  *         div.icon-name page
  *       div.icon-preview-card
- *         div.icon.icon-pencil
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-pencil")
  *         div.icon-name pencil
  *       div.icon-preview-card
- *         div.icon.icon-play
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-play")
  *         div.icon-name play
  *       div.icon-preview-card
- *         div.icon.icon-plus
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-plus")
  *         div.icon-name plus
  *       div.icon-preview-card
- *         div.icon.icon-question
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-question")
  *         div.icon-name question
  *       div.icon-preview-card
- *         div.icon.icon-quote
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-quote")
  *         div.icon-name quote
  *       div.icon-preview-card
- *         div.icon.icon-refresh
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-refresh")
  *         div.icon-name refresh
  *       div.icon-preview-card
- *         div.icon.icon-reply
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply")
  *         div.icon-name reply
  *       div.icon-preview-card
- *         div.icon.icon-reply-arrow
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-arrow")
  *         div.icon-name reply-arrow
  *       div.icon-preview-card
- *         div.icon.icon-share
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-share")
  *         div.icon-name share
  *       div.icon-preview-card
- *         div.icon.icon-text
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-text")
  *         div.icon-name text
  *       div.icon-preview-card
- *         div.icon.icon-trash
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash")
  *         div.icon-name trash
  *       div.icon-preview-card
- *         div.icon.icon-trash-open
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash-open")
  *         div.icon-name trash-open
  *       div.icon-preview-card
- *         div.icon.icon-undo
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-undo")
  *         div.icon-name undo
  *       div.icon-preview-card
- *         div.icon.icon-unlock
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-unlock")
  *         div.icon-name unlock
  *       div.icon-preview-card
- *         div.icon.icon-upload
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upload")
  *         div.icon-name upload
  *       div.icon-preview-card
- *         div.icon.icon-upvote
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote")
  *         div.icon-name upvote
  *       div.icon-preview-card
- *         div.icon.icon-user
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-user")
  *         div.icon-name user
  *       div.icon-preview-card
- *         div.icon.icon-video-camera
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-video-camera")
  *         div.icon-name video-camera
  **/
 .icon {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 24px;
-  height: 36px;
-  width: 110px; }
-
-.icon-name {
-  padding: 5px; }
-
-.icon-alert {
-  background-image: url(../bower_components/design-system/assets/icons/alert.svg); }
-
-.icon-arrow {
-  background-image: url(../bower_components/design-system/assets/icons/arrow.svg); }
-
-.icon-bell {
-  background-image: url(../bower_components/design-system/assets/icons/bell.svg); }
-
-.icon-bold {
-  background-image: url(../bower_components/design-system/assets/icons/bold.svg); }
-
-.icon-bookmark {
-  background-image: url(../bower_components/design-system/assets/icons/bookmark.svg); }
-
-.icon-bullet-list {
-  background-image: url(../bower_components/design-system/assets/icons/bullet-list.svg); }
-
-.icon-camera {
-  background-image: url(../bower_components/design-system/assets/icons/camera.svg); }
-
-.icon-checkbox {
-  background-image: url(../bower_components/design-system/assets/icons/checkbox.svg); }
-
-.icon-checkmark {
-  background-image: url(../bower_components/design-system/assets/icons/checkmark.svg); }
-
-.icon-checkmark-circle {
-  background-image: url(../bower_components/design-system/assets/icons/checkmark-circle.svg); }
-
-.icon-clipboard {
-  background-image: url(../bower_components/design-system/assets/icons/clipboard.svg); }
-
-.icon-community {
-  background-image: url(../bower_components/design-system/assets/icons/community.svg); }
-
-.icon-controls {
-  background-image: url(../bower_components/design-system/assets/icons/controls.svg); }
-
-.icon-cross {
-  background-image: url(../bower_components/design-system/assets/icons/cross.svg); }
-
-.icon-document {
-  background-image: url(../bower_components/design-system/assets/icons/document.svg); }
-
-.icon-dropdown {
-  background-image: url(../bower_components/design-system/assets/icons/dropdown.svg); }
-
-.icon-eye {
-  background-image: url(../bower_components/design-system/assets/icons/eye.svg); }
-
-.icon-eye-crossed {
-  background-image: url(../bower_components/design-system/assets/icons/eye-crossed.svg); }
-
-.icon-flag {
-  background-image: url(../bower_components/design-system/assets/icons/flag.svg); }
-
-.icon-gear {
-  background-image: url(../bower_components/design-system/assets/icons/gear.svg); }
-
-.icon-gift {
-  background-image: url(../bower_components/design-system/assets/icons/gift.svg); }
-
-.icon-grid {
-  background-image: url(../bower_components/design-system/assets/icons/grid.svg); }
-
-.icon-house {
-  background-image: url(../bower_components/design-system/assets/icons/house.svg); }
-
-.icon-image {
-  background-image: url(../bower_components/design-system/assets/icons/image.svg); }
-
-.icon-image-add {
-  background-image: url(../bower_components/design-system/assets/icons/image-add.svg); }
-
-.icon-image-remove {
-  background-image: url(../bower_components/design-system/assets/icons/image-remove.svg); }
-
-.icon-information {
-  background-image: url(../bower_components/design-system/assets/icons/information.svg); }
-
-.icon-italics {
-  background-image: url(../bower_components/design-system/assets/icons/italics.svg); }
-
-.icon-link {
-  background-image: url(../bower_components/design-system/assets/icons/link.svg); }
-
-.icon-loading {
-  background-image: url(../bower_components/design-system/assets/icons/loading.svg); }
-
-.icon-lock {
-  background-image: url(../bower_components/design-system/assets/icons/lock.svg); }
-
-.icon-magnifying-glass {
-  background-image: url(../bower_components/design-system/assets/icons/magnifying-glass.svg); }
-
-.icon-mail {
-  background-image: url(../bower_components/design-system/assets/icons/mail.svg); }
-
-.icon-map {
-  background-image: url(../bower_components/design-system/assets/icons/map.svg); }
-
-.icon-menu {
-  background-image: url(../bower_components/design-system/assets/icons/menu.svg); }
-
-.icon-menu-control {
-  background-image: url(../bower_components/design-system/assets/icons/menu-control.svg); }
-
-.icon-more {
-  background-image: url(../bower_components/design-system/assets/icons/more.svg); }
-
-.icon-note {
-  background-image: url(../bower_components/design-system/assets/icons/note.svg); }
-
-.icon-numbered-list {
-  background-image: url(../bower_components/design-system/assets/icons/numbered-list.svg); }
-
-.icon-page {
-  background-image: url(../bower_components/design-system/assets/icons/page.svg); }
-
-.icon-pencil {
-  background-image: url(../bower_components/design-system/assets/icons/pencil.svg); }
-
-.icon-play {
-  background-image: url(../bower_components/design-system/assets/icons/play.svg); }
-
-.icon-plus {
-  background-image: url(../bower_components/design-system/assets/icons/plus.svg); }
-
-.icon-question {
-  background-image: url(../bower_components/design-system/assets/icons/question.svg); }
-
-.icon-quote {
-  background-image: url(../bower_components/design-system/assets/icons/quote.svg); }
-
-.icon-refresh {
-  background-image: url(../bower_components/design-system/assets/icons/refresh.svg); }
-
-.icon-reply {
-  background-image: url(../bower_components/design-system/assets/icons/reply.svg); }
-
-.icon-reply-arrow {
-  background-image: url(../bower_components/design-system/assets/icons/reply-arrow.svg); }
-
-.icon-share {
-  background-image: url(../bower_components/design-system/assets/icons/share.svg); }
-
-.icon-text {
-  background-image: url(../bower_components/design-system/assets/icons/text.svg); }
-
-.icon-trash {
-  background-image: url(../bower_components/design-system/assets/icons/trash.svg); }
-
-.icon-trash-open {
-  background-image: url(../bower_components/design-system/assets/icons/trash-open.svg); }
-
-.icon-undo {
-  background-image: url(../bower_components/design-system/assets/icons/undo.svg); }
-
-.icon-unlock {
-  background-image: url(../bower_components/design-system/assets/icons/unlock.svg); }
-
-.icon-upload {
-  background-image: url(../bower_components/design-system/assets/icons/upload.svg); }
-
-.icon-upvote {
-  background-image: url(../bower_components/design-system/assets/icons/upvote.svg); }
-
-.icon-user {
-  background-image: url(../bower_components/design-system/assets/icons/user.svg); }
-
-.icon-video-camera {
-  background-image: url(../bower_components/design-system/assets/icons/video-camera.svg); }
+  height: 24px;
+  width: 24px; }
 
 /**
  * Small Set (18x18):
  *     @example
  *     div.icon-preview-group
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-alert-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-alert-small")
  *         div.icon-name alert-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-bold-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bold-small")
  *         div.icon-name bold-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-bookmark-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bookmark-small")
  *         div.icon-name bookmark-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-bullet-list-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bullet-list-small")
  *         div.icon-name bullet-list-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-checkmark-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkmark-small")
  *         div.icon-name checkmark-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-clipboard-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-clipboard-small")
  *         div.icon-name clipboard-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-community-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-community-small")
  *         div.icon-name community-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-eye-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye-small")
  *         div.icon-name eye-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-eye-crossed-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye-crossed-small")
  *         div.icon-name eye-crossed-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-house-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-house-small")
  *         div.icon-name house-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-italics-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-italics-small")
  *         div.icon-name italics-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-lock-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-lock-small")
  *         div.icon-name lock-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-menu-control-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu-control-small")
  *         div.icon-name menu-control-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-numbered-list-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-numbered-list-small")
  *         div.icon-name numbered-list-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-pencil-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-pencil-small")
  *         div.icon-name pencil-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-quote-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-quote-small")
  *         div.icon-name quote-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-reply-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-small")
  *         div.icon-name reply-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-reply-arrow-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-arrow-small")
  *         div.icon-name reply-arrow-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-share-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-share-small")
  *         div.icon-name share-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-text-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-text-small")
  *         div.icon-name text-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-trash-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash-small")
  *         div.icon-name trash-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-trash-open-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash-open-small")
  *         div.icon-name trash-open-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-upvote-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote-small")
  *         div.icon-name upvote-small
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-unlock-small
+ *         svg.icon.icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-unlock-small")
  *         div.icon-name unlock-small
  **/
 .icon-small {
-  background-size: 18px; }
-
-.icon-alert-small {
-  background-image: url(../bower_components/design-system/assets/icons/alert-small.svg); }
-
-.icon-bold-small {
-  background-image: url(../bower_components/design-system/assets/icons/bold-small.svg); }
-
-.icon-bookmark-small {
-  background-image: url(../bower_components/design-system/assets/icons/bookmark-small.svg); }
-
-.icon-bullet-list-small {
-  background-image: url(../bower_components/design-system/assets/icons/bullet-list-small.svg); }
-
-.icon-checkmark-small {
-  background-image: url(../bower_components/design-system/assets/icons/checkmark-small.svg); }
-
-.icon-clipboard-small {
-  background-image: url(../bower_components/design-system/assets/icons/clipboard-small.svg); }
-
-.icon-community-small {
-  background-image: url(../bower_components/design-system/assets/icons/community-small.svg); }
-
-.icon-eye-small {
-  background-image: url(../bower_components/design-system/assets/icons/eye-small.svg); }
-
-.icon-eye-crossed-small {
-  background-image: url(../bower_components/design-system/assets/icons/eye-crossed-small.svg); }
-
-.icon-house-small {
-  background-image: url(../bower_components/design-system/assets/icons/house-small.svg); }
-
-.icon-italics-small {
-  background-image: url(../bower_components/design-system/assets/icons/italics-small.svg); }
-
-.icon-lock-small {
-  background-image: url(../bower_components/design-system/assets/icons/lock-small.svg); }
-
-.icon-menu-control-small {
-  background-image: url(../bower_components/design-system/assets/icons/menu-control-small.svg); }
-
-.icon-numbered-list-small {
-  background-image: url(../bower_components/design-system/assets/icons/numbered-list-small.svg); }
-
-.icon-pencil-small {
-  background-image: url(../bower_components/design-system/assets/icons/pencil-small.svg); }
-
-.icon-quote-small {
-  background-image: url(../bower_components/design-system/assets/icons/quote-small.svg); }
-
-.icon-reply-small {
-  background-image: url(../bower_components/design-system/assets/icons/reply-small.svg); }
-
-.icon-reply-arrow-small {
-  background-image: url(../bower_components/design-system/assets/icons/reply-arrow-small.svg); }
-
-.icon-share-small {
-  background-image: url(../bower_components/design-system/assets/icons/share-small.svg); }
-
-.icon-text-small {
-  background-image: url(../bower_components/design-system/assets/icons/text-small.svg); }
-
-.icon-trash-small {
-  background-image: url(../bower_components/design-system/assets/icons/trash-small.svg); }
-
-.icon-trash-open-small {
-  background-image: url(../bower_components/design-system/assets/icons/trash-open-small.svg); }
-
-.icon-upvote-small {
-  background-image: url(../bower_components/design-system/assets/icons/upvote-small.svg); }
-
-.icon-unlock-small {
-  background-image: url(../bower_components/design-system/assets/icons/unlock-small.svg); }
+  height: 18px; }
 
 /**
  * Tiny Set (12x12):
  *     @example
  *     div.icon-preview-group
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-menu-control-tiny
+ *         svg.icon.icon-tiny
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu-control-tiny")
  *         div.icon-name menu-control-tiny
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-reply-tiny
+ *         svg.icon.icon-tiny
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-tiny")
  *         div.icon-name reply-tiny
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-upvote-tiny
+ *         svg.icon.icon-tiny
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote-tiny")
  *         div.icon-name upvote-tiny
  *       div.icon-preview-card
- *         div.icon.icon-small.icon-upvote-reply-tiny
+ *         svg.icon.icon-tiny
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote-reply-tiny")
  *         div.icon-name upvote-reply-tiny
  **/
 .icon-tiny {
-  background-size: 12px; }
-
-.icon-menu-control-tiny {
-  background-image: url(../bower_components/design-system/assets/icons/menu-control-tiny.svg); }
-
-.icon-reply-tiny {
-  background-image: url(../bower_components/design-system/assets/icons/reply-tiny.svg); }
-
-.icon-upvote-tiny {
-  background-image: url(../bower_components/design-system/assets/icons/upvote-tiny.svg); }
-
-.icon-upvote-reply-tiny {
-  background-image: url(../bower_components/design-system/assets/icons/upvote-reply-tiny.svg); }
+  height: 12px; }
 
 /**
  * Social Icons:
@@ -1241,186 +1075,126 @@
  *     @example
  *     div.icon-preview-group
  *       div.icon-preview-card
- *         div.icon.icon-facebook-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-active")
  *         div.icon-name facebook-active
  *       div.icon-preview-card
- *         div.icon.icon-facebook-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-default")
  *         div.icon-name facebook-default
  *       div.icon-preview-card
- *         div.icon.icon-google-plus-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-google-plus-active")
  *         div.icon-name google-plus-active
  *       div.icon-preview-card
- *         div.icon.icon-google-plus-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-google-plus-default")
  *         div.icon-name google-plus-default
  *       div.icon-preview-card
- *         div.icon.icon-instagram-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-active")
  *         div.icon-name instagram-active
  *       div.icon-preview-card
- *         div.icon.icon-instagram-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-default")
  *         div.icon-name instagram-default
  *       div.icon-preview-card
- *         div.icon.icon-line-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-line-active")
  *         div.icon-name line-active
  *       div.icon-preview-card
- *         div.icon.icon-line-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-line-default")
  *         div.icon-name line-default
  *       div.icon-preview-card
- *         div.icon.icon-meneame-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-meneame-active")
  *         div.icon-name meneame-active
  *       div.icon-preview-card
- *         div.icon.icon-meneame-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-meneame-default")
  *         div.icon-name meneame-default
  *       div.icon-preview-card
- *         div.icon.icon-nk-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-nk-active")
  *         div.icon-name nk-active
  *       div.icon-preview-card
- *         div.icon.icon-nk-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-nk-default")
  *         div.icon-name nk-default
  *       div.icon-preview-card
- *         div.icon.icon-odnoklassniki-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-odnoklassniki-active")
  *         div.icon-name odnoklassniki-active
  *       div.icon-preview-card
- *         div.icon.icon-odnoklassniki-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-odnoklassniki-default")
  *         div.icon-name odnoklassniki-default
  *       div.icon-preview-card
- *         div.icon.icon-qzone-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-qzone-active")
  *         div.icon-name qzone-active
  *       div.icon-preview-card
- *         div.icon.icon-qzone-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-qzone-default")
  *         div.icon-name qzone-default
  *       div.icon-preview-card
- *         div.icon.icon-reddit-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-active")
  *         div.icon-name reddit-active
  *       div.icon-preview-card
- *         div.icon.icon-reddit-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-default")
  *         div.icon-name reddit-default
  *       div.icon-preview-card
- *         div.icon.icon-tumblr-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-tumblr-active")
  *         div.icon-name tumblr-active
  *       div.icon-preview-card
- *         div.icon.icon-tumblr-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-tumblr-default")
  *         div.icon-name tumblr-default
  *       div.icon-preview-card
- *         div.icon.icon-twitter-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-active")
  *         div.icon-name twitter-active
  *       div.icon-preview-card
- *         div.icon.icon-twitter-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-default")
  *         div.icon-name twitter-default
  *       div.icon-preview-card
- *         div.icon.icon-vkontakte-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-vkontakte-active")
  *         div.icon-name vkontakte-active
  *       div.icon-preview-card
- *         div.icon.icon-vkontakte-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-vkontakte-default")
  *         div.icon-name vkontakte-default
  *       div.icon-preview-card
- *         div.icon.icon-weibo-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-weibo-active")
  *         div.icon-name weibo-active
  *       div.icon-preview-card
- *         div.icon.icon-weibo-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-weibo-default")
  *         div.icon-name weibo-default
  *       div.icon-preview-card
- *         div.icon.icon-wykop-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-wykop-active")
  *         div.icon-name wykop-active
  *       div.icon-preview-card
- *         div.icon.icon-wykop-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-wykop-default")
  *         div.icon-name wykop-default
  *       div.icon-preview-card
- *         div.icon.icon-youtube-active
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-active")
  *         div.icon-name youtube-active
  *       div.icon-preview-card
- *         div.icon.icon-youtube-default
+ *         svg.icon
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-default")
  *         div.icon-name youtube-default
  */
-.icon-facebook-active {
-  background-image: url(../bower_components/design-system/assets/icons/facebook-active.svg); }
-
-.icon-facebook-default {
-  background-image: url(../bower_components/design-system/assets/icons/facebook-default.svg); }
-
-.icon-google-plus-default {
-  background-image: url(../bower_components/design-system/assets/icons/google-plus-default.svg); }
-
-.icon-google-plus-active {
-  background-image: url(../bower_components/design-system/assets/icons/google-plus-active.svg); }
-
-.icon-instagram-active {
-  background-image: url(../bower_components/design-system/assets/icons/instagram-active.svg); }
-
-.icon-instagram-default {
-  background-image: url(../bower_components/design-system/assets/icons/instagram-default.svg); }
-
-.icon-line-active {
-  background-image: url(../bower_components/design-system/assets/icons/line-active.svg); }
-
-.icon-line-default {
-  background-image: url(../bower_components/design-system/assets/icons/line-default.svg); }
-
-.icon-meneame-active {
-  background-image: url(../bower_components/design-system/assets/icons/meneame-active.svg); }
-
-.icon-meneame-default {
-  background-image: url(../bower_components/design-system/assets/icons/meneame-default.svg); }
-
-.icon-nk-active {
-  background-image: url(../bower_components/design-system/assets/icons/nk-active.svg); }
-
-.icon-nk-default {
-  background-image: url(../bower_components/design-system/assets/icons/nk-default.svg); }
-
-.icon-odnoklassniki-active {
-  background-image: url(../bower_components/design-system/assets/icons/odnoklassniki-active.svg); }
-
-.icon-odnoklassniki-default {
-  background-image: url(../bower_components/design-system/assets/icons/odnoklassniki-default.svg); }
-
-.icon-qzone-active {
-  background-image: url(../bower_components/design-system/assets/icons/qzone-active.svg); }
-
-.icon-qzone-default {
-  background-image: url(../bower_components/design-system/assets/icons/qzone-default.svg); }
-
-.icon-reddit-active {
-  background-image: url(../bower_components/design-system/assets/icons/reddit-active.svg); }
-
-.icon-reddit-default {
-  background-image: url(../bower_components/design-system/assets/icons/reddit-default.svg); }
-
-.icon-tumblr-active {
-  background-image: url(../bower_components/design-system/assets/icons/tumblr-active.svg); }
-
-.icon-tumblr-default {
-  background-image: url(../bower_components/design-system/assets/icons/tumblr-default.svg); }
-
-.icon-twitter-active {
-  background-image: url(../bower_components/design-system/assets/icons/tumblr-active.svg); }
-
-.icon-twitter-default {
-  background-image: url(../bower_components/design-system/assets/icons/twitter-default.svg); }
-
-.icon-vkontakte-active {
-  background-image: url(../bower_components/design-system/assets/icons/vkontakte-active.svg); }
-
-.icon-vkontakte-default {
-  background-image: url(../bower_components/design-system/assets/icons/vkontakte-default.svg); }
-
-.icon-weibo-active {
-  background-image: url(../bower_components/design-system/assets/icons/weibo-active.svg); }
-
-.icon-weibo-default {
-  background-image: url(../bower_components/design-system/assets/icons/weibo-default.svg); }
-
-.icon-wykop-active {
-  background-image: url(../bower_components/design-system/assets/icons/wykop-active.svg); }
-
-.icon-wykop-default {
-  background-image: url(../bower_components/design-system/assets/icons/wykop-default.svg); }
-
-.icon-youtube-active {
-  background-image: url(../bower_components/design-system/assets/icons/youtube-active.svg); }
-
-.icon-youtube-default {
-  background-image: url(../bower_components/design-system/assets/icons/youtube-default.svg); }
-
 /**
  * Typescale:
  *
