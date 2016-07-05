@@ -15,7 +15,7 @@
 				<section class="global-footer__fandom-section is-fandom-overview">
 					<ul class="global-footer__links-list">
 						<li class="global-footer__links-list-item">
-							<a href="#" class="global-footer__branded is-games">
+							<a href="#" class="global-footer__link is-games">
 								<div>Games</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
@@ -23,7 +23,7 @@
 							</a>
 						</li>
 						<li class="global-footer__links-list-item">
-							<a href="#" class="global-footer__branded is-movies">
+							<a href="#" class="global-footer__link is-movies">
 								<div>Movies</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
@@ -31,7 +31,7 @@
 							</a>
 						</li>
 						<li class="global-footer__links-list-item">
-							<a href="#" class="global-footer__branded is-tv">
+							<a href="#" class="global-footer__link is-tv">
 								<div>TV</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
@@ -39,7 +39,7 @@
 							</a>
 						</li>
 						<li class="global-footer__links-list-item">
-							<a href="#" class="global-footer__branded is-fan-communities">
+							<a href="#" class="global-footer__link is-fan-communities">
 								<div>Fan Communities</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
@@ -178,7 +178,7 @@
 				<section class="global-footer__fandom-section is-fandom-overview">
 					<ul class="global-footer__links-list">
 						<li class="global-footer__links-list-item">
-							<a href="#" class="global-footer__branded is-fan-communities">
+							<a href="#" class="global-footer__link is-fan-communities">
 								<div>Fan Communities</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>

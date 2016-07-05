@@ -184,6 +184,33 @@ $global-footer-section-header-margin-bottom: 10px;
 		border: 0;
 		padding: 0;
 
+		.global-footer__link {
+			align-items: center;
+			border-top: $global-footer-section-line-width solid $color-slate-gray;
+			color: $color-white;
+			display: flex;
+			font: {
+				size: $typescale-size-plus-1;
+				weight: bold;
+			}
+			justify-content: space-between;
+			margin: 0;
+			padding: 2px 0 28px 0;
+			text-decoration: none;
+
+			&.is-games {
+				border-color: $color-games;
+			}
+
+			&.is-movies {
+				border-color: $color-movies;
+			}
+
+			&.is-tv {
+				border-color: $color-tv;
+			}
+		}
+
 		.global-footer__image {
 			transform: rotate(180deg);
 		}
@@ -270,33 +297,6 @@ $global-footer-section-header-margin-bottom: 10px;
 	line-height: $line-height;
 	margin: 0;
 	padding: 0;
-}
-
-.global-footer__branded {
-	align-items: center;
-	border-top: $global-footer-section-line-width solid $color-slate-gray;
-	color: $color-white;
-	display: flex;
-	font: {
-		size: $typescale-size-plus-1;
-		weight: bold;
-	}
-	justify-content: space-between;
-	margin: 0;
-	padding: 8px 0 34px 0;
-	text-decoration: none;
-
-	&.is-games {
-		border-color: $color-games;
-	}
-
-	&.is-movies {
-		border-color: $color-movies;
-	}
-
-	&.is-tv {
-		border-color: $color-tv;
-	}
 }
 
 @media #{$breakpoint-mobile-only} {

@@ -100,6 +100,23 @@
 .global-footer__fandom-section.is-fandom-overview {
   border: 0;
   padding: 0; }
+  .global-footer__fandom-section.is-fandom-overview .global-footer__link {
+    align-items: center;
+    border-top: 4px solid #656e78;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2px 0 28px 0;
+    text-decoration: none; }
+    .global-footer__fandom-section.is-fandom-overview .global-footer__link.is-games {
+      border-color: #94d11f; }
+    .global-footer__fandom-section.is-fandom-overview .global-footer__link.is-movies {
+      border-color: #09d3bf; }
+    .global-footer__fandom-section.is-fandom-overview .global-footer__link.is-tv {
+      border-color: #00b7e0; }
   .global-footer__fandom-section.is-fandom-overview .global-footer__image {
     transform: rotate(180deg); }
 
@@ -158,24 +175,6 @@
   line-height: 1.5em;
   margin: 0;
   padding: 0; }
-
-.global-footer__branded {
-  align-items: center;
-  border-top: 4px solid #656e78;
-  color: #fff;
-  display: flex;
-  font-size: 18px;
-  font-weight: bold;
-  justify-content: space-between;
-  margin: 0;
-  padding: 8px 0 34px 0;
-  text-decoration: none; }
-  .global-footer__branded.is-games {
-    border-color: #94d11f; }
-  .global-footer__branded.is-movies {
-    border-color: #09d3bf; }
-  .global-footer__branded.is-tv {
-    border-color: #00b7e0; }
 
 @media only screen and (max-width: 767px) {
   .global-footer__main {
