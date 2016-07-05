@@ -165,12 +165,14 @@
 
 	<h1>International version</h1>
 	<footer class="global-footer is-international">
-		<h2 class="global-footer__header">
-			<svg class="global-footer__wikia-logo is-large" alt="Wikia">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-logo-wikia"></use>
-			</svg>
-			<span class="global-footer__home-of-fandom">The Home Of Fandom</span>
-		</h2>
+		<div class="global-footer__header-wrapper">
+			<h2 class="global-footer__header">
+				<svg class="global-footer__wikia-logo is-large" alt="Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-logo-wikia"></use>
+				</svg>
+				<span class="global-footer__home-of-fandom">The Home Of Fandom</span>
+			</h2>
+		</div>
 		<div class="global-footer__main">
 			<div class="global-footer__fandom-sections">
 				<section class="global-footer__fandom-section is-fandom-overview">
