@@ -15,13 +15,13 @@
     "test",
     "tests"
   ],
-  "_release": "7104d49152",
+  "_release": "959db1704f",
   "_resolution": {
     "type": "branch",
-    "branch": "DAT-4523",
-    "commit": "7104d4915271109a5f4ed310dee33ddd3a885b7c"
+    "branch": "master",
+    "commit": "959db1704f50a16cd52078376177f0d31bd4f678"
   },
   "_source": "git://github.com/Wikia/design-system.git",
-  "_target": "DAT-4523",
+  "_target": "master",
   "_originalSource": "Wikia/design-system"
 }
