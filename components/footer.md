@@ -6,7 +6,9 @@
 		<div class="global-footer__main">
 			<h2 class="global-footer__fandom-header">
 				<a href="#">
-					<img class="global-footer__fandom-logo" src="bower_components/design-system/assets/company/logo-fandom.svg" alt="Fandom" />
+					<svg class="global-footer__fandom-logo" alt="Fandom">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-logo-fandom"></use>
+					</svg>
 				</a>
 			</h2>
 			<div class="global-footer__fandom-sections">
@@ -15,25 +17,33 @@
 						<li>
 							<a href="#" class="global-footer__branded is-games">
 								<div>Games</div>
-								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<svg class="global-footer__image is-fandom-overview icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__branded is-movies">
 								<div>Movies</div>
-								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<svg class="global-footer__image is-fandom-overview icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__branded is-tv">
 								<div>TV</div>
-								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<svg class="global-footer__image is-fandom-overview icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__branded is-fan-communities">
 								<div>Fan Communities</div>
-								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<svg class="global-footer__image is-fandom-overview icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								</svg>
 							</a>
 						</li>
 					</ul>
@@ -43,34 +53,46 @@
 					<ul class="global-footer__links is-follow-us">
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/facebook-default.svg" alt="Facebook" />
+								<svg class="global-footer__image is-follow-us icon" alt="Facebook">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-default"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/twitter-default.svg" alt="Twitter" />
+								<svg class="global-footer__image is-follow-us icon" alt="Twitter">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-default"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/reddit-default.svg" alt="Reddit" />
+								<svg class="global-footer__image is-follow-us icon" alt="Reddit">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-default"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/youtube-default.svg" alt="Youtube" />
+								<svg class="global-footer__image is-follow-us icon" alt="Youtube">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-default"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/instagram-default.svg" alt="Instagram" />
+								<svg class="global-footer__image is-follow-us icon" alt="Instagram">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-default"></use>
+								</svg>
 							</a>
 						</li>
 					</ul>
 				</section>
 			</div>
 			<h2 class="global-footer__wikia-header">
-				<img class="global-footer__wikia-logo" src="bower_components/design-system/assets/company/logo-wikia.svg" alt="Wikia"  />
+				<svg class="global-footer__wikia-logo" alt="Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-logo-wikia"></use>
+				</svg>
 			</h2>
 			<div class="global-footer__wikia-sections">
 				<section class="global-footer__wikia-section is-company-overview">
@@ -113,12 +135,16 @@
 					<ul class="global-footer__links is-community-apps">
 						<li>
 							<a href="#" class="global-footer__link is-community-apps">
-								<img src="bower_components/design-system/assets/company/store-appstore.svg" alt="App Store" />
+								<svg class="global-footer__image is-community-apps" alt="App Store">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-appstore"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-community-apps">
-								<img src="bower_components/design-system/assets/company/store-googleplay.svg" alt="Google Play" />
+								<svg class="global-footer__image is-community-apps" alt="Google Play">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-googleplay"></use>
+								</svg>							
 							</a>
 						</li>
 					</ul>
@@ -140,7 +166,9 @@
 	<h1>International version</h1>
 	<footer class="global-footer is-international">
 		<h2 class="global-footer__header">
-			<img class="global-footer__wikia-logo is-large" src="bower_components/design-system/assets/company/logo-wikia.svg" alt="Wikia"  />
+			<svg class="global-footer__wikia-logo is-large" alt="Wikia">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-logo-wikia"></use>
+			</svg>
 			<span class="global-footer__home-of-fandom">The Home Of Fandom</span>
 		</h2>
 		<div class="global-footer__main">
@@ -150,25 +178,33 @@
 						<li>
 							<a href="#" class="global-footer__branded is-games">
 								<div>Games</div>
-								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<svg class="global-footer__image is-fandom-overview icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__branded is-movies">
 								<div>Movies</div>
-								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<svg class="global-footer__image is-fandom-overview icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__branded is-tv">
 								<div>TV</div>
-								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<svg class="global-footer__image is-fandom-overview icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__branded is-fan-communities">
 								<div>Fan Communities</div>
-								<img class="global-footer__branded-arrow" src="bower_components/design-system/assets/icons/arrow.svg" />
+								<svg class="global-footer__image is-fandom-overview icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								</svg>
 							</a>
 						</li>
 					</ul>
@@ -178,27 +214,37 @@
 					<ul class="global-footer__links is-follow-us">
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/facebook-default.svg" alt="Facebook" />
+								<svg class="global-footer__image is-follow-us icon" alt="Facebook">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-default"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/twitter-default.svg" alt="Twitter" />
+								<svg class="global-footer__image is-follow-us icon" alt="Twitter">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-default"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/reddit-default.svg" alt="Reddit" />
+								<svg class="global-footer__image is-follow-us icon" alt="Reddit">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-default"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/youtube-default.svg" alt="Youtube" />
+								<svg class="global-footer__image is-follow-us icon" alt="Youtube">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-default"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-follow-us">
-								<img src="bower_components/design-system/assets/icons/instagram-default.svg" alt="Instagram" />
+								<svg class="global-footer__image is-follow-us icon" alt="Instagram">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-default"></use>
+								</svg>
 							</a>
 						</li>
 					</ul>
@@ -245,12 +291,16 @@
 					<ul class="global-footer__links is-community-apps">
 						<li>
 							<a href="#" class="global-footer__link is-community-apps">
-								<img src="bower_components/design-system/assets/company/store-appstore.svg" alt="App Store" />
+								<svg class="global-footer__image is-community-apps" alt="App Store">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-appstore"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="global-footer__link is-community-apps">
-								<img src="bower_components/design-system/assets/company/store-googleplay.svg" alt="Google Play" />
+								<svg class="global-footer__image is-community-apps" alt="Google Play">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-googleplay"></use>
+								</svg>							
 							</a>
 						</li>
 					</ul>

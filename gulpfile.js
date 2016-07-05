@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+	inject = require('gulp-inject'),
 	livereload = require('gulp-livereload'),
 	scss = require('gulp-sass'),
 	styledown = require('gulp-styledown'),
@@ -6,13 +7,13 @@ var gulp = require('gulp'),
 
 // BUILD
 gulp.task('scss', function () {
-	gulp.src('styles/index.scss')
+	return gulp.src('styles/index.scss')
 		.pipe(scss())
 		.pipe(gulp.dest('www'));
 });
 
 gulp.task('styledown', ['scss'], function () {
-	gulp.src([
+	return gulp.src([
 		'./styles/*.scss',
 		'./components/*.md'
 	]).pipe(styledown({
@@ -21,13 +22,27 @@ gulp.task('styledown', ['scss'], function () {
 	})).pipe(gulp.dest('./'));
 });
 
-gulp.task('build', ['scss', 'styledown']);
+gulp.task('svg', ['styledown'], function () {
+	return gulp.src('./index.html')
+		.pipe(inject(
+			gulp.src('./bower_components/design-system/dist/symbols.svg'), {
+				relative: true,
+				transform: function (filePath, file) {
+					return file.contents.toString('utf8');
+				}
+			}
+		))
+		.pipe(gulp.dest('./'));
+});
+
+gulp.task('build', ['scss', 'styledown', 'svg']);
 
 gulp.task('default', ['build']);
 
 // WATCH
-gulp.task('build-and-reload', ['build'], function () {
-	return livereload.reload();
+gulp.task('build-and-reload', ['build'], function (done) {
+	livereload.reload();
+	done();
 });
 
 gulp.task('watch', ['build'], function () {
@@ -35,6 +50,7 @@ gulp.task('watch', ['build'], function () {
 
 	return watch([
 		'./styles/*.scss',
+		'./styleguide/*.*',
 		'./components/*.(scss|md)'
 	], function () {
 		gulp.start('build-and-reload');
