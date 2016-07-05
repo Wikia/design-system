@@ -178,30 +178,6 @@
 				<section class="global-footer__fandom-section is-fandom-overview">
 					<ul class="global-footer__links is-fandom-overview">
 						<li class="global-footer__list-items">
-							<a href="#" class="global-footer__branded is-games">
-								<div>Games</div>
-								<svg class="global-footer__image is-fandom-overview icon">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="global-footer__list-items">
-							<a href="#" class="global-footer__branded is-movies">
-								<div>Movies</div>
-								<svg class="global-footer__image is-fandom-overview icon">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="global-footer__list-items">
-							<a href="#" class="global-footer__branded is-tv">
-								<div>TV</div>
-								<svg class="global-footer__image is-fandom-overview icon">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="global-footer__list-items">
 							<a href="#" class="global-footer__branded is-fan-communities">
 								<div>Fan Communities</div>
 								<svg class="global-footer__image is-fandom-overview icon">
