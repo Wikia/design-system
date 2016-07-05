@@ -298,7 +298,7 @@ $global-footer-desktop-international-sections-height: $global-footer-desktop-row
 	}
 
 	.global-footer__links {
-		& > li {
+		& > .global-footer__list-items {
 			margin-bottom: 10px;
 
 			&:last-of-type {
@@ -306,8 +306,8 @@ $global-footer-desktop-international-sections-height: $global-footer-desktop-row
 			}
 		}
 
-		&.is-follow-us > li,
-		&.is-fandom-overview > li {
+		&.is-follow-us > .global-footer__list-items,
+		&.is-fandom-overview > .global-footer__list-items {
 			margin-bottom: 0;
 		}
 
