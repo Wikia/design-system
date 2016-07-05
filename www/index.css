@@ -190,12 +190,10 @@
   .global-footer__wikia-header {
     margin-bottom: 29px;
     margin-top: 61px; }
-  .global-footer__links > .global-footer__list-items {
+  .global-footer__links .global-footer__list-item {
     margin-bottom: 10px; }
-    .global-footer__links > .global-footer__list-items:last-of-type {
-      margin-bottom: 0; }
-  .global-footer__links.is-follow-us > .global-footer__list-items,
-  .global-footer__links.is-fandom-overview > .global-footer__list-items {
+  .global-footer__links.is-follow-us .global-footer__list-item,
+  .global-footer__links.is-fandom-overview .global-footer__list-item {
     margin-bottom: 0; }
   .global-footer__links.is-community-apps {
     margin-top: 5px;
@@ -211,7 +209,7 @@
     margin: 0;
     width: 100%; }
   .global-footer__wikia-section {
-    margin-bottom: 30px; }
+    margin-bottom: 20px; }
     .global-footer__wikia-section.is-company-overview {
       width: 50%; }
     .global-footer__wikia-section.is-site-overview {

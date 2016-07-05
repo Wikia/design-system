@@ -320,16 +320,12 @@ $global-footer-section-header-margin-bottom: 10px;
 	}
 
 	.global-footer__links {
-		& > .global-footer__list-items {
+		.global-footer__list-item {
 			margin-bottom: 10px;
-
-			&:last-of-type {
-				margin-bottom: 0;
-			}
 		}
 
-		&.is-follow-us > .global-footer__list-items,
-		&.is-fandom-overview > .global-footer__list-items {
+		&.is-follow-us .global-footer__list-item,
+		&.is-fandom-overview .global-footer__list-item {
 			margin-bottom: 0;
 		}
 
@@ -360,7 +356,7 @@ $global-footer-section-header-margin-bottom: 10px;
 
 	// items in Wikia section
 	.global-footer__wikia-section {
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 
 		&.is-company-overview {
 			width: 50%;
