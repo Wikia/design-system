@@ -175,7 +175,7 @@
 		}
 	}
 
-	&__fandom-section{
+	&__fandom-section {
 		&.is-fandom-overview {
 			border: 0;
 			padding: 0;
@@ -208,6 +208,7 @@
 			}
 
 			.global-footer__image {
+				color: $color-slate-gray;
 				transform: rotate(180deg);
 			}
 		}
@@ -227,6 +228,13 @@
 				height: $social-icon-size;
 				margin-right: 20px;
 				width: $social-icon-size;
+			}
+
+			.global-footer__image {
+				color: $color-slate-gray;
+				&:hover {
+					color: $color-white;
+				}
 			}
 		}
 	}
