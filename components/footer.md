@@ -13,33 +13,33 @@
 			</h2>
 			<div class="global-footer__fandom-sections">
 				<section class="global-footer__fandom-section is-fandom-overview">
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item">
-							<a href="#" class="global-footer__branded is-games">
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item">
+							<a href="#" class="global-footer__link is-games">
 								<div>Games</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
-							<a href="#" class="global-footer__branded is-movies">
+						<li class="global-footer__links-list-item">
+							<a href="#" class="global-footer__link is-movies">
 								<div>Movies</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
-							<a href="#" class="global-footer__branded is-tv">
+						<li class="global-footer__links-list-item">
+							<a href="#" class="global-footer__link is-tv">
 								<div>TV</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
-							<a href="#" class="global-footer__branded is-fan-communities">
+						<li class="global-footer__links-list-item">
+							<a href="#" class="global-footer__link is-fan-communities">
 								<div>Fan Communities</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
@@ -50,36 +50,36 @@
 				</section>
 				<section class="global-footer__fandom-section is-follow-us">
 					<h3 class="global-footer__section-header">Follow Us</h3>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item">
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Facebook">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-default"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Twitter">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-default"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Reddit">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-default"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Youtube">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-default"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Instagram">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-default"></use>
@@ -97,50 +97,50 @@
 			<div class="global-footer__wikia-sections">
 				<section class="global-footer__wikia-section is-company-overview">
 					<h3 class="global-footer__section-header">Overview</h3>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">About</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Careers</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">News</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Contact</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Wikia Gives Back</a></li>
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">About</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Careers</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">News</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Contact</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Wikia Gives Back</a></li>
 					</ul>
 				</section>
 				<section class="global-footer__wikia-section is-site-overview">
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Terms Of Use</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Privacy Policy</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Global Sitemap</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">API</a></li>
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Terms Of Use</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Privacy Policy</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Global Sitemap</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">API</a></li>
 					</ul>
 				</section>
 				<section class="global-footer__wikia-section is-community">
 					<h3 class="global-footer__section-header">Community</h3>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Community Central</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Support</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Fan Contributor Program</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">WAM Score</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Help</a></li>
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Community Central</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Support</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Fan Contributor Program</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">WAM Score</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Help</a></li>
 					</ul>
 				</section>
 				<section class="global-footer__wikia-section is-create-wiki">
 					<span class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
-					<ul class="global-footer__links is-create-wiki">
-						<li class="global-footer__list-item"><a href="#" class="global-footer__link is-create-wiki">Start a wikia</a></li>
+					<ul class="global-footer__links-list is-create-wiki">
+						<li class="global-footer__links-list-item"><a href="#" class="global-footer__link is-create-wiki">Start a wikia</a></li>
 					</ul>
 				</section>
 				<section class="global-footer__wikia-section is-community-apps">
 					<h3 class="global-footer__section-header">Community Apps</h3>
 					<span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item">
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image" alt="App Store">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-appstore"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image" alt="Google Play">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-googleplay"></use>
@@ -151,9 +151,9 @@
 				</section>
 				<section class="global-footer__wikia-section is-advertise">
 					<h3 class="global-footer__section-header">Advertise</h3>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Media Kit</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Contact</a></li>
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Media Kit</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Contact</a></li>
 					</ul>
 				</section>
 			</div>
@@ -176,9 +176,9 @@
 		<div class="global-footer__main">
 			<div class="global-footer__fandom-sections">
 				<section class="global-footer__fandom-section is-fandom-overview">
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item">
-							<a href="#" class="global-footer__branded is-fan-communities">
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item">
+							<a href="#" class="global-footer__link is-fan-communities">
 								<div>Fan Communities</div>
 								<svg class="global-footer__image icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
@@ -189,36 +189,36 @@
 				</section>
 				<section class="global-footer__fandom-section is-follow-us">
 					<h3 class="global-footer__section-header">Follow Us</h3>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item">
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Facebook">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-default"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Twitter">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-default"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Reddit">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-default"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Youtube">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-default"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image icon" alt="Instagram">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-default"></use>
@@ -231,50 +231,50 @@
 			<div class="global-footer__wikia-sections">
 				<section class="global-footer__wikia-section is-company-overview">
 					<h3 class="global-footer__section-header">Overview</h3>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">About</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Careers</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">News</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Contact</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Wikia Gives Back</a></li>
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">About</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Careers</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">News</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Contact</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Wikia Gives Back</a></li>
 					</ul>
 				</section>
 				<section class="global-footer__wikia-section is-site-overview">
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Terms Of Use</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Privacy Policy</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Global Sitemap</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">API</a></li>
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Terms Of Use</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Privacy Policy</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Global Sitemap</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">API</a></li>
 					</ul>
 				</section>
 				<section class="global-footer__wikia-section is-community">
 					<h3 class="global-footer__section-header">Community</h3>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Community Central</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Support</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Fan Contributor Program</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">WAM Score</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Help</a></li>
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Community Central</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Support</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Fan Contributor Program</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">WAM Score</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Help</a></li>
 					</ul>
 				</section>
 				<section class="global-footer__wikia-section is-create-wiki">
 					<span class="global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
-					<ul class="global-footer__links is-create-wiki">
-						<li class="global-footer__list-item"><a href="#" class="global-footer__link is-create-wiki">Start a wikia</a></li>
+					<ul class="global-footer__links-list is-create-wiki">
+						<li class="global-footer__links-list-item"><a href="#" class="global-footer__link is-create-wiki">Start a wikia</a></li>
 					</ul>
 				</section>
 				<section class="global-footer__wikia-section is-community-apps">
 					<h3 class="global-footer__section-header">Community Apps</h3>
 					<span class="global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item">
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image" alt="App Store">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-appstore"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="global-footer__list-item">
+						<li class="global-footer__links-list-item">
 							<a href="#" class="global-footer__link">
 								<svg class="global-footer__image" alt="Google Play">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-googleplay"></use>
@@ -285,9 +285,9 @@
 				</section>
 				<section class="global-footer__wikia-section is-advertise">
 					<h3 class="global-footer__section-header">Advertise</h3>
-					<ul class="global-footer__links">
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Media Kit</a></li>
-						<li class="global-footer__list-item"><a class="global-footer__link" href="#">Contact</a></li>
+					<ul class="global-footer__links-list">
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Media Kit</a></li>
+						<li class="global-footer__links-list-item"><a class="global-footer__link" href="#">Contact</a></li>
 					</ul>
 				</section>
 			</div>

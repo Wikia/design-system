@@ -184,13 +184,40 @@ $global-footer-section-header-margin-bottom: 10px;
 		border: 0;
 		padding: 0;
 
+		.global-footer__link {
+			align-items: center;
+			border-top: $global-footer-section-line-width solid $color-slate-gray;
+			color: $color-white;
+			display: flex;
+			font: {
+				size: $typescale-size-plus-1;
+				weight: bold;
+			}
+			justify-content: space-between;
+			margin: 0;
+			padding: 2px 0 28px 0;
+			text-decoration: none;
+
+			&.is-games {
+				border-color: $color-games;
+			}
+
+			&.is-movies {
+				border-color: $color-movies;
+			}
+
+			&.is-tv {
+				border-color: $color-tv;
+			}
+		}
+
 		.global-footer__image {
 			transform: rotate(180deg);
 		}
 	}
 
 	&.is-follow-us {
-		.global-footer__links {
+		.global-footer__links-list {
 			display: flex;
 			flex-wrap: nowrap;
 		}
@@ -232,7 +259,7 @@ $global-footer-section-header-margin-bottom: 10px;
 	}
 
 	&.is-community-apps {
-		.global-footer__links {
+		.global-footer__links-list {
 			display: flex;
 		}
 
@@ -270,33 +297,6 @@ $global-footer-section-header-margin-bottom: 10px;
 	line-height: $line-height;
 	margin: 0;
 	padding: 0;
-}
-
-.global-footer__branded {
-	align-items: center;
-	border-top: $global-footer-section-line-width solid $color-slate-gray;
-	color: $color-white;
-	display: flex;
-	font: {
-		size: $typescale-size-plus-1;
-		weight: bold;
-	}
-	justify-content: space-between;
-	margin: 0;
-	padding: 8px 0 34px 0;
-	text-decoration: none;
-
-	&.is-games {
-		border-color: $color-games;
-	}
-
-	&.is-movies {
-		border-color: $color-movies;
-	}
-
-	&.is-tv {
-		border-color: $color-tv;
-	}
 }
 
 @media #{$breakpoint-mobile-only} {
@@ -337,13 +337,13 @@ $global-footer-section-header-margin-bottom: 10px;
 		margin-bottom: 20px;
 
 		&.is-fandom-overview {
-			.global-footer__list-item {
+			.global-footer__links-list-item {
 				margin-bottom: 0;
 			}
 		}
 
 		&.is-follow-us {
-			.global-footer__list-item {
+			.global-footer__links-list-item {
 				margin-bottom: 0;
 			}
 
@@ -368,7 +368,7 @@ $global-footer-section-header-margin-bottom: 10px;
 		}
 
 		&.is-community-apps {
-			.global-footer__links {
+			.global-footer__links-list {
 				margin-top: 5px;
 				margin-bottom: 0;
 			}
@@ -385,7 +385,7 @@ $global-footer-section-header-margin-bottom: 10px;
 		}
 	}
 
-	.global-footer__list-item {
+	.global-footer__links-list-item {
 		margin-bottom: 10px;
 	}
 
@@ -484,7 +484,7 @@ $global-footer-section-header-margin-bottom: 10px;
 			height: $global-footer-desktop-row-top-height;
 			width: $global-footer-desktop-fourth-column-width;
 
-			.global-footer__links {
+			.global-footer__links-list {
 				flex-direction: column;
 				margin-top: 5px;
 			}
