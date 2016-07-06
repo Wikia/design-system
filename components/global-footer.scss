@@ -173,71 +173,104 @@
 		&:hover {
 			color: $color-white;
 		}
-
-		&.is-create-wiki {
-			border: solid 1px $color-blue-gray;
-			color: $color-blue-gray;
-			display: inline-block;
-			font: {
-				size: $typescale-size-minus-2;
-				weight: bold;
-			}
-			letter-spacing: 0.3px;
-			line-height: normal;
-			margin-top: 13px;
-			padding: 14px 18px;
-			text-decoration: none;
-			text-transform: uppercase;
-
-			&:hover {
-				color: $color-white;
-			}
-		}
-
-		&.is-community-apps {
-			display: block;
-			line-height: normal;
-			margin-top: 6px;
-			width: 119px;
-		}
-
-		&.is-follow-us {
-			$social-icon-size: 24px;
-
-			background: no-repeat center;
-			background-size: $social-icon-size;
-			display: inline-block;
-			height: $social-icon-size;
-			margin-right: 20px;
-			width: $social-icon-size;
-		}
 	}
 
-	&__links {
-		&.is-community-apps {
-			display: flex;
-		}
-
-		&.is-follow-us {
-			display: flex;
-			flex-wrap: nowrap;
-		}
-	}
-
-	&__image {
+	&__fandom-section{
 		&.is-fandom-overview {
-			transform: rotate(180deg);
+			border: 0;
+			padding: 0;
+
+			.global-footer__link {
+				align-items: center;
+				border-top: $section-line-width solid $color-slate-gray;
+				color: $color-white;
+				display: flex;
+				font: {
+					size: $typescale-size-plus-1;
+					weight: bold;
+				}
+				justify-content: space-between;
+				margin: 0;
+				padding: 2px 0 28px 0;
+				text-decoration: none;
+
+				&.is-games {
+					border-color: $color-games;
+				}
+
+				&.is-movies {
+					border-color: $color-movies;
+				}
+
+				&.is-tv {
+					border-color: $color-tv;
+				}
+			}
+
+			.global-footer__image {
+				transform: rotate(180deg);
+			}
 		}
 
-		&.is-community-apps {
-			height: 35px;
-			width: 119px;
+		&.is-follow-us {
+			.global-footer__links-list {
+				display: flex;
+				flex-wrap: nowrap;
+			}
+
+			.global-footer__link {
+				$social-icon-size: 24px;
+
+				background: no-repeat center;
+				background-size: $social-icon-size;
+				display: inline-block;
+				height: $social-icon-size;
+				margin-right: 20px;
+				width: $social-icon-size;
+			}
 		}
 	}
 
-	&__fandom-section.is-fandom-overview {
-		border: 0;
-		padding: 0;
+	&__wikia-section {
+		&.is-create-wiki {
+			.global-footer__link {
+				border: solid 1px $color-blue-gray;
+				color: $color-blue-gray;
+				display: inline-block;
+				font: {
+					size: $typescale-size-minus-2;
+					weight: bold;
+				}
+				letter-spacing: 0.3px;
+				line-height: normal;
+				margin-top: 13px;
+				padding: 14px 18px;
+				text-decoration: none;
+				text-transform: uppercase;
+
+				&:hover {
+					color: $color-white;
+				}
+			}
+		}
+
+		&.is-community-apps {
+			.global-footer__links-list {
+				display: flex;
+			}
+
+			.global-footer__link {
+				display: block;
+				line-height: normal;
+				margin-top: 6px;
+				width: 119px;
+			}
+
+			.global-footer__image {
+				height: 35px;
+				width: 119px;
+			}
+		}
 	}
 
 	&__section-header {
@@ -260,33 +293,6 @@
 		line-height: $line-height;
 		margin: 0;
 		padding: 0;
-	}
-
-	&__branded {
-		align-items: center;
-		border-top: $section-line-width solid $color-slate-gray;
-		color: $color-white;
-		display: flex;
-		font: {
-			size: $typescale-size-plus-1;
-			weight: bold;
-		}
-		justify-content: space-between;
-		margin: 0;
-		padding: 8px 0 34px 0;
-		text-decoration: none;
-
-		&.is-games {
-			border-color: $color-games;
-		}
-
-		&.is-movies {
-			border-color: $color-movies;
-		}
-
-		&.is-tv {
-			border-color: $color-tv;
-		}
 	}
 
 	@media #{$breakpoint-mobile-only} {
@@ -315,33 +321,6 @@
 			}
 		}
 
-		&__links {
-			.global-footer__list-item {
-				margin-bottom: 10px;
-			}
-
-			&.is-follow-us .global-footer__list-item,
-			&.is-fandom-overview .global-footer__list-item {
-				margin-bottom: 0;
-			}
-
-			&.is-community-apps {
-				margin-top: 5px;
-				margin-bottom: 0;
-			}
-		}
-
-		&__link {
-			&.is-follow-us {
-				height: 42px;
-				margin-right: 10px;
-				width: 42px;
-			}
-
-			&.is-community-apps {
-				margin-right: 25px;
-			}
-		}
 		// left (Fandom) and right (Wikia) sections
 		&__fandom-section,
 		&__wikia-section {
@@ -349,7 +328,26 @@
 			width: 100%;
 		}
 
-		// items in Wikia section
+		&__fandom-section {
+			&.is-fandom-overview {
+				.global-footer__links-list-item {
+					margin-bottom: 0;
+				}
+			}
+
+			&.is-follow-us {
+				.global-footer__links-list-item {
+					margin-bottom: 0;
+				}
+
+				.global-footer__link {
+					height: 42px;
+					margin-right: 10px;
+					width: 42px;
+				}
+			}
+		}
+
 		&__wikia-section {
 			margin-bottom: 20px;
 
@@ -365,6 +363,17 @@
 			&.is-create-wiki {
 				display: none;
 			}
+
+			&.is-community-apps {
+				.global-footer__links-list {
+					margin-top: 5px;
+					margin-bottom: 0;
+				}
+
+				.global-footer__link {
+					margin-right: 25px;
+				}
+			}
 		}
 
 		&.is-international {
@@ -373,10 +382,13 @@
 			}
 		}
 
+		&__links-list-item {
+			margin-bottom: 10px;
+		}
+
 		&__licensing-and-vertical {
 			text-align: center;
 		}
-
 	}
 
 	@media #{$breakpoint-desktop-up} {
@@ -386,12 +398,16 @@
 		}
 
 		// main content
-		&.is-en .global-footer__main {
-			height: $desktop-en-sections-height;
+		&.is-en {
+			.global-footer__main {
+				height: $desktop-en-sections-height;
+			}
 		}
 
-		&.is-international .global-footer__main {
-			height: $desktop-international-sections-height;
+		&.is-international {
+			.global-footer__main {
+				height: $desktop-international-sections-height;
+			}
 		}
 
 		&__header {
@@ -431,11 +447,6 @@
 			width: $desktop-column-wikia;
 		}
 
-		&__links.is-community-apps {
-			flex-direction: column;
-			margin-top: 5px;
-		}
-
 		// items in Fandom section
 		&__fandom-section {
 			width: $desktop-first-column-width;
@@ -469,6 +480,11 @@
 			&.is-community-apps {
 				height: $desktop-row-top-height;
 				width: $desktop-fourth-column-width;
+
+				.global-footer__links-list {
+					flex-direction: column;
+					margin-top: 5px;
+				}
 			}
 
 			&.is-advertise {
