@@ -134,6 +134,7 @@
   flex-wrap: nowrap; }
 
 .global-footer__image.is-fandom-overview {
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .global-footer__image.is-community-apps {
