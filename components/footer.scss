@@ -230,7 +230,16 @@ $global-footer-section-header-margin-bottom: 10px;
 
 .global-footer__image {
 	&.is-fandom-overview {
+		color: $color-slate-gray;
 		transform: rotate(180deg);
+	}
+
+	&.is-follow-us {
+		color: $color-slate-gray;
+
+		&:hover {
+			color: $color-white;
+		}
 	}
 
 	&.is-community-apps {

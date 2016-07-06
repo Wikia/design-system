@@ -25,7 +25,7 @@ gulp.task('styledown', ['scss'], function () {
 gulp.task('svg', ['styledown'], function () {
 	return gulp.src('./index.html')
 		.pipe(inject(
-			gulp.src('./bower_components/design-system/dist/symbols.svg'), {
+			gulp.src('./bower_components/design-system/dist/*.svg'), {
 				relative: true,
 				transform: function (filePath, file) {
 					return file.contents.toString('utf8');

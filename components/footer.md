@@ -54,35 +54,35 @@
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Facebook">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Twitter">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Reddit">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Youtube">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Instagram">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram"></use>
 								</svg>
 							</a>
 						</li>
@@ -193,35 +193,35 @@
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Facebook">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Twitter">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Reddit">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Youtube">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="global-footer__list-item">
 							<a href="#" class="global-footer__link is-follow-us">
 								<svg class="global-footer__image is-follow-us icon" alt="Instagram">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-default"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram"></use>
 								</svg>
 							</a>
 						</li>

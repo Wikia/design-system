@@ -134,7 +134,13 @@
   flex-wrap: nowrap; }
 
 .global-footer__image.is-fandom-overview {
+  color: #656e78;
   transform: rotate(180deg); }
+
+.global-footer__image.is-follow-us {
+  color: #656e78; }
+  .global-footer__image.is-follow-us:hover {
+    color: #fff; }
 
 .global-footer__image.is-community-apps {
   height: 35px;
@@ -695,12 +701,6 @@
 .color-dark-c8 {
   background-color: #e3bd00; }
 
-.icon-preview-card .icon {
-  width: 110px; }
-
-.icon-preview-card .icon-name {
-  padding: 5px; }
-
 /**
  * Standard Set (24x24):
  *
@@ -712,231 +712,231 @@
  *         div.icon-name alert
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow")
  *         div.icon-name arrow
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bell")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bell")
  *         div.icon-name bell
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bold")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bold")
  *         div.icon-name bold
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bookmark")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bookmark")
  *         div.icon-name bookmark
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bullet-list")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bullet-list")
  *         div.icon-name bullet-list
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-camera")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-camera")
  *         div.icon-name camera
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkbox")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkbox")
  *         div.icon-name checkbox
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkmark")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkmark")
  *         div.icon-name checkmark
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkmark-circle")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkmark-circle")
  *         div.icon-name checkmark-circle
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-clipboard")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-clipboard")
  *         div.icon-name clipboard
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-community")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-community")
  *         div.icon-name community
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-controls")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-controls")
  *         div.icon-name controls
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-cross")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-cross")
  *         div.icon-name cross
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-document")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-document")
  *         div.icon-name document
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-dropdown")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-dropdown")
  *         div.icon-name dropdown
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye")
  *         div.icon-name eye
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye-crossed")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye-crossed")
  *         div.icon-name eye-crossed
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-flag")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-flag")
  *         div.icon-name flag
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-gear")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-gear")
  *         div.icon-name gear
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-gift")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-gift")
  *         div.icon-name gift
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-grid")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-grid")
  *         div.icon-name grid
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-house")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-house")
  *         div.icon-name house
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-image")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-image")
  *         div.icon-name image
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-image-add")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-image-add")
  *         div.icon-name image-add
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-image-remove")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-image-remove")
  *         div.icon-name image-remove
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-information")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-information")
  *         div.icon-name information
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-italics")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-italics")
  *         div.icon-name italics
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-link")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-link")
  *         div.icon-name link
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-loading")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-loading")
  *         div.icon-name loading
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-lock")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-lock")
  *         div.icon-name lock
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-magnifying-glass")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-magnifying-glass")
  *         div.icon-name magnifying-glass
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-mail")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-mail")
  *         div.icon-name mail
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-map")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-map")
  *         div.icon-name map
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu")
  *         div.icon-name menu
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu-control")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu-control")
  *         div.icon-name menu-control
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-more")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-more")
  *         div.icon-name more
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-note")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-note")
  *         div.icon-name note
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-numbered-list")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-numbered-list")
  *         div.icon-name numbered-list
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-page")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-page")
  *         div.icon-name page
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-pencil")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-pencil")
  *         div.icon-name pencil
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-play")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-play")
  *         div.icon-name play
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-plus")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-plus")
  *         div.icon-name plus
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-question")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-question")
  *         div.icon-name question
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-quote")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-quote")
  *         div.icon-name quote
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-refresh")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-refresh")
  *         div.icon-name refresh
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply")
  *         div.icon-name reply
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-arrow")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-arrow")
  *         div.icon-name reply-arrow
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-share")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-share")
  *         div.icon-name share
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-text")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-text")
  *         div.icon-name text
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash")
  *         div.icon-name trash
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash-open")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash-open")
  *         div.icon-name trash-open
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-undo")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-undo")
  *         div.icon-name undo
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-unlock")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-unlock")
  *         div.icon-name unlock
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upload")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upload")
  *         div.icon-name upload
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote")
  *         div.icon-name upvote
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-user")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-user")
  *         div.icon-name user
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-video-camera")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-video-camera")
  *         div.icon-name video-camera
  **/
 .icon {
@@ -949,99 +949,99 @@
  *     div.icon-preview-group
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-alert-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-alert-small")
  *         div.icon-name alert-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bold-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bold-small")
  *         div.icon-name bold-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bookmark-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bookmark-small")
  *         div.icon-name bookmark-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bullet-list-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-bullet-list-small")
  *         div.icon-name bullet-list-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkmark-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-checkmark-small")
  *         div.icon-name checkmark-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-clipboard-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-clipboard-small")
  *         div.icon-name clipboard-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-community-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-community-small")
  *         div.icon-name community-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye-small")
  *         div.icon-name eye-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye-crossed-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-eye-crossed-small")
  *         div.icon-name eye-crossed-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-house-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-house-small")
  *         div.icon-name house-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-italics-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-italics-small")
  *         div.icon-name italics-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-lock-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-lock-small")
  *         div.icon-name lock-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu-control-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu-control-small")
  *         div.icon-name menu-control-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-numbered-list-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-numbered-list-small")
  *         div.icon-name numbered-list-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-pencil-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-pencil-small")
  *         div.icon-name pencil-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-quote-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-quote-small")
  *         div.icon-name quote-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-small")
  *         div.icon-name reply-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-arrow-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-arrow-small")
  *         div.icon-name reply-arrow-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-share-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-share-small")
  *         div.icon-name share-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-text-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-text-small")
  *         div.icon-name text-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash-small")
  *         div.icon-name trash-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash-open-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-trash-open-small")
  *         div.icon-name trash-open-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote-small")
  *         div.icon-name upvote-small
  *       div.icon-preview-card
  *         svg.icon.icon-small
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-unlock-small")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-unlock-small")
  *         div.icon-name unlock-small
  **/
 .icon-small {
@@ -1053,19 +1053,19 @@
  *     div.icon-preview-group
  *       div.icon-preview-card
  *         svg.icon.icon-tiny
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu-control-tiny")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-menu-control-tiny")
  *         div.icon-name menu-control-tiny
  *       div.icon-preview-card
  *         svg.icon.icon-tiny
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-tiny")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reply-tiny")
  *         div.icon-name reply-tiny
  *       div.icon-preview-card
  *         svg.icon.icon-tiny
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote-tiny")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote-tiny")
  *         div.icon-name upvote-tiny
  *       div.icon-preview-card
  *         svg.icon.icon-tiny
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote-reply-tiny")
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-upvote-reply-tiny")
  *         div.icon-name upvote-reply-tiny
  **/
 .icon-tiny {
@@ -1078,124 +1078,64 @@
  *     div.icon-preview-group
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-active")
- *         div.icon-name facebook-active
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook")
+ *         div.icon-name facebook
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-default")
- *         div.icon-name facebook-default
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-google-plus")
+ *         div.icon-name google-plus
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-google-plus-active")
- *         div.icon-name google-plus-active
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram")
+ *         div.icon-name instagram
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-google-plus-default")
- *         div.icon-name google-plus-default
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-line")
+ *         div.icon-name line
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-active")
- *         div.icon-name instagram-active
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-meneame")
+ *         div.icon-name meneame
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-default")
- *         div.icon-name instagram-default
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-nk")
+ *         div.icon-name nk
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-line-active")
- *         div.icon-name line-active
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-odnoklassniki")
+ *         div.icon-name odnoklassniki
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-line-default")
- *         div.icon-name line-default
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-qzone")
+ *         div.icon-name qzone
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-meneame-active")
- *         div.icon-name meneame-active
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit")
+ *         div.icon-name reddit
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-meneame-default")
- *         div.icon-name meneame-default
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-tumblr")
+ *         div.icon-name tumblr
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-nk-active")
- *         div.icon-name nk-active
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter")
+ *         div.icon-name twitter
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-nk-default")
- *         div.icon-name nk-default
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-vkontakte")
+ *         div.icon-name vkontakte
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-odnoklassniki-active")
- *         div.icon-name odnoklassniki-active
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-weibo")
+ *         div.icon-name weibo
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-odnoklassniki-default")
- *         div.icon-name odnoklassniki-default
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-wykop")
+ *         div.icon-name wykop
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-qzone-active")
- *         div.icon-name qzone-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-qzone-default")
- *         div.icon-name qzone-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-active")
- *         div.icon-name reddit-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-default")
- *         div.icon-name reddit-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-tumblr-active")
- *         div.icon-name tumblr-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-tumblr-default")
- *         div.icon-name tumblr-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-active")
- *         div.icon-name twitter-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-default")
- *         div.icon-name twitter-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-vkontakte-active")
- *         div.icon-name vkontakte-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-vkontakte-default")
- *         div.icon-name vkontakte-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-weibo-active")
- *         div.icon-name weibo-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-weibo-default")
- *         div.icon-name weibo-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-wykop-active")
- *         div.icon-name wykop-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-wykop-default")
- *         div.icon-name wykop-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-active")
- *         div.icon-name youtube-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-default")
- *         div.icon-name youtube-default
+ *             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube")
+ *         div.icon-name youtube
  */
 /**
  * Typescale:

@@ -41,3 +41,15 @@
 	width: 110px;
 	height: 110px;
 }
+
+.icon-preview-card .icon {
+	color: #656e78;
+}
+
+.icon-preview-card .icon:hover {
+	color: #c5ced9;
+}
+
+.icon-preview-card .icon-name {
+	padding: 5px;
+}
