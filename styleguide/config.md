@@ -2,7 +2,7 @@
 
 ### Head
 
-    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='viewport' content='user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
     link(rel='stylesheet' href='./styleguide/styleguide.css')
     link(rel='stylesheet' href='./styleguide/custom-preview-elements.css')
     link(rel='stylesheet' href='./styleguide/footer.css')
