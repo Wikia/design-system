@@ -38,11 +38,6 @@ $global-footer-section-padding-top: 8px;
 $global-footer-section-header-height: 24px;
 $global-footer-section-header-margin-bottom: 10px;
 
-@mixin transform($value) {
-	-webkit-transform: $value;
-	transform: $value;
-}
-
 // reset and set some defaults (that should be set in DS)
 .global-footer {
 	* {
@@ -236,7 +231,7 @@ $global-footer-section-header-margin-bottom: 10px;
 
 .global-footer__image {
 	&.is-fandom-overview {
-		@include transform(rotate(180deg));
+		transform: rotate(180deg);
 	}
 
 	&.is-community-apps {
