@@ -9,7 +9,7 @@
     padding: 0;
     margin: 0; }
   .global-footer__header-wrapper {
-    display: inline-block;
+    display: block;
     width: 100%; }
   .global-footer__header {
     -webkit-align-items: center;
@@ -189,9 +189,9 @@
   @media only screen and (max-width: 767px) {
     .global-footer__main {
       margin: 0 20px; }
-    .global-footer__header {
-      margin-bottom: 35px;
-      margin-top: 34px; }
+    .global-footer__header-wrapper {
+      padding-bottom: 35px;
+      padding-top: 34px; }
     .global-footer__fandom-header {
       margin-bottom: 29px;
       margin-top: 38px; }
@@ -237,9 +237,9 @@
       height: 501px; }
     .global-footer.is-international .global-footer__main {
       height: 393px; }
-    .global-footer__header {
-      margin-bottom: 34px;
-      margin-top: 43px; }
+    .global-footer__header-wrapper {
+      padding-bottom: 34px;
+      padding-top: 43px; }
     .global-footer__fandom-header, .global-footer__wikia-header {
       height: 26px;
       margin-bottom: 35px;
