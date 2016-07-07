@@ -6,32 +6,28 @@
 }
 
 .color-preview-card {
-	--border-color: #ccc;
-	--color-preview-height: 100px;
-	--color-preview-width: 110px;
 	margin: 10px;
 }
 
 .color-preview-box {
-	border: 1px solid var(--border-color);
-	height: var(--color-preview-height);
-	width: var(--color-preview-width);
+	border: 1px solid #ccc;
+	height: 100px;
+	width: 110px;
 }
 
 .color-preview-name,
 .color-preview-variable,
 .color-preview-value {
-	--padding: 5px;
-	border: solid var(--border-color);
+	border: solid #ccc;
 	border-width: 0 1px 1px;
-	padding: var(--padding);
+	padding: 5px;
 	text-align: center;
-	width: calc(var(--color-preview-width) - 2 * var(--padding));
+	width: 100px;
 	word-wrap: break-word;
 }
 
 .color-preview-variable,
-.color-preview-value  {
+.color-preview-value {
 	font-family: monospace;
 }
 
