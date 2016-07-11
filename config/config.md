@@ -3,11 +3,10 @@
 ### Head
 
     meta(name='viewport' content='user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
-    link(rel='stylesheet' href='./styleguide/styleguide.css')
-    link(rel='stylesheet' href='./styleguide/custom-preview-elements.css')
-    link(rel='stylesheet' href='./styleguide/global-footer.css')
-    link(rel='stylesheet' href='./www/index.css')
-    script(src='./styleguide/styleguide.js')
+    link(rel='stylesheet' href='./styles.css')
+    link(rel='stylesheet' href='./custom-styles.css')
+    link(rel='stylesheet' href='./component-styles.css')
+    script(src='./build.js')
 
 ### Body
 
