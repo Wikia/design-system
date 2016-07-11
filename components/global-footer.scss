@@ -183,7 +183,6 @@
 			.global-footer__link {
 				align-items: center;
 				border-top: $section-line-width solid $color-slate-gray;
-				color: $color-white;
 				display: flex;
 				font: {
 					size: $typescale-size-plus-1;
@@ -208,7 +207,6 @@
 			}
 
 			.global-footer__image {
-				color: $color-slate-gray;
 				transform: rotate(180deg);
 			}
 		}
