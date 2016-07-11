@@ -110,7 +110,6 @@
       -ms-flex-align: center;
       align-items: center;
       border-top: 4px solid #656e78;
-      color: #fff;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
@@ -146,6 +145,10 @@
     height: 24px;
     margin-right: 20px;
     width: 24px; }
+  .global-footer__fandom-section.is-follow-us .global-footer__image {
+    color: #656e78; }
+    .global-footer__fandom-section.is-follow-us .global-footer__image:hover {
+      color: #fff; }
   .global-footer__wikia-section.is-create-wiki .global-footer__link {
     border: solid 1px #c5ced9;
     color: #c5ced9;
@@ -715,12 +718,6 @@
 .color-dark-c8 {
   background-color: #e3bd00; }
 
-.icon-preview-card .icon {
-  width: 110px; }
-
-.icon-preview-card .icon-name {
-  padding: 5px; }
-
 /**
  * Standard Set (24x24):
  *
@@ -1098,124 +1095,64 @@
  *     div.icon-preview-group
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-active")
- *         div.icon-name facebook-active
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook")
+ *         div.icon-name facebook
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook-default")
- *         div.icon-name facebook-default
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-google-plus")
+ *         div.icon-name google-plus
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-google-plus-active")
- *         div.icon-name google-plus-active
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram")
+ *         div.icon-name instagram
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-google-plus-default")
- *         div.icon-name google-plus-default
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-line")
+ *         div.icon-name line
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-active")
- *         div.icon-name instagram-active
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-meneame")
+ *         div.icon-name meneame
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram-default")
- *         div.icon-name instagram-default
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-nk")
+ *         div.icon-name nk
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-line-active")
- *         div.icon-name line-active
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-odnoklassniki")
+ *         div.icon-name odnoklassniki
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-line-default")
- *         div.icon-name line-default
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-qzone")
+ *         div.icon-name qzone
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-meneame-active")
- *         div.icon-name meneame-active
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit")
+ *         div.icon-name reddit
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-meneame-default")
- *         div.icon-name meneame-default
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-tumblr")
+ *         div.icon-name tumblr
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-nk-active")
- *         div.icon-name nk-active
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter")
+ *         div.icon-name twitter
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-nk-default")
- *         div.icon-name nk-default
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-vkontakte")
+ *         div.icon-name vkontakte
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-odnoklassniki-active")
- *         div.icon-name odnoklassniki-active
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-weibo")
+ *         div.icon-name weibo
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-odnoklassniki-default")
- *         div.icon-name odnoklassniki-default
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-wykop")
+ *         div.icon-name wykop
  *       div.icon-preview-card
  *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-qzone-active")
- *         div.icon-name qzone-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-qzone-default")
- *         div.icon-name qzone-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-active")
- *         div.icon-name reddit-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit-default")
- *         div.icon-name reddit-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-tumblr-active")
- *         div.icon-name tumblr-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-tumblr-default")
- *         div.icon-name tumblr-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-active")
- *         div.icon-name twitter-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter-default")
- *         div.icon-name twitter-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-vkontakte-active")
- *         div.icon-name vkontakte-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-vkontakte-default")
- *         div.icon-name vkontakte-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-weibo-active")
- *         div.icon-name weibo-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-weibo-default")
- *         div.icon-name weibo-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-wykop-active")
- *         div.icon-name wykop-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-wykop-default")
- *         div.icon-name wykop-default
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-active")
- *         div.icon-name youtube-active
- *       div.icon-preview-card
- *         svg.icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube-default")
- *         div.icon-name youtube-default
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube")
+ *         div.icon-name youtube
  */
 /**
  * Typescale:
