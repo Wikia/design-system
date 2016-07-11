@@ -15,11 +15,11 @@
     "test",
     "tests"
   ],
-  "_release": "959db1704f",
+  "_release": "2b568b4b68",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "959db1704f50a16cd52078376177f0d31bd4f678"
+    "commit": "2b568b4b68eec36ab84c93c1fcb5f6357816bf5a"
   },
   "_source": "git://github.com/Wikia/design-system.git",
   "_target": "master",

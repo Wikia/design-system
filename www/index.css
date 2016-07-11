@@ -44,7 +44,7 @@
 		 */ }
     .global-footer__licensing-and-vertical a,
     .global-footer__licensing-and-vertical a:visited {
-      color: #1a5eb8;
+      color: #00b7e0;
       text-decoration: none; }
     .global-footer__licensing-and-vertical a:hover {
       color: #fff; }
@@ -563,9 +563,17 @@
  *         div.color-preview-name Off-White 96%
  *         div.color-preview-variable $color-off-white
  *         div.color-preview-value #f6f6f6
+ *       div#color-link.color-preview-card
+ *         div.color-preview-box.color-link
+ *         div.color-preview-name Link
+ *         div.color-preview-variable $color-link
+ *         div.color-preview-value #00b7e0
  */
 .color-off-white {
   background-color: #f6f6f6; }
+
+.color-link {
+  background-color: #00b7e0; }
 
 /**
  * Light Theme:
