@@ -9,20 +9,33 @@
     padding: 0;
     margin: 0; }
   .global-footer__header-wrapper {
-    display: inline-block;
+    display: block;
     width: 100%; }
   .global-footer__header {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 0; }
   .global-footer__licensing-and-vertical {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
     background: rgba(38, 38, 38, 0.5);
     color: #fff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     font-size: 12px;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    line-height: 1.5em;
     min-height: 50px;
     padding: 16px 20px;
     /**
@@ -31,7 +44,7 @@
 		 */ }
     .global-footer__licensing-and-vertical a,
     .global-footer__licensing-and-vertical a:visited {
-      color: #1a5eb8;
+      color: #00b7e0;
       text-decoration: none; }
     .global-footer__licensing-and-vertical a:hover {
       color: #fff; }
@@ -59,13 +72,23 @@
     text-transform: uppercase;
     white-space: nowrap; }
   .global-footer__main {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .global-footer__fandom-header, .global-footer__wikia-header {
     margin: 0; }
   .global-footer__fandom-sections, .global-footer__wikia-sections {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .global-footer__fandom-section, .global-footer__wikia-section {
     border-top: 4px solid #656e78;
@@ -83,11 +106,17 @@
     border: 0;
     padding: 0; }
     .global-footer__fandom-section.is-fandom-overview .global-footer__link {
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       border-top: 4px solid #656e78;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
       font-size: 18px;
       font-weight: bold;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       margin: 0;
       padding: 2px 0 28px 0;
@@ -99,9 +128,15 @@
       .global-footer__fandom-section.is-fandom-overview .global-footer__link.is-tv {
         border-color: #00b7e0; }
     .global-footer__fandom-section.is-fandom-overview .global-footer__image {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
       transform: rotate(180deg); }
   .global-footer__fandom-section.is-follow-us .global-footer__links-list {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
   .global-footer__fandom-section.is-follow-us .global-footer__link {
     background: no-repeat center;
@@ -129,6 +164,8 @@
     .global-footer__wikia-section.is-create-wiki .global-footer__link:hover {
       color: #fff; }
   .global-footer__wikia-section.is-community-apps .global-footer__links-list {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
   .global-footer__wikia-section.is-community-apps .global-footer__link {
     display: block;
@@ -155,9 +192,9 @@
   @media only screen and (max-width: 767px) {
     .global-footer__main {
       margin: 0 20px; }
-    .global-footer__header {
-      margin-bottom: 35px;
-      margin-top: 34px; }
+    .global-footer__header-wrapper {
+      padding-bottom: 35px;
+      padding-top: 34px; }
     .global-footer__fandom-header {
       margin-bottom: 29px;
       margin-top: 38px; }
@@ -203,9 +240,9 @@
       height: 501px; }
     .global-footer.is-international .global-footer__main {
       height: 393px; }
-    .global-footer__header {
-      margin-bottom: 34px;
-      margin-top: 43px; }
+    .global-footer__header-wrapper {
+      padding-bottom: 34px;
+      padding-top: 43px; }
     .global-footer__fandom-header, .global-footer__wikia-header {
       height: 26px;
       margin-bottom: 35px;
@@ -213,12 +250,16 @@
     .global-footer__fandom-header {
       width: 25%; }
     .global-footer__fandom-sections {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
       height: 393px;
       width: 25%; }
     .global-footer__wikia-header {
       width: 75%; }
     .global-footer__wikia-sections {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
       height: 393px;
       width: 75%; }
@@ -243,6 +284,8 @@
       height: 209px;
       width: 200px; }
       .global-footer__wikia-section.is-community-apps .global-footer__links-list {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
         margin-top: 5px; }
     .global-footer__wikia-section.is-advertise {
@@ -523,9 +566,17 @@
  *         div.color-preview-name Off-White 96%
  *         div.color-preview-variable $color-off-white
  *         div.color-preview-value #f6f6f6
+ *       div#color-link.color-preview-card
+ *         div.color-preview-box.color-link
+ *         div.color-preview-name Link
+ *         div.color-preview-variable $color-link
+ *         div.color-preview-value #00b7e0
  */
 .color-off-white {
   background-color: #f6f6f6; }
+
+.color-link {
+  background-color: #00b7e0; }
 
 /**
  * Light Theme:

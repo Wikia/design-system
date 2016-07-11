@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+	autoprefixer = require('gulp-autoprefixer'),
 	inject = require('gulp-inject'),
 	livereload = require('gulp-livereload'),
 	scss = require('gulp-sass'),
@@ -9,6 +10,10 @@ var gulp = require('gulp'),
 gulp.task('scss', function () {
 	return gulp.src('styles/index.scss')
 		.pipe(scss())
+		.pipe(autoprefixer({
+			browsers: ['last 3 versions'],
+			cascade: false
+		}))
 		.pipe(gulp.dest('www'));
 });
 

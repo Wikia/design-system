@@ -15,16 +15,16 @@
 	$desktop-row-header-en-margin-bottom: 35px;
 	$desktop-row-header-en-height: $desktop-row-header-en-margin-top + $en-logo-height + $desktop-row-header-en-margin-bottom;
 
-	$desktop-row-header-international-margin-top: 43px;
-	$desktop-row-header-international-margin-bottom: 34px;
-	$desktop-row-header-international-height: $desktop-row-header-international-margin-top + $international-logo-height + $desktop-row-header-international-margin-bottom;
+	$desktop-row-header-international-padding-top: 43px;
+	$desktop-row-header-international-padding-bottom: 34px;
+	$desktop-row-header-international-height: $desktop-row-header-international-padding-top + $international-logo-height + $desktop-row-header-international-padding-bottom;
 
 	$mobile-row-header-en-fandom-margin-top: 38px;
 	$mobile-row-header-en-wikia-margin-top: 61px;
 	$mobile-row-header-en-margin-bottom: 29px;
 
-	$mobile-row-header-international-margin-top: 34px;
-	$mobile-row-header-international-margin-bottom: 35px;
+	$mobile-row-header-international-padding-top: 34px;
+	$mobile-row-header-international-padding-bottom: 35px;
 
 	$section-line-width: 4px;
 	$desktop-row-top-height: 205px + $section-line-width;
@@ -57,7 +57,7 @@
 
 	// main title and license
 	&__header-wrapper {
-		display: inline-block;
+		display: block;
 		width: 100%;
 	}
 
@@ -75,6 +75,7 @@
 		display: flex;
 		font-size: $typescale-size-minus-2;
 		justify-content: center;
+		line-height: $line-height;
 		min-height: 50px;
 		padding: 16px 20px;
 
@@ -84,7 +85,7 @@
 		 */
 		a,
 		a:visited {
-			color: $color-light-blue;
+			color: $color-link;
 			text-decoration: none;
 		}
 
@@ -306,10 +307,10 @@
 			margin: 0 20px;
 		}
 
-		&__header {
-			margin: {
-				bottom: $mobile-row-header-international-margin-bottom;
-				top: $mobile-row-header-international-margin-top;
+		&__header-wrapper {
+			padding: {
+				bottom: $mobile-row-header-international-padding-bottom;
+				top: $mobile-row-header-international-padding-top;
 			}
 		}
 
@@ -416,10 +417,10 @@
 			}
 		}
 
-		&__header {
-			margin: {
-				bottom: $desktop-row-header-international-margin-bottom;
-				top: $desktop-row-header-international-margin-top;
+		&__header-wrapper {
+			padding: {
+				bottom: $desktop-row-header-international-padding-bottom;
+				top: $desktop-row-header-international-padding-top;
 			}
 		}
 
