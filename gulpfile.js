@@ -7,16 +7,16 @@ var gulp = require('gulp'),
 	clean = require('gulp-clean'),
 	rename = require('gulp-rename');
 
+var tmpDir = './tmp/',
+	outputDir = './',
+	outputFile = 'index.html';
+
 // BUILD
 gulp.task('clean-up', function () {
-	return gulp.src('./www', {read: false}).pipe(clean());
+	return gulp.src(tmpDir, {read: false}).pipe(clean());
 });
 
-gulp.task('copy-config-files', ['clean-up'], function () {
-	return gulp.src(['./config/*.css', './config/*.js']).pipe(gulp.dest('./www'));
-});
-
-gulp.task('build-styles', ['copy-config-files'], function () {
+gulp.task('build-styles', ['clean-up'], function () {
 	return gulp.src('styles/index.scss')
 		.pipe(scss())
 		.pipe(autoprefixer({
@@ -24,29 +24,64 @@ gulp.task('build-styles', ['copy-config-files'], function () {
 			cascade: false
 		}))
 		.pipe(rename('component-styles.css'))
-		.pipe(gulp.dest('./www'));
+		.pipe(gulp.dest(tmpDir));
 });
 
 gulp.task('build-html', ['build-styles'], function () {
 	return gulp.src(['./styles/*.scss', './components/*.md'])
 		.pipe(styledown({
 			config: './config/config.md',
-			filename: 'index.html'
+			filename: outputFile
 		}))
-		.pipe(gulp.dest('./www'));
+		.pipe(gulp.dest(tmpDir));
 });
 
-gulp.task('inject-icons', ['build-html'], function () {
-	return gulp.src('./www/index.html')
+gulp.task('inject-styles', ['build-html'], function () {
+	return gulp.src(tmpDir + outputFile)
 		.pipe(inject(
-			gulp.src('./bower_components/design-system/dist/*.svg'), {
+			gulp.src([
+				'./config/default-styles.css',
+				'./config/custom-styles.css',
+				tmpDir + 'component-styles.css'
+			]),
+			{
+				transform: function (filePath, file) {
+					return '<style>' + file.contents.toString('utf8') + '</style>';
+				}
+			}
+		))
+		.pipe(gulp.dest(tmpDir));
+});
+
+gulp.task('inject-scripts', ['inject-styles'], function () {
+	return gulp.src(tmpDir + outputFile)
+		.pipe(inject(
+			gulp.src('./config/build.js'),
+			{
+				transform: function (filePath, file) {
+					return '<script>' + file.contents.toString('utf8') + '</script>';
+				}
+			}
+		))
+		.pipe(gulp.dest(tmpDir));
+});
+
+gulp.task('inject-icons', ['inject-scripts'], function () {
+	return gulp.src(tmpDir + outputFile)
+		.pipe(inject(
+			gulp.src('./bower_components/design-system/dist/*.svg'),
+			{
 				relative: true,
 				transform: function (filePath, file) {
 					return file.contents.toString('utf8');
 				}
 			}
 		))
-		.pipe(gulp.dest('./www'));
+		.pipe(gulp.dest(tmpDir));
+});
+
+gulp.task('copy-output-file', ['inject-icons'], function () {
+	return gulp.src(tmpDir + outputFile).pipe(gulp.dest(outputDir));
 });
 
 // WATCH
@@ -72,4 +107,4 @@ gulp.task('watch', ['default'], function () {
 });
 
 // DEFAULT TASK
-gulp.task('default', ['inject-icons']);
+gulp.task('default', ['copy-output-file']);
