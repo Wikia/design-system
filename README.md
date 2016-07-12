@@ -40,4 +40,17 @@ Changes made in Design System will be automatically reflected on Reference Page.
 - `npm run build` - build Reference Page and store output in *index.html*
 - `npm run dev` - build Reference Page on each file change
 
-If you want your browser to reload the page on every rebuild you have to install [livereload browser extension](http://livereload.com/extensions/).
+## Live page reload
+
+Running `npm run dev` will rebuild files on each change, but to see them live you have to refresh page in browser.
+If you want it to be automatically, follow these steps:
+
+1. Install [livereload browser extension](http://livereload.com/extensions/)
+1. Open Reference Page index.html (make sure that page is served from server, because accessing page from *file://* protocol will not work)
+1. Make change in code
+1. Enjoy your fresh page
+
+If you are using IDE from JetBrains like IntelliJ IDEA, you can access Reference Page by:
+
+1. Right click on *index.html*
+1. Select *Open in browser* and choose browser that you have livereload extension installed

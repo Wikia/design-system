@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	inject = require('gulp-inject'),
+	livereload = require('gulp-livereload'),
 	scss = require('gulp-sass'),
 	styledown = require('gulp-styledown'),
 	watch = require('gulp-watch'),
@@ -87,11 +88,13 @@ gulp.task('copy-output-file', ['inject-icons'], function () {
 // WATCH
 gulp.task('rebuild', ['default'], function (done) {
 	console.log('\n# Finished rebuilding files.');
+	livereload.reload();
 	done();
 });
 
 gulp.task('watch', ['default'], function () {
 	console.log('\n# Gulp is watching your files.\n# You can start developing.');
+	livereload.listen();
 
 	return watch([
 		'../design-system/**.scss',
