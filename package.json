@@ -10,7 +10,8 @@
     "Tomasz Napieralski <tomasz.napieralski@wikia-inc.com>"
   ],
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "dev": "gulp watch"
   },
   "repository": {
     "type": "git",

@@ -1,11 +1,9 @@
 var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	inject = require('gulp-inject'),
-	livereload = require('gulp-livereload'),
 	scss = require('gulp-sass'),
 	styledown = require('gulp-styledown'),
 	watch = require('gulp-watch'),
-	exec = require('child_process').exec,
 	clean = require('gulp-clean'),
 	rename = require('gulp-rename');
 
@@ -51,30 +49,27 @@ gulp.task('inject-icons', ['build-html'], function () {
 		.pipe(gulp.dest('./www'));
 });
 
-gulp.task('default', ['inject-icons']);
-
 // WATCH
-gulp.task('build-and-reload', ['build'], function (done) {
-	livereload.reload();
+gulp.task('rebuild', ['default'], function (done) {
+	console.log('\n# Finished rebuilding files.');
 	done();
 });
 
-gulp.task('watch', ['build'], function () {
-	livereload.listen();
+gulp.task('watch', ['default'], function () {
+	console.log('\n# Gulp is watching your files.\n# You can start developing.');
 
 	return watch([
-		'./styles/*.scss',
-		'./styleguide/*.*',
-		'./components/*.(scss|md)'
+		'../design-system/**.scss',
+		'./components/*.md',
+		'./config/*.css',
+		'./config/*.js',
+		'./config/*.md',
+		'./styles/*.scss'
 	], function () {
-		gulp.start('build-and-reload');
+		console.log('\n# Change detected, rebuilding files...');
+		gulp.start('rebuild');
 	});
 });
 
-gulp.task('watch-design-system', function () {
-	return watch(
-		'../design-system/**.scss'
-	, function () {
-		exec('bower update');
-	});
-});
+// DEFAULT TASK
+gulp.task('default', ['inject-icons']);
