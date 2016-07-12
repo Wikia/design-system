@@ -16,8 +16,8 @@ Choose basic setup when you want to work on Reference Page alone.
 
 1. Download repository
 1. Go to repository
-1. Run command: `npm run setup`
-1. Run command: `npm run dev`
+1. Run command: `npm run setup`, to install dependencies
+1. Run command: `npm run dev`, to build Reference Page and to watch files
 1. Start developing
 
 ### Advanced setup
@@ -28,9 +28,9 @@ Changes made in Design System will be automatically reflected on Reference Page.
 1. Download repository
 1. Download Wikia | Design System repository (make sure that both repositories are in the same directory)
 1. Go to Wikia | Design System Reference Page repository
-1. Run command: `npm run setup`
-1. Run command: `npm run link`
-1. Run command: `npm run dev`
+1. Run command: `npm run setup`, to install dependencies
+1. Run command: `npm run link`, to use your local Design System
+1. Run command: `npm run dev`, to build Reference Page and to watch files
 1. Start developing
 
 ## Scripts
