@@ -2,29 +2,40 @@ var assert = require('chai').assert,
 	configLoader = require('vrt').config,
 	testCaseLoader = require('vrt').testcase,
 	driver = require('vrt').driver,
+	util = require('util'),
 	fileUrl = require('file-url');
 
-describe('reference page', function () {
+function runTest(mochaTest, done, browser, useMobile) {
 	var config, client, testCase;
 
-	beforeEach(function () {
-		testCase = testCaseLoader.load(this);
-		config = configLoader.loadConfig(testCase);
-		client = driver.loadClient(config);
+	testCase = testCaseLoader.load(mochaTest, {
+		browser: browser,
+		useMobile: useMobile || false
 	});
 
-	it('looks good', function (done) {
-		client
-			.init()
-			.url(fileUrl('index.html'))
-			.webdrivercss(testCase.group, config.webdrivercssTestCase, function (err, resp) {
-				assert.equal(resp[testCase.name][0].misMatchPercentage, 0, 'Mismatch percentage different than 0');
-				assert.isOk(resp[testCase.name][0].isExactSameImage);
-			})
-			.call(done);
+	config = configLoader.loadConfig(testCase);
+	client = driver.loadClient(config);
+
+	client
+		.init()
+		.url(fileUrl('index.html'))
+		.webdrivercss(testCase.group, config.webdrivercssTestCase, function (err, resp) {
+			assert.equal(resp[testCase.name][0].misMatchPercentage, 0, 'Mismatch percentage different than 0');
+			assert.isOk(resp[testCase.name][0].isExactSameImage);
+		})
+		.end(done);
+}
+
+describe('reference page', function () {
+	it('chrome', function (done) {
+		runTest(this, done, 'chrome');
 	});
 
-	after(function (done) {
-		client.end(done);
+	it('firefox', function (done) {
+		runTest(this, done, 'firefox');
+	});
+
+	it('chrome mobile', function (done) {
+		runTest(this, done, 'chrome', true);
 	});
 });
