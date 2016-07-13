@@ -12,6 +12,22 @@ var tmpDir = './tmp/',
 	outputDir = './',
 	outputFile = 'index.html';
 
+function injectFileContents(src, dest, prefix, suffix) {
+	prefix = prefix || '';
+	suffix = suffix || '';
+
+	return gulp.src(tmpDir + outputFile)
+		.pipe(inject(
+			gulp.src(src),
+			{
+				transform: function (filePath, file) {
+					return prefix + file.contents.toString('utf8') + suffix;
+				}
+			}
+		))
+		.pipe(gulp.dest(dest));
+}
+
 // BUILD
 gulp.task('clean-up', function () {
 	return gulp.src(tmpDir, {read: false}).pipe(clean());
@@ -38,47 +54,18 @@ gulp.task('build-html', ['build-styles'], function () {
 });
 
 gulp.task('inject-styles', ['build-html'], function () {
-	return gulp.src(tmpDir + outputFile)
-		.pipe(inject(
-			gulp.src([
-				'./config/default-styles.css',
-				'./config/custom-styles.css',
-				tmpDir + 'component-styles.css'
-			]),
-			{
-				transform: function (filePath, file) {
-					return '<style>' + file.contents.toString('utf8') + '</style>';
-				}
-			}
-		))
-		.pipe(gulp.dest(tmpDir));
+	return injectFileContents(
+		['./config/default-styles.css', './config/custom-styles.css', tmpDir + 'component-styles.css'],
+		tmpDir, '<style>', '</style>'
+	);
 });
 
 gulp.task('inject-scripts', ['inject-styles'], function () {
-	return gulp.src(tmpDir + outputFile)
-		.pipe(inject(
-			gulp.src('./config/build.js'),
-			{
-				transform: function (filePath, file) {
-					return '<script>' + file.contents.toString('utf8') + '</script>';
-				}
-			}
-		))
-		.pipe(gulp.dest(tmpDir));
+	return injectFileContents('./config/build.js', tmpDir, '<script>', '</script>');
 });
 
 gulp.task('inject-icons', ['inject-scripts'], function () {
-	return gulp.src(tmpDir + outputFile)
-		.pipe(inject(
-			gulp.src('./bower_components/design-system/dist/*.svg'),
-			{
-				relative: true,
-				transform: function (filePath, file) {
-					return file.contents.toString('utf8');
-				}
-			}
-		))
-		.pipe(gulp.dest(tmpDir));
+	return injectFileContents('./bower_components/design-system/dist/*.svg', tmpDir);
 });
 
 gulp.task('copy-output-file', ['inject-icons'], function () {
