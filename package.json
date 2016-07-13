@@ -1,32 +1,24 @@
 {
   "name": "design-system-reference-page",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "contributors": [
-    "Bogna Knychala <bogna.ka@gmail.com>",
-    "Bartosz V. Bentkowski <me@bartoszbentkowski.com>",
-    "Mateusz Warkocki <warkot@wikia-inc.com>",
-    "Tomasz Napieralski <tomasz.napieralski@wikia-inc.com>"
-  ],
   "scripts": {
-    "build": "gulp"
+    "setup": "npm install && bower update",
+    "link": "cd ../design-system && bower link && cd ../design-system-reference-page && bower link design-system",
+    "build": "gulp",
+    "dev": "gulp watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Wikia/design-system-reference-page.git"
   },
-  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Wikia/design-system-reference-page/issues"
-  },
-  "homepage": "https://github.com/Wikia/design-system-reference-page#readme",
   "devDependencies": {
     "gulp": "3.9.1",
     "gulp-autoprefixer": "3.1.0",
+    "gulp-clean": "0.3.2",
     "gulp-inject": "3.0.0",
     "gulp-livereload": "3.8.1",
+    "gulp-rename": "1.2.2",
     "gulp-sass": "2.3.1",
     "gulp-styledown": "0.0.2",
     "gulp-watch": "4.3.8",
