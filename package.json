@@ -5,7 +5,8 @@
     "setup": "npm install && bower update",
     "link": "cd ../design-system && bower link && cd ../design-system-reference-page && bower link design-system",
     "build": "gulp",
-    "dev": "gulp watch"
+    "dev": "gulp watch",
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -13,6 +14,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "chai": "3.5.0",
+    "file-url": "1.1.0",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "3.1.0",
     "gulp-clean": "0.3.2",
@@ -22,6 +25,8 @@
     "gulp-sass": "2.3.1",
     "gulp-styledown": "0.0.2",
     "gulp-watch": "4.3.8",
-    "styledown": "1.0.2"
+    "mocha": "2.5.3",
+    "styledown": "1.0.2",
+    "vrt": "0.0.1"
   }
 }
