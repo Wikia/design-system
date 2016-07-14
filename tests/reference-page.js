@@ -6,6 +6,12 @@ var assert = require('chai').assert,
 	fileUrl = require('file-url');
 
 function runTest(mochaTest, done, seleniumOptions) {
+	// Hacky but works
+	if (process.env.VRT_UPDATE_BASELINE === '1') {
+		console.log('Updating the baseline');
+		seleniumOptions.updateBaseline = true;
+	}
+
 	var testCase = testCaseLoader.load(mochaTest, seleniumOptions),
 		config = configLoader.loadConfig(testCase),
 		client = driver.loadClient(config);
