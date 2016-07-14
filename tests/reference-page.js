@@ -6,11 +6,9 @@ var assert = require('chai').assert,
 	fileUrl = require('file-url');
 
 function runTest(mochaTest, done, seleniumOptions) {
-	var config, client, testCase;
-
-	testCase = testCaseLoader.load(mochaTest, seleniumOptions);
-	config = configLoader.loadConfig(testCase);
-	client = driver.loadClient(config);
+	var testCase = testCaseLoader.load(mochaTest, seleniumOptions),
+		config = configLoader.loadConfig(testCase),
+		client = driver.loadClient(config);
 
 	client
 		.init()
