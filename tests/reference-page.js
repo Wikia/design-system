@@ -5,14 +5,10 @@ var assert = require('chai').assert,
 	util = require('util'),
 	fileUrl = require('file-url');
 
-function runTest(mochaTest, done, browser, useMobile) {
+function runTest(mochaTest, done, seleniumOptions) {
 	var config, client, testCase;
 
-	testCase = testCaseLoader.load(mochaTest, {
-		browser: browser,
-		useMobile: useMobile || false
-	});
-
+	testCase = testCaseLoader.load(mochaTest, seleniumOptions);
 	config = configLoader.loadConfig(testCase);
 	client = driver.loadClient(config);
 
@@ -20,22 +16,33 @@ function runTest(mochaTest, done, browser, useMobile) {
 		.init()
 		.url(fileUrl('index.html'))
 		.webdrivercss(testCase.group, config.webdrivercssTestCase, function (err, resp) {
-			assert.equal(resp[testCase.name][0].misMatchPercentage, 0, 'Mismatch percentage different than 0');
-			assert.isOk(resp[testCase.name][0].isExactSameImage);
+			var result = resp[testCase.name][0];
+
+			assert.ifError(err, 'There is no error');
+			assert.isOk(result.isExactSameImage, result.message);
 		})
 		.end(done);
 }
 
 describe('reference page', function () {
 	it('chrome', function (done) {
-		runTest(this, done, 'chrome');
+		runTest(this, done, {
+			browser: 'chrome',
+			screenWidth: [1024, 1300]
+		});
 	});
 
 	it('firefox', function (done) {
-		runTest(this, done, 'firefox');
+		runTest(this, done, {
+			browser: 'firefox',
+			screenWidth: [1024, 1300]
+		});
 	});
 
 	it('chrome mobile', function (done) {
-		runTest(this, done, 'chrome', true);
+		runTest(this, done, {
+			browser: 'chrome',
+			useMobile: true
+		});
 	});
 });
