@@ -20,10 +20,12 @@ function runTest(mochaTest, done, seleniumOptions) {
 		.init()
 		.url(fileUrl('index.html'))
 		.webdrivercss(testCase.group, config.webdrivercssTestCase, function (err, resp) {
-			var result = resp[testCase.name][0];
+			if (process.env.VRT_UPDATE_BASELINE !== '1') {
+				var result = resp[testCase.name][0];
 
-			assert.ifError(err, 'There is no error');
-			assert.isOk(result.isExactSameImage, result.message);
+				assert.ifError(err, 'There is no error');
+				assert.isOk(result.isExactSameImage, result.message);
+			}
 		})
 		.end(done);
 }
