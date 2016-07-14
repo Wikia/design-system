@@ -12,3 +12,6 @@ visuals/reference-page/reference-page.*px.png
 npm-debug.log
 *.DS_Store
 *._.DS_Store
+
+# Jenkins
+debug.log
