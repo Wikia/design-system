@@ -30,8 +30,8 @@
   "global-footer-wikia-company-overview-link-contact":"Contato",
   "global-footer-wikia-company-overview-link-news":"Notícias",
   "global-footer-wikia-company-overview-link-wikia-gives-back":"Wikia Gives Back",
-  "global-footer-wikia-site-overview-api":"API",
-  "global-footer-wikia-site-overview-global-sitemap":"Mapa do site global",
+  "global-footer-wikia-site-overview-link-api":"API",
+  "global-footer-wikia-site-overview-link-global-sitemap":"Mapa do site global",
   "global-footer-wikia-site-overview-link-terms-of-use":"Termos de uso",
-  "global-footer-wikia-site-overview-privacy-policy":"Política de privacidade"
+  "global-footer-wikia-site-overview-link-privacy-policy":"Política de privacidade"
 }

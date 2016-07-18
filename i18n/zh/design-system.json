@@ -30,8 +30,8 @@
   "global-footer-wikia-company-overview-link-contact":"聯繫我們",
   "global-footer-wikia-company-overview-link-news":"新聞",
   "global-footer-wikia-company-overview-link-wikia-gives-back":"Wikia回饋",
-  "global-footer-wikia-site-overview-api":"API",
-  "global-footer-wikia-site-overview-global-sitemap":"全球網站地圖",
+  "global-footer-wikia-site-overview-link-api":"API",
+  "global-footer-wikia-site-overview-link-global-sitemap":"全球網站地圖",
   "global-footer-wikia-site-overview-link-terms-of-use":"使用條款",
-  "global-footer-wikia-site-overview-privacy-policy":"隱私政策"
+  "global-footer-wikia-site-overview-link-privacy-policy":"隱私政策"
 }
