@@ -14,6 +14,7 @@ $breakpoint-mobile-only: "#{$screen} and (max-width:#{$breakpoint-tablet - 1})";
 $breakpoint-tablet-up: "#{$screen} and (min-width:#{$breakpoint-tablet})";
 $breakpoint-tablet-only: "#{$screen} and (min-width:#{$breakpoint-tablet}) and (max-width:#{$breakpoint-desktop - 1})";
 
+$breakpoint-desktop-down: "#{$screen} and (max-width:#{$breakpoint-desktop - 1})";
 $breakpoint-desktop-up: "#{$screen} and (min-width:#{$breakpoint-desktop})";
 $breakpoint-desktop-only: "#{$screen} and (min-width:#{$breakpoint-desktop}) and (max-width:#{$breakpoint-desktop-xl - 1})";
 
