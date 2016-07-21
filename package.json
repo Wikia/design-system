@@ -7,7 +7,7 @@
     "build": "gulp",
     "dev": "gulp watch",
     "test": "node test",
-    "update-baseline": "cmd /C \"set \"VRT_UPDATE_BASELINE=1\" && npm run test\""
+    "update-baseline": "npm run test & gulp update-baseline"
   },
   "repository": {
     "type": "git",
