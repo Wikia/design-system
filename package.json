@@ -1,6 +1,6 @@
 {
   "name": "design-system-reference-page",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "setup": "npm install && bower update",
     "link": "cd ../design-system && bower link && cd ../design-system-reference-page && bower link design-system",
