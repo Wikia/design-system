@@ -6,11 +6,6 @@ var assert = require('chai').assert,
 	fileUrl = require('file-url');
 
 function runTest(mochaTest, done, seleniumOptions) {
-	if (process.env.VRT_UPDATE_BASELINE === '1') {
-		console.log('Updating the baseline');
-		seleniumOptions.updateBaseline = true;
-	}
-
 	var testCase = testCaseLoader.load(mochaTest, seleniumOptions),
 		config = configLoader.loadConfig(testCase),
 		client = driver.loadClient(config);
@@ -19,12 +14,10 @@ function runTest(mochaTest, done, seleniumOptions) {
 		.init()
 		.url(fileUrl('index.html'))
 		.webdrivercss(testCase.group, config.webdrivercssTestCase, function (err, resp) {
-			if (process.env.VRT_UPDATE_BASELINE !== '1') {
-				var result = resp[testCase.name][0];
+			var result = resp[testCase.name][0];
 
-				assert.ifError(err, 'There is no error');
-				assert.isOk(result.isExactSameImage, result.message);
-			}
+			assert.ifError(err, 'There is no error');
+			assert.isOk(result.isExactSameImage, result.message);
 		})
 		.end(done);
 }
