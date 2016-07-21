@@ -1,13 +1,13 @@
 {
   "name": "design-system-reference-page",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "setup": "npm install && bower update",
     "link": "cd ../design-system && bower link && cd ../design-system-reference-page && bower link design-system",
     "build": "gulp",
     "dev": "gulp watch",
     "test": "node test",
-    "update-baseline": "cmd /C \"set \"VRT_UPDATE_BASELINE=1\" && npm run test\""
+    "update-baseline": "npm run test & gulp update-baseline"
   },
   "repository": {
     "type": "git",
