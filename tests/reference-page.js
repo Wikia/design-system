@@ -26,14 +26,14 @@ describe('reference page', function () {
 	it('chrome', function (done) {
 		runTest(this, done, {
 			browser: 'chrome',
-			screenWidth: [1024, 1300]
+			screenWidth: [1000, 1300]
 		});
 	});
 
 	it('firefox', function (done) {
 		runTest(this, done, {
 			browser: 'firefox',
-			screenWidth: [1024, 1300]
+			screenWidth: [1000, 1300]
 		});
 	});
 

@@ -28,6 +28,6 @@
     "gulp-watch": "4.3.8",
     "mocha": "2.5.3",
     "styledown": "1.0.2",
-    "vrt": "Wikia/visual-regression-testing#v0.0.3"
+    "vrt": "Wikia/visual-regression-testing#0.0.4"
   }
 }
