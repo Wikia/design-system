@@ -164,7 +164,8 @@
 	&__link {
 		&,
 		&:active,
-		&:visited {
+		&:visited,
+		&:focus {
 			color: $color-blue-gray;
 			font-size: $typescale-size-minus-1;
 			font-weight: normal;
