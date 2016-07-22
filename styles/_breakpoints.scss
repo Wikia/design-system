@@ -9,8 +9,8 @@
  *       li.breakpoint-preview-mobile-up
  *       li.breakpoint-preview-mobile-only
  *       li.breakpoint-preview-tablet-up
+ *       li.breakpoint-preview-tablet-down
  *       li.breakpoint-preview-tablet-only
- *       li.breakpoint-preview-desktop-down
  *       li.breakpoint-preview-desktop-up
  *       li.breakpoint-preview-desktop-only
  *       li.breakpoint-preview-desktop-xl-up
@@ -36,8 +36,8 @@
 	mobile-up: $breakpoint-mobile-up,
 	mobile-only: $breakpoint-mobile-only,
 	tablet-up: $breakpoint-tablet-up,
+	tablet-down: $breakpoint-tablet-down,
 	tablet-only: $breakpoint-tablet-only,
-	desktop-down: $breakpoint-desktop-down,
 	desktop-up: $breakpoint-desktop-up,
 	desktop-only: $breakpoint-desktop-only,
 	desktop-xl-up: $breakpoint-desktop-xl-up

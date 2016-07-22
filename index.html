@@ -601,8 +601,8 @@ code.sg:first-child {
  *       li.breakpoint-preview-mobile-up
  *       li.breakpoint-preview-mobile-only
  *       li.breakpoint-preview-tablet-up
+ *       li.breakpoint-preview-tablet-down
  *       li.breakpoint-preview-tablet-only
- *       li.breakpoint-preview-desktop-down
  *       li.breakpoint-preview-desktop-up
  *       li.breakpoint-preview-desktop-only
  *       li.breakpoint-preview-desktop-xl-up
@@ -624,11 +624,11 @@ code.sg:first-child {
 .breakpoint-preview-tablet-up::after {
   content: "$breakpoint-tablet-up: only screen and (min-width:768px)"; }
 
+.breakpoint-preview-tablet-down::after {
+  content: "$breakpoint-tablet-down: only screen and (max-width:1023px)"; }
+
 .breakpoint-preview-tablet-only::after {
   content: "$breakpoint-tablet-only: only screen and (min-width:768px) and (max-width:1023px)"; }
-
-.breakpoint-preview-desktop-down::after {
-  content: "$breakpoint-desktop-down: only screen and (max-width:1023px)"; }
 
 .breakpoint-preview-desktop-up::after {
   content: "$breakpoint-desktop-up: only screen and (min-width:1024px)"; }
@@ -1616,8 +1616,8 @@ body {
             <li class="breakpoint-preview-mobile-up"></li>
             <li class="breakpoint-preview-mobile-only"></li>
             <li class="breakpoint-preview-tablet-up"></li>
+            <li class="breakpoint-preview-tablet-down"></li>
             <li class="breakpoint-preview-tablet-only"></li>
-            <li class="breakpoint-preview-desktop-down"></li>
             <li class="breakpoint-preview-desktop-up"></li>
             <li class="breakpoint-preview-desktop-only"></li>
             <li class="breakpoint-preview-desktop-xl-up"></li>
@@ -1629,8 +1629,8 @@ body {
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-mobile-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-mobile-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-tablet-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-tablet-down&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-tablet-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-desktop-down&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-desktop-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-desktop-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-desktop-xl-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
