@@ -302,7 +302,7 @@
 		padding: 0;
 	}
 
-	@media #{$breakpoint-desktop-down} {
+	@media #{$breakpoint-tablet-down} {
 		&__main {
 			margin: 0 20px;
 		}
