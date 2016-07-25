@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/Wikia/design-system",
   "authors": [
     "Warkot <mateusz.warkocki@wikia-inc.com>",
@@ -11,9 +11,7 @@
   "license": "GPL-3.0",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "assets/*",
+    "gulpfile.js"
   ]
 }
