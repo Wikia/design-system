@@ -7,7 +7,7 @@
 			<h2 class="wds-global-footer__fandom-header">
 				<a href="#">
 					<svg class="wds-global-footer__fandom-logo" alt="Fandom">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-logo-fandom"></use>
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 					</svg>
 				</a>
 			</h2>
@@ -17,32 +17,32 @@
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link wds-is-games">
 								<div>Games</div>
-								<svg class="wds-global-footer__image icon">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								<svg class="wds-global-footer__image wds-icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link wds-is-movies">
 								<div>Movies</div>
-								<svg class="wds-global-footer__image icon">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								<svg class="wds-global-footer__image wds-icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link wds-is-tv">
 								<div>TV</div>
-								<svg class="wds-global-footer__image icon">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								<svg class="wds-global-footer__image wds-icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link wds-is-fan-communities">
 								<div>Fan Communities</div>
-								<svg class="wds-global-footer__image icon">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								<svg class="wds-global-footer__image wds-icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 								</svg>
 							</a>
 						</li>
@@ -53,36 +53,36 @@
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Facebook">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Facebook">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Twitter">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Twitter">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Reddit">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Reddit">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reddit"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Youtube">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Youtube">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-youtube"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Instagram">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Instagram">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-instagram"></use>
 								</svg>
 							</a>
 						</li>
@@ -91,7 +91,7 @@
 			</div>
 			<h2 class="wds-global-footer__wikia-header">
 				<svg class="wds-global-footer__wikia-logo" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-logo-wikia"></use>
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</h2>
 			<div class="wds-global-footer__wikia-sections">
@@ -136,14 +136,14 @@
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
 								<svg class="wds-global-footer__image" alt="App Store">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-appstore"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-appstore"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
 								<svg class="wds-global-footer__image" alt="Google Play">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-googleplay"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-googleplay"></use>
 								</svg>
 							</a>
 						</li>
@@ -168,7 +168,7 @@
 		<div class="wds-global-footer__header-wrapper">
 			<h2 class="wds-global-footer__header">
 				<svg class="wds-global-footer__wikia-logo wds-is-large" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-logo-wikia"></use>
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 				<span class="wds-global-footer__home-of-fandom">The Home Of Fandom</span>
 			</h2>
@@ -180,8 +180,8 @@
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link wds-is-fan-communities">
 								<div>Fan Communities</div>
-								<svg class="wds-global-footer__image icon">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-arrow"></use>
+								<svg class="wds-global-footer__image wds-icon">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 								</svg>
 							</a>
 						</li>
@@ -192,36 +192,36 @@
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Facebook">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-facebook"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Facebook">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Twitter">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-twitter"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Twitter">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Reddit">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-reddit"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Reddit">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reddit"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Youtube">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-youtube"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Youtube">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-youtube"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image icon" alt="Instagram">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icons-instagram"></use>
+								<svg class="wds-global-footer__image wds-icon" alt="Instagram">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-instagram"></use>
 								</svg>
 							</a>
 						</li>
@@ -270,15 +270,15 @@
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
 								<svg class="wds-global-footer__image" alt="App Store">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-appstore"></use>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-appstore"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
 								<svg class="wds-global-footer__image" alt="Google Play">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#company-store-googleplay"></use>
-								</svg>							
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-googleplay"></use>
+								</svg>
 							</a>
 						</li>
 					</ul>
