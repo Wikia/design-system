@@ -51,6 +51,6 @@
 }
 
 /* Remove default body margin on the footer element */
-.global-footer {
+.wds-global-footer {
 	margin: 0 -8px;
 }
