@@ -29,7 +29,7 @@
 
 	// others
 	$desktop-width: 1024px;
-	$section-padding-top: 8px;
+	$section-vertical-padding: 8px;
 	$section-header-height: 24px;
 	$section-header-margin-bottom: 10px;
 
@@ -152,7 +152,7 @@
 	&__wikia-section {
 		border-top: $section-line-width solid $color-slate-gray;
 		margin-right: 55px;
-		padding-top: $section-padding-top;
+		padding-top: $section-vertical-padding;
 	}
 
 	&__link {
@@ -359,7 +359,7 @@
 			}
 
 			&.wds-is-site-overview {
-				padding-top: $section-padding-top + $section-header-height + $section-header-margin-bottom;
+				padding-top: $section-vertical-padding + $section-header-height + $section-header-margin-bottom;
 				width: 50%;
 			}
 
@@ -436,6 +436,7 @@
 		}
 
 		&__wikia-sections {
+			align-content: flex-start;
 			order: 4;
 			width: $desktop-column-wikia;
 		}
@@ -447,6 +448,8 @@
 
 		// items in Wikia section
 		&__wikia-section {
+			padding-bottom: $section-vertical-padding;
+
 			&.wds-is-company-overview {
 				margin-right: 50px;
 				min-height: $desktop-row-top-height;
