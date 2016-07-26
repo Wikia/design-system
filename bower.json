@@ -11,7 +11,7 @@
   "license": "GPL-3.0",
   "ignore": [
     "**/.*",
-    "assets/*",
+    "assets",
     "gulpfile.js"
   ]
 }
