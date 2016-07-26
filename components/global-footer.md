@@ -98,35 +98,35 @@
 				<section class="wds-global-footer__wikia-section wds-is-company-overview">
 					<h3 class="wds-global-footer__section-header">Overview</h3>
 					<ul class="wds-global-footer__links-list">
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">About</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Careers</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">News</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Contact</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Wikia Gives Back</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">About</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Careers</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Press</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Contact</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Wikia Gives Back</a></li>
 					</ul>
 				</section>
 				<section class="wds-global-footer__wikia-section wds-is-site-overview">
 					<ul class="wds-global-footer__links-list">
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Terms Of Use</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Privacy Policy</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Global Sitemap</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">API</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Terms Of Use</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Privacy Policy</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Global Sitemap</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">API</a></li>
 					</ul>
 				</section>
 				<section class="wds-global-footer__wikia-section wds-is-community">
 					<h3 class="wds-global-footer__section-header">Community</h3>
 					<ul class="wds-global-footer__links-list">
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Community Central</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Support</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Fan Contributor Program</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">WAM Score</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Help</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Community Central</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Support</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Fan Contributor Program</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">WAM Score</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Help</a></li>
 					</ul>
 				</section>
 				<section class="wds-global-footer__wikia-section wds-is-create-wiki">
 					<span class="wds-global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
-					<ul class="wds-global-footer__links-list wds-is-create-wiki">
-						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link wds-is-create-wiki">Start a wikia</a></li>
+					<ul class="wds-global-footer__links-list">
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Start a wikia</a></li>
 					</ul>
 				</section>
 				<section class="wds-global-footer__wikia-section wds-is-community-apps">
@@ -152,8 +152,8 @@
 				<section class="wds-global-footer__wikia-section wds-is-advertise">
 					<h3 class="wds-global-footer__section-header">Advertise</h3>
 					<ul class="wds-global-footer__links-list">
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Media Kit</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Contact</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Media Kit</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Contact</a></li>
 					</ul>
 				</section>
 			</div>
@@ -232,35 +232,35 @@
 				<section class="wds-global-footer__wikia-section wds-is-company-overview">
 					<h3 class="wds-global-footer__section-header">Overview</h3>
 					<ul class="wds-global-footer__links-list">
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">About</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Careers</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">News</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Contact</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Wikia Gives Back</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">About</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Careers</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Press</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Contact</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Wikia Gives Back</a></li>
 					</ul>
 				</section>
 				<section class="wds-global-footer__wikia-section wds-is-site-overview">
 					<ul class="wds-global-footer__links-list">
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Terms Of Use</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Privacy Policy</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Global Sitemap</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">API</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Terms Of Use</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Privacy Policy</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Global Sitemap</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">API</a></li>
 					</ul>
 				</section>
 				<section class="wds-global-footer__wikia-section wds-is-community">
 					<h3 class="wds-global-footer__section-header">Community</h3>
 					<ul class="wds-global-footer__links-list">
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Community Central</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Support</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Fan Contributor Program</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">WAM Score</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Help</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Community Central</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Support</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Fan Contributor Program</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">WAM Score</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Help</a></li>
 					</ul>
 				</section>
 				<section class="wds-global-footer__wikia-section wds-is-create-wiki">
 					<span class="wds-global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
-					<ul class="wds-global-footer__links-list wds-is-create-wiki">
-						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link wds-is-create-wiki">Start a wikia</a></li>
+					<ul class="wds-global-footer__links-list">
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Start a wikia</a></li>
 					</ul>
 				</section>
 				<section class="wds-global-footer__wikia-section wds-is-community-apps">
@@ -286,8 +286,8 @@
 				<section class="wds-global-footer__wikia-section wds-is-advertise">
 					<h3 class="wds-global-footer__section-header">Advertise</h3>
 					<ul class="wds-global-footer__links-list">
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Media Kit</a></li>
-						<li class="wds-global-footer__links-list-item"><a class="wds-global-footer__link" href="#">Contact</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Media Kit</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Contact</a></li>
 					</ul>
 				</section>
 			</div>
