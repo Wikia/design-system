@@ -23,10 +23,10 @@ var cheerio = require('gulp-cheerio'),
 		}
 	});
 
-function prependFolderToBasename(folder) {
+function renameSvgFiles(folder) {
 	return rename(function (filePath) {
-		// Use `id="company-logo-wikia"` for company/logo-wikia.svg
-		filePath.basename = folder + '-' + filePath.basename;
+		// Use `id="wds-company-logo-wikia"` for company/logo-wikia.svg
+		filePath.basename = 'wds-' + folder + '-' + filePath.basename;
 	});
 }
 
@@ -61,7 +61,7 @@ gulp.task('svg', function () {
 	return folders.map(function (folder) {
 		return gulp
 			.src(path.join(svgRootDir, folder, '/*.svg'))
-			.pipe(prependFolderToBasename(folder))
+			.pipe(renameSvgFiles(folder))
 			.pipe(gulpif(folder === 'icons', replaceFillAttrWithClass))
 			.pipe(svgmin(deduplicateIds(folder)))
 			.pipe(svgstore({
