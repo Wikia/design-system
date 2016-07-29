@@ -1,24 +1,12 @@
 {
   "name": "design-system-reference-page",
-  "homepage": "https://github.com/Wikia/design-system-reference-page",
-  "authors": [
-    "Bogna Knychala <bogna.ka@gmail.com>",
-    "Bartosz V. Bentkowski <me@bartoszbentkowski.com>",
-    "Mateusz Warkocki <warkot@wikia-inc.com>",
-    "Tomasz Napieralski <tomasz.napieralski@wikia-inc.com>"
-  ],
-  "description": "",
-  "main": "",
   "license": "MIT",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Wikia/design-system-reference-page.git"
+  },
   "dependencies": {
-    "design-system": "Wikia/design-system#0.0.7"
+    "design-system": "Wikia/design-system#0.1.0"
   }
 }
