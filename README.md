@@ -37,6 +37,7 @@ Changes made in Design System will be automatically reflected on Reference Page.
 
 - `npm run setup` - install all dependencies like node modules and bower components
 - `npm run link` - creates symlink to design system repository stored on your machine instead of using repository downloaded from web
+- `npm run unlink` - removes previously created symlink to design system repository and download design system repository from web
 - `npm run build` - build Reference Page and store output in *index.html*
 - `npm run dev` - build Reference Page on each file change
 - `npm run test` - run Visual Regression Tests (this shouldn't be run manually, see [Visual Regression Testing](#visual-regression-testing))

@@ -4,6 +4,7 @@
   "scripts": {
     "setup": "npm install && bower update",
     "link": "cd ../design-system && bower link && cd ../design-system-reference-page && bower link design-system",
+    "unlink": "rm -rf bower_components/design-system && bower update",
     "build": "gulp",
     "dev": "gulp watch",
     "test": "node test",
