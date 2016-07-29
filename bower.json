@@ -8,7 +8,6 @@
   },
   "ignore": [
     "**/.*",
-    "assets",
     "gulpfile.js"
   ]
 }
