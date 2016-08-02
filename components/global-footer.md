@@ -110,6 +110,7 @@
 						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Terms Of Use</a></li>
 						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Privacy Policy</a></li>
 						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Global Sitemap</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Local Sitemap</a></li>
 						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">API</a></li>
 					</ul>
 				</section>
@@ -244,6 +245,7 @@
 						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Terms Of Use</a></li>
 						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Privacy Policy</a></li>
 						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Global Sitemap</a></li>
+						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">Local Sitemap</a></li>
 						<li class="wds-global-footer__links-list-item"><a href="#" class="wds-global-footer__link">API</a></li>
 					</ul>
 				</section>
