@@ -6,14 +6,6 @@ var cheerio = require('gulp-cheerio'),
 	rename = require('gulp-rename'),
 	svgmin = require('gulp-svgmin'),
 	svgstore = require('gulp-svgstore'),
-	replaceFillAttrWithClass = cheerio({
-		run: function ($) {
-			$('[fill]').removeAttr('fill').addClass('fill');
-		},
-		parserOptions: {
-			xmlMode: true
-		}
-	}),
 	insertInlineStyle = cheerio({
 		run: function ($) {
 			$('svg').prepend('<style>.fill {fill: currentColor;}</style>');
@@ -62,7 +54,6 @@ gulp.task('svg', function () {
 		return gulp
 			.src(path.join(svgRootDir, folder, '/*.svg'))
 			.pipe(renameSvgFiles(folder))
-			.pipe(gulpif(folder === 'icons', replaceFillAttrWithClass))
 			.pipe(svgmin(deduplicateIds(folder)))
 			.pipe(svgstore({
 				inlineSvg: true
