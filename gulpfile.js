@@ -1,24 +1,24 @@
 var cheerio = require('gulp-cheerio'),
+	debug = require('gulp-debug'),
 	fs = require('fs'),
 	gulp = require('gulp'),
 	gulpif = require('gulp-if'),
 	path = require('path'),
 	rename = require('gulp-rename'),
 	svgmin = require('gulp-svgmin'),
-	svgstore = require('gulp-svgstore'),
-	insertInlineStyle = cheerio({
-		run: function ($) {
-			$('svg').prepend('<style>.fill {fill: currentColor;}</style>');
-		},
-		parserOptions: {
-			xmlMode: true
-		}
-	});
+	svgstore = require('gulp-svgstore');
 
 function renameSvgFiles(folder) {
 	return rename(function (filePath) {
 		// Use `id="wds-company-logo-wikia"` for company/logo-wikia.svg
 		filePath.basename = 'wds-' + folder + '-' + filePath.basename;
+	});
+}
+
+function renameSvgSprites() {
+	return rename(function (filePath) {
+		// Add `sprite-` prefix to the filename
+		filePath.basename = 'sprite-' + filePath.basename;
 	});
 }
 
@@ -39,28 +39,57 @@ function deduplicateIds(folder) {
 	}
 }
 
-function getFolders(dir) {
+function insertInlineStyle() {
+	return cheerio({
+		run: function ($, file, done) {
+			$('svg').prepend('<style>.fill {fill: currentColor;}</style>');
+			done();
+		},
+		parserOptions: {
+			xmlMode: true
+		}
+	});
+}
+
+function getDirectories(dir) {
 	return fs.readdirSync(dir)
 		.filter(function (file) {
 			return fs.statSync(path.join(dir, file)).isDirectory();
 		});
 }
 
-gulp.task('svg', function () {
-	var svgRootDir = './assets',
-		folders = getFolders(svgRootDir);
+gulp.task('svg-sprite', function () {
+	var sourceRoot = './assets',
+		dest = './dist/svg';
 
-	return folders.map(function (folder) {
+	return getDirectories(sourceRoot).map(function (directory) {
 		return gulp
-			.src(path.join(svgRootDir, folder, '/*.svg'))
-			.pipe(renameSvgFiles(folder))
-			.pipe(svgmin(deduplicateIds(folder)))
+			.src(path.join(sourceRoot, directory, '/*.svg'))
+			.pipe(renameSvgFiles(directory))
+			.pipe(svgmin(deduplicateIds(directory)))
 			.pipe(svgstore({
 				inlineSvg: true
 			}))
-			.pipe(gulpif(folder === 'icons', insertInlineStyle))
-			.pipe(gulp.dest('dist'));
+			.pipe(gulpif(directory === 'icons', insertInlineStyle()))
+			.pipe(renameSvgSprites())
+			.pipe(gulp.dest(dest));
 	});
 });
+
+gulp.task('svg-individual', function () {
+	var sourceRoot = './assets',
+		dest = './dist/svg';
+
+	return getDirectories(sourceRoot).map(function (directory) {
+		return gulp
+			.src(path.join(sourceRoot, directory, '/*.svg'))
+			.pipe(renameSvgFiles(directory))
+			.pipe(svgmin(deduplicateIds(directory)))
+			.pipe(gulpif(directory === 'icons', insertInlineStyle()))
+			.pipe(gulp.dest(dest));
+	});
+});
+
+gulp.task('svg', ['svg-sprite', 'svg-individual']);
 
 gulp.task('default', ['svg']);
