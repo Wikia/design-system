@@ -1,5 +1,4 @@
 var cheerio = require('gulp-cheerio'),
-	debug = require('gulp-debug'),
 	fs = require('fs'),
 	gulp = require('gulp'),
 	gulpif = require('gulp-if'),
