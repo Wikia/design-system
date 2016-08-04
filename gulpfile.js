@@ -45,12 +45,15 @@ function getDirectories(dir) {
 		});
 }
 
+/**
+ * For now we don't need to care about order of tasks so we don't return anything here
+ */
 gulp.task('svg-sprite', function () {
 	var sourceRoot = './assets',
 		dest = './dist/svg';
 
-	return getDirectories(sourceRoot).map(function (directory) {
-		return gulp
+	getDirectories(sourceRoot).forEach(function (directory) {
+		gulp
 			.src(path.join(sourceRoot, directory, '/*.svg'))
 			.pipe(renameSvgFiles(directory))
 			.pipe(svgmin(deduplicateIds(directory)))
@@ -62,12 +65,15 @@ gulp.task('svg-sprite', function () {
 	});
 });
 
+/**
+ * For now we don't need to care about order of tasks so we don't return anything here
+ */
 gulp.task('svg-individual', function () {
 	var sourceRoot = './assets',
 		dest = './dist/svg';
 
-	return getDirectories(sourceRoot).map(function (directory) {
-		return gulp
+	getDirectories(sourceRoot).forEach(function (directory) {
+		gulp
 			.src(path.join(sourceRoot, directory, '/*.svg'))
 			.pipe(renameSvgFiles(directory))
 			.pipe(svgmin(deduplicateIds(directory)))
