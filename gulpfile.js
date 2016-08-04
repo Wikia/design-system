@@ -38,18 +38,6 @@ function deduplicateIds(folder) {
 	}
 }
 
-function insertInlineStyle() {
-	return cheerio({
-		run: function ($, file, done) {
-			$('svg').prepend('<style>.fill {fill: currentColor;}</style>');
-			done();
-		},
-		parserOptions: {
-			xmlMode: true
-		}
-	});
-}
-
 function getDirectories(dir) {
 	return fs.readdirSync(dir)
 		.filter(function (file) {
@@ -69,7 +57,6 @@ gulp.task('svg-sprite', function () {
 			.pipe(svgstore({
 				inlineSvg: true
 			}))
-			.pipe(gulpif(directory === 'icons', insertInlineStyle()))
 			.pipe(renameSvgSprites())
 			.pipe(gulp.dest(dest));
 	});
