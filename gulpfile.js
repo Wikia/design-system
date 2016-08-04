@@ -65,7 +65,7 @@ gulp.task('inject-scripts', ['inject-styles'], function () {
 });
 
 gulp.task('inject-icons', ['inject-scripts'], function () {
-	return injectFileContents('./bower_components/design-system/dist/*.svg', tmpDir);
+	return injectFileContents('./bower_components/design-system/dist/svg/*.svg', tmpDir);
 });
 
 gulp.task('copy-output-file', ['inject-icons'], function () {

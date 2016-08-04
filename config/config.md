@@ -8,6 +8,6 @@
 
 ### Body
 
-    div(style='height: 0; width: 0; position: absolute;')<!-- inject:svg --><!-- endinject -->
+    div(style='height: 0; width: 0; position: absolute; overflow: hidden;')<!-- inject:svg --><!-- endinject -->
     h1 Wikia Design System
     div#styleguides(sg-content)
