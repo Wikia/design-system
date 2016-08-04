@@ -84,7 +84,6 @@ gulp.task('svg-individual', function () {
 			.src(path.join(sourceRoot, directory, '/*.svg'))
 			.pipe(renameSvgFiles(directory))
 			.pipe(svgmin(deduplicateIds(directory)))
-			.pipe(gulpif(directory === 'icons', insertInlineStyle()))
 			.pipe(gulp.dest(dest));
 	});
 });
