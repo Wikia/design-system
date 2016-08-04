@@ -5,28 +5,19 @@ var cheerio = require('gulp-cheerio'),
 	path = require('path'),
 	rename = require('gulp-rename'),
 	svgmin = require('gulp-svgmin'),
-	svgstore = require('gulp-svgstore'),
-	replaceFillAttrWithClass = cheerio({
-		run: function ($) {
-			$('[fill]').removeAttr('fill').addClass('fill');
-		},
-		parserOptions: {
-			xmlMode: true
-		}
-	}),
-	insertInlineStyle = cheerio({
-		run: function ($) {
-			$('svg').prepend('<style>.fill {fill: currentColor;}</style>');
-		},
-		parserOptions: {
-			xmlMode: true
-		}
-	});
+	svgstore = require('gulp-svgstore');
 
 function renameSvgFiles(folder) {
 	return rename(function (filePath) {
 		// Use `id="wds-company-logo-wikia"` for company/logo-wikia.svg
 		filePath.basename = 'wds-' + folder + '-' + filePath.basename;
+	});
+}
+
+function renameSvgSprites() {
+	return rename(function (filePath) {
+		// Add `sprite-` prefix to the filename
+		filePath.basename = 'sprite-' + filePath.basename;
 	});
 }
 
@@ -47,29 +38,49 @@ function deduplicateIds(folder) {
 	}
 }
 
-function getFolders(dir) {
+function getDirectories(dir) {
 	return fs.readdirSync(dir)
 		.filter(function (file) {
 			return fs.statSync(path.join(dir, file)).isDirectory();
 		});
 }
 
-gulp.task('svg', function () {
-	var svgRootDir = './assets',
-		folders = getFolders(svgRootDir);
+/**
+ * For now we don't need to care about order of tasks so we don't return anything here
+ */
+gulp.task('svg-sprite', function () {
+	var sourceRoot = './assets',
+		dest = './dist/svg';
 
-	return folders.map(function (folder) {
-		return gulp
-			.src(path.join(svgRootDir, folder, '/*.svg'))
-			.pipe(renameSvgFiles(folder))
-			.pipe(gulpif(folder === 'icons', replaceFillAttrWithClass))
-			.pipe(svgmin(deduplicateIds(folder)))
+	getDirectories(sourceRoot).forEach(function (directory) {
+		gulp
+			.src(path.join(sourceRoot, directory, '/*.svg'))
+			.pipe(renameSvgFiles(directory))
+			.pipe(svgmin(deduplicateIds(directory)))
 			.pipe(svgstore({
 				inlineSvg: true
 			}))
-			.pipe(gulpif(folder === 'icons', insertInlineStyle))
-			.pipe(gulp.dest('dist'));
+			.pipe(renameSvgSprites())
+			.pipe(gulp.dest(dest));
 	});
 });
+
+/**
+ * For now we don't need to care about order of tasks so we don't return anything here
+ */
+gulp.task('svg-individual', function () {
+	var sourceRoot = './assets',
+		dest = './dist/svg';
+
+	getDirectories(sourceRoot).forEach(function (directory) {
+		gulp
+			.src(path.join(sourceRoot, directory, '/*.svg'))
+			.pipe(renameSvgFiles(directory))
+			.pipe(svgmin(deduplicateIds(directory)))
+			.pipe(gulp.dest(dest));
+	});
+});
+
+gulp.task('svg', ['svg-sprite', 'svg-individual']);
 
 gulp.task('default', ['svg']);
