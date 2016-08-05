@@ -179,7 +179,7 @@
 				<section class="wds-global-footer__fandom-section wds-is-fandom-overview">
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://pl.wikia.com/Wikia" class="wds-global-footer__link wds-is-fan-communities">
+							<a href="#" class="wds-global-footer__link wds-is-fan-communities">
 								<div>Społeczności</div>
 								<svg class="wds-global-footer__image wds-icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
@@ -192,21 +192,21 @@
 					<h3 class="wds-global-footer__section-header">Śledź nas</h3>
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="https://www.facebook.com/wikiapl" class="wds-global-footer__link">
+							<a href="#" class="wds-global-footer__link">
 								<svg class="wds-global-footer__image wds-icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="https://twitter.com/wikia_pl" class="wds-global-footer__link">
+							<a href="#" class="wds-global-footer__link">
 								<svg class="wds-global-footer__image wds-icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="https://www.youtube.com/user/wikia" class="wds-global-footer__link">
+							<a href="#" class="wds-global-footer__link">
 								<svg class="wds-global-footer__image wds-icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-youtube"></use>
 								</svg>
@@ -220,38 +220,38 @@
 					<h3 class="wds-global-footer__section-header">Informacje</h3>
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://pl.wikia.com/O_nas" class="wds-global-footer__link">O nas</a>
+							<a href="#" class="wds-global-footer__link">O nas</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="https://careers.wikia.com" class="wds-global-footer__link">Kariera</a>
+							<a href="#" class="wds-global-footer__link">Kariera</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://fandom.wikia.com/press" class="wds-global-footer__link">Prasa</a>
+							<a href="#" class="wds-global-footer__link">Prasa</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://pl.wikia.com/Specjalna:Kontakt" class="wds-global-footer__link">Kontakt</a>
+							<a href="#" class="wds-global-footer__link">Kontakt</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://www.wikia.com/wikiagivesback?uselang=pl" class="wds-global-footer__link">Wikia Gives Back</a>
+							<a href="#" class="wds-global-footer__link">Wikia Gives Back</a>
 						</li>
 					</ul>
 				</section>
 				<section class="wds-global-footer__wikia-section wds-is-site-overview">
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://pl.wikia.com/Zasady_U%C5%BCytkowania" class="wds-global-footer__link">Zasady Użytkowania</a>
+							<a href="#" class="wds-global-footer__link">Zasady Użytkowania</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://pl.wikia.com/Polityka_Prywatno%C5%9Bci" class="wds-global-footer__link">Polityka prywatności</a>
+							<a href="#" class="wds-global-footer__link">Polityka prywatności</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://www.wikia.com/Sitemap" class="wds-global-footer__link">Globalna Mapa Strony</a>
+							<a href="#" class="wds-global-footer__link">Globalna Mapa Strony</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="/Special:AllPages" class="wds-global-footer__link">Lokalna Mapa Strony</a>
+							<a href="#" class="wds-global-footer__link">Lokalna Mapa Strony</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://api.wikia.com/wiki/Wikia_API_Wiki" class="wds-global-footer__link">API</a>
+							<a href="#" class="wds-global-footer__link">API</a>
 						</li>
 					</ul>
 				</section>
@@ -259,16 +259,16 @@
 					<h3 class="wds-global-footer__section-header">Community</h3>
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://spolecznosc.wikia.com/wiki/Centrum_Spo%C5%82eczno%C5%9Bci" class="wds-global-footer__link">Centrum Społeczności</a>
+							<a href="#" class="wds-global-footer__link">Centrum Społeczności</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://spolecznosc.wikia.com/wiki/Specjalna:Kontakt" class="wds-global-footer__link">Wsparcie</a>
+							<a href="#" class="wds-global-footer__link">Wsparcie</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://pl.wikia.com/WAM?langCode=pl" class="wds-global-footer__link">Punktacja WAM</a>
+							<a href="#" class="wds-global-footer__link">Punktacja WAM</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://spolecznosc.wikia.com/wiki/Pomoc:Zawarto%C5%9B%C4%87" class="wds-global-footer__link">Pomoc</a>
+							<a href="#" class="wds-global-footer__link">Pomoc</a>
 						</li>
 					</ul>
 				</section>
@@ -276,7 +276,7 @@
 					<span class="wds-global-footer__section-description">Nie możesz znaleźć społeczności, którą uwielbiasz? Utwórz swoją własną i zacznij coś wspaniałego.</span>
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://www.wikia.com/Special:CreateNewWiki?uselang=pl" class="wds-global-footer__link">Utwórz wiki</a>
+							<a href="#" class="wds-global-footer__link">Utwórz wiki</a>
 						</li>
 					</ul>
 				</section>
@@ -285,14 +285,14 @@
 					<span class="wds-global-footer__section-description">Miej swoje ulubione fandomy zawsze pod ręką, a nigdy niczego nie przegapisz.</span>
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="https://itunes.apple.com/developer/wikia-inc./id422467077" class="wds-global-footer__link">
+							<a href="#" class="wds-global-footer__link">
 								<svg class="wds-global-footer__image wds-icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-appstore"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="https://play.google.com/store/apps/developer?id=Wikia,+Inc." class="wds-global-footer__link">
+							<a href="#" class="wds-global-footer__link">
 								<svg class="wds-global-footer__image wds-icon">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-googleplay"></use>
 								</svg>
@@ -304,16 +304,16 @@
 					<h3 class="wds-global-footer__section-header">Reklamy</h3>
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://www.wikia.com/mediakit" class="wds-global-footer__link">Materiały dla mediów</a>
+							<a href="#" class="wds-global-footer__link">Materiały dla mediów</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
-							<a href="http://www.wikia.com/mediakit/contact" class="wds-global-footer__link">Kontakt</a>
+							<a href="#" class="wds-global-footer__link">Kontakt</a>
 						</li>
 					</ul>
 				</section>
 			</div>
 		</div>
 		<div class="wds-global-footer__licensing-and-vertical">
-			<span>__sitename__ jest Społecznością Fandom __vertical__. Treści są dostępne na licencji <a href="http://wikia.com/Licensing">__license__</a>.</span>
+			<span>__sitename__ jest Społecznością Fandom __vertical__. Treści są dostępne na licencji <a href="#">__license__</a>.</span>
 		</div>
 	</footer>
