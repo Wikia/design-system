@@ -160,7 +160,7 @@
 			</div>
 		</div>
 		<div class="wds-global-footer__licensing-and-vertical">
-			<span>__sitename__ is a Fandom __vertical__ Community. Content is available under <a href="#">__license__</a>.</span>
+			<span>Witcher Wiki is a Fandom Games Community. Content is available under <a href="#">CC-BY-SA</a>.</span>
 		</div>
 	</footer>
 
@@ -314,6 +314,6 @@
 			</div>
 		</div>
 		<div class="wds-global-footer__licensing-and-vertical">
-			<span>__sitename__ jest Społecznością Fandom __vertical__. Treści są dostępne na licencji <a href="#">__license__</a>.</span>
+			<span>Wiedźmin Wiki jest Społecznością Fandom Gry. Treści są dostępne na licencji <a href="#">CC-BY-SA</a>.</span>
 		</div>
 	</footer>
