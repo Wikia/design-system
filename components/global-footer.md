@@ -160,7 +160,7 @@
 			</div>
 		</div>
 		<div class="wds-global-footer__licensing-and-vertical">
-			<span>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</span>
+			<span>__sitename__ is a Fandom __vertical__ Community. Content is available under <a href="#">__license__</a>.</span>
 		</div>
 	</footer>
 
@@ -295,6 +295,6 @@
 			</div>
 		</div>
 		<div class="wds-global-footer__licensing-and-vertical">
-			<span>Community is powered by "Vertical". Content is available under <a href="#">CC-BY-SA</a>.</span>
+			<span>__sitename__ is a Fandom __vertical__ Community. Content is available under <a href="#">__license__</a>.</span>
 		</div>
 	</footer>
