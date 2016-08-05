@@ -193,21 +193,21 @@
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image wds-icon">
+								<svg class="wds-global-footer__image wds-icon" alt="Facebook">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image wds-icon">
+								<svg class="wds-global-footer__image wds-icon" alt="Twitter">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image wds-icon">
+								<svg class="wds-global-footer__image wds-icon" alt="Youtube">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-youtube"></use>
 								</svg>
 							</a>
@@ -286,14 +286,14 @@
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image wds-icon">
+								<svg class="wds-global-footer__image" alt="App Store">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-appstore"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">
-								<svg class="wds-global-footer__image wds-icon">
+								<svg class="wds-global-footer__image" alt="Google Play">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-googleplay"></use>
 								</svg>
 							</a>
