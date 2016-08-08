@@ -35,11 +35,11 @@
   "global-footer-site-overview-link-terms-of-use":"利用規約",
   "global-footer-site-overview-link-privacy-policy":"プライバシー",
   "global-footer-licensing-and-vertical-description":"__sitename__は__vertical__ジャンルのファンによるコミュニティです。コンテンツは__license__で利用できます。",
-  "global-footer-licensing-and-vertical-description-param-vertical-games":"ゲーム",
-  "global-footer-licensing-and-vertical-description-param-vertical-movies":"映画",
   "global-footer-licensing-and-vertical-description-param-vertical-tv":"テレビ",
+  "global-footer-licensing-and-vertical-description-param-vertical-games":"ゲーム",
   "global-footer-licensing-and-vertical-description-param-vertical-books":"書籍",
   "global-footer-licensing-and-vertical-description-param-vertical-comics":"コミック",
   "global-footer-licensing-and-vertical-description-param-vertical-lifestyle":"ライフスタイル",
-  "global-footer-licensing-and-vertical-description-param-vertical-music":"音楽"
+  "global-footer-licensing-and-vertical-description-param-vertical-music":"音楽",
+  "global-footer-licensing-and-vertical-description-param-vertical-movies":"映画"
 }
