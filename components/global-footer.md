@@ -195,9 +195,9 @@
 				</section>
 			</div>
 		</div>
-		<div class="wds-global-footer__licensing-and-vertical">
-			<span>Witcher Wiki is a Fandom Games Community. Content is available under <a href="#">CC-BY-SA</a>.</span>
-		</div>
+		<div class="wds-global-footer__bottom-bar">
+			<div class="wds-global-footer__bottom-bar-row">Witcher Wiki is a Fandom Games Community. Content is available under <a href="#">CC-BY-SA</a>.</div>
+			<div class="wds-global-footer__bottom-bar-row wds-has-border-top"><a href="#">View full site</a></div>
 	</footer>
 
 	<h1>International version</h1>
@@ -349,7 +349,8 @@
 				</section>
 			</div>
 		</div>
-		<div class="wds-global-footer__licensing-and-vertical">
-			<span>Wiedźmin Wiki jest Społecznością Fandom Gry. Treści są dostępne na licencji <a href="#">CC-BY-SA</a>.</span>
+		<div class="wds-global-footer__bottom-bar">
+			<div class="wds-global-footer__bottom-bar-row">Wiedźmin Wiki jest Społecznością Fandom Gry. Treści są dostępne na licencji <a href="#">CC-BY-SA</a>.</div>
+			<div class="wds-global-footer__bottom-bar-row wds-has-border-top"><a href="#">Pełna wersja strony</a></div>
 		</div>
 	</footer>
