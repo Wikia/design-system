@@ -35,11 +35,11 @@
   "global-footer-site-overview-link-terms-of-use":"Условия использования",
   "global-footer-site-overview-link-privacy-policy":"Политика конфиденциальности",
   "global-footer-licensing-and-vertical-description":"__sitename__ — это сообщество в фэндоме __vertical__. Содержание доступно в соответствии с лицензией __license__.",
-  "global-footer-licensing-and-vertical-description-param-vertical-games":"Видеоигры",
-  "global-footer-licensing-and-vertical-description-param-vertical-movies":"Кино",
   "global-footer-licensing-and-vertical-description-param-vertical-tv":"ТВ",
+  "global-footer-licensing-and-vertical-description-param-vertical-games":"Видеоигры",
   "global-footer-licensing-and-vertical-description-param-vertical-books":"Книги",
   "global-footer-licensing-and-vertical-description-param-vertical-comics":"Комиксы",
   "global-footer-licensing-and-vertical-description-param-vertical-lifestyle":"Увлечения",
-  "global-footer-licensing-and-vertical-description-param-vertical-music":"Музыка"
+  "global-footer-licensing-and-vertical-description-param-vertical-music":"Музыка",
+  "global-footer-licensing-and-vertical-description-param-vertical-movies":"Кино"
 }
