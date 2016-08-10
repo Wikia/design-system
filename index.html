@@ -332,32 +332,27 @@ code.sg:first-child {
     -ms-flex-pack: center;
     justify-content: center;
     margin: 0; }
-  .wds-global-footer__licensing-and-vertical {
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+  .wds-global-footer__bottom-bar {
     background: rgba(38, 38, 38, 0.5);
-    color: #fff;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     font-size: 12px;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     line-height: 1.5em;
     min-height: 50px;
-    padding: 16px 20px;
+    padding: 0 20px;
+    text-align: center;
     /**
 		 * Note: The following rule is an exception on DS Class Naming because whole
 		 * text is user-supplied and we don't insert class names there.
 		 */ }
-    .wds-global-footer__licensing-and-vertical a,
-    .wds-global-footer__licensing-and-vertical a:visited {
+    .wds-global-footer__bottom-bar a,
+    .wds-global-footer__bottom-bar a:visited {
       color: #00b7e0;
       text-decoration: none; }
-    .wds-global-footer__licensing-and-vertical a:hover {
+    .wds-global-footer__bottom-bar a:hover {
       color: #fff; }
+  .wds-global-footer__bottom-bar-row {
+    padding: 16px 0; }
+    .wds-global-footer__bottom-bar-row.wds-has-border-top {
+      border-top: 1px solid #656e78; }
   .wds-global-footer__fandom-logo {
     height: 26px;
     width: 122px; }
@@ -373,9 +368,9 @@ code.sg:first-child {
     border-top: 1px solid #c5ced9;
     color: #7f90a1;
     display: block;
-    letter-spacing: 0.5px;
     font-size: 12px;
     font-weight: bold;
+    letter-spacing: .5px;
     margin-left: 13px;
     margin-top: 5px;
     padding: 3px 0;
@@ -429,7 +424,7 @@ code.sg:first-child {
       -ms-flex-pack: justify;
       justify-content: space-between;
       margin: 0;
-      padding: 2px 0 28px 0;
+      padding: 2px 0 28px;
       text-decoration: none; }
       .wds-global-footer__fandom-section.wds-is-fandom-overview .wds-global-footer__link.wds-is-games {
         border-color: #94d11f; }
@@ -539,9 +534,7 @@ code.sg:first-child {
     .wds-global-footer.wds-is-international .wds-global-footer__fandom-section.wds-is-follow-us {
       margin-bottom: 37px; }
     .wds-global-footer__links-list-item {
-      margin-bottom: 10px; }
-    .wds-global-footer__licensing-and-vertical {
-      text-align: center; } }
+      margin-bottom: 10px; } }
   @media only screen and (min-width: 1024px) {
     .wds-global-footer__main {
       -webkit-flex-direction: row;
@@ -3919,9 +3912,12 @@ body {
                 </section>
               </div>
             </div>
-            <div class="wds-global-footer__licensing-and-vertical">
-              <span>Witcher Wiki is a Fandom Games Community. Content is available under
-                <a href="#">CC-BY-SA</a>.</span>
+            <div class="wds-global-footer__bottom-bar">
+              <div class="wds-global-footer__bottom-bar-row">Witcher Wiki is a Fandom Games Community. Content is available under
+                <a href="#">CC-BY-SA</a>.</div>
+              <div class="wds-global-footer__bottom-bar-row wds-has-border-top">
+                <a href="#">View Full Site</a>
+              </div>
             </div>
           </footer>
 
@@ -4074,9 +4070,12 @@ body {
                 </section>
               </div>
             </div>
-            <div class="wds-global-footer__licensing-and-vertical">
-              <span>Wied&#x17A;min Wiki jest Spo&#x142;eczno&#x15B;ci&#x105; Fandom Gry. Tre&#x15B;ci s&#x105; dost&#x119;pne na licencji
-                <a href="#">CC-BY-SA</a>.</span>
+            <div class="wds-global-footer__bottom-bar">
+              <div class="wds-global-footer__bottom-bar-row">Wied&#x17A;min Wiki jest Spo&#x142;eczno&#x15B;ci&#x105; Fandom Gry. Tre&#x15B;ci s&#x105; dost&#x119;pne na licencji
+                <a href="#">CC-BY-SA</a>.</div>
+              <div class="wds-global-footer__bottom-bar-row wds-has-border-top">
+                <a href="#">Pe&#x142;na wersja strony</a>
+              </div>
             </div>
           </footer>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>EN version<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
@@ -4273,9 +4272,12 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__licensing-and-vertical&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Witcher Wiki is a Fandom Games Community. Content is available under
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>CC-BY-SA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar-row&quot;</span>&gt;</span>Witcher Wiki is a Fandom Games Community. Content is available under
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>CC-BY-SA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar-row wds-has-border-top&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>View Full Site<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
 
@@ -4428,9 +4430,12 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__licensing-and-vertical&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Wied&#x17A;min Wiki jest Spo&#x142;eczno&#x15B;ci&#x105; Fandom Gry. Tre&#x15B;ci s&#x105; dost&#x119;pne na licencji
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>CC-BY-SA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar-row&quot;</span>&gt;</span>Wied&#x17A;min Wiki jest Spo&#x142;eczno&#x15B;ci&#x105; Fandom Gry. Tre&#x15B;ci s&#x105; dost&#x119;pne na licencji
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>CC-BY-SA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar-row wds-has-border-top&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Pe&#x142;na wersja strony<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span></pre>
       </div>
