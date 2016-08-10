@@ -198,6 +198,7 @@
 		<div class="wds-global-footer__bottom-bar">
 			<div class="wds-global-footer__bottom-bar-row">Witcher Wiki is a Fandom Games Community. Content is available under <a href="#">CC-BY-SA</a>.</div>
 			<div class="wds-global-footer__bottom-bar-row wds-has-border-top"><a href="#">View full site</a></div>
+		</div>
 	</footer>
 
 	<h1>International version</h1>
