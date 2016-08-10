@@ -70,6 +70,7 @@
 		line-height: $line-height;
 		min-height: 50px;
 		padding: 0 20px;
+		text-align: center;
 
 		/**
 		 * Note: The following rule is an exception on DS Class Naming because whole
@@ -393,10 +394,6 @@
 
 		&__links-list-item {
 			margin-bottom: 10px;
-		}
-
-		&__bottom-bar {
-			text-align: center;
 		}
 	}
 
