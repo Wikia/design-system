@@ -89,14 +89,13 @@
 
 	&__bottom-bar-row {
 		margin: 0 auto;
-		padding: 16px 0;
 
 		&.wds-has-border-top {
 			border-top: 1px solid $color-slate-gray;
 		}
 
-		&.wds-has-no-padding {
-			padding: 0;
+		&.wds-has-padding {
+			padding: 16px 0;
 		}
 	}
 
