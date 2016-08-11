@@ -88,11 +88,28 @@
 	}
 
 	&__bottom-bar-row {
+		margin: 0 auto;
 		padding: 16px 0;
 
 		&.wds-has-border-top {
 			border-top: 1px solid $color-slate-gray;
 		}
+
+		&.wds-has-no-padding {
+			padding: 0;
+		}
+	}
+
+	// @todo To be moved to a separate component
+	&__button-link {
+		display: inline-block;
+		font-weight: bold;
+		letter-spacing: .3px;
+		line-height: normal;
+		min-height: 45px;
+		padding: 14px 18px;
+		text-decoration: none;
+		text-transform: uppercase;
 	}
 
 	&__fandom-logo {
@@ -402,6 +419,14 @@
 			flex-direction: row;
 			margin: 0 auto;
 			padding-bottom: 40px;
+			width: $desktop-width;
+		}
+
+		&__bottom-bar {
+			padding: 0;
+		}
+
+		&__bottom-bar-row {
 			width: $desktop-width;
 		}
 
