@@ -34,12 +34,14 @@
   "global-footer-site-overview-link-local-sitemap":"Lokale Sitemap",
   "global-footer-site-overview-link-terms-of-use":"Nutzungsbedingungen",
   "global-footer-site-overview-link-privacy-policy":"Datenschutzerklärung",
-  "global-footer-licensing-and-vertical-description":"__sitename__ ist eine Fandom-__vertical__ Community. Inhalt ist verfügbar unter __license__.",
+  "global-footer-licensing-and-vertical-description":"__sitename__ ist eine Fandom __vertical__ Community. Inhalt ist verfügbar unter __license__.",
   "global-footer-licensing-and-vertical-description-param-vertical-tv":"TV",
   "global-footer-licensing-and-vertical-description-param-vertical-games":"Videospiele",
   "global-footer-licensing-and-vertical-description-param-vertical-books":"Literatur",
   "global-footer-licensing-and-vertical-description-param-vertical-comics":"Comics",
   "global-footer-licensing-and-vertical-description-param-vertical-lifestyle":"Lifestyle",
   "global-footer-licensing-and-vertical-description-param-vertical-music":"Musik",
-  "global-footer-licensing-and-vertical-description-param-vertical-movies":"Filme"
+  "global-footer-licensing-and-vertical-description-param-vertical-movies":"Filme",
+  "global-footer-full-site-link":"Desktop-Ansicht",
+  "global-footer-mobile-site-link":"Mobile Geräte"
 }
