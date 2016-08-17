@@ -185,13 +185,17 @@
 			color: $color-blue-gray;
 			font-size: $typescale-size-minus-1;
 			font-weight: normal;
-			line-height: 2em;
+			line-height: 18px;
 			text-decoration: none;
 		}
 
 		&:hover {
 			color: $color-white;
 		}
+	}
+
+	&__links-list-item {
+		margin-bottom: 8px;
 	}
 
 	&__fandom-section {
@@ -209,7 +213,7 @@
 				}
 				justify-content: space-between;
 				margin: 0;
-				padding: 2px 0 28px;
+				padding: 6px 0 28px;
 				text-decoration: none;
 
 				&.wds-is-games {
@@ -409,7 +413,7 @@
 		}
 
 		&__links-list-item {
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 		}
 	}
 
