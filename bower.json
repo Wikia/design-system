@@ -7,6 +7,6 @@
     "url": "git://github.com/Wikia/design-system-reference-page.git"
   },
   "dependencies": {
-    "design-system": "Wikia/design-system#0.2.1"
+    "design-system": "Wikia/design-system#0.2.3"
   }
 }
