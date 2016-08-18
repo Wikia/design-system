@@ -97,7 +97,7 @@ gulp.task('watch', ['default'], function () {
 	livereload.listen();
 
 	return watch([
-		'../design-system/**.scss',
+		'../design-system/**/*.scss',
 		'./components/*.md',
 		'./config/*.css',
 		'./config/*.js',
