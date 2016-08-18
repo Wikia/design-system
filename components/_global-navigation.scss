@@ -1,0 +1,29 @@
+.wds-global-navigation {
+	align-items: center;
+	border-bottom: 1px solid $color-faint-gray;
+	border-top: 6px solid $color-slate-gray;
+	display: flex;
+	height: 55px;
+
+	&__logo {
+		align-items: center;
+		color: $color-slate-gray;
+		display: flex;
+		font-size: $typescale-size-minus-3;
+		font-weight: 700;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	&__fandom-logo {
+		fill: $color-dark-blue-gray;
+		height: 24px;
+		width: 150px
+	}
+
+	&__wikia-logo {
+		fill: $color-dark-blue;
+		height: 16px;
+		width: 50px;
+	}
+}
