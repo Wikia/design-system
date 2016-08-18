@@ -3,7 +3,7 @@ $button-line-height: 1.3em;
 
 .wds-button {
 	background-color: $color-light-blue;
-	border: 0;
+	border: 1px solid $color-light-blue;
 	color: $color-white;
 	cursor: pointer;
 	display: inline-block;
@@ -20,6 +20,7 @@ $button-line-height: 1.3em;
 
 	&:hover, &.wds-active {
 		background-color: $button-active-color;
+		border-color: $button-active-color;
 	}
 
 	&.disabled, &[disabled] {
@@ -29,11 +30,9 @@ $button-line-height: 1.3em;
 
 	&.wds-secondary {
 		background-color: $color-white;
-		border: 1px solid $color-light-blue;
 		color: $color-light-blue;
 
 		&:hover, &.wds-active {
-			border-color: $button-active-color;
 			color: $button-active-color;
 		}
 	}
@@ -48,6 +47,7 @@ $button-line-height: 1.3em;
 
 	&.wds-text {
 		background-color: $color-white;
+		border: 0;
 		color: $color-light-blue;
 
 		&:hover, &.wds-active {
