@@ -28,9 +28,8 @@ $button-line-height: 1.3em;
 		opacity: 0.7;
 	}
 
-	&.wds-secondary {
+	&.wds-filled {
 		background-color: $color-light-blue;
-		border: 0;
 		color: $color-white;
 
 		&:hover, &.wds-active {
@@ -45,5 +44,9 @@ $button-line-height: 1.3em;
 
 	&.wds-stretched {
 		padding: 48px 24px;
+	}
+
+	&.wds-no-border {
+		border: 0;
 	}
 }
