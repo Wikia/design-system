@@ -2,9 +2,9 @@ $button-active-color: darken($color-light-blue, 10%);
 $button-line-height: 1.3em;
 
 .wds-button {
-	background-color: $color-white;
-	border: 1px solid $color-light-blue;
-	color: $color-light-blue;
+	background-color: $color-light-blue;
+	border: 0;
+	color: $color-white;
 	cursor: pointer;
 	display: inline-block;
 	font-size: $typescale-size-minus-2;
@@ -19,22 +19,22 @@ $button-line-height: 1.3em;
 	-webkit-border-radius:0;
 
 	&:hover, &.wds-active {
-		color: $button-active-color;
-		border-color: $button-active-color;
+		background-color: $button-active-color;
 	}
 
 	&.disabled, &[disabled] {
 		cursor: default;
-		opacity: 0.7;
+		opacity: 0.5;
 	}
 
-	&.wds-filled {
-		background-color: $color-light-blue;
-		color: $color-white;
+	&.wds-secondary {
+		background-color: $color-white;
+		border: 1px solid $color-light-blue;
+		color: $color-light-blue;
 
 		&:hover, &.wds-active {
-			color: $color-white;
-			background-color: $button-active-color;
+			border-color: $button-active-color;
+			color: $button-active-color;
 		}
 	}
 
@@ -46,7 +46,12 @@ $button-line-height: 1.3em;
 		padding: 48px 24px;
 	}
 
-	&.wds-no-border {
-		border: 0;
+	&.wds-text {
+		background-color: $color-white;
+		color: $color-light-blue;
+
+		&:hover, &.wds-active {
+			color: $button-active-color;
+		}
 	}
 }
