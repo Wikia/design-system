@@ -5,6 +5,7 @@
     meta(name='viewport' content='user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
     <!-- inject:css --><!-- endinject -->
     <!-- inject:js --><!-- endinject -->
+    <!-- inject:html --><!-- endinject -->
 
 ### Body
 
