@@ -697,6 +697,7 @@ code.sg:first-child {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    border-top: 6px solid #39424d;
     color: #656e78;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -704,16 +705,20 @@ code.sg:first-child {
     font-size: 10px;
     font-weight: 600;
     height: 100%;
+    margin-top: -6px;
+    padding-right: 12px;
     text-decoration: none;
     text-transform: uppercase; }
-  .wds-global-navigation__fandom-logo {
-    fill: #39424d;
-    height: 24px;
-    width: 150px; }
-  .wds-global-navigation__wikia-logo {
-    fill: #092344;
-    height: 16px;
-    width: 50px; }
+    .wds-global-navigation__logo__fandom {
+      fill: #39424d;
+      height: 24px;
+      width: 145px; }
+    .wds-global-navigation__logo__wikia {
+      fill: #092344;
+      height: 15px;
+      width: 50px; }
+    .wds-global-navigation__logo__span {
+      padding-top: 4px; }
   .wds-global-navigation__content-bar {
     border-top: 6px solid #656e78;
     color: #39424d;
@@ -724,8 +729,8 @@ code.sg:first-child {
     text-align: center;
     text-decoration: none; }
     .wds-global-navigation__content-bar.wds-fixed-width {
-      text-overflow: ellipsis;
       overflow: hidden;
+      text-overflow: ellipsis;
       width: 80px; }
     .wds-global-navigation__content-bar:hover {
       color: #00b7e0; }
@@ -4641,13 +4646,13 @@ body {
           <h4>EN version</h4>
           <div class="wds-global-navigation">
             <a href="#" class="wds-global-navigation__logo">
-              <svg class="wds-global-navigation__fandom-logo" alt="Fandom">
+              <svg class="wds-global-navigation__logo__fandom" alt="Fandom">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom">
               </svg>
-              <span>
+              <span class="wds-global-navigation__logo__span">
                 POWERED BY
               </span>
-              <svg class="wds-global-navigation__wikia-logo" alt="Wikia">
+              <svg class="wds-global-navigation__logo__wikia" alt="Wikia">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia">
               </svg>
             </a>
@@ -4664,13 +4669,13 @@ body {
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>EN version<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__fandom-logo&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__fandom&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-fandom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__span&quot;</span>&gt;</span>
       POWERED BY
     <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__wikia-logo&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Wikia&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__wikia&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Wikia&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-wikia&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
