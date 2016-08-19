@@ -1,16 +1,20 @@
+$border-top-width: 6px;
+$nav-height: 49px;
+
 .wds-global-navigation {
 	align-items: center;
 	border-bottom: 1px solid $color-faint-gray;
-	border-top: 6px solid $color-slate-gray;
+	border-top: $border-top-width solid $color-slate-gray;
 	display: flex;
-	height: 55px;
+	height: $nav-height;
 
 	&__logo {
 		align-items: center;
 		color: $color-slate-gray;
 		display: flex;
 		font-size: $typescale-size-minus-3;
-		font-weight: 700;
+		font-weight: 600;
+		height: 100%;
 		text-decoration: none;
 		text-transform: uppercase;
 	}
@@ -25,5 +29,66 @@
 		fill: $color-dark-blue;
 		height: 16px;
 		width: 50px;
+	}
+
+	&__content-bar {
+		border-top: $border-top-width solid $color-slate-gray;
+		color: $color-dark-blue-gray;
+		display: inline-block;
+		font-size: $typescale-size-minus-1;
+		line-height: $nav-height;
+		margin-top: -$border-top-width;
+		text-align: center;
+		text-decoration: none;
+
+		&.wds-fixed-width {
+			text-overflow: ellipsis;
+			overflow: hidden;
+			width: 80px;
+		}
+
+		&:hover {
+			color: $color-link
+		}
+
+		&:active, &.active {
+			background-color: $color-slate-gray;
+			border-color: darken($color-slate-gray, 20%);
+			color: $color-white;
+		}
+
+		&.wds-green {
+			border-color: $color-games;
+
+			&:active, &.active {
+				background-color: $color-games;
+				border-color: darken($color-games, 10%);
+			}
+		}
+
+		&.wds-aqua {
+			border-color: $color-movies;
+
+			&:active, &.active {
+				background-color: $color-movies;
+				border-color: darken($color-movies, 10%);
+			}
+		}
+
+		&.wds-blue {
+			border-color: $color-tv;
+
+			&:active, &.active {
+				background-color: $color-tv;
+				border-color: darken($color-tv, 10%);
+			}
+		}
+	}
+
+	&__search {
+		background-color: lightgray;
+		flex-grow: 1;
+		height: 100%;
+		text-align: center;
 	}
 }
