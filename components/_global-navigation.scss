@@ -10,25 +10,32 @@ $nav-height: 49px;
 
 	&__logo {
 		align-items: center;
+		border-top: $border-top-width solid $color-dark-blue-gray;
 		color: $color-slate-gray;
 		display: flex;
 		font-size: $typescale-size-minus-3;
 		font-weight: 600;
 		height: 100%;
+		margin-top: -$border-top-width;
+		padding-right: 12px;
 		text-decoration: none;
 		text-transform: uppercase;
-	}
 
-	&__fandom-logo {
-		fill: $color-dark-blue-gray;
-		height: 24px;
-		width: 150px
-	}
+		&__fandom {
+			fill: $color-dark-blue-gray;
+			height: 24px;
+			width: 145px
+		}
 
-	&__wikia-logo {
-		fill: $color-dark-blue;
-		height: 16px;
-		width: 50px;
+		&__wikia {
+			fill: $color-dark-blue;
+			height: 15px;
+			width: 50px;
+		}
+
+		&__span {
+			padding-top: 4px;
+		}
 	}
 
 	&__content-bar {
