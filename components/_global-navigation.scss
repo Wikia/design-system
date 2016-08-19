@@ -2,11 +2,27 @@ $border-top-width: 6px;
 $nav-height: 49px;
 
 .wds-global-navigation {
-	align-items: center;
 	border-bottom: 1px solid $color-faint-gray;
 	border-top: $border-top-width solid $color-slate-gray;
 	display: flex;
-	height: $nav-height;
+	justify-content: center;
+
+	&::before, &::after {
+		content: "";
+		flex-grow: 1;
+	}
+
+	&::before {
+		border-top: $border-top-width solid $color-dark-blue-gray;
+		margin-top: -$border-top-width;
+	}
+
+	&__content-wrapper {
+		align-items: center;
+		display: flex;
+		height: $nav-height;
+		width: 1024px;
+	}
 
 	&__logo {
 		align-items: center;
@@ -45,11 +61,13 @@ $nav-height: 49px;
 		font-size: $typescale-size-minus-1;
 		line-height: $nav-height;
 		margin-top: -$border-top-width;
+		padding: 0 14px;
 		text-align: center;
 		text-decoration: none;
 
 		&.wds-fixed-width {
 			overflow: hidden;
+			padding: 0;
 			text-overflow: ellipsis;
 			width: 80px;
 		}
@@ -97,5 +115,9 @@ $nav-height: 49px;
 		flex-grow: 1;
 		height: 100%;
 		text-align: center;
+	}
+
+	&__start-a-wiki {
+		margin-left: 12px;
 	}
 }
