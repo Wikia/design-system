@@ -8,9 +8,10 @@ $button-line-height: 1.3em;
 	cursor: pointer;
 	display: inline-block;
 	font-size: $typescale-size-minus-2;
-	font-weight: 700;
+	font-weight: 600;
+	letter-spacing: .15px;
 	line-height: $button-line-height;
-	padding: 24px;
+	padding: 16px 18px;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -38,11 +39,12 @@ $button-line-height: 1.3em;
 	}
 
 	&.wds-squished {
-		padding: 12px 24px;
+		font-size: $typescale-size-minus-3;
+		padding: 9px 18px;
 	}
 
 	&.wds-stretched {
-		padding: 48px 24px;
+		padding: 28px 18px;
 	}
 
 	&.wds-text {
