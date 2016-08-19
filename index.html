@@ -690,7 +690,7 @@ code.sg:first-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 55px; }
+  height: 49px; }
   .wds-global-navigation__logo {
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -700,7 +700,8 @@ code.sg:first-child {
     display: -ms-flexbox;
     display: flex;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 600;
+    height: 100%;
     text-decoration: none;
     text-transform: uppercase; }
   .wds-global-navigation__fandom-logo {
@@ -711,6 +712,47 @@ code.sg:first-child {
     fill: #092344;
     height: 16px;
     width: 50px; }
+  .wds-global-navigation__content-bar {
+    border-top: 6px solid #656e78;
+    color: #39424d;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 49px;
+    margin-top: -6px;
+    text-align: center;
+    text-decoration: none; }
+    .wds-global-navigation__content-bar.wds-fixed-width {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 80px; }
+    .wds-global-navigation__content-bar:hover {
+      color: #00b7e0; }
+    .wds-global-navigation__content-bar:active, .wds-global-navigation__content-bar.active {
+      background-color: #656e78;
+      border-color: #363b41;
+      color: #fff; }
+    .wds-global-navigation__content-bar.wds-green {
+      border-color: #94d11f; }
+      .wds-global-navigation__content-bar.wds-green:active, .wds-global-navigation__content-bar.wds-green.active {
+        background-color: #94d11f;
+        border-color: #75a518; }
+    .wds-global-navigation__content-bar.wds-aqua {
+      border-color: #09d3bf; }
+      .wds-global-navigation__content-bar.wds-aqua:active, .wds-global-navigation__content-bar.wds-aqua.active {
+        background-color: #09d3bf;
+        border-color: #07a293; }
+    .wds-global-navigation__content-bar.wds-blue {
+      border-color: #00b7e0; }
+      .wds-global-navigation__content-bar.wds-blue:active, .wds-global-navigation__content-bar.wds-blue.active {
+        background-color: #00b7e0;
+        border-color: #008dad; }
+  .wds-global-navigation__search {
+    background-color: lightgray;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    height: 100%;
+    text-align: center; }
 
 /**
  * Breakpoints:
@@ -4608,6 +4650,13 @@ body {
               </svg>
             </a>
 
+            <a href="#" class="wds-global-navigation__content-bar wds-fixed-width wds-green">Games</a>
+            <a href="#" class="wds-global-navigation__content-bar wds-fixed-width wds-aqua">Movies</a>
+            <a href="#" class="wds-global-navigation__content-bar wds-fixed-width wds-blue">TV</a>
+            <a href="#" class="wds-global-navigation__content-bar wds-fixed-width">Wikis</a>
+
+            <div class="wds-global-navigation__search">Search placeholder</div>
+            <a href="#" class="wds-global-navigation__content-bar">My Account</a>
             <a href="#" class="wds-button wds-squished">Start a wiki</a>
           </div>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>EN version<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
@@ -4624,6 +4673,13 @@ body {
     <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-fixed-width wds-green&quot;</span>&gt;</span>Games<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-fixed-width wds-aqua&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-fixed-width wds-blue&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-fixed-width&quot;</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__search&quot;</span>&gt;</span>Search placeholder<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar&quot;</span>&gt;</span>My Account<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-squished&quot;</span>&gt;</span>Start a wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
       </div>
