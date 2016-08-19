@@ -308,14 +308,15 @@ code.sg:first-child {
 
 .wds-button {
   background-color: #1a5eb8;
-  border: 0;
+  border: 1px solid #1a5eb8;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: .15px;
   line-height: 1.3em;
-  padding: 24px;
+  padding: 16px 18px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -323,23 +324,24 @@ code.sg:first-child {
   -webkit-appearance: none;
   -webkit-border-radius: 0; }
   .wds-button:hover, .wds-button.wds-active {
-    background-color: #14478b; }
+    background-color: #14478b;
+    border-color: #14478b; }
   .wds-button.disabled, .wds-button[disabled] {
     cursor: default;
     opacity: 0.5; }
   .wds-button.wds-secondary {
     background-color: #fff;
-    border: 1px solid #1a5eb8;
     color: #1a5eb8; }
     .wds-button.wds-secondary:hover, .wds-button.wds-secondary.wds-active {
-      border-color: #14478b;
       color: #14478b; }
   .wds-button.wds-squished {
-    padding: 12px 24px; }
+    font-size: 10px;
+    padding: 9px 18px; }
   .wds-button.wds-stretched {
-    padding: 48px 24px; }
+    padding: 28px 18px; }
   .wds-button.wds-text {
     background-color: #fff;
+    border: 0;
     color: #1a5eb8; }
     .wds-button.wds-text:hover, .wds-button.wds-text.wds-active {
       color: #14478b; }
