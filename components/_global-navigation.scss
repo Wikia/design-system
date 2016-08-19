@@ -8,7 +8,7 @@ $nav-height: 49px;
 	justify-content: center;
 
 	&::before, &::after {
-		content: "";
+		content: '';
 		flex-grow: 1;
 	}
 
@@ -111,6 +111,7 @@ $nav-height: 49px;
 	}
 
 	&__search {
+		// TODO XW-1620
 		background-color: lightgray;
 		flex-grow: 1;
 		height: 100%;
