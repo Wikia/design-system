@@ -49,8 +49,8 @@ $nav-height: 49px;
 		text-decoration: none;
 
 		&.wds-fixed-width {
-			text-overflow: ellipsis;
 			overflow: hidden;
+			text-overflow: ellipsis;
 			width: 80px;
 		}
 
