@@ -3,6 +3,7 @@
 	@example
 	<h4>EN version</h4>
 	<div class="wds-global-navigation">
+		<div class="wds-global-navigation__content-wrapper">
 		<a href="#" class="wds-global-navigation__logo">
 			<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
@@ -22,5 +23,6 @@
 
 		<div class="wds-global-navigation__search" >Search placeholder</div>
 		<a href="#" class="wds-global-navigation__content-bar">My Account</a>
-		<a href="#" class="wds-button wds-squished">Start a wiki</a>
+		<a href="#" class="wds-button wds-squished wds-global-navigation__start-a-wiki">Start a wiki</a>
+		</div>
 	</div>
