@@ -17,7 +17,7 @@ $button-line-height: 1.3em;
 	text-transform: uppercase;
 	transition: all 300ms;
 	-webkit-appearance: none;
-	-webkit-border-radius:0;
+	-webkit-border-radius: 0;
 
 	&:hover, &.wds-active {
 		background-color: $button-active-color;
