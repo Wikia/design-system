@@ -118,7 +118,7 @@
 				<section class="wds-global-footer__wikia-section wds-is-site-overview">
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="#" class="wds-global-footer__link">Terms Of Use</a>
+							<a href="#" class="wds-global-footer__link">Terms of Use</a>
 						</li>
 						<li class="wds-global-footer__links-list-item">
 							<a href="#" class="wds-global-footer__link">Privacy Policy</a>
