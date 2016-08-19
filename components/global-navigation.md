@@ -23,6 +23,6 @@
 
 		<div class="wds-global-navigation__search" >Search placeholder</div>
 		<a href="#" class="wds-global-navigation__content-bar">My Account</a>
-		<a href="#" class="wds-button wds-squished wds-global-navigation__start-a-wiki">Start a wiki</a>
+		<a href="#" class="wds-button wds-squished wds-global-navigation__start-a-wiki wds-secondary">Start a wiki</a>
 		</div>
 	</div>
