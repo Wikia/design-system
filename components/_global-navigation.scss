@@ -1,5 +1,6 @@
 $border-top-width: 6px;
 $nav-height: 49px;
+$nav-width: 1024px;
 
 .wds-global-navigation {
 	border-bottom: 1px solid $color-faint-gray;
@@ -10,6 +11,7 @@ $nav-height: 49px;
 	&::before, &::after {
 		content: '';
 		flex-grow: 1;
+		width: calc((100% - #{$nav-width}) / 2);
 	}
 
 	&::before {
@@ -21,7 +23,7 @@ $nav-height: 49px;
 		align-items: center;
 		display: flex;
 		height: $nav-height;
-		width: 1024px;
+		width: $nav-width;
 	}
 
 	&__logo {
