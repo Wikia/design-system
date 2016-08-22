@@ -1,0 +1,22 @@
+.wds-list {
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 18px;
+
+  .wds-small-list-item {
+    display: flex;
+    flex-direction: column;
+    font-size: $typescale-size-minus-1;
+    height: 36px;
+    justify-content: center;
+  }
+
+  .wds-big-list-item {
+    display: flex;
+    flex-direction: column;
+    font-size: $typescale-size-base;
+    height: 42px;
+    justify-content: center;
+  }
+}
