@@ -1,0 +1,12 @@
+.wds-standard-dropdown {
+  background-color: $color-white;
+  display: inline;
+
+  &.wds-light {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &.wds-dark {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  }
+}
