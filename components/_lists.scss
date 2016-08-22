@@ -3,20 +3,20 @@
   list-style-type: none;
   padding: 0;
   margin: 18px;
+}
 
-  .wds-small-list-item {
-    display: flex;
-    flex-direction: column;
+.wds-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &.wds-is-small {
     font-size: $typescale-size-minus-1;
-    height: 36px;
-    justify-content: center;
+    min-height: 36px;
   }
 
-  .wds-big-list-item {
-    display: flex;
-    flex-direction: column;
+  &.wds-is-big {
     font-size: $typescale-size-base;
-    height: 42px;
-    justify-content: center;
+    min-height: 42px;
   }
 }
