@@ -10,6 +10,7 @@ $nav-width: 1024px;
 
 	&::before, &::after {
 		content: '';
+		display: inline-block;
 		flex-grow: 1;
 		width: calc((100% - #{$nav-width}) / 2);
 	}
