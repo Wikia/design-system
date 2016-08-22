@@ -654,11 +654,20 @@ code.sg:first-child {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+<<<<<<< HEAD
   font-size: 14px;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   min-height: 36px; }
+=======
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .wds-list-item.wds-is-small {
+    font-size: 14px;
+    min-height: 36px; }
+>>>>>>> 261d652... XW-1619 | update list component
   .wds-list-item.wds-is-big {
     font-size: 16px;
     min-height: 42px; }
@@ -4487,51 +4496,51 @@ body {
         <div class="sg-canvas">
           <h4>Small list</h4>
           <ul class="wds-list">
-            <li class="wds-small-list-item">
+            <li class="wds-list-item wds-is-small">
               List element 1
             </li>
-            <li class="wds-small-list-item">
+            <li class="wds-list-item wds-is-small">
               List element 2
             </li>
-            <li class="wds-small-list-item">
+            <li class="wds-list-item wds-is-small">
               List element 3
             </li>
           </ul>
 
           <h4>Big list</h4>
           <ul class="wds-list">
-            <li class="wds-big-list-item">
+            <li class="wds-list-item wds-is-big">
               List element 1
             </li>
-            <li class="wds-big-list-item">
+            <li class="wds-list-item wds-is-big">
               List element 2
             </li>
-            <li class="wds-big-list-item">
+            <li class="wds-list-item wds-is-big">
               List element 3
             </li>
           </ul>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Small list<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-small-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-small&quot;</span>&gt;</span>
     List element 1
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-small-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-small&quot;</span>&gt;</span>
     List element 2
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-small-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-small&quot;</span>&gt;</span>
     List element 3
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Big list<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-big-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-big&quot;</span>&gt;</span>
     List element 1
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-big-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-big&quot;</span>&gt;</span>
     List element 2
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-big-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-big&quot;</span>&gt;</span>
     List element 3
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
