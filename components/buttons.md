@@ -10,13 +10,14 @@
 	<button class="wds-button wds-is-secondary">Button text</button>
 	<button class="wds-button wds-is-secondary wds-is-active">Hover</button>
 	<button class="wds-button wds-is-secondary" disabled>Disabled</button>
-
-	<button class="wds-button">Multiline <br>button text<br>with 3rd line</button>
-	<a href="#" class="wds-button">Link button</a>
-
+	
 	<h4>Text Buttons</h4>
 	<button class="wds-button wds-is-text">Button text</button>
 	<button class="wds-button wds-is-text wds-is-active">Hover</button>
+
+	<h4>Other usages</h4>
+	<button class="wds-button">Multiline <br>button text<br>with 3rd line</button>
+	<a href="#" class="wds-button">Link button</a>
 
 	<h4>Sizes</h4>
 	<button class="wds-button wds-is-squished">Squished</button>
