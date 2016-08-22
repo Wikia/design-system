@@ -8,12 +8,9 @@
 .wds-list-item {
   display: flex;
   flex-direction: column;
+  font-size: $typescale-size-minus-1;
   justify-content: center;
-
-  &.wds-is-small {
-    font-size: $typescale-size-minus-1;
-    min-height: 36px;
-  }
+  min-height: 36px;
 
   &.wds-is-big {
     font-size: $typescale-size-base;
