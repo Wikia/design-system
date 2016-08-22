@@ -67,7 +67,7 @@ $nav-width: 1024px;
 		text-align: center;
 		text-decoration: none;
 
-		&.wds-fixed-width {
+		&.wds-has-fixed-width {
 			overflow: hidden;
 			padding: 0;
 			text-overflow: ellipsis;
@@ -78,34 +78,34 @@ $nav-width: 1024px;
 			color: $color-link
 		}
 
-		&:active, &.active {
+		&:active, &.wds-is-active {
 			background-color: $color-slate-gray;
 			border-color: darken($color-slate-gray, 20%);
 			color: $color-white;
 		}
 
-		&.wds-green {
+		&.wds-is-green {
 			border-color: $color-games;
 
-			&:active, &.active {
+			&:active, &.wds-is-active {
 				background-color: $color-games;
 				border-color: darken($color-games, 10%);
 			}
 		}
 
-		&.wds-aqua {
+		&.wds-is-aqua {
 			border-color: $color-movies;
 
-			&:active, &.active {
+			&:active, &.wds-is-active {
 				background-color: $color-movies;
 				border-color: darken($color-movies, 10%);
 			}
 		}
 
-		&.wds-blue {
+		&.wds-is-blue {
 			border-color: $color-tv;
 
-			&:active, &.active {
+			&:active, &.wds-is-active {
 				background-color: $color-tv;
 				border-color: darken($color-tv, 10%);
 			}
