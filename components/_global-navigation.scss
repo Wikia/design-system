@@ -57,6 +57,29 @@ $nav-width: 1024px;
 		}
 	}
 
+	&__icon-user {
+		border: solid 2px $color-dark-blue-gray;
+		border-radius: 50%;
+		fill: $color-dark-blue-gray;
+		height: 28px;
+		vertical-align: middle;
+		width: 28px;
+	}
+
+	&__icon-bell {
+		fill: $color-dark-blue-gray;
+		height: 16px;
+		vertical-align: middle;
+		width: 16px;
+	}
+
+	&__icon-dropdown {
+		fill: $color-dark-blue-gray;
+		height: 6px;
+		vertical-align: middle;
+		width: 10px;
+	}
+
 	&__content-bar {
 		border-top: $border-top-width solid $color-slate-gray;
 		color: $color-dark-blue-gray;
