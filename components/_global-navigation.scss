@@ -64,7 +64,7 @@ $notification-counter-border-width: 1px;
 		border-radius: 50%;
 		fill: $color-dark-blue-gray;
 		height: 28px;
-		vertical-align: middle;
+		margin-right: 2px;
 		width: 28px;
 	}
 
@@ -93,21 +93,18 @@ $notification-counter-border-width: 1px;
 	&__icon-bell {
 		fill: $color-dark-blue-gray;
 		height: 18px;
-		vertical-align: middle;
 		width: 18px;
 	}
 
 	&__icon-dropdown {
 		fill: $color-dark-blue-gray;
 		height: 10px;
-		vertical-align: middle;
 		width: 10px;
 	}
 
 	&__content-bar {
 		border-top: $border-top-width solid $color-slate-gray;
 		color: $color-dark-blue-gray;
-		display: inline-block;
 		font-size: $typescale-size-minus-1;
 		line-height: $nav-height;
 		margin-top: -$border-top-width;
@@ -120,6 +117,12 @@ $notification-counter-border-width: 1px;
 			padding: 0;
 			text-overflow: ellipsis;
 			width: 80px;
+		}
+
+		&.wds-has-multiple-subitems {
+			align-items: center;
+			display: flex;
+			height: 100%;
 		}
 
 		&:hover {
