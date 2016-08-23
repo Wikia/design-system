@@ -50,6 +50,12 @@
 	padding: 5px;
 }
 
+.dropdown-preview {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+}
+
 /* Remove default body margin on the footer element */
 .wds-global-footer {
 	margin: 0 -8px;

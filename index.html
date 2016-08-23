@@ -290,6 +290,12 @@ code.sg:first-child {
 	padding: 5px;
 }
 
+.dropdown-preview {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+}
+
 /* Remove default body margin on the footer element */
 .wds-global-footer {
 	margin: 0 -8px;
@@ -305,6 +311,21 @@ code.sg:first-child {
 
 .wds-icon-tiny {
   height: 12px; }
+
+.wds-dropdown-toggle {
+  display: inline-block;
+  position: relative; }
+  .wds-dropdown-toggle.wds-is-active .wds-dropdown {
+    display: inline-block; }
+
+.wds-dropdown {
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+  position: absolute;
+  z-index: 1; }
+  .wds-dropdown.wds-is-dark {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3); }
 
 .wds-global-footer {
   background-color: #39424d;
@@ -3727,6 +3748,48 @@ body {
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;typescale-size-minus-3&quot;</span>&gt;</span>The quick brown fox jumps over the lazy dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">code</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg&quot;</span>&gt;</span>$typograghy-minus-3<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+      </div>
+    </section>
+    <section class="sg-block sg-section-dropdowns-">
+      <div class="sg-text">
+        <h3 id="dropdowns-" class="sg">Dropdowns:</h3>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <div class="dropdown-preview">
+            <h4>Light</h4>
+            <div class="wds-dropdown-toggle wds-is-active">
+              <div class="wds-dropdown">
+                Dropdown content
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown-preview">
+            <h4>Dark</h4>
+            <div class="wds-dropdown-toggle wds-is-active">
+              <div class="wds-dropdown wds-is-dark">
+                Dropdown content
+              </div>
+            </div>
+          </div>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dropdown-preview&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Light<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-is-active&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown&quot;</span>&gt;</span>
+      Dropdown content
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dropdown-preview&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Dark<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-is-active&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown wds-is-dark&quot;</span>&gt;</span>
+      Dropdown content
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
       </div>
     </section>
     <section class="sg-block sg-section-footer-">
