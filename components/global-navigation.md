@@ -51,9 +51,7 @@
 			<div class="wds-global-navigation__search">Search placeholder</div>
 
 			<a href="#" class="wds-global-navigation__content-bar wds-has-multiple-subitems">
-				<svg class="wds-global-navigation__icon-user" alt="user avatar">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
-				</svg>
+				<img src="./assets/avatar.jpg" class="wds-global-navigation__icon-user" alt="user name"/>
 				<svg class="wds-global-navigation__icon-dropdown" alt="dropdown">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 				</svg>
