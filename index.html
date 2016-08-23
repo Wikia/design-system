@@ -774,8 +774,14 @@ code.sg:first-child {
     vertical-align: middle;
     width: 10px; }
   .wds-global-navigation__content-bar {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     border-top: 6px solid #656e78;
     color: #39424d;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     display: inline-block;
     font-size: 14px;
     line-height: 49px;
@@ -4770,17 +4776,17 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom">
                 </svg>
                 <span class="wds-global-navigation__logo__span">
-                  POWERED BY
+                  powered by
                 </span>
                 <svg class="wds-global-navigation__logo__wikia" alt="Wikia">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia">
                 </svg>
               </a>
 
-              <a href="#" class="wds-global-navigation__content-bar wds-fixed-width wds-green">Games</a>
-              <a href="#" class="wds-global-navigation__content-bar wds-fixed-width wds-aqua">Movies</a>
-              <a href="#" class="wds-global-navigation__content-bar wds-fixed-width wds-blue">TV</a>
-              <a href="#" class="wds-global-navigation__content-bar wds-fixed-width">Wikis</a>
+              <a href="#" class="wds-global-navigation__content-bar wds-has-fixed-width wds-is-green">Games</a>
+              <a href="#" class="wds-global-navigation__content-bar wds-has-fixed-width wds-is-aqua">Movies</a>
+              <a href="#" class="wds-global-navigation__content-bar wds-has-fixed-width wds-is-blue">TV</a>
+              <a href="#" class="wds-global-navigation__content-bar wds-has-fixed-width">Wikis</a>
 
               <div class="wds-global-navigation__search">Search placeholder</div>
 
@@ -4804,7 +4810,7 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
                 </svg>
               </a>
 
-              <a href="#" class="wds-button wds-squished wds-global-navigation__start-a-wiki wds-secondary">Start a wiki</a>
+              <a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Start a wiki</a>
             </div>
           </div>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>EN version<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
@@ -4842,17 +4848,17 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-fandom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__span&quot;</span>&gt;</span>
-        POWERED BY
+        powered by
       <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__wikia&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Wikia&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-wikia&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-fixed-width wds-green&quot;</span>&gt;</span>Games<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-fixed-width wds-aqua&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-fixed-width wds-blue&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-fixed-width&quot;</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-has-fixed-width wds-is-green&quot;</span>&gt;</span>Games<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-has-fixed-width wds-is-aqua&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-has-fixed-width wds-is-blue&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar wds-has-fixed-width&quot;</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__search&quot;</span>&gt;</span>Search placeholder<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
@@ -4876,7 +4882,7 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-squished wds-global-navigation__start-a-wiki wds-secondary&quot;</span>&gt;</span>Start a wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary&quot;</span>&gt;</span>Start a wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
       </div>
