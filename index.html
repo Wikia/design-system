@@ -290,10 +290,17 @@ code.sg:first-child {
 	padding: 5px;
 }
 
-.dropdown-preview {
-    display: inline-block;
-    height: 150px;
-    width: 150px;
+.sg-dropdown-preview {
+	display: inline-block;
+	height: 250px;
+	width: 250px;
+}
+
+.sg-dropdown-entrypoint {
+	background: #656d77;
+	color: #fff;
+	height: 35px;
+	padding: 0 10px;
 }
 
 /* Remove default body margin on the footer element */
@@ -317,15 +324,21 @@ code.sg:first-child {
   position: relative; }
   .wds-dropdown-toggle.wds-is-active .wds-dropdown {
     display: inline-block; }
+  .wds-dropdown-toggle.wds-is-active .wds-dropdown-toggle-chevron {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
 
 .wds-dropdown {
   background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 0 rgba(26, 26, 26, 0.2);
   display: none;
   position: absolute;
   z-index: 1; }
   .wds-dropdown.wds-is-dark {
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 0 20px 0 rgba(26, 26, 26, 0.3); }
+  .wds-dropdown.wds-is-right-aligned {
+    right: 0; }
 
 .wds-global-footer {
   background-color: #39424d;
@@ -3756,37 +3769,69 @@ body {
       </div>
       <div class="sg-example">
         <div class="sg-canvas">
-          <div class="dropdown-preview">
-            <h4>Light</h4>
+          <div class="sg-dropdown-preview">
+            <h4>Default</h4>
             <div class="wds-dropdown-toggle wds-is-active">
+              <div class="sg-dropdown-entrypoint">
+                <span>Pretty wide entrypoint</span>
+                <svg class="wds-icon wds-dropdown-toggle-chevron">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown">
+                </svg>
+              </div>
               <div class="wds-dropdown">
-                Dropdown content
+                <p>Dropdown content</p>
+                <p>Dropdown content</p>
+                <p>Dropdown content</p>
               </div>
             </div>
           </div>
 
-          <div class="dropdown-preview">
-            <h4>Dark</h4>
+          <div class="sg-dropdown-preview">
+            <h4>Dark, right aligned</h4>
             <div class="wds-dropdown-toggle wds-is-active">
-              <div class="wds-dropdown wds-is-dark">
-                Dropdown content
+              <div class="sg-dropdown-entrypoint">
+                <span>Pretty wide entrypoint</span>
+                <svg class="wds-icon wds-dropdown-toggle-chevron">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown">
+                </svg>
+              </div>
+              <div class="wds-dropdown wds-is-dark wds-is-right-aligned">
+                <p>Dropdown content</p>
+                <p>Dropdown content</p>
+                <p>Dropdown content</p>
               </div>
             </div>
           </div>
-        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dropdown-preview&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Light<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-dropdown-preview&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-is-active&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-dropdown-entrypoint&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Pretty wide entrypoint<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-dropdown-toggle-chevron&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown&quot;</span>&gt;</span>
-      Dropdown content
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Dropdown content<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Dropdown content<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Dropdown content<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dropdown-preview&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Dark<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-dropdown-preview&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Dark, right aligned<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-is-active&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown wds-is-dark&quot;</span>&gt;</span>
-      Dropdown content
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-dropdown-entrypoint&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Pretty wide entrypoint<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-dropdown-toggle-chevron&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown wds-is-dark wds-is-right-aligned&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Dropdown content<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Dropdown content<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Dropdown content<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
