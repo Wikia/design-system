@@ -1,0 +1,20 @@
+.wds-dropdown-toggle {
+	display: inline-block;
+	position: relative;
+
+	&.wds-is-active .wds-dropdown {
+		display: inline-block;
+	}
+}
+
+.wds-dropdown {
+	background-color: $color-white;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	display: none;
+	position: absolute;
+	z-index: 1;
+
+	&.wds-is-dark {
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+	}
+}
