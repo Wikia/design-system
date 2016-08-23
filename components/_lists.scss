@@ -1,19 +1,19 @@
 .wds-list {
-  display: block;
-  list-style-type: none;
-  padding: 0;
-  margin: 18px;
+	display: block;
+	list-style-type: none;
+	padding: 0;
+	margin: 18px;
 }
 
 .wds-list-item {
-  display: flex;
-  flex-direction: column;
-  font-size: $typescale-size-minus-1;
-  justify-content: center;
-  min-height: 36px;
+	display: flex;
+	flex-direction: column;
+	font-size: $typescale-size-minus-1;
+	justify-content: center;
+	min-height: 36px;
 
-  &.wds-is-big {
-    font-size: $typescale-size-base;
-    min-height: 42px;
-  }
+	&.wds-is-big {
+		font-size: $typescale-size-base;
+		min-height: 42px;
+	}
 }
