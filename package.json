@@ -8,7 +8,7 @@
     "build": "gulp",
     "dev": "gulp watch",
     "test": "node test",
-    "update-baseline": "npm run test & gulp update-baseline"
+    "update-baseline": "rm -rf visuals/* npm run test"
   },
   "repository": {
     "type": "git",
