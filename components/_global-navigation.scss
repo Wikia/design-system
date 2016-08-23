@@ -1,6 +1,8 @@
 $border-top-width: 6px;
 $nav-height: 49px;
 $nav-width: 1024px;
+$notification-counter-height: 18px;
+$notification-counter-border-width: 1px;
 
 .wds-global-navigation {
 	border-bottom: 1px solid $color-faint-gray;
@@ -66,11 +68,33 @@ $nav-width: 1024px;
 		width: 28px;
 	}
 
+	&__notifications {
+		position: relative;
+	}
+
+	&__notification-counter-wrapper {
+		background-color: $color-tv;
+		border: 1px solid $color-white;
+		border-radius: $notification-counter-height / 2;
+		color: $color-white;
+		font-size: $typescale-size-minus-3;
+		height: $notification-counter-height - 2 * $notification-counter-border-width;
+		left: 6px;
+		line-height: $notification-counter-height - 2 * $notification-counter-border-width;
+		min-width: $notification-counter-height - 2 * $notification-counter-border-width;
+		position: absolute;
+		top: 7px;
+	}
+
+	&__notification-counter {
+		padding: 0 4px;
+	}
+
 	&__icon-bell {
 		fill: $color-dark-blue-gray;
-		height: 16px;
+		height: 18px;
 		vertical-align: middle;
-		width: 16px;
+		width: 18px;
 	}
 
 	&__icon-dropdown {
