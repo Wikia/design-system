@@ -51,9 +51,9 @@
 }
 
 .dropdown-preview {
-    display: inline-block;
-    height: 150px;
-    width: 150px;
+	display: inline-block;
+	height: 150px;
+	width: 150px;
 }
 
 /* Remove default body margin on the footer element */
