@@ -1,0 +1,127 @@
+$border-top-width: 6px;
+$nav-height: 49px;
+$nav-width: 1024px;
+
+.wds-global-navigation {
+	border-bottom: 1px solid $color-faint-gray;
+	border-top: $border-top-width solid $color-slate-gray;
+	display: flex;
+	justify-content: center;
+
+	&::before, &::after {
+		content: '';
+		display: inline-block;
+		flex-grow: 1;
+		width: calc((100% - #{$nav-width}) / 2);
+	}
+
+	&::before {
+		border-top: $border-top-width solid $color-dark-blue-gray;
+		margin-top: -$border-top-width;
+	}
+
+	&__content-wrapper {
+		align-items: center;
+		display: flex;
+		height: $nav-height;
+		width: $nav-width;
+	}
+
+	&__logo {
+		align-items: center;
+		border-top: $border-top-width solid $color-dark-blue-gray;
+		color: $color-slate-gray;
+		display: flex;
+		font-size: $typescale-size-minus-3;
+		font-weight: 600;
+		height: 100%;
+		margin-top: -$border-top-width;
+		padding-right: 12px;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&__fandom {
+			fill: $color-dark-blue-gray;
+			height: 24px;
+			width: 145px
+		}
+
+		&__wikia {
+			fill: $color-dark-blue;
+			height: 15px;
+			width: 50px;
+		}
+
+		&__span {
+			padding-top: 2px;
+		}
+	}
+
+	&__content-bar {
+		border-top: $border-top-width solid $color-slate-gray;
+		color: $color-dark-blue-gray;
+		display: inline-block;
+		font-size: $typescale-size-minus-1;
+		line-height: $nav-height;
+		margin-top: -$border-top-width;
+		padding: 0 14px;
+		text-align: center;
+		text-decoration: none;
+
+		&.wds-has-fixed-width {
+			overflow: hidden;
+			padding: 0;
+			text-overflow: ellipsis;
+			width: 80px;
+		}
+
+		&:hover {
+			color: $color-link
+		}
+
+		&:active, &.wds-is-active {
+			background-color: $color-slate-gray;
+			border-color: darken($color-slate-gray, 20%);
+			color: $color-white;
+		}
+
+		&.wds-is-green {
+			border-color: $color-games;
+
+			&:active, &.wds-is-active {
+				background-color: $color-games;
+				border-color: darken($color-games, 10%);
+			}
+		}
+
+		&.wds-is-aqua {
+			border-color: $color-movies;
+
+			&:active, &.wds-is-active {
+				background-color: $color-movies;
+				border-color: darken($color-movies, 10%);
+			}
+		}
+
+		&.wds-is-blue {
+			border-color: $color-tv;
+
+			&:active, &.wds-is-active {
+				background-color: $color-tv;
+				border-color: darken($color-tv, 10%);
+			}
+		}
+	}
+
+	&__search {
+		// TODO XW-1620
+		background-color: lightgray;
+		flex-grow: 1;
+		height: 100%;
+		text-align: center;
+	}
+
+	&__start-a-wiki {
+		margin-left: 12px;
+	}
+}
