@@ -50,6 +50,24 @@
 	padding: 5px;
 }
 
+.sg-dropdown-preview {
+	display: inline-block;
+	height: 250px;
+	width: 250px;
+}
+
+.wds-dropdown-toggle {
+	background: #00d4b4;
+	color: #fff;
+	height: 35px;
+	padding: 0 10px;
+}
+
+.wds-dropdown-toggle .wds-dropdown-toggle-chevron {
+	height: 35px;
+	vertical-align: middle;
+}
+
 /* Remove default body margin on the footer element */
 .wds-global-footer {
 	margin: 0 -8px;
