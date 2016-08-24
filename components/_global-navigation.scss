@@ -86,18 +86,6 @@ $notification-counter-border-width: 1px;
 		padding: 0 4px;
 	}
 
-	&__icon-bell {
-		fill: $color-dark-blue-gray;
-		height: 18px;
-		width: 18px;
-	}
-
-	&__icon-dropdown {
-		fill: $color-dark-blue-gray;
-		height: 10px;
-		width: 10px;
-	}
-
 	&__content-bar {
 		border-top: $border-top-width solid $color-slate-gray;
 		color: $color-dark-blue-gray;
@@ -129,14 +117,6 @@ $notification-counter-border-width: 1px;
 			background-color: $color-slate-gray;
 			border-color: darken($color-slate-gray, 20%);
 			color: $color-white;
-
-			.wds-avatar {
-				border-color: $color-white;
-			}
-
-			svg {
-				fill: $color-white;
-			}
 		}
 
 		&.wds-is-green {
