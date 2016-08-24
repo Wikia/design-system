@@ -14,7 +14,6 @@
     "type": "git",
     "url": "git+https://github.com/Wikia/design-system-reference-page.git"
   },
-  "license": "MIT",
   "devDependencies": {
     "chai": "3.5.0",
     "file-url": "1.1.0",
