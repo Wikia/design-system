@@ -71,4 +71,3 @@
 			<a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Start a wiki</a>
 		</div>
 	</div>
- 
