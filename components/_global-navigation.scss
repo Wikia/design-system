@@ -1,33 +1,22 @@
 $border-top-width: 6px;
 $nav-height: 49px;
-$nav-width: 1024px;
 
 $notification-counter-size: 18px;
 $notification-counter-border-width: 1px;
 
 .wds-global-navigation {
-	border-bottom: 1px solid $color-faint-gray;
 	border-top: $border-top-width solid $color-slate-gray;
-	display: flex;
-	justify-content: center;
+	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
+	box-shadow: 0 1px 0 0 $color-faint-gray;
 
-	&::before, &::after {
-		content: '';
-		display: inline-block;
-		flex-grow: 1;
-		width: calc((100% - #{$nav-width}) / 2);
-	}
-
-	&::before {
-		border-top: $border-top-width solid $color-dark-blue-gray;
-		margin-top: -$border-top-width;
-	}
-
-	&__content-wrapper {
-		align-items: center;
-		display: flex;
+	&__content-bar {
 		height: $nav-height;
-		width: $nav-width;
+		margin: 0 auto;
+		width: 1024px;
+
+		@media #{$breakpoint-desktop-xl-up} {
+			width: 1440px;
+		}
 	}
 
 	&__logo {
@@ -35,30 +24,34 @@ $notification-counter-border-width: 1px;
 		border-top: $border-top-width solid $color-dark-blue-gray;
 		color: $color-slate-gray;
 		display: flex;
+		justify-content: center;
 		font-size: $typescale-size-minus-3;
 		font-weight: 600;
-		height: 100%;
 		margin-top: -$border-top-width;
-		padding-right: 12px;
 		text-decoration: none;
 		text-transform: uppercase;
 
 		&__fandom {
 			fill: $color-dark-blue-gray;
 			height: 24px;
-			width: 145px
+			width: 120px
 		}
 
 		&__wikia {
 			fill: $color-dark-blue;
 			height: 15px;
-			width: 50px;
+			width: 42px;
 		}
 
-		&__span {
-			padding-top: 2px;
+		&__powered-by {
+			padding: 2px 5px 0;
 		}
 	}
+
+	&__middle-column {
+		display: flex;
+	}
+
 
 	&__notifications {
 		position: relative;
@@ -86,13 +79,14 @@ $notification-counter-border-width: 1px;
 		padding: 0 4px;
 	}
 
-	&__content-bar {
+	&__content-item {
 		border-top: $border-top-width solid $color-slate-gray;
 		color: $color-dark-blue-gray;
+		flex: 1;
 		font-size: $typescale-size-minus-1;
 		line-height: $nav-height;
 		margin-top: -$border-top-width;
-		padding: 0 14px;
+		padding: 0 5px;
 		text-align: center;
 		text-decoration: none;
 
@@ -119,7 +113,7 @@ $notification-counter-border-width: 1px;
 			color: $color-white;
 		}
 
-		&.wds-is-green {
+		&.wds-is-games {
 			border-color: $color-games;
 
 			&:active, &.wds-is-active {
@@ -128,7 +122,7 @@ $notification-counter-border-width: 1px;
 			}
 		}
 
-		&.wds-is-aqua {
+		&.wds-is-movies {
 			border-color: $color-movies;
 
 			&:active, &.wds-is-active {
@@ -137,7 +131,7 @@ $notification-counter-border-width: 1px;
 			}
 		}
 
-		&.wds-is-blue {
+		&.wds-is-tv {
 			border-color: $color-tv;
 
 			&:active, &.wds-is-active {
@@ -147,15 +141,19 @@ $notification-counter-border-width: 1px;
 		}
 	}
 
+	&__right-column {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
 	&__search {
 		// TODO XW-1620
 		background-color: lightgray;
-		flex-grow: 1;
-		height: 100%;
-		text-align: center;
+		flex: 2;
 	}
 
-	&__start-a-wiki {
-		margin-left: 12px;
+	&__account-navigation {
+		flex: 0 1 50%;
 	}
 }

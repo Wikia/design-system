@@ -9,5 +9,8 @@
   "ignore": [
     "**/.*",
     "gulpfile.js"
-  ]
+  ],
+  "dependencies": {
+    "flexboxgrid": "Wikia/flexboxgrid#XW-1618"
+  }
 }
