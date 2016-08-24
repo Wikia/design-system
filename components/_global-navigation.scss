@@ -73,6 +73,10 @@ $notification-counter-border-width: 1px;
 		min-width: $notification-counter-size;
 		position: absolute;
 		top: 7px;
+
+		@media #{$breakpoint-desktop-xl-up} {
+			left: 36px;
+		}
 	}
 
 	&__notifications-counter {
