@@ -684,6 +684,28 @@ code.sg:first-child {
         order: 6;
         width: 200px; } }
 
+.wds-list {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 7px 18px; }
+  .wds-list > li {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1em;
+    padding: 11px 0; }
+  .wds-list.wds-has-big-items {
+    padding-bottom: 2px;
+    padding-top: 2px; }
+    .wds-list.wds-has-big-items > li {
+      font-size: 16px;
+      padding-bottom: 16px;
+      padding-top: 16px; }
+  .wds-list.wds-has-lines-between > li {
+    border-bottom: solid 1px #e6e6e6; }
+    .wds-list.wds-has-lines-between > li:last-child {
+      border: 0; }
+
 /**
  * Breakpoints:
  *
@@ -4572,6 +4594,64 @@ body {
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span></pre>
+      </div>
+    </section>
+    <section class="sg-block sg-section-lists-">
+      <div class="sg-text">
+        <h3 id="lists-" class="sg">Lists:</h3>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <h4>Small list</h4>
+          <ul class="wds-list">
+            <li>List element 1</li>
+            <li>List element 2</li>
+            <li>List element 3</li>
+          </ul>
+
+          <h4>Big list</h4>
+          <ul class="wds-list wds-has-big-items">
+            <li>List element 1</li>
+            <li>List element 2</li>
+            <li>List element 3</li>
+          </ul>
+
+          <h4>Small list with 1 item</h4>
+          <ul class="wds-list">
+            <li>List element 1</li>
+          </ul>
+
+          <h4>Small list with line separator</h4>
+          <ul class="wds-list wds-has-lines-between">
+            <li>List element 1</li>
+            <li>List element 2</li>
+            <li>List element 3</li>
+          </ul>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Small list<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 2<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 3<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Big list<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-big-items&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 2<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 3<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Small list with 1 item<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Small list with line separator<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 2<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List element 3<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
       </div>
     </section>
 
