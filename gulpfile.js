@@ -76,19 +76,6 @@ gulp.task('copy-output-file', ['inject-webcomponents'], function () {
 	return gulp.src(tmpDir + outputFile).pipe(gulp.dest(outputDir));
 });
 
-// Visual Regression Testing
-gulp.task('update-baseline', function () {
-	var dir = './visuals/reference-page';
-
-	return gulp.src(dir + '/*.regression.png', {
-		base: dir
-	}).pipe(rename(function (path) {
-		path.basename = path.basename.replace('.regression', '.baseline');
-
-		return path;
-	})).pipe(gulp.dest(dir));
-});
-
 // WATCH
 gulp.task('rebuild', ['default'], function (done) {
 	console.log('\n# Finished rebuilding files.');
