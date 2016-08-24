@@ -21,7 +21,7 @@ $nav-height: 49px;
 		border-top: $border-top-width solid $color-dark-blue-gray;
 		color: $color-slate-gray;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
 		font-size: $typescale-size-minus-3;
 		font-weight: 600;
 		margin-top: -$border-top-width;
@@ -101,7 +101,7 @@ $nav-height: 49px;
 	&__right-column {
 		align-items: center;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 	}
 
 	&__search {
