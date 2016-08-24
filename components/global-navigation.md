@@ -51,14 +51,14 @@
 			<div class="wds-global-navigation__search">Search placeholder</div>
 
 			<a href="#" class="wds-global-navigation__content-bar wds-has-multiple-subitems">
-				<img src="./assets/avatar.jpg" class="wds-global-navigation__icon-user" alt="user name"/>
+				<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle wds-is-padded-right" alt="user name"/>
 				<svg class="wds-global-navigation__icon-dropdown" alt="dropdown">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__content-bar wds-has-multiple-subitems wds-global-navigation__notifications">
-				<div class="wds-global-navigation__notification-counter-wrapper">
-					<div class="wds-global-navigation__notification-counter">3</div>
+				<div class="wds-global-navigation__notifications-counter-wrapper">
+					<div class="wds-global-navigation__notifications-counter">3</div>
 				</div>
 				<svg class="wds-global-navigation__icon-bell" alt="notifications">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
