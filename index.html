@@ -644,24 +644,21 @@ code.sg:first-child {
 .wds-list {
   display: block;
   list-style-type: none;
-  margin: 18px;
+  margin: 7px 18px;
   padding: 0; }
-
-.wds-list-item {
-  box-sizing: border-box;
-  font-size: 14px;
-  line-height: 1em;
-  padding: 11px 0; }
-  .wds-list-item:first-child {
-    padding-top: 0; }
-  .wds-list-item:last-child {
-    padding-bottom: 0; }
-  .wds-list-item.wds-is-big {
-    font-size: 16px;
-    padding: 16px 0; }
-  .wds-list-item.wds-is-line-between {
+  .wds-list > li {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1em;
+    padding: 11px 0; }
+  .wds-list.wds-has-big-items {
+    margin: 2px 18px; }
+    .wds-list.wds-has-big-items > li {
+      font-size: 16px;
+      padding: 16px 0; }
+  .wds-list.wds-has-lines-between > li {
     border-bottom: solid 1px #e6e6e6; }
-    .wds-list-item.wds-is-line-between:last-child {
+    .wds-list.wds-has-lines-between > li:last-child {
       border: 0; }
 
 /**
@@ -4488,91 +4485,91 @@ body {
         <div class="sg-canvas">
           <h4>Small list</h4>
           <ul class="wds-list">
-            <li class="wds-list-item">
+            <li>
               List element 1
             </li>
-            <li class="wds-list-item">
+            <li>
               List element 2
             </li>
-            <li class="wds-list-item">
+            <li>
               List element 3
             </li>
           </ul>
 
           <h4>Big list</h4>
-          <ul class="wds-list">
-            <li class="wds-list-item wds-is-big">
+          <ul class="wds-list wds-has-big-items">
+            <li>
               List element 1
             </li>
-            <li class="wds-list-item wds-is-big">
+            <li>
               List element 2
             </li>
-            <li class="wds-list-item wds-is-big">
+            <li>
               List element 3
             </li>
           </ul>
 
           <h4>Small list with 1 item</h4>
           <ul class="wds-list">
-            <li class="wds-list-item">
+            <li>
               List element 1
             </li>
           </ul>
 
           <h4>Small list with line separator</h4>
-          <ul class="wds-list">
-            <li class="wds-list-item wds-is-line-between">
+          <ul class="wds-list wds-has-lines-between">
+            <li>
               List element 1
             </li>
-            <li class="wds-list-item wds-is-line-between">
+            <li>
               List element 2
             </li>
-            <li class="wds-list-item wds-is-line-between">
+            <li>
               List element 3
             </li>
           </ul>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Small list<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 1
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 2
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 3
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Big list<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-big&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-big-items&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 1
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-big&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 2
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-big&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 3
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Small list with 1 item<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 1
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Small list with line separator<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-line-between&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 1
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-line-between&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 2
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list-item wds-is-line-between&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
     List element 3
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
