@@ -26,3 +26,23 @@
 			List element 3
 		</li>
 	</ul>
+
+	<h4>Small list with 1 item</h4>
+	<ul class="wds-list">
+		<li class="wds-list-item">
+			List element 1
+		</li>
+	</ul>
+
+	<h4>Small list with line separator</h4>
+	<ul class="wds-list">
+		<li class="wds-list-item wds-is-line-between">
+			List element 1
+		</li>
+		<li class="wds-list-item wds-is-line-between">
+			List element 2
+		</li>
+		<li class="wds-list-item wds-is-line-between">
+			List element 3
+		</li>
+	</ul>
