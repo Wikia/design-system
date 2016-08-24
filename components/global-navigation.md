@@ -17,9 +17,9 @@
 			</a>
 
 			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-green">Games</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-aqua">Movies</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-blue">TV</a>
+				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-games">Games</a>
+				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-movies">Movies</a>
+				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-tv">TV</a>
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width">Wikis</a>
 				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
 			</div>
