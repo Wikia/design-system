@@ -6,14 +6,29 @@
 }
 
 .wds-list-item {
-	display: flex;
-	flex-direction: column;
+	box-sizing: border-box;
 	font-size: $typescale-size-minus-1;
-	justify-content: center;
-	min-height: 36px;
+	line-height: 1em;
+	padding: 11px 0;
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	&:last-child {
+		padding-bottom: 0;
+	}
 
 	&.wds-is-big {
 		font-size: $typescale-size-base;
-		min-height: 42px;
+		padding: 16px 0;
+	}
+
+	&.wds-is-line-between {
+		border-bottom: solid 1px $color-light-c3;
+
+		&:last-child {
+			border: 0;
+		}
 	}
 }
