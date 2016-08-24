@@ -5,38 +5,15 @@ $nav-height: 49px;
 	border-top: $border-top-width solid $color-slate-gray;
 	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
-	//display: flex;
-	//justify-content: center;
-
-	//&::before, &::after {
-	//	content: '';
-	//	display: inline-block;
-	//	flex-grow: 1;
-	//	width: calc((100% - #{$nav-width}) / 2);
-	//}
-
-	//&::before {
-	//	border-top: $border-top-width solid $color-dark-blue-gray;
-	//	margin-top: -$border-top-width;
-	//}
 
 	&__content-bar {
-		//align-items: center;
-		//display: flex;
 		height: $nav-height;
 		margin: 0 auto;
 		min-width: 1024px;
-
-	//	@media #{$breakpoint-desktop-xl-up} {
-			max-width: 1440px;
-	//	}
+		max-width: 1440px;
 	}
 
-
-
 	&__content-bar2 {
-		//align-items: center;
-		//display: flex;
 		height: $nav-height;
 		margin: 0 auto;
 		width: 1024px;
@@ -140,10 +117,6 @@ $nav-height: 49px;
 		// TODO XW-1620
 		background-color: lightgray;
 		flex: 2;
-	}
-
-	&__start-a-wiki {
-		//margin-left: 12px;
 	}
 
 	&__todo3 {
