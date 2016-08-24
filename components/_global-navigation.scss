@@ -70,7 +70,7 @@ $nav-height: 49px;
 			color: $color-white;
 		}
 
-		&.wds-is-green {
+		&.wds-is-games {
 			border-color: $color-games;
 
 			&:active, &.wds-is-active {
@@ -79,7 +79,7 @@ $nav-height: 49px;
 			}
 		}
 
-		&.wds-is-aqua {
+		&.wds-is-movies {
 			border-color: $color-movies;
 
 			&:active, &.wds-is-active {
@@ -88,7 +88,7 @@ $nav-height: 49px;
 			}
 		}
 
-		&.wds-is-blue {
+		&.wds-is-tv {
 			border-color: $color-tv;
 
 			&:active, &.wds-is-active {
