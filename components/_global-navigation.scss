@@ -9,13 +9,6 @@ $nav-height: 49px;
 	&__content-bar {
 		height: $nav-height;
 		margin: 0 auto;
-		min-width: 1024px;
-		max-width: 1440px;
-	}
-
-	&__content-bar2 {
-		height: $nav-height;
-		margin: 0 auto;
 		width: 1024px;
 
 		@media #{$breakpoint-desktop-xl-up} {
@@ -47,14 +40,12 @@ $nav-height: 49px;
 			width: 42px;
 		}
 
-		&__span {
-			// TODO rename class
+		&__powered-by {
 			padding: 2px 5px 0;
 		}
 	}
 
-	&__todo {
-		// TODO rename class
+	&__middle-column {
 		display: flex;
 	}
 
@@ -107,7 +98,7 @@ $nav-height: 49px;
 		}
 	}
 
-	&__todo2 {
+	&__right-column {
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
@@ -119,7 +110,7 @@ $nav-height: 49px;
 		flex: 2;
 	}
 
-	&__todo3 {
+	&__account-navigation {
 		flex: 0 1 50%;
 	}
 }
