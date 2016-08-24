@@ -1,7 +1,5 @@
 {
   "name": "design-system-reference-page",
-  "license": "MIT",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/Wikia/design-system-reference-page.git"
