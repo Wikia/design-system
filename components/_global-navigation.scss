@@ -68,7 +68,7 @@ $notification-counter-border-width: 1px;
 		font-size: $typescale-size-minus-3;
 		height: $notification-counter-size;
 		justify-content: center;
-		left: 6px;
+		left: 11px;
 		line-height: normal;
 		min-width: $notification-counter-size;
 		position: absolute;
@@ -101,6 +101,7 @@ $notification-counter-border-width: 1px;
 			align-items: center;
 			display: flex;
 			height: 100%;
+			justify-content: center;
 		}
 
 		&:hover {
