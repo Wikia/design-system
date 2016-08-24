@@ -1,0 +1,13 @@
+.wds-avatar {
+	border: solid 2px $color-dark-blue-gray;
+	height: 28px;
+	width: 28px;
+
+	&.wds-is-circle {
+		border-radius: 50%;
+	}
+
+	&.wds-is-padded-right {
+		margin-right: 2px;
+	}
+}

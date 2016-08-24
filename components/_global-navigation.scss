@@ -1,8 +1,10 @@
 $border-top-width: 6px;
 $nav-height: 49px;
 $nav-width: 1024px;
+
 $notification-counter-height: 18px;
 $notification-counter-border-width: 1px;
+$notification-counter-size: $notification-counter-height - 2 * $notification-counter-border-width;
 
 .wds-global-navigation {
 	border-bottom: 1px solid $color-faint-gray;
@@ -59,34 +61,25 @@ $notification-counter-border-width: 1px;
 		}
 	}
 
-	&__icon-user {
-		border: solid 2px $color-dark-blue-gray;
-		border-radius: 50%;
-		fill: $color-dark-blue-gray;
-		height: 28px;
-		margin-right: 2px;
-		width: 28px;
-	}
-
 	&__notifications {
 		position: relative;
 	}
 
-	&__notification-counter-wrapper {
-		background-color: $color-tv;
+	&__notifications-counter-wrapper {
+		background-color: $color-link;
 		border: 1px solid $color-white;
 		border-radius: $notification-counter-height / 2;
 		color: $color-white;
 		font-size: $typescale-size-minus-3;
-		height: $notification-counter-height - 2 * $notification-counter-border-width;
+		height: $notification-counter-size;
 		left: 6px;
-		line-height: $notification-counter-height - 2 * $notification-counter-border-width;
-		min-width: $notification-counter-height - 2 * $notification-counter-border-width;
+		line-height: $notification-counter-size;
+		min-width: $notification-counter-size;
 		position: absolute;
 		top: 7px;
 	}
 
-	&__notification-counter {
+	&__notifications-counter {
 		padding: 0 4px;
 	}
 
@@ -133,6 +126,14 @@ $notification-counter-border-width: 1px;
 			background-color: $color-slate-gray;
 			border-color: darken($color-slate-gray, 20%);
 			color: $color-white;
+
+			.wds-avatar {
+				border-color: $color-white;
+			}
+
+			svg {
+				fill: $color-white;
+			}
 		}
 
 		&.wds-is-green {
