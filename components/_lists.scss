@@ -26,13 +26,11 @@
 		}
 	}
 
-	&.wds-has-lines-between {
-		> li {
-			border-bottom: solid 1px $color-light-c3;
+	&.wds-has-lines-between > li {
+		border-bottom: solid 1px $color-light-c3;
 
-			&:last-child {
-				border: 0;
-			}
+		&:last-child {
+			border: 0;
 		}
 	}
 }
