@@ -52,8 +52,8 @@
 						<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-global-navigation__button wds-is-account-navigation">Sign in</button></li>
 						<li>
-							<div class="wds-text">Don't have an account?</div>
-							<button class="wds-button wds-is-secondary wds-global-navigation__button wds-is-account-navigation">Register</button>
+							<div class="wds-global-navigation__register-button-caption">Don't have an account?</div>
+							<button class="wds-button wds-is-secondary wds-global-navigation__button wds-is-account-navigation ">Register</button>
 						</li>
 					</ul>
 					</div>
