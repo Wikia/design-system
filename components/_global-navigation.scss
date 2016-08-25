@@ -194,11 +194,13 @@ $notification-counter-border-width: 1px;
 	}
 
 	&__account-navigation {
-		flex: 0 1 50%;
+		margin-right: 10px;
 	}
 
 	&__user-icon {
+		height: 16px;
 		margin-right: 5px;
+		width: 16px;
 	}
 
 	&__start-a-wiki.wds-is-secondary {
