@@ -20,12 +20,15 @@ $button-line-height: 1.3em;
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 
-	&:hover:enabled, &.wds-is-active {
+	&:active,
+	&:hover:enabled,
+	&.wds-is-active {
 		background-color: $button-active-color;
 		border-color: $button-active-color;
 	}
 
-	&.wds-is-disabled, &[disabled] {
+	&.wds-is-disabled,
+	&[disabled] {
 		cursor: default;
 		opacity: .5;
 	}
@@ -34,7 +37,9 @@ $button-line-height: 1.3em;
 		background-color: $color-white;
 		color: $color-light-blue;
 
-		&:hover:enabled, &.wds-is-active {
+		&:active,
+		&:hover:enabled,
+		&.wds-is-active {
 			background-color: $color-white;
 			color: $button-active-color;
 		}
@@ -54,7 +59,9 @@ $button-line-height: 1.3em;
 		border: 0;
 		color: $color-light-blue;
 
-		&:hover:enabled, &.wds-is-active {
+		&:active,
+		&:hover:enabled,
+		&.wds-is-active {
 			background-color: $color-white;
 			color: $button-active-color;
 		}

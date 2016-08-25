@@ -104,11 +104,8 @@ $notification-counter-border-width: 1px;
 			color: $color-dark-blue-gray;
 			text-decoration: none;
 
-			&:hover {
-				color: $color-link;
-			}
-
 			&:active,
+			&:hover:enabled,
 			&.wds-is-active {
 				color: $color-link;
 			}
@@ -204,6 +201,7 @@ $notification-counter-border-width: 1px;
 		background-color: $color-link;
 		border-color: $color-link;
 
+		&:active,
 		&:hover:enabled,
 		&.wds-is-active {
 			background-color: $nav-button-active-color;
@@ -214,6 +212,7 @@ $notification-counter-border-width: 1px;
 			background-color: $color-white;
 			color: $color-link;
 
+			&:active,
 			&:hover:enabled,
 			&.wds-is-active {
 				background-color: $color-white;
