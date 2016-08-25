@@ -8,6 +8,7 @@ $notification-counter-border-width: 1px;
 	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
 	border-top: $border-top-width solid $color-slate-gray;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
+	border-bottom-width: 0;
 
 	&__content-bar {
 		height: $nav-height;
@@ -90,6 +91,30 @@ $notification-counter-border-width: 1px;
 	&__dropdown {
 		color: $color-dark-blue-gray;
 		width: 190px;
+
+		.wds-button {
+			width: 100%;
+		}
+
+		.wds-text {
+			font-size: 12px;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+
+		.wds-link {
+			color: $color-dark-blue-gray;
+			text-decoration: none;
+
+			&:hover {
+				color: $color-link
+			}
+
+			&:active,
+			&.wds-is-active {
+				color: $color-link
+			}
+		}
 	}
 
 	&__content-item {
@@ -164,9 +189,5 @@ $notification-counter-border-width: 1px;
 		// TODO XW-1620
 		background-color: lightgray;
 		flex: 2;
-	}
-
-	&__account-navigation {
-		flex: 0 1 50%;
 	}
 }
