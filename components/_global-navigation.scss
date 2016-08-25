@@ -162,3 +162,31 @@ $notification-counter-border-width: 1px;
 		flex: 0 1 50%;
 	}
 }
+
+.wds-my-account-dropdown {
+	.wds-button {
+		width: 155px;
+	}
+
+	.wds-text {
+		color: $color-dark-blue-gray;
+		font-size: 12px;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+}
+
+.wds-list-dropdown {
+	a {
+		color: $color-dark-blue-gray;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-link
+		}
+
+		&:active, &.wds-is-active {
+			color: $color-link
+		}
+	}
+}
