@@ -21,7 +21,20 @@
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-games">Games</a>
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-movies">Movies</a>
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-tv">TV</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width">Wikis</a>
+				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<div>Wikis</div>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list">
+							<li><a href="#" class="wds-link">Explore Wikis</a></li>
+							<li><a href="#" class="wds-link">Community Central</a></li>
+						</ul>
+					</div>
+				</div>
 				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
@@ -65,7 +78,7 @@
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-tv">TV</a>
 				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-						<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width">Wikis</a>
+						<div>Wikis</div>
 						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 						</svg>
