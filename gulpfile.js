@@ -61,18 +61,14 @@ gulp.task('inject-styles', ['build-html'], function () {
 });
 
 gulp.task('inject-scripts', ['inject-styles'], function () {
-	return injectFileContents(['./config/build.js', './config/webcomponents.min.js'], tmpDir, '<script>', '</script>');
+	return injectFileContents('./config/build.js', tmpDir, '<script>', '</script>');
 });
 
 gulp.task('inject-icons', ['inject-scripts'], function () {
 	return injectFileContents('./bower_components/design-system/dist/svg/*.svg', tmpDir);
 });
 
-gulp.task('inject-webcomponents', ['inject-icons'], function () {
-	return injectFileContents('./bower_components/design-system/webcomponents/*.html', tmpDir);
-});
-
-gulp.task('copy-output-file', ['inject-webcomponents'], function () {
+gulp.task('copy-output-file', ['inject-icons'], function () {
 	return gulp.src(tmpDir + outputFile).pipe(gulp.dest(outputDir));
 });
 
