@@ -5,8 +5,8 @@ $notification-counter-size: 18px;
 $notification-counter-border-width: 1px;
 
 .wds-global-navigation {
-	border-top: $border-top-width solid $color-slate-gray;
 	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
+	border-top: $border-top-width solid $color-slate-gray;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
 
 	&__content-bar {
@@ -52,7 +52,6 @@ $notification-counter-border-width: 1px;
 		display: flex;
 	}
 
-
 	&__notifications {
 		position: relative;
 	}
@@ -69,7 +68,6 @@ $notification-counter-border-width: 1px;
 		height: $notification-counter-size;
 		justify-content: center;
 		left: 11px;
-		line-height: normal;
 		min-width: $notification-counter-size;
 		position: absolute;
 		top: 7px;
@@ -83,15 +81,28 @@ $notification-counter-border-width: 1px;
 		padding: 0 4px;
 	}
 
+	&__dropdown-toggle {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__dropdown {
+		color: $color-dark-blue-gray;
+		width: 190px;
+	}
+
 	&__content-item {
+		align-items: center;
 		border-top: $border-top-width solid $color-slate-gray;
 		color: $color-dark-blue-gray;
+		display: flex;
 		flex: 1;
 		font-size: $typescale-size-minus-1;
-		line-height: $nav-height;
+		height: 100%;
+		justify-content: center;
 		margin-top: -$border-top-width;
 		padding: 0 5px;
-		text-align: center;
 		text-decoration: none;
 
 		&.wds-has-fixed-width {
@@ -101,18 +112,12 @@ $notification-counter-border-width: 1px;
 			width: 80px;
 		}
 
-		&.wds-has-multiple-subitems {
-			align-items: center;
-			display: flex;
-			height: 100%;
-			justify-content: center;
-		}
-
 		&:hover {
 			color: $color-link
 		}
 
-		&:active, &.wds-is-active {
+		&:active,
+		&.wds-is-active {
 			background-color: $color-slate-gray;
 			border-color: darken($color-slate-gray, 20%);
 			color: $color-white;
@@ -121,7 +126,8 @@ $notification-counter-border-width: 1px;
 		&.wds-is-games {
 			border-color: $color-games;
 
-			&:active, &.wds-is-active {
+			&:active,
+			&.wds-is-active {
 				background-color: $color-games;
 				border-color: darken($color-games, 10%);
 			}
@@ -130,7 +136,8 @@ $notification-counter-border-width: 1px;
 		&.wds-is-movies {
 			border-color: $color-movies;
 
-			&:active, &.wds-is-active {
+			&:active,
+			&.wds-is-active {
 				background-color: $color-movies;
 				border-color: darken($color-movies, 10%);
 			}
@@ -139,7 +146,8 @@ $notification-counter-border-width: 1px;
 		&.wds-is-tv {
 			border-color: $color-tv;
 
-			&:active, &.wds-is-active {
+			&:active,
+			&.wds-is-active {
 				background-color: $color-tv;
 				border-color: darken($color-tv, 10%);
 			}
