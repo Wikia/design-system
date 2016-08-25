@@ -124,7 +124,7 @@ $notification-counter-border-width: 1px;
 		display: flex;
 		flex: 1;
 		font-size: $typescale-size-minus-1;
-		height: 100%;
+		height: $nav-height;
 		justify-content: center;
 		margin-top: -$border-top-width;
 		padding: 0 5px;
