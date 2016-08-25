@@ -25,7 +25,20 @@
 				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
-				<a href="#" class="wds-global-navigation__content-item wds-global-navigation__account-navigation">My Account</a>
+				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle wds-global-navigation__account-navigation">
+						My Account
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list wds-has-lines-between">
+						<li><button class="wds-button">Sign in</button></li>
+						<li>
+							<div class="wds-text">Don't have an account?</div>
+							<button class="wds-button wds-is-secondary">Register</button>
+						</li>
+					</ul>
+					</div>
+				</div>
 				<a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Start a wiki</a>
 			</div>
 		</div>
@@ -50,7 +63,20 @@
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-games">Games</a>
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-movies">Movies</a>
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-tv">TV</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width">Wikis</a>
+				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width">Wikis</a>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list">
+							<li><a href="#" class="wds-link">Explore Wikis</a></li>
+							<li><a href="#" class="wds-link">Community Central</a></li>
+						</ul>
+					</div>
+				</div>
 				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
@@ -63,9 +89,11 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list">
-							<li>Dropdown content</li>
-							<li>Dropdown content</li>
-							<li>Dropdown content</li>
+							<li><a href="#" class="wds-link">View Profile</a></li>
+							<li><a href="#" class="wds-link">My Talk</a></li>
+							<li><a href="#" class="wds-link">My Preferences</a></li>
+							<li><a href="#" class="wds-link">Help</a></li>
+							<li><a href="#" class="wds-link">Sign Out</a></li>
 						</ul>
 					</div>
 				</div>

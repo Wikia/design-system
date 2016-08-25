@@ -72,3 +72,8 @@
 .wds-global-footer, .wds-global-navigation {
 	margin: 0 -8px;
 }
+
+/* Separate navigation to avoid hiding content by other dropdowns */
+.wds-global-navigation {
+	margin-bottom: 250px;
+}
