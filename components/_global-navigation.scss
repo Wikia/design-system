@@ -1,7 +1,7 @@
 $border-top-width: 6px;
 $nav-height: 49px;
 $nav-background-color: $color-white;
-$nav-button-active-color: darken($color-link, 10%);
+$nav-button-active-color: darken($color-link, 20%);
 
 $notification-counter-size: 18px;
 $notification-counter-border-width: 1px;
@@ -31,9 +31,9 @@ $notification-counter-border-width: 1px;
 		border-top: $border-top-width solid $color-dark-blue-gray;
 		color: $color-slate-gray;
 		display: flex;
-		justify-content: flex-end;
 		font-size: $typescale-size-minus-3;
 		font-weight: 600;
+		justify-content: flex-end;
 		margin-top: -$border-top-width;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -41,7 +41,7 @@ $notification-counter-border-width: 1px;
 		&__fandom {
 			fill: $color-dark-blue-gray;
 			height: 24px;
-			width: 120px
+			width: 120px;
 		}
 
 		&__wikia {
@@ -100,8 +100,8 @@ $notification-counter-border-width: 1px;
 		width: 190px;
 		z-index: -1;
 
-		.wds-text {
-			font-size: 12px;
+		&__register-text {
+			font-size: $typescale-size-minus-2;
 			padding-bottom: 10px;
 			text-align: center;
 		}
@@ -142,7 +142,7 @@ $notification-counter-border-width: 1px;
 		}
 
 		&:hover {
-			color: $color-link
+			color: $color-link;
 		}
 
 		&:active,
