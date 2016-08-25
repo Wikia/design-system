@@ -4,7 +4,7 @@ $nav-height: 49px;
 .wds-global-navigation {
 	border-top: $border-top-width solid $color-slate-gray;
 	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
-	border-width: 6px 0 0;
+	border-width: $border-top-width 0 0;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
 
 	&__content-bar {
