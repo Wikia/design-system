@@ -30,8 +30,8 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list">
-							<li><a href="#" class="wds-link">Explore Wikis</a></li>
-							<li><a href="#" class="wds-link">Community Central</a></li>
+							<li><a href="#">Explore Wikis</a></li>
+							<li><a href="#">Community Central</a></li>
 						</ul>
 					</div>
 				</div>
@@ -50,15 +50,15 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button">Sign in</button></li>
+						<li><button class="wds-button wds-global-navigation__button wds-is-account-navigation">Sign in</button></li>
 						<li>
 							<div class="wds-text">Don't have an account?</div>
-							<button class="wds-button wds-is-secondary">Register</button>
+							<button class="wds-button wds-is-secondary wds-global-navigation__button wds-is-account-navigation">Register</button>
 						</li>
 					</ul>
 					</div>
 				</div>
-				<a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Start a wiki</a>
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__button">Start a wiki</a>
 			</div>
 		</div>
 	</div>
@@ -91,8 +91,8 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list">
-							<li><a href="#" class="wds-link">Explore Wikis</a></li>
-							<li><a href="#" class="wds-link">Community Central</a></li>
+							<li><a href="#">Explore Wikis</a></li>
+							<li><a href="#">Community Central</a></li>
 						</ul>
 					</div>
 				</div>
@@ -108,11 +108,11 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list">
-							<li><a href="#" class="wds-link">View Profile</a></li>
-							<li><a href="#" class="wds-link">My Talk</a></li>
-							<li><a href="#" class="wds-link">My Preferences</a></li>
-							<li><a href="#" class="wds-link">Help</a></li>
-							<li><a href="#" class="wds-link">Sign Out</a></li>
+							<li><a href="#">View Profile</a></li>
+							<li><a href="#">My Talk</a></li>
+							<li><a href="#">My Preferences</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Sign Out</a></li>
 						</ul>
 					</div>
 				</div>
@@ -127,7 +127,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Start a wiki</a>
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__button">Start a wiki</a>
 			</div>
 		</div>
 	</div>
