@@ -207,7 +207,7 @@ $notification-counter-border-width: 1px;
 		background-color: $color-link;
 		border-color: $color-link;
 
-		&:hover:enabled,
+		&:hover:not(:disabled),
 		&:active,
 		&.wds-is-active {
 			background-color: $nav-button-active-color;
@@ -218,7 +218,7 @@ $notification-counter-border-width: 1px;
 			background-color: $color-white;
 			color: $color-link;
 
-			&:hover:enabled,
+			&:hover:not(:disabled),
 			&:active,
 			&.wds-is-active {
 				background-color: $color-white;

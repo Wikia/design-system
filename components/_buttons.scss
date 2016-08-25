@@ -20,15 +20,15 @@ $button-line-height: 1.3em;
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 
-	&:hover:enabled,
+	&:hover:not(:disabled),
 	&:active,
 	&.wds-is-active {
 		background-color: $button-active-color;
 		border-color: $button-active-color;
 	}
 
-	&.wds-is-disabled,
-	&[disabled] {
+	&:disabled,
+	&.wds-is-disabled {
 		cursor: default;
 		opacity: .5;
 	}
@@ -37,7 +37,7 @@ $button-line-height: 1.3em;
 		background-color: $color-white;
 		color: $color-light-blue;
 
-		&:hover:enabled,
+		&:hover:not(:disabled),
 		&:active,
 		&.wds-is-active {
 			background-color: $color-white;
@@ -59,7 +59,7 @@ $button-line-height: 1.3em;
 		border: 0;
 		color: $color-light-blue;
 
-		&:hover:enabled,
+		&:hover:not(:disabled),
 		&:active,
 		&.wds-is-active {
 			background-color: $color-white;
