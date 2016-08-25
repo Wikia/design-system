@@ -4,6 +4,10 @@ $dropdown-content-z-index: 1;
 	display: inline-block;
 	position: relative;
 
+	.wds-dropdown-toggle-chevron {
+		margin-left: 5px;
+	}
+
 	&.wds-is-active {
 		.wds-dropdown-content {
 			display: inline-block;
