@@ -99,16 +99,16 @@ $notification-counter-border-width: 1px;
 		color: $color-dark-blue-gray;
 		width: 190px;
 		z-index: -1;
+	}
 
-		a {
-			color: $color-dark-blue-gray;
-			text-decoration: none;
+	&__dropdown-link {
+		color: $color-dark-blue-gray;
+		text-decoration: none;
 
-			&:active,
-			&:hover:enabled,
-			&.wds-is-active {
-				color: $color-link;
-			}
+		&:active,
+		&:hover:enabled,
+		&.wds-is-active {
+			color: $color-link;
 		}
 	}
 
