@@ -6,9 +6,9 @@ $notification-counter-border-width: 1px;
 
 .wds-global-navigation {
 	background-color: $color-white;
-	border-bottom-width: 0;
 	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
 	border-top: $border-top-width solid $color-slate-gray;
+	border-width: $border-top-width 0 0;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
 
 	&__content-bar {
@@ -191,5 +191,14 @@ $notification-counter-border-width: 1px;
 		// TODO XW-1620
 		background-color: lightgray;
 		flex: 2;
+	}
+
+	&__account-navigation {
+		flex: 0 1 50%;
+	}
+
+	&__start-a-wiki.wds-is-secondary {
+		color: $color-link;
+		border-color: $color-link;
 	}
 }
