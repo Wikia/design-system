@@ -197,6 +197,10 @@ $notification-counter-border-width: 1px;
 		flex: 0 1 50%;
 	}
 
+	&__user-icon {
+		margin-right: 5px;
+	}
+
 	&__start-a-wiki.wds-is-secondary {
 		color: $color-link;
 		border-color: $color-link;
