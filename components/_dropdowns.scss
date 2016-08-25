@@ -31,7 +31,7 @@ $dropdown-content-z-index: 1;
 	display: none;
 	left: 0;
 	position: absolute;
-	top: 100%;
+	top: calc(100% + 1px);
 	z-index: $dropdown-content-z-index;
 
 	&.wds-is-dark {

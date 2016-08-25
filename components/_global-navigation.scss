@@ -5,10 +5,11 @@ $notification-counter-size: 18px;
 $notification-counter-border-width: 1px;
 
 .wds-global-navigation {
+	background-color: $color-white;
+	border-bottom-width: 0;
 	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
 	border-top: $border-top-width solid $color-slate-gray;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
-	border-bottom-width: 0;
 
 	&__content-bar {
 		height: $nav-height;
@@ -91,6 +92,7 @@ $notification-counter-border-width: 1px;
 	&__dropdown {
 		color: $color-dark-blue-gray;
 		width: 190px;
+		z-index: -1;
 
 		.wds-button {
 			width: 100%;
