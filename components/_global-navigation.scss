@@ -60,56 +60,11 @@ $notification-counter-border-width: 1px;
 		display: flex;
 	}
 
-	&__notifications {
-		position: relative;
-	}
-
-	&__notifications-counter-wrapper {
+	&__right-column {
 		align-items: center;
-		background-color: $color-link;
-		border: 1px solid $color-white;
-		border-radius: $notification-counter-size / 2;
-		box-sizing: border-box;
-		color: $color-white;
+		background-color: $nav-background-color;
 		display: flex;
-		font-size: $typescale-size-minus-3;
-		height: $notification-counter-size;
-		justify-content: center;
-		left: 11px;
-		min-width: $notification-counter-size;
-		position: absolute;
-		top: 7px;
-
-		@media #{$breakpoint-desktop-xl-up} {
-			left: 36px;
-		}
-	}
-
-	&__notifications-counter {
-		padding: 0 4px;
-	}
-
-	&__dropdown-toggle {
-		align-items: center;
-		display: flex;
-		justify-content: center;
-	}
-
-	&__dropdown {
-		color: $color-dark-blue-gray;
-		width: 190px;
-		z-index: -1;
-	}
-
-	&__dropdown-link {
-		color: $color-dark-blue-gray;
-		text-decoration: none;
-
-		&:active,
-		&:hover:enabled,
-		&.wds-is-active {
-			color: $color-link;
-		}
+		justify-content: flex-start;
 	}
 
 	&__content-item {
@@ -174,11 +129,27 @@ $notification-counter-border-width: 1px;
 		}
 	}
 
-	&__right-column {
+	&__dropdown-toggle {
 		align-items: center;
-		background-color: $nav-background-color;
 		display: flex;
-		justify-content: flex-start;
+		justify-content: center;
+	}
+
+	&__dropdown {
+		color: $color-dark-blue-gray;
+		width: 190px;
+		z-index: -1;
+	}
+
+	&__dropdown-link {
+		color: $color-dark-blue-gray;
+		text-decoration: none;
+
+		&:active,
+		&:hover:enabled,
+		&.wds-is-active {
+			color: $color-link;
+		}
 	}
 
 	&__search {
@@ -188,13 +159,48 @@ $notification-counter-border-width: 1px;
 	}
 
 	&__account-navigation {
+		flex: initial;
 		margin-right: 10px;
+	}
+
+	&__user-menu {
+		flex: initial;
+		width: 55px;
 	}
 
 	&__user-icon {
 		height: 16px;
 		margin-right: 5px;
 		width: 16px;
+	}
+
+	&__notifications {
+		flex: initial;
+		margin-right: 10px;
+		padding-right: 0;
+		position: relative;
+		width: 50px;
+	}
+
+	&__notifications-counter-wrapper {
+		align-items: center;
+		background-color: $color-link;
+		border: 1px solid $color-white;
+		border-radius: $notification-counter-size / 2;
+		box-sizing: border-box;
+		color: $color-white;
+		display: flex;
+		font-size: $typescale-size-minus-3;
+		height: $notification-counter-size;
+		justify-content: center;
+		left: 7px;
+		min-width: $notification-counter-size;
+		position: absolute;
+		top: 7px;
+	}
+
+	&__notifications-counter {
+		padding: 0 4px;
 	}
 
 	&__button {
