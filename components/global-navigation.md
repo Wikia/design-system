@@ -54,13 +54,22 @@
 				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
-				<a href="#" class="wds-global-navigation__content-item wds-has-multiple-subitems">
-					<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle wds-is-padded-right" alt="user name"/>
-					<svg class="wds-icon wds-icon-tiny" alt="user dropdown">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
-					</svg>
-				</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-multiple-subitems wds-global-navigation__notifications">
+				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle wds-is-padded-right" alt="user name"/>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list">
+							<li>Dropdown content</li>
+							<li>Dropdown content</li>
+							<li>Dropdown content</li>
+						</ul>
+					</div>
+				</div>
+				<div class="wds-global-navigation__content-item wds-global-navigation__notifications">
 					<div class="wds-global-navigation__notifications-counter-wrapper">
 						<div class="wds-global-navigation__notifications-counter">3</div>
 					</div>
@@ -70,7 +79,7 @@
 					<svg class="wds-icon wds-icon-tiny" alt="notifications dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
-				</a>
+				</div>
 				<a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Start a wiki</a>
 			</div>
 		</div>
