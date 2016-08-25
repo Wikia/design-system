@@ -40,7 +40,7 @@
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle wds-global-navigation__account-navigation">
-						<svg class="wds-icon wds-icon-small" alt="user icon">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__user-icon" alt="user icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 						</svg>
 						<div>My Account</div>
