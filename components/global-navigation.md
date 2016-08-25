@@ -75,3 +75,55 @@
 			</div>
 		</div>
 	</div>
+
+	<h5>Dropdowns</h5>
+	<div class="wds-dropdown wds-is-active">
+		<div class="wds-dropdown-toggle">
+			<span>Pretty wide entrypoint</span>
+			<svg class="wds-icon wds-dropdown-toggle-chevron">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown">
+			</svg>
+		</div>
+		<div class="wds-dropdown-content wds-my-account-dropdown">
+			<ul class="wds-list wds-has-lines-between">
+				<li><button class="wds-button">SIGN IN</button></li>
+				<li>
+					<div class="wds-text">Don't have an account?</div>
+					<button class="wds-button wds-is-secondary">REGISTER</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wds-dropdown wds-is-active">
+		<div class="wds-dropdown-toggle">
+			<span>Pretty wide entrypoint</span>
+			<svg class="wds-icon wds-dropdown-toggle-chevron">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown">
+			</svg>
+		</div>
+		<div class="wds-dropdown-content wds-list-dropdown">
+			<ul class="wds-list">
+				<li><a href="#">Explore Wikis</a></li>
+				<li><a href="#">Community Central</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wds-dropdown wds-is-active">
+		<div class="wds-dropdown-toggle">
+			<span>Pretty wide entrypoint</span>
+			<svg class="wds-icon wds-dropdown-toggle-chevron">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown">
+			</svg>
+		</div>
+		<div class="wds-dropdown-content wds-list-dropdown">
+			<ul class="wds-list">
+				<li><a href="#">View Profile</a></li>
+				<li><a href="#">My Talk</a></li>
+				<li><a href="#">My Preferences</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Sign Out</a></li>
+			</ul>
+		</div>
+	</div>
