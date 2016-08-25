@@ -1,11 +1,12 @@
 $border-top-width: 6px;
 $nav-height: 49px;
+$nav-background-color: $color-white;
 
 $notification-counter-size: 18px;
 $notification-counter-border-width: 1px;
 
 .wds-global-navigation {
-	background-color: $color-white;
+	background-color: $nav-background-color;
 	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
 	border-top: $border-top-width solid $color-slate-gray;
 	border-width: $border-top-width 0 0;
@@ -14,7 +15,9 @@ $notification-counter-border-width: 1px;
 	&__content-bar {
 		height: $nav-height;
 		margin: 0 auto;
+		position: relative;
 		width: 1024px;
+		z-index: 1;
 
 		@media #{$breakpoint-desktop-xl-up} {
 			width: 1440px;
@@ -23,6 +26,7 @@ $notification-counter-border-width: 1px;
 
 	&__logo {
 		align-items: center;
+		background-color: $nav-background-color;
 		border-top: $border-top-width solid $color-dark-blue-gray;
 		color: $color-slate-gray;
 		display: flex;
@@ -51,6 +55,7 @@ $notification-counter-border-width: 1px;
 	}
 
 	&__middle-column {
+		background-color: $nav-background-color;
 		display: flex;
 	}
 
@@ -109,12 +114,12 @@ $notification-counter-border-width: 1px;
 			text-decoration: none;
 
 			&:hover {
-				color: $color-link
+				color: $color-link;
 			}
 
 			&:active,
 			&.wds-is-active {
-				color: $color-link
+				color: $color-link;
 			}
 		}
 	}
@@ -183,6 +188,7 @@ $notification-counter-border-width: 1px;
 
 	&__right-column {
 		align-items: center;
+		background-color: $nav-background-color;
 		display: flex;
 		justify-content: flex-start;
 	}
