@@ -2365,11 +2365,11 @@ code.sg:first-child {
     color: #39424d;
     width: 190px;
     z-index: -1; }
-    .wds-global-navigation__dropdown a {
-      color: #39424d;
-      text-decoration: none; }
-      .wds-global-navigation__dropdown a:active, .wds-global-navigation__dropdown a:hover:enabled, .wds-global-navigation__dropdown a.wds-is-active {
-        color: #00b7e0; }
+  .wds-global-navigation__dropdown-link {
+    color: #39424d;
+    text-decoration: none; }
+    .wds-global-navigation__dropdown-link:active, .wds-global-navigation__dropdown-link:hover:enabled, .wds-global-navigation__dropdown-link.wds-is-active {
+      color: #00b7e0; }
   .wds-global-navigation__content-item {
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -6497,10 +6497,10 @@ body {
                   <div class="wds-dropdown-content wds-global-navigation__dropdown">
                     <ul class="wds-list">
                       <li>
-                        <a href="#">Explore Wikis</a>
+                        <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
                       </li>
                       <li>
-                        <a href="#">Community Central</a>
+                        <a href="#" class="wds-global-navigation__dropdown-link">Community Central</a>
                       </li>
                     </ul>
                   </div>
@@ -6564,10 +6564,10 @@ body {
                   <div class="wds-dropdown-content wds-global-navigation__dropdown">
                     <ul class="wds-list">
                       <li>
-                        <a href="#">Explore Wikis</a>
+                        <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
                       </li>
                       <li>
-                        <a href="#">Community Central</a>
+                        <a href="#" class="wds-global-navigation__dropdown-link">Community Central</a>
                       </li>
                     </ul>
                   </div>
@@ -6585,19 +6585,19 @@ body {
                   <div class="wds-dropdown-content wds-global-navigation__dropdown">
                     <ul class="wds-list">
                       <li>
-                        <a href="#">View Profile</a>
+                        <a href="#" class="wds-global-navigation__dropdown-link">View Profile</a>
                       </li>
                       <li>
-                        <a href="#">My Talk</a>
+                        <a href="#" class="wds-global-navigation__dropdown-link">My Talk</a>
                       </li>
                       <li>
-                        <a href="#">My Preferences</a>
+                        <a href="#" class="wds-global-navigation__dropdown-link">My Preferences</a>
                       </li>
                       <li>
-                        <a href="#">Help</a>
+                        <a href="#" class="wds-global-navigation__dropdown-link">Help</a>
                       </li>
                       <li>
-                        <a href="#">Sign Out</a>
+                        <a href="#" class="wds-global-navigation__dropdown-link">Sign Out</a>
                       </li>
                     </ul>
                   </div>
@@ -6647,10 +6647,10 @@ body {
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Community Central<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Community Central<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -6714,10 +6714,10 @@ body {
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Community Central<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Community Central<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -6735,19 +6735,19 @@ body {
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>View Profile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>View Profile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>My Talk<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>My Talk<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>My Preferences<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>My Preferences<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Sign Out<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Sign Out<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>

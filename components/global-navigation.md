@@ -30,8 +30,8 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list">
-							<li><a href="#">Explore Wikis</a></li>
-							<li><a href="#">Community Central</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
 						</ul>
 					</div>
 				</div>
@@ -91,8 +91,8 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list">
-							<li><a href="#">Explore Wikis</a></li>
-							<li><a href="#">Community Central</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
 						</ul>
 					</div>
 				</div>
@@ -108,11 +108,11 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list">
-							<li><a href="#">View Profile</a></li>
-							<li><a href="#">My Talk</a></li>
-							<li><a href="#">My Preferences</a></li>
-							<li><a href="#">Help</a></li>
-							<li><a href="#">Sign Out</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">View Profile</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">My Talk</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">My Preferences</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Help</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Sign Out</a></li>
 						</ul>
 					</div>
 				</div>
