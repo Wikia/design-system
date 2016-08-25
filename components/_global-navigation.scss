@@ -106,9 +106,27 @@ $nav-height: 49px;
 	}
 
 	&__search {
-		// TODO XW-1620
-		background-color: lightgray;
+		align-items: center;
+		border-top: $border-top-width solid $color-slate-gray;
+		display: flex;
 		flex: 2;
+		margin-top: -$border-top-width;
+		padding: 0 5px;
+
+		&__form {
+			border-bottom: 1px solid $color-slate-gray;
+			width: 100%;
+		}
+
+		&__input {
+			border: none;
+			font-size: $typescale-size-minus-1;
+			padding: 4px 0;
+
+			&:focus {
+				outline: none;
+			}
+		}
 	}
 
 	&__account-navigation {
