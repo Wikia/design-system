@@ -1,6 +1,7 @@
 $border-top-width: 6px;
 $nav-height: 49px;
 $nav-background-color: $color-white;
+$nav-button-active-color: darken($color-link, 10%);
 
 $notification-counter-size: 18px;
 $notification-counter-border-width: 1px;
@@ -99,17 +100,13 @@ $notification-counter-border-width: 1px;
 		width: 190px;
 		z-index: -1;
 
-		.wds-button {
-			width: 100%;
-		}
-
 		.wds-text {
 			font-size: 12px;
 			padding-bottom: 10px;
 			text-align: center;
 		}
 
-		.wds-link {
+		a {
 			color: $color-dark-blue-gray;
 			text-decoration: none;
 
@@ -209,8 +206,29 @@ $notification-counter-border-width: 1px;
 		width: 16px;
 	}
 
-	&__start-a-wiki.wds-is-secondary {
-		color: $color-link;
+	&__button {
+		background-color: $color-link;
 		border-color: $color-link;
+
+		&:hover:enabled,
+		&.wds-is-active {
+			background-color: $nav-button-active-color;
+			border-color: $nav-button-active-color;
+		}
+
+		&.wds-is-secondary {
+			background-color: $color-white;
+			color: $color-link;
+
+			&:hover:enabled,
+			&.wds-is-active {
+				background-color: $color-white;
+				color: $nav-button-active-color;
+			}
+		}
+
+		&.wds-is-account-navigation {
+			width: 100%;
+		}
 	}
 }
