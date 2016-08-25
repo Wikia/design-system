@@ -1102,8 +1102,6 @@ code.sg:first-child {
   width: 28px; }
   .wds-avatar.wds-is-circle {
     border-radius: 50%; }
-  .wds-avatar.wds-is-padded-right {
-    margin-right: 2px; }
 
 .wds-button {
   background-color: #1a5eb8;
@@ -1151,6 +1149,8 @@ code.sg:first-child {
 .wds-dropdown {
   display: inline-block;
   position: relative; }
+  .wds-dropdown .wds-dropdown-toggle-chevron {
+    margin-left: 5px; }
   .wds-dropdown.wds-is-active .wds-dropdown-content {
     display: inline-block; }
   .wds-dropdown.wds-is-active .wds-dropdown-toggle-chevron {
@@ -5740,7 +5740,10 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
               <div class="col-sm-3 wds-global-navigation__right-column">
                 <div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
                   <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle wds-global-navigation__account-navigation">
-                    My Account
+                    <div>My Account</div>
+                    <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
+                    </svg>
                   </div>
                   <div class="wds-dropdown-content wds-global-navigation__dropdown">
                     <ul class="wds-list wds-has-lines-between">
@@ -5801,7 +5804,7 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
               <div class="col-sm-3 wds-global-navigation__right-column">
                 <div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
                   <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-                    <img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle wds-is-padded-right" alt="user name">
+                    <img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name">
                     <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                     </svg>
@@ -5884,7 +5887,10 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-3 wds-global-navigation__right-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-dropdown wds-is-active&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle wds-global-navigation__account-navigation&quot;</span>&gt;</span>
-          My Account
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>My Account<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
@@ -5945,7 +5951,7 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-3 wds-global-navigation__right-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-dropdown wds-is-active&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./assets/avatar.jpg&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-avatar wds-is-circle wds-is-padded-right&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user name&quot;</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./assets/avatar.jpg&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-avatar wds-is-circle&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user name&quot;</span> /&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>

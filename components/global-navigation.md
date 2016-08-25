@@ -40,7 +40,10 @@
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle wds-global-navigation__account-navigation">
-						My Account
+						<div>My Account</div>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list wds-has-lines-between">
@@ -95,7 +98,7 @@
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-						<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle wds-is-padded-right" alt="user name"/>
+						<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name"/>
 						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 						</svg>
