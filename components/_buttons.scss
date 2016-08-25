@@ -20,8 +20,8 @@ $button-line-height: 1.3em;
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 
-	&:active,
 	&:hover:enabled,
+	&:active,
 	&.wds-is-active {
 		background-color: $button-active-color;
 		border-color: $button-active-color;
@@ -37,8 +37,8 @@ $button-line-height: 1.3em;
 		background-color: $color-white;
 		color: $color-light-blue;
 
-		&:active,
 		&:hover:enabled,
+		&:active,
 		&.wds-is-active {
 			background-color: $color-white;
 			color: $button-active-color;
@@ -59,8 +59,8 @@ $button-line-height: 1.3em;
 		border: 0;
 		color: $color-light-blue;
 
-		&:active,
 		&:hover:enabled,
+		&:active,
 		&.wds-is-active {
 			background-color: $color-white;
 			color: $button-active-color;
