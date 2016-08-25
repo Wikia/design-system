@@ -99,7 +99,7 @@
 				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
-				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
+				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active wds-global-navigation__user-menu">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name"/>
 						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">

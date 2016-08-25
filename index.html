@@ -2323,53 +2323,17 @@ code.sg:first-child {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-  .wds-global-navigation__notifications {
-    position: relative; }
-  .wds-global-navigation__notifications-counter-wrapper {
+  .wds-global-navigation__right-column {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #00b7e0;
-    border: 1px solid #fff;
-    border-radius: 9px;
-    box-sizing: border-box;
-    color: #fff;
+    background-color: #fff;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    font-size: 10px;
-    height: 18px;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    left: 11px;
-    min-width: 18px;
-    position: absolute;
-    top: 7px; }
-    @media only screen and (min-width: 1440px) {
-      .wds-global-navigation__notifications-counter-wrapper {
-        left: 36px; } }
-  .wds-global-navigation__notifications-counter {
-    padding: 0 4px; }
-  .wds-global-navigation__dropdown-toggle {
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-  .wds-global-navigation__dropdown {
-    color: #39424d;
-    width: 190px;
-    z-index: -1; }
-  .wds-global-navigation__dropdown-link {
-    color: #39424d;
-    text-decoration: none; }
-    .wds-global-navigation__dropdown-link:active, .wds-global-navigation__dropdown-link:hover:enabled, .wds-global-navigation__dropdown-link.wds-is-active {
-      color: #00b7e0; }
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
   .wds-global-navigation__content-item {
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -2416,28 +2380,75 @@ code.sg:first-child {
       .wds-global-navigation__content-item.wds-is-tv:active, .wds-global-navigation__content-item.wds-is-tv.wds-is-active {
         background-color: #00b7e0;
         border-color: #008dad; }
-  .wds-global-navigation__right-column {
+  .wds-global-navigation__dropdown-toggle {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #fff;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .wds-global-navigation__dropdown {
+    color: #39424d;
+    width: 190px;
+    z-index: -1; }
+  .wds-global-navigation__dropdown-link {
+    color: #39424d;
+    text-decoration: none; }
+    .wds-global-navigation__dropdown-link:active, .wds-global-navigation__dropdown-link:hover:enabled, .wds-global-navigation__dropdown-link.wds-is-active {
+      color: #00b7e0; }
   .wds-global-navigation__search {
     background-color: lightgray;
     -webkit-flex: 2;
     -ms-flex: 2;
     flex: 2; }
   .wds-global-navigation__account-navigation {
+    -webkit-flex: initial;
+    -ms-flex: initial;
+    flex: initial;
     margin-right: 10px; }
+  .wds-global-navigation__user-menu {
+    -webkit-flex: initial;
+    -ms-flex: initial;
+    flex: initial;
+    width: 55px; }
   .wds-global-navigation__user-icon {
     height: 16px;
     margin-right: 5px;
     width: 16px; }
+  .wds-global-navigation__notifications {
+    -webkit-flex: initial;
+    -ms-flex: initial;
+    flex: initial;
+    margin-right: 10px;
+    padding-right: 0;
+    position: relative;
+    width: 50px; }
+  .wds-global-navigation__notifications-counter-wrapper {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #00b7e0;
+    border: 1px solid #fff;
+    border-radius: 9px;
+    box-sizing: border-box;
+    color: #fff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 10px;
+    height: 18px;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    left: 7px;
+    min-width: 18px;
+    position: absolute;
+    top: 7px; }
+  .wds-global-navigation__notifications-counter {
+    padding: 0 4px; }
   .wds-global-navigation__button {
     background-color: #00b7e0;
     border-color: #00b7e0; }
@@ -6575,7 +6586,7 @@ body {
                 <div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
               </div>
               <div class="col-sm-3 wds-global-navigation__right-column">
-                <div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
+                <div class="wds-global-navigation__content-item wds-dropdown wds-is-active wds-global-navigation__user-menu">
                   <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
                     <img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name">
                     <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
@@ -6725,7 +6736,7 @@ body {
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__search wds-global-navigation__content-item&quot;</span>&gt;</span>Search placeholder<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-3 wds-global-navigation__right-column&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-dropdown wds-is-active&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-dropdown wds-is-active wds-global-navigation__user-menu&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./assets/avatar.jpg&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-avatar wds-is-circle&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user name&quot;</span> /&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
