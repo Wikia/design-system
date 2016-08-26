@@ -148,7 +148,7 @@ $notification-counter-size: 18px;
 		display: flex;
 		flex: 2;
 		margin-top: -$border-top-width;
-		padding: 0 5px;
+		padding-left: 16px;
 
 		&__input-wrapper {
 			border-bottom: 1px solid $color-faint-gray;
