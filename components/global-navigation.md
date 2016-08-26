@@ -9,14 +9,11 @@
 				<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
-				<span class="wds-global-navigation__logo__powered-by">
-					powered by
-				</span>
+				<span class="wds-global-navigation__logo__powered-by">powered by</span>
 				<svg class="wds-global-navigation__logo__wikia" alt="Wikia">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-
 			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
 				<a href="#" class="wds-global-navigation__content-item wds-is-games">Games</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Movies</a>
@@ -40,10 +37,10 @@
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown wds-is-active">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-						<svg class="wds-icon wds-global-navigation__user-icon" alt="user icon">
+						<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 						</svg>
-						<span>My Account</span>
+						<span class="wds-global-navigation__account-navigation-caption">My Account</span>
 						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 						</svg>
@@ -58,7 +55,9 @@
 					</ul>
 					</div>
 				</div>
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">Start a wiki</a>
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+					<span class="wds-global-navigation__start-a-wiki-content">Start a wiki</span>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -70,14 +69,11 @@
 				<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
-				<span class="wds-global-navigation__logo__powered-by">
-					powered by
-				</span>
+				<span class="wds-global-navigation__logo__powered-by">powered by</span>
 				<svg class="wds-global-navigation__logo__wikia" alt="Wikia">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-
 			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
 				<a href="#" class="wds-global-navigation__content-item wds-is-games">Games</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Movies</a>
@@ -127,7 +123,9 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">Start a wiki</a>
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+					<span class="wds-global-navigation__start-a-wiki-content">Start a wiki</span>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -139,14 +137,11 @@
 				<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
-				<span class="wds-global-navigation__logo__powered-by">
-					powered by
-				</span>
+				<span class="wds-global-navigation__logo__powered-by">powered by</span>
 				<svg class="wds-global-navigation__logo__wikia" alt="Wikia">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-
 			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
 				<a href="#" class="wds-global-navigation__content-item wds-is-games">Videospiele</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Filme</a>
@@ -170,10 +165,10 @@
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-						<svg class="wds-icon wds-global-navigation__user-icon" alt="user icon">
+						<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 						</svg>
-						<span>Mein Benutzerkonto</span>
+						<span class="wds-global-navigation__account-navigation-caption">Mein Benutzerkonto</span>
 						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 						</svg>
@@ -188,7 +183,9 @@
 					</ul>
 					</div>
 				</div>
-				<a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Starte ein Wiki</a>
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+					<span class="wds-global-navigation__start-a-wiki-content">Starte ein Wiki</span>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -200,14 +197,11 @@
 				<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
-				<span class="wds-global-navigation__logo__powered-by">
-					powered by
-				</span>
+				<span class="wds-global-navigation__logo__powered-by">powered by</span>
 				<svg class="wds-global-navigation__logo__wikia" alt="Wikia">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-
 			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
 				<a href="#" class="wds-global-navigation__content-item wds-is-games">Gry</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Filmy</a>
@@ -231,10 +225,10 @@
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-						<svg class="wds-icon wds-global-navigation__user-icon" alt="user icon">
+						<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 						</svg>
-						<span>Moje konto</span>
+						<span class="wds-global-navigation__account-navigation-caption">Moje konto</span>
 						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 						</svg>
@@ -249,7 +243,9 @@
 					</ul>
 					</div>
 				</div>
-				<a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Utwórz wiki</a>
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+					<span class="wds-global-navigation__start-a-wiki-content">Utwórz wiki</span>
+				</a>
 			</div>
 		</div>
 	</div>

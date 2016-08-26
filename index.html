@@ -318,7 +318,21 @@ code.sg:first-child {
 	margin-bottom: 250px;
 }
 </style>
-  <style>.container-fluid,
+  <style>@charset "UTF-8";
+/**
+ * There are two different places where dependencies could be installed.
+ * Running `bower install` in:
+ * - `design-system` repo: will install dependencies in `design-system/bower_components`
+ * - `parent` repo that uses `design-system` as one of it's dependencies: will install
+ *   all dependencies (even dependencies of dependencies) in `parent/bower_components`
+ *
+ * Libsass library is handling directory change during compilation.
+ * As long as we use `../bower_components/dependency`
+ *
+ * If you are curious how does Libsass handling it, see:
+ * https://github.com/sass/libsass/blob/master/src/file.cpp
+ */
+.container-fluid,
 .container {
   margin-right: auto;
   margin-left: auto; }
@@ -1086,778 +1100,12 @@ code.sg:first-child {
   fill: currentColor;
   height: 24px;
   width: 24px; }
-
-.wds-icon-small {
-  height: 18px;
-  width: 18px; }
-
-.wds-icon-tiny {
-  height: 12px;
-  width: 12px; }
-
-.container-fluid,
-.container {
-  margin-right: auto;
-  margin-left: auto; }
-
-.container-fluid {
-  padding-right: 2rem;
-  padding-left: 2rem; }
-
-.row {
-  box-sizing: border-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex: 0 1 auto;
-  -webkit-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem; }
-
-.row.reverse {
-  -ms-flex-direction: row-reverse;
-  -webkit-flex-direction: row-reverse;
-  flex-direction: row-reverse; }
-
-.col.reverse {
-  -ms-flex-direction: column-reverse;
-  -webkit-flex-direction: column-reverse;
-  flex-direction: column-reverse; }
-
-.col-xs,
-.col-xs-1,
-.col-xs-2,
-.col-xs-3,
-.col-xs-4,
-.col-xs-5,
-.col-xs-6,
-.col-xs-7,
-.col-xs-8,
-.col-xs-9,
-.col-xs-10,
-.col-xs-11,
-.col-xs-12,
-.col-xs-offset-0,
-.col-xs-offset-1,
-.col-xs-offset-2,
-.col-xs-offset-3,
-.col-xs-offset-4,
-.col-xs-offset-5,
-.col-xs-offset-6,
-.col-xs-offset-7,
-.col-xs-offset-8,
-.col-xs-offset-9,
-.col-xs-offset-10,
-.col-xs-offset-11,
-.col-xs-offset-12 {
-  box-sizing: border-box;
-  -ms-flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem; }
-
-.col-xs {
-  -ms-flex-positive: 1;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  -ms-flex-preferred-size: 0;
-  -webkit-flex-basis: 0;
-  flex-basis: 0;
-  max-width: 100%; }
-
-.col-xs-1 {
-  -ms-flex-preferred-size: 8.33333333%;
-  -webkit-flex-basis: 8.33333333%;
-  flex-basis: 8.33333333%;
-  max-width: 8.33333333%; }
-
-.col-xs-2 {
-  -ms-flex-preferred-size: 16.66666667%;
-  -webkit-flex-basis: 16.66666667%;
-  flex-basis: 16.66666667%;
-  max-width: 16.66666667%; }
-
-.col-xs-3 {
-  -ms-flex-preferred-size: 25%;
-  -webkit-flex-basis: 25%;
-  flex-basis: 25%;
-  max-width: 25%; }
-
-.col-xs-4 {
-  -ms-flex-preferred-size: 33.33333333%;
-  -webkit-flex-basis: 33.33333333%;
-  flex-basis: 33.33333333%;
-  max-width: 33.33333333%; }
-
-.col-xs-5 {
-  -ms-flex-preferred-size: 41.66666667%;
-  -webkit-flex-basis: 41.66666667%;
-  flex-basis: 41.66666667%;
-  max-width: 41.66666667%; }
-
-.col-xs-6 {
-  -ms-flex-preferred-size: 50%;
-  -webkit-flex-basis: 50%;
-  flex-basis: 50%;
-  max-width: 50%; }
-
-.col-xs-7 {
-  -ms-flex-preferred-size: 58.33333333%;
-  -webkit-flex-basis: 58.33333333%;
-  flex-basis: 58.33333333%;
-  max-width: 58.33333333%; }
-
-.col-xs-8 {
-  -ms-flex-preferred-size: 66.66666667%;
-  -webkit-flex-basis: 66.66666667%;
-  flex-basis: 66.66666667%;
-  max-width: 66.66666667%; }
-
-.col-xs-9 {
-  -ms-flex-preferred-size: 75%;
-  -webkit-flex-basis: 75%;
-  flex-basis: 75%;
-  max-width: 75%; }
-
-.col-xs-10 {
-  -ms-flex-preferred-size: 83.33333333%;
-  -webkit-flex-basis: 83.33333333%;
-  flex-basis: 83.33333333%;
-  max-width: 83.33333333%; }
-
-.col-xs-11 {
-  -ms-flex-preferred-size: 91.66666667%;
-  -webkit-flex-basis: 91.66666667%;
-  flex-basis: 91.66666667%;
-  max-width: 91.66666667%; }
-
-.col-xs-12 {
-  -ms-flex-preferred-size: 100%;
-  -webkit-flex-basis: 100%;
-  flex-basis: 100%;
-  max-width: 100%; }
-
-.col-xs-offset-0 {
-  margin-left: 0; }
-
-.col-xs-offset-1 {
-  margin-left: 8.33333333%; }
-
-.col-xs-offset-2 {
-  margin-left: 16.66666667%; }
-
-.col-xs-offset-3 {
-  margin-left: 25%; }
-
-.col-xs-offset-4 {
-  margin-left: 33.33333333%; }
-
-.col-xs-offset-5 {
-  margin-left: 41.66666667%; }
-
-.col-xs-offset-6 {
-  margin-left: 50%; }
-
-.col-xs-offset-7 {
-  margin-left: 58.33333333%; }
-
-.col-xs-offset-8 {
-  margin-left: 66.66666667%; }
-
-.col-xs-offset-9 {
-  margin-left: 75%; }
-
-.col-xs-offset-10 {
-  margin-left: 83.33333333%; }
-
-.col-xs-offset-11 {
-  margin-left: 91.66666667%; }
-
-.start-xs {
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  text-align: start; }
-
-.center-xs {
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center; }
-
-.end-xs {
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  text-align: end; }
-
-.top-xs {
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
-  -ms-grid-row-align: flex-start;
-  align-items: flex-start; }
-
-.middle-xs {
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -ms-grid-row-align: center;
-  align-items: center; }
-
-.bottom-xs {
-  -ms-flex-align: end;
-  -webkit-align-items: flex-end;
-  -ms-grid-row-align: flex-end;
-  align-items: flex-end; }
-
-.around-xs {
-  -ms-flex-pack: distribute;
-  -webkit-justify-content: space-around;
-  justify-content: space-around; }
-
-.between-xs {
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between; }
-
-.first-xs {
-  -ms-flex-order: -1;
-  -webkit-order: -1;
-  order: -1; }
-
-.last-xs {
-  -ms-flex-order: 1;
-  -webkit-order: 1;
-  order: 1; }
-
-@media only screen and (min-width: 48em) {
-  .container {
-    width: 49rem; }
-  .col-sm,
-  .col-sm-1,
-  .col-sm-2,
-  .col-sm-3,
-  .col-sm-4,
-  .col-sm-5,
-  .col-sm-6,
-  .col-sm-7,
-  .col-sm-8,
-  .col-sm-9,
-  .col-sm-10,
-  .col-sm-11,
-  .col-sm-12,
-  .col-sm-offset-0,
-  .col-sm-offset-1,
-  .col-sm-offset-2,
-  .col-sm-offset-3,
-  .col-sm-offset-4,
-  .col-sm-offset-5,
-  .col-sm-offset-6,
-  .col-sm-offset-7,
-  .col-sm-offset-8,
-  .col-sm-offset-9,
-  .col-sm-offset-10,
-  .col-sm-offset-11,
-  .col-sm-offset-12 {
-    box-sizing: border-box;
-    -ms-flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
-  .col-sm {
-    -ms-flex-positive: 1;
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
-    -ms-flex-preferred-size: 0;
-    -webkit-flex-basis: 0;
-    flex-basis: 0;
-    max-width: 100%; }
-  .col-sm-1 {
-    -ms-flex-preferred-size: 8.33333333%;
-    -webkit-flex-basis: 8.33333333%;
-    flex-basis: 8.33333333%;
-    max-width: 8.33333333%; }
-  .col-sm-2 {
-    -ms-flex-preferred-size: 16.66666667%;
-    -webkit-flex-basis: 16.66666667%;
-    flex-basis: 16.66666667%;
-    max-width: 16.66666667%; }
-  .col-sm-3 {
-    -ms-flex-preferred-size: 25%;
-    -webkit-flex-basis: 25%;
-    flex-basis: 25%;
-    max-width: 25%; }
-  .col-sm-4 {
-    -ms-flex-preferred-size: 33.33333333%;
-    -webkit-flex-basis: 33.33333333%;
-    flex-basis: 33.33333333%;
-    max-width: 33.33333333%; }
-  .col-sm-5 {
-    -ms-flex-preferred-size: 41.66666667%;
-    -webkit-flex-basis: 41.66666667%;
-    flex-basis: 41.66666667%;
-    max-width: 41.66666667%; }
-  .col-sm-6 {
-    -ms-flex-preferred-size: 50%;
-    -webkit-flex-basis: 50%;
-    flex-basis: 50%;
-    max-width: 50%; }
-  .col-sm-7 {
-    -ms-flex-preferred-size: 58.33333333%;
-    -webkit-flex-basis: 58.33333333%;
-    flex-basis: 58.33333333%;
-    max-width: 58.33333333%; }
-  .col-sm-8 {
-    -ms-flex-preferred-size: 66.66666667%;
-    -webkit-flex-basis: 66.66666667%;
-    flex-basis: 66.66666667%;
-    max-width: 66.66666667%; }
-  .col-sm-9 {
-    -ms-flex-preferred-size: 75%;
-    -webkit-flex-basis: 75%;
-    flex-basis: 75%;
-    max-width: 75%; }
-  .col-sm-10 {
-    -ms-flex-preferred-size: 83.33333333%;
-    -webkit-flex-basis: 83.33333333%;
-    flex-basis: 83.33333333%;
-    max-width: 83.33333333%; }
-  .col-sm-11 {
-    -ms-flex-preferred-size: 91.66666667%;
-    -webkit-flex-basis: 91.66666667%;
-    flex-basis: 91.66666667%;
-    max-width: 91.66666667%; }
-  .col-sm-12 {
-    -ms-flex-preferred-size: 100%;
-    -webkit-flex-basis: 100%;
-    flex-basis: 100%;
-    max-width: 100%; }
-  .col-sm-offset-0 {
-    margin-left: 0; }
-  .col-sm-offset-1 {
-    margin-left: 8.33333333%; }
-  .col-sm-offset-2 {
-    margin-left: 16.66666667%; }
-  .col-sm-offset-3 {
-    margin-left: 25%; }
-  .col-sm-offset-4 {
-    margin-left: 33.33333333%; }
-  .col-sm-offset-5 {
-    margin-left: 41.66666667%; }
-  .col-sm-offset-6 {
-    margin-left: 50%; }
-  .col-sm-offset-7 {
-    margin-left: 58.33333333%; }
-  .col-sm-offset-8 {
-    margin-left: 66.66666667%; }
-  .col-sm-offset-9 {
-    margin-left: 75%; }
-  .col-sm-offset-10 {
-    margin-left: 83.33333333%; }
-  .col-sm-offset-11 {
-    margin-left: 91.66666667%; }
-  .start-sm {
-    -ms-flex-pack: start;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    text-align: start; }
-  .center-sm {
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    text-align: center; }
-  .end-sm {
-    -ms-flex-pack: end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-    text-align: end; }
-  .top-sm {
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    -ms-grid-row-align: flex-start;
-    align-items: flex-start; }
-  .middle-sm {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -ms-grid-row-align: center;
-    align-items: center; }
-  .bottom-sm {
-    -ms-flex-align: end;
-    -webkit-align-items: flex-end;
-    -ms-grid-row-align: flex-end;
-    align-items: flex-end; }
-  .around-sm {
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: space-around;
-    justify-content: space-around; }
-  .between-sm {
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between; }
-  .first-sm {
-    -ms-flex-order: -1;
-    -webkit-order: -1;
-    order: -1; }
-  .last-sm {
-    -ms-flex-order: 1;
-    -webkit-order: 1;
-    order: 1; } }
-
-@media only screen and (min-width: 64em) {
-  .container {
-    width: 65rem; }
-  .col-md,
-  .col-md-1,
-  .col-md-2,
-  .col-md-3,
-  .col-md-4,
-  .col-md-5,
-  .col-md-6,
-  .col-md-7,
-  .col-md-8,
-  .col-md-9,
-  .col-md-10,
-  .col-md-11,
-  .col-md-12,
-  .col-md-offset-0,
-  .col-md-offset-1,
-  .col-md-offset-2,
-  .col-md-offset-3,
-  .col-md-offset-4,
-  .col-md-offset-5,
-  .col-md-offset-6,
-  .col-md-offset-7,
-  .col-md-offset-8,
-  .col-md-offset-9,
-  .col-md-offset-10,
-  .col-md-offset-11,
-  .col-md-offset-12 {
-    box-sizing: border-box;
-    -ms-flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
-  .col-md {
-    -ms-flex-positive: 1;
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
-    -ms-flex-preferred-size: 0;
-    -webkit-flex-basis: 0;
-    flex-basis: 0;
-    max-width: 100%; }
-  .col-md-1 {
-    -ms-flex-preferred-size: 8.33333333%;
-    -webkit-flex-basis: 8.33333333%;
-    flex-basis: 8.33333333%;
-    max-width: 8.33333333%; }
-  .col-md-2 {
-    -ms-flex-preferred-size: 16.66666667%;
-    -webkit-flex-basis: 16.66666667%;
-    flex-basis: 16.66666667%;
-    max-width: 16.66666667%; }
-  .col-md-3 {
-    -ms-flex-preferred-size: 25%;
-    -webkit-flex-basis: 25%;
-    flex-basis: 25%;
-    max-width: 25%; }
-  .col-md-4 {
-    -ms-flex-preferred-size: 33.33333333%;
-    -webkit-flex-basis: 33.33333333%;
-    flex-basis: 33.33333333%;
-    max-width: 33.33333333%; }
-  .col-md-5 {
-    -ms-flex-preferred-size: 41.66666667%;
-    -webkit-flex-basis: 41.66666667%;
-    flex-basis: 41.66666667%;
-    max-width: 41.66666667%; }
-  .col-md-6 {
-    -ms-flex-preferred-size: 50%;
-    -webkit-flex-basis: 50%;
-    flex-basis: 50%;
-    max-width: 50%; }
-  .col-md-7 {
-    -ms-flex-preferred-size: 58.33333333%;
-    -webkit-flex-basis: 58.33333333%;
-    flex-basis: 58.33333333%;
-    max-width: 58.33333333%; }
-  .col-md-8 {
-    -ms-flex-preferred-size: 66.66666667%;
-    -webkit-flex-basis: 66.66666667%;
-    flex-basis: 66.66666667%;
-    max-width: 66.66666667%; }
-  .col-md-9 {
-    -ms-flex-preferred-size: 75%;
-    -webkit-flex-basis: 75%;
-    flex-basis: 75%;
-    max-width: 75%; }
-  .col-md-10 {
-    -ms-flex-preferred-size: 83.33333333%;
-    -webkit-flex-basis: 83.33333333%;
-    flex-basis: 83.33333333%;
-    max-width: 83.33333333%; }
-  .col-md-11 {
-    -ms-flex-preferred-size: 91.66666667%;
-    -webkit-flex-basis: 91.66666667%;
-    flex-basis: 91.66666667%;
-    max-width: 91.66666667%; }
-  .col-md-12 {
-    -ms-flex-preferred-size: 100%;
-    -webkit-flex-basis: 100%;
-    flex-basis: 100%;
-    max-width: 100%; }
-  .col-md-offset-0 {
-    margin-left: 0; }
-  .col-md-offset-1 {
-    margin-left: 8.33333333%; }
-  .col-md-offset-2 {
-    margin-left: 16.66666667%; }
-  .col-md-offset-3 {
-    margin-left: 25%; }
-  .col-md-offset-4 {
-    margin-left: 33.33333333%; }
-  .col-md-offset-5 {
-    margin-left: 41.66666667%; }
-  .col-md-offset-6 {
-    margin-left: 50%; }
-  .col-md-offset-7 {
-    margin-left: 58.33333333%; }
-  .col-md-offset-8 {
-    margin-left: 66.66666667%; }
-  .col-md-offset-9 {
-    margin-left: 75%; }
-  .col-md-offset-10 {
-    margin-left: 83.33333333%; }
-  .col-md-offset-11 {
-    margin-left: 91.66666667%; }
-  .start-md {
-    -ms-flex-pack: start;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    text-align: start; }
-  .center-md {
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    text-align: center; }
-  .end-md {
-    -ms-flex-pack: end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-    text-align: end; }
-  .top-md {
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    -ms-grid-row-align: flex-start;
-    align-items: flex-start; }
-  .middle-md {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -ms-grid-row-align: center;
-    align-items: center; }
-  .bottom-md {
-    -ms-flex-align: end;
-    -webkit-align-items: flex-end;
-    -ms-grid-row-align: flex-end;
-    align-items: flex-end; }
-  .around-md {
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: space-around;
-    justify-content: space-around; }
-  .between-md {
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between; }
-  .first-md {
-    -ms-flex-order: -1;
-    -webkit-order: -1;
-    order: -1; }
-  .last-md {
-    -ms-flex-order: 1;
-    -webkit-order: 1;
-    order: 1; } }
-
-@media only screen and (min-width: 99.75em) {
-  .container {
-    width: 100.75rem; }
-  .col-lg,
-  .col-lg-1,
-  .col-lg-2,
-  .col-lg-3,
-  .col-lg-4,
-  .col-lg-5,
-  .col-lg-6,
-  .col-lg-7,
-  .col-lg-8,
-  .col-lg-9,
-  .col-lg-10,
-  .col-lg-11,
-  .col-lg-12,
-  .col-lg-offset-0,
-  .col-lg-offset-1,
-  .col-lg-offset-2,
-  .col-lg-offset-3,
-  .col-lg-offset-4,
-  .col-lg-offset-5,
-  .col-lg-offset-6,
-  .col-lg-offset-7,
-  .col-lg-offset-8,
-  .col-lg-offset-9,
-  .col-lg-offset-10,
-  .col-lg-offset-11,
-  .col-lg-offset-12 {
-    box-sizing: border-box;
-    -ms-flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
-  .col-lg {
-    -ms-flex-positive: 1;
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
-    -ms-flex-preferred-size: 0;
-    -webkit-flex-basis: 0;
-    flex-basis: 0;
-    max-width: 100%; }
-  .col-lg-1 {
-    -ms-flex-preferred-size: 8.33333333%;
-    -webkit-flex-basis: 8.33333333%;
-    flex-basis: 8.33333333%;
-    max-width: 8.33333333%; }
-  .col-lg-2 {
-    -ms-flex-preferred-size: 16.66666667%;
-    -webkit-flex-basis: 16.66666667%;
-    flex-basis: 16.66666667%;
-    max-width: 16.66666667%; }
-  .col-lg-3 {
-    -ms-flex-preferred-size: 25%;
-    -webkit-flex-basis: 25%;
-    flex-basis: 25%;
-    max-width: 25%; }
-  .col-lg-4 {
-    -ms-flex-preferred-size: 33.33333333%;
-    -webkit-flex-basis: 33.33333333%;
-    flex-basis: 33.33333333%;
-    max-width: 33.33333333%; }
-  .col-lg-5 {
-    -ms-flex-preferred-size: 41.66666667%;
-    -webkit-flex-basis: 41.66666667%;
-    flex-basis: 41.66666667%;
-    max-width: 41.66666667%; }
-  .col-lg-6 {
-    -ms-flex-preferred-size: 50%;
-    -webkit-flex-basis: 50%;
-    flex-basis: 50%;
-    max-width: 50%; }
-  .col-lg-7 {
-    -ms-flex-preferred-size: 58.33333333%;
-    -webkit-flex-basis: 58.33333333%;
-    flex-basis: 58.33333333%;
-    max-width: 58.33333333%; }
-  .col-lg-8 {
-    -ms-flex-preferred-size: 66.66666667%;
-    -webkit-flex-basis: 66.66666667%;
-    flex-basis: 66.66666667%;
-    max-width: 66.66666667%; }
-  .col-lg-9 {
-    -ms-flex-preferred-size: 75%;
-    -webkit-flex-basis: 75%;
-    flex-basis: 75%;
-    max-width: 75%; }
-  .col-lg-10 {
-    -ms-flex-preferred-size: 83.33333333%;
-    -webkit-flex-basis: 83.33333333%;
-    flex-basis: 83.33333333%;
-    max-width: 83.33333333%; }
-  .col-lg-11 {
-    -ms-flex-preferred-size: 91.66666667%;
-    -webkit-flex-basis: 91.66666667%;
-    flex-basis: 91.66666667%;
-    max-width: 91.66666667%; }
-  .col-lg-12 {
-    -ms-flex-preferred-size: 100%;
-    -webkit-flex-basis: 100%;
-    flex-basis: 100%;
-    max-width: 100%; }
-  .col-lg-offset-0 {
-    margin-left: 0; }
-  .col-lg-offset-1 {
-    margin-left: 8.33333333%; }
-  .col-lg-offset-2 {
-    margin-left: 16.66666667%; }
-  .col-lg-offset-3 {
-    margin-left: 25%; }
-  .col-lg-offset-4 {
-    margin-left: 33.33333333%; }
-  .col-lg-offset-5 {
-    margin-left: 41.66666667%; }
-  .col-lg-offset-6 {
-    margin-left: 50%; }
-  .col-lg-offset-7 {
-    margin-left: 58.33333333%; }
-  .col-lg-offset-8 {
-    margin-left: 66.66666667%; }
-  .col-lg-offset-9 {
-    margin-left: 75%; }
-  .col-lg-offset-10 {
-    margin-left: 83.33333333%; }
-  .col-lg-offset-11 {
-    margin-left: 91.66666667%; }
-  .start-lg {
-    -ms-flex-pack: start;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    text-align: start; }
-  .center-lg {
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    text-align: center; }
-  .end-lg {
-    -ms-flex-pack: end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-    text-align: end; }
-  .top-lg {
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    -ms-grid-row-align: flex-start;
-    align-items: flex-start; }
-  .middle-lg {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -ms-grid-row-align: center;
-    align-items: center; }
-  .bottom-lg {
-    -ms-flex-align: end;
-    -webkit-align-items: flex-end;
-    -ms-grid-row-align: flex-end;
-    align-items: flex-end; }
-  .around-lg {
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: space-around;
-    justify-content: space-around; }
-  .between-lg {
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between; }
-  .first-lg {
-    -ms-flex-order: -1;
-    -webkit-order: -1;
-    order: -1; }
-  .last-lg {
-    -ms-flex-order: 1;
-    -webkit-order: 1;
-    order: 1; } }
+  .wds-icon-small {
+    height: 18px;
+    width: 18px; }
+  .wds-icon-tiny {
+    height: 12px;
+    width: 12px; }
 
 .wds-avatar {
   border: solid 2px currentColor;
@@ -2286,12 +1534,9 @@ code.sg:first-child {
   .wds-global-navigation__content-bar {
     height: 49px;
     margin: 0 auto;
-    width: 1004px;
     position: relative;
+    width: 1004px;
     z-index: 1; }
-    @media only screen and (min-width: 1440px) {
-      .wds-global-navigation__content-bar {
-        width: 1420px; } }
   .wds-global-navigation__logo {
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -2404,23 +1649,21 @@ code.sg:first-child {
     -ms-flex: 2;
     flex: 2; }
   .wds-global-navigation__account-navigation {
-    -webkit-flex: initial;
-    -ms-flex: initial;
-    flex: initial;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     margin-right: 10px; }
   .wds-global-navigation__user-menu {
-    -webkit-flex: initial;
-    -ms-flex: initial;
-    flex: initial;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     width: 55px; }
   .wds-global-navigation__user-icon {
-    height: 16px;
-    margin-right: 5px;
-    width: 16px; }
+    margin-right: 5px; }
   .wds-global-navigation__notifications {
-    -webkit-flex: initial;
-    -ms-flex: initial;
-    flex: initial;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     margin-right: 10px;
     padding-right: 0;
     position: relative;
@@ -2452,6 +1695,17 @@ code.sg:first-child {
     font-size: 12px;
     padding-bottom: 10px;
     text-align: center; }
+  @media only screen and (max-width: 1023px) {
+    .wds-global-navigation__account-navigation-caption {
+      display: none; }
+    .wds-global-navigation__start-a-wiki::before {
+      content: '┼';
+      display: inline; }
+    .wds-global-navigation__start-a-wiki-content {
+      display: none; } }
+  @media only screen and (min-width: 1440px) {
+    .wds-global-navigation__content-bar {
+      width: 1420px; } }
 
 .wds-list {
   list-style-type: none;
@@ -6471,14 +5725,11 @@ body {
                 <svg class="wds-global-navigation__logo__fandom" alt="Fandom">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom">
                 </svg>
-                <span class="wds-global-navigation__logo__powered-by">
-                  powered by
-                </span>
+                <span class="wds-global-navigation__logo__powered-by">powered by</span>
                 <svg class="wds-global-navigation__logo__wikia" alt="Wikia">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia">
                 </svg>
               </a>
-
               <div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
                 <a href="#" class="wds-global-navigation__content-item wds-is-games">Games</a>
                 <a href="#" class="wds-global-navigation__content-item wds-is-movies">Movies</a>
@@ -6506,10 +5757,10 @@ body {
               <div class="col-sm-3 wds-global-navigation__right-column">
                 <div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown wds-is-active">
                   <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-                    <svg class="wds-icon wds-global-navigation__user-icon" alt="user icon">
+                    <svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                     </svg>
-                    <span>My Account</span>
+                    <span class="wds-global-navigation__account-navigation-caption">My Account</span>
                     <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                     </svg>
@@ -6526,7 +5777,9 @@ body {
                     </ul>
                   </div>
                 </div>
-                <a href="#" class="wds-button wds-is-squished wds-is-secondary">Start a wiki</a>
+                <a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+                  <span class="wds-global-navigation__start-a-wiki-content">Start a wiki</span>
+                </a>
               </div>
             </div>
           </div>
@@ -6538,14 +5791,11 @@ body {
                 <svg class="wds-global-navigation__logo__fandom" alt="Fandom">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom">
                 </svg>
-                <span class="wds-global-navigation__logo__powered-by">
-                  powered by
-                </span>
+                <span class="wds-global-navigation__logo__powered-by">powered by</span>
                 <svg class="wds-global-navigation__logo__wikia" alt="Wikia">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia">
                 </svg>
               </a>
-
               <div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
                 <a href="#" class="wds-global-navigation__content-item wds-is-games">Games</a>
                 <a href="#" class="wds-global-navigation__content-item wds-is-movies">Movies</a>
@@ -6609,7 +5859,9 @@ body {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <a href="#" class="wds-button wds-is-squished wds-is-secondary">Start a wiki</a>
+                <a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+                  <span class="wds-global-navigation__start-a-wiki-content">Start a wiki</span>
+                </a>
               </div>
             </div>
           </div>
@@ -6621,14 +5873,11 @@ body {
                 <svg class="wds-global-navigation__logo__fandom" alt="Fandom">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom">
                 </svg>
-                <span class="wds-global-navigation__logo__powered-by">
-                  powered by
-                </span>
+                <span class="wds-global-navigation__logo__powered-by">powered by</span>
                 <svg class="wds-global-navigation__logo__wikia" alt="Wikia">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia">
                 </svg>
               </a>
-
               <div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
                 <a href="#" class="wds-global-navigation__content-item wds-is-games">Videospiele</a>
                 <a href="#" class="wds-global-navigation__content-item wds-is-movies">Filme</a>
@@ -6656,10 +5905,10 @@ body {
               <div class="col-sm-3 wds-global-navigation__right-column">
                 <div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
                   <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-                    <svg class="wds-icon wds-global-navigation__user-icon" alt="user icon">
+                    <svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                     </svg>
-                    <span>Mein Benutzerkonto</span>
+                    <span class="wds-global-navigation__account-navigation-caption">Mein Benutzerkonto</span>
                     <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                     </svg>
@@ -6676,7 +5925,9 @@ body {
                     </ul>
                   </div>
                 </div>
-                <a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Starte ein Wiki</a>
+                <a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+                  <span class="wds-global-navigation__start-a-wiki-content">Starte ein Wiki</span>
+                </a>
               </div>
             </div>
           </div>
@@ -6688,14 +5939,11 @@ body {
                 <svg class="wds-global-navigation__logo__fandom" alt="Fandom">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom">
                 </svg>
-                <span class="wds-global-navigation__logo__powered-by">
-                  powered by
-                </span>
+                <span class="wds-global-navigation__logo__powered-by">powered by</span>
                 <svg class="wds-global-navigation__logo__wikia" alt="Wikia">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia">
                 </svg>
               </a>
-
               <div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
                 <a href="#" class="wds-global-navigation__content-item wds-is-games">Gry</a>
                 <a href="#" class="wds-global-navigation__content-item wds-is-movies">Filmy</a>
@@ -6723,10 +5971,10 @@ body {
               <div class="col-sm-3 wds-global-navigation__right-column">
                 <div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
                   <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-                    <svg class="wds-icon wds-global-navigation__user-icon" alt="user icon">
+                    <svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                     </svg>
-                    <span>Moje konto</span>
+                    <span class="wds-global-navigation__account-navigation-caption">Moje konto</span>
                     <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                     </svg>
@@ -6743,7 +5991,9 @@ body {
                     </ul>
                   </div>
                 </div>
-                <a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Utw&#xF3;rz wiki</a>
+                <a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+                  <span class="wds-global-navigation__start-a-wiki-content">Utw&#xF3;rz wiki</span>
+                </a>
               </div>
             </div>
           </div>
@@ -6755,14 +6005,11 @@ body {
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__fandom&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-fandom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__powered-by&quot;</span>&gt;</span>
-        powered by
-      <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__powered-by&quot;</span>&gt;</span>powered by<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__wikia&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Wikia&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-wikia&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-is-games&quot;</span>&gt;</span>Games<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-is-movies&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6790,10 +6037,10 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-3 wds-global-navigation__right-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown wds-is-active&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-global-navigation__user-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>My Account<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-navigation-caption&quot;</span>&gt;</span>My Account<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
@@ -6810,7 +6057,9 @@ body {
           <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-is-secondary&quot;</span>&gt;</span>Start a wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__start-a-wiki-content&quot;</span>&gt;</span>Start a wiki<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -6822,14 +6071,11 @@ body {
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__fandom&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-fandom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__powered-by&quot;</span>&gt;</span>
-        powered by
-      <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__powered-by&quot;</span>&gt;</span>powered by<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__wikia&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Wikia&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-wikia&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-is-games&quot;</span>&gt;</span>Games<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-is-movies&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6893,7 +6139,9 @@ body {
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-is-secondary&quot;</span>&gt;</span>Start a wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__start-a-wiki-content&quot;</span>&gt;</span>Start a wiki<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -6905,14 +6153,11 @@ body {
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__fandom&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-fandom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__powered-by&quot;</span>&gt;</span>
-        powered by
-      <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__powered-by&quot;</span>&gt;</span>powered by<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__wikia&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Wikia&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-wikia&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-is-games&quot;</span>&gt;</span>Videospiele<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-is-movies&quot;</span>&gt;</span>Filme<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6940,10 +6185,10 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-3 wds-global-navigation__right-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-global-navigation__user-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Mein Benutzerkonto<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-navigation-caption&quot;</span>&gt;</span>Mein Benutzerkonto<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
@@ -6960,7 +6205,9 @@ body {
           <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary&quot;</span>&gt;</span>Starte ein Wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__start-a-wiki-content&quot;</span>&gt;</span>Starte ein Wiki<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -6972,14 +6219,11 @@ body {
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__fandom&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-fandom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__powered-by&quot;</span>&gt;</span>
-        powered by
-      <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__powered-by&quot;</span>&gt;</span>powered by<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__wikia&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Wikia&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-wikia&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-is-games&quot;</span>&gt;</span>Gry<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-is-movies&quot;</span>&gt;</span>Filmy<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -7007,10 +6251,10 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-3 wds-global-navigation__right-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-global-navigation__user-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Moje konto<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-navigation-caption&quot;</span>&gt;</span>Moje konto<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
@@ -7027,7 +6271,9 @@ body {
           <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary&quot;</span>&gt;</span>Utw&#xF3;rz wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__start-a-wiki-content&quot;</span>&gt;</span>Utw&#xF3;rz wiki<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
