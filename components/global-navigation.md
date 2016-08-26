@@ -201,9 +201,6 @@
 				</svg>
 			</a>
 			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
-				<a href="#" class="wds-global-navigation__content-item wds-is-games">Gry</a>
-				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Filmy</a>
-				<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
 				<div class="wds-global-navigation__content-item wds-dropdown">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<span>Wikis</span>
