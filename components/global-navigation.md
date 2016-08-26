@@ -51,7 +51,7 @@
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
 					</button>
-				<form>
+				</form>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown wds-is-active">
@@ -130,7 +130,7 @@
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
 					</button>
-				<form>
+				</form>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active wds-global-navigation__user-menu">
@@ -215,7 +215,7 @@
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
 					</button>
-				<form>
+				</form>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
@@ -277,7 +277,7 @@
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
 					</button>
-				<form>
+				</form>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
