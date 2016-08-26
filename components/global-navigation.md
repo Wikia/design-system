@@ -246,6 +246,83 @@
 	</div>
 
 	<h4>PL version</h4>
+	<h5>Basic state</h5>
+	<div class="wds-global-navigation">
+		<div class="wds-global-navigation__content-bar row">
+			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
+				<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
+				</svg>
+				<span class="wds-global-navigation__logo__powered-by">powered by</span>
+				<svg class="wds-global-navigation__logo__wikia" alt="Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				</svg>
+			</a>
+			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
+				<div class="wds-global-navigation__content-item wds-dropdown">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<span>Wikis</span>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list">
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Popularne wiki</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Centrum Społeczności</a></li>
+						</ul>
+					</div>
+				</div>
+				<form class="wds-global-navigation__search">
+					<div class="wds-global-navigation__search__input-wrapper">
+						<label class="wds-global-navigation__search__label">
+							<svg class="wds-icon wds-icon-small" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
+							</svg>
+							<input class="wds-global-navigation__search__input" name="search" placeholder="Search"/>
+						</label>
+						<button class="wds-button wds-is-text wds-global-navigation__search__close">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search__close__icon" alt="Close">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
+							</svg>
+						</button>
+					</div>
+					<button type="submit" class="wds-button wds-global-navigation__search__submit">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search__submit__icon" alt="Search">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="col-sm-3 wds-global-navigation__right-column">
+				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
+						</svg>
+						<span class="wds-global-navigation__account-navigation-caption">Moje konto</span>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list wds-has-lines-between">
+							<li><button class="wds-button wds-is-full-width">Zaloguj się</button></li>
+							<li>
+								<span class="wds-global-navigation__register-button-caption">Nie masz jeszcze konta?</span>
+								<button class="wds-button wds-is-secondary wds-is-full-width">Zarejestruj się</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+					<span class="wds-global-navigation__start-a-wiki-content">Utwórz wiki</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<h5>Focused search input</h5>
 	<div class="wds-global-navigation">
 		<div class="wds-global-navigation__content-bar row">
 			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
