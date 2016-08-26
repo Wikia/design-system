@@ -82,13 +82,6 @@ $notification-counter-border-width: 1px;
 		padding: 0 5px;
 		text-decoration: none;
 
-		&.wds-has-fixed-width {
-			overflow: hidden;
-			padding: 0;
-			text-overflow: ellipsis;
-			width: 80px;
-		}
-
 		&:hover {
 			color: $color-link;
 		}
