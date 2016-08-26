@@ -16,12 +16,12 @@ $notification-counter-border-width: 1px;
 	&__content-bar {
 		height: $nav-height;
 		margin: 0 auto;
+		width: 1024px - $scrollbar-width;
 		position: relative;
-		width: 1024px;
 		z-index: 1;
 
 		@media #{$breakpoint-desktop-xl-up} {
-			width: 1440px;
+			width: 1440px - $scrollbar-width;
 		}
 	}
 
@@ -31,9 +31,10 @@ $notification-counter-border-width: 1px;
 		border-top: $border-top-width solid $color-dark-blue-gray;
 		color: $color-slate-gray;
 		display: flex;
-		font-size: $typescale-size-minus-3;
+		font-size: 9px;
 		font-weight: 600;
 		justify-content: flex-end;
+		letter-spacing: .15px;
 		margin-top: -$border-top-width;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -41,17 +42,18 @@ $notification-counter-border-width: 1px;
 		&__fandom {
 			fill: $color-dark-blue-gray;
 			height: 24px;
-			width: 120px;
+			padding-bottom: 4px;
+			width: 120px
 		}
 
 		&__wikia {
 			fill: $color-dark-blue;
-			height: 15px;
-			width: 42px;
+			height: 12px;
+			width: 36px;
 		}
 
 		&__powered-by {
-			padding: 2px 5px 0;
+			padding: 2px 3px 0 7px;
 		}
 	}
 
