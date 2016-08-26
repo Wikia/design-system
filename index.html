@@ -1668,7 +1668,7 @@ code.sg:first-child {
     padding-right: 0;
     position: relative;
     width: 50px; }
-  .wds-global-navigation__notifications-counter-wrapper {
+  .wds-global-navigation__notifications-counter {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1687,10 +1687,9 @@ code.sg:first-child {
     justify-content: center;
     left: 7px;
     min-width: 18px;
+    padding: 0 4px;
     position: absolute;
     top: 7px; }
-  .wds-global-navigation__notifications-counter {
-    padding: 0 4px; }
   .wds-global-navigation__register-button-caption {
     font-size: 12px;
     padding-bottom: 10px;
@@ -5771,7 +5770,7 @@ body {
                         <button class="wds-button wds-is-full-width">Sign in</button>
                       </li>
                       <li>
-                        <div class="wds-global-navigation__register-button-caption">Don&apos;t have an account?</div>
+                        <span class="wds-global-navigation__register-button-caption">Don&apos;t have an account?</span>
                         <button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
                       </li>
                     </ul>
@@ -5849,9 +5848,7 @@ body {
                   </div>
                 </div>
                 <div class="wds-global-navigation__content-item wds-global-navigation__notifications">
-                  <div class="wds-global-navigation__notifications-counter-wrapper">
-                    <div class="wds-global-navigation__notifications-counter">3</div>
-                  </div>
+                  <div class="wds-global-navigation__notifications-counter">3</div>
                   <svg class="wds-icon wds-icon-small" alt="notifications">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell">
                   </svg>
@@ -5919,7 +5916,7 @@ body {
                         <button class="wds-button wds-is-full-width">Anmelden</button>
                       </li>
                       <li>
-                        <div class="wds-global-navigation__register-button-caption">Du hast kein konto?</div>
+                        <span class="wds-global-navigation__register-button-caption">Du hast kein konto?</span>
                         <button class="wds-button wds-is-secondary wds-is-full-width">Registrieren</button>
                       </li>
                     </ul>
@@ -5985,7 +5982,7 @@ body {
                         <button class="wds-button wds-is-full-width">Zaloguj si&#x119;</button>
                       </li>
                       <li>
-                        <div class="wds-global-navigation__register-button-caption">Nie masz jeszcze konta?</div>
+                        <span class="wds-global-navigation__register-button-caption">Nie masz jeszcze konta?</span>
                         <button class="wds-button wds-is-secondary wds-is-full-width">Zarejestruj si&#x119;</button>
                       </li>
                     </ul>
@@ -6051,7 +6048,7 @@ body {
               <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Sign in<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__register-button-caption&quot;</span>&gt;</span>Don&apos;t have an account?<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__register-button-caption&quot;</span>&gt;</span>Don&apos;t have an account?<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary wds-is-full-width&quot;</span>&gt;</span>Register<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
@@ -6129,9 +6126,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-global-navigation__notifications&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__notifications-counter-wrapper&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__notifications-counter&quot;</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__notifications-counter&quot;</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;notifications&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-bell&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
@@ -6199,7 +6194,7 @@ body {
               <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Anmelden<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__register-button-caption&quot;</span>&gt;</span>Du hast kein konto?<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__register-button-caption&quot;</span>&gt;</span>Du hast kein konto?<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary wds-is-full-width&quot;</span>&gt;</span>Registrieren<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
@@ -6265,7 +6260,7 @@ body {
               <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Zaloguj si&#x119;<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__register-button-caption&quot;</span>&gt;</span>Nie masz jeszcze konta?<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__register-button-caption&quot;</span>&gt;</span>Nie masz jeszcze konta?<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary wds-is-full-width&quot;</span>&gt;</span>Zarejestruj si&#x119;<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
