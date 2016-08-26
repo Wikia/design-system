@@ -50,16 +50,7 @@
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-movies">Filme</a>
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-tv">TV</a>
 				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width">Wikis</a>
-				<div class="wds-global-navigation__search">
-					<form class="wds-global-navigation__search__form">
-						<label for="search">
-							<svg class="wds-icon wds-icon-small" alt="Search">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
-							</svg>
-						</label>
-						<input class="wds-global-navigation__search__input" name="search" placeholder="Search"/>
-					<form>
-				</div>
+				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
 				<a href="#" class="wds-global-navigation__content-item wds-global-navigation__account-navigation">Mein Benutzerkonto</a>
