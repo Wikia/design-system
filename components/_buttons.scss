@@ -1,9 +1,9 @@
-$button-active-color: darken($color-light-blue, 10%);
+$button-active-color: darken($color-link, 20%);
 $button-line-height: 1.3em;
 
 .wds-button {
-	background-color: $color-light-blue;
-	border: 1px solid $color-light-blue;
+	background-color: $color-link;
+	border: 1px solid $color-link;
 	color: $color-white;
 	cursor: pointer;
 	display: inline-block;
@@ -32,7 +32,7 @@ $button-line-height: 1.3em;
 
 	&.wds-is-secondary {
 		background-color: $color-white;
-		color: $color-light-blue;
+		color: $color-link;
 
 		&:hover:enabled, &.wds-is-active {
 			background-color: $color-white;
@@ -52,7 +52,7 @@ $button-line-height: 1.3em;
 	&.wds-is-text {
 		background-color: $color-white;
 		border: 0;
-		color: $color-light-blue;
+		color: $color-link;
 
 		&:hover:enabled, &.wds-is-active {
 			background-color: $color-white;
