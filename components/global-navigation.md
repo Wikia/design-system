@@ -18,9 +18,9 @@
 			</a>
 
 			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-games">Games</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-movies">Movies</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-tv">TV</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-games">Games</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Movies</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
 				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<div>Wikis</div>
@@ -79,9 +79,9 @@
 			</a>
 
 			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-games">Games</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-movies">Movies</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-tv">TV</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-games">Games</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Movies</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
 				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<div>Wikis</div>
@@ -148,10 +148,10 @@
 			</a>
 
 			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-games">Videospiele</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-movies">Filme</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-tv">TV</a>
-				<a href="#" class="wds-global-navigation__content-item wds-has-fixed-width">Wikis</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-games">Videospiele</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Filme</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
+				<a href="#" class="wds-global-navigation__content-item">Wikis</a>
 				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
