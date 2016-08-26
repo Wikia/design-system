@@ -309,13 +309,14 @@ code.sg:first-child {
 }
 
 /* Remove default body margin on the footer element */
-.wds-global-footer, .wds-global-navigation {
+.wds-global-footer,
+.wds-global-navigation {
 	margin: 0 -8px;
 }
 
 /* Separate navigation to avoid hiding content by other dropdowns */
-.wds-global-navigation {
-	margin-bottom: 250px;
+.wds-global-navigation.sg-has-space-for-dropdowns {
+	margin-bottom: 200px;
 }
 </style>
   <style>@charset "UTF-8";
@@ -5718,7 +5719,7 @@ body {
         <div class="sg-canvas">
           <h4>EN version</h4>
           <h5>Logged out state</h5>
-          <div class="wds-global-navigation">
+          <div class="wds-global-navigation sg-has-space-for-dropdowns">
             <div class="wds-global-navigation__content-bar row">
               <a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
                 <svg class="wds-global-navigation__logo__fandom" alt="Fandom">
@@ -5784,7 +5785,7 @@ body {
           </div>
 
           <h5>Logged in state</h5>
-          <div class="wds-global-navigation">
+          <div class="wds-global-navigation sg-has-space-for-dropdowns">
             <div class="wds-global-navigation__content-bar row">
               <a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
                 <svg class="wds-global-navigation__logo__fandom" alt="Fandom">
@@ -5996,7 +5997,7 @@ body {
           </div>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>EN version<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Logged out state<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation sg-has-space-for-dropdowns&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar row&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__fandom&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>
@@ -6062,7 +6063,7 @@ body {
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Logged in state<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation sg-has-space-for-dropdowns&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar row&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__fandom&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>

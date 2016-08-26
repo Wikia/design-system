@@ -3,7 +3,7 @@
 	@example
 	<h4>EN version</h4>
 	<h5>Logged out state</h5>
-	<div class="wds-global-navigation">
+	<div class="wds-global-navigation sg-has-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar row">
 			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
 				<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
@@ -63,7 +63,7 @@
 	</div>
 
 	<h5>Logged in state</h5>
-	<div class="wds-global-navigation">
+	<div class="wds-global-navigation sg-has-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar row">
 			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
 				<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
