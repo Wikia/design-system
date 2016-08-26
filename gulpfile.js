@@ -1,7 +1,6 @@
 var cheerio = require('gulp-cheerio'),
 	fs = require('fs'),
 	gulp = require('gulp'),
-	gulpif = require('gulp-if'),
 	path = require('path'),
 	rename = require('gulp-rename'),
 	svgmin = require('gulp-svgmin'),
