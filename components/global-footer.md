@@ -1,7 +1,7 @@
 ###Footer:
 
 	@example
-	<h1>EN version</h1>
+	<h4>EN version</h4>
 	<footer class="wds-global-footer wds-is-en">
 		<div class="wds-global-footer__main">
 			<h2 class="wds-global-footer__fandom-header">
@@ -158,7 +158,7 @@
 					<span class="wds-global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
 					<ul class="wds-global-footer__links-list">
 						<li class="wds-global-footer__links-list-item">
-							<a href="#" class="wds-global-footer__link">Start a wikia</a>
+							<a href="#" class="wds-global-footer__link">Start a wiki</a>
 						</li>
 					</ul>
 				</section>
@@ -203,7 +203,7 @@
 		</div>
 	</footer>
 
-	<h1>International version</h1>
+	<h4>International version</h4>
 	<footer class="wds-global-footer wds-is-international">
 		<div class="wds-global-footer__header-wrapper">
 			<h2 class="wds-global-footer__header">
