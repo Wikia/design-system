@@ -10,10 +10,10 @@ $nav-height: 49px;
 	&__content-bar {
 		height: $nav-height;
 		margin: 0 auto;
-		width: 1024px;
+		width: 1004px;
 
 		@media #{$breakpoint-desktop-xl-up} {
-			width: 1440px;
+			width: 1420px;
 		}
 	}
 
@@ -23,8 +23,9 @@ $nav-height: 49px;
 		color: $color-slate-gray;
 		display: flex;
 		justify-content: flex-end;
-		font-size: $typescale-size-minus-3;
+		font-size: 9px;
 		font-weight: 600;
+		letter-spacing: .15px;
 		margin-top: -$border-top-width;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -37,12 +38,12 @@ $nav-height: 49px;
 
 		&__wikia {
 			fill: $color-dark-blue;
-			height: 15px;
-			width: 42px;
+			height: 12px;
+			width: 36px;
 		}
 
 		&__powered-by {
-			padding: 2px 5px 0;
+			padding: 2px 3px 0;
 		}
 	}
 
