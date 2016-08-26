@@ -49,7 +49,7 @@
 						<ul class="wds-list wds-has-lines-between">
 							<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 							<li>
-								<span class="wds-global-navigation__register-button-caption">Don't have an account?</span>
+								<div class="wds-global-navigation__register-button-caption">Don't have an account?</div>
 								<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
 							</li>
 						</ul>
