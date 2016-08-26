@@ -151,7 +151,7 @@ $notification-counter-size: 18px;
 		padding-left: 16px;
 
 		&__input-wrapper {
-			border-bottom: 1px solid $color-faint-gray;
+			border-bottom: 1px solid $color-slate-gray;
 			display: flex;
 			flex: 1;
 		}
@@ -201,7 +201,6 @@ $notification-counter-size: 18px;
 		&.wds-is-active {
 			.wds-global-navigation__search {
 				&__input-wrapper {
-					border-bottom: 1px solid $color-slate-gray;
 					margin-right: 15px;
 				}
 
