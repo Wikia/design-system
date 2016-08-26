@@ -43,7 +43,7 @@
 						<svg class="wds-icon wds-global-navigation__user-icon" alt="user icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 						</svg>
-						<div>My Account</div>
+						<span>My Account</span>
 						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 						</svg>
@@ -151,12 +151,105 @@
 				<a href="#" class="wds-global-navigation__content-item wds-is-games">Videospiele</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Filme</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
-				<a href="#" class="wds-global-navigation__content-item">Wikis</a>
+				<div class="wds-global-navigation__content-item wds-dropdown">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<div>Wikis</div>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href= "#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list">
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Beliebteste Wikis</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Community Deutschland</a></li>
+						</ul>
+					</div>
+				</div>
 				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
 			</div>
 			<div class="col-sm-3 wds-global-navigation__right-column">
-				<a href="#" class="wds-global-navigation__content-item wds-global-navigation__account-navigation">Mein Benutzerkonto</a>
+				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<svg class="wds-icon wds-global-navigation__user-icon" alt="user icon">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
+						</svg>
+						<span>Mein Benutzerkonto</span>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list wds-has-lines-between">
+						<li><button class="wds-button wds-is-full-width">Anmelden</button></li>
+						<li>
+							<div class="wds-global-navigation__register-button-caption">Du hast kein konto?</div>
+							<button class="wds-button wds-is-secondary wds-is-full-width">Registrieren</button>
+						</li>
+					</ul>
+					</div>
+				</div>
 				<a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Starte ein Wiki</a>
+			</div>
+		</div>
+	</div>
+
+	<h4>PL version</h4>
+	<div class="wds-global-navigation">
+		<div class="wds-global-navigation__content-bar row">
+			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
+				<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
+				</svg>
+				<span class="wds-global-navigation__logo__powered-by">
+					powered by
+				</span>
+				<svg class="wds-global-navigation__logo__wikia" alt="Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				</svg>
+			</a>
+
+			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
+				<a href="#" class="wds-global-navigation__content-item wds-is-games">Gry</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Filmy</a>
+				<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
+				<div class="wds-global-navigation__content-item wds-dropdown">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<div>Wikis</div>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href= "#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list">
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Popularne wiki</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Centrum Społeczności</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="wds-global-navigation__search wds-global-navigation__content-item">Search placeholder</div>
+			</div>
+			<div class="col-sm-3 wds-global-navigation__right-column">
+				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<svg class="wds-icon wds-global-navigation__user-icon" alt="user icon">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
+						</svg>
+						<span>Moje konto</span>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list wds-has-lines-between">
+						<li><button class="wds-button wds-is-full-width">Zaloguj się</button></li>
+						<li>
+							<div class="wds-global-navigation__register-button-caption">Nie masz jeszcze konta?</div>
+							<button class="wds-button wds-is-secondary wds-is-full-width">Zarejestruj się</button>
+						</li>
+					</ul>
+					</div>
+				</div>
+				<a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Utwórz wiki</a>
 			</div>
 		</div>
 	</div>
