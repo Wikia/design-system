@@ -115,18 +115,24 @@ $nav-height: 49px;
 		margin-top: -$border-top-width;
 		padding: 0 5px;
 
-		&__form {
-			align-items: center;
+		&__input-wrapper {
 			border-bottom: 1px solid $color-faint-gray;
 			display: flex;
-			width: 100%;
+			flex: 1;
+		}
+
+		&__label {
+			align-items: center;
+			display: flex;
+			flex: 1;
 		}
 
 		&__input {
 			border: none;
+			color: $color-dark-gray;
 			flex: 1;
 			font-size: $typescale-size-minus-1;
-			padding: 4px;
+			padding: 10px 4px 5px;
 
 			&:focus {
 				outline: none;
@@ -134,6 +140,16 @@ $nav-height: 49px;
 
 			&::placeholder {
 				color: $color-dark-blue-gray;
+			}
+		}
+
+		&__close {
+			display: none;
+			padding: 3px;
+
+			&__icon {
+				color: $color-light-gray;
+				display: block;
 			}
 		}
 
@@ -149,8 +165,9 @@ $nav-height: 49px;
 
 		&.wds-is-active {
 			.wds-global-navigation__search {
-				&__form {
+				&__input-wrapper {
 					border-bottom: 1px solid $color-slate-gray;
+					margin-right: 15px;
 				}
 
 				&__input {
@@ -159,7 +176,7 @@ $nav-height: 49px;
 					}
 				}
 
-				&__submit {
+				&__submit, &__close {
 					display: block;
 				}
 			}
