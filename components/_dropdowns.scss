@@ -4,6 +4,10 @@ $dropdown-content-z-index: 1;
 	display: inline-block;
 	position: relative;
 
+	.wds-dropdown-toggle-chevron {
+		margin-left: 5px;
+	}
+
 	&.wds-is-active {
 		.wds-dropdown-content {
 			display: inline-block;
@@ -25,7 +29,9 @@ $dropdown-content-z-index: 1;
 	background-color: $color-white;
 	box-shadow: 0 0 10px 0 rgba($color-black, .2);
 	display: none;
+	left: 0;
 	position: absolute;
+	top: 100%;
 	z-index: $dropdown-content-z-index;
 
 	&.wds-is-dark {
