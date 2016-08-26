@@ -163,7 +163,7 @@ $notification-counter-size: 18px;
 		}
 
 		&__input {
-			border: none;
+			border: 0;
 			color: $color-dark-gray;
 			flex: 1;
 			font-size: $typescale-size-minus-1;
@@ -210,7 +210,8 @@ $notification-counter-size: 18px;
 					}
 				}
 
-				&__submit, &__close {
+				&__submit,
+				&__close {
 					display: block;
 				}
 			}
