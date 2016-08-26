@@ -169,7 +169,7 @@ $notification-counter-size: 18px;
 		width: 50px;
 	}
 
-	&__notifications-counter-wrapper {
+	&__notifications-counter {
 		align-items: center;
 		background-color: $color-link;
 		border: 1px solid $color-white;
@@ -182,12 +182,9 @@ $notification-counter-size: 18px;
 		justify-content: center;
 		left: 7px;
 		min-width: $notification-counter-size;
+		padding: 0 4px;
 		position: absolute;
 		top: 7px;
-	}
-
-	&__notifications-counter {
-		padding: 0 4px;
 	}
 
 	&__register-button-caption {
