@@ -313,19 +313,7 @@ code.sg:first-child {
 	margin: 0 -8px;
 }
 </style>
-  <style>@import url(../bower_components/flexboxgrid/dist/flexboxgrid.min.css);
-.wds-icon {
-  fill: currentColor;
-  height: 24px;
-  width: 24px; }
-
-.wds-icon-small {
-  height: 18px; }
-
-.wds-icon-tiny {
-  height: 12px; }
-
-.container-fluid,
+  <style>.container-fluid,
 .container {
   margin-right: auto;
   margin-left: auto; }
@@ -1089,6 +1077,17 @@ code.sg:first-child {
     -webkit-order: 1;
     order: 1; } }
 
+.wds-icon {
+  fill: currentColor;
+  height: 24px;
+  width: 24px; }
+
+.wds-icon-small {
+  height: 18px; }
+
+.wds-icon-tiny {
+  height: 12px; }
+
 .wds-button {
   background-color: #1a5eb8;
   border: 1px solid #1a5eb8;
@@ -1505,7 +1504,7 @@ code.sg:first-child {
     width: 1004px; }
     @media only screen and (min-width: 1440px) {
       .wds-global-navigation__content-bar {
-        width: 1440px; } }
+        width: 1420px; } }
   .wds-global-navigation__logo {
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -1518,21 +1517,23 @@ code.sg:first-child {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 600;
+    letter-spacing: .15px;
     margin-top: -6px;
     text-decoration: none;
     text-transform: uppercase; }
     .wds-global-navigation__logo__fandom {
       fill: #39424d;
       height: 24px;
+      padding-bottom: 4px;
       width: 120px; }
     .wds-global-navigation__logo__wikia {
       fill: #092344;
-      height: 15px;
-      width: 42px; }
+      height: 12px;
+      width: 36px; }
     .wds-global-navigation__logo__powered-by {
-      padding: 2px 3px 0; }
+      padding: 2px 3px 0 7px; }
   .wds-global-navigation__middle-column {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5616,6 +5617,46 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
               </div>
             </div>
           </div>
+
+          <h4>DE version</h4>
+          <div class="wds-global-navigation">
+            <div class="wds-global-navigation__content-bar row">
+              <a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
+                <svg class="wds-global-navigation__logo__fandom" alt="Fandom">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom">
+                </svg>
+                <span class="wds-global-navigation__logo__powered-by">
+                  powered by
+                </span>
+                <svg class="wds-global-navigation__logo__wikia" alt="Wikia">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia">
+                </svg>
+              </a>
+
+              <div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
+                <a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-games">Videospiele</a>
+                <a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-movies">Filme</a>
+                <a href="#" class="wds-global-navigation__content-item wds-has-fixed-width wds-is-tv">TV</a>
+                <a href="#" class="wds-global-navigation__content-item wds-has-fixed-width">Wikis</a>
+                <div class="wds-global-navigation__search">
+                  <form class="wds-global-navigation__search__form">
+                    <label for="search">
+                      <svg class="wds-icon wds-icon-small" alt="Search">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass">
+                      </svg>
+                    </label>
+                    <input class="wds-global-navigation__search__input" name="search" placeholder="Search">
+                    <form>
+                    </form>
+                  </form>
+                </div>
+              </div>
+              <div class="col-sm-3 wds-global-navigation__right-column">
+                <a href="#" class="wds-global-navigation__content-item wds-global-navigation__account-navigation">Mein Benutzerkonto</a>
+                <a href="#" class="wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary">Starte ein Wiki</a>
+              </div>
+            </div>
+          </div>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>EN version<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar row&quot;</span>&gt;</span>
@@ -5641,6 +5682,44 @@ if(l)for(var p,h=0;l>h&&(p=s[h]);h++)a(p)?(u.push(this),c++,n()):(p.addEventList
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-3 wds-global-navigation__right-column&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-global-navigation__account-navigation&quot;</span>&gt;</span>My Account<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary&quot;</span>&gt;</span>Start a wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>DE version<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-bar row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__fandom&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-fandom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__powered-by&quot;</span>&gt;</span>
+        powered by
+      <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__logo__wikia&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Wikia&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-wikia&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-has-fixed-width wds-is-games&quot;</span>&gt;</span>Videospiele<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-has-fixed-width wds-is-movies&quot;</span>&gt;</span>Filme<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-has-fixed-width wds-is-tv&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-has-fixed-width&quot;</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__search&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__search__form&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;search&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Search&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-magnifying-glass&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__search__input&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search&quot;</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-3 wds-global-navigation__right-column&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__content-item wds-global-navigation__account-navigation&quot;</span>&gt;</span>Mein Benutzerkonto<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished wds-global-navigation__start-a-wiki wds-is-secondary&quot;</span>&gt;</span>Starte ein Wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
