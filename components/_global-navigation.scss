@@ -10,10 +10,10 @@ $nav-height: 49px;
 	&__content-bar {
 		height: $nav-height;
 		margin: 0 auto;
-		width: 1004px;
+		width: 1024px - $scrollbar-width;
 
 		@media #{$breakpoint-desktop-xl-up} {
-			width: 1420px;
+			width: 1440px - $scrollbar-width;
 		}
 	}
 
