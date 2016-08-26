@@ -47,12 +47,12 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
-						<li>
-							<span class="wds-global-navigation__register-button-caption">Don't have an account?</span>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
-						</li>
-					</ul>
+							<li><button class="wds-button wds-is-full-width">Sign in</button></li>
+							<li>
+								<span class="wds-global-navigation__register-button-caption">Don't have an account?</span>
+								<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
@@ -173,12 +173,12 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Anmelden</button></li>
-						<li>
-							<span class="wds-global-navigation__register-button-caption">Du hast kein konto?</span>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Registrieren</button>
-						</li>
-					</ul>
+							<li><button class="wds-button wds-is-full-width">Anmelden</button></li>
+							<li>
+								<span class="wds-global-navigation__register-button-caption">Du hast kein konto?</span>
+								<button class="wds-button wds-is-secondary wds-is-full-width">Registrieren</button>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
@@ -233,12 +233,12 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Zaloguj się</button></li>
-						<li>
-							<span class="wds-global-navigation__register-button-caption">Nie masz jeszcze konta?</span>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Zarejestruj się</button>
-						</li>
-					</ul>
+							<li><button class="wds-button wds-is-full-width">Zaloguj się</button></li>
+							<li>
+								<span class="wds-global-navigation__register-button-caption">Nie masz jeszcze konta?</span>
+								<button class="wds-button wds-is-secondary wds-is-full-width">Zarejestruj się</button>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
