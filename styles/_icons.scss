@@ -345,6 +345,10 @@
  *     div.icon-preview-group
  *       div.icon-preview-card
  *         svg.wds-icon.wds-icon-tiny
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny")
+ *         div.icon-name dropdown-tiny
+ *       div.icon-preview-card
+ *         svg.wds-icon.wds-icon-tiny
  *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu-control-tiny")
  *         div.icon-name menu-control-tiny
  *       div.icon-preview-card
