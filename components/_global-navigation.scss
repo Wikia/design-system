@@ -126,6 +126,7 @@ $notification-counter-size: 18px;
 
 	&__dropdown {
 		color: $color-dark-blue-gray;
+		top: calc(100% + 1px);
 		width: 190px;
 		z-index: -1;
 	}
