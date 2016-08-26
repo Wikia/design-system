@@ -50,15 +50,15 @@
 					</div>
 					<div class="wds-dropdown-content wds-global-navigation__dropdown">
 						<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-global-navigation__button wds-is-account-navigation">Sign in</button></li>
+						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
 							<div class="wds-global-navigation__register-button-caption">Don't have an account?</div>
-							<button class="wds-button wds-is-secondary wds-global-navigation__button wds-is-account-navigation ">Register</button>
+							<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
 						</li>
 					</ul>
 					</div>
 				</div>
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__button">Start a wiki</a>
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary">Start a wiki</a>
 			</div>
 		</div>
 	</div>
@@ -127,7 +127,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__button">Start a wiki</a>
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary">Start a wiki</a>
 			</div>
 		</div>
 	</div>
