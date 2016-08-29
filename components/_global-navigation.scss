@@ -209,10 +209,6 @@ $notification-counter-size: 18px;
 		top: calc(100% + 1px);
 	}
 
-	&__search-suggestion {
-		@include ellipsis;
-	}
-
 	.wds-search-is-active {
 		.wds-global-navigation__search-input-wrapper {
 			margin-right: 15px;
