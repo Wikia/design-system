@@ -5,7 +5,7 @@
 	<h5>Logged out state</h5>
 	<div class="wds-global-navigation sg-has-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar row">
-			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
+			<a href="#" class="wds-global-navigation__logo col-xs-4 col-md-3">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
@@ -14,7 +14,7 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
+			<div class="col-xs-6 wds-global-navigation__middle-column">
 				<a href="#" class="wds-global-navigation__content-item wds-is-games">Games</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Movies</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
@@ -53,7 +53,7 @@
 					</button>
 				</form>
 			</div>
-			<div class="col-sm-3 wds-global-navigation__right-column">
+			<div class="col-xs-2 col-md-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown wds-is-active">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
@@ -87,7 +87,7 @@
 	<h5>Logged in state</h5>
 	<div class="wds-global-navigation sg-has-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar row">
-			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
+			<a href="#" class="wds-global-navigation__logo col-xs-4 col-md-3 col-lg-3">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
@@ -96,7 +96,7 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
+			<div class="col-xs-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
 				<a href="#" class="wds-global-navigation__content-item wds-is-games">Games</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Movies</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
@@ -135,7 +135,7 @@
 					</button>
 				</form>
 			</div>
-			<div class="col-sm-3 wds-global-navigation__right-column">
+			<div class="col-xs-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-dropdown wds-is-active wds-global-navigation__user-menu">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name"/>
@@ -175,7 +175,7 @@
 	<h4>DE version</h4>
 	<div class="wds-global-navigation">
 		<div class="wds-global-navigation__content-bar row">
-			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
+			<a href="#" class="wds-global-navigation__logo col-xs-4 col-md-3 col-lg-3">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
@@ -184,7 +184,7 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
+			<div class="col-xs-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
 				<a href="#" class="wds-global-navigation__content-item wds-is-games">Videospiele</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-movies">Filme</a>
 				<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
@@ -223,7 +223,7 @@
 					</button>
 				</form>
 			</div>
-			<div class="col-sm-3 wds-global-navigation__right-column">
+			<div class="col-xs-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
@@ -258,7 +258,7 @@
 	<h5>Basic state</h5>
 	<div class="wds-global-navigation">
 		<div class="wds-global-navigation__content-bar row">
-			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
+			<a href="#" class="wds-global-navigation__logo col-xs-4 col-md-3 col-lg-3">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
@@ -267,7 +267,7 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
+			<div class="col-xs-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
 				<div class="wds-global-navigation__content-item wds-dropdown">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<span>Wikis</span>
@@ -303,7 +303,7 @@
 					</button>
 				</form>
 			</div>
-			<div class="col-sm-3 wds-global-navigation__right-column">
+			<div class="col-xs-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
@@ -337,7 +337,7 @@
 	<h5>Focused search input</h5>
 	<div class="wds-global-navigation">
 		<div class="wds-global-navigation__content-bar row">
-			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
+			<a href="#" class="wds-global-navigation__logo col-xs-4 col-md-3 col-lg-3">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
@@ -346,7 +346,7 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column wds-search-is-active">
+			<div class="col-xs-5 col-md-6 col-lg-6 wds-global-navigation__middle-column wds-search-is-active">
 				<div class="wds-global-navigation__content-item wds-dropdown">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<span>Wikis</span>
@@ -382,7 +382,7 @@
 					</button>
 				</form>
 			</div>
-			<div class="col-sm-3 wds-global-navigation__right-column">
+			<div class="col-xs-3 wds-global-navigation__right-column">
 				<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
 					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 						<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
