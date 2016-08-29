@@ -202,7 +202,7 @@
 							<svg class="wds-icon wds-icon-small" alt="Search">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 							</svg>
-							<input class="wds-global-navigation__search__input" name="search" placeholder="Search"/>
+							<input class="wds-global-navigation__search__input" name="search" placeholder="Suche"/>
 						</label>
 						<button class="wds-button wds-is-text wds-global-navigation__search__close">
 							<svg class="wds-icon wds-icon-small wds-global-navigation__search__close__icon" alt="Close">
@@ -279,7 +279,7 @@
 							<svg class="wds-icon wds-icon-small" alt="Search">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 							</svg>
-							<input class="wds-global-navigation__search__input" name="search" placeholder="Search"/>
+							<input class="wds-global-navigation__search__input" name="search" placeholder="Szukaj"/>
 						</label>
 						<button class="wds-button wds-is-text wds-global-navigation__search__close">
 							<svg class="wds-icon wds-icon-small wds-global-navigation__search__close__icon" alt="Close">
@@ -355,7 +355,7 @@
 							<svg class="wds-icon wds-icon-small" alt="Search">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 							</svg>
-							<input class="wds-global-navigation__search__input" name="search" placeholder="Search Wookieepedia..."/>
+							<input class="wds-global-navigation__search__input" name="search" placeholder="Szukaj na Wookieepedia..."/>
 						</label>
 						<button class="wds-button wds-is-text wds-global-navigation__search__close">
 							<svg class="wds-icon wds-icon-small wds-global-navigation__search__close__icon" alt="Close">
