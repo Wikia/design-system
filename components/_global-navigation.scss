@@ -15,7 +15,7 @@ $notification-counter-size: 18px;
 		height: $nav-height;
 		margin: 0 auto;
 		position: relative;
-		width: 1024px - $scrollbar-width;
+		width: 768px;
 		z-index: 1;
 	}
 
@@ -225,6 +225,10 @@ $notification-counter-size: 18px;
 		margin-right: 8px;
 	}
 
+	&__account-navigation-caption {
+		display: none;
+	}
+
 	&__user-menu {
 		flex: 0 1 auto;
 		width: 55px;
@@ -266,17 +270,34 @@ $notification-counter-size: 18px;
 		text-align: center;
 	}
 
-	@media #{$breakpoint-tablet-down} {
-		&__account-navigation-caption {
-			display: none;
+	&__start-a-wiki.wds-is-squished {
+		padding: 8px 10px;
+	}
+
+	&__start-a-wiki-caption {
+		display: none;
+	}
+
+	&__start-a-wiki-icon {
+		display: block;
+		height: 14px;
+		width: 14px;
+	}
+
+	@media #{$breakpoint-desktop-up} {
+		&__content-bar {
+			width: 1024px;
 		}
 
-		&__start-a-wiki::before {
-			content: '┼';
+		&__account-navigation-caption {
 			display: inline;
 		}
 
-		&__start-a-wiki-content {
+		&__start-a-wiki-caption {
+			display: inline;
+		}
+
+		&__start-a-wiki-icon {
 			display: none;
 		}
 	}
