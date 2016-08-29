@@ -301,10 +301,4 @@ $notification-counter-size: 18px;
 			display: none;
 		}
 	}
-
-	@media #{$breakpoint-desktop-xl-up} {
-		&__content-bar {
-			width: 1440px - $scrollbar-width;
-		}
-	}
 }
