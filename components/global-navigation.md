@@ -325,7 +325,10 @@
 					</div>
 				</div>
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
-					<span class="wds-global-navigation__start-a-wiki-content">Utwórz wiki</span>
+					<span class="wds-global-navigation__start-a-wiki-caption">Utwórz wiki</span>
+					<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
+					</svg>
 				</a>
 			</div>
 		</div>
