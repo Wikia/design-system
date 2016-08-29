@@ -146,13 +146,12 @@ $notification-counter-size: 18px;
 		align-items: center;
 		border-top: $border-top-width solid $color-slate-gray;
 		display: flex;
-		flex: 2;
+		flex: 0;
 		margin-top: -$border-top-width;
 		padding-left: 16px;
 	}
 
 	&__search-input-wrapper {
-		border-bottom: 1px solid $color-slate-gray;
 		display: flex;
 		flex: 1;
 	}
@@ -166,6 +165,7 @@ $notification-counter-size: 18px;
 	&__search-input {
 		border: 0;
 		color: $color-dark-gray;
+		display: none;
 		flex: 1;
 		font-size: $typescale-size-minus-1;
 		padding: 3px 4px;
@@ -200,17 +200,26 @@ $notification-counter-size: 18px;
 	}
 
 	.wds-search-is-active {
-		.wds-global-navigation__search-input-wrapper {
-			margin-right: 15px;
-		}
+		.wds-global-navigation__search {
+			flex: 2;
 
-		.wds-global-navigation__search-input::placeholder {
-			color: $color-light-gray;
-		}
+			&-input-wrapper {
+				border-bottom: 1px solid $color-slate-gray;
+				margin-right: 15px;
+			}
 
-		.wds-global-navigation__search-submit,
-		.wds-global-navigation__search-close {
-			display: block;
+			&-input {
+				display: block;
+			}
+
+			&-input::placeholder {
+				color: $color-light-gray;
+			}
+
+			&-submit,
+			&-close {
+				display: block;
+			}
 		}
 
 		.wds-global-navigation__content-item {
@@ -287,10 +296,40 @@ $notification-counter-size: 18px;
 			width: 1024px;
 		}
 
-		&__account-navigation-caption {
-			display: inline;
+		&__search {
+			flex: 2;
+
+			&-input-wrapper {
+				border-bottom: 1px solid $color-slate-gray;
+			}
+
+			&-input {
+				display: block;
+			}
 		}
 
+		.wds-search-is-active {
+			.wds-global-navigation__search {
+				&-input-wrapper {
+					margin-right: 15px;
+				}
+
+				&-input::placeholder {
+					color: $color-light-gray;
+				}
+
+				&-submit,
+				&-close {
+					display: block;
+				}
+			}
+
+			.wds-global-navigation__content-item {
+				display: none;
+			}
+		}
+
+		&__account-navigation-caption,
 		&__start-a-wiki-caption {
 			display: inline;
 		}
