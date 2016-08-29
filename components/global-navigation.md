@@ -46,7 +46,7 @@
 							</svg>
 						</button>
 					</div>
-					<button type="submit" class="wds-button wds-global-navigation__search__submit">
+					<button class="wds-button wds-global-navigation__search__submit">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search__submit__icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
@@ -125,7 +125,7 @@
 							</svg>
 						</button>
 					</div>
-					<button type="submit" class="wds-button wds-global-navigation__search__submit">
+					<button class="wds-button wds-global-navigation__search__submit">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search__submit__icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
@@ -210,7 +210,7 @@
 							</svg>
 						</button>
 					</div>
-					<button type="submit" class="wds-button wds-global-navigation__search__submit">
+					<button class="wds-button wds-global-navigation__search__submit">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search__submit__icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
@@ -287,7 +287,7 @@
 							</svg>
 						</button>
 					</div>
-					<button type="submit" class="wds-button wds-global-navigation__search__submit">
+					<button class="wds-button wds-global-navigation__search__submit">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search__submit__icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
@@ -357,13 +357,13 @@
 							</svg>
 							<input class="wds-global-navigation__search__input" name="search" placeholder="Szukaj na Wookieepedia..."/>
 						</label>
-						<button class="wds-button wds-is-text wds-global-navigation__search__close">
+						<button type="button" class="wds-button wds-is-text wds-global-navigation__search__close">
 							<svg class="wds-icon wds-icon-small wds-global-navigation__search__close__icon" alt="Close">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
 					</div>
-					<button type="submit" class="wds-button wds-global-navigation__search__submit">
+					<button class="wds-button wds-global-navigation__search__submit">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search__submit__icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
