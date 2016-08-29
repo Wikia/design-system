@@ -286,9 +286,9 @@ $notification-counter-size: 18px;
 	}
 
 	&__start-a-wiki-icon {
+		@include square(14px);
+
 		display: block;
-		height: 14px;
-		width: 14px;
 	}
 
 	@media #{$breakpoint-desktop-up} {
