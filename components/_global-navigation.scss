@@ -204,10 +204,8 @@ $notification-counter-size: 18px;
 					margin-right: 15px;
 				}
 
-				&__input {
-					&::placeholder {
-						color: $color-light-gray;
-					}
+				&__input::placeholder {
+					color: $color-light-gray;
 				}
 
 				&__submit,
