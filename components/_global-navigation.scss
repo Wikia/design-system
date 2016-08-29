@@ -205,8 +205,8 @@ $notification-counter-size: 18px;
 	}
 
 	&__search-suggestions {
+		right: 0;
 		top: calc(100% + 1px);
-		width: 100%;
 	}
 
 	&__search-suggestion {
