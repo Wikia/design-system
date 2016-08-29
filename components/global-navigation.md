@@ -75,7 +75,10 @@
 					</div>
 				</div>
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
-					<span class="wds-global-navigation__start-a-wiki-content">Start a wiki</span>
+					<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
+					<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
+					</svg>
 				</a>
 			</div>
 		</div>
@@ -160,7 +163,10 @@
 					</svg>
 				</div>
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
-					<span class="wds-global-navigation__start-a-wiki-content">Start a wiki</span>
+					<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
+					<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
+					</svg>
 				</a>
 			</div>
 		</div>
@@ -239,7 +245,10 @@
 					</div>
 				</div>
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
-					<span class="wds-global-navigation__start-a-wiki-content">Starte ein Wiki</span>
+					<span class="wds-global-navigation__start-a-wiki-caption">Starte ein Wiki</span>
+					<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
+					</svg>
 				</a>
 			</div>
 		</div>
@@ -392,7 +401,10 @@
 					</div>
 				</div>
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
-					<span class="wds-global-navigation__start-a-wiki-content">Utwórz wiki</span>
+					<span class="wds-global-navigation__start-a-wiki-caption">Utwórz wiki</span>
+					<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
+					</svg>
 				</a>
 			</div>
 		</div>
