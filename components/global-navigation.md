@@ -334,14 +334,28 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column">
-				<form class="wds-global-navigation__search wds-is-active">
+			<div class="col-sm-5 col-md-6 col-lg-6 wds-global-navigation__middle-column wds-search-is-active">
+				<div class="wds-global-navigation__content-item wds-dropdown">
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<span>Wikis</span>
+						<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
+					<div class="wds-dropdown-content wds-global-navigation__dropdown">
+						<ul class="wds-list">
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Popularne wiki</a></li>
+							<li><a href="#" class="wds-global-navigation__dropdown-link">Centrum Społeczności</a></li>
+						</ul>
+					</div>
+				</div>
+				<form class="wds-global-navigation__search">
 					<div class="wds-global-navigation__search__input-wrapper">
 						<label class="wds-global-navigation__search__label">
 							<svg class="wds-icon wds-icon-small" alt="Search">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 							</svg>
-							<input class="wds-global-navigation__search__input" name="search" placeholder="Search"/>
+							<input class="wds-global-navigation__search__input" name="search" placeholder="Search Wookieepedia..."/>
 						</label>
 						<button class="wds-button wds-is-text wds-global-navigation__search__close">
 							<svg class="wds-icon wds-icon-small wds-global-navigation__search__close__icon" alt="Close">
