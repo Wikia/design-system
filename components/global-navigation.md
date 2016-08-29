@@ -402,11 +402,11 @@
 	<div class="wds-global-navigation">
 		<div class="wds-global-navigation__content-bar row">
 			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
-				<svg class="wds-global-navigation__logo__fandom" alt="Fandom">
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
-				<span class="wds-global-navigation__logo__powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo__wikia" alt="Wikia">
+				<span class="wds-global-navigation__logo-powered-by">powered by</span>
+				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
@@ -426,31 +426,31 @@
 					</div>
 				</div>
 				<form class="wds-global-navigation__search">
-					<div class="wds-dropdown wds-is-active wds-global-navigation__search__input-wrapper">
-						<label class="wds-dropdown-toggle wds-global-navigation__search__label">
+					<div class="wds-dropdown wds-is-active wds-global-navigation__search-input-wrapper">
+						<label class="wds-dropdown-toggle wds-global-navigation__search-label">
 							<svg class="wds-icon wds-icon-small" alt="Search">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 							</svg>
-							<input class="wds-global-navigation__search__input" name="search" placeholder="Szukaj na Wookieepedia..." value="Star"/>
+							<input class="wds-global-navigation__search-input" name="search" placeholder="Szukaj na Wookieepedia..." value="Star"/>
 						</label>
-						<button class="wds-button wds-is-text wds-global-navigation__search__close" type="button">
-							<svg class="wds-icon wds-icon-small wds-global-navigation__search__close__icon" alt="Close">
+						<button class="wds-button wds-is-text wds-global-navigation__search-close" type="button">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
-						<div class="wds-dropdown-content wds-global-navigation__search__suggestions">
+						<div class="wds-dropdown-content wds-global-navigation__search-suggestions">
 							<ul class="wds-list">
-								<li class="wds-global-navigation__search__suggestion">
+								<li class="wds-global-navigation__search-suggestion">
 									<a href="#" class="wds-global-navigation__dropdown-link">
 										<span><strong>Star</strong>&nbsp;Wars</span>
 									</a>
 								</li>
-								<li class="wds-global-navigation__search__suggestion">
+								<li class="wds-global-navigation__search-suggestion">
 									<a href="#" class="wds-global-navigation__dropdown-link">
 										<span><strong>Star</strong>&nbsp;Wars Battlefield</span>
 									</a>
 								</li>
-								<li class="wds-global-navigation__search__suggestion">
+								<li class="wds-global-navigation__search-suggestion">
 									<a href="#" class="wds-global-navigation__dropdown-link">
 										<span>The New ‘Rogue One: A <strong>Star</strong>&nbsp;Wars Story’ Trailer Is Awesome And This Title Is Long</span>
 									</a>
@@ -458,8 +458,8 @@
 							</ul>
 						</div>
 					</div>
-					<button class="wds-button wds-global-navigation__search__submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search__submit__icon" alt="Search">
+					<button class="wds-button wds-global-navigation__search-submit">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 						</svg>
 					</button>
