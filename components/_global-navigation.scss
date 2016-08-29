@@ -32,23 +32,23 @@ $notification-counter-size: 18px;
 		margin-top: -$border-top-width;
 		text-decoration: none;
 		text-transform: uppercase;
+	}
 
-		&__fandom {
-			fill: $color-dark-blue-gray;
-			height: 24px;
-			padding-bottom: 4px;
-			width: 120px;
-		}
+	&__logo-fandom {
+		fill: $color-dark-blue-gray;
+		height: 24px;
+		padding-bottom: 4px;
+		width: 120px;
+	}
 
-		&__wikia {
-			fill: $color-dark-blue;
-			height: 12px;
-			width: 36px;
-		}
+	&__logo-wikia {
+		fill: $color-dark-blue;
+		height: 12px;
+		width: 36px;
+	}
 
-		&__powered-by {
-			padding: 2px 3px 0 7px;
-		}
+	&__logo-powered-by {
+		padding: 2px 3px 0 7px;
 	}
 
 	&__middle-column {
@@ -149,70 +149,68 @@ $notification-counter-size: 18px;
 		flex: 2;
 		margin-top: -$border-top-width;
 		padding-left: 16px;
+	}
 
-		&__input-wrapper {
-			border-bottom: 1px solid $color-slate-gray;
-			display: flex;
-			flex: 1;
+	&__search-input-wrapper {
+		border-bottom: 1px solid $color-slate-gray;
+		display: flex;
+		flex: 1;
+	}
+
+	&__search-label {
+		align-items: center;
+		display: flex;
+		flex: 1;
+	}
+
+	&__search-input {
+		border: 0;
+		color: $color-dark-gray;
+		flex: 1;
+		font-size: $typescale-size-minus-1;
+		padding: 3px 4px;
+
+		&:focus {
+			outline: none;
 		}
 
-		&__label {
-			align-items: center;
-			display: flex;
-			flex: 1;
-		}
-
-		&__input {
-			border: 0;
-			color: $color-dark-gray;
-			flex: 1;
-			font-size: $typescale-size-minus-1;
-			padding: 3px 4px;
-
-			&:focus {
-				outline: none;
-			}
-
-			&::placeholder {
-				color: $color-dark-blue-gray;
-			}
-		}
-
-		&__close {
-			display: none;
-			padding: 3px;
-
-			&__icon {
-				color: $color-light-gray;
-				display: block;
-			}
-		}
-
-		&__submit {
-			display: none;
-			padding: 6px 9px;
-
-			&__icon {
-				display: block;
-				transform: rotate(180deg);
-			}
+		&::placeholder {
+			color: $color-dark-blue-gray;
 		}
 	}
 
+	&__search-close {
+		display: none;
+		padding: 3px;
+	}
+
+	&__search-close-icon {
+		color: $color-light-gray;
+		display: block;
+	}
+
+	&__search-submit {
+		display: none;
+		padding: 6px 9px;
+	}
+
+	&__search-submit-icon {
+		display: block;
+		transform: rotate(180deg);
+	}
+
 	.wds-search-is-active {
-		.wds-global-navigation__search {
-			&__input-wrapper {
-				margin-right: 15px;
-			}
+		.wds-global-navigation__search-input-wrapper {
+			margin-right: 15px;
+		}
 
-			&__input::placeholder {
-				color: $color-light-gray;
-			}
+		.wds-global-navigation__search-input::placeholder {
+			color: $color-light-gray;
+		}
 
-			&__submit,
-			&__close {
-				display: block;
-			}
+		.wds-global-navigation__search-submit,
+		.wds-global-navigation__search-close {
+			display: block;
 		}
 
 		.wds-global-navigation__content-item {
