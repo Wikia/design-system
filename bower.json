@@ -10,6 +10,6 @@
     "gulpfile.js"
   ],
   "dependencies": {
-    "flexboxgrid": "Wikia/flexboxgrid#v6.4.0"
+    "flexboxgrid": "Wikia/flexboxgrid#v6.5.0"
   }
 }
