@@ -197,23 +197,6 @@ $notification-counter-size: 18px;
 				transform: rotate(180deg);
 			}
 		}
-
-		&.wds-is-active {
-			.wds-global-navigation__search {
-				&__input-wrapper {
-					margin-right: 15px;
-				}
-
-				&__input::placeholder {
-					color: $color-light-gray;
-				}
-
-				&__submit,
-				&__close {
-					display: block;
-				}
-			}
-		}
 	}
 
 	&__account-navigation {
@@ -281,5 +264,28 @@ $notification-counter-size: 18px;
 		&__content-bar {
 			width: 1440px - $scrollbar-width;
 		}
+	}
+}
+
+
+
+.wds-search-is-active {
+	.wds-global-navigation__search {
+		&__input-wrapper {
+			margin-right: 15px;
+		}
+
+		&__input::placeholder {
+			color: $color-light-gray;
+		}
+
+		&__submit,
+		&__close {
+			display: block;
+		}
+	}
+
+	.wds-global-navigation__content-item {
+		display: none;
 	}
 }
