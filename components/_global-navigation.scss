@@ -155,12 +155,17 @@ $notification-counter-size: 18px;
 		border-bottom: 1px solid $color-slate-gray;
 		display: flex;
 		flex: 1;
+
+		&.wds-is-active {
+			border-bottom-color: $color-link;
+		}
 	}
 
 	&__search-label {
 		align-items: center;
 		display: flex;
 		flex: 1;
+		z-index: 1;
 	}
 
 	&__search-input {
@@ -197,6 +202,15 @@ $notification-counter-size: 18px;
 	&__search-submit-icon {
 		display: block;
 		transform: rotate(180deg);
+	}
+
+	&__search-suggestions {
+		top: calc(100% + 1px);
+		width: 100%;
+	}
+
+	&__search-suggestion {
+		@include ellipsis;
 	}
 
 	.wds-search-is-active {
