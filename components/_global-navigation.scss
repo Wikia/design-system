@@ -163,9 +163,10 @@ $notification-counter-size: 18px;
 
 	&__search-label {
 		align-items: center;
+		background-color: $color-white;
 		display: flex;
 		flex: 1;
-		z-index: 1;
+		z-index: 2;
 	}
 
 	&__search-input {
@@ -187,6 +188,7 @@ $notification-counter-size: 18px;
 	&__search-close {
 		display: none;
 		padding: 3px;
+		z-index: 2;
 	}
 
 	&__search-close-icon {
