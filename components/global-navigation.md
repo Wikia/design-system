@@ -442,17 +442,17 @@
 							<ul class="wds-list">
 								<li class="wds-global-navigation__search-suggestion">
 									<a href="#" class="wds-global-navigation__dropdown-link">
-										<span><strong>Star</strong>&nbsp;Wars</span>
+										<strong>Star</strong>&nbsp;Wars
 									</a>
 								</li>
 								<li class="wds-global-navigation__search-suggestion">
 									<a href="#" class="wds-global-navigation__dropdown-link">
-										<span><strong>Star</strong>&nbsp;Wars Battlefield</span>
+										<strong>Star</strong>&nbsp;Wars Battlefield
 									</a>
 								</li>
 								<li class="wds-global-navigation__search-suggestion">
 									<a href="#" class="wds-global-navigation__dropdown-link">
-										<span>The New ‘Rogue One: A <strong>Star</strong>&nbsp;Wars Story’ Trailer Is Awesome And This Title Is Long</span>
+										The New ‘Rogue One: A <strong>Star</strong>&nbsp;Wars Story’ Trailer Is Awesome And This Title Is Long
 									</a>
 								</li>
 							</ul>
