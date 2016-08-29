@@ -399,7 +399,7 @@
 	</div>
 
 	<h5>Search suggestions</h5>
-	<div class="wds-global-navigation">
+	<div class="wds-global-navigation sg-has-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar row">
 			<a href="#" class="wds-global-navigation__logo col-sm-4 col-md-3 col-lg-3">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
@@ -439,18 +439,18 @@
 							</svg>
 						</button>
 						<div class="wds-dropdown-content wds-global-navigation__search-suggestions">
-							<ul class="wds-list">
-								<li class="wds-global-navigation__search-suggestion">
+							<ul class="wds-list wds-has-ellipsis">
+								<li>
 									<a href="#" class="wds-global-navigation__dropdown-link">
 										<strong>Star</strong>&nbsp;Wars
 									</a>
 								</li>
-								<li class="wds-global-navigation__search-suggestion">
+								<li>
 									<a href="#" class="wds-global-navigation__dropdown-link">
 										<strong>Star</strong>&nbsp;Wars Battlefield
 									</a>
 								</li>
-								<li class="wds-global-navigation__search-suggestion">
+								<li>
 									<a href="#" class="wds-global-navigation__dropdown-link">
 										The New ‘Rogue One: A <strong>Star</strong>&nbsp;Wars Story’ Trailer Is Awesome And This Title Is Long
 									</a>
