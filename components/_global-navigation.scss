@@ -295,7 +295,7 @@ $notification-counter-size: 18px;
 		}
 
 		&__content-item-search {
-			flex: 3;
+			flex: 1;
 		}
 
 		&__content-item-search-input {
@@ -308,8 +308,12 @@ $notification-counter-size: 18px;
 	}
 
 	&.wds-search-is-active .wds-global-navigation {
+		&__content-item-link {
+			display: none;
+		}
+
 		&__content-item-search {
-			flex: 2;
+			flex: 1;
 		}
 
 		&__content-item-search-input-wrapper {
@@ -329,10 +333,6 @@ $notification-counter-size: 18px;
 		&__content-item-search-submit,
 		&__content-item-search-close {
 			display: block;
-		}
-
-		&__content-item-link {
-			display: none;
 		}
 	}
 
