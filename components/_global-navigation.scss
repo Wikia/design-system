@@ -208,6 +208,40 @@ $notification-counter-size: 18px;
 		margin-left: 5px;
 	}
 
+	&__content-item-account-menu-dropdown-caption {
+		font-size: $typescale-size-minus-2;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+
+	&__content-item-user-menu {
+		width: 55px;
+	}
+
+	&__content-item-notifications-menu {
+		padding-right: 0;
+		position: relative;
+		width: 50px;
+	}
+
+	&__content-item-notifications-menu-counter {
+		align-items: center;
+		background-color: $color-link;
+		border: 1px solid $color-white;
+		border-radius: $notification-counter-size / 2;
+		box-sizing: border-box;
+		color: $color-white;
+		display: flex;
+		font-size: $typescale-size-minus-3;
+		height: $notification-counter-size;
+		justify-content: center;
+		left: 7px;
+		min-width: $notification-counter-size;
+		padding: 0 4px;
+		position: absolute;
+		top: 7px;
+	}
+
 	&__content-item-start-a-wiki-caption {
 		display: none;
 	}
@@ -242,45 +276,6 @@ $notification-counter-size: 18px;
 			display: none;
 		}
 	}
-
-	//
-
-	&__user-menu {
-		width: 55px;
-	}
-
-	&__notifications {
-		margin-right: 8px;
-		padding-right: 0;
-		position: relative;
-		width: 50px;
-	}
-
-	&__notifications-counter {
-		align-items: center;
-		background-color: $color-link;
-		border: 1px solid $color-white;
-		border-radius: $notification-counter-size / 2;
-		box-sizing: border-box;
-		color: $color-white;
-		display: flex;
-		font-size: $typescale-size-minus-3;
-		height: $notification-counter-size;
-		justify-content: center;
-		left: 7px;
-		min-width: $notification-counter-size;
-		padding: 0 4px;
-		position: absolute;
-		top: 7px;
-	}
-
-	&__register-button-caption {
-		font-size: $typescale-size-minus-2;
-		padding-bottom: 10px;
-		text-align: center;
-	}
-
-	//
 
 	@media #{$breakpoint-desktop-up} {
 		&__content-bar {
