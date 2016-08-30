@@ -45,7 +45,7 @@ gulp.task('build-styles', ['clean-up'], function () {
 });
 
 gulp.task('build-html', ['build-styles'], function () {
-	return gulp.src(['./styles/*.scss', './components/*.md'])
+	return gulp.src('./components/global-navigation.md')
 		.pipe(styledown({
 			config: './config/config.md',
 			filename: outputFile
