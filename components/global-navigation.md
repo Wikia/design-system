@@ -24,7 +24,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-global-navigation__dropdown">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
@@ -104,7 +104,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-global-navigation__dropdown">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
@@ -190,7 +190,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href= "#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-global-navigation__dropdown">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Beliebteste Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Deutschland</a></li>
@@ -389,20 +389,7 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-					<span>Wikis</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
-					</svg>
-				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
-					<ul class="wds-list">
-						<li><a href="#" class="wds-global-navigation__dropdown-link">Popularne wiki</a></li>
-						<li><a href="#" class="wds-global-navigation__dropdown-link">Centrum Społeczności</a></li>
-					</ul>
-				</div>
-			</div>
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link">Centrum Społeczności</a>
 			<form class="wds-global-navigation__content-item wds-global-navigation__content-item-search">
 				<div class="wds-dropdown wds-global-navigation__content-item-search-input-wrapper wds-is-active">
 					<label class="wds-dropdown-toggle wds-global-navigation__content-item-search-label">
