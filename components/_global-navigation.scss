@@ -286,9 +286,12 @@ $notification-counter-size: 18px;
 		}
 
 		&__content-item-search-input-wrapper {
-			border-bottom-color: $color-link;
 			border-bottom-width: 1px;
 			margin-right: 15px;
+
+			&.wds-is-active {
+				border-bottom-color: $color-link;
+			}
 		}
 
 		&__content-item-search-input::placeholder {
