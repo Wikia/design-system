@@ -294,6 +294,10 @@ $notification-counter-size: 18px;
 			flex: 0;
 		}
 
+		&__content-item-search {
+			flex: 3;
+		}
+
 		&__content-item-search-input {
 			display: block;
 		}
