@@ -51,12 +51,12 @@
 					</svg>
 				</button>
 			</form>
-			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-account-menu wds-global-navigation__account-navigation wds-dropdown wds-is-active">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-account-menu wds-dropdown wds-is-active">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
-					<span class="wds-global-navigation__account-navigation-caption">My Account</span>
+					<span class="wds-global-navigation__content-item-account-menu-caption">My Account</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
@@ -72,9 +72,9 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-start-a-wiki">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
-					<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
-					<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+					<span class="wds-global-navigation__content-item-start-a-wiki-caption">Start a wiki</span>
+					<svg class="wds-global-navigation__content-item-start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
 					</svg>
 				</a>
