@@ -12,6 +12,7 @@ $notification-counter-size: 18px;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
 
 	&__content-bar {
+		display: flex;
 		height: $nav-height;
 		margin: 0 auto;
 		position: relative;
@@ -19,7 +20,53 @@ $notification-counter-size: 18px;
 		z-index: 1;
 	}
 
-	&__logo {
+
+
+
+
+	&__content-item-account-menu {
+
+	}
+
+	&__content-item-start-a-wiki {
+
+	}
+
+	&__content-item {
+		align-items: center;
+		background-color: $nav-background-color;
+		border-top: $border-top-width solid $color-slate-gray;
+		color: $color-dark-blue-gray;
+		display: flex;
+		//
+		flex: 1;
+		//
+		font-size: $typescale-size-minus-1;
+		height: $nav-height;
+		justify-content: center;
+		margin-top: -$border-top-width;
+		padding: 0 5px;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+	&__content-item-link,
+	&__content-item-account-menu,
+	&__content-item-user-menu,
+	&__content-item-notifications-menu {
+		&:hover {
+			color: $color-link;
+		}
+
+		&:active,
+		&.wds-is-active {
+			background-color: $color-slate-gray;
+			border-color: darken($color-slate-gray, 20%);
+			color: $color-white;
+		}
+	}
+
+	&__content-item-logo {
 		align-items: center;
 		background-color: $nav-background-color;
 		border-top: $border-top-width solid $color-dark-blue-gray;
@@ -34,59 +81,24 @@ $notification-counter-size: 18px;
 		text-transform: uppercase;
 	}
 
-	&__logo-fandom {
+	&__content-item-logo-fandom {
 		fill: $color-dark-blue-gray;
 		height: 24px;
 		padding-bottom: 4px;
 		width: 120px;
 	}
 
-	&__logo-wikia {
+	&__content-item-logo-powered-by {
+		padding: 2px 3px 0 7px;
+	}
+
+	&__content-item-logo-wikia {
 		fill: $color-dark-blue;
 		height: 12px;
 		width: 36px;
 	}
 
-	&__logo-powered-by {
-		padding: 2px 3px 0 7px;
-	}
-
-	&__middle-column {
-		background-color: $nav-background-color;
-		display: flex;
-	}
-
-	&__right-column {
-		align-items: center;
-		background-color: $nav-background-color;
-		display: flex;
-		justify-content: flex-start;
-	}
-
-	&__content-item {
-		align-items: center;
-		border-top: $border-top-width solid $color-slate-gray;
-		color: $color-dark-blue-gray;
-		display: flex;
-		flex: 1;
-		font-size: $typescale-size-minus-1;
-		height: $nav-height;
-		justify-content: center;
-		margin-top: -$border-top-width;
-		padding: 0 5px;
-		text-decoration: none;
-
-		&:hover {
-			color: $color-link;
-		}
-
-		&:active,
-		&.wds-is-active {
-			background-color: $color-slate-gray;
-			border-color: darken($color-slate-gray, 20%);
-			color: $color-white;
-		}
-
+	&__content-item-link {
 		&.wds-is-games {
 			border-color: $color-games;
 
@@ -118,6 +130,12 @@ $notification-counter-size: 18px;
 		}
 	}
 
+	&__content-item-search {
+
+	}
+
+
+
 	&__dropdown-toggle {
 		align-items: center;
 		display: flex;
@@ -142,7 +160,7 @@ $notification-counter-size: 18px;
 		}
 	}
 
-	&__search {
+	&__content-item-search {
 		align-items: center;
 		border-top: $border-top-width solid $color-slate-gray;
 		display: flex;
@@ -151,18 +169,18 @@ $notification-counter-size: 18px;
 		padding-left: 16px;
 	}
 
-	&__search-input-wrapper {
+	&__content-item-search-input-wrapper {
 		display: flex;
 		flex: 1;
 	}
 
-	&__search-label {
+	&__content-item-search-label {
 		align-items: center;
 		display: flex;
 		flex: 1;
 	}
 
-	&__search-input {
+	&__content-item-search-input {
 		border: 0;
 		color: $color-dark-gray;
 		display: none;
@@ -179,50 +197,50 @@ $notification-counter-size: 18px;
 		}
 	}
 
-	&__search-close {
+	&__content-item-search-close {
 		display: none;
 		padding: 3px;
 	}
 
-	&__search-close-icon {
+	&__content-item-search-close-icon {
 		color: $color-light-gray;
 		display: block;
 	}
 
-	&__search-submit {
+	&__content-item-search-submit {
 		display: none;
 		padding: 6px 9px;
 	}
 
-	&__search-submit-icon {
+	&__content-item-search-submit-icon {
 		display: block;
 		transform: rotate(180deg);
 	}
 
 	.wds-search-is-active {
-		.wds-global-navigation__search {
+		.wds-global-navigation__content-item-search {
 			flex: 2;
-
-			&-input-wrapper {
-				border-bottom: 1px solid $color-slate-gray;
-				margin-right: 15px;
-			}
-
-			&-input {
-				display: block;
-			}
-
-			&-input::placeholder {
-				color: $color-light-gray;
-			}
-
-			&-submit,
-			&-close {
-				display: block;
-			}
 		}
 
-		.wds-global-navigation__content-item {
+		.wds-global-navigation__content-item-search-input-wrapper {
+			border-bottom: 1px solid $color-slate-gray;
+			margin-right: 15px;
+		}
+
+		.wds-global-navigation__content-item-search-input {
+			display: block;
+		}
+
+		.wds-global-navigation__content-item-search-input::placeholder {
+			color: $color-light-gray;
+		}
+
+		.wds-global-navigation__content-item-search-submit,
+		.wds-global-navigation__content-item-search-close {
+			display: block;
+		}
+
+		.wds-global-navigation__content-item-link {
 			display: none;
 		}
 	}
@@ -296,35 +314,33 @@ $notification-counter-size: 18px;
 			width: 1024px;
 		}
 
-		&__search {
+		&__content-item-search {
 			flex: 2;
+		}
 
-			&-input-wrapper {
-				border-bottom: 1px solid $color-slate-gray;
-			}
+		&__content-item-search-input-wrapper {
+			border-bottom: 1px solid $color-slate-gray;
+		}
 
-			&-input {
-				display: block;
-			}
+		&__content-item-search-input {
+			display: block;
 		}
 
 		.wds-search-is-active {
-			.wds-global-navigation__search {
-				&-input-wrapper {
-					margin-right: 15px;
-				}
-
-				&-input::placeholder {
-					color: $color-light-gray;
-				}
-
-				&-submit,
-				&-close {
-					display: block;
-				}
+			.wds-global-navigation__content-item-search-input-wrapper {
+				margin-right: 15px;
 			}
 
-			.wds-global-navigation__content-item {
+			.wds-global-navigation__content-item-search-input::placeholder {
+				color: $color-light-gray;
+			}
+
+			.wds-global-navigation__content-item-search-submit,
+			.wds-global-navigation__content-item-search-close {
+				display: block;
+			}
+
+			.wds-global-navigation__content-item-link {
 				display: none;
 			}
 		}
