@@ -250,57 +250,44 @@
 
 	<h4>PL version</h4>
 	<h5>Basic state</h5>
-	<div class="wds-global-navigation">
+	<div class="wds-global-navigation sg-has-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
-			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-logo">
+				<svg class="wds-global-navigation__content-item-logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
+				<span class="wds-global-navigation__content-item-logo-powered-by">powered by</span>
+				<svg class="wds-global-navigation__content-item-logo-wikia" alt="Wikia">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<div class="wds-global-navigation__content-item wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-					<span>Wikis</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
-					</svg>
-				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
-					<ul class="wds-list">
-						<li><a href="#" class="wds-global-navigation__dropdown-link">Popularne wiki</a></li>
-						<li><a href="#" class="wds-global-navigation__dropdown-link">Centrum Społeczności</a></li>
-					</ul>
-				</div>
-			</div>
-			<form class="wds-global-navigation__search">
-				<div class="wds-global-navigation__search-input-wrapper">
-					<label class="wds-global-navigation__search-label">
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link">Centrum Społeczności</a>
+			<form class="wds-global-navigation__content-item wds-global-navigation__content-item-search wds-global-navigation__content-item-search">
+				<div class="wds-global-navigation__content-item-search-input-wrapper">
+					<label class="wds-global-navigation__content-item-search-label">
 						<svg class="wds-icon wds-icon-small" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
-						<input class="wds-global-navigation__search-input" name="search" placeholder="Szukaj"/>
+						<input class="wds-global-navigation__content-item-search-input" name="search" placeholder="Szukaj"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
+					<button class="wds-button wds-is-text wds-global-navigation__content-item-search-close">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__content-item-search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
-					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+				<button class="wds-button wds-global-navigation__content-item-search-submit">
+					<svg class="wds-icon wds-icon-small wds-global-navigation__content-item-search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
 				</button>
 			</form>
-			<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-account-menu wds-dropdown">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-					<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
+					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
-					<span class="wds-global-navigation__account-navigation-caption">Moje konto</span>
+					<span class="wds-global-navigation__content-item-account-menu-caption">Moje konto</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
@@ -309,18 +296,20 @@
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Zaloguj się</button></li>
 						<li>
-							<span class="wds-global-navigation__register-button-caption">Nie masz jeszcze konta?</span>
+							<div class="wds-global-navigation__register-button-caption">Nie masz jeszcze konta?</div>
 							<button class="wds-button wds-is-secondary wds-is-full-width">Zarejestruj się</button>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
-				<span class="wds-global-navigation__start-a-wiki-caption">Utwórz wiki</span>
-				<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
-				</svg>
-			</a>
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-start-a-wiki">
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+					<span class="wds-global-navigation__content-item-start-a-wiki-caption">Utwórz a wiki</span>
+					<svg class="wds-global-navigation__content-item-start-a-wiki-icon wds-icon" alt="Start a wiki">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
+					</svg>
+				</a>
+			</div>
 		</div>
 	</div>
 
