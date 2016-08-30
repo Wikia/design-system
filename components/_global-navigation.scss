@@ -11,6 +11,30 @@ $notification-counter-size: 18px;
 	border-width: $border-top-width 0 0;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
 
+	@media only screen and (max-width: 1023px) {
+		&__content-bar {
+			width: 748px;
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+		&__content-bar {
+			width: 1004px;
+		}
+	}
+
+	@media only screen and (min-width: 1084px) {
+		&__content-bar {
+			width: 1064px;
+		}
+	}
+
+	@media only screen and (min-width: 1596px) {
+		&__content-bar {
+			width: 1238px;
+		}
+	}
+
 	&__dropdown-toggle {
 		align-items: center;
 		display: flex;
@@ -40,7 +64,6 @@ $notification-counter-size: 18px;
 		height: $nav-height;
 		margin: 0 auto;
 		position: relative;
-		width: 768px;
 		z-index: 1;
 	}
 
@@ -320,10 +343,6 @@ $notification-counter-size: 18px;
 	}
 
 	@media #{$breakpoint-desktop-up} {
-		&__content-bar {
-			width: 1024px;
-		}
-
 		&__content-item-search {
 			flex: 2;
 			padding-left: 8px;
