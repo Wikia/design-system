@@ -250,7 +250,7 @@
 
 	<h4>PL version</h4>
 	<h5>Basic state</h5>
-	<div class="wds-global-navigation sg-has-space-for-dropdowns">
+	<div class="wds-global-navigation wds-search-is-always-visible">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-logo">
 				<svg class="wds-global-navigation__content-item-logo-fandom" alt="Fandom">
@@ -314,7 +314,7 @@
 	</div>
 
 	<h5>Focused search input</h5>
-	<div class="wds-global-navigation wds-search-is-active">
+	<div class="wds-global-navigation wds-search-is-always-visible wds-search-is-active">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-logo">
 				<svg class="wds-global-navigation__content-item-logo-fandom" alt="Fandom">
