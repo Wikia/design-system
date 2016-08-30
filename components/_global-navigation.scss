@@ -151,6 +151,7 @@ $notification-counter-size: 18px;
 	}
 
 	&__content-item-search-input-wrapper {
+		border: 0 solid $color-slate-gray;
 		display: flex;
 		flex: 1;
 	}
@@ -252,13 +253,27 @@ $notification-counter-size: 18px;
 		display: none;
 	}
 
+	&.wds-search-is-always-visible .wds-global-navigation {
+		&__content-item-link {
+			flex: 0;
+		}
+
+		&__content-item-search-input {
+			display: block;
+		}
+
+		&__content-item-search-input-wrapper {
+			border-bottom-width: 1px;
+		}
+	}
+
 	&.wds-search-is-active .wds-global-navigation {
 		&__content-item-search {
 			flex: 2;
 		}
 
 		&__content-item-search-input-wrapper {
-			border-bottom: 1px solid $color-slate-gray;
+			border-bottom-width: 1px;
 			margin-right: 15px;
 		}
 
