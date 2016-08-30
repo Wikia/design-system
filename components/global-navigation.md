@@ -65,7 +65,7 @@
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
-							<div class="wds-global-navigation__register-button-caption">Don't have an account?</div>
+							<div class="wds-global-navigation__content-item-account-menu-dropdown-caption">Don't have an account?</div>
 							<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
 						</li>
 					</ul>
@@ -131,7 +131,7 @@
 					</svg>
 				</button>
 			</form>
-			<div class="wds-global-navigation__content-item wds-dropdown wds-is-active wds-global-navigation__user-menu">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-user-menu wds-dropdown wds-is-active">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 					<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name"/>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
@@ -148,8 +148,8 @@
 					</ul>
 				</div>
 			</div>
-			<div class="wds-global-navigation__content-item wds-global-navigation__notifications">
-				<div class="wds-global-navigation__notifications-counter">3</div>
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-notifications-menu">
+				<div class="wds-global-navigation__content-item-notifications-menu-counter">3</div>
 				<svg class="wds-icon wds-icon-small" alt="notifications">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
 				</svg>
@@ -231,7 +231,7 @@
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Anmelden</button></li>
 						<li>
-							<div class="wds-global-navigation__register-button-caption">Du hast kein konto?</div>
+							<div class="wds-global-navigation__content-item-account-menu-dropdown-caption">Du hast kein konto?</div>
 							<button class="wds-button wds-is-secondary wds-is-full-width">Registrieren</button>
 						</li>
 					</ul>
@@ -296,7 +296,7 @@
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Zaloguj się</button></li>
 						<li>
-							<div class="wds-global-navigation__register-button-caption">Nie masz jeszcze konta?</div>
+							<div class="wds-global-navigation__content-item-account-menu-dropdown-caption">Nie masz jeszcze konta?</div>
 							<button class="wds-button wds-is-secondary wds-is-full-width">Zarejestruj się</button>
 						</li>
 					</ul>
@@ -360,7 +360,7 @@
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
-							<div class="wds-global-navigation__register-button-caption">Don't have an account?</div>
+							<div class="wds-global-navigation__content-item-account-menu-dropdown-caption">Don't have an account?</div>
 							<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
 						</li>
 					</ul>
