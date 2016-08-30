@@ -217,7 +217,7 @@
 					</svg>
 				</button>
 			</form>
-			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-account-menu wds-dropdown wds-is-active">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-account-menu wds-dropdown">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
