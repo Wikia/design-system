@@ -4,7 +4,7 @@
 	<h4>EN version</h4>
 	<h5>Logged out state</h5>
 	<div class="wds-global-navigation sg-has-space-for-dropdowns">
-		<div class="wds-global-navigation__content-bar row">
+		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
@@ -82,7 +82,7 @@
 
 	<h5>Logged in state</h5>
 	<div class="wds-global-navigation sg-has-space-for-dropdowns">
-		<div class="wds-global-navigation__content-bar row">
+		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
@@ -155,7 +155,7 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 				</svg>
 			</div>
-			<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
+			<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki wds-is-user-logged-in">
 				<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
 				<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -166,7 +166,7 @@
 
 	<h4>DE version</h4>
 	<div class="wds-global-navigation">
-		<div class="wds-global-navigation__content-bar row">
+		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
@@ -245,7 +245,7 @@
 	<h4>PL version</h4>
 	<h5>Basic state</h5>
 	<div class="wds-global-navigation">
-		<div class="wds-global-navigation__content-bar row">
+		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
@@ -320,7 +320,7 @@
 
 	<h5>Focused search input</h5>
 	<div class="wds-global-navigation">
-		<div class="wds-global-navigation__content-bar row">
+		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
