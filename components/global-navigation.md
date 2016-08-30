@@ -31,7 +31,7 @@
 					</ul>
 				</div>
 			</div>
-			<form class="wds-global-navigation__content-item wds-global-navigation__content-item-search wds-global-navigation__content-item-search">
+			<form class="wds-global-navigation__content-item wds-global-navigation__content-item-search">
 				<div class="wds-global-navigation__content-item-search-input-wrapper">
 					<label class="wds-global-navigation__content-item-search-label">
 						<svg class="wds-icon wds-icon-small" alt="Search">
@@ -85,19 +85,19 @@
 	<h5>Logged in state</h5>
 	<div class="wds-global-navigation sg-has-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
-			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-logo">
+				<svg class="wds-global-navigation__content-item-logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
+				<span class="wds-global-navigation__content-item-logo-powered-by">powered by</span>
+				<svg class="wds-global-navigation__content-item-logo-wikia" alt="Wikia">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<a href="#" class="wds-global-navigation__content-item wds-is-games">Games</a>
-			<a href="#" class="wds-global-navigation__content-item wds-is-movies">Movies</a>
-			<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
-			<div class="wds-global-navigation__content-item wds-dropdown wds-is-active">
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-games">Games</a>
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-movies">Movies</a>
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-tv">TV</a>
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-dropdown wds-is-active">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
@@ -111,22 +111,22 @@
 					</ul>
 				</div>
 			</div>
-			<form class="wds-global-navigation__search">
-				<div class="wds-global-navigation__search-input-wrapper">
-					<label class="wds-global-navigation__search-label">
+			<form class="wds-global-navigation__content-item wds-global-navigation__content-item-search">
+				<div class="wds-global-navigation__content-item-search-input-wrapper">
+					<label class="wds-global-navigation__content-item-search-label">
 						<svg class="wds-icon wds-icon-small" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
-						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
+						<input class="wds-global-navigation__content-item-search-input" name="search" placeholder="Search"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
+					<button class="wds-button wds-is-text wds-global-navigation__content-item-search-close">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__content-item-search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
-					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+				<button class="wds-button wds-global-navigation__content-item-search-submit">
+					<svg class="wds-icon wds-icon-small wds-global-navigation__content-item-search-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
 				</button>
@@ -157,31 +157,33 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 				</svg>
 			</div>
-			<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki wds-is-user-logged-in">
-				<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
-				<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
-				</svg>
-			</a>
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-start-a-wiki">
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+					<span class="wds-global-navigation__content-item-start-a-wiki-caption">Start a wiki</span>
+					<svg class="wds-global-navigation__content-item-start-a-wiki-icon wds-icon" alt="Start a wiki">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
+					</svg>
+				</a>
+			</div>
 		</div>
 	</div>
 
 	<h4>DE version</h4>
 	<div class="wds-global-navigation">
 		<div class="wds-global-navigation__content-bar">
-			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-logo">
+				<svg class="wds-global-navigation__content-item-logo-fandom" alt="Fandom">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
 				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
+				<span class="wds-global-navigation__content-item-logo-powered-by">powered by</span>
+				<svg class="wds-global-navigation__content-item-logo-wikia" alt="Wikia">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
 				</svg>
 			</a>
-			<a href="#" class="wds-global-navigation__content-item wds-is-games">Videospiele</a>
-			<a href="#" class="wds-global-navigation__content-item wds-is-movies">Filme</a>
-			<a href="#" class="wds-global-navigation__content-item wds-is-tv">TV</a>
-			<div class="wds-global-navigation__content-item wds-dropdown">
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-games">Videospiele</a>
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-movies">Filme</a>
+			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-tv">TV</a>
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-dropdown">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
@@ -195,32 +197,32 @@
 					</ul>
 				</div>
 			</div>
-			<form class="wds-global-navigation__search">
-				<div class="wds-global-navigation__search-input-wrapper">
-					<label class="wds-global-navigation__search-label">
+			<form class="wds-global-navigation__content-item wds-global-navigation__content-item-search">
+				<div class="wds-global-navigation__content-item-search-input-wrapper">
+					<label class="wds-global-navigation__content-item-search-label">
 						<svg class="wds-icon wds-icon-small" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
-						<input class="wds-global-navigation__search-input" name="search" placeholder="Suche"/>
+						<input class="wds-global-navigation__content-item-search-input" name="search" placeholder="Suche"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
+					<button class="wds-button wds-is-text wds-global-navigation__content-item-search-close">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__content-item-search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
-					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+				<button class="wds-button wds-global-navigation__content-item-search-submit">
+					<svg class="wds-icon wds-icon-small wds-global-navigation__content-item-search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
 				</button>
 			</form>
-			<div class="wds-global-navigation__content-item wds-global-navigation__account-navigation wds-dropdown">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-account-menu wds-dropdown wds-is-active">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
-					<svg class="wds-icon wds-icon-small wds-icon wds-global-navigation__user-icon" alt="user icon">
+					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
-					<span class="wds-global-navigation__account-navigation-caption">Mein Benutzerkonto</span>
+					<span class="wds-global-navigation__content-item-account-menu-caption">Mein Benutzerkonto</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
@@ -229,18 +231,20 @@
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Anmelden</button></li>
 						<li>
-							<span class="wds-global-navigation__register-button-caption">Du hast kein konto?</span>
+							<div class="wds-global-navigation__register-button-caption">Du hast kein konto?</div>
 							<button class="wds-button wds-is-secondary wds-is-full-width">Registrieren</button>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
-				<span class="wds-global-navigation__start-a-wiki-caption">Starte ein Wiki</span>
-				<svg class="wds-icon wds-global-navigation__start-a-wiki-icon" alt="Start a wiki">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
-				</svg>
-			</a>
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-start-a-wiki">
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+					<span class="wds-global-navigation__content-item-start-a-wiki-caption">Starte ein Wiki</span>
+					<svg class="wds-global-navigation__content-item-start-a-wiki-icon wds-icon" alt="Start a wiki">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
+					</svg>
+				</a>
+			</div>
 		</div>
 	</div>
 
