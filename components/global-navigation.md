@@ -24,7 +24,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
@@ -61,7 +61,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
@@ -104,7 +104,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
@@ -138,7 +138,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">View Profile</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Talk</a></li>
@@ -190,7 +190,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href= "#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Beliebteste Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Deutschland</a></li>
@@ -227,7 +227,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Anmelden</button></li>
 						<li>
@@ -292,7 +292,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Zaloguj się</button></li>
 						<li>
@@ -356,7 +356,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
@@ -396,7 +396,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Popularne wiki</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Centrum Społeczności</a></li>
@@ -452,7 +452,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
