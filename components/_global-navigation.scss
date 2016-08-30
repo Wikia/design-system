@@ -176,6 +176,7 @@ $notification-counter-size: 18px;
 
 		&::placeholder {
 			color: $color-dark-blue-gray;
+			opacity: 1;
 		}
 
 		&::-ms-clear {
