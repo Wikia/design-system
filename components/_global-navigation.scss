@@ -11,6 +11,30 @@ $notification-counter-size: 18px;
 	border-width: $border-top-width 0 0;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
 
+	&__dropdown-toggle {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__dropdown {
+		color: $color-dark-blue-gray;
+		top: calc(100% + 1px);
+		width: 190px;
+		z-index: -1;
+	}
+
+	&__dropdown-link {
+		color: $color-dark-blue-gray;
+		text-decoration: none;
+
+		&:hover,
+		&:active,
+		&.wds-is-active {
+			color: $color-link;
+		}
+	}
+
 	&__content-bar {
 		display: flex;
 		height: $nav-height;
@@ -18,18 +42,6 @@ $notification-counter-size: 18px;
 		position: relative;
 		width: 768px;
 		z-index: 1;
-	}
-
-
-
-
-
-	&__content-item-account-menu {
-
-	}
-
-	&__content-item-start-a-wiki {
-
 	}
 
 	&__content-item {
@@ -131,36 +143,6 @@ $notification-counter-size: 18px;
 	}
 
 	&__content-item-search {
-
-	}
-
-
-
-	&__dropdown-toggle {
-		align-items: center;
-		display: flex;
-		justify-content: center;
-	}
-
-	&__dropdown {
-		color: $color-dark-blue-gray;
-		top: calc(100% + 1px);
-		width: 190px;
-		z-index: -1;
-	}
-
-	&__dropdown-link {
-		color: $color-dark-blue-gray;
-		text-decoration: none;
-
-		&:hover,
-		&:active,
-		&.wds-is-active {
-			color: $color-link;
-		}
-	}
-
-	&__content-item-search {
 		align-items: center;
 		border-top: $border-top-width solid $color-slate-gray;
 		display: flex;
@@ -217,42 +199,63 @@ $notification-counter-size: 18px;
 		transform: rotate(180deg);
 	}
 
-	.wds-search-is-active {
-		.wds-global-navigation__content-item-search {
-			flex: 2;
-		}
-
-		.wds-global-navigation__content-item-search-input-wrapper {
-			border-bottom: 1px solid $color-slate-gray;
-			margin-right: 15px;
-		}
-
-		.wds-global-navigation__content-item-search-input {
-			display: block;
-		}
-
-		.wds-global-navigation__content-item-search-input::placeholder {
-			color: $color-light-gray;
-		}
-
-		.wds-global-navigation__content-item-search-submit,
-		.wds-global-navigation__content-item-search-close {
-			display: block;
-		}
-
-		.wds-global-navigation__content-item-link {
-			display: none;
-		}
-	}
-
-	&__account-navigation {
+	&__content-item-account-menu {
 		flex: 0 1 auto;
 		margin-right: 8px;
 	}
 
-	&__account-navigation-caption {
+	&__content-item-account-menu-caption {
 		display: none;
 	}
+
+	&__content-item-start-a-wiki {
+
+	}
+
+	&__content-item-start-a-wiki-caption {
+		display: none;
+	}
+
+	&__content-item-start-a-wiki-icon {
+		@include square(14px);
+
+		display: block;
+	}
+
+	&__content-item-start-a-wiki.wds-is-squished {
+		padding: 8px 10px;
+	}
+
+
+	.wds-search-is-active.wds-global-navigation {
+		&__content-item-search {
+			flex: 2;
+		}
+
+		&__content-item-search-input-wrapper {
+			border-bottom: 1px solid $color-slate-gray;
+			margin-right: 15px;
+		}
+
+		&__content-item-search-input {
+			display: block;
+		}
+
+		&__content-item-search-input::placeholder {
+			color: $color-light-gray;
+		}
+
+		&__content-item-search-submit,
+		&__content-item-search-close {
+			display: block;
+		}
+
+		&__content-item-link {
+			display: none;
+		}
+	}
+
+
 
 	&__user-menu {
 		flex: 0 1 auto;
@@ -295,19 +298,6 @@ $notification-counter-size: 18px;
 		text-align: center;
 	}
 
-	&__start-a-wiki.wds-is-squished {
-		padding: 8px 10px;
-	}
-
-	&__start-a-wiki-caption {
-		display: none;
-	}
-
-	&__start-a-wiki-icon {
-		@include square(14px);
-
-		display: block;
-	}
 
 	@media #{$breakpoint-desktop-up} {
 		&__content-bar {
@@ -326,32 +316,32 @@ $notification-counter-size: 18px;
 			display: block;
 		}
 
-		.wds-search-is-active {
-			.wds-global-navigation__content-item-search-input-wrapper {
-				margin-right: 15px;
-			}
-
-			.wds-global-navigation__content-item-search-input::placeholder {
-				color: $color-light-gray;
-			}
-
-			.wds-global-navigation__content-item-search-submit,
-			.wds-global-navigation__content-item-search-close {
-				display: block;
-			}
-
-			.wds-global-navigation__content-item-link {
-				display: none;
-			}
-		}
-
-		&__account-navigation-caption,
-		&__start-a-wiki-caption {
+		&__content-item-account-menu-caption,
+		&__content-item-start-a-wiki-caption {
 			display: inline;
 		}
 
-		&__start-a-wiki-icon {
+		&__content-item-start-a-wiki-icon {
 			display: none;
+		}
+
+		.wds-search-is-active.wds-global-navigation {
+			&__content-item-search-input-wrapper {
+				margin-right: 15px;
+			}
+
+			&__content-item-search-input::placeholder {
+				color: $color-light-gray;
+			}
+
+			&__content-item-search-submit,
+			&__content-item-search-close {
+				display: block;
+			}
+
+			&__content-item-link {
+				display: none;
+			}
 		}
 	}
 }
