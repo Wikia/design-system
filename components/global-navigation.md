@@ -72,7 +72,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-start-a-wiki">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+				<a href="#" class="wds-button wds-is-squished wds-is-secondary" >
 					<span class="wds-global-navigation__content-item-start-a-wiki-caption">Start a wiki</span>
 					<svg class="wds-global-navigation__content-item-start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -157,7 +157,7 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 				</svg>
 			</div>
-			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-start-a-wiki">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-start-a-wiki wds-user-is-logged-in">
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
 					<span class="wds-global-navigation__content-item-start-a-wiki-caption">Start a wiki</span>
 					<svg class="wds-global-navigation__content-item-start-a-wiki-icon wds-icon" alt="Start a wiki">
