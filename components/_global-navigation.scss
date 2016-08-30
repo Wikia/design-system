@@ -252,7 +252,7 @@ $notification-counter-size: 18px;
 		display: none;
 	}
 
-	.wds-search-is-active.wds-global-navigation {
+	&.wds-search-is-active .wds-global-navigation {
 		&__content-item-search {
 			flex: 2;
 		}
