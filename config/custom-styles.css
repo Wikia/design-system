@@ -75,6 +75,14 @@
 }
 
 /* Separate navigation to avoid hiding content by other dropdowns */
-.wds-global-navigation.sg-has-space-for-dropdowns {
+.wds-global-navigation.sg-has-large-space-for-dropdowns {
 	margin-bottom: 200px;
+}
+
+.wds-global-navigation.sg-has-medium-space-for-dropdowns {
+	margin-bottom: 150px;
+}
+
+.wds-global-navigation.sg-has-small-space-for-dropdowns {
+	margin-bottom: 100px;
 }

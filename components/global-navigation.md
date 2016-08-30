@@ -3,7 +3,7 @@
 	@example
 	<h4>EN version</h4>
 	<h5>Logged out state</h5>
-	<div class="wds-global-navigation sg-has-space-for-dropdowns">
+	<div class="wds-global-navigation sg-has-large-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-logo">
 				<svg class="wds-global-navigation__content-item-logo-fandom" alt="Fandom">
@@ -17,7 +17,7 @@
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-games">Games</a>
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-tv">TV</a>
-			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-dropdown wds-is-active">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-dropdown">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
@@ -83,7 +83,7 @@
 	</div>
 
 	<h5>Logged in state</h5>
-	<div class="wds-global-navigation sg-has-space-for-dropdowns">
+	<div class="wds-global-navigation sg-has-large-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-logo">
 				<svg class="wds-global-navigation__content-item-logo-fandom" alt="Fandom">
@@ -97,7 +97,7 @@
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-games">Games</a>
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-tv">TV</a>
-			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-dropdown wds-is-active">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-dropdown">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
@@ -169,7 +169,7 @@
 	</div>
 
 	<h4>DE version</h4>
-	<div class="wds-global-navigation">
+	<div class="wds-global-navigation sg-has-small-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-logo">
 				<svg class="wds-global-navigation__content-item-logo-fandom" alt="Fandom">
@@ -183,7 +183,7 @@
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-games">Videospiele</a>
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-movies">Filme</a>
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-is-tv">TV</a>
-			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-dropdown">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-link wds-dropdown wds-is-active">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
@@ -378,7 +378,7 @@
 	</div>
 
 	<h5>Search suggestions</h5>
-	<div class="wds-global-navigation wds-search-is-active sg-has-space-for-dropdowns">
+	<div class="wds-global-navigation wds-search-is-active sg-has-medium-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__content-item wds-global-navigation__content-item-logo">
 				<svg class="wds-global-navigation__content-item-logo-fandom" alt="Fandom">
@@ -429,7 +429,7 @@
 					</svg>
 				</button>
 			</form>
-			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-account-menu wds-dropdown wds-is-active">
+			<div class="wds-global-navigation__content-item wds-global-navigation__content-item-account-menu wds-dropdown">
 				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
