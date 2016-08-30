@@ -50,9 +50,6 @@ $notification-counter-size: 18px;
 		border-top: $border-top-width solid $color-slate-gray;
 		color: $color-dark-blue-gray;
 		display: flex;
-		//
-		flex: 1;
-		//
 		font-size: $typescale-size-minus-1;
 		height: $nav-height;
 		justify-content: center;
@@ -111,6 +108,8 @@ $notification-counter-size: 18px;
 	}
 
 	&__content-item-link {
+		flex: 1;
+
 		&.wds-is-games {
 			border-color: $color-games;
 
@@ -146,9 +145,9 @@ $notification-counter-size: 18px;
 		align-items: center;
 		border-top: $border-top-width solid $color-slate-gray;
 		display: flex;
-		flex: 0;
 		margin-top: -$border-top-width;
 		padding-left: 16px;
+		min-width: 30px;
 	}
 
 	&__content-item-search-input-wrapper {
@@ -169,6 +168,7 @@ $notification-counter-size: 18px;
 		flex: 1;
 		font-size: $typescale-size-minus-1;
 		padding: 3px 4px;
+		width: 100%;
 
 		&:focus {
 			outline: none;
@@ -200,16 +200,12 @@ $notification-counter-size: 18px;
 	}
 
 	&__content-item-account-menu {
-		flex: 0 1 auto;
-		margin-right: 8px;
+		min-width: 50px;
 	}
 
 	&__content-item-account-menu-caption {
 		display: none;
-	}
-
-	&__content-item-start-a-wiki {
-
+		margin-left: 5px;
 	}
 
 	&__content-item-start-a-wiki-caption {
@@ -222,11 +218,6 @@ $notification-counter-size: 18px;
 		display: block;
 	}
 
-	&__content-item-start-a-wiki.wds-is-squished {
-		padding: 8px 10px;
-	}
-
-
 	.wds-search-is-active.wds-global-navigation {
 		&__content-item-search {
 			flex: 2;
@@ -237,14 +228,11 @@ $notification-counter-size: 18px;
 			margin-right: 15px;
 		}
 
-		&__content-item-search-input {
-			display: block;
-		}
-
 		&__content-item-search-input::placeholder {
 			color: $color-light-gray;
 		}
 
+		&__content-item-search-input,
 		&__content-item-search-submit,
 		&__content-item-search-close {
 			display: block;
@@ -255,19 +243,13 @@ $notification-counter-size: 18px;
 		}
 	}
 
-
+	//
 
 	&__user-menu {
-		flex: 0 1 auto;
 		width: 55px;
 	}
 
-	&__user-icon {
-		margin-right: 5px;
-	}
-
 	&__notifications {
-		flex: 0 1 auto;
 		margin-right: 8px;
 		padding-right: 0;
 		position: relative;
@@ -298,6 +280,7 @@ $notification-counter-size: 18px;
 		text-align: center;
 	}
 
+	//
 
 	@media #{$breakpoint-desktop-up} {
 		&__content-bar {
@@ -306,6 +289,7 @@ $notification-counter-size: 18px;
 
 		&__content-item-search {
 			flex: 2;
+			padding-left: 8px;
 		}
 
 		&__content-item-search-input-wrapper {
