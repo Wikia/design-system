@@ -404,7 +404,7 @@
 				</div>
 			</div>
 			<form class="wds-global-navigation__content-item wds-global-navigation__content-item-search">
-				<div class="wds-dropdown wds-is-active wds-global-navigation__content-item-search-input-wrapper">
+				<div class="wds-dropdown wds-global-navigation__content-item-search-input-wrapper wds-is-active">
 					<label class="wds-dropdown-toggle wds-global-navigation__content-item-search-label">
 						<svg class="wds-icon wds-icon-small" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
