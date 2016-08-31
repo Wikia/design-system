@@ -165,6 +165,8 @@ $notification-counter-size: 18px;
 		display: none;
 		flex: 1;
 		font-size: $typescale-size-minus-1;
+		// Firefox doesn't size input properly if our input
+		// has `width` set in `%` and is inside `flexbox`.
 		min-width: 0;
 		padding: 3px 4px;
 		width: 100%;
@@ -260,6 +262,8 @@ $notification-counter-size: 18px;
 
 	&.wds-search-is-always-visible .wds-global-navigation {
 		&__link {
+			// Safari doesn't set default flex values if we use `flex: 0;`
+			// it requires us to put these values explicitly.
 			flex: 0 1 auto;
 		}
 
