@@ -82,6 +82,7 @@ $notification-counter-size: 18px;
 	}
 
 	&__logo {
+		border-top: $border-top-width solid $color-dark-blue-gray;
 		font-size: 9px;
 		font-weight: 600;
 		letter-spacing: .15px;
