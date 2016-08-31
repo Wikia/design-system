@@ -235,7 +235,7 @@
 	</div>
 
 	<h5>Branded links are hidden, user is logged in</h5>
-	<div class="wds-global-navigation">
+	<div class="wds-global-navigation wds-search-is-always-visible">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
 				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
