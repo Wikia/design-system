@@ -13,6 +13,8 @@
  *       li.breakpoint-preview-tablet-only
  *       li.breakpoint-preview-desktop-up
  *       li.breakpoint-preview-desktop-only
+ *       li.breakpoint-preview-desktop-l-up
+ *       li.breakpoint-preview-desktop-l-only
  *       li.breakpoint-preview-desktop-xl-up
  */
 
@@ -40,6 +42,8 @@
 	tablet-only: $breakpoint-tablet-only,
 	desktop-up: $breakpoint-desktop-up,
 	desktop-only: $breakpoint-desktop-only,
+	desktop-l-up: $breakpoint-desktop-l-up,
+	desktop-l-only: $breakpoint-desktop-l-only,
 	desktop-xl-up: $breakpoint-desktop-xl-up
 ) {
 	.breakpoint-preview-#{$breakpoint-name}::after {
@@ -56,7 +60,8 @@
 
 @each $breakpoint-name, $breakpoint-data in (
 	tablet-up: (query: $breakpoint-tablet-up, color: $color-success),
-	desktop-up: (query: $breakpoint-desktop-up, color: $color-warning),
+	desktop-up: (query: $breakpoint-desktop-up, color: $color-lifestyle),
+	desktop-l-up: (query: $breakpoint-desktop-l-up, color: $color-warning),
 	desktop-xl-up: (query: $breakpoint-desktop-xl-up, color: $color-alert)
 ) {
 	@media #{map-get($breakpoint-data, query)} {
