@@ -253,7 +253,7 @@
 						<svg class="wds-icon wds-icon-small" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
-						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
+						<input class="wds-global-navigation__search-input" name="search" placeholder="Szukaj"/>
 					</label>
 					<button class="wds-button wds-is-text wds-global-navigation__search-close">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
