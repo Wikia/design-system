@@ -292,7 +292,7 @@ $notification-counter-size: 18px;
 
 	&.wds-search-is-always-visible .wds-global-navigation {
 		&__content-item-link {
-			flex: 0;
+			flex: 0 1 auto;
 		}
 
 		&__content-item-search {
