@@ -193,6 +193,7 @@ $notification-counter-size: 18px;
 		display: none;
 		flex: 1;
 		font-size: $typescale-size-minus-1;
+		min-width: 0;
 		padding: 3px 4px;
 		width: 100%;
 
