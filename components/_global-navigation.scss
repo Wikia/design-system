@@ -67,7 +67,13 @@ $notification-counter-size: 18px;
 		z-index: 1;
 	}
 
-	&__content-item {
+	&__logo,
+	&__link,
+	&__search,
+	&__account-menu,
+	&__user-menu,
+	&__notifications-menu,
+	&__start-a-wiki {
 		align-items: center;
 		background-color: $nav-background-color;
 		border-top: $border-top-width solid $color-slate-gray;
@@ -99,17 +105,9 @@ $notification-counter-size: 18px;
 	}
 
 	&__logo {
-		align-items: center;
-		background-color: $nav-background-color;
-		border-top: $border-top-width solid $color-dark-blue-gray;
-		color: $color-slate-gray;
-		display: flex;
 		font-size: 9px;
 		font-weight: 600;
-		justify-content: flex-end;
 		letter-spacing: .15px;
-		margin-top: -$border-top-width;
-		text-decoration: none;
 		text-transform: uppercase;
 	}
 
@@ -165,10 +163,6 @@ $notification-counter-size: 18px;
 	}
 
 	&__search {
-		align-items: center;
-		border-top: $border-top-width solid $color-slate-gray;
-		display: flex;
-		margin-top: -$border-top-width;
 		min-width: 30px;
 		padding-left: 16px;
 	}
