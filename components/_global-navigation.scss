@@ -273,11 +273,11 @@ $notification-counter-size: 18px;
 		font-size: $typescale-size-minus-3;
 		height: $notification-counter-size;
 		justify-content: center;
-		left: 7px;
+		left: -11px;
 		min-width: $notification-counter-size;
 		padding: 0 4px;
 		position: absolute;
-		top: 7px;
+		top: -8px;
 	}
 
 	&__start-a-wiki .wds-button {
