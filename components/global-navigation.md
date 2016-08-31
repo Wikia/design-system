@@ -151,13 +151,15 @@
 					</div>
 				</div>
 				<div class="wds-global-navigation__content-item wds-global-navigation__notifications">
-					<div class="wds-global-navigation__notifications-counter">3</div>
-					<svg class="wds-icon wds-icon-small" alt="notifications">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
-					</svg>
-					<svg class="wds-icon wds-icon-tiny" alt="notifications dropdown">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
-					</svg>
+					<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+						<div class="wds-global-navigation__notifications-counter">3</div>
+						<svg class="wds-icon wds-icon-small" alt="notifications">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
+						</svg>
+						<svg class="wds-icon wds-icon-tiny" alt="notifications dropdown">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+						</svg>
+					</div>
 				</div>
 				<a href="#" class="wds-button wds-is-squished wds-is-secondary wds-global-navigation__start-a-wiki">
 					<span class="wds-global-navigation__start-a-wiki-content">Start a wiki</span>
