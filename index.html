@@ -623,7 +623,7 @@ code.sg:first-child {
     line-height: 1.3em;
     margin: 0;
     padding: 0; }
-  @media only screen and (max-width: 1063px) {
+  @media only screen and (max-width: 1023px) {
     .wds-global-footer__main {
       margin: 0 20px; }
     .wds-global-footer__header-wrapper {
@@ -664,7 +664,7 @@ code.sg:first-child {
       margin-bottom: 37px; }
     .wds-global-footer__links-list-item {
       margin-bottom: 20px; } }
-  @media only screen and (min-width: 1064px) {
+  @media only screen and (min-width: 1024px) {
     .wds-global-footer__main {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
@@ -763,18 +763,6 @@ code.sg:first-child {
   border-top: 6px solid #656e78;
   border-width: 6px 0 0;
   box-shadow: 0 1px 0 0 #ccc; }
-  @media only screen and (max-width: 1023px) {
-    .wds-global-navigation__content-bar {
-      width: 748px; } }
-  @media only screen and (min-width: 1024px) {
-    .wds-global-navigation__content-bar {
-      width: 1004px; } }
-  @media only screen and (min-width: 1084px) {
-    .wds-global-navigation__content-bar {
-      width: 1064px; } }
-  @media only screen and (min-width: 1596px) {
-    .wds-global-navigation__content-bar {
-      width: 1238px; } }
   .wds-global-navigation__dropdown-toggle {
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -802,6 +790,7 @@ code.sg:first-child {
     height: 49px;
     margin: 0 auto;
     position: relative;
+    width: 748px;
     z-index: 1; }
   .wds-global-navigation__logo, .wds-global-navigation__link, .wds-global-navigation__search, .wds-global-navigation__account-menu, .wds-global-navigation__user-menu, .wds-global-navigation__notifications-menu, .wds-global-navigation__start-a-wiki {
     -webkit-align-items: center;
@@ -1011,7 +1000,9 @@ code.sg:first-child {
     display: none; }
   .wds-global-navigation .wds-user-is-logged-in .wds-global-navigation__start-a-wiki-icon {
     display: block; }
-  @media only screen and (min-width: 1064px) {
+  @media only screen and (min-width: 1024px) {
+    .wds-global-navigation__content-bar {
+      width: 1004px; }
     .wds-global-navigation__search {
       -webkit-flex: 2;
       -ms-flex: 2;
@@ -1029,6 +1020,12 @@ code.sg:first-child {
       display: inline; }
     .wds-global-navigation .wds-user-is-logged-in .wds-global-navigation__start-a-wiki-icon {
       display: none; } }
+  @media only screen and (min-width: 1084px) {
+    .wds-global-navigation__content-bar {
+      width: 1064px; } }
+  @media only screen and (min-width: 1596px) {
+    .wds-global-navigation__content-bar {
+      width: 1238px; } }
 
 .wds-list {
   list-style-type: none;
@@ -1089,16 +1086,16 @@ code.sg:first-child {
   content: "$breakpoint-tablet-up: only screen and (min-width:768px)"; }
 
 .breakpoint-preview-tablet-down::after {
-  content: "$breakpoint-tablet-down: only screen and (max-width:1063px)"; }
+  content: "$breakpoint-tablet-down: only screen and (max-width:1023px)"; }
 
 .breakpoint-preview-tablet-only::after {
-  content: "$breakpoint-tablet-only: only screen and (min-width:768px) and (max-width:1063px)"; }
+  content: "$breakpoint-tablet-only: only screen and (min-width:768px) and (max-width:1023px)"; }
 
 .breakpoint-preview-desktop-up::after {
-  content: "$breakpoint-desktop-up: only screen and (min-width:1064px)"; }
+  content: "$breakpoint-desktop-up: only screen and (min-width:1024px)"; }
 
 .breakpoint-preview-desktop-only::after {
-  content: "$breakpoint-desktop-only: only screen and (min-width:1064px) and (max-width:1595px)"; }
+  content: "$breakpoint-desktop-only: only screen and (min-width:1024px) and (max-width:1083px)"; }
 
 .breakpoint-preview-desktop-xl-up::after {
   content: "$breakpoint-desktop-xl-up: only screen and (min-width:1596px)"; }
@@ -1112,9 +1109,9 @@ code.sg:first-child {
     content: "$breakpoint-tablet-up: only screen and (min-width:768px)";
     color: #5ba200; } }
 
-@media only screen and (min-width: 1064px) {
+@media only screen and (min-width: 1024px) {
   .breakpoint-preview-current::after {
-    content: "$breakpoint-desktop-up: only screen and (min-width:1064px)";
+    content: "$breakpoint-desktop-up: only screen and (min-width:1024px)";
     color: #f08a24; } }
 
 @media only screen and (min-width: 1596px) {
