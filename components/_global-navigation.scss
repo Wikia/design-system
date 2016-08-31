@@ -370,25 +370,6 @@ $notification-counter-size: 18px;
 			display: none;
 		}
 
-		&.wds-search-is-active .wds-global-navigation {
-			&__search-input-wrapper {
-				margin-right: 15px;
-			}
-
-			&__search-input::placeholder {
-				color: $color-light-gray;
-			}
-
-			&__search-submit,
-			&__search-close {
-				display: block;
-			}
-
-			&__link {
-				display: none;
-			}
-		}
-
 		.wds-user-is-logged-in {
 			.wds-global-navigation__start-a-wiki-caption {
 				display: inline;
