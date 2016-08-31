@@ -356,7 +356,7 @@ code.sg:first-child {
   letter-spacing: .15px;
   line-height: 1.3em;
   outline: none;
-  padding: 16px 18px;
+  padding: 16px 18px 15px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -377,9 +377,9 @@ code.sg:first-child {
       color: #00647a; }
   .wds-button.wds-is-squished {
     font-size: 10px;
-    padding: 9px 18px; }
+    padding: 10px 12px 9px; }
   .wds-button.wds-is-stretched {
-    padding: 28px 18px; }
+    padding: 28px 18px 27px; }
   .wds-button.wds-is-full-width {
     width: 100%; }
   .wds-button.wds-is-text {
@@ -957,8 +957,6 @@ code.sg:first-child {
     padding: 0 4px;
     position: absolute;
     top: -8px; }
-  .wds-global-navigation__start-a-wiki .wds-button {
-    padding: 8px 10px; }
   .wds-global-navigation__start-a-wiki-icon {
     height: 14px;
     width: 14px;
@@ -4214,12 +4212,18 @@ body {
           <a href="#" class="wds-button">Link button</a>
 
           <h4>Sizes</h4>
+          <h5>Primary Buttons</h5>
           <button class="wds-button wds-is-squished">Squished</button>
           <button class="wds-button">Normal</button>
           <button class="wds-button wds-is-stretched">Stretched</button>
+          <h5>Secondary Buttons</h5>
           <button class="wds-button wds-is-secondary wds-is-squished">Squished</button>
           <button class="wds-button wds-is-secondary">Normal</button>
           <button class="wds-button wds-is-secondary wds-is-stretched">Stretched</button>
+          <h5>Text Buttons</h5>
+          <button class="wds-button wds-is-secondary wds-is-squished wds-is-text">Squished</button>
+          <button class="wds-button wds-is-secondary wds-is-text">Normal</button>
+          <button class="wds-button wds-is-secondary wds-is-stretched wds-is-text">Stretched</button>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Primary Buttons<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button&quot;</span>&gt;</span>Button text<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-active&quot;</span>&gt;</span>Hover<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
@@ -4241,12 +4245,18 @@ body {
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button&quot;</span>&gt;</span>Link button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Sizes<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Primary Buttons<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-squished&quot;</span>&gt;</span>Squished<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button&quot;</span>&gt;</span>Normal<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-stretched&quot;</span>&gt;</span>Stretched<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Secondary Buttons<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary wds-is-squished&quot;</span>&gt;</span>Squished<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary&quot;</span>&gt;</span>Normal<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary wds-is-stretched&quot;</span>&gt;</span>Stretched<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary wds-is-stretched&quot;</span>&gt;</span>Stretched<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Text Buttons<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary wds-is-squished wds-is-text&quot;</span>&gt;</span>Squished<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary wds-is-text&quot;</span>&gt;</span>Normal<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-secondary wds-is-stretched wds-is-text&quot;</span>&gt;</span>Stretched<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
       </div>
     </section>
     <section class="sg-block sg-section-dropdowns-">
