@@ -85,28 +85,14 @@ $notification-counter-size: 18px;
 
 	&__logo {
 		border-top: $border-top-width solid $color-dark-blue-gray;
-		font-size: 9px;
-		font-weight: 600;
-		letter-spacing: .15px;
-		text-transform: uppercase;
 	}
 
 	&__logo-fandom {
-		fill: $color-dark-blue-gray;
-		height: 24px;
+		height: 100%;
 		padding-bottom: 4px;
-		width: 120px;
+		width: 230px;
 	}
 
-	&__logo-powered-by {
-		padding: 2px 3px 0 7px;
-	}
-
-	&__logo-wikia {
-		fill: $color-dark-blue;
-		height: 12px;
-		width: 36px;
-	}
 
 	&__link {
 		flex: 1;
