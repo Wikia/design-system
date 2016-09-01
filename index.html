@@ -1060,16 +1060,16 @@ code.sg:first-child {
  *     div.breakpoint-preview-current
  *     h4.breakpoint-preview-list-header All supported breakpoint media queries:&nbsp;
  *     ul.breakpoint-preview-list
- *       li.breakpoint-preview-mobile-up
- *       li.breakpoint-preview-mobile-only
- *       li.breakpoint-preview-tablet-up
- *       li.breakpoint-preview-tablet-down
- *       li.breakpoint-preview-tablet-only
- *       li.breakpoint-preview-desktop-up
- *       li.breakpoint-preview-desktop-only
- *       li.breakpoint-preview-desktop-l-up
- *       li.breakpoint-preview-desktop-l-only
- *       li.breakpoint-preview-desktop-xl-up
+ *       li.breakpoint-preview-s-up
+ *       li.breakpoint-preview-s-only
+ *       li.breakpoint-preview-m-up
+ *       li.breakpoint-preview-m-down
+ *       li.breakpoint-preview-m-only
+ *       li.breakpoint-preview-l-up
+ *       li.breakpoint-preview-l-only
+ *       li.breakpoint-preview-xl-up
+ *       li.breakpoint-preview-xl-only
+ *       li.breakpoint-preview-xxl-up
  */
 .breakpoint-preview-current-header,
 .breakpoint-preview-list-header {
@@ -1079,58 +1079,58 @@ code.sg:first-child {
 .breakpoint-preview-list ::after {
   font-family: monospace; }
 
-.breakpoint-preview-mobile-up::after {
-  content: "$breakpoint-mobile-up: only screen"; }
+.breakpoint-preview-s-up::after {
+  content: "$breakpoint-s-up: only screen"; }
 
-.breakpoint-preview-mobile-only::after {
-  content: "$breakpoint-mobile-only: only screen and (max-width:767px)"; }
+.breakpoint-preview-s-only::after {
+  content: "$breakpoint-s-only: only screen and (max-width:767px)"; }
 
-.breakpoint-preview-tablet-up::after {
-  content: "$breakpoint-tablet-up: only screen and (min-width:768px)"; }
+.breakpoint-preview-m-up::after {
+  content: "$breakpoint-m-up: only screen and (min-width:768px)"; }
 
-.breakpoint-preview-tablet-down::after {
-  content: "$breakpoint-tablet-down: only screen and (max-width:1023px)"; }
+.breakpoint-preview-m-down::after {
+  content: "$breakpoint-m-down: only screen and (max-width:1023px)"; }
 
-.breakpoint-preview-tablet-only::after {
-  content: "$breakpoint-tablet-only: only screen and (min-width:768px) and (max-width:1023px)"; }
+.breakpoint-preview-m-only::after {
+  content: "$breakpoint-m-only: only screen and (min-width:768px) and (max-width:1023px)"; }
 
-.breakpoint-preview-desktop-up::after {
-  content: "$breakpoint-desktop-up: only screen and (min-width:1024px)"; }
+.breakpoint-preview-l-up::after {
+  content: "$breakpoint-l-up: only screen and (min-width:1024px)"; }
 
-.breakpoint-preview-desktop-only::after {
-  content: "$breakpoint-desktop-only: only screen and (min-width:1024px) and (max-width:1083px)"; }
+.breakpoint-preview-l-only::after {
+  content: "$breakpoint-l-only: only screen and (min-width:1024px) and (max-width:1083px)"; }
 
-.breakpoint-preview-desktop-l-up::after {
-  content: "$breakpoint-desktop-l-up: only screen and (min-width:1084px)"; }
+.breakpoint-preview-xl-up::after {
+  content: "$breakpoint-xl-up: only screen and (min-width:1084px)"; }
 
-.breakpoint-preview-desktop-l-only::after {
-  content: "$breakpoint-desktop-l-only: only screen and (min-width:1084px) and (max-width:1595px)"; }
+.breakpoint-preview-xl-only::after {
+  content: "$breakpoint-xl-only: only screen and (min-width:1084px) and (max-width:1595px)"; }
 
-.breakpoint-preview-desktop-xl-up::after {
-  content: "$breakpoint-desktop-xl-up: only screen and (min-width:1596px)"; }
+.breakpoint-preview-xxl-up::after {
+  content: "$breakpoint-xxl-up: only screen and (min-width:1596px)"; }
 
 .breakpoint-preview-current::after {
-  content: "$breakpoint-$breakpoint-mobile-up (default): only screen";
+  content: "$breakpoint-$breakpoint-s-up (default): only screen";
   color: #1a5eb8; }
 
 @media only screen and (min-width: 768px) {
   .breakpoint-preview-current::after {
-    content: "$breakpoint-tablet-up: only screen and (min-width:768px)";
+    content: "$breakpoint-m-up: only screen and (min-width:768px)";
     color: #5ba200; } }
 
 @media only screen and (min-width: 1024px) {
   .breakpoint-preview-current::after {
-    content: "$breakpoint-desktop-up: only screen and (min-width:1024px)";
+    content: "$breakpoint-l-up: only screen and (min-width:1024px)";
     color: #ffd000; } }
 
 @media only screen and (min-width: 1084px) {
   .breakpoint-preview-current::after {
-    content: "$breakpoint-desktop-l-up: only screen and (min-width:1084px)";
+    content: "$breakpoint-xl-up: only screen and (min-width:1084px)";
     color: #f08a24; } }
 
 @media only screen and (min-width: 1596px) {
   .breakpoint-preview-current::after {
-    content: "$breakpoint-desktop-xl-up: only screen and (min-width:1596px)";
+    content: "$breakpoint-xxl-up: only screen and (min-width:1596px)";
     color: #ed1c24; } }
 
 /**
@@ -2188,31 +2188,31 @@ body {
           <div class="breakpoint-preview-current"></div>
           <h4 class="breakpoint-preview-list-header">All supported breakpoint media queries:&#xA0;</h4>
           <ul class="breakpoint-preview-list">
-            <li class="breakpoint-preview-mobile-up"></li>
-            <li class="breakpoint-preview-mobile-only"></li>
-            <li class="breakpoint-preview-tablet-up"></li>
-            <li class="breakpoint-preview-tablet-down"></li>
-            <li class="breakpoint-preview-tablet-only"></li>
-            <li class="breakpoint-preview-desktop-up"></li>
-            <li class="breakpoint-preview-desktop-only"></li>
-            <li class="breakpoint-preview-desktop-l-up"></li>
-            <li class="breakpoint-preview-desktop-l-only"></li>
-            <li class="breakpoint-preview-desktop-xl-up"></li>
+            <li class="breakpoint-preview-s-up"></li>
+            <li class="breakpoint-preview-s-only"></li>
+            <li class="breakpoint-preview-m-up"></li>
+            <li class="breakpoint-preview-m-down"></li>
+            <li class="breakpoint-preview-m-only"></li>
+            <li class="breakpoint-preview-l-up"></li>
+            <li class="breakpoint-preview-l-only"></li>
+            <li class="breakpoint-preview-xl-up"></li>
+            <li class="breakpoint-preview-xl-only"></li>
+            <li class="breakpoint-preview-xxl-up"></li>
           </ul>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-current-header&quot;</span>&gt;</span>Currently displayed breakpoint:&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-current&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-list-header&quot;</span>&gt;</span>All supported breakpoint media queries:&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-list&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-mobile-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-mobile-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-tablet-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-tablet-down&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-tablet-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-desktop-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-desktop-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-desktop-l-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-desktop-l-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-desktop-xl-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-s-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-s-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-m-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-m-down&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-m-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-l-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-l-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-xl-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-xl-only&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;breakpoint-preview-xxl-up&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
       </div>
     </section>
