@@ -330,17 +330,21 @@ code.sg:first-child {
   <style>.wds-icon {
   fill: currentColor;
   height: 24px;
+  min-width: 24px;
   width: 24px; }
   .wds-icon-small {
     height: 18px;
+    min-width: 18px;
     width: 18px; }
   .wds-icon-tiny {
     height: 12px;
+    min-width: 12px;
     width: 12px; }
 
 .wds-avatar {
   border: solid 2px currentColor;
   height: 28px;
+  min-width: 28px;
   width: 28px; }
   .wds-avatar.wds-is-circle {
     border-radius: 50%; }
@@ -957,6 +961,7 @@ code.sg:first-child {
     top: 8px; }
   .wds-global-navigation__start-a-wiki-icon {
     height: 14px;
+    min-width: 14px;
     width: 14px;
     display: none; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__link {
@@ -964,9 +969,9 @@ code.sg:first-child {
     -ms-flex: 0 1 auto;
     flex: 0 1 auto; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search {
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto; }
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-input {
     display: block; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-input-wrapper {
