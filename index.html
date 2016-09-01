@@ -430,8 +430,8 @@ code.sg:first-child {
     box-sizing: inherit; }
   .wds-global-footer ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
   .wds-global-footer__header-wrapper {
     display: block;
     width: 100%; }
@@ -613,9 +613,9 @@ code.sg:first-child {
     color: #fff;
     font-size: 18px;
     font-weight: bold;
-    min-height: 24px;
     margin-bottom: 10px;
     margin-top: 0;
+    min-height: 24px;
     padding: 0; }
   .wds-global-footer__section-description {
     color: #fff;
@@ -623,7 +623,7 @@ code.sg:first-child {
     line-height: 1.3em;
     margin: 0;
     padding: 0; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1083px) {
     .wds-global-footer__main {
       margin: 0 20px; }
     .wds-global-footer__header-wrapper {
@@ -656,15 +656,15 @@ code.sg:first-child {
       .wds-global-footer__wikia-section.wds-is-create-wiki {
         display: none; }
       .wds-global-footer__wikia-section.wds-is-community-apps .wds-global-footer__links-list {
-        margin-top: 5px;
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        margin-top: 5px; }
       .wds-global-footer__wikia-section.wds-is-community-apps .wds-global-footer__link {
         margin-right: 25px; }
     .wds-global-footer.wds-is-international .wds-global-footer__fandom-section.wds-is-follow-us {
       margin-bottom: 37px; }
     .wds-global-footer__links-list-item {
       margin-bottom: 20px; } }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1084px) {
     .wds-global-footer__main {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
@@ -1090,11 +1090,11 @@ code.sg:first-child {
 .breakpoint-preview-m-up::after {
   content: "$breakpoint-m-up: only screen and (min-width:768px)"; }
 
-.breakpoint-preview-m-down::after {
-  content: "$breakpoint-m-down: only screen and (max-width:1023px)"; }
-
 .breakpoint-preview-m-only::after {
   content: "$breakpoint-m-only: only screen and (min-width:768px) and (max-width:1023px)"; }
+
+.breakpoint-preview-l-down::after {
+  content: "$breakpoint-l-down: only screen and (max-width:1083px)"; }
 
 .breakpoint-preview-l-up::after {
   content: "$breakpoint-l-up: only screen and (min-width:1024px)"; }
