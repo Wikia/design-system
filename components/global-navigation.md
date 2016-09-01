@@ -13,7 +13,7 @@
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
-			<div class="wds-global-navigation__link wds-dropdown">
+			<div class="wds-global-navigation__wikis-menu wds-dropdown">
 				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
@@ -89,7 +89,7 @@
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
-			<div class="wds-global-navigation__link wds-dropdown">
+			<div class="wds-global-navigation__wikis-menu wds-dropdown">
 				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
@@ -302,7 +302,7 @@
 			<a href="#" class="wds-global-navigation__link wds-is-games">Videospiele</a>
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Filme</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
-			<div class="wds-global-navigation__link wds-dropdown wds-is-active">
+			<div class="wds-global-navigation__wikis-menu wds-dropdown wds-is-active">
 				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
@@ -378,7 +378,7 @@
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
-			<div class="wds-global-navigation__link wds-dropdown">
+			<div class="wds-global-navigation__wikis-menu wds-dropdown">
 				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
@@ -454,7 +454,7 @@
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
-			<div class="wds-global-navigation__link wds-dropdown">
+			<div class="wds-global-navigation__wikis-menu wds-dropdown">
 				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
@@ -539,7 +539,7 @@
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
-			<div class="wds-global-navigation__link wds-dropdown">
+			<div class="wds-global-navigation__wikis-menu wds-dropdown">
 				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
 					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
