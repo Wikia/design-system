@@ -9,8 +9,8 @@
  *       li.breakpoint-preview-s-up
  *       li.breakpoint-preview-s-only
  *       li.breakpoint-preview-m-up
- *       li.breakpoint-preview-m-down
  *       li.breakpoint-preview-m-only
+ *       li.breakpoint-preview-l-down
  *       li.breakpoint-preview-l-up
  *       li.breakpoint-preview-l-only
  *       li.breakpoint-preview-xl-up
@@ -54,7 +54,7 @@
 /////////////////////////////////////////////
 // Currently displayed breakpoint/media query
 .breakpoint-preview-current::after {
-	@include display-breakpoint-content('$breakpoint-s-up (default)', $breakpoint-s-up);
+	@include display-breakpoint-content('s-up (default)', $breakpoint-s-up);
 	color: $color-message;
 }
 
