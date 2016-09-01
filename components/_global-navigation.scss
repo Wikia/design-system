@@ -2,6 +2,7 @@ $border-top-width: 6px;
 $nav-height: 49px;
 $nav-background-color: $color-white;
 
+$logo-width: 230px;
 $notification-counter-size: 18px;
 
 .wds-global-navigation {
@@ -11,71 +12,70 @@ $notification-counter-size: 18px;
 	border-width: $border-top-width 0 0;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
 
+	&__dropdown-toggle {
+		align-items: center;
+		display: flex;
+		// Safari doesn't set default flex values if we use `flex: 1;`
+		// it requires us to put these values explicitly.
+		flex: 1 1 auto;
+		height: $nav-height;
+		justify-content: center;
+	}
+
+	&__dropdown-content {
+		color: $color-dark-blue-gray;
+		top: calc(100% + 1px);
+		width: 190px;
+		z-index: -1;
+	}
+
+	&__dropdown-link {
+		color: $color-dark-blue-gray;
+		text-decoration: none;
+
+		&:hover,
+		&:active,
+		&.wds-is-active {
+			color: $color-link;
+		}
+	}
+
 	&__content-bar {
+		display: flex;
 		height: $nav-height;
 		margin: 0 auto;
 		position: relative;
-		width: 1024px - $scrollbar-width;
+		width: 748px;
 		z-index: 1;
 	}
 
-	&__logo {
+	&__logo,
+	&__link,
+	&__wikis-menu,
+	&__search,
+	&__account-menu,
+	&__user-menu,
+	&__notifications-menu,
+	&__start-a-wiki {
 		align-items: center;
 		background-color: $nav-background-color;
-		border-top: $border-top-width solid $color-dark-blue-gray;
-		color: $color-slate-gray;
-		display: flex;
-		font-size: 9px;
-		font-weight: 600;
-		justify-content: flex-end;
-		letter-spacing: .15px;
-		margin-top: -$border-top-width;
-		text-decoration: none;
-		text-transform: uppercase;
-	}
-
-	&__logo-fandom {
-		fill: $color-dark-blue-gray;
-		height: 24px;
-		padding-bottom: 4px;
-		width: 120px;
-	}
-
-	&__logo-wikia {
-		fill: $color-dark-blue;
-		height: 12px;
-		width: 36px;
-	}
-
-	&__logo-powered-by {
-		padding: 2px 3px 0 7px;
-	}
-
-	&__middle-column {
-		background-color: $nav-background-color;
-		display: flex;
-	}
-
-	&__right-column {
-		align-items: center;
-		background-color: $nav-background-color;
-		display: flex;
-		justify-content: flex-start;
-	}
-
-	&__content-item {
-		align-items: center;
 		border-top: $border-top-width solid $color-slate-gray;
 		color: $color-dark-blue-gray;
 		display: flex;
-		flex: 1;
 		font-size: $typescale-size-minus-1;
 		height: $nav-height;
 		justify-content: center;
 		margin-top: -$border-top-width;
-		padding: 0 5px;
+		padding: 0 8px;
 		text-decoration: none;
+		white-space: nowrap;
+	}
 
+	&__link,
+	&__wikis-menu,
+	&__account-menu,
+	&__user-menu,
+	&__notifications-menu {
 		&:hover {
 			color: $color-link;
 		}
@@ -86,6 +86,25 @@ $notification-counter-size: 18px;
 			border-color: darken($color-slate-gray, 20%);
 			color: $color-white;
 		}
+	}
+
+	&__logo {
+		border-top: $border-top-width solid $color-dark-blue-gray;
+		//Safari will still make container fluid even when content inside has static width
+		//That is why we need to set grow and shrink to 0
+		flex: 0 0 $logo-width;
+	}
+
+	&__logo-fandom {
+		height: 100%;
+		padding-bottom: 4px;
+		width: $logo-width;
+	}
+
+	&__link {
+		// Safari doesn't set default flex values if we use `flex: 1;`
+		// it requires us to put these values explicitly.
+		flex: 1 1 auto;
 
 		&.wds-is-games {
 			border-color: $color-games;
@@ -118,63 +137,41 @@ $notification-counter-size: 18px;
 		}
 	}
 
-	&__dropdown-toggle {
-		align-items: center;
-		display: flex;
-		justify-content: center;
-	}
-
-	&__dropdown {
-		color: $color-dark-blue-gray;
-		top: calc(100% + 1px);
-		width: 190px;
-		z-index: -1;
-	}
-
-	&__dropdown-link {
-		color: $color-dark-blue-gray;
-		text-decoration: none;
-
-		&:hover,
-		&:active,
-		&.wds-is-active {
-			color: $color-link;
-		}
-	}
-
-	&__search {
-		align-items: center;
-		border-top: $border-top-width solid $color-slate-gray;
-		display: flex;
-		flex: 2;
-		margin-top: -$border-top-width;
-		padding-left: 16px;
+	&__wikis-menu {
+		flex: 0 1 auto;
 	}
 
 	&__search-input-wrapper {
-		border-bottom: 1px solid $color-slate-gray;
+		border: 0 solid $color-slate-gray;
 		display: flex;
-		flex: 1;
-
-		&.wds-is-active {
-			border-bottom-color: $color-link;
-		}
+		// Safari doesn't set default flex values if we use `flex: 1;`
+		// it requires us to put these values explicitly.
+		flex: 1 1 auto;
 	}
 
 	&__search-label {
 		align-items: center;
 		background-color: $color-white;
 		display: flex;
-		flex: 1;
+		// Safari doesn't set default flex values if we use `flex: 1;`
+		// it requires us to put these values explicitly.
+		flex: 1 1 auto;
 		z-index: 2;
 	}
 
 	&__search-input {
 		border: 0;
 		color: $color-dark-gray;
-		flex: 1;
+		display: none;
+		// Safari doesn't set default flex values if we use `flex: 1;`
+		// it requires us to put these values explicitly.
+		flex: 1 1 auto;
 		font-size: $typescale-size-minus-1;
+		// Firefox doesn't size input properly if our input
+		// has `width` set in `%` and is inside `flexbox`.
+		min-width: 0;
 		padding: 3px 4px;
+		width: 100%;
 
 		&:focus {
 			outline: none;
@@ -192,6 +189,8 @@ $notification-counter-size: 18px;
 
 	&__search-close {
 		display: none;
+		// Safari fix for bleeding search suggestions shadow
+		margin: 0;
 		padding: 3px;
 		z-index: 2;
 	}
@@ -216,48 +215,24 @@ $notification-counter-size: 18px;
 		top: calc(100% + 1px);
 	}
 
-	.wds-search-is-active {
-		.wds-global-navigation__search-input-wrapper {
-			margin-right: 15px;
-		}
-
-		.wds-global-navigation__search-input::placeholder {
-			color: $color-light-gray;
-		}
-
-		.wds-global-navigation__search-submit,
-		.wds-global-navigation__search-close {
-			display: block;
-		}
-
-		.wds-global-navigation__content-item {
-			display: none;
-		}
+	&__account-menu-caption {
+		display: none;
+		margin-left: 5px;
 	}
 
-	&__account-navigation {
-		flex: 0 1 auto;
-		margin-right: 8px;
+	&__account-menu-dropdown-caption {
+		font-size: $typescale-size-minus-2;
+		padding-bottom: 10px;
+		text-align: center;
 	}
 
-	&__user-menu {
-		flex: 0 1 auto;
-		width: 55px;
-	}
-
-	&__user-icon {
-		margin-right: 5px;
-	}
-
-	&__notifications {
-		flex: 0 1 auto;
-		margin-right: 8px;
+	&__notifications-menu {
 		padding-right: 0;
 		position: relative;
 		width: 50px;
 	}
 
-	&__notifications-counter {
+	&__notifications-menu-counter {
 		align-items: center;
 		background-color: $color-link;
 		border: 1px solid $color-white;
@@ -268,37 +243,138 @@ $notification-counter-size: 18px;
 		font-size: $typescale-size-minus-3;
 		height: $notification-counter-size;
 		justify-content: center;
-		left: -11px;
+		left: -1px;
 		min-width: $notification-counter-size;
 		padding: 0 4px;
 		position: absolute;
-		top: -8px;
+		top: 8px;
 	}
 
-	&__register-button-caption {
-		font-size: $typescale-size-minus-2;
-		padding-bottom: 10px;
-		text-align: center;
+	&__start-a-wiki-icon {
+		@include square(14px);
+
+		display: none;
 	}
 
-	@media #{$breakpoint-tablet-down} {
-		&__account-navigation-caption {
+	&.wds-search-is-always-visible .wds-global-navigation {
+		&__link {
+			// Safari doesn't set default flex values if we use `flex: 0;`
+			// it requires us to put these values explicitly.
+			flex: 0 1 auto;
+		}
+
+		&__search {
+			// Safari doesn't set default flex values if we use `flex: 1;`
+			// it requires us to put these values explicitly.
+			//
+			// Safari doesn't size search properly if flex-basis is set to `auto`
+			flex: 1 1 0;
+		}
+
+		&__search-input {
+			display: block;
+		}
+
+		&__search-input-wrapper {
+			border-bottom-width: 1px;
+		}
+	}
+
+	&.wds-search-is-active .wds-global-navigation {
+		&__link {
 			display: none;
 		}
 
-		&__start-a-wiki::before {
-			content: '┼';
+		&__search {
+			// Safari doesn't set default flex values if we use `flex: 1;`
+			// it requires us to put these values explicitly.
+			flex: 1 1 auto;
+		}
+
+		&__search-input-wrapper {
+			border-bottom-width: 1px;
+			margin-right: 15px;
+
+			&.wds-is-active {
+				border-bottom-color: $color-link;
+			}
+		}
+
+		&__search-input::placeholder {
+			color: $color-light-gray;
+		}
+
+		&__search-input,
+		&__search-submit,
+		&__search-close {
+			display: block;
+		}
+	}
+
+	.wds-user-is-logged-in {
+		.wds-global-navigation__start-a-wiki-caption {
+			display: none;
+		}
+
+		.wds-global-navigation__start-a-wiki-icon {
+			display: block;
+		}
+	}
+
+	@media #{$breakpoint-l-up} {
+		&__content-bar {
+			width: 1004px;
+		}
+
+		&__wikis-menu {
+			// Safari doesn't set default flex values if we use `flex: 1;`
+			// it requires us to put these values explicitly.
+			flex: 1 1 auto;
+		}
+
+		&__search {
+			// Safari doesn't set default flex values if we use `flex: 2;`
+			// it requires us to put these values explicitly.
+			flex: 2 1 auto;
+		}
+
+		&__search-input-wrapper {
+			border-bottom: 1px solid $color-slate-gray;
+		}
+
+		&__search-input {
+			display: block;
+		}
+
+		&__account-menu-caption,
+		&__start-a-wiki-caption {
 			display: inline;
 		}
 
-		&__start-a-wiki-content {
+		&__start-a-wiki-icon {
 			display: none;
+		}
+
+		.wds-user-is-logged-in {
+			.wds-global-navigation__start-a-wiki-caption {
+				display: inline;
+			}
+
+			.wds-global-navigation__start-a-wiki-icon {
+				display: none;
+			}
 		}
 	}
 
-	@media #{$breakpoint-desktop-xl-up} {
+	@media #{$breakpoint-xl-up} {
 		&__content-bar {
-			width: 1440px - $scrollbar-width;
+			width: 1064px;
+		}
+	}
+
+	@media #{$breakpoint-xxl-up} {
+		&__content-bar {
+			width: 1238px;
 		}
 	}
 }
