@@ -319,7 +319,7 @@ $notification-counter-size: 18px;
 		}
 	}
 
-	@media #{$breakpoint-desktop-up} {
+	@media #{$breakpoint-l-up} {
 		&__content-bar {
 			width: 1004px;
 		}
@@ -357,13 +357,13 @@ $notification-counter-size: 18px;
 		}
 	}
 
-	@media #{$breakpoint-desktop-l-up} {
+	@media #{$breakpoint-xl-up} {
 		&__content-bar {
 			width: 1064px;
 		}
 	}
 
-	@media #{$breakpoint-desktop-xl-up} {
+	@media #{$breakpoint-xxl-up} {
 		&__content-bar {
 			width: 1238px;
 		}
