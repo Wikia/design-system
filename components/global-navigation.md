@@ -6,12 +6,8 @@
 	<div class="wds-global-navigation">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
@@ -86,13 +82,9 @@
 	<div class="wds-global-navigation">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
-				</svg>
+			<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
+			</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
@@ -174,12 +166,8 @@
 	<div class="wds-global-navigation wds-search-is-always-visible">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link">Centrum Społeczności</a>
@@ -238,12 +226,8 @@
 	<div class="wds-global-navigation wds-search-is-always-visible">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link">Centrum Społeczności</a>
@@ -311,12 +295,8 @@
 	<div class="wds-global-navigation sg-has-small-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link wds-is-games">Videospiele</a>
@@ -391,12 +371,8 @@
 	<div class="wds-global-navigation sg-has-large-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
@@ -471,12 +447,8 @@
 	<div class="wds-global-navigation sg-has-large-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
@@ -560,12 +532,8 @@
 	<div class="wds-global-navigation">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
@@ -640,12 +608,8 @@
 	<div class="wds-global-navigation wds-search-is-always-visible wds-search-is-active">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link">コミュニティセントラル</a>
@@ -704,12 +668,8 @@
 	<div class="wds-global-navigation wds-search-is-active sg-has-medium-space-for-dropdowns">
 		<div class="wds-global-navigation__content-bar">
 			<a href="#" class="wds-global-navigation__logo">
-				<svg class="wds-global-navigation__logo-fandom" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
-				</svg>
-				<span class="wds-global-navigation__logo-powered-by">powered by</span>
-				<svg class="wds-global-navigation__logo-wikia" alt="Wikia">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-wikia"></use>
+				<svg class="wds-global-navigation__logo-fandom" alt="Fandom powered by Wikia">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
 			<a href="#" class="wds-global-navigation__link">Centrum Społeczności</a>
