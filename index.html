@@ -394,33 +394,31 @@ code.sg:first-child {
   cursor: pointer;
   display: inline-block;
   position: relative; }
-  .wds-dropdown .wds-dropdown-toggle-chevron {
+  .wds-dropdown__toggle {
+    pointer-events: none;
+    position: relative;
+    z-index: 2; }
+  .wds-dropdown__toggle-chevron {
     margin-left: 5px; }
-  .wds-dropdown.wds-is-active .wds-dropdown-content {
+  .wds-dropdown__content {
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(26, 26, 26, 0.2);
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1; }
+    .wds-dropdown__content.wds-is-dark {
+      box-shadow: 0 0 20px 0 rgba(26, 26, 26, 0.3); }
+    .wds-dropdown__content.wds-is-right-aligned {
+      left: auto;
+      right: 0; }
+  .wds-dropdown.wds-is-active .wds-dropdown__content {
     display: inline-block; }
-  .wds-dropdown.wds-is-active .wds-dropdown-toggle-chevron {
+  .wds-dropdown.wds-is-active .wds-dropdown__toggle-chevron {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
-
-.wds-dropdown-toggle {
-  pointer-events: none;
-  position: relative;
-  z-index: 2; }
-
-.wds-dropdown-content {
-  background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(26, 26, 26, 0.2);
-  display: none;
-  left: 0;
-  position: absolute;
-  top: 100%;
-  z-index: 1; }
-  .wds-dropdown-content.wds-is-dark {
-    box-shadow: 0 0 20px 0 rgba(26, 26, 26, 0.3); }
-  .wds-dropdown-content.wds-is-right-aligned {
-    left: auto;
-    right: 0; }
 
 .wds-global-footer {
   background-color: #39424d;
@@ -779,7 +777,7 @@ code.sg:first-child {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
-  .wds-global-navigation__dropdown {
+  .wds-global-navigation__dropdown-content {
     color: #39424d;
     top: calc(100% + 1px);
     width: 190px;
@@ -5091,13 +5089,13 @@ body {
               <a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
               <a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
               <div class="wds-global-navigation__link wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <span>Wikis</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
                   <ul class="wds-list">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
@@ -5129,16 +5127,16 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__account-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                   </svg>
                   <span class="wds-global-navigation__account-menu-caption">My Account</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list wds-has-lines-between">
                     <li>
                       <button class="wds-button wds-is-full-width">Sign in</button>
@@ -5177,13 +5175,13 @@ body {
               <a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
               <a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
               <div class="wds-global-navigation__link wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <span>Wikis</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
                   <ul class="wds-list">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
@@ -5215,13 +5213,13 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__user-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name">
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">View Profile</a>
@@ -5242,7 +5240,7 @@ body {
                 </div>
               </div>
               <div class="wds-global-navigation__notifications-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <div class="wds-global-navigation__notifications-menu-counter">3</div>
                   <svg class="wds-icon wds-icon-small" alt="notifications">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell">
@@ -5297,16 +5295,16 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__account-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                   </svg>
                   <span class="wds-global-navigation__account-menu-caption">Moje konto</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list wds-has-lines-between">
                     <li>
                       <button class="wds-button wds-is-full-width">Zaloguj si&#x119;</button>
@@ -5363,13 +5361,13 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__user-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name">
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">View Profile</a>
@@ -5390,7 +5388,7 @@ body {
                 </div>
               </div>
               <div class="wds-global-navigation__notifications-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <div class="wds-global-navigation__notifications-menu-counter">3</div>
                   <svg class="wds-icon wds-icon-small" alt="notifications">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell">
@@ -5428,13 +5426,13 @@ body {
               <a href="#" class="wds-global-navigation__link wds-is-movies">Filme</a>
               <a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
               <div class="wds-global-navigation__link wds-dropdown wds-is-active">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <span>Wikis</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
                   <ul class="wds-list">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Beliebteste Wikis</a>
@@ -5466,16 +5464,16 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__account-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                   </svg>
                   <span class="wds-global-navigation__account-menu-caption">Mein Benutzerkonto</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list wds-has-lines-between">
                     <li>
                       <button class="wds-button wds-is-full-width">Anmelden</button>
@@ -5514,13 +5512,13 @@ body {
               <a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
               <a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
               <div class="wds-global-navigation__link wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <span>Wikis</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
                   <ul class="wds-list">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
@@ -5552,16 +5550,16 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__account-menu wds-dropdown wds-is-active">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                   </svg>
                   <span class="wds-global-navigation__account-menu-caption">My Account</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list wds-has-lines-between">
                     <li>
                       <button class="wds-button wds-is-full-width">Sign in</button>
@@ -5600,13 +5598,13 @@ body {
               <a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
               <a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
               <div class="wds-global-navigation__link wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <span>Wikis</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
                   <ul class="wds-list">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
@@ -5638,13 +5636,13 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__user-menu wds-dropdown wds-is-active">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name">
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">View Profile</a>
@@ -5665,7 +5663,7 @@ body {
                 </div>
               </div>
               <div class="wds-global-navigation__notifications-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <div class="wds-global-navigation__notifications-menu-counter">3</div>
                   <svg class="wds-icon wds-icon-small" alt="notifications">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell">
@@ -5703,13 +5701,13 @@ body {
               <a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
               <a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
               <div class="wds-global-navigation__link wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <span>Wikis</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
                   <ul class="wds-list">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
@@ -5741,16 +5739,16 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__account-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                   </svg>
                   <span class="wds-global-navigation__account-menu-caption">My Account</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list wds-has-lines-between">
                     <li>
                       <button class="wds-button wds-is-full-width">Sign in</button>
@@ -5807,16 +5805,16 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__account-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                   </svg>
                   <span class="wds-global-navigation__account-menu-caption">&#x30D7;&#x30ED;&#x30D5;&#x30A3;&#x30FC;&#x30EB;</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list wds-has-lines-between">
                     <li>
                       <button class="wds-button wds-is-full-width">Sign in</button>
@@ -5854,7 +5852,7 @@ body {
               <a href="#" class="wds-global-navigation__link">Centrum Spo&#x142;eczno&#x15B;ci</a>
               <form class="wds-global-navigation__search">
                 <div class="wds-dropdown wds-global-navigation__search-input-wrapper wds-is-active">
-                  <label class="wds-dropdown-toggle wds-global-navigation__search-label">
+                  <label class="wds-dropdown__toggle wds-global-navigation__search-label">
                     <svg class="wds-icon wds-icon-small" alt="Search">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass">
                     </svg>
@@ -5865,7 +5863,7 @@ body {
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross">
                     </svg>
                   </button>
-                  <div class="wds-dropdown-content wds-global-navigation__search-suggestions">
+                  <div class="wds-dropdown__content wds-global-navigation__search-suggestions">
                     <ul class="wds-list wds-has-ellipsis">
                       <li>
                         <a href="#" class="wds-global-navigation__dropdown-link">
@@ -5893,16 +5891,16 @@ body {
                 </button>
               </form>
               <div class="wds-global-navigation__account-menu wds-dropdown">
-                <div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+                <div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
                   <svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user">
                   </svg>
                   <span class="wds-global-navigation__account-menu-caption">My Account</span>
-                  <svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+                  <svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny">
                   </svg>
                 </div>
-                <div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+                <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
                   <ul class="wds-list wds-has-lines-between">
                     <li>
                       <button class="wds-button wds-is-full-width">Sign in</button>
@@ -5941,13 +5939,13 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-movies&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-tv&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -5979,16 +5977,16 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu-caption&quot;</span>&gt;</span>My Account<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Sign in<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
@@ -6027,13 +6025,13 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-movies&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-tv&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6065,13 +6063,13 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__user-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./assets/avatar.jpg&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-avatar wds-is-circle&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user name&quot;</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>View Profile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6092,7 +6090,7 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__notifications-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__notifications-menu-counter&quot;</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;notifications&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-bell&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
@@ -6147,16 +6145,16 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu-caption&quot;</span>&gt;</span>Moje konto<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Zaloguj si&#x119;<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
@@ -6213,13 +6211,13 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__user-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./assets/avatar.jpg&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-avatar wds-is-circle&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user name&quot;</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>View Profile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6240,7 +6238,7 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__notifications-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__notifications-menu-counter&quot;</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;notifications&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-bell&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
@@ -6278,13 +6276,13 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-movies&quot;</span>&gt;</span>Filme<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-tv&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-dropdown wds-is-active&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Beliebteste Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6316,16 +6314,16 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu-caption&quot;</span>&gt;</span>Mein Benutzerkonto<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Anmelden<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
@@ -6364,13 +6362,13 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-movies&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-tv&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6402,16 +6400,16 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu wds-dropdown wds-is-active&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu-caption&quot;</span>&gt;</span>My Account<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Sign in<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
@@ -6450,13 +6448,13 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-movies&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-tv&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6488,13 +6486,13 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__user-menu wds-dropdown wds-is-active&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./assets/avatar.jpg&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-avatar wds-is-circle&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user name&quot;</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>View Profile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6515,7 +6513,7 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__notifications-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__notifications-menu-counter&quot;</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;notifications&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-bell&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
@@ -6553,13 +6551,13 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-movies&quot;</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-is-tv&quot;</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -6591,16 +6589,16 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu-caption&quot;</span>&gt;</span>My Account<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Sign in<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
@@ -6657,16 +6655,16 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu-caption&quot;</span>&gt;</span>&#x30D7;&#x30ED;&#x30D5;&#x30A3;&#x30FC;&#x30EB;<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Sign in<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
@@ -6704,7 +6702,7 @@ body {
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__link&quot;</span>&gt;</span>Centrum Spo&#x142;eczno&#x15B;ci<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__search&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown wds-global-navigation__search-input-wrapper wds-is-active&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__search-label&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__search-label&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Search&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-magnifying-glass&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
@@ -6715,7 +6713,7 @@ body {
             <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-cross&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-global-navigation__search-suggestions&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__search-suggestions&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-ellipsis&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>
@@ -6743,16 +6741,16 @@ body {
       <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu wds-dropdown&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__toggle wds-global-navigation__dropdown-toggle&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-small wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user icon&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__account-menu-caption&quot;</span>&gt;</span>My Account<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown-toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-icon wds-icon-tiny wds-dropdown__toggle-chevron&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;user dropdown&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-dropdown-tiny&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-lines-between&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-button wds-is-full-width&quot;</span>&gt;</span>Sign in<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>

@@ -18,13 +18,13 @@
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
 			<div class="wds-global-navigation__link wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
@@ -52,16 +52,16 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
 					<span class="wds-global-navigation__account-menu-caption">My Account</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
@@ -98,13 +98,13 @@
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
 			<div class="wds-global-navigation__link wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
@@ -132,13 +132,13 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__user-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name"/>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">View Profile</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Talk</a></li>
@@ -149,7 +149,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__notifications-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<div class="wds-global-navigation__notifications-menu-counter">3</div>
 					<svg class="wds-icon wds-icon-small" alt="notifications">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
@@ -204,16 +204,16 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
 					<span class="wds-global-navigation__account-menu-caption">Moje konto</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Zaloguj się</button></li>
 						<li>
@@ -268,13 +268,13 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__user-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name"/>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">View Profile</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Talk</a></li>
@@ -285,7 +285,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__notifications-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<div class="wds-global-navigation__notifications-menu-counter">3</div>
 					<svg class="wds-icon wds-icon-small" alt="notifications">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
@@ -323,13 +323,13 @@
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Filme</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
 			<div class="wds-global-navigation__link wds-dropdown wds-is-active">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href= "#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Beliebteste Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Deutschland</a></li>
@@ -357,16 +357,16 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
 					<span class="wds-global-navigation__account-menu-caption">Mein Benutzerkonto</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Anmelden</button></li>
 						<li>
@@ -403,13 +403,13 @@
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
 			<div class="wds-global-navigation__link wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
@@ -437,16 +437,16 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__account-menu wds-dropdown wds-is-active">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
 					<span class="wds-global-navigation__account-menu-caption">My Account</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
@@ -483,13 +483,13 @@
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
 			<div class="wds-global-navigation__link wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
@@ -517,13 +517,13 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__user-menu wds-dropdown wds-is-active">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<img src="./assets/avatar.jpg" class="wds-avatar wds-is-circle" alt="user name"/>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">View Profile</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Talk</a></li>
@@ -534,7 +534,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__notifications-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<div class="wds-global-navigation__notifications-menu-counter">3</div>
 					<svg class="wds-icon wds-icon-small" alt="notifications">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
@@ -572,13 +572,13 @@
 			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
 			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
 			<div class="wds-global-navigation__link wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<span>Wikis</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
 					<ul class="wds-list">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
@@ -606,16 +606,16 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
 					<span class="wds-global-navigation__account-menu-caption">My Account</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
@@ -670,16 +670,16 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
 					<span class="wds-global-navigation__account-menu-caption">プロフィール</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
@@ -715,7 +715,7 @@
 			<a href="#" class="wds-global-navigation__link">Centrum Społeczności</a>
 			<form class="wds-global-navigation__search">
 				<div class="wds-dropdown wds-global-navigation__search-input-wrapper wds-is-active">
-					<label class="wds-dropdown-toggle wds-global-navigation__search-label">
+					<label class="wds-dropdown__toggle wds-global-navigation__search-label">
 						<svg class="wds-icon wds-icon-small" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
@@ -726,7 +726,7 @@
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
-					<div class="wds-dropdown-content wds-global-navigation__search-suggestions">
+					<div class="wds-dropdown__content wds-global-navigation__search-suggestions">
 						<ul class="wds-list wds-has-ellipsis">
 							<li>
 								<a href="#" class="wds-global-navigation__dropdown-link">
@@ -753,16 +753,16 @@
 				</button>
 			</form>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
-				<div class="wds-dropdown-toggle wds-global-navigation__dropdown-toggle">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<svg class="wds-icon wds-icon-small wds-icon" alt="user icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user"></use>
 					</svg>
 					<span class="wds-global-navigation__account-menu-caption">My Account</span>
-					<svg class="wds-icon wds-icon-tiny wds-dropdown-toggle-chevron" alt="user dropdown">
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
 					</svg>
 				</div>
-				<div class="wds-dropdown-content wds-is-right-aligned wds-global-navigation__dropdown">
+				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
 						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
 						<li>
