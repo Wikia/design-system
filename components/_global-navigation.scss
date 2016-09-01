@@ -14,6 +14,8 @@ $notification-counter-size: 18px;
 	&__dropdown-toggle {
 		align-items: center;
 		display: flex;
+		flex: 1;
+		height: $nav-height;
 		justify-content: center;
 	}
 
@@ -247,11 +249,11 @@ $notification-counter-size: 18px;
 		font-size: $typescale-size-minus-3;
 		height: $notification-counter-size;
 		justify-content: center;
-		left: -11px;
+		left: -1px;
 		min-width: $notification-counter-size;
 		padding: 0 4px;
 		position: absolute;
-		top: -8px;
+		top: 8px;
 	}
 
 	&__start-a-wiki-icon {
