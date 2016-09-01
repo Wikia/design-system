@@ -430,8 +430,8 @@ code.sg:first-child {
     box-sizing: inherit; }
   .wds-global-footer ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
   .wds-global-footer__header-wrapper {
     display: block;
     width: 100%; }
@@ -613,9 +613,9 @@ code.sg:first-child {
     color: #fff;
     font-size: 18px;
     font-weight: bold;
-    min-height: 24px;
     margin-bottom: 10px;
     margin-top: 0;
+    min-height: 24px;
     padding: 0; }
   .wds-global-footer__section-description {
     color: #fff;
@@ -623,7 +623,7 @@ code.sg:first-child {
     line-height: 1.3em;
     margin: 0;
     padding: 0; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1083px) {
     .wds-global-footer__main {
       margin: 0 20px; }
     .wds-global-footer__header-wrapper {
@@ -656,15 +656,15 @@ code.sg:first-child {
       .wds-global-footer__wikia-section.wds-is-create-wiki {
         display: none; }
       .wds-global-footer__wikia-section.wds-is-community-apps .wds-global-footer__links-list {
-        margin-top: 5px;
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        margin-top: 5px; }
       .wds-global-footer__wikia-section.wds-is-community-apps .wds-global-footer__link {
         margin-right: 25px; }
     .wds-global-footer.wds-is-international .wds-global-footer__fandom-section.wds-is-follow-us {
       margin-bottom: 37px; }
     .wds-global-footer__links-list-item {
       margin-bottom: 20px; } }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1084px) {
     .wds-global-footer__main {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
@@ -770,9 +770,9 @@ code.sg:first-child {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
     height: 49px;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -785,7 +785,7 @@ code.sg:first-child {
   .wds-global-navigation__dropdown-link {
     color: #39424d;
     text-decoration: none; }
-    .wds-global-navigation__dropdown-link:active, .wds-global-navigation__dropdown-link:hover, .wds-global-navigation__dropdown-link.wds-is-active {
+    .wds-global-navigation__dropdown-link:hover, .wds-global-navigation__dropdown-link:active, .wds-global-navigation__dropdown-link.wds-is-active {
       color: #00b7e0; }
   .wds-global-navigation__content-bar {
     display: -webkit-flex;
@@ -796,7 +796,7 @@ code.sg:first-child {
     position: relative;
     width: 748px;
     z-index: 1; }
-  .wds-global-navigation__account-menu, .wds-global-navigation__link, .wds-global-navigation__logo, .wds-global-navigation__notifications-menu, .wds-global-navigation__search, .wds-global-navigation__user-menu, .wds-global-navigation__start-a-wiki {
+  .wds-global-navigation__logo, .wds-global-navigation__link, .wds-global-navigation__search, .wds-global-navigation__account-menu, .wds-global-navigation__user-menu, .wds-global-navigation__notifications-menu, .wds-global-navigation__start-a-wiki {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -815,9 +815,9 @@ code.sg:first-child {
     padding: 0 8px;
     text-decoration: none;
     white-space: nowrap; }
-  .wds-global-navigation__account-menu:hover, .wds-global-navigation__link:hover, .wds-global-navigation__user-menu:hover, .wds-global-navigation__notifications-menu:hover {
+  .wds-global-navigation__link:hover, .wds-global-navigation__account-menu:hover, .wds-global-navigation__user-menu:hover, .wds-global-navigation__notifications-menu:hover {
     color: #00b7e0; }
-  .wds-global-navigation__account-menu:active, .wds-global-navigation__account-menu.wds-is-active, .wds-global-navigation__link:active, .wds-global-navigation__link.wds-is-active, .wds-global-navigation__user-menu:active, .wds-global-navigation__user-menu.wds-is-active, .wds-global-navigation__notifications-menu:active, .wds-global-navigation__notifications-menu.wds-is-active {
+  .wds-global-navigation__link:active, .wds-global-navigation__link.wds-is-active, .wds-global-navigation__account-menu:active, .wds-global-navigation__account-menu.wds-is-active, .wds-global-navigation__user-menu:active, .wds-global-navigation__user-menu.wds-is-active, .wds-global-navigation__notifications-menu:active, .wds-global-navigation__notifications-menu.wds-is-active {
     background-color: #656e78;
     border-color: #363b41;
     color: #fff; }
@@ -825,11 +825,12 @@ code.sg:first-child {
     border-top: 6px solid #39424d; }
   .wds-global-navigation__logo-fandom {
     height: 100%;
+    padding-bottom: 4px;
     width: 230px; }
   .wds-global-navigation__link {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; }
     .wds-global-navigation__link.wds-is-games {
       border-color: #94d11f; }
       .wds-global-navigation__link.wds-is-games:active, .wds-global-navigation__link.wds-is-games.wds-is-active {
@@ -853,9 +854,9 @@ code.sg:first-child {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; }
   .wds-global-navigation__search-label {
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -864,17 +865,17 @@ code.sg:first-child {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
     z-index: 2; }
   .wds-global-navigation__search-input {
     border: 0;
     color: #333;
     display: none;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
     font-size: 14px;
     min-width: 0;
     padding: 3px 4px;
@@ -897,6 +898,7 @@ code.sg:first-child {
       display: none; }
   .wds-global-navigation__search-close {
     display: none;
+    margin: 0;
     padding: 3px;
     z-index: 2; }
   .wds-global-navigation__search-close-icon {
@@ -933,8 +935,8 @@ code.sg:first-child {
     -ms-flex-align: center;
     align-items: center;
     background-color: #00b7e0;
-    border-radius: 9px;
     border: 1px solid #fff;
+    border-radius: 9px;
     box-sizing: border-box;
     color: #fff;
     display: -webkit-flex;
@@ -959,9 +961,9 @@ code.sg:first-child {
     -ms-flex: 0 1 auto;
     flex: 0 1 auto; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-input {
     display: block; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-input-wrapper {
@@ -969,9 +971,9 @@ code.sg:first-child {
   .wds-global-navigation.wds-search-is-active .wds-global-navigation__link {
     display: none; }
   .wds-global-navigation.wds-search-is-active .wds-global-navigation__search {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; }
   .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-input-wrapper {
     border-bottom-width: 1px;
     margin-right: 15px; }
@@ -995,9 +997,9 @@ code.sg:first-child {
     .wds-global-navigation__content-bar {
       width: 1004px; }
     .wds-global-navigation__search {
-      -webkit-flex: 2;
-      -ms-flex: 2;
-      flex: 2;
+      -webkit-flex: 2 1 auto;
+      -ms-flex: 2 1 auto;
+      flex: 2 1 auto;
       padding-left: 8px; }
     .wds-global-navigation__search-input-wrapper {
       border-bottom: 1px solid #656e78; }
@@ -1082,7 +1084,7 @@ code.sg:first-child {
   content: "$breakpoint-m-only: only screen and (min-width:768px) and (max-width:1023px)"; }
 
 .breakpoint-preview-l-down::after {
-  content: "$breakpoint-l-down: only screen and (min-width:1024px) and (max-width:1083px)"; }
+  content: "$breakpoint-l-down: only screen and (max-width:1083px)"; }
 
 .breakpoint-preview-l-up::after {
   content: "$breakpoint-l-up: only screen and (min-width:1024px)"; }
