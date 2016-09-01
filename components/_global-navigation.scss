@@ -2,6 +2,7 @@ $border-top-width: 6px;
 $nav-height: 49px;
 $nav-background-color: $color-white;
 
+$logo-width: 230px;
 $notification-counter-size: 18px;
 
 .wds-global-navigation {
@@ -50,6 +51,7 @@ $notification-counter-size: 18px;
 
 	&__logo,
 	&__link,
+	&__wikis-menu,
 	&__search,
 	&__account-menu,
 	&__user-menu,
@@ -70,6 +72,7 @@ $notification-counter-size: 18px;
 	}
 
 	&__link,
+	&__wikis-menu,
 	&__account-menu,
 	&__user-menu,
 	&__notifications-menu {
@@ -85,7 +88,6 @@ $notification-counter-size: 18px;
 		}
 	}
 
-	$logo-width: 230px;
 	&__logo {
 		border-top: $border-top-width solid $color-dark-blue-gray;
 		//Safari will still make container fluid even when content inside has static width
@@ -133,6 +135,10 @@ $notification-counter-size: 18px;
 				border-color: darken($color-tv, 10%);
 			}
 		}
+	}
+
+	&__wikis-menu {
+		flex: 0 1 auto;
 	}
 
 	&__search-input-wrapper {
@@ -318,6 +324,12 @@ $notification-counter-size: 18px;
 	@media #{$breakpoint-l-up} {
 		&__content-bar {
 			width: 1004px;
+		}
+
+		&__wikis-menu {
+			// Safari doesn't set default flex values if we use `flex: 1;`
+			// it requires us to put these values explicitly.
+			flex: 1 1 auto;
 		}
 
 		&__search {
