@@ -273,7 +273,9 @@ $notification-counter-size: 18px;
 		&__search {
 			// Safari doesn't set default flex values if we use `flex: 1;`
 			// it requires us to put these values explicitly.
-			flex: 1 1 auto;
+			//
+			// Safari doesn't size search properly if flex-basis is set to `auto`
+			flex: 1 1 0;
 		}
 
 		&__search-input {
