@@ -199,7 +199,7 @@ $notification-counter-size: 18px;
 
 	&__search-close {
 		display: none;
-		// iPad Safari fix for bleeding search suggestions shadow
+		// Safari fix for bleeding search suggestions shadow
 		margin: 0;
 		padding: 3px;
 		z-index: 2;
