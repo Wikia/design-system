@@ -56,14 +56,14 @@
 	width: 250px;
 }
 
-.sg-dropdown-preview .wds-dropdown-toggle {
+.sg-dropdown-preview .wds-dropdown__toggle {
 	background: #00d4b4;
 	color: #fff;
 	height: 35px;
 	padding: 0 10px;
 }
 
-.sg-dropdown-preview .wds-dropdown-toggle .wds-dropdown-toggle-chevron {
+.sg-dropdown-preview .wds-dropdown__toggle .wds-dropdown__toggle-chevron {
 	height: 35px;
 	vertical-align: middle;
 }
@@ -75,6 +75,14 @@
 }
 
 /* Separate navigation to avoid hiding content by other dropdowns */
-.wds-global-navigation.sg-has-space-for-dropdowns {
+.wds-global-navigation.sg-has-large-space-for-dropdowns {
 	margin-bottom: 200px;
+}
+
+.wds-global-navigation.sg-has-medium-space-for-dropdowns {
+	margin-bottom: 150px;
+}
+
+.wds-global-navigation.sg-has-small-space-for-dropdowns {
+	margin-bottom: 100px;
 }
