@@ -115,11 +115,11 @@ function injectFileContents(src, dest, prefix, suffix) {
 }
 
 // BUILD
-gulp.task('clean-up', function () {
+gulp.task('reference-page:clean-up', function () {
 	return gulp.src(tmpDir, {read: false}).pipe(clean());
 });
 
-gulp.task('build-styles', ['clean-up'], function () {
+gulp.task('reference-page:build-styles', ['reference-page:clean-up'], function () {
 	return gulp.src('reference-page/styles/index.scss')
 		.pipe(scss())
 		.pipe(autoprefixer({
@@ -130,7 +130,7 @@ gulp.task('build-styles', ['clean-up'], function () {
 		.pipe(gulp.dest(tmpDir));
 });
 
-gulp.task('build-html', ['build-styles'], function () {
+gulp.task('reference-page:build-html', ['reference-page:build-styles'], function () {
 	return gulp.src(['./reference-page/styles/*.scss', './reference-page/components/*.md'])
 		.pipe(styledown({
 			config: './reference-page/config/config.md',
@@ -139,22 +139,22 @@ gulp.task('build-html', ['build-styles'], function () {
 		.pipe(gulp.dest(tmpDir));
 });
 
-gulp.task('inject-styles', ['build-html'], function () {
+gulp.task('reference-page:inject-styles', ['reference-page:build-html'], function () {
 	return injectFileContents(
 		['./reference-page/config/default-styles.css', './reference-page/config/custom-styles.css', tmpDir + 'component-styles.css'],
 		tmpDir, '<style>', '</style>'
 	);
 });
 
-gulp.task('inject-scripts', ['inject-styles'], function () {
+gulp.task('reference-page:inject-scripts', ['reference-page:inject-styles'], function () {
 	return injectFileContents('./reference-page/config/build.js', tmpDir, '<script>', '</script>');
 });
 
-gulp.task('inject-icons', ['inject-scripts'], function () {
+gulp.task('reference-page:inject-icons', ['reference-page:inject-scripts'], function () {
 	return injectFileContents('./dist/svg/*.svg', tmpDir);
 });
 
-gulp.task('build-reference-page', ['inject-icons'], function () {
+gulp.task('build-reference-page', ['reference-page:inject-icons'], function () {
 	return gulp.src(tmpDir + outputFile).pipe(gulp.dest(outputDir));
 });
 
