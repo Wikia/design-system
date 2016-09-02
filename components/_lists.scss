@@ -32,7 +32,8 @@
 		}
 	}
 
-	&.wds-has-ellipsis > li {
+	&.wds-has-ellipsis > li,
+	&.wds-has-ellipsis.wds-is-linked > li > a {
 		@include ellipsis;
 	}
 
