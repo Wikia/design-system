@@ -35,4 +35,15 @@
 	&.wds-has-ellipsis > li {
 		@include ellipsis;
 	}
+
+	&.wds-is-linked {
+		> li {
+			padding: 0;
+
+			> a {
+				display: block;
+				padding: 11px 0;
+			}
+		}
+	}
 }
