@@ -154,7 +154,7 @@ gulp.task('reference-page:inject-icons', ['reference-page:inject-scripts'], func
 	return injectFileContents('./dist/svg/*.svg', tmpDir);
 });
 
-gulp.task('build-reference-page', ['reference-page:inject-icons'], function () {
+gulp.task('reference-page:build', ['reference-page:inject-icons'], function () {
 	return gulp.src(tmpDir + outputFile).pipe(gulp.dest(outputDir));
 });
 
@@ -183,4 +183,4 @@ gulp.task('watch', ['default'], function () {
 });
 
 // DEFAULT TASK
-gulp.task('default', ['svg', 'build-reference-page']);
+gulp.task('default', ['svg', 'reference-page:build']);
