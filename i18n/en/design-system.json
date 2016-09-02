@@ -43,5 +43,6 @@
   "global-footer-licensing-and-vertical-description-param-vertical-music": "Music",
   "global-footer-licensing-and-vertical-description-param-vertical-movies": "Movies",
   "global-footer-full-site-link": "View Full Site",
-  "global-footer-mobile-site-link": "View Mobile Site"
+  "global-footer-mobile-site-link": "View Mobile Site",
+  "global-footer-copyright-wikia": "Copyright __date__ Wikia, Inc."
 }
