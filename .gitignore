@@ -3,3 +3,14 @@
 *._.DS_Store
 node_modules/
 bower_components/
+
+reference-page/tmp/
+
+# Visual Regression Testing files that shouldn't be commited as they are of no use
+reference-page/visuals/reference-page/diff
+reference-page/visuals/reference-page/*.regression.png
+reference-page/visuals/reference-page/reference-page.png
+reference-page/visuals/reference-page/reference-page.*px.png
+
+# Jenkins
+debug.log
