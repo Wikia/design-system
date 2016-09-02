@@ -395,10 +395,10 @@ code.sg:first-child {
       color: #00647a; }
 
 .wds-dropdown {
-  cursor: pointer;
   display: inline-block;
   position: relative; }
   .wds-dropdown__toggle {
+    cursor: pointer;
     position: relative;
     z-index: 2; }
   .wds-dropdown__toggle-chevron {
@@ -782,8 +782,8 @@ code.sg:first-child {
     justify-content: center; }
   .wds-global-navigation__dropdown-content {
     color: #39424d;
+    min-width: 190px;
     top: calc(100% + 1px);
-    width: 190px;
     z-index: -1; }
   .wds-global-navigation__dropdown-link {
     color: #39424d;
@@ -797,7 +797,7 @@ code.sg:first-child {
     height: 49px;
     margin: 0 auto;
     position: relative;
-    width: 748px;
+    width: 768px;
     z-index: 1; }
   .wds-global-navigation__logo, .wds-global-navigation__link, .wds-global-navigation__wikis-menu, .wds-global-navigation__search, .wds-global-navigation__account-menu, .wds-global-navigation__user-menu, .wds-global-navigation__notifications-menu, .wds-global-navigation__start-a-wiki {
     -webkit-align-items: center;
@@ -1046,10 +1046,16 @@ code.sg:first-child {
     border-bottom: solid 1px #e6e6e6; }
     .wds-list.wds-has-lines-between > li:last-child {
       border: 0; }
-  .wds-list.wds-has-ellipsis > li {
+  .wds-list.wds-has-ellipsis > li,
+  .wds-list.wds-has-ellipsis.wds-is-linked > li > a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
+  .wds-list.wds-is-linked > li {
+    padding: 0; }
+    .wds-list.wds-is-linked > li > a {
+      display: block;
+      padding: 11px 0; }
 
 /**
  * Breakpoints:
@@ -5089,7 +5095,7 @@ body {
                   </svg>
                 </div>
                 <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-                  <ul class="wds-list">
+                  <ul class="wds-list wds-is-linked">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
                     </li>
@@ -5171,7 +5177,7 @@ body {
                   </svg>
                 </div>
                 <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-                  <ul class="wds-list">
+                  <ul class="wds-list wds-is-linked">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
                     </li>
@@ -5209,7 +5215,7 @@ body {
                   </svg>
                 </div>
                 <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
-                  <ul class="wds-list">
+                  <ul class="wds-list wds-is-linked">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">View Profile</a>
                     </li>
@@ -5349,7 +5355,7 @@ body {
                   </svg>
                 </div>
                 <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
-                  <ul class="wds-list">
+                  <ul class="wds-list wds-is-linked">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">View Profile</a>
                     </li>
@@ -5410,7 +5416,7 @@ body {
                   </svg>
                 </div>
                 <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-                  <ul class="wds-list">
+                  <ul class="wds-list wds-is-linked">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Beliebteste Wikis</a>
                     </li>
@@ -5492,7 +5498,7 @@ body {
                   </svg>
                 </div>
                 <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-                  <ul class="wds-list">
+                  <ul class="wds-list wds-is-linked">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
                     </li>
@@ -5574,7 +5580,7 @@ body {
                   </svg>
                 </div>
                 <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-                  <ul class="wds-list">
+                  <ul class="wds-list wds-is-linked">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
                     </li>
@@ -5612,7 +5618,7 @@ body {
                   </svg>
                 </div>
                 <div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
-                  <ul class="wds-list">
+                  <ul class="wds-list wds-is-linked">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">View Profile</a>
                     </li>
@@ -5673,7 +5679,7 @@ body {
                   </svg>
                 </div>
                 <div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-                  <ul class="wds-list">
+                  <ul class="wds-list wds-is-linked">
                     <li>
                       <a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a>
                     </li>
@@ -5821,7 +5827,7 @@ body {
                     </svg>
                   </button>
                   <div class="wds-dropdown__content wds-global-navigation__search-suggestions">
-                    <ul class="wds-list wds-has-ellipsis">
+                    <ul class="wds-list wds-has-ellipsis wds-is-linked">
                       <li>
                         <a href="#" class="wds-global-navigation__dropdown-link">
                           <strong>Star</strong>&#xA0;Wars
@@ -5899,7 +5905,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-is-linked&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -5981,7 +5987,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-is-linked&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -6019,7 +6025,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-is-linked&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>View Profile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -6159,7 +6165,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-is-linked&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>View Profile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -6220,7 +6226,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-is-linked&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Beliebteste Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -6302,7 +6308,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-is-linked&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -6384,7 +6390,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-is-linked&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -6422,7 +6428,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-is-linked&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>View Profile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -6483,7 +6489,7 @@ body {
         <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__dropdown-content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-is-linked&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -6631,7 +6637,7 @@ body {
           <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-dropdown__content wds-global-navigation__search-suggestions&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-ellipsis&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-list wds-has-ellipsis wds-is-linked&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-navigation__dropdown-link&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Star<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>&amp;nbsp;Wars

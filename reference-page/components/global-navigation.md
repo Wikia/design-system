@@ -21,7 +21,7 @@
 					</svg>
 				</div>
 				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-					<ul class="wds-list">
+					<ul class="wds-list wds-is-linked">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
 					</ul>
@@ -97,7 +97,7 @@
 					</svg>
 				</div>
 				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-					<ul class="wds-list">
+					<ul class="wds-list wds-is-linked">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
 					</ul>
@@ -131,7 +131,7 @@
 					</svg>
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
-					<ul class="wds-list">
+					<ul class="wds-list wds-is-linked">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">View Profile</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Talk</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Preferences</a></li>
@@ -259,7 +259,7 @@
 					</svg>
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
-					<ul class="wds-list">
+					<ul class="wds-list wds-is-linked">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">View Profile</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Talk</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Preferences</a></li>
@@ -310,7 +310,7 @@
 					</svg>
 				</div>
 				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-					<ul class="wds-list">
+					<ul class="wds-list wds-is-linked">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Beliebteste Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Deutschland</a></li>
 					</ul>
@@ -386,7 +386,7 @@
 					</svg>
 				</div>
 				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-					<ul class="wds-list">
+					<ul class="wds-list wds-is-linked">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
 					</ul>
@@ -462,7 +462,7 @@
 					</svg>
 				</div>
 				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-					<ul class="wds-list">
+					<ul class="wds-list wds-is-linked">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
 					</ul>
@@ -496,7 +496,7 @@
 					</svg>
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
-					<ul class="wds-list">
+					<ul class="wds-list wds-is-linked">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">View Profile</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Talk</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">My Preferences</a></li>
@@ -547,7 +547,7 @@
 					</svg>
 				</div>
 				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
-					<ul class="wds-list">
+					<ul class="wds-list wds-is-linked">
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
 						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
 					</ul>
@@ -687,7 +687,7 @@
 						</svg>
 					</button>
 					<div class="wds-dropdown__content wds-global-navigation__search-suggestions">
-						<ul class="wds-list wds-has-ellipsis">
+						<ul class="wds-list wds-has-ellipsis wds-is-linked">
 							<li>
 								<a href="#" class="wds-global-navigation__dropdown-link">
 									<strong>Star</strong>&nbsp;Wars
