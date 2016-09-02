@@ -8,6 +8,7 @@
   "ignore": [
     "**/.*",
     "gulpfile.js",
-    "reference-page"
+    "reference-page/",
+    "tests/"
   ]
 }
