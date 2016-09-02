@@ -395,10 +395,10 @@ code.sg:first-child {
       color: #00647a; }
 
 .wds-dropdown {
-  cursor: pointer;
   display: inline-block;
   position: relative; }
   .wds-dropdown__toggle {
+    cursor: pointer;
     position: relative;
     z-index: 2; }
   .wds-dropdown__toggle-chevron {
@@ -782,8 +782,8 @@ code.sg:first-child {
     justify-content: center; }
   .wds-global-navigation__dropdown-content {
     color: #39424d;
+    min-width: 190px;
     top: calc(100% + 1px);
-    width: 190px;
     z-index: -1; }
   .wds-global-navigation__dropdown-link {
     color: #39424d;
@@ -797,7 +797,7 @@ code.sg:first-child {
     height: 49px;
     margin: 0 auto;
     position: relative;
-    width: 748px;
+    width: 768px;
     z-index: 1; }
   .wds-global-navigation__logo, .wds-global-navigation__link, .wds-global-navigation__wikis-menu, .wds-global-navigation__search, .wds-global-navigation__account-menu, .wds-global-navigation__user-menu, .wds-global-navigation__notifications-menu, .wds-global-navigation__start-a-wiki {
     -webkit-align-items: center;
@@ -1030,11 +1030,11 @@ code.sg:first-child {
 .wds-list {
   list-style-type: none;
   margin: 0;
-  padding: 7px 18px; }
+  padding: 7px 0; }
   .wds-list > li {
     font-size: 14px;
     line-height: 1em;
-    padding: 11px 0; }
+    padding: 11px 18px; }
   .wds-list.wds-has-big-items {
     padding-bottom: 2px;
     padding-top: 2px; }
@@ -1046,10 +1046,16 @@ code.sg:first-child {
     border-bottom: solid 1px #e6e6e6; }
     .wds-list.wds-has-lines-between > li:last-child {
       border: 0; }
-  .wds-list.wds-has-ellipsis > li {
+  .wds-list.wds-has-ellipsis > li,
+  .wds-list.wds-has-ellipsis.wds-is-linked > li > a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
+  .wds-list.wds-is-linked > li {
+    padding: 0; }
+    .wds-list.wds-is-linked > li > a {
+      display: block;
+      padding: 11px 18px; }
 
 /**
  * Breakpoints:
