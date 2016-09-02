@@ -102,28 +102,33 @@ $notification-counter-size: 18px;
 	}
 
 	// These are temporary styles which should be removed after 4th October 2016
+
 	&__logo-wikia {
 		flex-basis: 0;
-
-		span {
-			border-bottom: 1px solid;
-			border-top: 1px solid;
-			color: #aaa;
-			display: inline-block;
-			font-size: 10px;
-			font-weight: bold;
-			line-height: 16px;
-			margin-left: 8px;
-			text-transform: uppercase;
-		}
-
-		svg {
-			fill: $color-dark-blue;
-			height: 100%;
-			padding-bottom: 4px;
-			width: 90px;
-		}
 	}
+
+	&__logo-wikia-icon {
+		fill: $color-dark-blue;
+		height: 100%;
+		padding-bottom: 4px;
+		width: 90px;
+	}
+
+	&__logo-wikia-text {
+		border: {
+			bottom: 1px solid;
+			top: 1px solid;
+		};
+		color: #aaa;
+		display: inline-block;
+		font-size: $typescale-size-minus-3;
+		font-weight: bold;
+		line-height: $typescale-size-base;
+		margin-left: 8px;
+		text-transform: uppercase;
+	}
+
+	// End of temporary styles
 
 	&__link {
 		// Safari doesn't set default flex values if we use `flex: 1;`
