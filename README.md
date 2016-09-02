@@ -40,7 +40,7 @@ We use [visual-regression-testing](https://github.com/Wikia/visual-regression-te
 
 Tests are running always on the same QA VM which makes results consistent. How the page looks depends not just on the code but also on the system, browser, fonts installed, screen size and so on. Comparing tests results between different systems doesn't make much sense as they will always differ. That's why we don't recommend running the VRT locally.
 
-Tests are started on every push to the repo and if they fail on your branch you can't merge it to the `gh-pages` one. When the tests fail Jenkins will add a commit comment with two links:
+Tests are started on every push to the repo and if they fail on your branch you can't merge it to the `master`. When the tests fail Jenkins will add a commit comment with two links:
 
 1. Jenkins workspace where you can see screenshots before and after the change and their diffs.
 1. Jenkins job that will update the baseline on your branch. Run it when you're sure that the changes were correct.
