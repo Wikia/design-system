@@ -1,7 +1,7 @@
 # Wikia | Design System
 
 ## Design System Reference Page
-https://rawgit.com/Wikia/design-system/DS-merge/reference-page/index.html
+https://rawgit.com/Wikia/design-system/master/reference-page/index.html
 
 ###Developing
 
