@@ -169,7 +169,7 @@ $notification-counter-size: 18px;
 		// Firefox doesn't size input properly if our input
 		// has `width` set in `%` and is inside `flexbox`.
 		min-width: 0;
-		padding: 3px 4px;
+		padding: 0;
 		width: 0;
 
 		&:focus {
@@ -304,6 +304,7 @@ $notification-counter-size: 18px;
 		}
 
 		&__search-input {
+			padding: 3px 4px;
 			width: 100%;
 		}
 
