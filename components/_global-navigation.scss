@@ -159,6 +159,10 @@ $notification-counter-size: 18px;
 		z-index: 2;
 	}
 
+	&__search-label-icon {
+		cursor: pointer;
+	}
+
 	&__search-input {
 		border: 0;
 		color: $color-dark-gray;

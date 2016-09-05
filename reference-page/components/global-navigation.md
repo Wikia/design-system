@@ -30,7 +30,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-global-navigation__search-input-wrapper">
 					<label class="wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
@@ -106,7 +106,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-global-navigation__search-input-wrapper">
 					<label class="wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
@@ -174,7 +174,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-global-navigation__search-input-wrapper">
 					<label class="wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Szukaj"/>
@@ -234,7 +234,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-global-navigation__search-input-wrapper">
 					<label class="wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Szukaj"/>
@@ -319,7 +319,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-global-navigation__search-input-wrapper">
 					<label class="wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Suche"/>
@@ -395,7 +395,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-global-navigation__search-input-wrapper">
 					<label class="wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
@@ -471,7 +471,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-global-navigation__search-input-wrapper">
 					<label class="wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
@@ -556,7 +556,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-global-navigation__search-input-wrapper">
 					<label class="wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
@@ -616,7 +616,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-global-navigation__search-input-wrapper">
 					<label class="wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="検索"/>
@@ -676,7 +676,7 @@
 			<form class="wds-global-navigation__search">
 				<div class="wds-dropdown wds-global-navigation__search-input-wrapper wds-is-active">
 					<label class="wds-dropdown__toggle wds-global-navigation__search-label">
-						<svg class="wds-icon wds-icon-small" alt="Search">
+						<svg class="wds-icon wds-icon-small wds-global-navigation__search-icon" alt="Search">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass"></use>
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Szukaj na Wookieepedia..." value="Star"/>
