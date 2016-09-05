@@ -12,7 +12,7 @@ function runTest(mochaTest, done, seleniumOptions) {
 
 	client
 		.init()
-		.url(fileUrl('reference-page/index.html'))
+		.url(fileUrl('index.html'))
 		.webdrivercss(testCase.group, config.webdrivercssTestCase, function (err, resp) {
 			var result = resp[testCase.name][0];
 
