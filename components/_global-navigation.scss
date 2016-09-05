@@ -307,6 +307,10 @@ $notification-counter-size: 18px;
 			flex: 1 1 0;
 		}
 
+		&__search-label-icon:hover {
+			color: $color-dark-blue-gray;
+		}
+
 		&__search-input {
 			display: block;
 		}
@@ -334,6 +338,10 @@ $notification-counter-size: 18px;
 			&.wds-is-active {
 				border-bottom-color: $color-link;
 			}
+		}
+
+		&__search-label-icon:hover {
+			color: $color-dark-blue-gray;
 		}
 
 		&__search-input::placeholder {
@@ -380,6 +388,10 @@ $notification-counter-size: 18px;
 
 		&__search-input-wrapper {
 			border-bottom: 1px solid $color-slate-gray;
+		}
+
+		&__search-label-icon:hover {
+			color: $color-dark-blue-gray;
 		}
 
 		&__search-input {
