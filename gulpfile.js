@@ -131,12 +131,23 @@ gulp.task('reference-page:build-styles', ['reference-page:clean-up'], function (
 });
 
 gulp.task('reference-page:build-html', ['reference-page:build-styles'], function () {
-	return gulp.src(['./reference-page/styles/*.scss', './reference-page/components/*.md'])
-		.pipe(styledown({
-			config: './reference-page/config/config.md',
-			filename: outputFile
-		}))
-		.pipe(gulp.dest(tmpDir));
+return gulp.src(['./reference-page/styles/*.scss', './reference-page/components/*.md'])
+	.pipe(styledown({
+		config: './reference-page/config/config.md',
+		template: [
+			'<!doctype html>',
+			'<html>',
+			'<head>',
+			'<meta charset="utf-8">',
+			'<title>Wikia Design System</title>',
+			'</head>',
+			'<body>',
+			'</body>',
+			'</html>'
+		].join('\n'),
+		filename: outputFile
+	}))
+	.pipe(gulp.dest(tmpDir));
 });
 
 gulp.task('reference-page:inject-styles', ['reference-page:build-html'], function () {
