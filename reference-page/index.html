@@ -982,6 +982,9 @@ code.sg:first-child {
     min-width: 14px;
     width: 14px;
     display: none; }
+  .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-input {
+    padding: 3px 4px;
+    width: 100%; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__link {
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
@@ -994,7 +997,7 @@ code.sg:first-child {
     border-bottom-width: 1px; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-label-icon:hover {
     color: #39424d; }
-  .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-input {
+  .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-input {
     padding: 3px 4px;
     width: 100%; }
   .wds-global-navigation.wds-search-is-active .wds-global-navigation__link {
@@ -1018,9 +1021,6 @@ code.sg:first-child {
     color: #999; }
   .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-input::placeholder {
     color: #999; }
-  .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-input {
-    padding: 3px 4px;
-    width: 100%; }
   .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-submit, .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-close {
     display: block; }
   .wds-global-navigation .wds-user-is-logged-in .wds-global-navigation__start-a-wiki-caption {
@@ -1028,6 +1028,9 @@ code.sg:first-child {
   .wds-global-navigation .wds-user-is-logged-in .wds-global-navigation__start-a-wiki-icon {
     display: block; }
   @media only screen and (min-width: 1024px) {
+    .wds-global-navigation__search-input {
+      padding: 3px 4px;
+      width: 100%; }
     .wds-global-navigation__content-bar {
       width: 1004px; }
     .wds-global-navigation__wikis-menu {
@@ -1042,9 +1045,6 @@ code.sg:first-child {
       border-bottom: 1px solid #656e78; }
     .wds-global-navigation__search-label-icon:hover {
       color: #39424d; }
-    .wds-global-navigation__search-input {
-      padding: 3px 4px;
-      width: 100%; }
     .wds-global-navigation__account-menu-caption, .wds-global-navigation__start-a-wiki-caption {
       display: inline; }
     .wds-global-navigation__start-a-wiki-icon {
