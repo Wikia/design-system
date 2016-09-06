@@ -672,7 +672,23 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia"></use>
 				</svg>
 			</a>
-			<a href="#" class="wds-global-navigation__link">Centrum Społeczności</a>
+			<a href="#" class="wds-global-navigation__link wds-is-games">Games</a>
+			<a href="#" class="wds-global-navigation__link wds-is-movies">Movies</a>
+			<a href="#" class="wds-global-navigation__link wds-is-tv">TV</a>
+			<div class="wds-global-navigation__wikis-menu wds-dropdown">
+				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
+					<span>Wikis</span>
+					<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" alt="user dropdown">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny"></use>
+					</svg>
+				</div>
+				<div class="wds-dropdown__content wds-global-navigation__dropdown-content">
+					<ul class="wds-list wds-is-linked">
+						<li><a href="#" class="wds-global-navigation__dropdown-link">Explore Wikis</a></li>
+						<li><a href="#" class="wds-global-navigation__dropdown-link">Community Central</a></li>
+					</ul>
+				</div>
+			</div>
 			<form class="wds-global-navigation__search">
 				<div class="wds-dropdown wds-global-navigation__search-input-wrapper wds-is-active">
 					<label class="wds-dropdown__toggle wds-global-navigation__search-label">

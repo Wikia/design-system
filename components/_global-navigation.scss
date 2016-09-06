@@ -329,7 +329,8 @@ $notification-counter-size: 18px;
 	&.wds-search-is-active .wds-global-navigation {
 		@include visible-search-input;
 
-		&__link {
+		&__link,
+		&__wikis-menu {
 			display: none;
 		}
 
