@@ -14,6 +14,12 @@ $notification-counter-size: 18px;
 	}
 }
 
+@mixin search-label-icon-default-hover-color {
+	&__search-label-icon:hover {
+		color: $color-dark-blue-gray;
+	}
+}
+
 @mixin search-input-default-placeholder-color {
 	&__search-input::placeholder {
 		color: $color-dark-blue-gray;
@@ -312,6 +318,7 @@ $notification-counter-size: 18px;
 
 	&.wds-search-is-always-visible .wds-global-navigation {
 		@include visible-search-input;
+		@include search-label-icon-default-hover-color;
 		@include search-input-default-placeholder-color;
 
 		&__link {
@@ -331,14 +338,11 @@ $notification-counter-size: 18px;
 		&__search-input-wrapper {
 			border-bottom-width: 1px;
 		}
-
-		&__search-label-icon:hover {
-			color: $color-dark-blue-gray;
-		}
 	}
 
 	&.wds-search-is-active .wds-global-navigation {
 		@include visible-search-input;
+		@include search-label-icon-default-hover-color;
 
 		&__link,
 		&__wikis-menu {
@@ -358,10 +362,6 @@ $notification-counter-size: 18px;
 			&.wds-is-active {
 				border-bottom-color: $color-link;
 			}
-		}
-
-		&__search-label-icon:hover {
-			color: $color-dark-blue-gray;
 		}
 
 		&__search-input::placeholder {
@@ -386,6 +386,7 @@ $notification-counter-size: 18px;
 
 	@media #{$breakpoint-l-up} {
 		@include visible-search-input;
+		@include search-label-icon-default-hover-color;
 		@include search-input-default-placeholder-color;
 
 		&__content-bar {
@@ -406,10 +407,6 @@ $notification-counter-size: 18px;
 
 		&__search-input-wrapper {
 			border-bottom: 1px solid $color-slate-gray;
-		}
-
-		&__search-label-icon:hover {
-			color: $color-dark-blue-gray;
 		}
 
 		&__account-menu-caption,
