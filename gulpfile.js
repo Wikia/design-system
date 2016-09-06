@@ -95,7 +95,7 @@ gulp.task('svg', ['svg-sprite', 'svg-individual']);
 // BUILD DESIGN SYSTEM STYLES
 gulp.task('build-styles', function () {
 	return gulp.src('dist/styles.scss')
-		.pipe(scss())
+		.pipe(scss({outputStyle: 'compressed'}))
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions'],
 			cascade: false
