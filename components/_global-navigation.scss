@@ -14,6 +14,12 @@ $notification-counter-size: 18px;
 	}
 }
 
+@mixin search-input-default-placeholder-color {
+	&__search-input::placeholder {
+		color: $color-dark-blue-gray;
+	}
+}
+
 .wds-global-navigation {
 	background-color: $nav-background-color;
 	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
@@ -226,7 +232,7 @@ $notification-counter-size: 18px;
 		}
 
 		&::placeholder {
-			color: $color-dark-blue-gray;
+			color: transparent;
 			opacity: 1;
 		}
 
@@ -306,6 +312,7 @@ $notification-counter-size: 18px;
 
 	&.wds-search-is-always-visible .wds-global-navigation {
 		@include visible-search-input;
+		@include search-input-default-placeholder-color;
 
 		&__link {
 			// Safari doesn't set default flex values if we use `flex: 0;`
@@ -379,6 +386,7 @@ $notification-counter-size: 18px;
 
 	@media #{$breakpoint-l-up} {
 		@include visible-search-input;
+		@include search-input-default-placeholder-color;
 
 		&__content-bar {
 			width: 1004px;
