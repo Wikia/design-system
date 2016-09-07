@@ -92,6 +92,17 @@ gulp.task('svg-individual', function () {
 gulp.task('svg', ['svg-sprite', 'svg-individual']);
 
 
+// BUILD DESIGN SYSTEM STYLES
+gulp.task('build-styles', function () {
+	return gulp.src('dist/styles.scss')
+		.pipe(scss({outputStyle: 'compressed'}))
+		.pipe(autoprefixer({
+			browsers: ['last 3 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest('dist/css'));
+});
+
 // BUILD REFERENCE PAGE
 
 var tmpDir = './reference-page/tmp/',
@@ -194,4 +205,4 @@ gulp.task('watch', ['default'], function () {
 });
 
 // DEFAULT TASK
-gulp.task('default', ['svg', 'reference-page:build']);
+gulp.task('default', ['svg', 'build-styles', 'reference-page:build']);
