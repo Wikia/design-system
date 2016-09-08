@@ -1,3 +1,7 @@
+body {
+	background-color: #fff;
+}
+
 .color-preview-group,
 .icon-preview-group {
 	align-items: flex-start;
