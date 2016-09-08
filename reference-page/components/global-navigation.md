@@ -59,10 +59,10 @@
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
+						<li><a href="#" class="wds-button wds-is-full-width">Sign in</a></li>
 						<li>
 							<div class="wds-global-navigation__account-menu-dropdown-caption">Don't have an account?</div>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
+							<a href="#" class="wds-button wds-is-secondary wds-is-full-width">Register</a>
 						</li>
 					</ul>
 				</div>
@@ -203,10 +203,10 @@
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Zaloguj się</button></li>
+						<li><a href="#" class="wds-button wds-is-full-width">Zaloguj się</a></li>
 						<li>
 							<div class="wds-global-navigation__account-menu-dropdown-caption">Nie masz jeszcze konta?</div>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Zarejestruj się</button>
+							<a href="#" class="wds-button wds-is-secondary wds-is-full-width">Zarejestruj się</a>
 						</li>
 					</ul>
 				</div>
@@ -348,10 +348,10 @@
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Anmelden</button></li>
+						<li><a href="#" class="wds-button wds-is-full-width">Anmelden</a></li>
 						<li>
 							<div class="wds-global-navigation__account-menu-dropdown-caption">Du hast kein konto?</div>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Registrieren</button>
+							<a href="#" class="wds-button wds-is-secondary wds-is-full-width">Registrieren</a>
 						</li>
 					</ul>
 				</div>
@@ -424,10 +424,10 @@
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
+						<li><a href="#" class="wds-button wds-is-full-width">Sign in</a></li>
 						<li>
 							<div class="wds-global-navigation__account-menu-dropdown-caption">Don't have an account?</div>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
+							<a href="#" class="wds-button wds-is-secondary wds-is-full-width">Register</a>
 						</li>
 					</ul>
 				</div>
@@ -585,10 +585,10 @@
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
+						<li><a href="#" class="wds-button wds-is-full-width">Sign in</a></li>
 						<li>
 							<div class="wds-global-navigation__account-menu-dropdown-caption">Don't have an account?</div>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
+							<a href="#" class="wds-button wds-is-secondary wds-is-full-width">Register</a>
 						</li>
 					</ul>
 				</div>
@@ -645,10 +645,10 @@
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
+						<li><a href="#" class="wds-button wds-is-full-width">Sign in</a></li>
 						<li>
 							<div class="wds-global-navigation__account-menu-dropdown-caption">Don't have an account?</div>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
+							<a href="#" class="wds-button wds-is-secondary wds-is-full-width">Register</a>
 						</li>
 					</ul>
 				</div>
@@ -740,10 +740,10 @@
 				</div>
 				<div class="wds-dropdown__content wds-is-right-aligned wds-global-navigation__dropdown-content">
 					<ul class="wds-list wds-has-lines-between">
-						<li><button class="wds-button wds-is-full-width">Sign in</button></li>
+						<li><a href="#" class="wds-button wds-is-full-width">Sign in</a></li>
 						<li>
 							<div class="wds-global-navigation__account-menu-dropdown-caption">Don't have an account?</div>
-							<button class="wds-button wds-is-secondary wds-is-full-width">Register</button>
+							<a href="#" class="wds-button wds-is-secondary wds-is-full-width">Register</a>
 						</li>
 					</ul>
 				</div>
