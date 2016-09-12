@@ -35,13 +35,13 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
@@ -111,13 +111,13 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
@@ -179,13 +179,13 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Szukaj"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
@@ -239,13 +239,13 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Szukaj"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
@@ -324,13 +324,13 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Suche"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
@@ -400,13 +400,13 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
@@ -476,13 +476,13 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
@@ -561,13 +561,13 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Search"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
@@ -621,13 +621,13 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="検索"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
 					</button>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
@@ -697,7 +697,7 @@
 						</svg>
 						<input class="wds-global-navigation__search-input" name="search" placeholder="Szukaj na Wookieepedia..." value="Star"/>
 					</label>
-					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="button">
+					<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset">
 						<svg class="wds-icon wds-icon-small wds-global-navigation__search-close-icon" alt="Close">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 						</svg>
@@ -722,7 +722,7 @@
 						</ul>
 					</div>
 				</div>
-				<button class="wds-button wds-global-navigation__search-submit">
+				<button class="wds-button wds-global-navigation__search-submit" type="submit">
 					<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
 					</svg>
