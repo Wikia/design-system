@@ -81,6 +81,7 @@ $notification-counter-size: 18px;
 		align-items: center;
 		background-color: $nav-background-color;
 		border-top: $border-top-width solid $color-slate-gray;
+		box-sizing: content-box;
 		color: $color-dark-blue-gray;
 		display: flex;
 		font-size: $typescale-size-minus-1;
