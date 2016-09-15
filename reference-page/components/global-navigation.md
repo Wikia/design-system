@@ -41,12 +41,12 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
@@ -119,12 +119,12 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__user-menu wds-dropdown">
@@ -189,12 +189,12 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
@@ -251,12 +251,12 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__user-menu wds-dropdown">
@@ -338,12 +338,12 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
@@ -416,12 +416,12 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__account-menu wds-dropdown wds-is-active">
@@ -494,12 +494,12 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__user-menu wds-dropdown wds-is-active">
@@ -581,12 +581,12 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
@@ -643,12 +643,12 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross"></use>
 							</svg>
 						</button>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
@@ -740,12 +740,12 @@
 								</li>
 							</ul>
 						</div>
+						<button class="wds-button wds-global-navigation__search-submit" type="submit">
+							<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
+							</svg>
+						</button>
 					</div>
-					<button class="wds-button wds-global-navigation__search-submit" type="submit">
-						<svg class="wds-icon wds-icon-small wds-global-navigation__search-submit-icon" alt="Search">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow"></use>
-						</svg>
-					</button>
 				</form>
 			</div>
 			<div class="wds-global-navigation__account-menu wds-dropdown">
