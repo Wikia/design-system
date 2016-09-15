@@ -222,7 +222,6 @@ $search-buttons-transition-delay: $search-transition-duration - $search-buttons-
 			right: 0;
 			top: 0;
 		};
-
 		display: flex;
 		// Safari doesn't set default flex values if we use `flex: 1;`
 		// it requires us to put these values explicitly.
