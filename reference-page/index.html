@@ -866,7 +866,6 @@ code.sg:first-child {
     flex: 4 1 auto; }
   .wds-global-navigation__link, .wds-global-navigation__wikis-menu {
     max-width: 100%;
-    overflow: hidden;
     transition-duration: 200ms;
     transition-property: color, font-size, max-width, padding, -webkit-flex;
     transition-property: color, flex, font-size, max-width, padding;
@@ -1062,6 +1061,8 @@ code.sg:first-child {
     font-size: 0;
     max-width: 0;
     padding: 0; }
+  .wds-global-navigation.wds-search-is-active .wds-global-navigation__dropdown-toggle {
+    display: none; }
   .wds-global-navigation.wds-search-is-active .wds-global-navigation__search {
     -webkit-flex: 2 1 auto;
     -ms-flex: 2 1 auto;
