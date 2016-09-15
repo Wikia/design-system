@@ -10,6 +10,7 @@ $notification-counter-size: 18px;
 
 $search-transition-duration: 200ms;
 $search-buttons-transition-duration: 50ms;
+$search-buttons-transition-delay: $search-transition-duration - $search-buttons-transition-duration;
 
 @mixin visible-search-input {
 	&__search-input {
@@ -428,17 +429,17 @@ $search-buttons-transition-duration: 50ms;
 			color: $color-light-gray;
 		}
 
-		&__search-submit {
-			max-width: 100%;
-			padding: 5px 9px;
-			transition-delay: $search-transition-duration - $search-buttons-transition-duration;
-		}
-
 		&__search-close {
 			max-width: 24px;
 			opacity: 1;
 			padding-right: 8px;
-			transition-delay: $search-transition-duration - $search-buttons-transition-duration;
+			transition-delay: $search-buttons-transition-delay;
+		}
+
+		&__search-submit {
+			max-width: 100%;
+			padding: 5px 9px;
+			transition-delay: $search-buttons-transition-delay;
 		}
 	}
 
