@@ -13,8 +13,8 @@ $search-buttons-transition-duration: 50ms;
 
 @mixin visible-search-input {
 	&__search-input {
-		position: relative;
 		padding: $search-input-padding;
+		position: relative;
 		top: auto;
 		width: 100%;
 	}
