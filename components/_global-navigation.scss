@@ -297,6 +297,7 @@ $search-buttons-transition-duration: 50ms;
 	&__search-submit {
 		border-width: 0;
 		max-width: 0;
+		overflow: hidden;
 		padding: 0;
 		transition-duration: $search-buttons-transition-duration;
 		transition-property: max-width, padding;
