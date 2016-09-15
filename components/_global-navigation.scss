@@ -211,8 +211,7 @@ $search-buttons-transition-duration: 50ms;
 
 	&__search {
 		flex: 0 1 auto;
-		transition-duration: $search-transition-duration;
-		transition-property: flex;
+		transition: flex $search-transition-duration;
 	}
 
 	&__search-input-wrapper {
@@ -228,8 +227,7 @@ $search-buttons-transition-duration: 50ms;
 		// it requires us to put these values explicitly.
 		flex: 1 1 auto;
 		min-height: 28px;
-		transition-duration: $search-transition-duration;
-		transition-property: border-color;
+		transition: border-color $search-transition-duration;
 	}
 
 	&__search-label {
@@ -279,8 +277,7 @@ $search-buttons-transition-duration: 50ms;
 		&::placeholder {
 			color: transparent;
 			opacity: 1;
-			transition-duration: $search-transition-duration;
-			transition-property: color;
+			transition: color $search-transition-duration;
 		}
 
 		&::-ms-clear {
