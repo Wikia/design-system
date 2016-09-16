@@ -215,12 +215,8 @@ $hover-transition-duration: 300ms !default;
 	}
 
 	&__search-input-wrapper {
-		border: {
-			bottom: 1px solid transparent;
-			left: 0;
-			right: 0;
-			top: 0;
-		};
+		border: solid transparent;
+		border-width: 0 0 1px 0;
 		display: flex;
 		// Safari doesn't set default flex values if we use `flex: 1;`
 		// it requires us to put these values explicitly.
