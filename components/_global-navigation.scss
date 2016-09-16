@@ -221,7 +221,7 @@ $hover-transition-duration: 300ms !default;
 		// Safari doesn't set default flex values if we use `flex: 1;`
 		// it requires us to put these values explicitly.
 		flex: 1 1 auto;
-		min-height: 28px;
+		height: 28px;
 		transition: border-color $search-transition-duration;
 	}
 
