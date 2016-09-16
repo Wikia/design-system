@@ -14,6 +14,7 @@ $hover-transition-duration: 300ms !default;
 
 @mixin visible-search-input {
 	&__search-input {
+		// transitioned property: padding;
 		padding: $search-input-padding;
 		position: relative;
 		top: auto;
@@ -221,7 +222,7 @@ $hover-transition-duration: 300ms !default;
 		// it requires us to put these values explicitly.
 		flex: 1 1 auto;
 		height: 28px;
-		transition: border-color $search-transition-duration;
+		transition: border-bottom-color $search-transition-duration;
 	}
 
 	&__search-label {
@@ -388,6 +389,7 @@ $hover-transition-duration: 300ms !default;
 
 		&__link,
 		&__wikis-menu {
+			// transitioned properties: color, flex, font-size, padding;
 			color: transparent;
 			flex: 0 0 auto;
 			font-size: 0;
@@ -399,12 +401,15 @@ $hover-transition-duration: 300ms !default;
 		}
 
 		&__search {
+			// transitioned property: flex;
+			//
 			// Safari doesn't set default flex values if we use `flex: 1;`
 			// it requires us to put these values explicitly.
 			flex: 2 1 auto;
 		}
 
 		&__search-input-wrapper {
+			// transitioned property: border-bottom-color;
 			border-bottom-color: $color-slate-gray;
 
 			&.wds-is-active {
@@ -413,10 +418,12 @@ $hover-transition-duration: 300ms !default;
 		}
 
 		&__search-input::placeholder {
+			// transitioned property: color;
 			color: $color-light-gray;
 		}
 
 		&__search-close {
+			// transitioned properties: max-width, opacity, padding;
 			max-width: 24px;
 			opacity: 1;
 			padding-right: 8px;
