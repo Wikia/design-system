@@ -17,7 +17,6 @@ $hover-transition-duration: 300ms !default;
 		padding: $search-input-padding;
 		position: relative;
 		top: auto;
-		width: 100%;
 	}
 }
 
@@ -216,7 +215,7 @@ $hover-transition-duration: 300ms !default;
 
 	&__search-input-wrapper {
 		border: solid transparent;
-		border-width: 0 0 1px 0;
+		border-width: 0 0 1px;
 		display: flex;
 		// Safari doesn't set default flex values if we use `flex: 1;`
 		// it requires us to put these values explicitly.
@@ -262,8 +261,7 @@ $hover-transition-duration: 300ms !default;
 		position: absolute;
 		right: 0;
 		top: 0;
-		transition-duration: $search-transition-duration;
-		transition-property: width, padding;
+		transition: padding $search-transition-duration;
 
 		&:focus {
 			outline: none;
@@ -412,10 +410,6 @@ $hover-transition-duration: 300ms !default;
 			&.wds-is-active {
 				border-bottom-color: $color-link;
 			}
-		}
-
-		&__search-input {
-			width: 100%;
 		}
 
 		&__search-input::placeholder {

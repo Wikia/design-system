@@ -902,7 +902,7 @@ code.sg:first-child {
     transition: flex 200ms, -webkit-flex 200ms, -ms-flex 200ms; }
   .wds-global-navigation__search-input-wrapper {
     border: solid transparent;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 1px;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -945,8 +945,7 @@ code.sg:first-child {
     position: absolute;
     right: 0;
     top: 0;
-    transition-duration: 200ms;
-    transition-property: width, padding; }
+    transition: padding 200ms; }
     .wds-global-navigation__search-input:focus {
       outline: none; }
     .wds-global-navigation__search-input::-webkit-input-placeholder {
@@ -1037,8 +1036,7 @@ code.sg:first-child {
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-input {
     padding: 3px 4px;
     position: relative;
-    top: auto;
-    width: 100%; }
+    top: auto; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-label-icon:hover {
     color: #39424d; }
   .wds-global-navigation.wds-search-is-always-visible .wds-global-navigation__search-input::-webkit-input-placeholder {
@@ -1078,8 +1076,6 @@ code.sg:first-child {
     border-bottom-color: #656e78; }
     .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-input-wrapper.wds-is-active {
       border-bottom-color: #00b7e0; }
-  .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-input {
-    width: 100%; }
   .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-input::-webkit-input-placeholder {
     color: #999; }
   .wds-global-navigation.wds-search-is-active .wds-global-navigation__search-input::-moz-placeholder {
@@ -1105,8 +1101,7 @@ code.sg:first-child {
     .wds-global-navigation__search-input {
       padding: 3px 4px;
       position: relative;
-      top: auto;
-      width: 100%; }
+      top: auto; }
     .wds-global-navigation__search-label-icon:hover {
       color: #39424d; }
     .wds-global-navigation__search-input::-webkit-input-placeholder {
