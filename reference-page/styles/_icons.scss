@@ -129,10 +129,6 @@
  *         div.icon-name lock
  *       div.icon-preview-card
  *         svg.wds-icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass")
- *         div.icon-name magnifying-glass
- *       div.icon-preview-card
- *         svg.wds-icon
  *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-mail")
  *         div.icon-name mail
  *       div.icon-preview-card
@@ -229,10 +225,6 @@
  *         div.icon-name upvote
  *       div.icon-preview-card
  *         svg.wds-icon
- *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user")
- *         div.icon-name user
- *       div.icon-preview-card
- *         svg.wds-icon
  *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-video-camera")
  *         div.icon-name video-camera
  **/
@@ -291,6 +283,10 @@
  *         div.icon-name lock-small
  *       div.icon-preview-card
  *         svg.wds-icon.wds-icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass")
+ *         div.icon-name magnifying-glass
+ *       div.icon-preview-card
+ *         svg.wds-icon.wds-icon-small
  *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu-control-small")
  *         div.icon-name menu-control-small
  *       div.icon-preview-card
@@ -337,6 +333,10 @@
  *         svg.wds-icon.wds-icon-small
  *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-unlock-small")
  *         div.icon-name unlock-small
+ *       div.icon-preview-card
+ *         svg.wds-icon.wds-icon-small
+ *           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user")
+ *         div.icon-name user
  **/
 
 /**
