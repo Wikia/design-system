@@ -147,7 +147,7 @@
 			<div class="wds-global-navigation__notifications-menu wds-dropdown">
 				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<div class="wds-global-navigation__notifications-menu-counter">3</div>
-					<svg class="wds-icon wds-icon-small" alt="notifications">
+					<svg class="wds-icon" alt="notifications">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
 					</svg>
 					<svg class="wds-icon wds-icon-tiny" alt="notifications dropdown">
@@ -279,7 +279,7 @@
 			<div class="wds-global-navigation__notifications-menu wds-dropdown">
 				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<div class="wds-global-navigation__notifications-menu-counter">3</div>
-					<svg class="wds-icon wds-icon-small" alt="notifications">
+					<svg class="wds-icon" alt="notifications">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
 					</svg>
 					<svg class="wds-icon wds-icon-tiny" alt="notifications dropdown">
@@ -522,7 +522,7 @@
 			<div class="wds-global-navigation__notifications-menu wds-dropdown">
 				<div class="wds-dropdown__toggle wds-global-navigation__dropdown-toggle">
 					<div class="wds-global-navigation__notifications-menu-counter">3</div>
-					<svg class="wds-icon wds-icon-small" alt="notifications">
+					<svg class="wds-icon" alt="notifications">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell"></use>
 					</svg>
 					<svg class="wds-icon wds-icon-tiny" alt="notifications dropdown">
