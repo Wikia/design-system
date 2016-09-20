@@ -454,7 +454,8 @@ code.sg:first-child {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin: 0; }
+    margin: 0;
+    padding: 30px 0 25px; }
   .wds-global-footer__bottom-bar {
     background: rgba(38, 38, 38, 0.5);
     font-size: 12px;
@@ -487,6 +488,9 @@ code.sg:first-child {
     padding: 14px 18px;
     text-decoration: none;
     text-transform: uppercase; }
+  .wds-global-footer__header-logo {
+    height: 44px;
+    width: 184px; }
   .wds-global-footer__fandom-logo {
     fill: #fff;
     height: 26px;
@@ -635,9 +639,6 @@ code.sg:first-child {
   @media only screen and (max-width: 1083px) {
     .wds-global-footer__main {
       margin: 0 20px; }
-    .wds-global-footer__header-wrapper {
-      padding-bottom: 35px;
-      padding-top: 34px; }
     .wds-global-footer__fandom-header {
       margin-bottom: 29px;
       margin-top: 38px; }
@@ -649,12 +650,14 @@ code.sg:first-child {
       width: 100%; }
     .wds-global-footer__fandom-section.wds-is-fandom-overview .wds-global-footer__links-list-item {
       margin-bottom: 0; }
-    .wds-global-footer__fandom-section.wds-is-follow-us .wds-global-footer__links-list-item {
-      margin-bottom: 0; }
-    .wds-global-footer__fandom-section.wds-is-follow-us .wds-global-footer__link {
-      height: 42px;
-      margin-right: 10px;
-      width: 42px; }
+    .wds-global-footer__fandom-section.wds-is-follow-us {
+      margin-bottom: 20px; }
+      .wds-global-footer__fandom-section.wds-is-follow-us .wds-global-footer__links-list-item {
+        margin-bottom: 0; }
+      .wds-global-footer__fandom-section.wds-is-follow-us .wds-global-footer__link {
+        height: 42px;
+        margin-right: 10px;
+        width: 42px; }
     .wds-global-footer__wikia-section {
       margin-bottom: 20px; }
       .wds-global-footer__wikia-section.wds-is-company-overview {
@@ -669,8 +672,8 @@ code.sg:first-child {
         margin-top: 5px; }
       .wds-global-footer__wikia-section.wds-is-community-apps .wds-global-footer__link {
         margin-right: 25px; }
-    .wds-global-footer.wds-is-international .wds-global-footer__fandom-section.wds-is-follow-us {
-      margin-bottom: 37px; }
+    .wds-global-footer.wds-is-en .wds-global-footer__fandom-section.wds-is-follow-us {
+      margin-bottom: 0; }
     .wds-global-footer__links-list-item {
       margin-bottom: 20px; } }
   @media only screen and (min-width: 1084px) {
@@ -685,13 +688,12 @@ code.sg:first-child {
       padding: 0; }
     .wds-global-footer__bottom-bar-row {
       width: 1024px; }
-    .wds-global-footer__header-wrapper {
-      padding-bottom: 34px;
-      padding-top: 43px; }
     .wds-global-footer__fandom-header, .wds-global-footer__wikia-header {
       height: 26px;
       margin-bottom: 35px;
       margin-top: 47px; }
+    .wds-global-footer__header {
+      padding: 40px 0 35px; }
     .wds-global-footer__fandom-header {
       -webkit-order: 1;
       -ms-flex-order: 1;
@@ -2225,7 +2227,7 @@ body {
     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 4h-4.2c.1-.3.2-.6.2-1 0-1.7-1.3-3-3-3-2 0-3.2 1.3-4 2.5C11.2 1.3 10 0 8 0 6.3 0 5 1.3 5 3c0 .4.1.7.2 1H1c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1h22c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1zm-7-2c.6 0 1 .4 1 1s-.4 1-1 1h-2.5c.4-.9 1.3-2 2.5-2zM7 3c0-.6.4-1 1-1 1.2 0 2.1 1.1 2.5 2H8c-.6 0-1-.4-1-1zm4 7H3c-.6 0-1 .4-1 1v12c0 .6.4 1 1 1h8V10zm10 0h-8v14h8c.6 0 1-.4 1-1V11c0-.6-.4-1-1-1z" fill-rule="evenodd"/></svg>
     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.146 11.163V8.564h-1.844v2.6h-2.655v1.856h2.655v2.673h1.844V13.02h2.58v-1.857h-2.58zm-13.422-.148v2.97s2.862-.004 4.027-.004c-.631 1.926-1.612 2.974-4.027 2.974-2.444 0-4.35-1.994-4.35-4.455 0-2.46 1.906-4.455 4.35-4.455 1.292 0 2.127.457 2.892 1.094.613-.617.561-.705 2.12-2.187A7.393 7.393 0 0 0 7.724 5C3.611 5 .276 8.358.276 12.5c0 4.142 3.335 7.5 7.448 7.5 6.149 0 7.652-5.391 7.153-8.985H7.724z"/></svg>
     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.234 18h-3.467a.766.766 0 0 0-.767.766v3.468c0 .423.343.766.767.766h3.467a.766.766 0 0 0 .766-.766v-3.468a.766.766 0 0 0-.766-.766m-8.5 0h-3.467a.766.766 0 0 0-.767.766v3.468c0 .423.343.766.767.766h3.467a.766.766 0 0 0 .766-.766v-3.468a.766.766 0 0 0-.766-.766m-8.5 0H1.767a.766.766 0 0 0-.767.766v3.468c0 .423.343.766.767.766h3.467A.766.766 0 0 0 6 22.234v-3.468A.766.766 0 0 0 5.234 18m17-8.5h-3.467a.766.766 0 0 0-.767.766v3.468c0 .423.343.766.767.766h3.467a.766.766 0 0 0 .766-.766v-3.468a.766.766 0 0 0-.766-.766m-8.5 0h-3.467a.766.766 0 0 0-.767.766v3.468c0 .423.343.766.767.766h3.467a.766.766 0 0 0 .766-.766v-3.468a.766.766 0 0 0-.766-.766m-8.5 0H1.767a.766.766 0 0 0-.767.766v3.468c0 .423.343.766.767.766h3.467A.766.766 0 0 0 6 13.734v-3.468a.766.766 0 0 0-.766-.766m17-8.5h-3.467a.766.766 0 0 0-.767.766v3.468c0 .423.343.766.767.766h3.467A.766.766 0 0 0 23 5.234V1.766A.766.766 0 0 0 22.234 1m-8.5 0h-3.467a.766.766 0 0 0-.767.766v3.468c0 .423.343.766.767.766h3.467a.766.766 0 0 0 .766-.766V1.766A.766.766 0 0 0 13.734 1M6 1.766v3.468A.766.766 0 0 1 5.234 6H1.767A.766.766 0 0 1 1 5.234V1.766C1 1.343 1.343 1 1.767 1h3.467c.423 0 .766.343.766.766" fill-rule="evenodd"/></svg>
-    
+    <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M11.955 16.925h2c.6 0 1-.4 1-1v-7h1c.3 0 .6-.1.8-.3.4-.4.3-1-.1-1.4l-7-6c-.4-.3-.9-.3-1.3 0l-7 6c-.4.4-.5 1-.1 1.4.1.2.4.3.7.3h1v7c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-3h4v3c0 .6.4 1 1 1z" fill-rule="evenodd"/></svg>
     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.664 10.126L12.662 1.25a.996.996 0 0 0-1.327.005l-10.003 9a.998.998 0 0 0-.264 1.104c.148.386.518.64.93.64h.005l1.989-.012V22c0 .553.446 1 .997 1H7.98a.998.998 0 0 0 .997-1v-4.5h5.983V22c0 .553.446 1 .997 1h2.992a.998.998 0 0 0 .997-1V11.888l2.062-.013a1 1 0 0 0 .655-1.75" fill-rule="evenodd"/></svg>
     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 5.75a1.75 1.75 0 1 0 .001 3.501A1.75 1.75 0 0 0 9.5 5.75"/><path d="M16.688 20a3.316 3.316 0 0 1-3.314-3.313 3.316 3.316 0 0 1 3.313-3.312A3.316 3.316 0 0 1 20 16.687 3.316 3.316 0 0 1 16.687 20zm-6.558-7.735l-3.378-2.027a1 1 0 0 0-1.22.15L4 11.919V4h15v6.036l-3.303-2.202a1 1 0 0 0-1.26.125l-4.307 4.306zM21 13.616V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h10.623c.867.62 1.917 1 3.063 1A5.318 5.318 0 0 0 22 16.687a5.258 5.258 0 0 0-1-3.071z"/><path d="M18.413 16.188h-1.225v-1.225a.5.5 0 0 0-1 0v1.225h-1.225a.5.5 0 1 0 0 1h1.225v1.225a.5.5 0 0 0 1 0v-1.226h1.225a.5.5 0 0 0 0-1"/></svg>
     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 5.75a1.75 1.75 0 1 0 .001 3.501A1.75 1.75 0 0 0 9.5 5.75"/><path d="M16.688 20a3.316 3.316 0 0 1-3.314-3.312 3.316 3.316 0 0 1 3.313-3.313A3.316 3.316 0 0 1 20 16.688 3.316 3.316 0 0 1 16.687 20zm-6.558-7.735l-3.378-2.027a1 1 0 0 0-1.22.15L4 11.919V4h15v6.036l-3.303-2.202a1 1 0 0 0-1.26.125l-4.307 4.306zM21 13.616V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h10.623c.867.62 1.917 1 3.063 1A5.318 5.318 0 0 0 22 16.688a5.258 5.258 0 0 0-1-3.072z"/><path d="M18.45 17.125H15a.5.5 0 1 1 0-1h3.45a.5.5 0 0 1 0 1"/></svg>
@@ -4821,6 +4823,204 @@ body {
               </div>
             </div>
           </footer>
+
+          <h4>Rebranded EN version</h4>
+          <footer class="wds-global-footer">
+            <div class="wds-global-footer__header-wrapper">
+              <h2 class="wds-global-footer__header">
+                <svg class="wds-global-footer__header-logo" alt="Fandom">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia-two-lines">
+                </svg>
+              </h2>
+            </div>
+            <div class="wds-global-footer__main">
+              <div class="wds-global-footer__fandom-sections">
+                <section class="wds-global-footer__fandom-section wds-is-fandom-overview">
+                  <ul class="wds-global-footer__links-list">
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link wds-is-games">
+                        <div>Games</div>
+                        <svg class="wds-global-footer__image wds-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link wds-is-movies">
+                        <div>Movies</div>
+                        <svg class="wds-global-footer__image wds-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link wds-is-tv">
+                        <div>TV</div>
+                        <svg class="wds-global-footer__image wds-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link wds-is-explore-wikis">
+                        <div>Explore Wikis</div>
+                        <svg class="wds-global-footer__image wds-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-arrow">
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+                <section class="wds-global-footer__fandom-section wds-is-follow-us">
+                  <h3 class="wds-global-footer__section-header">Follow Us</h3>
+                  <ul class="wds-global-footer__links-list">
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">
+                        <svg class="wds-global-footer__image wds-icon" alt="Facebook">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">
+                        <svg class="wds-global-footer__image wds-icon" alt="Twitter">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">
+                        <svg class="wds-global-footer__image wds-icon" alt="Reddit">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reddit">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">
+                        <svg class="wds-global-footer__image wds-icon" alt="Youtube">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-youtube">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">
+                        <svg class="wds-global-footer__image wds-icon" alt="Instagram">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-instagram">
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div class="wds-global-footer__wikia-sections">
+                <section class="wds-global-footer__wikia-section wds-is-company-overview">
+                  <h3 class="wds-global-footer__section-header">Overview</h3>
+                  <ul class="wds-global-footer__links-list">
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">About</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Careers</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Press</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Contact</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Wikia.org</a>
+                    </li>
+                  </ul>
+                </section>
+                <section class="wds-global-footer__wikia-section wds-is-site-overview">
+                  <ul class="wds-global-footer__links-list">
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Terms of Use</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Privacy Policy</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Global Sitemap</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Local Sitemap</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">API</a>
+                    </li>
+                  </ul>
+                </section>
+                <section class="wds-global-footer__wikia-section wds-is-community">
+                  <h3 class="wds-global-footer__section-header">Community</h3>
+                  <ul class="wds-global-footer__links-list">
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Community Central</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Founders &amp; Admins</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Fan Contributor Program</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">WAM Score</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Help</a>
+                    </li>
+                  </ul>
+                </section>
+                <section class="wds-global-footer__wikia-section wds-is-create-wiki">
+                  <span class="wds-global-footer__section-description">Find communities you love or create your own. Start Something epic.</span>
+                  <ul class="wds-global-footer__links-list">
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Start a wiki</a>
+                    </li>
+                  </ul>
+                </section>
+                <section class="wds-global-footer__wikia-section wds-is-community-apps">
+                  <h3 class="wds-global-footer__section-header">Community Apps</h3>
+                  <span class="wds-global-footer__section-description">Take your favorite fandoms with you and never miss a beat.</span>
+                  <ul class="wds-global-footer__links-list">
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">
+                        <svg class="wds-global-footer__image" alt="App Store">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-appstore">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">
+                        <svg class="wds-global-footer__image" alt="Google Play">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-store-googleplay">
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+                <section class="wds-global-footer__wikia-section wds-is-advertise">
+                  <h3 class="wds-global-footer__section-header">Advertise</h3>
+                  <ul class="wds-global-footer__links-list">
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Media Kit</a>
+                    </li>
+                    <li class="wds-global-footer__links-list-item">
+                      <a href="#" class="wds-global-footer__link">Contact</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+            <div class="wds-global-footer__bottom-bar">
+              <div class="wds-global-footer__bottom-bar-row wds-has-padding">Witcher Wiki is a Fandom Games Community. Content is available under
+                <a href="#">CC-BY-SA</a>.</div>
+              <div class="wds-global-footer__bottom-bar-row wds-has-border-top">
+                <a class="wds-global-footer__button-link" href="#">View Full Site</a>
+              </div>
+            </div>
+          </footer>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>EN version<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">footer</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer wds-is-en&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__main&quot;</span>&gt;</span>
@@ -5178,6 +5378,204 @@ body {
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>CC-BY-SA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar-row wds-has-border-top&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__button-link&quot;</span>&gt;</span>Pe&#x142;na wersja strony<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Rebranded EN version<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">footer</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__header-wrapper&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__header&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__header-logo&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Fandom&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-logo-fandom-powered-by-wikia-two-lines&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__main&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__fandom-sections&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__fandom-section wds-is-fandom-overview&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link wds-is-games&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Games<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image wds-icon&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link wds-is-movies&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image wds-icon&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link wds-is-tv&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>TV<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image wds-icon&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link wds-is-explore-wikis&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Explore Wikis<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image wds-icon&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-arrow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__fandom-section wds-is-follow-us&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__section-header&quot;</span>&gt;</span>Follow Us<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Facebook&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-facebook&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Twitter&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-twitter&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Reddit&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-reddit&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Youtube&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-youtube&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image wds-icon&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Instagram&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-icons-instagram&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__wikia-sections&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__wikia-section wds-is-company-overview&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__section-header&quot;</span>&gt;</span>Overview<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Careers<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Press<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Wikia.org<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__wikia-section wds-is-site-overview&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Terms of Use<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Privacy Policy<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Global Sitemap<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Local Sitemap<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>API<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__wikia-section wds-is-community&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__section-header&quot;</span>&gt;</span>Community<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Community Central<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Founders &amp; Admins<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Fan Contributor Program<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>WAM Score<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__wikia-section wds-is-create-wiki&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__section-description&quot;</span>&gt;</span>Find communities you love or create your own. Start Something epic.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Start a wiki<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__wikia-section wds-is-community-apps&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__section-header&quot;</span>&gt;</span>Community Apps<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__section-description&quot;</span>&gt;</span>Take your favorite fandoms with you and never miss a beat.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;App Store&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-store-appstore&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__image&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Google Play&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">&quot;#wds-company-store-googleplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__wikia-section wds-is-advertise&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__section-header&quot;</span>&gt;</span>Advertise<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Media Kit<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__links-list-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__link&quot;</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar-row wds-has-padding&quot;</span>&gt;</span>Witcher Wiki is a Fandom Games Community. Content is available under
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>CC-BY-SA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__bottom-bar-row wds-has-border-top&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wds-global-footer__button-link&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>View Full Site<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span></pre>
