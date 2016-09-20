@@ -362,13 +362,11 @@
 
 	<h4>Rebranded EN version</h4>
 	<footer class="wds-global-footer">
-		<div class="wds-global-footer__header-wrapper">
-			<h2 class="wds-global-footer__header">
-				<svg class="wds-global-footer__header-logo" alt="Fandom">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia-two-lines"></use>
-				</svg>
-			</h2>
-		</div>
+		<h2 class="wds-global-footer__header">
+			<svg class="wds-global-footer__header-logo" alt="Fandom">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom-powered-by-wikia-two-lines"></use>
+			</svg>
+		</h2>
 		<div class="wds-global-footer__main">
 			<div class="wds-global-footer__fandom-sections">
 				<section class="wds-global-footer__fandom-section wds-is-fandom-overview">
