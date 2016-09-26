@@ -947,7 +947,10 @@ code.sg:first-child {
     position: absolute;
     right: 0;
     top: 0;
-    transition: padding 200ms; }
+    transition: padding 200ms;
+    -webkit-appearance: none; }
+    .wds-global-navigation__search-input::-webkit-search-decoration, .wds-global-navigation__search-input::-webkit-search-cancel-button {
+      display: none; }
     .wds-global-navigation__search-input:focus {
       outline: none; }
     .wds-global-navigation__search-input::-webkit-input-placeholder {
