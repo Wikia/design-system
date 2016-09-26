@@ -234,6 +234,12 @@ $notification-counter-size: 18px;
 		padding: 0;
 		// Safari doesn't trigger focus on input if it has `width 0;`
 		width: 1px;
+		-webkit-appearance: none;
+
+		&::-webkit-search-decoration,
+		&::-webkit-search-cancel-button {
+			display: none;
+		}
 
 		&:focus {
 			outline: none;
