@@ -70,7 +70,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary" >
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary" >
 					<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -156,7 +156,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki wds-user-is-logged-in">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary">
 					<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -218,7 +218,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary">
 					<span class="wds-global-navigation__start-a-wiki-caption">Utwórz wiki</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -288,7 +288,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki wds-user-is-logged-in">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary">
 					<span class="wds-global-navigation__start-a-wiki-caption">Utwórz Wiki</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -367,7 +367,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary">
 					<span class="wds-global-navigation__start-a-wiki-caption">Starte ein Wiki</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -445,7 +445,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary" >
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary" >
 					<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -531,7 +531,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki wds-user-is-logged-in">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary">
 					<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -610,7 +610,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary" >
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary" >
 					<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -672,7 +672,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary">
 					<span class="wds-global-navigation__start-a-wiki-caption">WIKIをはじめよう</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
@@ -769,7 +769,7 @@
 				</div>
 			</div>
 			<div class="wds-global-navigation__start-a-wiki">
-				<a href="#" class="wds-button wds-is-squished wds-is-secondary">
+				<a href="#" class="wds-global-navigation__start-a-wiki-button wds-button wds-is-squished wds-is-secondary">
 					<span class="wds-global-navigation__start-a-wiki-caption">Start a wiki</span>
 					<svg class="wds-global-navigation__start-a-wiki-icon wds-icon" alt="Start a wiki">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus"></use>
