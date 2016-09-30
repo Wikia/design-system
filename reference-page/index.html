@@ -795,7 +795,8 @@ code.sg:first-child {
     z-index: -1; }
   .wds-global-navigation__dropdown-link {
     color: #39424d;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: color 200ms; }
     .wds-global-navigation__dropdown-link:hover, .wds-global-navigation__dropdown-link:active, .wds-global-navigation__dropdown-link.wds-is-active {
       color: #00b7e0; }
   .wds-global-navigation__content-bar {
@@ -826,12 +827,15 @@ code.sg:first-child {
     padding: 0 8px;
     text-decoration: none;
     white-space: nowrap; }
-  .wds-global-navigation__link:hover, .wds-global-navigation__wikis-menu:hover, .wds-global-navigation__account-menu:hover, .wds-global-navigation__user-menu:hover, .wds-global-navigation__notifications-menu:hover {
-    color: #00b7e0; }
-  .wds-global-navigation__link:active, .wds-global-navigation__link.wds-is-active, .wds-global-navigation__wikis-menu:active, .wds-global-navigation__wikis-menu.wds-is-active, .wds-global-navigation__account-menu:active, .wds-global-navigation__account-menu.wds-is-active, .wds-global-navigation__user-menu:active, .wds-global-navigation__user-menu.wds-is-active, .wds-global-navigation__notifications-menu:active, .wds-global-navigation__notifications-menu.wds-is-active {
-    background-color: #656e78;
-    border-color: #363b41;
-    color: #fff; }
+  .wds-global-navigation__link, .wds-global-navigation__wikis-menu, .wds-global-navigation__account-menu, .wds-global-navigation__user-menu, .wds-global-navigation__notifications-menu {
+    transition-duration: 200ms;
+    transition-property: background-color, border-color, color; }
+    .wds-global-navigation__link:hover, .wds-global-navigation__wikis-menu:hover, .wds-global-navigation__account-menu:hover, .wds-global-navigation__user-menu:hover, .wds-global-navigation__notifications-menu:hover {
+      color: #00b7e0; }
+    .wds-global-navigation__link:active, .wds-global-navigation__link.wds-is-active, .wds-global-navigation__wikis-menu:active, .wds-global-navigation__wikis-menu.wds-is-active, .wds-global-navigation__account-menu:active, .wds-global-navigation__account-menu.wds-is-active, .wds-global-navigation__user-menu:active, .wds-global-navigation__user-menu.wds-is-active, .wds-global-navigation__notifications-menu:active, .wds-global-navigation__notifications-menu.wds-is-active {
+      background-color: #656e78;
+      border-color: #363b41;
+      color: #fff; }
   .wds-global-navigation__logo {
     border-top: 6px solid #39424d;
     -webkit-flex: 0 0 230px;
@@ -869,9 +873,9 @@ code.sg:first-child {
     flex: 4 1 auto; }
   .wds-global-navigation__link, .wds-global-navigation__wikis-menu {
     transition-duration: 200ms;
-    transition-property: color, font-size, padding, -webkit-flex;
-    transition-property: color, flex, font-size, padding;
-    transition-property: color, flex, font-size, padding, -webkit-flex, -ms-flex; }
+    transition-property: background-color, color, font-size, padding, -webkit-flex;
+    transition-property: background-color, color, flex, font-size, padding;
+    transition-property: background-color, color, flex, font-size, padding, -webkit-flex, -ms-flex; }
   .wds-global-navigation__link {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
@@ -928,6 +932,7 @@ code.sg:first-child {
     z-index: 2; }
   .wds-global-navigation__search-label-icon {
     cursor: pointer;
+    transition: color 200ms;
     z-index: 1; }
     .wds-global-navigation__search-label-icon:hover {
       color: #00b7e0; }
