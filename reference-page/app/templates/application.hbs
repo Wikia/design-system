@@ -1,0 +1,7 @@
+<h2>Navigation:</h2>
+<ul>
+{{#each navigation as |route|}}
+    <li>{{#link-to route.location}}{{route.name}}{{/link-to}}</li>
+{{/each}}
+</ul>
+{{outlet}}
