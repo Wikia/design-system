@@ -6,11 +6,11 @@ export default Controller.extend({
 	navigation: [
 		{
 			name: 'Buttons',
-			location: 'component.buttons'
+			location: 'route-components.buttons'
 		},
 		{
 			name: 'Assets',
-			location: 'component.assets'
+			location: 'route-components.assets'
 		}
 	]
 });
