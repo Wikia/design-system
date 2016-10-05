@@ -11,6 +11,10 @@ export default Controller.extend({
 		{
 			name: 'Assets',
 			location: 'route-components.assets'
+		},
+		{
+			name: 'Colors',
+			location: 'colors'
 		}
 	]
 });

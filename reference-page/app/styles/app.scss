@@ -1,1 +1,25 @@
 @import 'styles';
+
+section {
+	clear: both;
+}
+
+.color-box {
+	border: 1px solid #e8e8e8;
+	float: left;
+	height: 140px;
+	margin: 10px;
+	padding: 5px;
+	text-align: center;
+	width: 120px;
+
+	h2 {
+		clear: both;
+	}
+
+	&__box {
+		height: 40px;
+		margin: 0 auto 10px;
+		padding: 5px;
+	}
+}

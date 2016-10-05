@@ -21,6 +21,7 @@ Router.map(function () {
 		this.route('buttons');
 		this.route('assets');
 	});
+	this.route('colors');
 });
 
 export default Router;
