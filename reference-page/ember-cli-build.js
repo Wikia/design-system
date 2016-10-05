@@ -4,6 +4,11 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
+		inlineSvgSprites: [
+			'../dist/svg/sprite-avatar-badges.svg',
+			'../dist/svg/sprite-company.svg',
+			'../dist/svg/sprite-icons.svg'
+		],
 		sassOptions: {
 			includePaths: [
 				'../dist'

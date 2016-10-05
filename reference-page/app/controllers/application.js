@@ -5,8 +5,12 @@ const {Controller} = Ember;
 export default Controller.extend({
 	navigation: [
 		{
-			name: 'Button',
+			name: 'Buttons',
 			location: 'component.button'
+		},
+		{
+			name: 'Assets',
+			location: 'component.assets'
 		}
 	]
 });
