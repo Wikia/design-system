@@ -6,7 +6,7 @@ export default Controller.extend({
 	navigation: [
 		{
 			name: 'Buttons',
-			location: 'component.button'
+			location: 'component.buttons'
 		},
 		{
 			name: 'Assets',

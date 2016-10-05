@@ -8,7 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('component', function() {
-    this.route('button');
+    this.route('buttons');
     this.route('assets');
   });
 });
