@@ -4,85 +4,61 @@
 
 <section>
 	<h2>Primary Buttons</h2>
-	{{#wds-button}}Button text{{/wds-button}}
-	{{#wds-button disabled=true}}Disabled{{/wds-button}}
-	{{#wds-button class='wds-is-active'}}Is active{{/wds-button}}
-
-	{{#eg-code-highlight-container language='html'}}
-&lt;button class="wds-button"&gt;Button text&lt;/button&gt;
-&lt;button class="wds-button" disabled&gt;Disabled&lt;/button&gt;
-&lt;button class="wds-button wds-is-active"&gt;Is active&lt;/button&gt;{{/eg-code-highlight-container}}
-
+	{{#component-demo}}
+		{{#wds-button}}Button text{{/wds-button}}
+		{{#wds-button disabled=true}}Disabled{{/wds-button}}
+		{{#wds-button class='wds-is-active'}}Is active{{/wds-button}}
+	{{/component-demo}}
 </section>
 
 <section>
 	<h2>Secondary Buttons</h2>
-	{{#wds-button class='wds-is-secondary' }}Button text{{/wds-button}}
-	{{#wds-button class='wds-is-secondary' disabled=true}}Disabled{{/wds-button}}
-	{{#wds-button class='wds-is-secondary wds-is-active'}}Is active{{/wds-button}}
-
-	{{#eg-code-highlight-container language='html'}}
-&lt;button class="wds-button wds-is-secondary"&gt;Button text&lt;/button&gt;
-&lt;button class="wds-button wds-is-secondary" disabled&gt;Disabled&lt;/button&gt;
-&lt;button class="wds-button wds-is-secondary wds-is-active"&gt;Is active&lt;/button&gt;{{/eg-code-highlight-container}}
+	{{#component-demo}}
+		{{#wds-button class='wds-is-secondary' }}Button text{{/wds-button}}
+		{{#wds-button class='wds-is-secondary' disabled=true}}Disabled{{/wds-button}}
+		{{#wds-button class='wds-is-secondary wds-is-active'}}Is active{{/wds-button}}
+	{{/component-demo}}
 </section>
 
 <section>
 	<h2>Text Buttons</h2>
-	{{#wds-button class='wds-is-text' }}Button text{{/wds-button}}
-	{{#wds-button class='wds-is-text' disabled=true}}Disabled{{/wds-button}}
-	{{#wds-button class='wds-is-text wds-is-active'}}Is active{{/wds-button}}
-
-	{{#eg-code-highlight-container language='html'}}
-&lt;button class="wds-button wds-is-text"&gt;Button text&lt;/button&gt;
-&lt;button class="wds-button wds-is-text" disabled&gt;Disabled&lt;/button&gt;
-&lt;button class="wds-button wds-is-text wds-is-active"&gt;Is active&lt;/button&gt;{{/eg-code-highlight-container}}
+	{{#component-demo}}
+		{{#wds-button class='wds-is-text' }}Button text{{/wds-button}}
+		{{#wds-button class='wds-is-text' disabled=true}}Disabled{{/wds-button}}
+		{{#wds-button class='wds-is-text wds-is-active'}}Is active{{/wds-button}}
+	{{/component-demo}}
 </section>
 
 <section>
 	<h2>Other usages</h2>
-	{{#wds-button}}Multiline
-		<br>button text
-		<br>with 3rd line{{/wds-button}}
-	{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
-
-	{{#eg-code-highlight-container language='html'}}
-&lt;button class="ember-view wds-button"&gt;Multiline
-	&lt;br&gt;button text
-	&lt;br&gt;with 3rd line
-&lt;/button&gt;
-&lt;a href="#" class="ember-view wds-button"&gt;Link button&lt;/a&gt;{{/eg-code-highlight-container}}
+	{{#component-demo}}
+		{{#wds-button}}Multiline
+			<br>button text
+			<br>with 3rd line{{/wds-button}}
+		{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
+	{{/component-demo}}
 </section>
 
 <section>
 	<h2>Sizes</h2>
 
 	<h3>Primary Buttons</h3>
-	{{#wds-button class='wds-is-squished'}}Squished{{/wds-button}}
-	{{#wds-button}}Normal{{/wds-button}}
-	{{#wds-button class='wds-is-stretched'}}Stretched{{/wds-button}}
-	{{#eg-code-highlight-container language='html'}}
-&lt;button class="wds-is-squished ember-view wds-button"&gt;Squished&lt;/button&gt;
-&lt;button class="ember-view wds-button"&gt;Normal&lt;/button&gt;
-&lt;button class="wds-is-stretched ember-view wds-button"&gt;Stretched&lt;/button&gt;{{/eg-code-highlight-container}}
+	{{#component-demo}}
+		{{#wds-button class='wds-is-squished'}}Squished{{/wds-button}}
+		{{#wds-button}}Normal{{/wds-button}}
+		{{#wds-button class='wds-is-stretched'}}Stretched{{/wds-button}}
+	{{/component-demo}}
 
 	<h3>Secondary Buttons</h3>
-	{{#wds-button class='wds-is-secondary wds-is-squished'}}Squished{{/wds-button}}
-	{{#wds-button class='wds-is-secondary'}}Normal{{/wds-button}}
-	{{#wds-button class='wds-is-secondary wds-is-stretched'}}Stretched{{/wds-button}}
-
-	{{#eg-code-highlight-container language='html'}}
-&lt;button class="wds-is-secondary wds-is-squished ember-view wds-button"&gt;Squished&lt;/button&gt;
-&lt;button class="wds-is-secondary ember-view wds-button"&gt;Normal&lt;/button&gt;
-&lt;button class="wds-is-secondary wds-is-stretched ember-view wds-button"&gt;Stretched&lt;/button&gt;{{/eg-code-highlight-container}}
+	{{#component-demo}}
+		{{#wds-button class='wds-is-secondary wds-is-squished'}}Squished{{/wds-button}}
+		{{#wds-button class='wds-is-secondary'}}Normal{{/wds-button}}
+		{{#wds-button class='wds-is-secondary wds-is-stretched'}}Stretched{{/wds-button}}
+	{{/component-demo}}
 
 	<h3>Text Buttons</h3>
-	{{#wds-button class='wds-is-text wds-is-squished'}}Squished{{/wds-button}}
-	{{#wds-button class='wds-is-text'}}Normal{{/wds-button}}
-	{{#wds-button class='wds-is-text wds-is-stretched'}}Stretched{{/wds-button}}
-
-	{{#eg-code-highlight-container language='html'}}
-&lt;button class="wds-is-text wds-is-squished ember-view wds-button"&gt;Squished&lt;/button&gt;
-&lt;button class="wds-is-text ember-view wds-button"&gt;Normal&lt;/button&gt;
-&lt;button class="wds-is-text wds-is-stretched ember-view wds-button"&gt;Stretched&lt;/button&gt;{{/eg-code-highlight-container}}
+	{{#component-demo}}
+		{{#wds-button class='wds-is-text wds-is-squished'}}Squished{{/wds-button}}
+		{{#wds-button class='wds-is-text'}}Normal{{/wds-button}}
+	{{/component-demo}}
 </section>
