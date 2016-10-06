@@ -1,5 +1,10 @@
 @import 'styles';
 
+body {
+	color: $color-black;
+	font-family: $font-family;
+}
+
 section {
 	clear: both;
 }
