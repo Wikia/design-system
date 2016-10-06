@@ -5,12 +5,25 @@ const {Controller} = Ember;
 export default Controller.extend({
 	navigation: [
 		{
-			name: 'Components',
+			name: 'Base styles',
 			items: [
 				{
-					name: 'Buttons',
-					location: 'route-components.buttons'
+					name: 'Colors',
+					location: 'base-styles.colors'
 				},
+				{
+					name: 'Typography',
+					location: 'base-styles.typography'
+				},
+				{
+					name: 'Breakpoints',
+					location: 'base-styles.breakpoints'
+				},
+			]
+		},
+		{
+			name: 'Components',
+			items: [
 				{
 					name: 'Assets',
 					location: 'route-components.assets'
@@ -20,26 +33,13 @@ export default Controller.extend({
 					location: 'route-components.avatars'
 				},
 				{
+					name: 'Buttons',
+					location: 'route-components.buttons'
+				},
+				{
 					name: 'Lists',
 					location: 'route-components.lists'
 				}
-			]
-		},
-		{
-			name: 'Base styles',
-			items: [
-				{
-					name: 'Breakpoints',
-					location: 'base-styles.breakpoints'
-				},
-				{
-					name: 'Typography',
-					location: 'base-styles.typography'
-				},
-				{
-					name: 'Colors',
-					location: 'base-styles.colors'
-				},
 			]
 		},
 		{
