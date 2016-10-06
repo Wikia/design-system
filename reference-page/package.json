@@ -39,7 +39,8 @@
   },
   "ember-addon": {
     "paths": [
-      "lib/inline-svg-sprites"
+      "lib/inline-svg-sprites",
+      "lib/wds-components"
     ]
   }
 }
