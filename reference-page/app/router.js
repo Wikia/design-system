@@ -25,6 +25,7 @@ Router.map(function () {
 	}, function () {
 		this.route('buttons');
 		this.route('assets');
+		this.route('lists');
 	});
 
 	this.route('identity', function () {

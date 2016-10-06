@@ -15,6 +15,10 @@ export default Controller.extend({
 					name: 'Assets',
 					location: 'route-components.assets'
 				},
+				{
+					name: 'Lists',
+					location: 'route-components.lists'
+				}
 			]
 		},
 		{
