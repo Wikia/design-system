@@ -21,7 +21,11 @@ Router.map(function () {
 		this.route('buttons');
 		this.route('assets');
 	});
-	this.route('colors');
+
+	this.route('base-styles', function () {
+		this.route('typography');
+		this.route('colors');
+	});
 });
 
 export default Router;
