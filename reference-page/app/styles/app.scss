@@ -9,6 +9,15 @@ section {
 	clear: both;
 }
 
+.main-header {
+	border-bottom: 1px solid $color-off-white;
+	color: $color-link;
+	font-size: $typescale-size-plus-5;
+	font-weight: bold;
+	padding: 40px 30px 30px;
+	text-align: center;
+}
+
 .color-box {
 	border: 1px solid $color-mist-gray;
 	float: left;
