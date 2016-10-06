@@ -19,6 +19,16 @@ section {
 	text-align: center;
 }
 
+.main-navigation {
+	float: left;
+	width: 25%
+}
+
+.main-content {
+	float: left;
+	width: 75%;
+}
+
 .color-box {
 	border: 1px solid $color-mist-gray;
 	float: left;
