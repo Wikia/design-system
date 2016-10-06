@@ -1,24 +1,7 @@
 <h2>Documentation:</h2>
+Fandom Design System uses <b>Mobile-first</b> approach.<br/>
 Use breakpoints to create responsive layout and components.<br/>
-Fandom Design System uses Mobile-first approach.<br/>
-Example usage:<br/>
-{{#eg-code-highlight-container language='css'}}
-.example {
-	width: 300px;
-
-	.extra-content {
-		display: none;
-	}
-
-	@media #{$breakpoint-m-up} {
-		width: 700px;
-
-		.extra-content {
-			display: block;
-		}
-	}
-}
-{{/eg-code-highlight-container}}
+To set breakpoints pick one of variables from table below and use it in <b>@media</b> query in scss file
 
 <h2>Variables:</h2>
 <table class="rp-breakpoins">
@@ -96,3 +79,22 @@ Example usage:<br/>
 		<td>max</td>
 	</tr>
 </table>
+
+<h2>Example usage:</h2>
+{{#eg-code-highlight-container language='css'}}
+.example {
+	width: 300px;
+
+	.extra-content {
+		display: none;
+	}
+
+	@media #{$breakpoint-m-up} {
+		width: 700px;
+
+		.extra-content {
+			display: block;
+		}
+	}
+}
+{{/eg-code-highlight-container}}
