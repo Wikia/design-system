@@ -4,11 +4,6 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
-		// Styles can be previewed at https://highlightjs.org/static/demo/
-		// They are stored in ./node_modules/ember-cli-eg-code-highlight/vendor-addon/highlightjs/styles/
-		egCodeHighlight: {
-			style: 'github'
-		},
 		inlineSvgSprites: [
 			'../dist/svg/sprite-avatar-badges.svg',
 			'../dist/svg/sprite-company.svg',
