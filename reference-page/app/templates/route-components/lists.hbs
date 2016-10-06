@@ -1,17 +1,39 @@
 <section>
 	<h2>List</h2>
 
-	{{wds-list}}
+	{{#wds-list}}
+		<li>List element 1</li>
+		<li>List element 2</li>
+		<li>List element 3</li>
+	{{/wds-list}}
 </section>
 
 <section>
 	<h2>Big list</h2>
 
-	{{wds-list modificators="wds-has-big-items"}}
+	{{#wds-list class="wds-has-big-items"}}
+		<li>List element 1</li>
+		<li>List element 2</li>
+		<li>List element 3</li>
+	{{/wds-list}}
 </section>
 
 <section>
 	<h2>List with line separator</h2>
 
-	{{wds-list modificators="wds-has-lines-between"}}
+	{{#wds-list class="wds-has-lines-between"}}
+		<li>List element 1</li>
+		<li>List element 2</li>
+		<li>List element 3</li>
+	{{/wds-list}}
+</section>
+
+<section>
+	<h2>List with linked items</h2>
+
+	{{#wds-list class="wds-is-linked"}}
+		<li><a href="http://wikia.com">Linked element 1</a></li>
+		<li><a href="http://wikia.com">Linked element 2</a></li>
+		<li><a href="http://wikia.com">Linked element 3</a></li>
+	{{/wds-list}}
 </section>
