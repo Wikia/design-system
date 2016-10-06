@@ -7,6 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
+	this.route('base-styles', function () {
+		this.route('typography');
+		this.route('colors');
+	});
+
 	// We have a good reason to call this route `route-components` and put it in `/components` path.
 	// Ember requires you to keep route's (or to be strict - controller's) templates in `/templates` dir.
 	// It also requires you to keep Ember component's templates in `/templates/components` dir.
@@ -22,9 +27,8 @@ Router.map(function () {
 		this.route('assets');
 	});
 
-	this.route('base-styles', function () {
-		this.route('typography');
-		this.route('colors');
+	this.route('identity', function () {
+		this.route('assets');
 	});
 });
 
