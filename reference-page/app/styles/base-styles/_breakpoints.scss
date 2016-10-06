@@ -1,0 +1,38 @@
+.rp-breakpoins {
+	border: 1px solid $color-dark-blue-gray;
+	border-spacing: 0;
+	font-family: $font-family;
+	width: 400px;
+
+	&__header {
+		background-color: $color-dark-blue-gray;
+		color: $color-faint-blue-gray;
+
+		td:first-child {
+			border-right: 1px solid $color-faint-blue-gray;
+		}
+
+		td {
+			border-bottom: 1px solid $color-faint-blue-gray;
+		}
+	}
+
+	&__separator {
+		background-color: $color-slate-gray;
+		color: $color-faint-blue-gray;
+		text-align: center;
+	}
+
+	td {
+		padding: 5px;
+	}
+
+	td:nth-child(2),
+	td:nth-child(3) {
+		text-align: center;
+	}
+
+	.is-text-center {
+		text-align: center;
+	}
+}

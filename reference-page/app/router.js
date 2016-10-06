@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
 	this.route('base-styles', function () {
+		this.route('breakpoints');
 		this.route('typography');
 		this.route('colors');
 	});
