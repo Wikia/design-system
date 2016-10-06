@@ -1,0 +1,19 @@
+.color-box {
+	border: 1px solid $color-mist-gray;
+	float: left;
+	height: 140px;
+	margin: 10px;
+	padding: 5px;
+	text-align: center;
+	width: 120px;
+
+	h2 {
+		clear: both;
+	}
+
+	&__box {
+		height: 40px;
+		margin: 0 auto 10px;
+		padding: 5px;
+	}
+}
