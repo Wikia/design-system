@@ -1,14 +1,18 @@
-<h2>Navigation:</h2>
-<ul>
-{{#each navigation as |parentRoute|}}
-    <li>
-        <h3>{{parentRoute.name}}</h3>
-        <ul>
-            {{#each parentRoute.items as |route|}}
-                <li>{{#link-to route.location}}{{route.name}}{{/link-to}}</li>
-            {{/each}}
-        </ul>
-    </li>
-{{/each}}
-</ul>
-{{outlet}}
+<nav>
+	<h2>Navigation:</h2>
+	<ul>
+		{{#each navigation as |parentRoute|}}
+			<li>
+				<strong>{{parentRoute.name}}</strong>
+				<ul>
+					{{#each parentRoute.items as |route|}}
+						<li>{{#link-to route.location}}{{route.name}}{{/link-to}}</li>
+					{{/each}}
+				</ul>
+			</li>
+		{{/each}}
+	</ul>
+</nav>
+<article>
+	{{outlet}}
+</article>
