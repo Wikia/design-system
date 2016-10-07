@@ -7,6 +7,7 @@
 		<li><a href="#font-family">Font Family</a></li>
 		<li><a href="#line-height">Line height</a></li>
 		<li><a href="#typescale">Typescale</a></li>
+		<li><a href="#example">Example</a></li>
 	{{/wds-list}}
 </nav>
 
@@ -40,4 +41,20 @@
 	{{typescale-line fontSize=14 typescaleName='typescale-size-minus-1'}}
 	{{typescale-line fontSize=12 typescaleName='typescale-size-minus-2'}}
 	{{typescale-line fontSize=10 typescaleName='typescale-size-minus-3'}}
+</section>
+
+<section>
+	<h2 id="example">Example</h2>
+	<pre>
+		<code>
+body {
+	font-family: $font-family;
+	line-height: $line-height;
+}
+
+.wds-component {
+	font-size: $typescale-size-plus-1;
+}
+		</code>
+	</pre>
 </section>
