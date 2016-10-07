@@ -1,15 +1,9 @@
 <h1>SVG assets</h1>
 
-<h2 id="SVGassets-Howtouse">How to use</h2>
-<p>There are two ways to use the Design System SVGs in a client application. Assets available for both solutions can be seen in the
-	<a href="https://github.com/Wikia/design-system/tree/master/dist/svg">design-system repo</a>.
-</p>
+<p>There are two ways to use the Design System SVGs in a client application. Assets available for both solutions can be seen in the <a href="https://github.com/Wikia/design-system/tree/master/dist/svg">design-system repo</a>.</p>
 
-<h3 id="SVGassets-InjectSVGsprite">Inject SVG sprite</h3>
-<p>Inject an SVG sprite into the HTML and take advantage of the &lt;use&gt; element to display symbol. You can either inject a sprite on server-side (like
-	<a href="https://github.com/Wikia/upstream/pull/574/files#diff-7086296428363f580fd7c93224db4e1cR72">Fandom</a> and Reference Page do) or lazy load it (like
-	<a href="https://github.com/Wikia/mercury/blob/e89a2651562015e6140df918419a7d74c09e1727/front/main/app/index.html#L97-L98">Mercury</a> does using a
-	<a href="https://github.com/Wikia/mercury/blob/dev/front/common/baseline/load-dom-resource.js">custom util</a>).
+<h2 id="sprite">Injecting SVG sprite</h2>
+<p>Inject an SVG sprite into the HTML and take advantage of the <code>&lt;use&gt;</code> element to display symbol. You can either inject a sprite on server-side (like <a href="https://github.com/Wikia/upstream/pull/574/files#diff-7086296428363f580fd7c93224db4e1cR72">Fandom</a> and Reference Page do) or lazy load it (like <a href="https://github.com/Wikia/mercury/blob/e89a2651562015e6140df918419a7d74c09e1727/front/main/app/index.html#L97-L98">Mercury</a> does using a <a href="https://github.com/Wikia/mercury/blob/dev/front/common/baseline/load-dom-resource.js">custom util</a>).
 </p>
 <p>The markup for the sprite:</p>
 {{#component-demo codeOnly=true}}
@@ -18,7 +12,7 @@
 	...
 </svg>
 {{/component-demo}}
-<p>Note the inline style which is required to hide the sprite while keeping gradients and masks working properly.</p>
+<p>{{wds-icon name='alert' class='wds-icon-small'}} Note the inline style which is required to hide the sprite while keeping gradients and masks working properly.</p>
 <p>The markup to use a symbol:</p>
 {{#component-demo codeOnly=true}}
 <svg>
@@ -26,45 +20,31 @@
 </svg>
 {{/component-demo}}
 
-<h4 id="SVGassets-Benefits">Benefits</h4>
+<h2 id="sprite-benefits">Injecting SVG sprite: Benefits</h2>
 <ul>
-	<li>When lazy loaded - assets are cached nicely and there is no need to load them again on the next page load.</li>
+	<li>When lazy loaded—assets are cached nicely and there is no need to load them again on the next page load.</li>
 	<li>Each SVG is defined only once, then we reuse it. It helps only if we reuse the same asset multiple times.</li>
 </ul>
 
-<h4 id="SVGassets-Disadvantages">Disadvantages</h4>
+<h2 id="sprite-disadvantages">Injecting SVG sprite: Disadvantages</h2>
 <ul>
-	<li>When lazy loaded - during the time assets are loading we display content without SVGs. In some cases it might be a major issue, e.g. when there is no logo in the Global Navigation.</li>
-	<li>When returned from the server - assets are not cached between page loads and need to be redownloaded every time.</li>
+	<li>When lazy loaded—during the time assets are loading we display content without SVGs. In some cases it might be a major issue, e.g. when there is no logo in the Global Navigation.</li>
+	<li>When returned from the server—assets are not cached between page loads and need to be redownloaded every time.</li>
+	<li>Injecting SVG sprites in Oasis HTML has an unacceptable impact on the page load time, see <a href="https://www.webpagetest.org/video/compare.php?tests=160728_5A_d9cea998ad25b82bf88c1ad83bc7884a%2C160728_C5_9d7e01aa347f352be151c1a2c3f170f4&amp;thumbSize=200&amp;ival=100&amp;end=visual">WebPageTest result</a>.</li>
 </ul>
 
-<h3 id="SVGassets-InlinesingleSVG">Inline single SVG</h3>
+<h2 id="inline">Inlining single SVG</h2>
 <p>Inject the SVG content in the place you want to use it. In the MediaWiki app you can use
 	<a href="https://github.com/Wikia/app/blob/6c4bea07081fe9eefcbedfead2dbb7aefd748030/extensions/wikia/DesignSystem/DesignSystemHelper.class.php#L32">DesignSystemHelper::getSvg($svgName)</a> that handles it for you.
 </p>
 
-<h4 id="SVGassets-Benefits.1">Benefits</h4>
+<h2 id="inline-benefits">Inlining single SVG: Benefits</h2>
 <ul>
 	<li>There are no unused SVGs sent to the user. This can make a big difference given that we currently have 106 SVGs and in the Global Footer we use up to 10 of them.</li>
 </ul>
 
-<h4 id="SVGassets-Disadvantages.1">Disadvantages</h4>
+<h2 id="inline-disadvantages">Inlining single SVG: Disadvantages</h2>
 <ul>
 	<li>Assets are not cached between page loads and need to be redownloaded every time.</li>
 	<li>When a single asset is used multiple times we can't reuse it, it has to be inlined for every occurence.</li>
 </ul>
-
-<h2 id="SVGassets-Decisions">Decisions</h2>
-<p>We've measured that lazy loading two additional sprites in Mercury doesn't have a visible impact on the page load time, see <a href="https://wikia-inc.atlassian.net/browse/XW-1777">XW-1777</a>. There was no requirement to render SVGs on the server-side as a lot of elements in Mercury are lazy loaded anyway. We've decided to keep this solution temporarily and created a ticket to optimize how we load SVGs, see <a href="https://wikia-inc.atlassian.net/browse/XW-1798">XW-1798</a>.
-</p>
-<p>We've measured that injecting SVG sprites in Oasis HTML has an unacceptable impact on the page load time, see <a href="https://www.webpagetest.org/video/compare.php?tests=160728_5A_d9cea998ad25b82bf88c1ad83bc7884a%2C160728_C5_9d7e01aa347f352be151c1a2c3f170f4&amp;thumbSize=200&amp;ival=100&amp;end=visual">WebPageTest result</a>. We didn't want the SVGs to show only after they're lazy loaded and even if it wasn't the case we didn't have time to implement lazy loading mechanism in the MW app. That's why we've decided to inline the SVGs where needed.
-</p>
-
-<h2 id="SVGassets-Nextsteps">Next steps</h2>
-<p>We've created a technical debt and we're aware that the solutions we proposed have to be unified and optimized.</p>
-<p>An ideal situation would be if:</p>
-<ul>
-	<li>Developer can specify&nbsp;in the template&nbsp;if the given SVG has to be rendered ASAP or can be lazy loaded</li>
-	<li>System aggregates this information and selects where to inline single SVG / inject SVG sprite server-side / lazy load SVG sprite</li>
-</ul>
-<p>Whichever team will work on the Design System after the Global Footer / Navigation project is finished should evaluate if this is feasible and if not, how can we get as close to this situation as possible.</p>
