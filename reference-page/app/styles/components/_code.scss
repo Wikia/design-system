@@ -20,5 +20,10 @@ pre {
 	code {
 		border: 0;
 		color: $color-black;
+
+		&::before,
+		&::after {
+			display: none;
+		}
 	}
 }
