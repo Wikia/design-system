@@ -5,6 +5,12 @@
 	vertical-align: top;
 	width: 125px;
 
+	&:hover {
+		.wds-icon {
+			color: $color-dark-blue;
+		}
+	}
+
 	&__icon {
 		border-bottom: solid 2px $color-faint-gray;
 		height: 24px;
@@ -16,9 +22,9 @@
 		}
 		width: 50px;
 		padding-bottom: 17px;
+	}
 
-		.wds-icon {
-			color: $color-slate-gray;
-		}
+	.wds-icon {
+		color: $color-slate-gray;
 	}
 }

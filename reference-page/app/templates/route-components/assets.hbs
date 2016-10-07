@@ -1,6 +1,15 @@
 <h1>Assets</h1>
 <p>{{#link-to 'index'}}(TODO) How to use SVG assets{{/link-to}}</p>
 
+<h2 id="icons">Icons</h2>
+<p>Asset names for icons are defined by the pattern <code>wds-icons-<strong>icon_name</strong></code>, e.g. <code>wds-icons-alert</code>.</p>
+<p>
+	To apply default styles for an icon add <code>.wds-icon</code> class to the <code>&lt;svg&gt;</code> element.
+	This class includes <code>fill: currentColor;</code> rule which means that the fill color is inherited from the parent.
+	To change the icon's color you can either set <code>fill</code> on the <code>&lt;svg&gt;</code> element or
+	<code>color</code> on it's parent. If the parent changes its color on the hover state it's propagated to the icon.
+</p>
+
 <h2 id="icons-standard">Icons: Standard set (24x24)</h2>
 {{icon-box name='alert'}}
 {{icon-box name='arrow'}}
@@ -67,6 +76,8 @@
 {{/component-demo}}
 
 <h2 id="icons-small">Icons: Small set (18x18)</h2>
+<p>To have small icons properly styled use both <code>wds-icon</code> and <code>wds-icon-small</code> classes.</p>
+
 {{icon-box name='alert' size='small'}}
 {{icon-box name='bold' size='small'}}
 {{icon-box name='bookmark' size='small'}}
@@ -97,6 +108,8 @@
 {{/component-demo}}
 
 <h2 id="icons-tiny">Icons: Tiny set (12x12)</h2>
+<p>To have tiny icons properly styled use both <code>wds-icon</code> and <code>wds-icon-tiny</code> classes.</p>
+
 {{icon-box name='dropdown' size='tiny'}}
 {{icon-box name='menu-control' size='tiny'}}
 {{icon-box name='reply' size='tiny'}}
@@ -108,6 +121,11 @@
 {{/component-demo}}
 
 <h2 id="stores">Mobile apps stores</h2>
+<p>
+	Asset names for mobile apps stores are defined by the pattern <code>wds-company-store-<strong>store_name</strong></code>,
+	e.g. <code>wds-company-store-appstore</code>.
+</p>
+
 {{asset-box group='company-store' name='appstore' class='is-store' height=50}}
 {{asset-box group='company-store' name='googleplay' class='is-store' height=50}}
 {{#component-demo codeOnly=true}}
@@ -115,6 +133,10 @@
 {{/component-demo}}
 
 <h2 id="avatar-badges">Avatar badges</h2>
+<p>
+	Asset names for avatar badges are defined by the pattern <code>avatar-badges-<strong>badge_name</strong></code>,
+	e.g. <code>avatar-badges-admin</code>.
+</p>
 {{asset-box group='avatar-badges' name='admin' class='is-avatar-badge' height=24 width=24}}
 {{asset-box group='avatar-badges' name='content-moderator' class='is-avatar-badge' height=24 width=24}}
 {{asset-box group='avatar-badges' name='discussion-moderator' class='is-avatar-badge' height=24 width=24}}
