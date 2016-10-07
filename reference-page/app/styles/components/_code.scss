@@ -1,9 +1,24 @@
-pre,
-code {
+code,
+pre {
 	background-color: $color-off-white;
+	border: 1px solid $color-mist-gray;
+}
+
+code {
+	color: $color-music;
+
+	&::before,
+	&::after {
+		content: '\00a0';
+		letter-spacing: -.25rem;
+	}
 }
 
 pre {
-	border: 1px solid $color-mist-gray;
 	overflow-x: auto;
+
+	code {
+		border: 0;
+		color: $color-black;
+	}
 }
