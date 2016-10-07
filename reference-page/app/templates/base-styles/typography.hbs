@@ -1,23 +1,43 @@
 <h1>Typography</h1>
-<p>In order to use Design System Typography, you need to import <code>/base/_typography.scss</code> partial in your SCSS file. It's recommended to use available typography variables to keep consistency across products.</p>
-<p>Helvetica Neue — This typeface, designed by Max Miedinger and other project members at the Haas'sche Schriftgiesserei, has become one of the most famous and popular typefaces in the world, thanks to the marketing strategy of Stempel and Linotype.</p>
 
-<h2 id="font-family">Font Family</h2>
-<p>For highest browsers support we decided to follow direction described in <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">Using System UI Fonts In Web Design: A Quick Practical Guide</a>. It provides a list of font-families for browsers to fallback. We listed font-families supported by major Operating Systems and finally we fall back to <code>sans-serif</code>. This way we can avoid web-font delivery process which would hit page performance.</p>
-<code><span class="typography__variable-name">$font-family</span>: 'San Francisco', 'Helvetica Neue', 'Roboto', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;</code>
+<nav>
+	<h2>Table of contents</h2>
+	<ul>
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#font-family">Font Family</a></li>
+		<li><a href="#line-height">Line height</a></li>
+		<li><a href="#typescale">Typescale</a></li>
+	</ul>
+</nav>
 
-<h2 id="line-height">Line height</h2>
-<code><span class="typography__variable-name">$line-height</span>: 1.5em;</code>
+<section>
+	<h2 id="overview">Overview</h2>
+	<p>In order to use Design System Typography, you need to import <code>/base/_typography.scss</code> partial in your SCSS file. It's recommended to use available typography variables to keep consistency across products.</p>
+	<p>Helvetica Neue — This typeface, designed by Max Miedinger and other project members at the Haas'sche Schriftgiesserei, has become one of the most famous and popular typefaces in the world, thanks to the marketing strategy of Stempel and Linotype.</p>
+</section>
 
-<h2 id="typescale">Typescale</h2>
-{{typescale-line fontSize=54 typescaleName='typescale-size-plus-7'}}
-{{typescale-line fontSize=48 typescaleName='typescale-size-plus-6'}}
-{{typescale-line fontSize=40 typescaleName='typescale-size-plus-5'}}
-{{typescale-line fontSize=36 typescaleName='typescale-size-plus-4'}}
-{{typescale-line fontSize=28 typescaleName='typescale-size-plus-3'}}
-{{typescale-line fontSize=24 typescaleName='typescale-size-plus-2'}}
-{{typescale-line fontSize=18 typescaleName='typescale-size-plus-1'}}
-{{typescale-line fontSize=16 typescaleName='typescale-size-base'}}
-{{typescale-line fontSize=14 typescaleName='typescale-size-minus-1'}}
-{{typescale-line fontSize=12 typescaleName='typescale-size-minus-2'}}
-{{typescale-line fontSize=10 typescaleName='typescale-size-minus-3'}}
+<section>
+	<h2 id="font-family">Font Family</h2>
+	<p>For highest browsers support we decided to follow direction described in <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">Using System UI Fonts In Web Design: A Quick Practical Guide</a>. It provides a list of font-families for browsers to fallback. We listed font-families supported by major Operating Systems and finally we fall back to <code>sans-serif</code>. This way we can avoid web-font delivery process which would hit page performance.</p>
+	<code><span class="typography__variable-name">$font-family</span>: 'San Francisco', 'Helvetica Neue', 'Roboto', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;</code>
+</section>
+
+<section>
+	<h2 id="line-height">Line height</h2>
+	<code><span class="typography__variable-name">$line-height</span>: 1.5em;</code>
+</section>
+
+<section>
+	<h2 id="typescale">Typescale</h2>
+	{{typescale-line fontSize=54 typescaleName='typescale-size-plus-7'}}
+	{{typescale-line fontSize=48 typescaleName='typescale-size-plus-6'}}
+	{{typescale-line fontSize=40 typescaleName='typescale-size-plus-5'}}
+	{{typescale-line fontSize=36 typescaleName='typescale-size-plus-4'}}
+	{{typescale-line fontSize=28 typescaleName='typescale-size-plus-3'}}
+	{{typescale-line fontSize=24 typescaleName='typescale-size-plus-2'}}
+	{{typescale-line fontSize=18 typescaleName='typescale-size-plus-1'}}
+	{{typescale-line fontSize=16 typescaleName='typescale-size-base'}}
+	{{typescale-line fontSize=14 typescaleName='typescale-size-minus-1'}}
+	{{typescale-line fontSize=12 typescaleName='typescale-size-minus-2'}}
+	{{typescale-line fontSize=10 typescaleName='typescale-size-minus-3'}}
+</section>
