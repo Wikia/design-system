@@ -1,8 +1,9 @@
 pre,
 code {
-	background-color: $color-mist-gray;
+	background-color: $color-faint-blue-gray;
 }
 
 pre {
+	border: 1px solid $color-light-blue-gray;
 	overflow-x: auto;
 }
