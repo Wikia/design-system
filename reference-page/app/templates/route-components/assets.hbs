@@ -108,20 +108,20 @@
 {{/component-demo}}
 
 <h2 id="stores">Mobile apps stores</h2>
-{{svg-asset name='company-store-appstore' height=50}}
-{{svg-asset name='company-store-googleplay' height=50}}
+{{asset-box group='company-store' name='appstore' class='is-store' height=50}}
+{{asset-box group='company-store' name='googleplay' class='is-store' height=50}}
+{{#component-demo codeOnly=true}}
+{{svg 'wds-company-store-appstore'}}
+{{/component-demo}}
 
 <h2 id="avatar-badges">Avatar badges</h2>
-{{svg-asset name='avatar-badges-admin' height=50 width=50}}
-{{svg-asset name='avatar-badges-content-moderator' height=50 width=50}}
-{{svg-asset name='avatar-badges-discussion-moderator' height=50 width=50}}
-{{svg-asset name='avatar-badges-helper' height=50 width=50}}
-{{svg-asset name='avatar-badges-staff' height=50 width=50}}
-{{svg-asset name='avatar-badges-vstf' height=50 width=50}}
+{{asset-box group='avatar-badges' name='admin' class='is-avatar-badge' height=24 width=24}}
+{{asset-box group='avatar-badges' name='content-moderator' class='is-avatar-badge' height=24 width=24}}
+{{asset-box group='avatar-badges' name='discussion-moderator' class='is-avatar-badge' height=24 width=24}}
+{{asset-box group='avatar-badges' name='helper' class='is-avatar-badge' height=24 width=24}}
+{{asset-box group='avatar-badges' name='staff' class='is-avatar-badge' height=24 width=24}}
+{{asset-box group='avatar-badges' name='vstf' class='is-avatar-badge' height=24 width=24}}
 
 {{#component-demo codeOnly=true}}
-{{svg 'wds-avatar-badges-admin'
-      height=50
-      width=50
-}}
+{{svg 'wds-avatar-badges-admin'}}
 {{/component-demo}}
