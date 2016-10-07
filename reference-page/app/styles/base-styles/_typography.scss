@@ -1,9 +1,3 @@
-.typography {
-	&__variable-name {
-		color: $color-music;
-	}
-}
-
 .typescale-line {
 	display: flex;
 
@@ -24,7 +18,6 @@
 	}
 
 	&__code {
-		color: $color-music;
 		margin-left: 10px;
 	}
 }
