@@ -25,7 +25,7 @@
 	<h2 id="primary">Primary buttons</h2>
 	<p>Default version for general use.</p>
 	{{#component-demo}}
-		{{#wds-button}}Button text{{/wds-button}}
+		{{#wds-button}}Default{{/wds-button}}
 		{{#wds-button disabled=true}}Disabled{{/wds-button}}
 		{{#wds-button class='wds-is-active'}}Is active{{/wds-button}}
 	{{/component-demo}}
@@ -35,7 +35,7 @@
 	<h2 id="secondary">Secondary buttons</h2>
 	<p>Adding class <code>wds-is-secondary</code> changes the button's looks. It is used to create a button that draws less user's attention.</p>
 	{{#component-demo}}
-		{{#wds-button class='wds-is-secondary'}}Button text{{/wds-button}}
+		{{#wds-button class='wds-is-secondary'}}Default{{/wds-button}}
 		{{#wds-button class='wds-is-secondary' disabled=true}}Disabled{{/wds-button}}
 		{{#wds-button class='wds-is-secondary wds-is-active'}}Is active{{/wds-button}}
 	{{/component-demo}}
@@ -45,7 +45,7 @@
 	<h2 id="text">Text buttons</h2>
 	<p>These buttons are denoted with <code>wds-is-text</code> class. They are the least obtrusive. Nevertheless, their paddings remain untouched, which provides the same clickable area.</p>
 	{{#component-demo}}
-		{{#wds-button class='wds-is-text'}}Button text{{/wds-button}}
+		{{#wds-button class='wds-is-text'}}Default{{/wds-button}}
 		{{#wds-button class='wds-is-text' disabled=true}}Disabled{{/wds-button}}
 		{{#wds-button class='wds-is-text wds-is-active'}}Is active{{/wds-button}}
 	{{/component-demo}}
@@ -57,7 +57,7 @@
 	<p>When no special handlers of the click event are needed—just navigation to a certain URL, consider using an anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code>wds-button</code> class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.</p>
 	{{#component-demo}}
 		{{#wds-button}}Multiline
-			<br>button text
+			<br>button label
 			<br>with 3rd line{{/wds-button}}
 		{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
 	{{/component-demo}}
@@ -65,26 +65,29 @@
 
 <section>
 	<h2 id="sizes">Sizes</h2>
-	<p>Size of the button of any aforementioned variety can be adjusted. To make the button smaller use <code>wds-is-squished</code> class. This can help with fitting a button in tighter layouts. For a button greater in size use <code>wds-is-stretched</code>. This may come in handy to draw more user's attention to the button and increase the clickable area around the label.</p>
+	<p>Size of the button of any aforementioned variant can be adjusted.</p>
 
-	<h3>Primary buttons</h3>
+	<h3>Regular buttons</h3>
+	<p>These are the default sizes of the buttons—for comparison.</p>
 	{{#component-demo}}
-		{{#wds-button class='wds-is-squished'}}Squished{{/wds-button}}
-		{{#wds-button}}Normal{{/wds-button}}
-		{{#wds-button class='wds-is-stretched'}}Stretched{{/wds-button}}
+		{{#wds-button}}Primary{{/wds-button}}
+		{{#wds-button class='wds-is-secondary'}}Secondary{{/wds-button}}
+		{{#wds-button class='wds-is-text'}}Text{{/wds-button}}
 	{{/component-demo}}
 
-	<h3>Secondary buttons</h3>
+	<h3>Squished buttons</h3>
+	<p>To make the button smaller use <code>wds-is-squished</code> class. This can help with fitting a button in tighter layouts.</p>
 	{{#component-demo}}
-		{{#wds-button class='wds-is-secondary wds-is-squished'}}Squished{{/wds-button}}
-		{{#wds-button class='wds-is-secondary'}}Normal{{/wds-button}}
-		{{#wds-button class='wds-is-secondary wds-is-stretched'}}Stretched{{/wds-button}}
+		{{#wds-button class='wds-is-squished'}}Primary{{/wds-button}}
+		{{#wds-button class='wds-is-secondary wds-is-squished'}}Secondary{{/wds-button}}
+		{{#wds-button class='wds-is-text wds-is-squished'}}Text{{/wds-button}}
 	{{/component-demo}}
 
-	<h3>Text buttons</h3>
+	<h3>Stretched buttons</h3>
+	<p>For a button greater in size use <code>wds-is-stretched</code> class. This may come in handy to draw more user's attention to the button and increase the clickable area around the label.</p>
 	{{#component-demo}}
-		{{#wds-button class='wds-is-text wds-is-squished'}}Squished{{/wds-button}}
-		{{#wds-button class='wds-is-text'}}Normal{{/wds-button}}
-		{{#wds-button class='wds-is-text wds-is-stretched'}}Stretched{{/wds-button}}
+		{{#wds-button class='wds-is-stretched'}}Primary{{/wds-button}}
+		{{#wds-button class='wds-is-secondary wds-is-stretched'}}Secondary{{/wds-button}}
+		{{#wds-button class='wds-is-text wds-is-stretched'}}Text{{/wds-button}}
 	{{/component-demo}}
 </section>
