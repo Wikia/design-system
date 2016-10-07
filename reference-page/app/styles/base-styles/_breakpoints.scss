@@ -1,4 +1,4 @@
-.rp-breakpoins {
+.rp-breakpoints {
 	border: 1px solid $color-dark-blue-gray;
 	border-spacing: 0;
 	width: 400px;
@@ -6,10 +6,6 @@
 	&__header {
 		background-color: $color-dark-blue-gray;
 		color: $color-faint-blue-gray;
-
-		td:first-child {
-			border-right: 1px solid $color-faint-blue-gray;
-		}
 
 		td {
 			border-bottom: 1px solid $color-faint-blue-gray;
@@ -26,12 +22,11 @@
 		padding: 5px;
 	}
 
-	td:nth-child(2),
-	td:nth-child(3) {
-		text-align: center;
+	.has-white-border-right {
+		border-right: 1px solid $color-faint-blue-gray;
 	}
 
-	.is-text-center {
+	.has-text-center {
 		text-align: center;
 	}
 }

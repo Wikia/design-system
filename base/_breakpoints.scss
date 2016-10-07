@@ -5,9 +5,6 @@ $breakpoint-xxl: 1596px;
 
 $screen: 'only screen';
 
-$landscape: "#{$screen} and (orientation: landscape)";
-$portrait: "#{$screen} and (orientation: portrait)";
-
 $breakpoint-s-up: "#{$screen}";
 $breakpoint-s-only: "#{$screen} and (max-width:#{$breakpoint-m - 1})";
 

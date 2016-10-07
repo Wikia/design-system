@@ -11,6 +11,10 @@ section {
 	clear: both;
 }
 
+a {
+	color: $color-link
+}
+
 .main-header {
 	border-bottom: 1px solid $color-off-white;
 	color: $color-link;
@@ -28,10 +32,6 @@ section {
 .main-content {
 	float: left;
 	width: 75%;
-}
-
-a {
-	color: $color-link
 }
 
 .variable-name {
