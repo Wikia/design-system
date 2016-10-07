@@ -8,15 +8,11 @@ body {
 	line-height: $line-height;
 }
 
-section {
-	clear: both;
-}
-
 a {
 	color: $color-link;
 }
 
-code {
+code, p {
 	line-height: $line-height;
 }
 
@@ -73,7 +69,20 @@ code {
 	width: 75%;
 
 	h1 {
+		font-size: $typescale-size-plus-1;
+		line-height: $line-height;
 		margin-top: 18px;
+	}
+
+	h2 {
+		border-bottom: 1px solid $color-light-c3;
+		font-size: $typescale-size-minus-1;
+		margin-bottom: 30px;
+		padding-bottom: 1px;
+	}
+
+	section {
+		margin-top: 50px;
 	}
 }
 
