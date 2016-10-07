@@ -7,7 +7,7 @@
 	To apply default styles for an icon add <code>.wds-icon</code> class to the <code>&lt;svg&gt;</code> element.
 	This class includes <code>fill: currentColor;</code> rule which means that the fill color is inherited from the parent.
 	To change the icon's color you can either set <code>fill</code> on the <code>&lt;svg&gt;</code> element or
-	<code>color</code> on it's parent. If the parent changes its color on the hover state it's propagated to the icon.
+	<code>color</code> on its parent. If the parent changes its color (e.g. on the hover state) it's propagated to the icon.
 </p>
 
 <h2 id="icons-standard">Icons: Standard set (24x24)</h2>
@@ -100,8 +100,8 @@
 {{icon-box name='text' size='small'}}
 {{icon-box name='trash' size='small'}}
 {{icon-box name='trash-open' size='small'}}
-{{icon-box name='upvote' size='small'}}
 {{icon-box name='unlock' size='small'}}
+{{icon-box name='upvote' size='small'}}
 
 {{#component-demo codeOnly=true}}
 {{wds-icon name='alert' size='small'}}
@@ -121,7 +121,7 @@
 {{/component-demo}}
 
 <h2 id="icons-social">Icons: Social networks</h2>
-<p>To have tiny icons properly styled use both <code>wds-icon</code> and <code>wds-icon-tiny</code> classes.</p>
+<p>Social networks icons are a subset of the standard icon set. Asset names for social networks icons are defined by the same pattern as the standard icons, i.e. <code>wds-icons-<strong>icon_name</strong></code>, e.g. <code>wds-icons-facebook</code>.</p>
 
 {{icon-box name='facebook'}}
 {{icon-box name='google-plus'}}
