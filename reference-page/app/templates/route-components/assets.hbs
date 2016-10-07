@@ -1,4 +1,5 @@
 <h1>Assets</h1>
+<p>{{#link-to 'index'}}(TODO) How to use SVG assets{{/link-to}}</p>
 
 <h2 id="icons-standard">Icons: Standard set (24x24)</h2>
 {{icon-box name='alert'}}
@@ -61,6 +62,10 @@
 {{icon-box name='user'}}
 {{icon-box name='video-camera'}}
 
+{{#component-demo codeOnly=true}}
+{{wds-icon name='alert'}}
+{{/component-demo}}
+
 <h2 id="icons-small">Icons: Small set (18x18)</h2>
 {{icon-box name='alert' size='small'}}
 {{icon-box name='bold' size='small'}}
@@ -87,12 +92,20 @@
 {{icon-box name='upvote' size='small'}}
 {{icon-box name='unlock' size='small'}}
 
+{{#component-demo codeOnly=true}}
+{{wds-icon name='alert' size='small'}}
+{{/component-demo}}
+
 <h2 id="icons-tiny">Icons: Tiny set (12x12)</h2>
 {{icon-box name='dropdown' size='tiny'}}
 {{icon-box name='menu-control' size='tiny'}}
 {{icon-box name='reply' size='tiny'}}
 {{icon-box name='upvote' size='tiny'}}
 {{icon-box name='upvote-reply' size='tiny'}}
+
+{{#component-demo codeOnly=true}}
+{{wds-icon name='alert' size='tiny'}}
+{{/component-demo}}
 
 <h2 id="stores">Mobile apps stores</h2>
 {{svg-asset name='company-store-appstore' height=50}}
@@ -105,3 +118,10 @@
 {{svg-asset name='avatar-badges-helper' height=50 width=50}}
 {{svg-asset name='avatar-badges-staff' height=50 width=50}}
 {{svg-asset name='avatar-badges-vstf' height=50 width=50}}
+
+{{#component-demo codeOnly=true}}
+{{svg 'wds-avatar-badges-admin'
+      height=50
+      width=50
+}}
+{{/component-demo}}
