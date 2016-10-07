@@ -1,9 +1,16 @@
+.typography {
+	&__variable-name {
+		color: $color-music;
+	}
+}
+
 .typescale-line {
 	display: flex;
 
 	&__left {
 		border-right: 1px solid $color-off-white;
 		flex: 1 auto;
+		line-height: $line-height;
 	}
 
 	&__right {

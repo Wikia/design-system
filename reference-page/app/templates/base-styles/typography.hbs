@@ -1,11 +1,15 @@
 <h1>Typography</h1>
+<p>In order to use Design System Typography, you need to import <code>/base/_typography.scss</code> partial in your SCSS file. It's recommended to use available typography variables to keep consistency across products.</p>
 <p>Helvetica Neue — This typeface, designed by Max Miedinger and other project members at the Haas'sche Schriftgiesserei, has become one of the most famous and popular typefaces in the world, thanks to the marketing strategy of Stempel and Linotype.</p>
 
-<h2>Font Family</h2>
-<code>'San Francisco', 'Helvetica Neue', 'Roboto', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;</code>
+<h2 id="font-family">Font Family</h2>
+<p>For highest browsers support we decided to follow direction described in <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">Using System UI Fonts In Web Design: A Quick Practical Guide</a>. It provides a list of font-families for browsers to fallback. We listed font-families supported by major Operating Systems and finally we fall back to <code>sans-serif</code>. This way we can avoid web-font delivery process which would hit page performance.</p>
+<code><span class="typography__variable-name">$font-family</span>: 'San Francisco', 'Helvetica Neue', 'Roboto', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;</code>
 
-<h2>Typescale</h2>
+<h2 id="line-height">Line height</h2>
+<code><span class="typography__variable-name">$line-height</span>: 1.5em;</code>
 
+<h2 id="typescale">Typescale</h2>
 {{typescale-line fontSize=54 typescaleName='typescale-size-plus-7'}}
 {{typescale-line fontSize=48 typescaleName='typescale-size-plus-6'}}
 {{typescale-line fontSize=40 typescaleName='typescale-size-plus-5'}}
