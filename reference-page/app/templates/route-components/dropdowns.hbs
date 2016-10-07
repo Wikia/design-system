@@ -119,7 +119,7 @@
 </section>
 
 <section>
-	<h2>Example 1 (HTML version)</h2>
+	<h2>Example</h2>
 	<p>To use this code you have to have Design System's styles and icons.</p>
 	{{#component-demo codeOnly=true}}
 <div class="wds-dropdown">
@@ -137,28 +137,5 @@
 		</ul>
 	</div>
 </div>
-	{{/component-demo}}
-</section>
-
-<section>
-	<h2>Example 2 (for Ember applications)</h2>
-	<p>You can use this only in Ember application and you have to have:</p>
-	<ul class="wds-list">
-		<li>- Design System's styles</li>
-		<li>- Ember addon <a href="https://github.com/rsschermer/ember-rl-dropdown">Ember-rl-dropdown</a> installed</li>
-	</ul>
-	{{#component-demo codeOnly=true}}
-\{{#wds-dropdown as |dropdown|}}
-	\{{#dropdown.toggle}}
-		<span>Click me!</span>
-	\{{/dropdown.toggle}}
-	\{{#dropdown.content}}
-		<ul class="wds-list">
-			<li>List item 1</li>
-			<li>List item 2</li>
-			<li>List item 3</li>
-		</ul>
-	\{{/dropdown.content}}
-\{{/wds-dropdown}}
 	{{/component-demo}}
 </section>
