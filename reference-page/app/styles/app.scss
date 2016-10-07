@@ -1,11 +1,13 @@
 @import 'styles';
 @import 'base-styles/index';
 @import 'components/index';
+@import 'identity/index';
 
 body {
 	color: $color-black;
 	font-family: $font-family;
 	line-height: $line-height;
+	margin: 0;
 }
 
 a {

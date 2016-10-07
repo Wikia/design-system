@@ -3,6 +3,10 @@ import Ember from 'ember';
 const {Controller} = Ember;
 
 export default Controller.extend({
+	queryParams: ['fullPage'],
+
+	fullPage: false,
+
 	navigation: [
 		{
 			name: 'Base styles',
