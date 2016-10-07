@@ -8,16 +8,16 @@ export default Controller.extend({
 			name: 'Base styles',
 			items: [
 				{
+					name: 'Breakpoints',
+					location: 'base-styles.breakpoints'
+				},
+				{
 					name: 'Colors',
 					location: 'base-styles.colors'
 				},
 				{
 					name: 'Typography',
 					location: 'base-styles.typography'
-				},
-				{
-					name: 'Breakpoints',
-					location: 'base-styles.breakpoints'
 				},
 			]
 		},
