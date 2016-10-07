@@ -1,3 +1,7 @@
 .wds-dropdown {
 	margin-bottom: 150px;
+
+	&__content {
+		min-width: 150px;
+	}
 }
