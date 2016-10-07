@@ -37,6 +37,10 @@ export default Controller.extend({
 					location: 'route-components.buttons'
 				},
 				{
+					name: 'Dropdowns',
+					location: 'route-components.dropdowns'
+				},
+				{
 					name: 'Lists',
 					location: 'route-components.lists'
 				}

@@ -24,10 +24,11 @@ Router.map(function () {
 	this.route('route-components', {
 		path: 'components'
 	}, function () {
-		this.route('buttons');
 		this.route('assets');
-		this.route('lists');
 		this.route('avatars');
+		this.route('buttons');
+		this.route('dropdowns');
+		this.route('lists');
 	});
 
 	this.route('identity', function () {
