@@ -1,2 +1,11 @@
-<div class="rendered {{if codeOnly 'hidden'}}">{{yield}}</div>
+{{#if isInFullscreen}}
+	<div class="component-demo__close" {{action 'closeFullscreen'}}>{{wds-icon name='cross'}}</div>
+{{/if}}
+
+<div class="component-demo__rendered{{if codeOnly ' is-hidden'}}{{if isInFullscreen ' is-fullscreen'}}">{{yield}}</div>
+
+{{#if allowFullscreen}}
+	<button class="wds-button" {{action 'showFullscreen'}}>Show in fullscreen</button>
+{{/if}}
+
 {{#code-sample}}{{code}}{{/code-sample}}

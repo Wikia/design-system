@@ -1,0 +1,19 @@
+.component-demo {
+	&__rendered.is-fullscreen {
+		background-color: rgba($color-black, 0.5);
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+	}
+
+	&__close {
+		color: $color-white;
+		cursor: pointer;
+		position: fixed;
+		right: 20px;
+		top: 20px;
+		z-index: 1;
+	}
+}
