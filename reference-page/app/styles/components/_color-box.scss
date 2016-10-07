@@ -1,19 +1,23 @@
 .color-box {
-	border: 1px solid $color-mist-gray;
-	float: left;
-	height: 140px;
-	margin: 10px;
-	padding: 5px;
+	font-size: $typescale-size-minus-2;
+	margin: 15px 6px;
 	text-align: center;
 	width: 120px;
 
-	h2 {
-		clear: both;
+	&.is-bordered {
+		.color-box__box {
+			border: 1px solid $color-faint-gray;
+		}
 	}
 
 	&__box {
-		height: 40px;
+		@include square(60px);
+
+		box-sizing: border-box;
 		margin: 0 auto 10px;
-		padding: 5px;
+	}
+
+	&__name {
+		font-weight: 700;
 	}
 }
