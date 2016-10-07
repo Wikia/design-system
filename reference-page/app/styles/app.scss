@@ -24,12 +24,19 @@ code {
 	display: none;
 }
 
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
 .main-header {
-	border-bottom: 1px solid $color-off-white;
+	border-bottom: 1px solid $color-light-c3;
 	color: $color-link;
-	font-size: $typescale-size-plus-5;
+	font-size: $typescale-size-plus-6;
 	font-weight: bold;
-	padding: 40px 30px 30px;
+	line-height: 1;
+	margin-bottom: 45px;
+	padding: 40px 30px 38px;
 	text-align: center;
 }
 
@@ -41,6 +48,9 @@ code {
 .main-content {
 	float: left;
 	width: 75%;
+	h1 {
+		margin-top: 7px;
+	}
 }
 
 .variable-name {
