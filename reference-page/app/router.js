@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
+	this.route('overview', function () {
+		this.route('svg-assets');
+	});
+
 	this.route('base-styles', function () {
 		this.route('breakpoints');
 		this.route('typography');

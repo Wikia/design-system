@@ -9,6 +9,15 @@ export default Controller.extend({
 
 	navigation: [
 		{
+			name: 'Overview',
+			items: [
+				{
+					name: 'SVG assets',
+					location: 'overview.svg-assets'
+				},
+			]
+		},
+		{
 			name: 'Base styles',
 			items: [
 				{
