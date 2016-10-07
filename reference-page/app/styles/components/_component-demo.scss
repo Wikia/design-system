@@ -1,11 +1,29 @@
 .component-demo {
-	&__rendered.is-fullscreen {
+	&__fullscreen {
+		align-items: center;
 		background-color: rgba($color-black, 0.5);
 		bottom: 0;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
 		left: 0;
 		position: fixed;
 		right: 0;
 		top: 0;
+	}
+
+	&__standalone {
+		border: 0;
+		height: 500px;
+		width: 340px;
+
+		&.is-tablet {
+			width: 800px;
+		}
+
+		&.is-desktop {
+			width: 1200px;
+		}
 	}
 
 	&__close {

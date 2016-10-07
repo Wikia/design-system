@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	beforeModel (transition) {
-		if (transition.state.queryParams.fullPage) {
-			this.set('templateName', 'identity/global-footer-full-page');
+		if (transition.state.queryParams.standalone) {
+			this.set('templateName', 'identity/global-footer-standalone');
 		}
 	},
 

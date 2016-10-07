@@ -3,9 +3,9 @@ import Ember from 'ember';
 const {Controller} = Ember;
 
 export default Controller.extend({
-	queryParams: ['fullPage'],
+	queryParams: ['standalone'],
 
-	fullPage: false,
+	standalone: false,
 
 	navigation: [
 		{

@@ -1,11 +1,16 @@
-{{#if isInFullscreen}}
-	<div class="component-demo__close" {{action 'closeFullscreen'}}>{{wds-icon name='cross'}}</div>
+{{#if standaloneDevice}}
+	<div class="component-demo__fullscreen">
+		<div class="component-demo__close" {{action 'closeFullscreen'}}>{{wds-icon name='cross'}}</div>
+		<iframe class="component-demo__standalone is-{{standaloneDevice}}" src="?standalone"></iframe>
+	</div>
 {{/if}}
 
-<div class="component-demo__rendered{{if codeOnly ' is-hidden'}}{{if isInFullscreen ' is-fullscreen'}}">{{yield}}</div>
+<div class="component-demo__rendered{{if codeOnly ' is-hidden'}}">{{yield}}</div>
 
-{{#if allowFullscreen}}
-	<button class="wds-button" {{action 'showFullscreen'}}>Show in fullscreen</button>
+{{#if standalone}}
+	<button class="wds-button" {{action 'showFullscreen' 'mobile'}}>Mobile</button>
+	<button class="wds-button" {{action 'showFullscreen' 'tablet'}}>Tablet</button>
+	<button class="wds-button" {{action 'showFullscreen' 'desktop'}}>Desktop</button>
 {{/if}}
 
 {{#code-sample}}{{code}}{{/code-sample}}

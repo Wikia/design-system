@@ -1,9 +1,9 @@
 @import 'styles';
 @import 'base-styles/index';
 @import 'components/index';
-@import 'identity/index';
 
 body {
+	background: $color-white;
 	color: $color-black;
 	font-family: $font-family;
 	line-height: $line-height;

@@ -5,9 +5,9 @@ const {Component} = Ember;
 export default Component.extend({
 	classNames: ['component-demo'],
 
-	allowFullscreen: false,
 	codeOnly: false,
-	isInFullscreen: false,
+	standalone: false,
+	standaloneDevice: null,
 
 	didInsertElement() {
 		const $component = this.$('.component-demo__rendered').clone();
@@ -16,12 +16,18 @@ export default Component.extend({
 		this.set('code', $component.html());
 	},
 
+	click(event) {
+		if (event.target.classList.contains('component-demo__fullscreen')) {
+			this.send('closeFullscreen');
+		}
+	},
+
 	actions: {
 		closeFullscreen() {
-			this.set('isInFullscreen', false);
+			this.set('standaloneDevice', null);
 		},
-		showFullscreen() {
-			this.set('isInFullscreen', true);
+		showFullscreen(device) {
+			this.set('standaloneDevice', device);
 		}
 	}
 });
