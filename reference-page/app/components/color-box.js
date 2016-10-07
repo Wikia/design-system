@@ -1,8 +1,10 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const {Component, computed, String: emberString} = Ember;
+
+export default Component.extend({
 	classNames: 'color-box',
-	safeStyle: Ember.computed('hex', function() {
-		return Ember.String.htmlSafe(`background-color: ${this.get('hex')}`);
+	safeStyle: computed('hex', function() {
+		return emberString.htmlSafe(`background-color: ${this.get('hex')}`);
 	})
 });

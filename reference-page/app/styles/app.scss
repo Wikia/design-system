@@ -18,6 +18,36 @@ code, p {
 	line-height: $line-height;
 }
 
+code,
+pre {
+	background-color: $color-off-white;
+	border: 1px solid $color-mist-gray;
+}
+
+code {
+	color: $color-music;
+
+	&::before,
+	&::after {
+		content: '\00a0';
+		letter-spacing: -.25rem;
+	}
+}
+
+pre {
+	overflow-x: auto;
+
+	code {
+		border: 0;
+		color: $color-black;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}
+
 .is-hidden {
 	display: none;
 }
