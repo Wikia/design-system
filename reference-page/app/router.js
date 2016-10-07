@@ -32,6 +32,7 @@ Router.map(function () {
 
 	this.route('identity', function () {
 		this.route('assets');
+		this.route('global-footer');
 	});
 });
 

@@ -48,7 +48,11 @@ export default Controller.extend({
 				{
 					name: 'Assets',
 					location: 'identity.assets'
-				}
+				},
+				{
+					name: 'Global footer',
+					location: 'identity.global-footer'
+				},
 			]
 		}
 	]
