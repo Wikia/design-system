@@ -60,13 +60,18 @@
 </section>
 
 <section>
-	<h2 id="other">Other usages</h2>
-	<p>Button labels can wrap to multiple lines—whether broken manually, like in the example below, or automatically wrapped due to a lack of horizontal space.</p>
+	<h2 id="other:multiline">Other usages: multiline button</h2>
+	<p>Button labels can wrap to multiple lines.</p>
+	{{#component-demo}}
+		{{#wds-button class='fixed-width-140px'}}Multiline button label with 3rd line{{/wds-button}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="other:link">Other usages: link button</h2>
 	<p>When no special handlers of the click event are needed—just navigation to a certain URL, consider using an anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code>wds-button</code> class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.</p>
 	{{#component-demo}}
-		{{#wds-button}}Multiline
-			<br>button label
-			<br>with 3rd line{{/wds-button}}
 		{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
+		{{#wds-button tagName='a' href='#' class='wds-is-secondary'}}Secondary link button{{/wds-button}}
 	{{/component-demo}}
 </section>
