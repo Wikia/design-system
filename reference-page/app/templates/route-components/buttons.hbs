@@ -33,18 +33,6 @@
 </section>
 
 <section>
-	<h2 id="other">Other usages</h2>
-	<p>Button labels can wrap to multiple lines—whether broken manually, like in the example below, or automatically wrapped due to a lack of horizontal space.</p>
-	<p>When no special handlers of the click event are needed—just navigation to a certain URL, consider using an anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code>wds-button</code> class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.</p>
-	{{#component-demo}}
-		{{#wds-button}}Multiline
-			<br>button label
-			<br>with 3rd line{{/wds-button}}
-		{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
-	{{/component-demo}}
-</section>
-
-<section>
 	<h2 id="sizes">Sizes</h2>
 	<p>Size of the button of any aforementioned variant can be adjusted.</p>
 
@@ -70,5 +58,17 @@
 		{{#wds-button class='wds-is-stretched'}}Primary{{/wds-button}}
 		{{#wds-button class='wds-is-secondary wds-is-stretched'}}Secondary{{/wds-button}}
 		{{#wds-button class='wds-is-text wds-is-stretched'}}Text{{/wds-button}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="other">Other usages</h2>
+	<p>Button labels can wrap to multiple lines—whether broken manually, like in the example below, or automatically wrapped due to a lack of horizontal space.</p>
+	<p>When no special handlers of the click event are needed—just navigation to a certain URL, consider using an anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code>wds-button</code> class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.</p>
+	{{#component-demo}}
+		{{#wds-button}}Multiline
+			<br>button label
+			<br>with 3rd line{{/wds-button}}
+		{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
 	{{/component-demo}}
 </section>
