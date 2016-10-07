@@ -109,16 +109,63 @@
 
 <section>
 	<h2>Demo</h2>
-{{#wds-dropdown as |dropdown|}}
-	{{#dropdown.toggle}}
-		<span>Click me!</span>
-	{{/dropdown.toggle}}
-	{{#dropdown.content}}
+	{{#wds-dropdown as |dropdown|}}
+		{{#dropdown.toggle}}
+			<span>Click me!</span>
+		{{/dropdown.toggle}}
+		{{#dropdown.content}}
+			<ul class="wds-list">
+				<li>List item 1</li>
+				<li>List item 2</li>
+				<li>List item 3</li>
+			</ul>
+		{{/dropdown.content}}
+	{{/wds-dropdown}}
+</section>
+
+<section>
+	<h2>Example 1 (HTML version)</h2>
+	<p>To use this code you have to have Design System's styles and icons.</p>
+	{{#component-demo codeOnly=true}}
+<div class="wds-dropdown">
+	<div class="wds-dropdown__toggle">
+		<span>Example 1</span>
+		<svg class="wds-icon wds-dropdown__toggle-chevron">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown" />
+		</svg>
+	</div>
+	<div class="wds-dropdown__content">
 		<ul class="wds-list">
 			<li>List item 1</li>
 			<li>List item 2</li>
 			<li>List item 3</li>
 		</ul>
-	{{/dropdown.content}}
-{{/wds-dropdown}}
+	</div>
+</div>
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2>Example 2 (for Ember applications)</h2>
+	<p>
+		You can use this only in Ember application and you have to have:
+		<ul class="wds-list">
+			<li>- Design System's styles</li>
+			<li>- Ember addon <a href="https://github.com/rsschermer/ember-rl-dropdown">Ember-rl-dropdown</a> installed</li>
+		</ul>
+	</p>
+	{{#component-demo codeOnly=true}}
+\{{#wds-dropdown as |dropdown|}}
+	\{{#dropdown.toggle}}
+		<span>Click me!</span>
+	\{{/dropdown.toggle}}
+	\{{#dropdown.content}}
+		<ul class="wds-list">
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ul>
+	\{{/dropdown.content}}
+\{{/wds-dropdown}}
+	{{/component-demo}}
 </section>
