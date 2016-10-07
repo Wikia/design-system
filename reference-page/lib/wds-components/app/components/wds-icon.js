@@ -8,9 +8,6 @@ export default Component.extend({
 	classNameBindings: ['sizeClassName'],
 	attributeBindings: ['width', 'height'],
 
-	width: 50,
-	height: 50,
-
 	sizeClassName: computed(function () {
 		const size = this.get('size');
 

@@ -1,3 +1,24 @@
 .icon-box {
+	display: inline-block;
+	margin-bottom: 40px;
+	text-align: center;
+	vertical-align: top;
+	width: 125px;
 
+	&__icon {
+		border-bottom: solid 2px #ececec;
+		height: 24px;
+		margin: {
+			bottom: 10px;
+			left: auto;
+			right: auto;
+			top: 0;
+		}
+		width: 50px;
+		padding-bottom: 17px;
+
+		.wds-icon {
+			color: #999;
+		}
+	}
 }
