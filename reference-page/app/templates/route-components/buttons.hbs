@@ -2,12 +2,27 @@
 	<h1>Buttons</h1>
 </header>
 
-<p>The HTML <code>&lt;button&gt;</code> element represents a clickable button. It provides a way for a user to interact with the application. Add <code>wds-button</code> class to apply Wikia Design System styling. This results with a default Primary button. There are two more base variants: Secondary and Text.</p>
-<p>Adding class <code>wds-is-active</code> provides a way to denote a button that is activated—the same way as it would be in an <code>:active</code> state.</p>
-<p>Passing additional <code>disabled</code> attribute will change button's styling and functionality. This Boolean attribute indicates that the user cannot interact with the button. Other <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Attributes">valid HTML attributes</a> may be passed as well.</p>
+<nav>
+	<h2>Table of contents</h2>
+	<ul>
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#primary">Primary buttons</a></li>
+		<li><a href="#secondary">Secondary buttons</a></li>
+		<li><a href="#text">Text buttons</a></li>
+		<li><a href="#other">Other usages</a></li>
+		<li><a href="#sizes">Sizes</a></li>
+	</ul>
+</nav>
 
 <section>
-	<h2>Primary Buttons</h2>
+	<h2 id="overview">Overview</h2>
+	<p>The HTML <code>&lt;button&gt;</code> element represents a clickable button. It provides a way for a user to interact with the application. Add <code>wds-button</code> class to apply Wikia Design System styling. This results with a default Primary button. There are two more base variants: Secondary and Text.</p>
+	<p>Adding class <code>wds-is-active</code> provides a way to denote a button that is activated—the same way as it would be in an <code>:active</code> state.</p>
+	<p>Passing additional <code>disabled</code> attribute will change button's styling and functionality. This Boolean attribute indicates that the user cannot interact with the button. Other <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Attributes">valid HTML attributes</a> may be passed as well.</p>
+</section>
+
+<section>
+	<h2 id="primary">Primary buttons</h2>
 	<p>Default version for general use.</p>
 	{{#component-demo}}
 		{{#wds-button}}Button text{{/wds-button}}
@@ -17,7 +32,7 @@
 </section>
 
 <section>
-	<h2>Secondary Buttons</h2>
+	<h2 id="secondary">Secondary buttons</h2>
 	<p>Adding class <code>wds-is-secondary</code> changes the button's looks. It is used to create a button that draws less user's attention.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-secondary'}}Button text{{/wds-button}}
@@ -27,7 +42,7 @@
 </section>
 
 <section>
-	<h2>Text Buttons</h2>
+	<h2 id="text">Text buttons</h2>
 	<p>These buttons are denoted with <code>wds-is-text</code> class. They are the least obtrusive. Nevertheless, their paddings remain untouched, which provides the same clickable area.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-text'}}Button text{{/wds-button}}
@@ -37,7 +52,7 @@
 </section>
 
 <section>
-	<h2>Other usages</h2>
+	<h2 id="other">Other usages</h2>
 	<p>Button labels can wrap to multiple lines—whether broken manually, like in the example below, or automatically wrapped due to a lack of horizontal space.</p>
 	<p>When no special handlers of the click event are needed—just navigation to a certain URL, consider using an anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code>wds-button</code> class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.</p>
 	{{#component-demo}}
@@ -49,24 +64,24 @@
 </section>
 
 <section>
-	<h2>Sizes</h2>
+	<h2 id="sizes">Sizes</h2>
 	<p>Size of the button of any aforementioned variety can be adjusted. To make the button smaller use <code>wds-is-squished</code> class. This can help with fitting a button in tighter layouts. For a button greater in size use <code>wds-is-stretched</code>. This may come in handy to draw more user's attention to the button and increase the clickable area around the label.</p>
 
-	<h3>Primary Buttons</h3>
+	<h3>Primary buttons</h3>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-squished'}}Squished{{/wds-button}}
 		{{#wds-button}}Normal{{/wds-button}}
 		{{#wds-button class='wds-is-stretched'}}Stretched{{/wds-button}}
 	{{/component-demo}}
 
-	<h3>Secondary Buttons</h3>
+	<h3>Secondary buttons</h3>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-secondary wds-is-squished'}}Squished{{/wds-button}}
 		{{#wds-button class='wds-is-secondary'}}Normal{{/wds-button}}
 		{{#wds-button class='wds-is-secondary wds-is-stretched'}}Stretched{{/wds-button}}
 	{{/component-demo}}
 
-	<h3>Text Buttons</h3>
+	<h3>Text buttons</h3>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-text wds-is-squished'}}Squished{{/wds-button}}
 		{{#wds-button class='wds-is-text'}}Normal{{/wds-button}}
