@@ -25,8 +25,8 @@ code {
 }
 
 .container {
-	max-width: 1024px;
 	margin: 0 auto;
+	max-width: 1024px;
 }
 
 .main-header {
@@ -35,21 +35,45 @@ code {
 	font-size: $typescale-size-plus-6;
 	font-weight: bold;
 	line-height: 1;
-	margin-bottom: 45px;
+	margin-bottom: 34px;
 	padding: 40px 30px 38px;
 	text-align: center;
 }
 
 .main-navigation {
+	color: $color-dark-blue-gray;
 	float: left;
 	width: 25%;
+
+	.wds-list.wds-is-linked {
+		padding-left: 0;
+
+		> li > a {
+			padding-left: 18px;
+		}
+	}
+
+	li a {
+		color: $color-slate-gray;
+		text-decoration: none;
+
+		&:hover {
+			background-color: $color-off-white;
+		}
+
+		&.active {
+			background-color: $color-off-white;
+			color: $color-link;
+		}
+	}
 }
 
 .main-content {
 	float: left;
 	width: 75%;
+
 	h1 {
-		margin-top: 7px;
+		margin-top: 18px;
 	}
 }
 
