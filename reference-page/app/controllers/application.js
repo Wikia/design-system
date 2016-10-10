@@ -66,7 +66,7 @@ export default Controller.extend({
 					location: 'identity.assets'
 				},
 				{
-					name: 'Global footer',
+					name: 'Global Footer',
 					location: 'identity.global-footer'
 				},
 			]
