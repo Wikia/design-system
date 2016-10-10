@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import translations from 'npm:design-system-i18n/i18n/en/design-system';
 
 const {Component, computed} = Ember;
 
@@ -15,10 +16,10 @@ export default Component.extend({
 
 	searchPlaceholder: computed('searchIsActive', function () {
 		if (this.get('searchIsActive')) {
-			return this.get('model.placeholder-active.key');
+			return translations[this.get('model.placeholder-active.key')];
 		}
 
-		return this.get('model.placeholder-inactive.key');
+		return translations[this.get('model.placeholder-inactive.key')];
 	}),
 
 	actions: {

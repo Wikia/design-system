@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 	classNames: 'wds-global-navigation',
-	classNameBindings: ['searchIsActive'],
+	classNameBindings: ['searchIsActive:wds-search-is-active'],
 
 	searchIsActive: false,
 
