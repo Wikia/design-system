@@ -1,0 +1,15 @@
+{{#if standalone}}
+	{{outlet}}
+{{else}}
+	<h1>Global Navigation</h1>
+
+	<h2 id="logged-out-with-hubs">Logged out with hubs</h2>
+	{{#component-demo
+		codeOnly=true
+		componentName='wds-global-navigation'
+		standalone=true
+		variantUrl='/identity/global-navigation/standalone/logged-out-with-hubs'
+	}}
+{{wds-global-navigation model=model.logged-out-with-hubs}}
+	{{/component-demo}}
+{{/if}}

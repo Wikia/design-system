@@ -7,6 +7,8 @@
   },
   "devDependencies": {
     "broccoli-asset-rev": "2.4.6",
+    "design-system-i18n": "Wikia/design-system-i18n#0.6.2",
+    "ember-browserify": "1.1.13",
     "ember-cli": "2.8.0",
     "ember-cli-app-version": "2.0.0",
     "ember-cli-babel": "5.1.10",
@@ -23,6 +25,7 @@
     "ember-cli-uglify": "1.2.0",
     "ember-export-application-global": "1.0.5",
     "ember-load-initializers": "0.5.1",
+    "ember-one-way-controls": "1.1.1",
     "ember-resolver": "2.1.0",
     "ember-rl-dropdown": "0.9.0",
     "loader.js": "4.0.11"

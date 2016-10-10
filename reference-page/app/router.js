@@ -42,6 +42,11 @@ Router.map(function () {
 				path: 'standalone/:variant_name'
 			});
 		});
+		this.route('global-navigation', function () {
+			this.route('standalone', {
+				path: 'standalone/:variant_name'
+			});
+		});
 	});
 });
 

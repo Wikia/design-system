@@ -69,6 +69,10 @@ export default Controller.extend({
 					name: 'Global Footer',
 					location: 'identity.global-footer'
 				},
+				{
+					name: 'Global Navigation',
+					location: 'identity.global-navigation'
+				},
 			]
 		}
 	]
