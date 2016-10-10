@@ -1,21 +1,29 @@
 <h1>Dropdowns</h1>
 <p>Dropdown is toggleable, contextual menu for displaying additional content, mostly for lists of links.</p>
+<p>
+	In order to use Design System Dropdowns, you need to import<br/>
+	<code>design-system/components/_dropdowns.scss</code> partial in your SCSS file.
+</p>
 
 <section>
 	<h2>Dropdown composition</h2>
 	<p>Dropdown component consists of 3 elements:</p>
 	<ul class="wds-list">
 		<li>
-			- dropdown container (wraps dropdown toggle and dropdown content):
+			dropdown container (wraps dropdown toggle and dropdown content):
 			{{#component-demo codeOnly=true}}
 <div class="wds-dropdown">
-	<div class="wds-dropdown__toggle">...</div>
-	<div class="wds-dropdown__content">...</div>
+	<div class="wds-dropdown__toggle">
+		...
+	</div>
+	<div class="wds-dropdown__content">
+		...
+	</div>
 </div>
 			{{/component-demo}}
 		</li>
 		<li>
-			- dropdown toggle:
+			dropdown toggle:
 			{{#component-demo codeOnly=true}}
 <div class="wds-dropdown__toggle">
 	<span>...</span>
@@ -26,7 +34,7 @@
 			{{/component-demo}}
 		</li>
 		<li>
-			- dropdown content:
+			dropdown content:
 			{{#component-demo codeOnly=true}}
 <div class="wds-dropdown__content">
 	...
@@ -54,6 +62,23 @@
 			</ul>
 		</div>
 	</div>
+	{{#component-demo codeOnly=true}}
+<div class="wds-dropdown">
+	<div class="wds-dropdown__toggle">
+		<span>Default dropdown aligned to left</span>
+		<svg class="wds-icon wds-dropdown__toggle-chevron">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown" />
+		</svg>
+	</div>
+	<div class="wds-dropdown__content">
+		<ul class="wds-list">
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ul>
+	</div>
+</div>
+	{{/component-demo}}
 </section>
 
 <section>
@@ -77,6 +102,16 @@
 			</ul>
 		</div>
 	</div>
+	{{#component-demo codeOnly=true}}
+<div class="wds-dropdown">
+	<div class="wds-dropdown__toggle">
+		...
+	</div>
+	<div class="wds-dropdown__content wds-is-right-aligned">
+		...
+	</div>
+</div>
+	{{/component-demo}}
 </section>
 
 <section>
@@ -100,6 +135,16 @@
 			</ul>
 		</div>
 	</div>
+	{{#component-demo codeOnly=true}}
+<div class="wds-dropdown">
+	<div class="wds-dropdown__toggle">
+		...
+	</div>
+	<div class="wds-dropdown__content wds-is-dark">
+		...
+	</div>
+</div>
+	{{/component-demo}}
 </section>
 
 <section>
@@ -116,26 +161,4 @@
 			</ul>
 		{{/dropdown.content}}
 	{{/wds-dropdown}}
-</section>
-
-<section>
-	<h2>Example</h2>
-	<p>To use this code you have to have Design System's styles and icons.</p>
-	{{#component-demo codeOnly=true}}
-<div class="wds-dropdown">
-	<div class="wds-dropdown__toggle">
-		<span>Example 1</span>
-		<svg class="wds-icon wds-dropdown__toggle-chevron">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown" />
-		</svg>
-	</div>
-	<div class="wds-dropdown__content">
-		<ul class="wds-list">
-			<li>List item 1</li>
-			<li>List item 2</li>
-			<li>List item 3</li>
-		</ul>
-	</div>
-</div>
-	{{/component-demo}}
 </section>
