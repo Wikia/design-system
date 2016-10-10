@@ -1,9 +1,9 @@
 .icon-box {
-	display: inline-block;
-	margin-bottom: 40px;
+	color: $color-dark-blue;
+	font-size: $typescale-size-minus-1;
+	margin: 50px 0 0;
 	text-align: center;
-	vertical-align: top;
-	width: 125px;
+	width: 100px;
 
 	&:hover {
 		.wds-icon {
@@ -12,19 +12,18 @@
 	}
 
 	&__icon {
-		border-bottom: solid 2px $color-faint-gray;
+		border-bottom: solid 1px $color-light-c3;
 		height: 24px;
 		margin: {
 			bottom: 10px;
-			left: auto;
-			right: auto;
+			left: 25px;
+			right: 25px;
 			top: 0;
 		}
-		width: 50px;
 		padding-bottom: 17px;
 	}
 
 	.wds-icon {
-		color: $color-slate-gray;
+		color: $color-light-c5;
 	}
 }

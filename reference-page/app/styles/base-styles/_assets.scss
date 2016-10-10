@@ -1,0 +1,9 @@
+.icons-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+h2 + .icons-wrapper {
+	margin-top: -50px;
+}
