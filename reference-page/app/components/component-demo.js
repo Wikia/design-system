@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ENV from '../config/environment';
 
 const {Component} = Ember;
 
@@ -6,6 +7,7 @@ export default Component.extend({
 	classNames: ['component-demo'],
 
 	codeOnly: false,
+	rootURL: ENV.rootURL,
 	standalone: false,
 	standaloneDevice: null,
 

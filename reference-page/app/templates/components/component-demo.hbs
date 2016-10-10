@@ -10,9 +10,21 @@
 <div class="component-demo__rendered{{if codeOnly ' is-hidden'}}">{{yield}}</div>
 
 {{#if standalone}}
-	<button class="wds-button" {{action 'showFullscreen' 'mobile'}}>Mobile</button>
-	<button class="wds-button" {{action 'showFullscreen' 'tablet'}}>Tablet</button>
-	<button class="wds-button" {{action 'showFullscreen' 'desktop'}}>Desktop</button>
+	<div>
+		<img src="{{rootURL}}images/{{componentName}}-mobile.png">
+		<p>Breakpoint: S</p>
+		<button class="wds-button" {{action 'showFullscreen' 'mobile'}}>View mobile version</button>
+	</div>
+	<div>
+		<img src="{{rootURL}}images/{{componentName}}-tablet.png">
+		<p>Breakpoints: M, L</p>
+		<button class="wds-button" {{action 'showFullscreen' 'tablet'}}>View tablet version</button>
+	</div>
+	<div>
+		<img src="{{rootURL}}images/{{componentName}}-desktop.png">
+		<p>Breakpoints: XL, XXL</p>
+		<button class="wds-button" {{action 'showFullscreen' 'desktop'}}>View desktop version</button>
+	</div>
 {{/if}}
 
 {{#code-sample}}{{code}}{{/code-sample}}
