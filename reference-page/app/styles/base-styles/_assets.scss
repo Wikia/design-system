@@ -1,9 +1,9 @@
-.icons-wrapper {
+.assets-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-h2 + .icons-wrapper {
+h2 + .assets-wrapper {
 	margin-top: -50px;
 }
