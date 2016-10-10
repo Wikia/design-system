@@ -1,10 +1,16 @@
 <h1>SVG assets</h1>
 
-<p>There are two ways to use the Design System SVGs in a client application. Assets available for both solutions can be seen in the <a href="https://github.com/Wikia/design-system/tree/master/dist/svg">design-system repo</a>.</p>
+<p>
+	There are two ways to use the Design System SVGs in a client application.
+	<ul class="wds-list">
+		<li>Injecting SVG sprite</li>
+		<li>Inlining single SVG</li>
+	</ul>
+	All SVG assets are available for both solutions can be seen in the <a href="https://github.com/Wikia/design-system/tree/master/dist/svg">design-system</a> repository.
+</p>
 
 <h2 id="sprite">Injecting SVG sprite</h2>
-<p>Inject an SVG sprite into the HTML and take advantage of the <code>&lt;use&gt;</code> element to display symbol. You can either inject a sprite on server-side (like <a href="https://github.com/Wikia/upstream/pull/574/files#diff-7086296428363f580fd7c93224db4e1cR72">Fandom</a> and Reference Page do) or lazy load it (like <a href="https://github.com/Wikia/mercury/blob/e89a2651562015e6140df918419a7d74c09e1727/front/main/app/index.html#L97-L98">Mercury</a> does using a <a href="https://github.com/Wikia/mercury/blob/dev/front/common/baseline/load-dom-resource.js">custom util</a>).
-</p>
+<p>Inject an SVG sprite into the HTML and take advantage of the <code>&lt;use&gt;</code> element to display symbol.</p>
 <p>The markup for the sprite:</p>
 {{#component-demo codeOnly=true}}
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 0px; width: 0px; position: absolute; overflow: hidden;">
@@ -30,13 +36,11 @@
 <ul>
 	<li>When lazy loaded—during the time assets are loading we display content without SVGs. In some cases it might be a major issue, e.g. when there is no logo in the Global Navigation.</li>
 	<li>When returned from the server—assets are not cached between page loads and need to be redownloaded every time.</li>
-	<li>Injecting SVG sprites in Oasis HTML has an unacceptable impact on the page load time, see <a href="https://www.webpagetest.org/video/compare.php?tests=160728_5A_d9cea998ad25b82bf88c1ad83bc7884a%2C160728_C5_9d7e01aa347f352be151c1a2c3f170f4&amp;thumbSize=200&amp;ival=100&amp;end=visual">WebPageTest result</a>.</li>
+	<li>Injecting SVG sprites impacts page load time.</li>
 </ul>
 
 <h2 id="inline">Inlining single SVG</h2>
-<p>Inject the SVG content in the place you want to use it. In the MediaWiki app you can use
-	<a href="https://github.com/Wikia/app/blob/6c4bea07081fe9eefcbedfead2dbb7aefd748030/extensions/wikia/DesignSystem/DesignSystemHelper.class.php#L32">DesignSystemHelper::getSvg($svgName)</a> that handles it for you.
-</p>
+<p>Inject the SVG content in the place you want to use it.</p>
 
 <h2 id="inline-benefits">Inlining single SVG: Benefits</h2>
 <ul>
@@ -47,4 +51,16 @@
 <ul>
 	<li>Assets are not cached between page loads and need to be redownloaded every time.</li>
 	<li>When a single asset is used multiple times we can't reuse it, it has to be inlined for every occurence.</li>
+</ul>
+
+<h2>Examples:</h2>
+<ul>
+	<li>Inject SVG sprite in Fandom (Upstream project): <a href="https://github.com/Wikia/upstream/blob/adfa4a506de8c975005ce541ecb294e35be70370/wp-content/themes/upstream/header.php#L69-L78">example</a></li>
+	<li>Inject SVG sprite in Mercury (lazy load it): <a href="https://github.com/Wikia/mercury/blob/e89a2651562015e6140df918419a7d74c09e1727/front/main/app/index.html#L97-L98">example</a></li>
+</ul>
+
+<h2>Useful functions:</h2>
+<ul>
+	<li>Inline SVG in Oasis: <a href="https://github.com/Wikia/app/blob/6c4bea07081fe9eefcbedfead2dbb7aefd748030/extensions/wikia/DesignSystem/DesignSystemHelper.class.php#L32">DesignSystemHelper::getSvg($svgName)</a></li>
+	<li>Lazy load assets in Mercury: <a href="https://github.com/Wikia/mercury/blob/74c900b81777ec20c90e8f78c723c45669909bfb/front/common/baseline/load-dom-resource.js#L22">M.loadDOMResource(src);</a></li>
 </ul>
