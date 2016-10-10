@@ -3,8 +3,7 @@ import Ember from 'ember';
 const {Controller} = Ember;
 
 export default Controller.extend({
-	queryParams: ['standalone'],
-
+	// Routes with standalone components set this property
 	standalone: false,
 
 	navigation: [

@@ -12,17 +12,21 @@
 		top: 0;
 	}
 
+	&__standalone-wrapper {
+		overflow-x: auto;
+	}
+
 	&__standalone {
 		border: 0;
 		height: 500px;
-		width: 340px;
+		min-width: 340px;
 
 		&.is-tablet {
-			width: 800px;
+			min-width: 800px;
 		}
 
 		&.is-desktop {
-			width: 1200px;
+			min-width: 1200px;
 		}
 	}
 

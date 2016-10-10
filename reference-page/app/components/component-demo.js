@@ -11,7 +11,7 @@ export default Component.extend({
 
 	didInsertElement() {
 		const $component = this.$('.component-demo__rendered').clone();
-		$component.children().removeAttr('id').removeClass('ember-view');
+		$component.find('.ember-view').removeAttr('id').removeClass('ember-view');
 
 		this.set('code', $component.html());
 	},

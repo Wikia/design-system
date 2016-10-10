@@ -1,6 +1,19 @@
-{{#component-demo
-	codeOnly=true
-	standalone=true
-}}
-{{wds-global-footer model=model}}
-{{/component-demo}}
+{{#if standalone}}
+	{{outlet}}
+{{else}}
+	{{#component-demo
+		codeOnly=true
+		standalone=true
+		variantUrl='/identity/global-footer/standalone/with-hubs'
+	}}
+{{wds-global-footer model=model.withHubs}}
+	{{/component-demo}}
+
+	{{#component-demo
+		codeOnly=true
+		standalone=true
+		variantUrl='/identity/global-footer/standalone/without-hubs'
+	}}
+{{wds-global-footer model=model.withoutHubs}}
+	{{/component-demo}}
+{{/if}}

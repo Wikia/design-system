@@ -1,7 +1,9 @@
 {{#if standaloneDevice}}
 	<div class="component-demo__fullscreen">
 		<div class="component-demo__close" {{action 'closeFullscreen'}}>{{wds-icon name='cross'}}</div>
-		<iframe class="component-demo__standalone is-{{standaloneDevice}}" src="?standalone"></iframe>
+		<div class="component-demo__standalone-wrapper">
+			<iframe class="component-demo__standalone is-{{standaloneDevice}}" src="{{variantUrl}}"></iframe>
+		</div>
 	</div>
 {{/if}}
 
