@@ -76,5 +76,62 @@
         }
       ]
     }
-  }
+  },
+  "logged-out-without-hubs": {
+    "logo": {
+      "header": {
+        "type": "link-image", "href": "http:\/\/fandom.wikia.com\/explore-de",
+        "image": "wds-company-logo-fandom-powered-by-wikia",
+        "title": { "type": "text", "value": "Fandom powered by Wikia" }
+      }
+    }, "search": {
+      "module": {
+        "type": "search", "results": {
+          "url": "http:\/\/starwars.wikia.com\/wiki\/Special:Search?fulltext=Search", "param-name": "query",
+          "tracking_label": "search"
+        },
+        "placeholder-inactive": { "type": "translatable-text", "key": "global-navigation-search-placeholder-inactive" },
+        "placeholder-active": {
+          "type": "translatable-text", "key": "global-navigation-search-placeholder-in-wiki",
+          "params": { "sitename": { "type": "text", "value": "Wookieepedia" } }
+        }, "suggestions": {
+          "url": "http:\/\/starwars.wikia.com\/index.php?action=ajax&rs=getLinkSuggest&format=json",
+          "param-name": "query"
+        }
+      }
+    }, "create_wiki": {
+      "header": {
+        "type": "link-text",
+        "title": { "type": "translatable-text", "key": "global-navigation-create-wiki-link-start-wikia" },
+        "href": "http:\/\/www.wikia.com\/Special:CreateNewWiki?uselang=de"
+      }
+    }, "wikis": {
+      "links": [
+        {
+          "type": "link-text",
+          "title": { "type": "translatable-text", "key": "global-navigation-wikis-community-central" },
+          "href": "http:\/\/de.community.wikia.com\/wiki\/Community_Deutschland"
+        }
+      ]
+    }, "anon": {
+      "header": {
+        "type": "line-image", "image": "wds-icons-user",
+        "title": { "type": "translatable-text", "key": "global-navigation-anon-my-account" },
+        "subtitle": { "type": "translatable-text", "key": "global-navigation-anon-my-account" }
+      }, "links": [
+        {
+          "type": "link-authentication",
+          "title": { "type": "translatable-text", "key": "global-navigation-anon-sign-in" },
+          "href": "https:\/\/www.wikia.com\/signin?uselang=de", "param-name": "redirect"
+        }, {
+          "type": "link-authentication",
+          "title": { "type": "translatable-text", "key": "global-navigation-anon-register" },
+          "subtitle": { "type": "translatable-text", "key": "global-navigation-anon-register-description" },
+          "href": "https:\/\/www.wikia.com\/register?uselang=de", "param-name": "redirect"
+        }
+      ]
+    }
+  },
+  "logged-in-with-hubs": {"logo":{"header":{"type":"link-image","href":"http:\/\/fandom.wikia.com","image":"wds-company-logo-fandom-powered-by-wikia","title":{"type":"text","value":"Fandom powered by Wikia"}}},"search":{"module":{"type":"search","results":{"url":"http:\/\/muppet.wikia.com\/wiki\/Special:Search?fulltext=Search","param-name":"query","tracking_label":"search"},"placeholder-inactive":{"type":"translatable-text","key":"global-navigation-search-placeholder-inactive"},"placeholder-active":{"type":"translatable-text","key":"global-navigation-search-placeholder-in-wiki","params":{"sitename":{"type":"text","value":"Muppet Wiki"}}},"suggestions":{"url":"http:\/\/muppet.wikia.com\/index.php?action=ajax&rs=getLinkSuggest&format=json","param-name":"query"}}},"create_wiki":{"header":{"type":"link-text","title":{"type":"translatable-text","key":"global-navigation-create-wiki-link-start-wikia"},"href":"http:\/\/www.wikia.com\/Special:CreateNewWiki"}},"fandom_overview":{"links":[{"type":"link-branded","brand":"games","title":{"type":"translatable-text","key":"global-navigation-fandom-overview-link-vertical-games"},"href":"http:\/\/fandom.wikia.com\/games"},{"type":"link-branded","brand":"movies","title":{"type":"translatable-text","key":"global-navigation-fandom-overview-link-vertical-movies"},"href":"http:\/\/fandom.wikia.com\/movies"},{"type":"link-branded","brand":"tv","title":{"type":"translatable-text","key":"global-navigation-fandom-overview-link-vertical-tv"},"href":"http:\/\/fandom.wikia.com\/tv"}]},"wikis":{"header":{"type":"line-text","title":{"type":"translatable-text","key":"global-navigation-wikis-header"}},"links":[{"type":"link-text","title":{"type":"translatable-text","key":"global-navigation-wikis-explore"},"href":"http:\/\/fandom.wikia.com\/explore"},{"type":"link-text","title":{"type":"translatable-text","key":"global-navigation-wikis-community-central"},"href":"http:\/\/community.wikia.com\/wiki\/Community_Central"},{"type":"link-text","title":{"type":"translatable-text","key":"global-navigation-wikis-fandom-university"},"href":"http:\/\/community.wikia.com\/wiki\/Wikia_University"}]},"user":{"header":{"type":"avatar","username":{"type":"text","value":"User name"},"url":"http:\/\/vignette4.wikia.nocookie.net\/messaging\/images\/1\/19\/Avatar.jpg\/revision\/latest\/scale-to-width-down\/50?format=jpg"},"links":[{"type":"link-text","href":"http:\/\/muppet.wikia.com\/wiki\/User:User name","title":{"type":"translatable-text","key":"global-navigation-user-view-profile"}},{"type":"link-text","href":"http:\/\/muppet.wikia.com\/wiki\/Message_Wall:User name","title":{"type":"translatable-text","key":"global-navigation-user-message-wall"}},{"type":"link-text","href":"http:\/\/muppet.wikia.com\/wiki\/Special:Preferences","title":{"type":"translatable-text","key":"global-navigation-user-my-preferences"}},{"type":"link-text","href":"http:\/\/community.wikia.com\/wiki\/Help:Contents","title":{"type":"translatable-text","key":"global-navigation-user-help"}},{"type":"link-authentication","href":"http:\/\/muppet.wikia.com\/wiki\/Special:UserLogout","title":{"type":"translatable-text","key":"global-navigation-user-sign-out"},"param-name":"returnto"}]},"notifications":{"header":{"type":"line-image","image":"wds-icons-bell","title":{"type":"translatable-text","key":"global-navigation-notifications-title"}},"module":{"type":"notifications","url":"http:\/\/muppet.wikia.com\/wiki\/Message_Wall:User name"}}},
+  "logged-in-without-hubs": {"logo":{"header":{"type":"link-image","href":"http:\/\/fandom.wikia.com\/explore-de","image":"wds-company-logo-fandom-powered-by-wikia","title":{"type":"text","value":"Fandom powered by Wikia"}}},"search":{"module":{"type":"search","results":{"url":"http:\/\/starwars.wikia.com\/wiki\/Special:Search?fulltext=Search","param-name":"query","tracking_label":"search"},"placeholder-inactive":{"type":"translatable-text","key":"global-navigation-search-placeholder-inactive"},"placeholder-active":{"type":"translatable-text","key":"global-navigation-search-placeholder-in-wiki","params":{"sitename":{"type":"text","value":"Wookieepedia"}}},"suggestions":{"url":"http:\/\/starwars.wikia.com\/index.php?action=ajax&rs=getLinkSuggest&format=json","param-name":"query"}}},"create_wiki":{"header":{"type":"link-text","title":{"type":"translatable-text","key":"global-navigation-create-wiki-link-start-wikia"},"href":"http:\/\/www.wikia.com\/Special:CreateNewWiki?uselang=de"}},"wikis":{"links":[{"type":"link-text","title":{"type":"translatable-text","key":"global-navigation-wikis-community-central"},"href":"http:\/\/de.community.wikia.com\/wiki\/Community_Deutschland"}]},"user":{"header":{"type":"avatar","username":{"type":"text","value":"User name"},"url":"http:\/\/vignette4.wikia.nocookie.net\/messaging\/images\/1\/19\/Avatar.jpg\/revision\/latest\/scale-to-width-down\/50?format=jpg"},"links":[{"type":"link-text","href":"http:\/\/starwars.wikia.com\/wiki\/User:User name","title":{"type":"translatable-text","key":"global-navigation-user-view-profile"}},{"type":"link-text","href":"http:\/\/starwars.wikia.com\/wiki\/User_talk:User name","title":{"type":"translatable-text","key":"global-navigation-user-my-talk"}},{"type":"link-text","href":"http:\/\/starwars.wikia.com\/wiki\/Special:Preferences","title":{"type":"translatable-text","key":"global-navigation-user-my-preferences"}},{"type":"link-text","href":"http:\/\/de.community.wikia.com\/wiki\/Hilfe:%C3%9Cbersicht","title":{"type":"translatable-text","key":"global-navigation-user-help"}},{"type":"link-authentication","href":"http:\/\/starwars.wikia.com\/wiki\/Special:UserLogout","title":{"type":"translatable-text","key":"global-navigation-user-sign-out"},"param-name":"returnto"}]},"notifications":{"header":{"type":"line-image","image":"wds-icons-bell","title":{"type":"translatable-text","key":"global-navigation-notifications-title"}},"module":{"type":"notifications","url":"http:\/\/starwars.wikia.com\/wiki\/User_talk:User name"}}}
 }
