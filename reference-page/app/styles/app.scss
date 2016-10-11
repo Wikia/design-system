@@ -18,7 +18,9 @@ img {
 	max-width: 100%;
 }
 
-.variable-name {
+.variable-name, .class-name {
+	background-color: transparent;
+	border: 0;
 	color: $color-music;
 }
 
