@@ -1,33 +1,27 @@
-.rp-breakpoints {
-	border: 1px solid $color-dark-blue-gray;
+.rp-breakpoints-table {
 	border-spacing: 0;
-	width: 400px;
-
-	&__header {
-		background-color: $color-dark-blue-gray;
-		color: $color-faint-blue-gray;
-
-		td {
-			border-bottom: 1px solid $color-faint-blue-gray;
-		}
-	}
-
-	&__separator {
-		background-color: $color-slate-gray;
-		color: $color-faint-blue-gray;
-		text-align: center;
-	}
+	border-collapse: collapse;
+	font-size: $typescale-size-minus-1;
+	width: 574px;
 
 	td {
-		padding: 5px;
+		border: 1px solid $color-off-white;
+		padding: 14px 8px;
+		vertical-align: top;
 	}
 
-	.has-white-border-right {
-		border-right: 1px solid $color-faint-blue-gray;
+	.variable-name {
+		font-size: $typescale-size-minus-2;
 	}
 
-	.has-text-center {
-		text-align: center;
+	&__header {
+		background-color: $color-off-white;
+
+		th {
+			border: 1px solid $color-off-white;
+			padding: 18px 8px;
+			text-align: left;
+		}
 	}
 }
 
