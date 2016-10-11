@@ -1,12 +1,81 @@
-<h1>Assets</h1>
+<h1>Company Assets</h1>
+<p>Asset names for company assets are defined by the pattern <code><strong>wds-logo-comany-ASSET_NAME</strong></code>, e.g. <code>wds-company-logo-fandom</code>.</p>
 {{#link-to 'overview.svg-assets'}}How to use SVG assets{{/link-to}}
 
 <section>
-	<h2 id="company">Company assets</h2>
-	{{asset-box group='company-logo' name='fandom' class='is-identity' width=300}}
-	{{asset-box group='company-logo' name='fandom-heart' class='is-identity'}}
-	{{asset-box group='company-logo' name='fandom-powered-by-wikia' class='is-identity' width=300}}
-	{{asset-box group='company-logo' name='fandom-powered-by-wikia-two-lines' class='is-identity' width=300}}
-	{{asset-box group='company-logo' name='powered-by-wikia' class='is-identity'}}
-	{{asset-box group='company-logo' name='wikia' class='is-identity'}}
+	<h2 id="fandom-logo">Fandom logo</h2>
+	<p>This is base Fandom logo.</p>
+
+	<div class="assets-wrapper assets-wrapper--align-items-left">
+		{{asset-box group='company-logo' name='fandom' class='is-identity is-bordered is-single-in-line' width=300 height=120}}
+	</div>
+
+	{{#component-demo codeOnly=true}}
+{{svg 'wds-company-logo-fandom'}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="fandom-heart">Fandom heart</h2>
+	<p>This Fandom heart is used as fav.ico.</p>
+
+	<div class="assets-wrapper assets-wrapper--align-items-left">
+		{{asset-box group='company-logo' name='fandom-heart' class='is-identity is-bordered is-bordered--wider is-single-in-line' width=106 height=100}}
+	</div>
+
+	{{#component-demo codeOnly=true}}
+{{svg 'wds-company-logo-fandom-heart'}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="fandom-powered-by-wikia">Fandom Powered by Wikia</h2>
+	<p>This asset is used in global navigation.</p>
+
+	<div class="assets-wrapper assets-wrapper--align-items-left">
+		{{asset-box group='company-logo' name='fandom-powered-by-wikia' class='is-identity is-bordered is-single-in-line' width=300 height=48}}
+	</div>
+
+	{{#component-demo codeOnly=true}}
+{{svg 'wds-company-logo-fandom-powered-by-wikia'}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="fandom-powered-by-wikia-two-lines">Fandom Powered by Wikia (in two lines)</h2>
+	<p>This asset is used in global footer.</p>
+
+	<div class="assets-wrapper assets-wrapper--align-items-left">
+		{{asset-box group='company-logo' name='fandom-powered-by-wikia-two-lines' class='is-identity is-bordered is-single-in-line has-dark-background' width=300 height=120}}
+	</div>
+
+	{{#component-demo codeOnly=true}}
+{{svg 'wds-company-logo-fandom-powered-by-wikia-two-lines'}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="powered-by-wikia">Powered by Wikia</h2>
+	<p>This asset is used in mobile.</p>
+
+	<div class="assets-wrapper assets-wrapper--align-items-left">
+		{{asset-box group='company-logo' name='powered-by-wikia' class='is-identity is-bordered is-single-in-line' width=300 height=48}}
+	</div>
+
+	{{#component-demo codeOnly=true}}
+{{svg 'wds-company-logo-powered-by-wikia'}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="wikia-logo">Wikia Logo</h2>
+	<p>This is base Wikia logo.</p>
+
+	<div class="assets-wrapper assets-wrapper--align-items-left">
+		{{asset-box group='company-logo' name='wikia' class='is-identity is-bordered is-single-in-line' width=300 height=86}}
+	</div>
+
+	{{#component-demo codeOnly=true}}
+{{svg 'wds-company-logo-wikia'}}
+	{{/component-demo}}
 </section>

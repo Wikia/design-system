@@ -2,8 +2,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-}
+	margin: 30px 0 -50px;
+	text-align: center;
 
-h2 + .assets-wrapper {
-	margin-top: -50px;
+	&--align-items-left {
+		justify-content: flex-start;
+		text-align: left;
+	}
 }
