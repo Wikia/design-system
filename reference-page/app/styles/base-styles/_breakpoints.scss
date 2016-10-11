@@ -30,3 +30,41 @@
 		text-align: center;
 	}
 }
+
+.rp-breakpoints-visualisation {
+	margin-top: 30px;
+}
+
+.rp-displayed-breakpoint {
+	display: none;
+
+	@media #{$breakpoint-s-only} {
+		&__s-only {
+			display: inline;
+		}
+	}
+
+	@media #{$breakpoint-m-only} {
+		&__m-only {
+			display: inline;
+		}
+	}
+
+	@media #{$breakpoint-l-only} {
+		&__l-only {
+			display: inline;
+		}
+	}
+
+	@media #{$breakpoint-xl-only} {
+		&__xl-only {
+			display: inline;
+		}
+	}
+
+	@media #{$breakpoint-xxl-up} {
+		&__xxl-up {
+			display: inline;
+		}
+	}
+}
