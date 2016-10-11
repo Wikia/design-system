@@ -9,6 +9,7 @@ export default Controller.extend({
 	navigation: [
 		{
 			name: 'Overview',
+			id: 'main-navigation-overview',
 			items: [
 				{
 					name: 'SVG assets',
@@ -18,6 +19,7 @@ export default Controller.extend({
 		},
 		{
 			name: 'Base styles',
+			id: 'main-navigation-base-styles',
 			items: [
 				{
 					name: 'Breakpoints',
@@ -35,6 +37,7 @@ export default Controller.extend({
 		},
 		{
 			name: 'Components',
+			id: 'main-navigation-components',
 			items: [
 				{
 					name: 'Assets',
@@ -60,6 +63,7 @@ export default Controller.extend({
 		},
 		{
 			name: 'Identity',
+			id: 'main-navigation-identity',
 			items: [
 				{
 					name: 'Assets',

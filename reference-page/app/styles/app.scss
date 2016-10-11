@@ -14,6 +14,10 @@ a {
 	color: $color-link;
 }
 
+.variable-name {
+	color: $color-music;
+}
+
 code, p {
 	line-height: $line-height;
 }
@@ -76,12 +80,56 @@ pre {
 	float: left;
 	width: 25%;
 
-	.wds-list.wds-is-linked {
-		padding-left: 0;
+	.wds-list {
+		max-width: 160px;
 
-		> li > a {
-			padding-left: 18px;
+		&.wds-is-linked {
+			padding-left: 0;
+			padding-right: 0;
+
+			> li > a {
+				padding-left: 18px;
+				padding-right: 18px;
+			}
 		}
+	}
+
+	.wds-icon {
+		color: $color-slate-gray;
+		display: inline-block;
+		float: right;
+		transition: transform .2s;
+	}
+
+	&__toggle {
+		display: none;
+
+		+ label {
+			cursor: pointer;
+			display: block;
+		}
+
+		~ .wds-list {
+			max-height: 0;
+			overflow-y: hidden;
+			padding: 0;
+			transition: max-height .2s, padding .2s;
+		}
+
+		&:checked {
+			+ label {
+				.wds-icon {
+					transform: rotate(180deg);
+				}
+			}
+
+			~ .wds-list {
+				max-height: 200px;
+				padding-bottom: 7px;
+				padding-top: 7px;
+			}
+		}
+
 	}
 
 	li a {
@@ -119,8 +167,4 @@ pre {
 	section {
 		margin-top: 50px;
 	}
-}
-
-.variable-name {
-	color: $color-music;
 }
