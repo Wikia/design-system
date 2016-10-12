@@ -81,3 +81,13 @@ export default Controller.extend({
 		}
 	]
 });
+
+// temporary solution - this code has to be moved to a proper place
+$(document).ready(function () {
+	let mainNav = $(".main-navigation"),
+		offset = mainNav.offset().top;
+
+	$(window).on("scroll", function() {
+		mainNav.toggleClass('is-fixed', offset < $(this).scrollTop());
+	});
+});

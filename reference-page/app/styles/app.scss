@@ -151,10 +151,15 @@ pre {
 			color: $color-link;
 		}
 	}
+
+	&.is-fixed {
+		position: fixed;
+		top: 0;
+	}
 }
 
 .main-content {
-	float: left;
+	float: right;
 	margin-bottom: 80px;
 	width: 75%;
 
