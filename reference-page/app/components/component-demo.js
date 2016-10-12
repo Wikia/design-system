@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import ENV from '../config/environment';
+import beautify from '../utils/beautify';
 
 const {Component} = Ember;
 
@@ -13,9 +14,10 @@ export default Component.extend({
 
 	didInsertElement() {
 		const $component = this.$('.component-demo__rendered').clone();
+
 		$component.find('.ember-view').removeAttr('id').removeClass('ember-view');
 
-		this.set('code', $component.html());
+		this.set('code', beautify($component.html()));
 	},
 
 	click(event) {

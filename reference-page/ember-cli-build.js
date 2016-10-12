@@ -9,6 +9,11 @@ module.exports = function(defaults) {
 			'../dist/svg/sprite-company.svg',
 			'../dist/svg/sprite-icons.svg'
 		],
+		nodeAssets: {
+			'highlight.js': {
+				import: ['lib/highlight.js', 'styles/github.css']
+			}
+		},
 		sassOptions: {
 			includePaths: [
 				'../dist'
