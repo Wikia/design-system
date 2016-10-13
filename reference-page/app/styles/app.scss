@@ -84,11 +84,10 @@ pre {
 .main-navigation {
 	color: $color-dark-blue-gray;
 	float: left;
+	max-width: 220px;
 	width: 25%;
 
 	.wds-list {
-		max-width: 160px;
-
 		&.wds-is-linked {
 			padding-left: 0;
 			padding-right: 0;
