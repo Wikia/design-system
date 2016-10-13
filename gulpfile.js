@@ -1,7 +1,6 @@
 var autoprefixer = require('gulp-autoprefixer'),
 	cheerio = require('gulp-cheerio'),
 	clean = require('gulp-clean'),
-	fs = require('fs'),
 	gulp = require('gulp'),
 	inject = require('gulp-inject'),
 	livereload = require('gulp-livereload'),
@@ -9,88 +8,7 @@ var autoprefixer = require('gulp-autoprefixer'),
 	rename = require('gulp-rename'),
 	scss = require('gulp-sass'),
 	styledown = require('gulp-styledown'),
-	svgmin = require('gulp-svgmin'),
-	svgstore = require('gulp-svgstore'),
 	watch = require('gulp-watch');
-
-
-// BUILD SVGs
-function renameSvgFiles(folder) {
-	return rename(function (filePath) {
-		// Use `id="wds-company-logo-wikia"` for company/logo-wikia.svg
-		filePath.basename = 'wds-' + folder + '-' + filePath.basename;
-	});
-}
-
-function renameSvgSprites() {
-	return rename(function (filePath) {
-		// Add `sprite-` prefix to the filename
-		filePath.basename = 'sprite-' + filePath.basename;
-	});
-}
-
-function deduplicateIds(folder) {
-	return function (file) {
-		// Minify and make sure that we don't have duplicated ids in reusable elements
-		// Id of <symbol> element is set by svgstore based on the filename, not here
-		var prefix = folder + '-' + path.basename(file.relative, path.extname(file.relative));
-
-		return {
-			plugins: [{
-				cleanupIDs: {
-					prefix: prefix + '-',
-					minify: true
-				}
-			}]
-		}
-	}
-}
-
-function getDirectories(dir) {
-	return fs.readdirSync(dir)
-		.filter(function (file) {
-			return fs.statSync(path.join(dir, file)).isDirectory();
-		});
-}
-
-/**
- * For now we don't need to care about order of tasks so we don't return anything here
- */
-gulp.task('svg-sprite', function () {
-	var sourceRoot = './assets',
-		dest = './dist/svg';
-
-	getDirectories(sourceRoot).forEach(function (directory) {
-		gulp
-			.src(path.join(sourceRoot, directory, '/*.svg'))
-			.pipe(renameSvgFiles(directory))
-			.pipe(svgmin(deduplicateIds(directory)))
-			.pipe(svgstore({
-				inlineSvg: true
-			}))
-			.pipe(renameSvgSprites())
-			.pipe(gulp.dest(dest));
-	});
-});
-
-/**
- * For now we don't need to care about order of tasks so we don't return anything here
- */
-gulp.task('svg-individual', function () {
-	var sourceRoot = './assets',
-		dest = './dist/svg';
-
-	getDirectories(sourceRoot).forEach(function (directory) {
-		gulp
-			.src(path.join(sourceRoot, directory, '/*.svg'))
-			.pipe(renameSvgFiles(directory))
-			.pipe(svgmin(deduplicateIds(directory)))
-			.pipe(gulp.dest(dest));
-	});
-});
-
-gulp.task('svg', ['svg-sprite', 'svg-individual']);
-
 
 // BUILD DESIGN SYSTEM STYLES
 gulp.task('build-styles', function () {

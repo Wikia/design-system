@@ -31,8 +31,6 @@
     "gulp-rename": "1.2.2",
     "gulp-sass": "2.3.2",
     "gulp-styledown": "0.0.2",
-    "gulp-svgmin": "1.2.2",
-    "gulp-svgstore": "6.0.0",
     "gulp-watch": "4.3.9",
     "mocha": "2.5.3",
     "styledown": "1.0.2",
