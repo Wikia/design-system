@@ -11,7 +11,7 @@ module.exports = function(defaults) {
 		],
 		nodeAssets: {
 			'highlight.js': {
-				import: ['lib/highlight.js', 'styles/github.css']
+				import: ['lib/highlight.js']
 			}
 		},
 		sassOptions: {
