@@ -10,6 +10,7 @@ export default Controller.extend({
 		{
 			name: 'Overview',
 			id: 'main-navigation-overview',
+			expanded: true,
 			items: [
 				{
 					name: 'Getting started',
@@ -24,6 +25,7 @@ export default Controller.extend({
 		{
 			name: 'Base styles',
 			id: 'main-navigation-base-styles',
+			expanded: true,
 			items: [
 				{
 					name: 'Breakpoints',
@@ -42,6 +44,7 @@ export default Controller.extend({
 		{
 			name: 'Components',
 			id: 'main-navigation-components',
+			expanded: false,
 			items: [
 				{
 					name: 'Assets',
@@ -68,6 +71,7 @@ export default Controller.extend({
 		{
 			name: 'Identity',
 			id: 'main-navigation-identity',
+			expanded: false,
 			items: [
 				{
 					name: 'Assets',
@@ -84,14 +88,4 @@ export default Controller.extend({
 			]
 		}
 	]
-});
-
-// temporary solution - this code has to be moved to a proper place
-$(document).ready(function () {
-	let mainNav = $(".main-navigation"),
-		offset = mainNav.offset().top;
-
-	$(window).on("scroll", function() {
-		mainNav.toggleClass('is-fixed', offset < $(this).scrollTop());
-	});
 });
