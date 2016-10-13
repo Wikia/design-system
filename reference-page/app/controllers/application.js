@@ -12,9 +12,13 @@ export default Controller.extend({
 			id: 'main-navigation-overview',
 			items: [
 				{
+					name: 'Getting started',
+					location: 'overview.getting-started'
+				},
+				{
 					name: 'SVG assets',
 					location: 'overview.svg-assets'
-				},
+				}
 			]
 		},
 		{
