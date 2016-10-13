@@ -61,6 +61,10 @@ pre {
 	}
 }
 
+p {
+	margin-top: 0;
+}
+
 .is-hidden {
 	display: none;
 }
@@ -165,7 +169,8 @@ pre {
 	h1 {
 		font-size: $typescale-size-plus-1;
 		line-height: $line-height;
-		margin-top: 18px;
+		margin-bottom: 4px;
+		margin-top: 12px;
 	}
 
 	h2 {
@@ -176,6 +181,18 @@ pre {
 	}
 
 	section {
-		margin-top: 50px;
+		margin-top: 30px;
+	}
+}
+
+.alert-info {
+	padding-left: 26px;
+	position: relative;
+
+	.wds-icon {
+		color: $color-slate-gray;
+		left: 0;
+		position: absolute;
+		top: 5px;
 	}
 }
