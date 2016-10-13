@@ -17,36 +17,23 @@
 			padding: 14px;
 		}
 
-		&--wider {
-			.asset-box__asset {
-				padding: 24px;
-			}
+		&--wider .asset-box__asset {
+			padding: 24px;
 		}
 	}
 
-	&.is-single-in-line {
-		.asset-box__asset {
-			margin: {
-				left: 0;
-				right: 0;
-			}
-		}
+	&.is-single-in-line .asset-box__asset {
+		margin-left: 0;
+		margin-right: 0;
 	}
 
-	&.has-dark-background {
-		.asset-box__asset {
-			background-color: $color-dark-blue-gray;
-		}
+	&.has-dark-background .asset-box__asset {
+		background-color: $color-dark-blue-gray;
 	}
 
 	&__asset {
 		border-bottom: solid 1px $color-light-c3;
-		margin: {
-			bottom: 10px;
-			left: 25px;
-			right: 25px;
-			top: 0;
-		}
+		margin: 0 25px 10px;
 		padding-bottom: 9px;
 
 		svg {

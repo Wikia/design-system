@@ -5,6 +5,7 @@
 		border-right: 1px solid $color-off-white;
 		flex: 1 auto;
 		line-height: $line-height;
+		padding: 10px 20px;
 	}
 
 	&__right {
@@ -12,11 +13,8 @@
 		color: $color-dark-blue-gray;
 		flex-shrink: 0;
 		font-size: $typescale-size-minus-2;
-		width: 220px;
-	}
-
-	&__left, &__right {
 		padding: 10px 20px;
+		width: 220px;
 	}
 
 	&__code {
