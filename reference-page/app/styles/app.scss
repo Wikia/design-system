@@ -1,6 +1,8 @@
 @import 'wds';
 @import 'base-styles/index';
 @import 'components/index';
+@import 'identity/index';
+@import 'route-components/index';
 
 body {
 	background: $color-white;
