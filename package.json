@@ -7,7 +7,7 @@
     "dev": "gulp watch",
     "test": "cd reference-page && node test",
     "setup": "npm install",
-    "svgo": "svgo --precision 3 --config .svgo.yml assets/icons && svgo --precision 3 --config .svgo.yml assets/company",
+    "svgo": "svgo --precision 3 --config .svgo.yml assets",
     "svg": "gulp",
     "update-baseline": "rm -rf reference-page/visuals/* && npm run test"
   },
