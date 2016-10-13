@@ -5,6 +5,13 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
 
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
+		autoprefixer: {
+			browsers: ['last 4 versions'],
+			cascade: false
+		},
+		fingerprint: {
+			enabled: false
+		},
 		inlineSvgSprites: [
 			'dist/svg/sprite.svg'
 		],
@@ -19,9 +26,22 @@ module.exports = function(defaults) {
 				import: ['lib/highlight.js']
 			}
 		},
+		outputPaths: {
+			app: {
+				css: {
+					'app': '/assets/reference-page.css',
+					// This one is copied after build to /dist for use by other apps, see postBuildCopy below
+					'wds': '/assets/wds.css'
+				}
+			}
+		},
+		postBuildCopy: [{
+			src: '/assets/wds.css',
+			dest: '../dist/css/styles.css'
+		}],
 		sassOptions: {
 			includePaths: [
-				'../dist'
+				'../styles'
 			]
 		}
 	});
