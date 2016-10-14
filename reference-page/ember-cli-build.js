@@ -13,9 +13,6 @@ module.exports = function(defaults) {
 		fingerprint: {
 			enabled: false
 		},
-		inlineSvgSprites: [
-			'dist/svg/sprite.svg'
-		],
 		nodeAssets: {
 			'highlight.js': {
 				import: ['lib/highlight.js']
@@ -32,10 +29,12 @@ module.exports = function(defaults) {
 		},
 		postBuildCopy: [{
 			src: '/assets/wds.css',
-			dest: '../dist/css/styles.css'
+			dest: '../dist/css/styles.css',
+			enabled: EmberApp.env() === 'production'
 		}, {
 			src: '/svg/*.svg',
-			dest: '../dist/svg/'
+			dest: '../dist/svg/',
+			enabled: EmberApp.env() === 'production'
 		}],
 		sassOptions: {
 			includePaths: [
@@ -44,14 +43,20 @@ module.exports = function(defaults) {
 		}
 	});
 
-	var svgAssets = new Funnel('../assets', {
-		include: ['*.svg'],
-		destDir: 'svg'
-	});
+	var additionalTrees = [];
 
-	var svgSprite = new Symbolizer('../assets', {
+	if (app.env === 'production') {
+		// We build separate SVG files just for the /dist
+		// Don't waste resources during development
+		additionalTrees.push(new Funnel('../assets', {
+			include: ['*.svg'],
+			destDir: 'svg'
+		}));
+	}
+
+	additionalTrees.push(new Symbolizer('../assets', {
 		outputFile: '/svg/sprite.svg'
-	});
+	}));
 
 	// Use `app.import` to add additional libraries to the generated
 	// output files.
@@ -66,5 +71,5 @@ module.exports = function(defaults) {
 	// please specify an object with the list of modules as keys
 	// along with the exports of each module as its value.
 
-	return app.toTree([svgAssets, svgSprite]);
+	return app.toTree(additionalTrees);
 };

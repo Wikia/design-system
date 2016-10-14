@@ -13,7 +13,12 @@ module.exports = {
 
 		for (var i = 0; i < config.length; i++) {
 			var src = glob.sync(results.directory + config[i].src),
-				dest = config[i].dest;
+				dest = config[i].dest,
+				enabled = config[i].enabled;
+
+			if (enabled === false) {
+				return;
+			}
 
 			if (src.length === 0) {
 				console.warn('post-build-copy: No files found for glob ' + results.directory + config[i].src);
