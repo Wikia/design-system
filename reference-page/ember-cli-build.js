@@ -1,7 +1,8 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
-	Funnel = require('broccoli-funnel');
+	Funnel = require('broccoli-funnel'),
+	Symbolizer = require('broccoli-symbolizer');
 
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
@@ -40,18 +41,16 @@ module.exports = function(defaults) {
 			includePaths: [
 				'../styles'
 			]
-		},
-		svgstore: {
-			files: {
-				sourceDirs: '../assets',
-				outputFile: '/svg/sprite.svg'
-			}
 		}
 	});
 
 	var svgAssets = new Funnel('../assets', {
 		include: ['*.svg'],
 		destDir: 'svg'
+	});
+
+	var svgSprite = new Symbolizer('../assets', {
+		outputFile: '/svg/sprite.svg'
 	});
 
 	// Use `app.import` to add additional libraries to the generated
@@ -67,5 +66,5 @@ module.exports = function(defaults) {
 	// please specify an object with the list of modules as keys
 	// along with the exports of each module as its value.
 
-	return app.toTree([svgAssets]);
+	return app.toTree([svgAssets, svgSprite]);
 };
