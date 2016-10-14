@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "ember b -prod",
+    "build": "ember b -prod && npm run svgo-dist",
     "dev": "ember s",
-    "setup": "npm i && bower update"
+    "setup": "npm i && bower update",
+    "svgo-dist": "svgo --config .svgo-dist.yml --folder ../dist/svg",
+    "svgo-source": "svgo --precision 3 --config .svgo-source.yml --folder ../assets"
   },
   "devDependencies": {
     "broccoli-asset-rev": "2.4.6",
@@ -37,7 +39,8 @@
     "fs-extra": "0.30.0",
     "glob": "7.1.1",
     "highlight.js": "9.7.0",
-    "loader.js": "4.0.11"
+    "loader.js": "4.0.11",
+    "svgo": "0.7.1"
   },
   "ember-addon": {
     "paths": [
