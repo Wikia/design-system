@@ -1,6 +1,8 @@
 /*jshint node:true*/
 /* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
+	Funnel = require('broccoli-funnel'),
+	Symbolizer = require('broccoli-symbolizer');
 
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
@@ -11,11 +13,6 @@ module.exports = function(defaults) {
 		fingerprint: {
 			enabled: false
 		},
-		inlineSvgSprites: [
-			'../dist/svg/sprite-avatar-badges.svg',
-			'../dist/svg/sprite-company.svg',
-			'../dist/svg/sprite-icons.svg'
-		],
 		nodeAssets: {
 			'highlight.js': {
 				import: ['lib/highlight.js']
@@ -32,7 +29,12 @@ module.exports = function(defaults) {
 		},
 		postBuildCopy: [{
 			src: '/assets/wds.css',
-			dest: '../dist/css/styles.css'
+			dest: '../dist/css/styles.css',
+			enabled: EmberApp.env() === 'production'
+		}, {
+			src: '/svg/*.svg',
+			dest: '../dist/svg/',
+			enabled: EmberApp.env() === 'production'
 		}],
 		sassOptions: {
 			includePaths: [
@@ -40,6 +42,21 @@ module.exports = function(defaults) {
 			]
 		}
 	});
+
+	var additionalTrees = [];
+
+	if (app.env === 'production') {
+		// We build separate SVG files just for the /dist
+		// Don't waste resources during development
+		additionalTrees.push(new Funnel('../assets', {
+			include: ['*.svg'],
+			destDir: 'svg'
+		}));
+	}
+
+	additionalTrees.push(new Symbolizer('../assets', {
+		outputFile: '/svg/sprite.svg'
+	}));
 
 	// Use `app.import` to add additional libraries to the generated
 	// output files.
@@ -54,5 +71,5 @@ module.exports = function(defaults) {
 	// please specify an object with the list of modules as keys
 	// along with the exports of each module as its value.
 
-	return app.toTree();
+	return app.toTree(additionalTrees);
 };
