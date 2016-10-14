@@ -1,9 +1,25 @@
 <h1>Assets</h1>
-{{#link-to 'overview.svg-assets'}}How to use SVG assets{{/link-to}}
+<p>
+	{{#link-to 'overview.svg-assets'}}How to use SVG assets{{/link-to}}
+</p>
+<p>
+	Defined as an XML-based vector format for 2d graphics with support for interactivity and animation,
+	SVGs are the primary file type for icons and non image-based assets used across our platforms.
+	SVGs can be displayed across devices with differing resolutions (1x, 2x, 3x, etc.) with lossless quality.
+</p>
 
 <section>
 	<h2 id="icons">Icons</h2>
-	<p>Asset names for icons are defined by the pattern <code><strong>wds-icons-ICON_NAME</strong></code>, e.g. <code>wds-icons-alert</code>.</p>
+	<p>
+		System icons are displayed at 24px, but are also available in varying sizes such as 18px and 12px.
+		The content of an icon should remain inside the square container and when implementing,
+		adequate space around the icon should be added to allow for legibility and touch.
+		You may have icons with different sizes, but do not place any part of the icon outside of the live area.
+	</p>
+	<p>
+		Asset names for icons are defined by the pattern <code><strong>wds-icons-ICON_NAME</strong></code>,
+		e.g. <code>wds-icons-alert</code>.
+	</p>
 	<p>
 		To apply default styles for an icon add <code class="format-code">.wds-icon</code> class to the <code>&lt;svg&gt;</code> element.
 		This class includes <code>fill: currentColor;</code> rule which means that the fill color is inherited from the parent.
@@ -165,7 +181,13 @@
 <section>
 	<h2 id="stores">Mobile apps stores</h2>
 	<p>
-		Asset names for mobile apps stores are defined by the pattern <code><strong>wds-company-store-STORE_NAME</strong></code>,
+		To help with the promotion of our community apps Google Play and App Store badges should be displayed
+		when possible. Each badge should be translated to our supported languages and point to the respective
+		download page.
+	</p>
+	<p>
+		Asset names for mobile apps stores are defined by the pattern
+		<code><strong>wds-company-store-STORE_NAME</strong></code>,
 		e.g. <code>wds-company-store-appstore</code>.
 	</p>
 
@@ -181,6 +203,11 @@
 
 <section>
 	<h2 id="avatar-badges">Avatar badges</h2>
+	<p>
+		To help communicate special user permissions badges should be displayed when sensible and placed
+		at the top-left corner of the avatar. For clarity when a user hovers over the badge a label should
+		display identifying what type of user he/she is.
+	</p>
 	<p>
 		Asset names for avatar badges are defined by the pattern <code><strong>avatar-badges-BADGE_NAME</strong></code>,
 		e.g. <code>avatar-badges-admin</code>.
