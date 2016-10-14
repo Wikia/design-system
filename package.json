@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.14.4",
+  "version": "0.14.6",
   "description": "Design System developed for Wikia",
   "scripts": {
     "build": "cd reference-page && npm run build",
