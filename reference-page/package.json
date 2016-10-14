@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build": "ember b -prod",
+    "dev": "ember s",
     "setup": "npm i && bower update"
   },
   "devDependencies": {
@@ -33,12 +35,12 @@
     "ember-resolver": "2.1.0",
     "ember-rl-dropdown": "0.9.0",
     "fs-extra": "0.30.0",
+    "glob": "7.1.1",
     "highlight.js": "9.7.0",
     "loader.js": "4.0.11"
   },
   "ember-addon": {
     "paths": [
-      "lib/inline-svg-sprites",
       "lib/post-build-copy",
       "lib/wds-components"
     ]

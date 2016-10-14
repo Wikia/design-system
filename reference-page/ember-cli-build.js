@@ -15,12 +15,6 @@ module.exports = function(defaults) {
 		inlineSvgSprites: [
 			'dist/svg/sprite.svg'
 		],
-		svgstore: {
-			files: {
-				sourceDirs: '../assets/',
-				outputFile: '/svg/sprite.svg'
-			}
-		},
 		nodeAssets: {
 			'highlight.js': {
 				import: ['lib/highlight.js']
@@ -38,11 +32,20 @@ module.exports = function(defaults) {
 		postBuildCopy: [{
 			src: '/assets/wds.css',
 			dest: '../dist/css/styles.css'
+		}, {
+			src: '/svg/*.svg',
+			dest: '../dist/svg/'
 		}],
 		sassOptions: {
 			includePaths: [
 				'../styles'
 			]
+		},
+		svgstore: {
+			files: {
+				sourceDirs: '../assets',
+				outputFile: '/svg/sprite.svg'
+			}
 		}
 	});
 
@@ -64,5 +67,5 @@ module.exports = function(defaults) {
 	// please specify an object with the list of modules as keys
 	// along with the exports of each module as its value.
 
-	return app.toTree(svgAssets);
+	return app.toTree([svgAssets]);
 };
