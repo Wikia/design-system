@@ -4,6 +4,7 @@
   "description": "Design System developed for Wikia",
   "scripts": {
     "build": "cd reference-page && npm run build",
+    "deploy": "cd reference-page && npm run deploy",
     "dev": "cd reference-page && npm run dev",
     "test": "cd reference-page && npm run test",
     "setup": "cd reference-page && npm run setup"
