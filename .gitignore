@@ -2,11 +2,8 @@
 *.DS_Store
 *._.DS_Store
 npm-debug.log
-
-/reference-page/tmp/
-/reference-page/dist/
-/reference-page/node_modules/
-/reference-page/bower_components/
-
-# Jenkins
 debug.log
+
+/tmp/
+/node_modules/
+/bower_components/
