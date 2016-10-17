@@ -3,7 +3,7 @@
   "version": "0.14.6",
   "description": "Design System developed for Wikia",
   "scripts": {
-    "build": "npm run svgo-source && ember b -prod && cp -R guidelines/styles dist/guidelines/scss && npm run svgo-dist",
+    "build": "rm -rf dist && npm run svgo-source && ember b -prod && cp -R guidelines/styles dist/guidelines/scss && mv dist/reference-page-dev/ dist/reference-page &&  npm run svgo-dist",
     "dev": "ember s",
     "setup": "npm i && bower update",
     "svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/guidelines/svg",
