@@ -72,7 +72,7 @@ parse_args() {
 	# vars should be declared here, with sane defaults if applicable.
 
 	# Source directory & target branch.
-	deploy_directory=`reference-page/dist`
+	deploy_directory=reference-page/dist
 	deploy_branch=${GIT_DEPLOY_BRANCH:-gh-pages}
 
 	#if no user identity is already set in the current git environment, use this:
@@ -142,7 +142,7 @@ main() {
 initial_deploy() {
 	git --work-tree "$deploy_directory" checkout --orphan $deploy_branch
 	git --work-tree "$deploy_directory" add --all
-	commit+push
+	commit_push
 }
 
 incremental_deploy() {
@@ -157,7 +157,7 @@ incremental_deploy() {
 	set -o errexit
 	case $diff in
 		0) echo No changes to files in $deploy_directory. Skipping commit.;;
-		1) commit+push;;
+		1) commit_push;;
 		*)
 			echo git diff exited with code $diff. Aborting. Staying on branch $deploy_branch so you can debug. To switch back to master, use: git symbolic-ref HEAD refs/heads/master && git reset --mixed >&2
 			return $diff
@@ -165,7 +165,7 @@ incremental_deploy() {
 	esac
 }
 
-commit+push() {
+commit_push() {
 	set_user_id
 	git --work-tree "$deploy_directory" commit -m "$commit_message"
 
@@ -209,14 +209,6 @@ restore_head() {
 	fi
 
 	git reset --mixed
-}
-
-filter() {
-	sed -e "s|$repo|\$repo|g"
-}
-
-sanitize() {
-	"$@" 2> >(filter 1>&2) | filter
 }
 
 [[ $1 = --source-only ]] || main "$@"
