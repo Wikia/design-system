@@ -6,17 +6,10 @@
     "url": "git://github.com/Wikia/design-system.git"
   },
   "ignore": [
-    "app/",
-    "config/",
-    "dist/reference-page",
-    "guidelines/",
-    "lib/",
-    "public/",
-    "tests/",
-    "**/.*",
-    "ember-cli-build.js",
-    "testem.js",
-    "README.md"
+    "/*",
+    "!/dist",
+    "/dist/*",
+    "!/dist/guidelines"
   ],
   "dependencies": {
     "ember": "2.8.2",
