@@ -8,12 +8,14 @@
   "ignore": [
     "app/",
     "config/",
+    "dist/reference-page",
+    "guidelines/",
     "lib/",
     "public/",
     "tests/",
     "**/.*",
     "ember-cli-build.js",
-    "testem.md",
+    "testem.js",
     "README.md"
   ],
   "dependencies": {
