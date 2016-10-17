@@ -6,8 +6,8 @@
     "build": "npm run svgo-source && ember b -prod && npm run svgo-dist",
     "dev": "ember s",
     "setup": "npm i && bower update",
-    "svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder ../dist/svg",
-    "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder ../assets"
+    "svgo-dist": "node ./node_modules/svgo/bin/svgo --config .svgo-dist.yml --quiet --folder ../dist/svg",
+    "svgo-source": "node ./node_modules/svgo/bin/svgo --precision 3 --config .svgo-source.yml --quiet --folder ../assets"
   },
   "devDependencies": {
     "broccoli-asset-rev": "2.4.6",
