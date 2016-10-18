@@ -1,17 +1,10 @@
 .idea/
 *.DS_Store
 *._.DS_Store
-node_modules/
-bower_components/
 npm-debug.log
-
-reference-page/tmp/
-
-# Visual Regression Testing files that shouldn't be commited as they are of no use
-reference-page/visuals/reference-page/diff
-reference-page/visuals/reference-page/*.regression.png
-reference-page/visuals/reference-page/reference-page.png
-reference-page/visuals/reference-page/reference-page.*px.png
-
-# Jenkins
 debug.log
+
+/tmp/
+/node_modules/
+/bower_components/
+/docs-dev/

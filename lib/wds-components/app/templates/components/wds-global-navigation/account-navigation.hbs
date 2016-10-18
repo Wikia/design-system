@@ -1,0 +1,23 @@
+{{#wds-dropdown
+	class='wds-global-navigation__account-menu'
+	as |dropdown|
+}}
+	{{#dropdown.toggle class='wds-global-navigation__dropdown-toggle'}}
+		{{svg model.header.image class='wds-icon wds-icon-small'}}
+		<span class="wds-global-navigation__account-menu-caption">{{i18n model.header.title.key}}</span>
+	{{/dropdown.toggle}}
+	{{#dropdown.content
+		class='wds-global-navigation__dropdown-content'
+		dropdownRightAligned=true
+	}}
+		{{#wds-list class='wds-has-lines-between'}}
+			{{#each model.links as |link|}}
+				<li>
+					{{wds-global-navigation.link-authentication
+						model=link
+					}}
+				</li>
+			{{/each}}
+		{{/wds-list}}
+	{{/dropdown.content}}
+{{/wds-dropdown}}

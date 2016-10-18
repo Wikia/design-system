@@ -1,0 +1,62 @@
+{{#if standalone}}
+	{{outlet}}
+{{else}}
+	<h1>Global Navigation</h1>
+	<p>
+		A main driver for user engagement,
+		the global nav should be displayed on all of our pages to help tie the various products together
+		and to provide a way for users to navigate the site.
+	</p>
+
+	<section>
+		<h2 id="logged-out-with-hubs">Logged out with hubs</h2>
+
+		{{#component-demo
+			codeOnly=true
+			componentName='wds-global-navigation'
+			standalone=true
+			variantUrl='/identity/global-navigation/standalone/logged-out-with-hubs'
+		}}
+{{wds-global-navigation model=model.logged-out-with-hubs}}
+		{{/component-demo}}
+	</section>
+
+	<section>
+		<h2 id="logged-out-without-hubs">Logged out without hubs</h2>
+
+		{{#component-demo
+			codeOnly=true
+			componentName='wds-global-navigation'
+			standalone=true
+			variantUrl='/identity/global-navigation/standalone/logged-out-without-hubs'
+		}}
+{{wds-global-navigation model=model.logged-out-without-hubs}}
+		{{/component-demo}}
+	</section>
+
+	<section>
+		<h2 id="logged-in-with-hubs">Logged in with hubs</h2>
+
+		{{#component-demo
+			codeOnly=true
+			componentName='wds-global-navigation'
+			standalone=true
+			variantUrl='/identity/global-navigation/standalone/logged-in-with-hubs'
+		}}
+{{wds-global-navigation model=model.logged-in-with-hubs}}
+		{{/component-demo}}
+	</section>
+
+	<section>
+		<h2 id="logged-in-with-hubs">Logged in without hubs</h2>
+
+		{{#component-demo
+			codeOnly=true
+			componentName='wds-global-navigation'
+			standalone=true
+			variantUrl='/identity/global-navigation/standalone/logged-in-without-hubs'
+		}}
+{{wds-global-navigation model=model.logged-in-without-hubs}}
+		{{/component-demo}}
+	</section>
+{{/if}}

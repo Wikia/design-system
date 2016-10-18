@@ -1,0 +1,10 @@
+import Ember from 'ember';
+
+const {Component} = Ember;
+
+export default Component.extend({
+	classNames: ['asset-box'],
+	// default SVG size
+	height: 150,
+	width: 150
+});

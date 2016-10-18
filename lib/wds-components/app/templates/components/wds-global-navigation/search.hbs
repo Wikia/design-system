@@ -1,0 +1,37 @@
+<div class="wds-global-navigation__search-input-wrapper wds-dropdown {{if hasSuggestions 'wds-is-active'}}">
+	<label class="wds-dropdown__toggle wds-global-navigation__search-label">
+		{{svg 'wds-icons-magnifying-glass' class='wds-icon wds-icon-small wds-global-navigation__search-label-icon'}}
+		{{one-way-input
+			value=query
+			class='wds-global-navigation__search-input'
+			name=model.results.param-name
+			placeholder=searchPlaceholder
+			type='search'
+			autocomplete='off'
+			update=(action 'queryChanged')
+			focusIn=(action 'focusSearch')
+			keyEvents=(hash
+				27=(action 'onKeyEscape')
+				38=(action 'onKeyUp')
+				40=(action 'onKeyDown')
+			)
+		}}
+	</label>
+	<button class="wds-button wds-is-text wds-global-navigation__search-close" type="reset" {{action 'closeSearch' preventDefault=false}}>
+		{{svg 'wds-icons-cross' class='wds-icon wds-icon-small wds-global-navigation__search-close-icon'}}
+	</button>
+	<div class="wds-dropdown__content wds-global-navigation__search-suggestions">
+		{{#wds-list class='wds-has-ellipsis wds-is-linked'}}
+			{{#each suggestions as |suggestion index|}}
+				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}}">
+					<a href="{{suggestion.uri}}" class="wds-global-navigation__dropdown-link">
+						{{{suggestion.text}}}
+					</a>
+				</li>
+			{{/each}}
+		{{/wds-list}}
+	</div>
+	<button class="wds-button wds-global-navigation__search-submit" type="button" disabled={{isEmptyQuery}}>
+		{{svg 'wds-icons-arrow' class='wds-icon wds-icon-small wds-global-navigation__search-submit-icon'}}
+	</button>
+</div>
