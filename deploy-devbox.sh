@@ -25,12 +25,13 @@ done
 # Check if HOST is not empty
 if [ -z "$HOST" ]
 then
-	echo "Please set -h HOST i.e. -h dev-developer"
+	echo -e "\e[31mPlease set -h HOST i.e. -h dev-developer\e[39m"
 	exit 1
 fi
 
 if [ ! -z "$USERNAME" ]
 then
+	echo -e "\e[33mIf you want to login with different user set -u USERNAME\e[39m"
 	HOST="$USERNAME@$HOST"
 fi
 
