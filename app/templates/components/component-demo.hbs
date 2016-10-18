@@ -2,7 +2,7 @@
 	<div class="component-demo__fullscreen">
 		<div class="component-demo__close" {{action 'closeFullscreen'}}>{{wds-icon name='cross'}}</div>
 		<div class="component-demo__standalone-wrapper">
-			<iframe class="component-demo__standalone is-{{standaloneDevice}}" src="{{variantUrl}}"></iframe>
+			<iframe class="component-demo__standalone is-{{standaloneDevice}}" src="{{rootURL}}#{{variantUrl}}"></iframe>
 		</div>
 	</div>
 {{/if}}
