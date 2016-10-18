@@ -79,11 +79,11 @@ export default Controller.extend({
 				},
 				{
 					name: 'Global Footer',
-					location: 'identity.global-footer'
+					location: 'identity.global-footer.index'
 				},
 				{
 					name: 'Global Navigation',
-					location: 'identity.global-navigation'
+					location: 'identity.global-navigation.index'
 				},
 			]
 		}
