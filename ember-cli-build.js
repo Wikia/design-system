@@ -30,18 +30,18 @@ module.exports = function(defaults) {
 		postBuildCopy: [
 			{
 				src: '/assets/wds.css',
-				dest: 'dist/guidelines/css/styles.css',
+				dest: 'dist/css/styles.css',
 				enabled: EmberApp.env() === 'production'
 			},
 			{
 				src: '/svg/*.svg',
-				dest: 'dist/guidelines/svg/',
+				dest: 'dist/svg/',
 				enabled: EmberApp.env() === 'production'
 			}
 		],
 		sassOptions: {
 			includePaths: [
-				'guidelines/styles'
+				'style-guide/styles'
 			]
 		}
 	});
@@ -51,13 +51,13 @@ module.exports = function(defaults) {
 	if (app.env === 'production') {
 		// We build separate SVG files just for the /dist
 		// Don't waste resources during development
-		additionalTrees.push(new Funnel('guidelines/assets', {
+		additionalTrees.push(new Funnel('style-guide/assets', {
 			include: ['*.svg'],
 			destDir: 'svg'
 		}));
 	}
 
-	additionalTrees.push(new Symbolizer('guidelines/assets', {
+	additionalTrees.push(new Symbolizer('style-guide/assets', {
 		outputFile: '/svg/sprite.svg'
 	}));
 

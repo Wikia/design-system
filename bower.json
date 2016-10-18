@@ -7,9 +7,7 @@
   },
   "ignore": [
     "/*",
-    "!/dist",
-    "/dist/*",
-    "!/dist/guidelines"
+    "!/dist"
   ],
   "devDependencies": {
     "ember": "2.8.2",
