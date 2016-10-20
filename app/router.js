@@ -8,8 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
 	this.route('overview', function () {
-		this.route('svg-assets');
 		this.route('getting-started');
+		this.route('contributing');
+		this.route('svg-assets');
 	});
 
 	this.route('base-styles', function () {
