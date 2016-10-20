@@ -5,7 +5,11 @@ module.exports = function (environment) {
 		modulePrefix: 'design-system',
 		environment: environment,
 		rootURL: '/',
-		locationType: 'hash'
+		locationType: 'hash',
+		EmberENV: {
+			FEATURES: {}
+		},
+		APP: {}
 	};
 
 	if (environment === 'test') {
