@@ -10,6 +10,7 @@ Router.map(function () {
 	this.route('overview', function () {
 		this.route('svg-assets');
 		this.route('getting-started');
+		this.route('quick-start');
 	});
 
 	this.route('base-styles', function () {
