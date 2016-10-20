@@ -1,6 +1,11 @@
 <h1>Contributing</h1>
 
 <section>
+	<h2>Who can contribute</h2>
+	<p>Everyone can contribute. No specific team is the owner of this project and everyone is encouraged to improve and expand it.</p>
+</section>
+
+<section>
 	<h2>How to develop</h2>
 	<p>If you want to contribute to DS follow the steps:</p>
 	<ul>
@@ -116,10 +121,16 @@ sh deploy-devbox.sh -h dev-developer
 sh deploy-devbox.sh -h dev-developer -u developer
 		{{/code-sample}}
 
+	<p>
+		It builds the app and uses <code class="format-code">scp</code> to send the files to devbox.
+		If you have configured the SSH keys in your system then no additional authorization is required.
+		If you haven't then you will need to use your password.
+	</p>
+
 	<p>Parameters:</p>
 	<ul>
-		<li><code class="format-code">-h host</code>, devbox name i.e. dev-developer <b>(required)</b></li>
-		<li><code class="format-code">-u username</code>, ssh username (optional)</li>
+		<li><code class="format-code">-h host</code> - devbox name i.e. <code class="format-code">dev-developer</code> <b>(required)</b></li>
+		<li><code class="format-code">-u username</code> - devbox username (optional, needed if you didn't configure SSH keys and have a different username locally than on devbox)</li>
 	</ul>
 </section>
 
