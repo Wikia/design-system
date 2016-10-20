@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function () {
 	this.route('overview', function () {
 		this.route('getting-started');
+		this.route('quick-start');
 		this.route('contributing');
 		this.route('svg-assets');
 	});

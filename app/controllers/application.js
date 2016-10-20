@@ -21,6 +21,10 @@ export default Controller.extend({
 					location: 'overview.contributing'
 				},
 				{
+					name: 'Quick start',
+					location: 'overview.quick-start'
+				},
+				{
 					name: 'SVG assets',
 					location: 'overview.svg-assets'
 				}
