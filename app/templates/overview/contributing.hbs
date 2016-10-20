@@ -102,10 +102,25 @@
 </section>
 
 <section>
-	<h2></h2>
+	<h2>How to deploy Reference Page to devbox</h2>
 	<p>
-
+		You can present your work on Reference Page by deploying it to your devbox. To do so you can use
+		<code class="format-code">deploy-debox.sh</code> script which will make the Reference Page available on
+		<a href="http://dev-developer/design-system/">http://dev-developer/design-system/</a>.
 	</p>
+
+	<p>How to use the script:</p>
+		{{#code-sample}}
+./deploy-devbox.sh -h dev-developer
+sh deploy-devbox.sh -h dev-developer
+sh deploy-devbox.sh -h dev-developer -u developer
+		{{/code-sample}}
+
+	<p>Parameters:</p>
+	<ul>
+		<li><code class="format-code">-h host</code>, devbox name i.e. dev-developer <b>(required)</b></li>
+		<li><code class="format-code">-u username</code>, ssh username (optional)</li>
+	</ul>
 </section>
 
 <section>
