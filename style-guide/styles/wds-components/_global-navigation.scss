@@ -388,7 +388,8 @@ $hover-transition-duration: 300ms !default;
 		border-left: 1px solid $color-blue-gray;
 
 		@media (min-width: 1280px) {
-			display: block;
+			display: flex;
+			align-items: center;
 		}
 	}
 
