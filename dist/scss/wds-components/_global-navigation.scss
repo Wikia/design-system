@@ -390,6 +390,7 @@ $hover-transition-duration: 300ms !default;
 		top: 0;
 		border-left: 1px solid $color-blue-gray;
 
+		// 1280px is a minimum for right slot to appear, on smaller screen there is no space for it
 		@media (min-width: 1280px) {
 			display: flex;
 			align-items: center;
