@@ -391,6 +391,10 @@ $hover-transition-duration: 300ms !default;
 			display: flex;
 			align-items: center;
 		}
+
+		&-image {
+			vertical-align: middle;
+		}
 	}
 
 	&:not(.wds-search-is-active) .wds-global-navigation__search-suggestions {
