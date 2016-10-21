@@ -22,9 +22,37 @@
 		<li>Run <code class="format-code">npm run dev</code> to build the Reference Page and start file watchers</li>
 		<li>Open <a href="http://localhost:4200" target="_blank">http://localhost:4200</a> to see the Reference Page</li>
 		<li>Modify the Design System or Reference Page source files as you see fit, Ember CLI will rebuild the RP app and reload the page</li>
-		<li>If you want to present the results of your work using devbox see "How to deploy Reference Page to devbox" section below</li>
-		<li>If you want to release your change see <strong>[PUT A LINK HERE]</strong></li>
+        <li>If you want to release your change see the "How to release new version" section below</li>
+        <li>If you want to present the results of your work using devbox see the "How to deploy Reference Page to devbox" section below</li>
 	</ul>
+</section>
+
+<section>
+	<h2>How to release new version</h2>
+	<p>When you merge changes to the <code class="format-code">master</code> branch you have to release them.</p>
+	<p>
+		First, you need to define what kind of change it is.
+		We follow <a href="http://semver.org/" target="_blank">SemVer</a> with a
+		<a href="https://medium.com/javascript-scene/software-versions-are-broken-3d2dc0da0783#70a1" target="_blank">slight modification</a>
+		where the version roles are based on the scheme: <strong>Breaking.Feature.Fix</strong>. Paraphrasing the linked article:
+	</p>
+	<p>We don't decide what the version will be. The API changes decide. Version numbers are for computers, not people.</p>
+    <ul>
+        <li>Breaking - Any breaking change, no matter how small increments the Breaking version number.</li>
+        <li>Feature - When any new feature is added. This could be as small as a new variable, or as large as a new component.</li>
+        <li>Fix - When a documented feature does not behave as documented (and no client relies on the broken behavior).</li>
+    </ul>
+	<p>To release the new version, use one of the following commands:</p>
+	<ul>
+		<li><code class="format-code">npm run release-breaking</code> - bumps <code class="format-code">1.0.0</code> to <code class="format-code">2.0.0</code></li>
+		<li><code class="format-code">npm run release-feature</code> - bumps <code class="format-code">1.0.0</code> to <code class="format-code">1.1.0</code></li>
+		<li><code class="format-code">npm run release-fix</code> - bumps <code class="format-code">1.0.0</code> to <code class="format-code">1.0.1</code></li>
+	</ul>
+	<p>
+		It will checkout the latest master,
+		use <a href="https://docs.npmjs.com/cli/version" target="_blank">npm version</a>
+		to bump the version and push the updated <code class="format-code">package.json</code> and the new tag.
+	</p>
 </section>
 
 <section>
