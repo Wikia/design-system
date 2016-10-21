@@ -7,6 +7,9 @@
     "build-devbox": "ember b --environment=devbox",
     "clean-build": "rm -rf dist docs-dev docs",
     "dev": "ember s",
+    "release-major": "git checkout master && git pull && npm version major && git push --follow-tags",
+    "release-minor": "git checkout master && git pull && npm version minor && git push --follow-tags",
+    "release-patch": "git checkout master && git pull && npm version patch && git push --follow-tags",
     "setup": "npm i && bower update",
     "svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/svg",
     "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets"
