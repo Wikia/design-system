@@ -1,3 +1,11 @@
-.wds-global-navigation__search-suggestions .wds-is-selected a {
-	color: $color-link;
+.wds-global-navigation {
+	&__search-suggestions .wds-is-selected a {
+		color: $color-link;
+	}
+
+	&__slot {
+		width: 100px;
+		text-align: center;
+		line-height: 50px;
+	}
 }

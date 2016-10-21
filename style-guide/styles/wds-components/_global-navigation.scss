@@ -41,6 +41,7 @@ $hover-transition-duration: 300ms !default;
 	border-top: $border-top-width solid $color-slate-gray;
 	border-width: $border-top-width 0 0;
 	box-shadow: 0 1px 0 0 $color-faint-gray;
+	position: relative;
 
 	&__dropdown-toggle {
 		align-items: center;
@@ -64,8 +65,8 @@ $hover-transition-duration: 300ms !default;
 		text-decoration: none;
 		transition: color $search-transition-duration;
 
-		&:hover,
 		&:active,
+		&:hover,
 		&.wds-is-active {
 			color: $color-link;
 		}
@@ -80,14 +81,14 @@ $hover-transition-duration: 300ms !default;
 		z-index: 1;
 	}
 
-	&__logo,
-	&__link,
-	&__wikis-menu,
-	&__search,
 	&__account-menu,
-	&__user-menu,
+	&__link,
+	&__logo,
 	&__notifications-menu,
-	&__start-a-wiki {
+	&__search,
+	&__start-a-wiki,
+	&__user-menu,
+	&__wikis-menu {
 		align-items: center;
 		background-color: $nav-background-color;
 		border-top: $border-top-width solid $color-slate-gray;
@@ -102,11 +103,11 @@ $hover-transition-duration: 300ms !default;
 		white-space: nowrap;
 	}
 
-	&__link,
-	&__wikis-menu,
 	&__account-menu,
+	&__link,
+	&__notifications-menu,
 	&__user-menu,
-	&__notifications-menu {
+	&__wikis-menu {
 		transition-duration: $search-transition-duration;
 		transition-property: background-color, border-color, color;
 
@@ -375,6 +376,20 @@ $hover-transition-duration: 300ms !default;
 		@include square(14px);
 
 		display: none;
+	}
+
+	&__slot {
+		max-width: 100px;
+		display: none;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border-left: 1px solid $color-blue-gray;
+
+		@media (min-width: 1280px) {
+			display: block;
+		}
 	}
 
 	&:not(.wds-search-is-active) .wds-global-navigation__search-suggestions {
