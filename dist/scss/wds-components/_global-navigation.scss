@@ -379,7 +379,10 @@ $hover-transition-duration: 300ms !default;
 	}
 
 	&__right-slot {
-		max-width: 100px;
+		$slot-width: 100px;
+		$link-padding: 7px;
+
+		max-width: $slot-width;
 		display: none;
 		height: 100%;
 		position: absolute;
@@ -392,8 +395,14 @@ $hover-transition-duration: 300ms !default;
 			align-items: center;
 		}
 
+		&-link {
+			padding: $link-padding;
+		}
+
 		&-image {
 			vertical-align: middle;
+			max-width: $slot-width - 2 * $link-padding;
+			max-height: $nav-height - 2 * $link-padding;
 		}
 	}
 
