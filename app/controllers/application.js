@@ -17,6 +17,10 @@ export default Controller.extend({
 					location: 'overview.getting-started'
 				},
 				{
+					name: 'Contributing',
+					location: 'overview.contributing'
+				},
+				{
 					name: 'Quick start',
 					location: 'overview.quick-start'
 				},
