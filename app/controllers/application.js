@@ -17,12 +17,12 @@ export default Controller.extend({
 					location: 'overview.getting-started'
 				},
 				{
-					name: 'Contributing',
-					location: 'overview.contributing'
-				},
-				{
 					name: 'Quick start',
 					location: 'overview.quick-start'
+				},
+				{
+					name: 'Contributing',
+					location: 'overview.contributing'
 				},
 				{
 					name: 'SVG assets',
@@ -92,6 +92,10 @@ export default Controller.extend({
 				{
 					name: 'Global Navigation',
 					location: 'identity.global-navigation.index'
+				},
+				{
+					name: 'API',
+					location: 'identity.api'
 				},
 			]
 		}

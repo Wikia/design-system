@@ -50,6 +50,7 @@ Router.map(function () {
 				path: 'standalone/:variant_name'
 			});
 		});
+		this.route('api');
 	});
 });
 
