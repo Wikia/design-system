@@ -17,11 +17,11 @@
 		as an example):
 	</p>
 	<ul>
-		<li><code class="format-code">http://www.wikia.com/api/v1/design-system/</code> - root path</li>
-		<li><code class="format-code">wikis/</code> - name of the product</li>
-		<li><code class="format-code">813/</code> - id of the product instance, e.g. wiki id</li>
-		<li><code class="format-code">en/</code> - language of the UI (content language is derived from the product instance id)</li>
-		<li><code class="format-code">global-footer</code> - optional name of the element, if left out then all elements are returned</li>
+		<li><code class="format-code">http://www.wikia.com/api/v1/design-system/</code> — root path</li>
+		<li><code class="format-code">wikis/</code> — name of the product</li>
+		<li><code class="format-code">813/</code> — id of the product instance, e.g. wiki id</li>
+		<li><code class="format-code">en/</code> — language of the UI (content language is derived from the product instance id)</li>
+		<li><code class="format-code">global-footer</code> — optional name of the element, if left out then all elements are returned</li>
 	</ul>
 	<p>
 		Source code for the API and its data models are available here:
@@ -74,14 +74,14 @@
 			Section <code class="format-code">search</code> has a property <code class="format-code">module</code> with properties:
 			<ul>
 				<li>
-					<code class="format-code">results</code> - URL for the search results page and the name of the search query parameter.
+					<code class="format-code">results</code> — URL for the search results page and the name of the search query parameter.
 				</li>
 				<li>
 					<code class="format-code">placeholder-active</code> and <code class="format-code">placeholder-inactive</code>
-					- search input placeholders which should be switched between when user focuses / blurs the input.
+					 — search input placeholders which should be switched between when user focuses / blurs the input.
 				</li>
 				<li>
-					<code class="format-code">suggestions</code> (optional) - URL for the suggestions API and the name
+					<code class="format-code">suggestions</code> (optional) — URL for the suggestions API and the name
 					of the search query parameter. If this property is not present then the search suggestions should not be initialized.
 				</li>
 			</ul>
@@ -92,7 +92,7 @@
 		</li>
 		<li>
 			Part of the links for the user / anon menu are of <code class="format-code">link_authentication</code> type
-			which comes with an additional property - <code class="format-code">param-name</code>.
+			which comes with an additional property — <code class="format-code">param-name</code>.
 			It can be used in the link's URL to make sure that the user is properly redirected after doing an authentication action.
 		</li>
 		<li>
@@ -120,24 +120,24 @@
 	</p>
 	<ul>
 		<li>
-			<code class="format-code">type: text</code> - raw string, escape HTML special characters and render the result.
+			<code class="format-code">type: text</code> — raw string, escape HTML special characters and render the result.
 		</li>
 		<li>
 			<code class="format-code">type: translatable-text</code>
 			<ul>
 				<li>
-					<code class="format-code">params</code> property is set - translate the text, render each param recursively,
+					<code class="format-code">params</code> property is set — translate the text, render each param recursively,
 					replace placeholders with the results, escape HTML special characters and render the end result.
 					Parameters are texts and the same rules described here apply to each of them.
 				</li>
 				<li>
-					<code class="format-code">params</code> property is not set - translate the text,
+					<code class="format-code">params</code> property is not set — translate the text,
 					escape HTML special characters and render the result.
 				</li>
 			</ul>
 		</li>
 		<li>
-			<code class="format-code">type: link-text</code> - create a link using <code class="format-code">href</code>
+			<code class="format-code">type: link-text</code> — create a link using <code class="format-code">href</code>
 			property and render the text using <code class="format-code">title</code> property while applying the rules above.
 		</li>
 	</ul>
