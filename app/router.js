@@ -8,9 +8,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
 	this.route('overview', function () {
-		this.route('svg-assets');
 		this.route('getting-started');
 		this.route('quick-start');
+		this.route('contributing');
+		this.route('svg-assets');
 	});
 
 	this.route('base-styles', function () {
@@ -49,6 +50,7 @@ Router.map(function () {
 				path: 'standalone/:variant_name'
 			});
 		});
+		this.route('api');
 	});
 });
 

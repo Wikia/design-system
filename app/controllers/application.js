@@ -21,6 +21,10 @@ export default Controller.extend({
 					location: 'overview.quick-start'
 				},
 				{
+					name: 'Contributing',
+					location: 'overview.contributing'
+				},
+				{
 					name: 'SVG assets',
 					location: 'overview.svg-assets'
 				}
@@ -88,6 +92,10 @@ export default Controller.extend({
 				{
 					name: 'Global Navigation',
 					location: 'identity.global-navigation.index'
+				},
+				{
+					name: 'API',
+					location: 'identity.api'
 				},
 			]
 		}
