@@ -104,9 +104,9 @@
 <section>
 	<h2 id="localization">Localization</h2>
 	<p>
-		The Design System API returns i18n keys which then need to be translated.
+		The Design System API returns i18n keys which then need to be matched to the translated strings in particular language.
 		You should use <a href="https://github.com/Wikia/design-system-i18n" target="_blank">https://github.com/Wikia/design-system-i18n</a>
-		as the source for messages. When there is a need for parameter in a message, we use the format
+		as the source of messages. When there is a need for parameter in a message, we use the format
 		<code class="format-code">__placeholder__</code>. It's ready for use with the i18next library but might need
 		a conversion for other libraries. See how we
 		<a href="https://github.com/Wikia/app/blob/dev/extensions/wikia/DesignSystem/i18n/build.js" target="_blank">convert them for MediaWiki</a>.
@@ -146,7 +146,7 @@
 <section>
 	<h2 id="interactions">Interactions</h2>
 	<p>
-		Design System doesn't provide JavaScript for handling interactions so you need to implement them yourself.
+		Design System doesn't provide JavaScript for handling interactions, so you need to implement them yourself.
 		There are no interactions for the Global Footer. You can find the list of interactions for the Global Navigation
 		on the {{#link-to 'identity.global-navigation'}}component's page{{/link-to}}.
 	</p>
