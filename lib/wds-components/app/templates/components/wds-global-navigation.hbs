@@ -36,8 +36,10 @@
 		</a>
 	</div>
 </div>
-<div class="wds-global-navigation__right-slot">
-	<a href="" class="wds-global-navigation__right-slot-link">
-		<img class="wds-global-navigation__right-slot-image" src="{{concat rootURL 'images/test.png'}}" alt="test">
-	</a>
-</div>
+{{#if model.partner_slot}}
+	<div class="wds-global-navigation__partner-slot">
+		<a href="{{model.partner_slot.href}}" class="wds-global-navigation__partner-slot-link">
+			<img class="wds-global-navigation__partner-slot-image" src="{{model.partner_slot.image-data.url}}" alt="{{model.partner_slot.title.value}}">
+		</a>
+	</div>
+{{/if}}
