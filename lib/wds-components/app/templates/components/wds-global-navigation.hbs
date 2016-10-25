@@ -36,3 +36,10 @@
 		</a>
 	</div>
 </div>
+{{#if model.partner_slot}}
+	<div class="wds-global-navigation__partner-slot">
+		<a href="{{model.partner_slot.href}}" class="wds-global-navigation__partner-slot-link">
+			<img class="wds-global-navigation__partner-slot-image" src="{{model.partner_slot.image-data.url}}" alt="{{model.partner_slot.title.value}}">
+		</a>
+	</div>
+{{/if}}
