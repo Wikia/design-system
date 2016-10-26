@@ -1,0 +1,103 @@
+import Ember from 'ember';
+
+const {Controller} = Ember;
+
+export default Controller.extend({
+	// Routes with standalone components set this property
+	standalone: false,
+
+	navigation: [
+		{
+			name: 'Overview',
+			id: 'main-navigation-overview',
+			expanded: true,
+			items: [
+				{
+					name: 'Getting started',
+					location: 'overview.getting-started'
+				},
+				{
+					name: 'Quick start',
+					location: 'overview.quick-start'
+				},
+				{
+					name: 'Contributing',
+					location: 'overview.contributing'
+				},
+				{
+					name: 'SVG assets',
+					location: 'overview.svg-assets'
+				}
+			]
+		},
+		{
+			name: 'Base styles',
+			id: 'main-navigation-base-styles',
+			expanded: true,
+			items: [
+				{
+					name: 'Breakpoints',
+					location: 'base-styles.breakpoints'
+				},
+				{
+					name: 'Colors',
+					location: 'base-styles.colors'
+				},
+				{
+					name: 'Typography',
+					location: 'base-styles.typography'
+				},
+			]
+		},
+		{
+			name: 'Components',
+			id: 'main-navigation-components',
+			expanded: false,
+			items: [
+				{
+					name: 'Assets',
+					location: 'route-components.assets'
+				},
+				{
+					name: 'Avatars',
+					location: 'route-components.avatars'
+				},
+				{
+					name: 'Buttons',
+					location: 'route-components.buttons'
+				},
+				{
+					name: 'Dropdowns',
+					location: 'route-components.dropdowns'
+				},
+				{
+					name: 'Lists',
+					location: 'route-components.lists'
+				}
+			]
+		},
+		{
+			name: 'Identity',
+			id: 'main-navigation-identity',
+			expanded: false,
+			items: [
+				{
+					name: 'Assets',
+					location: 'identity.assets'
+				},
+				{
+					name: 'Global Footer',
+					location: 'identity.global-footer.index'
+				},
+				{
+					name: 'Global Navigation',
+					location: 'identity.global-navigation.index'
+				},
+				{
+					name: 'API',
+					location: 'identity.api'
+				},
+			]
+		}
+	]
+});

@@ -1,0 +1,30 @@
+.breakpoints-table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	font-size: $typescale-size-minus-1;
+	width: 574px;
+
+	td {
+		border: 1px solid $color-off-white;
+		padding: 14px 8px;
+		vertical-align: top;
+	}
+
+	.format-code {
+		font-size: $typescale-size-minus-2;
+	}
+
+	&__header {
+		background-color: $color-off-white;
+
+		th {
+			border: 1px solid $color-off-white;
+			padding: 18px 8px;
+			text-align: left;
+		}
+	}
+}
+
+.breakpoints-visualisation {
+	margin-top: 30px;
+}
