@@ -1,12 +1,4 @@
 .wds-global-navigation {
-	$border-top-width: 6px;
-	$nav-height: 49px;
-	// this variable is used in Mercury specific styles - do not remove it
-	$wds-global-navigation-outer-height: $nav-height + $border-top-width;
-
-	$nav-background-color: $color-white;
-
-	$logo-width: 230px;
 	$search-input-padding: 3px 4px;
 	$notification-counter-size: 18px;
 
