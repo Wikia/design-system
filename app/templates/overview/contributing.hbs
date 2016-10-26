@@ -29,10 +29,8 @@
 </section>
 
 <section>
-	<h2>How to release new version</h2>
-	<p>When you merge changes to the <code class="format-code">master</code> branch you have to release them.</p>
+	<h2>Versioning</h2>
 	<p>
-		First, you need to define what kind of change it is.
 		We follow <a href="http://semver.org/" target="_blank">SemVer</a> with a
 		<a href="https://medium.com/javascript-scene/software-versions-are-broken-3d2dc0da0783#70a1" target="_blank">slight modification</a>
 		where the version roles are based on the scheme: <strong>Breaking.Feature.Fix</strong>. Paraphrasing the linked article:
@@ -43,17 +41,28 @@
 		<li>Feature — When any new feature is added. This could be as small as a new variable, or as large as a new component.</li>
 		<li>Fix — When a documented feature does not behave as documented (and no client relies on the broken behavior).</li>
 	</ul>
-	<p>To release the new version, use one of the following commands:</p>
+</section>
+
+<section>
+	<h2>How to release new version</h2>
+	<p>When you merge changes to the <code class="format-code">master</code> branch you have to release them.</p>
 	<ul>
-		<li><code class="format-code">npm run release-breaking</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">2.0.0</code></li>
-		<li><code class="format-code">npm run release-feature</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">1.1.0</code></li>
-		<li><code class="format-code">npm run release-fix</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">1.0.1</code></li>
+		<li>
+			Release the new version, use one of the following commands:
+			<ul>
+				<li><code class="format-code">npm run release-breaking</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">2.0.0</code></li>
+				<li><code class="format-code">npm run release-feature</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">1.1.0</code></li>
+				<li><code class="format-code">npm run release-fix</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">1.0.1</code></li>
+			</ul>
+			It will checkout the latest master,
+			use <a href="https://docs.npmjs.com/cli/version" target="_blank">npm version</a>
+			to bump the version and push the updated <code class="format-code">package.json</code> and the new tag.
+		</li>
+		<li>
+			Update changelog on <a href="https://github.com/Wikia/design-system/releases">github</a>.
+			This is the only changelog for DS, so please be descriptive in what changed and document all steps required for migration to new version.
+		</li>
 	</ul>
-	<p>
-		It will checkout the latest master,
-		use <a href="https://docs.npmjs.com/cli/version" target="_blank">npm version</a>
-		to bump the version and push the updated <code class="format-code">package.json</code> and the new tag.
-	</p>
 </section>
 
 <section>
