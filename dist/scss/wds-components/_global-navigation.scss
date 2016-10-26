@@ -15,7 +15,6 @@
 	$search-buttons-transition-delay: $search-transition-duration - $search-buttons-transition-duration;
 	$hover-transition-duration: 300ms !default;
 
-
 	@mixin visible-search-input {
 		&__search-input {
 			// transitioned property: padding;
@@ -36,7 +35,6 @@
 			color: $color-dark-blue-gray;
 		}
 	}
-
 
 	background-color: $nav-background-color;
 	border-image: linear-gradient(to right, $color-dark-blue-gray 40%, $color-slate-gray 40%) 1 0 0;
