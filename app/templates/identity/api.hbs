@@ -1,4 +1,8 @@
 <h1>API</h1>
+<p>
+	API that returns content for Global Navigation and Footer was introduced to keep consistency across different platforms.
+	It's recommended for every integration to use this API to make sure that content is the same and future changes are going to be reflected on every platform.
+</p>
 <p>To render the Global Navigation and the Global Footer you need to:</p>
 <ul>
 	<li>{{#link-to 'overview.quick-start'}}Install Design System{{/link-to}}</li>
@@ -18,10 +22,10 @@
 	</p>
 	<ul>
 		<li><code class="format-code">http://www.wikia.com/api/v1/design-system/</code> — root path</li>
-		<li><code class="format-code">wikis/</code> — name of the product</li>
+		<li><code class="format-code">wikis/</code> or <code class="format-code">fandoms</code> — name of the product</li>
 		<li><code class="format-code">813/</code> — id of the product instance, e.g. wiki id</li>
 		<li><code class="format-code">en/</code> — language of the UI (content language is derived from the product instance id)</li>
-		<li><code class="format-code">global-footer</code> — optional name of the element, if left out then all elements are returned</li>
+		<li><code class="format-code">global-footer</code> or <code class="format-code">global-navigation</code> — optional name of the element, if left out then all elements are returned</li>
 	</ul>
 	<p>
 		Source code for the API and its data models are available here:
@@ -99,6 +103,21 @@
 			Section <code class="format-code">notifications</code> is returned only for the logged in users. Currently it's not being used.
 		</li>
 	</ul>
+</section>
+
+<section>
+	<h2 id="authentication">Authentication</h2>
+	<p>
+		API returns different content for logged in and anon users. In order to authenticate a request to API you have to add <code class="format-code">access_token</code> cookie in request headers. Correct <code class="format-code">access_token</code> value can be obtained in <a href="https://services.wikia.com/central-swagger-ui/?url=https://services.wikia.com/auth/swagger.json#!/token/login">Auth service</a> after providing correct credentials.
+	</p>
+	<p>
+		Example in JS:
+		{{#code-sample language='html'}}
+this.headers = {
+	Cookie: `access_token=${this.request.state.access_token}`
+};
+		{{/code-sample}}
+	</p>
 </section>
 
 <section>

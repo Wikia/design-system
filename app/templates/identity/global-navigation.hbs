@@ -9,6 +9,11 @@
 	</p>
 
 	<section>
+		<h2 id="api">API</h2>
+		<p>Content for Global Navigation is available in {{#link-to 'identity.api'}}API{{/link-to}}.</p>
+	</section>
+
+	<section>
 		<h2 id="interactions">Interactions</h2>
 		<p>
 			Design System doesn't provide JavaScript for handling interactions so you need to implement them yourself.
@@ -46,8 +51,7 @@
 								It will cause the input to expand to the full width.
 							</li>
 							<li>
-								Change input placeholder from the value of <code class="format-code">placeholder-inactive</code> property
-								(coming from the API response) to the value of <code class="format-code">placeholder-active</code> property.
+								Change input placeholder from call to action to enter search into a call to action that suggest start typing and what to search.
 							</li>
 						</ul>
 					</li>
@@ -58,8 +62,7 @@
 								Clear the input and remove <code class="format-code">wds-search-is-active</code> class.
 							</li>
 							<li>
-								Change input placeholder from the value of <code class="format-code">placeholder-active</code>
-								property to the value of <code class="format-code">placeholder-inactive</code> property.
+								Change input placeholder to initial state.
 							</li>
 						</ul>
 					</li>
