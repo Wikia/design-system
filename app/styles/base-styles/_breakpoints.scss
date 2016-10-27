@@ -1,7 +1,7 @@
 .breakpoints-table {
-	border-spacing: 0;
 	border-collapse: collapse;
-	font-size: $typescale-size-minus-1;
+	border-spacing: 0;
+	font-size: $wds-typescale-size-minus-1;
 	width: 574px;
 
 	td {
@@ -11,7 +11,7 @@
 	}
 
 	.format-code {
-		font-size: $typescale-size-minus-2;
+		font-size: $wds-typescale-size-minus-2;
 	}
 
 	&__header {

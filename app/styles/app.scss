@@ -13,12 +13,12 @@ body {
 	background: $color-white;
 	color: $color-black;
 	font-family: $wds-font-family;
-	line-height: $line-height;
+	line-height: $wds-line-height;
 	margin: 0;
 }
 
 p {
-	line-height: $line-height;
+	line-height: $wds-line-height;
 	margin-top: 0;
 }
 
@@ -33,7 +33,7 @@ img {
 code {
 	background-color: $color-off-white;
 	border: 1px solid $color-mist-gray;
-	line-height: $line-height;
+	line-height: $wds-line-height;
 
 	&::before,
 	&::after {
@@ -46,7 +46,7 @@ pre {
 	background-color: $color-off-white;
 	border: 1px solid $color-mist-gray;
 	font-size: 12px;
-	line-height: $typescale-size-minus-2;
+	line-height: $wds-typescale-size-minus-2;
 	margin-top: 30px;
 	max-height: 300px;
 	overflow-x: auto;
@@ -74,7 +74,7 @@ pre {
 .main-header {
 	border-bottom: 1px solid $color-light-c3;
 	color: $color-link;
-	font-size: $typescale-size-plus-6;
+	font-size: $wds-typescale-size-plus-6;
 	font-weight: bold;
 	line-height: 1;
 	margin-bottom: 34px;
@@ -88,15 +88,15 @@ pre {
 	width: 75%;
 
 	h1 {
-		font-size: $typescale-size-plus-1;
-		line-height: $line-height;
+		font-size: $wds-typescale-size-plus-1;
+		line-height: $wds-line-height;
 		margin-bottom: 4px;
 		margin-top: 12px;
 	}
 
 	h2 {
 		border-bottom: 1px solid $color-light-c3;
-		font-size: $typescale-size-minus-1;
+		font-size: $wds-typescale-size-minus-1;
 		margin-bottom: 20px;
 		padding-bottom: 1px;
 	}

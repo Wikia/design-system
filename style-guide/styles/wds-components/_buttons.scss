@@ -4,7 +4,7 @@
 	color: $color-white;
 	cursor: pointer;
 	display: inline-block;
-	font-size: $typescale-size-minus-2;
+	font-size: $wds-typescale-size-minus-2;
 	font-weight: 600;
 	letter-spacing: .15px;
 	line-height: $wds-button-line-height;
@@ -46,7 +46,7 @@
 	}
 
 	&.wds-is-squished {
-		font-size: $typescale-size-minus-3;
+		font-size: $wds-typescale-size-minus-3;
 		padding: 10px 12px 9px;
 	}
 
