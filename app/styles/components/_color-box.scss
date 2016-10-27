@@ -1,5 +1,5 @@
 .color-box {
-	color: $color-dark-blue-gray;
+	color: $wds-color-dark-blue-gray;
 	font-size: $wds-typescale-size-minus-2;
 	line-height: $wds-line-height;
 	margin: 30px 6px 0;
@@ -8,7 +8,7 @@
 
 	&.is-bordered {
 		.color-box__box {
-			border: 1px solid $color-faint-gray;
+			border: 1px solid $wds-color-faint-gray;
 		}
 	}
 

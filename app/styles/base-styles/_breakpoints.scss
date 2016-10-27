@@ -5,7 +5,7 @@
 	width: 574px;
 
 	td {
-		border: 1px solid $color-off-white;
+		border: 1px solid $wds-color-off-white;
 		padding: 14px 8px;
 		vertical-align: top;
 	}
@@ -15,10 +15,10 @@
 	}
 
 	&__header {
-		background-color: $color-off-white;
+		background-color: $wds-color-off-white;
 
 		th {
-			border: 1px solid $color-off-white;
+			border: 1px solid $wds-color-off-white;
 			padding: 18px 8px;
 			text-align: left;
 		}

@@ -1,5 +1,5 @@
 .asset-box {
-	color: $color-dark-blue;
+	color: $wds-color-dark-blue;
 	font-size: $wds-typescale-size-minus-1;
 	margin: 0 0 50px;
 
@@ -13,7 +13,7 @@
 
 	&.is-bordered {
 		.asset-box__asset {
-			border: 1px solid $color-light-c3;
+			border: 1px solid $wds-color-light-c3;
 			padding: 14px;
 		}
 
@@ -28,11 +28,11 @@
 	}
 
 	&.has-dark-background .asset-box__asset {
-		background-color: $color-dark-blue-gray;
+		background-color: $wds-color-dark-blue-gray;
 	}
 
 	&__asset {
-		border-bottom: solid 1px $color-light-c3;
+		border-bottom: solid 1px $wds-color-light-c3;
 		margin: 0 25px 10px;
 		padding-bottom: 9px;
 
