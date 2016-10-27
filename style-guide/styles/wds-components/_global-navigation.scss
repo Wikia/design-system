@@ -491,7 +491,7 @@
 		}
 	}
 
-	@media #{$breakpoint-l-up} {
+	@media #{$wds-breakpoint-l-up} {
 		@include visible-search-input;
 		@include search-label-icon-default-hover-color;
 		@include search-input-default-placeholder-color;
@@ -536,13 +536,13 @@
 		}
 	}
 
-	@media #{$breakpoint-xl-up} {
+	@media #{$wds-breakpoint-xl-up} {
 		&__content-bar {
 			width: 1064px;
 		}
 	}
 
-	@media #{$breakpoint-xxl-up} {
+	@media #{$wds-breakpoint-xxl-up} {
 		&__content-bar {
 			width: 1238px;
 		}
