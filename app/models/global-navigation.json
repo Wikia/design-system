@@ -149,7 +149,7 @@
         "image-data": { "type": "wds-svg", "name": "wds-company-logo-wikia-org" },
         "title": { "type": "text", "value": "Wikia.org" }, "tracking_label": "logo"
       }
-    }, "logo-small": {
+    }, "logo_small": {
       "header": {
         "type": "link-image", "href": "https:\/\/www.wikia.org", "image": "wds-company-logo-wikia-org",
         "image-data": { "type": "wds-svg", "name": "wds-company-logo-wikia-org" },
