@@ -7,7 +7,6 @@
 	$search-transition-duration: 200ms;
 	$search-buttons-transition-duration: 50ms;
 	$search-buttons-transition-delay: $search-transition-duration - $search-buttons-transition-duration;
-	$hover-transition-duration: 300ms !default;
 
 	@mixin visible-search-input {
 		&__search-input {
@@ -478,7 +477,7 @@
 		&__search-submit {
 			max-width: 100%;
 			padding: 5px 9px;
-			transition: background-color $hover-transition-duration, border-color $hover-transition-duration, color $hover-transition-duration, max-width $search-buttons-transition-duration $search-buttons-transition-delay, opacity $hover-transition-duration, padding $search-buttons-transition-duration $search-buttons-transition-delay;
+			transition: background-color $button-transition-duration, border-color $button-transition-duration, color $button-transition-duration, max-width $search-buttons-transition-duration $search-buttons-transition-delay, opacity $button-transition-duration, padding $search-buttons-transition-duration $search-buttons-transition-delay;
 		}
 	}
 
