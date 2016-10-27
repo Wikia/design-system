@@ -1,7 +1,9 @@
 import Ember from 'ember';
 import model from '../../models/global-navigation';
 
-export default Ember.Route.extend({
+const {Route} = Ember;
+
+export default Route.extend({
 	model() {
 		return model;
 	}
