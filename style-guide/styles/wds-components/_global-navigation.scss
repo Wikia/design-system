@@ -477,7 +477,7 @@
 		&__search-submit {
 			max-width: 100%;
 			padding: 5px 9px;
-			transition: background-color $button-transition-duration, border-color $button-transition-duration, color $button-transition-duration, max-width $search-buttons-transition-duration $search-buttons-transition-delay, opacity $button-transition-duration, padding $search-buttons-transition-duration $search-buttons-transition-delay;
+			transition: background-color $wds-button-transition-duration, border-color $wds-button-transition-duration, color $wds-button-transition-duration, max-width $search-buttons-transition-duration $search-buttons-transition-delay, opacity $wds-button-transition-duration, padding $search-buttons-transition-duration $search-buttons-transition-delay;
 		}
 	}
 
