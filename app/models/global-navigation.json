@@ -119,7 +119,7 @@
         "type": "logo",
         "main": {
           "type": "link-image",
-          "href": "http://fandom.wikia.com/explore-de",
+          "href": "http:\/\/fandom.wikia.com",
           "image-data": {
             "type": "wds-svg",
             "name": "wds-company-logo-fandom"
@@ -132,7 +132,7 @@
         },
         "tagline": {
           "type": "link-image",
-          "href": "http://fandom.wikia.com/explore-de",
+          "href": "http:\/\/fandom.wikia.com",
           "image-data": {
             "type": "wds-svg",
             "name": "wds-company-logo-powered-by-wikia"
@@ -281,6 +281,35 @@
         "type": "link-image", "href": "http:\/\/fandom.wikia.com",
         "image": "wds-company-logo-fandom-powered-by-wikia",
         "title": { "type": "text", "value": "Fandom powered by Wikia" }
+      },
+      "module": {
+        "type": "logo",
+        "main": {
+          "type": "link-image",
+          "href": "http:\/\/fandom.wikia.com",
+          "image-data": {
+            "type": "wds-svg",
+            "name": "wds-company-logo-fandom"
+          },
+          "title": {
+            "type": "text",
+            "value": "Fandom"
+          },
+          "tracking_label": "logo"
+        },
+        "tagline": {
+          "type": "link-image",
+          "href": "http:\/\/fandom.wikia.com",
+          "image-data": {
+            "type": "wds-svg",
+            "name": "wds-company-logo-powered-by-wikia"
+          },
+          "title": {
+            "type": "text",
+            "value": "powered by Wikia"
+          },
+          "tracking_label": "logo"
+        }
       }
     }, "search": {
       "module": {
@@ -349,8 +378,35 @@
       "header": {
         "type": "link-image", "href": "http:\/\/fandom.wikia.com",
         "image": "wds-company-logo-fandom-powered-by-wikia",
-        "title": {
-          "type": "text", "value": "Fandom powered by Wikia"
+        "title": { "type": "text", "value": "Fandom powered by Wikia" }
+      },
+      "module": {
+        "type": "logo",
+        "main": {
+          "type": "link-image",
+          "href": "http:\/\/fandom.wikia.com",
+          "image-data": {
+            "type": "wds-svg",
+            "name": "wds-company-logo-fandom"
+          },
+          "title": {
+            "type": "text",
+            "value": "Fandom"
+          },
+          "tracking_label": "logo"
+        },
+        "tagline": {
+          "type": "link-image",
+          "href": "http:\/\/fandom.wikia.com",
+          "image-data": {
+            "type": "wds-svg",
+            "name": "wds-company-logo-powered-by-wikia"
+          },
+          "title": {
+            "type": "text",
+            "value": "powered by Wikia"
+          },
+          "tracking_label": "logo"
         }
       }
     }, "search": {
@@ -457,10 +513,37 @@
   "logged-in-without-hubs": {
     "logo": {
       "header": {
-        "type": "link-image", "href": "http:\/\/fandom.wikia.com\/explore-de",
+        "type": "link-image", "href": "http:\/\/fandom.wikia.com",
         "image": "wds-company-logo-fandom-powered-by-wikia",
-        "title": {
-          "type": "text", "value": "Fandom powered by Wikia"
+        "title": { "type": "text", "value": "Fandom powered by Wikia" }
+      },
+      "module": {
+        "type": "logo",
+        "main": {
+          "type": "link-image",
+          "href": "http:\/\/fandom.wikia.com",
+          "image-data": {
+            "type": "wds-svg",
+            "name": "wds-company-logo-fandom"
+          },
+          "title": {
+            "type": "text",
+            "value": "Fandom"
+          },
+          "tracking_label": "logo"
+        },
+        "tagline": {
+          "type": "link-image",
+          "href": "http:\/\/fandom.wikia.com",
+          "image-data": {
+            "type": "wds-svg",
+            "name": "wds-company-logo-powered-by-wikia"
+          },
+          "title": {
+            "type": "text",
+            "value": "powered by Wikia"
+          },
+          "tracking_label": "logo"
         }
       }
     }, "search": {
