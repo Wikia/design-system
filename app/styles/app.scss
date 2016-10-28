@@ -10,20 +10,20 @@
 ////////////////////////////////////// Selectors section //////////////////////////////////////
 
 body {
-	background: $color-white;
-	color: $color-black;
-	font-family: $font-family;
-	line-height: $line-height;
+	background: $wds-color-white;
+	color: $wds-color-black;
+	font-family: $wds-font-family;
+	line-height: $wds-line-height;
 	margin: 0;
 }
 
 p {
-	line-height: $line-height;
+	line-height: $wds-line-height;
 	margin-top: 0;
 }
 
 a {
-	color: $color-link;
+	color: $wds-color-link;
 }
 
 img {
@@ -31,9 +31,9 @@ img {
 }
 
 code {
-	background-color: $color-off-white;
-	border: 1px solid $color-mist-gray;
-	line-height: $line-height;
+	background-color: $wds-color-off-white;
+	border: 1px solid $wds-color-mist-gray;
+	line-height: $wds-line-height;
 
 	&::before,
 	&::after {
@@ -43,10 +43,10 @@ code {
 }
 
 pre {
-	background-color: $color-off-white;
-	border: 1px solid $color-mist-gray;
+	background-color: $wds-color-off-white;
+	border: 1px solid $wds-color-mist-gray;
 	font-size: 12px;
-	line-height: $typescale-size-minus-2;
+	line-height: $wds-typescale-size-minus-2;
 	margin-top: 30px;
 	max-height: 300px;
 	overflow-x: auto;
@@ -54,7 +54,7 @@ pre {
 
 	code {
 		border: 0;
-		color: $color-black;
+		color: $wds-color-black;
 
 		&::before,
 		&::after {
@@ -72,9 +72,9 @@ pre {
 }
 
 .main-header {
-	border-bottom: 1px solid $color-light-c3;
-	color: $color-link;
-	font-size: $typescale-size-plus-6;
+	border-bottom: 1px solid $wds-color-light-c3;
+	color: $wds-color-link;
+	font-size: $wds-typescale-size-plus-6;
 	font-weight: bold;
 	line-height: 1;
 	margin-bottom: 34px;
@@ -88,15 +88,15 @@ pre {
 	width: 75%;
 
 	h1 {
-		font-size: $typescale-size-plus-1;
-		line-height: $line-height;
+		font-size: $wds-typescale-size-plus-1;
+		line-height: $wds-line-height;
 		margin-bottom: 4px;
 		margin-top: 12px;
 	}
 
 	h2 {
-		border-bottom: 1px solid $color-light-c3;
-		font-size: $typescale-size-minus-1;
+		border-bottom: 1px solid $wds-color-light-c3;
+		font-size: $wds-typescale-size-minus-1;
 		margin-bottom: 20px;
 		padding-bottom: 1px;
 	}
@@ -112,7 +112,7 @@ pre {
 .format-code {
 	background-color: transparent;
 	border: 0;
-	color: $color-music;
+	color: $wds-color-music;
 }
 
 .alert-info {
@@ -120,7 +120,7 @@ pre {
 	position: relative;
 
 	.wds-icon {
-		color: $color-slate-gray;
+		color: $wds-color-slate-gray;
 		left: 0;
 		position: absolute;
 		top: 5px;
