@@ -2,19 +2,19 @@
 	display: flex;
 
 	&__left {
-		border-right: 1px solid $color-off-white;
+		border-right: 1px solid $wds-color-off-white;
 		flex: 1 auto;
-		line-height: $line-height;
+		line-height: $wds-line-height;
 		padding: 10px 20px;
 	}
 
 	&__right {
 		align-self: flex-end;
-		color: $color-dark-blue-gray;
+		color: $wds-color-dark-blue-gray;
 		flex-shrink: 0;
-		font-size: $typescale-size-minus-2;
+		font-size: $wds-typescale-size-minus-2;
 		padding: 10px 20px;
-		width: 220px;
+		width: 250px;
 	}
 
 	&__code {
