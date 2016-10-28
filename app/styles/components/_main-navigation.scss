@@ -1,5 +1,5 @@
 .main-navigation {
-	color: $color-dark-blue-gray;
+	color: $wds-color-dark-blue-gray;
 	float: left;
 	max-width: 220px;
 	width: 25%;
@@ -17,7 +17,7 @@
 	}
 
 	.wds-icon {
-		color: $color-slate-gray;
+		color: $wds-color-slate-gray;
 		display: inline-block;
 		float: right;
 		transition: transform .2s;
@@ -55,16 +55,16 @@
 	}
 
 	li a {
-		color: $color-slate-gray;
+		color: $wds-color-slate-gray;
 		text-decoration: none;
 
 		&:hover {
-			background-color: $color-off-white;
+			background-color: $wds-color-off-white;
 		}
 
 		&.active {
-			background-color: $color-off-white;
-			color: $color-link;
+			background-color: $wds-color-off-white;
+			color: $wds-color-link;
 		}
 	}
 
