@@ -1,7 +1,10 @@
 <div class="wds-global-navigation__content-bar">
 	{{#if model.logo.header}}
-		<a href="{{model.logo.header.href}}" class="wds-global-navigation__logo wds-is-{{model.logo.header.image}}">
-			{{svg model.logo.header.image class='wds-global-navigation__logo-image'}}
+		<a href="{{model.logo.module.main.href}}" class="wds-global-navigation__logo">
+			{{svg model.logo.module.main.image-data.name class=(concat 'wds-global-navigation__logo-image wds-is-' model.logo.module.main.image-data.name)}}
+			{{#if model.logo.module.tagline}}
+				{{svg model.logo.module.tagline.image-data.name class=(concat 'wds-global-navigation__logo-image wds-is-' model.logo.module.tagline.image-data.name)}}
+			{{/if}}
 		</a>
 	{{/if}}
 	<div class="wds-global-navigation__links-and-search">
