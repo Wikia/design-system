@@ -333,20 +333,11 @@
         "href": "http:\/\/www.wikia.com\/Special:CreateNewWiki"
       }
     }, "wikis": {
-      "header": {
-        "type": "line-text", "title": { "type": "translatable-text", "key": "global-navigation-wikis-header" }
-      }, "links": [
+      "links": [
         {
-          "type": "link-text", "title": { "type": "translatable-text", "key": "global-navigation-wikis-explore" },
-          "href": "http:\/\/fandom.wikia.com\/explore"
-        }, {
           "type": "link-text",
           "title": { "type": "translatable-text", "key": "global-navigation-wikis-community-central" },
-          "href": "http:\/\/community.wikia.com\/wiki\/Community_Central"
-        }, {
-          "type": "link-text",
-          "title": { "type": "translatable-text", "key": "global-navigation-wikis-fandom-university" },
-          "href": "http:\/\/community.wikia.com\/wiki\/Wikia_University"
+          "href": "http:\/\/de.community.wikia.com\/wiki\/Community_Deutschland"
         }
       ]
     }, "anon": {
