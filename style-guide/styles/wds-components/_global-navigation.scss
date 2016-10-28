@@ -132,6 +132,7 @@
 	&__logo-image {
 		height: 100%;
 
+		// 'wds' is doubled because second part is name of the asset that we style.
 		&.wds-is-wds-company-logo-fandom {
 			fill: $wds-color-dark-blue-gray;
 			padding-bottom: 4px;
