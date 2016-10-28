@@ -12,6 +12,7 @@ Router.map(function () {
 		this.route('quick-start');
 		this.route('contributing');
 		this.route('svg-assets');
+		this.route('installation');
 	});
 
 	this.route('base-styles', function () {
