@@ -89,6 +89,18 @@
 					</li>
 				</ul>
 			</li>
+			<li>
+				Anon and logged in state
+				<ul>
+					<li>
+						For logged in users on tablet devices "Start a wiki" button changes into "+" icon.
+						In order to make that happen <code class="format-code">.wds-global-navigation__start-a-wiki</code>
+						container requires additional class name: <code class="format-code">wds-user-is-logged-in</code>.
+					</li>
+					<li>For anon users render <code class="format-code">.wds-global-navigation__account-menu</code> div that contains user login and register buttons.</li>
+					<li>For logged in users render <code class="format-code">.wds-global-navigation__user-menu</code> div that contains user menu.</li>
+				</ul>
+			</li>
 		</ul>
 	</section>
 
