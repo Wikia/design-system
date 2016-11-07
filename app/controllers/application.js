@@ -25,6 +25,10 @@ export default Controller.extend({
 					location: 'overview.contributing'
 				},
 				{
+					name: 'Installation',
+					location: 'overview.installation'
+				},
+				{
 					name: 'SVG assets',
 					location: 'overview.svg-assets'
 				}

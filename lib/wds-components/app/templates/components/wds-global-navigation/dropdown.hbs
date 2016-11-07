@@ -7,7 +7,7 @@
 		title=(if showAvatar model.header.username.value)
 	}}
 		{{#if showAvatar}}
-			<img class="wds-avatar wds-is-circle" src="{{model.header.url}}" alt="{{model.header.username.value}}" />
+			<img class="wds-avatar" src="{{model.header.url}}" alt="{{model.header.username.value}}" />
 		{{else}}
 			<span>{{i18n model.header.title.key}}</span>
 		{{/if}}

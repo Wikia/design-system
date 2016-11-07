@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Design System developed for Wikia",
   "scripts": {
     "build": "npm run clean-build && npm run svgo-source && ember b -prod && cp -R style-guide/styles dist/scss && mv docs-dev/ docs &&  npm run svgo-dist",
