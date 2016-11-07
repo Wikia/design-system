@@ -127,4 +127,11 @@ pre {
 	}
 }
 
+.warning-note {
+	background-color: rgba($wds-color-warning, .2);
+	border: 1px solid rgba($wds-color-warning, .9);
+	margin-top: 30px;
+	padding: 14px;
+}
+
 ////////////////////////////////////// END of Reusable Classes section //////////////////////////////////////
