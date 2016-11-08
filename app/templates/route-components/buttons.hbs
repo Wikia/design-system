@@ -65,7 +65,7 @@
 		{{#wds-button class='wds-is-text wds-is-squished'}}Text{{/wds-button}}
 	{{/component-demo}}
 	<p class="warning-note">
-		<strong>Important note:</strong> for readablility purposes we use different styling for squished button in Global Navigation for Chinese - the font is larger and has bold applied.
+		<strong>Important note:</strong> for readablility purposes we use different styling for squished button in Global Navigation for Chinese - the font is larger and has bold removed.
 		This is why in <code class="format-code">/scss/wds-components/_global-navigation.scss</code> you will find the following piece of code:
 		{{#code-sample language='scss'}}
 html[lang^='zh'] &__start-a-wiki-button {
@@ -74,6 +74,9 @@ html[lang^='zh'] &__start-a-wiki-button {
 	padding: 9px 12px 8px;
 }
 		{{/code-sample}}
+
+		Please remember, that this solution is only single-use and temporary, and it is not recommended to apply it as a common solution in other places/components.
+		If it becomes a broader issue, more versatile and maintainable solution must be implemented.
 	</p>
 </section>
 
