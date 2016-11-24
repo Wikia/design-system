@@ -91,6 +91,15 @@ html[lang^='zh'] &__start-a-wiki-button {
 </section>
 
 <section>
+	<h2 id="sizes:stretched">Button sizes: square</h2>
+	<p>For a fixed size square button use <code class="format-code">.wds-is-square</code> class. This button will be 45px x 45px with content centered inside. This type of button is mostly used for icons, example: social icons.</p>
+	{{#component-demo}}
+		{{#wds-button class='wds-is-square wds-is-facebook-color'}}{{wds-icon name='facebook'}}{{/wds-button}}
+		{{#wds-button class='wds-is-square wds-is-nk-color'}}{{wds-icon name='nk'}}{{/wds-button}}
+	{{/component-demo}}
+</section>
+
+<section>
 	<h2 id="other:multiline">Other usages: multiline button</h2>
 	<p>Button labels can wrap to multiple lines.</p>
 	{{#component-demo}}
