@@ -2,7 +2,7 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
 	Funnel = require('broccoli-funnel'),
-	Symbolizer = require('broccoli-symbolizer');
+	SvgStore = require('broccoli-svgstore');
 
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
@@ -57,8 +57,19 @@ module.exports = function(defaults) {
 		}));
 	}
 
-	additionalTrees.push(new Symbolizer('style-guide/assets', {
-		outputFile: '/svg/sprite.svg'
+
+	additionalTrees.push(SvgStore('style-guide/assets', {
+		outputFile: '/svg/sprite.svg',
+		svgstoreOpts: {
+			svgAttrs: {
+				style: 'position: absolute; width: 0; height: 0;',
+				width: '0',
+				height: '0',
+				version: '1.1',
+				xmlns: 'http://www.w3.org/2000/svg',
+				'xmlns:xlink': 'http://www.w3.org/1999/xlink'
+			}
+		}
 	}));
 
 	// Use `app.import` to add additional libraries to the generated
