@@ -59,7 +59,7 @@ module.exports = function(defaults) {
 
 
 	additionalTrees.push(SvgStore('style-guide/assets', {
-		outputFile: "/svg/sprite.svg",
+		outputFile: '/svg/sprite.svg',
 		svgstoreOpts: {
 			svgAttrs: {
 				style: 'position: absolute; width: 0; height: 0;',
