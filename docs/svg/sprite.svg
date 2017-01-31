@@ -314,6 +314,11 @@
     <path d="M21 1H5.505a1 1 0 1 0 0 2H20v17.229a1 1 0 1 0 2 0V2a1 1 0 0 0-1-1"/>
     <path d="M7 10.042h7a1 1 0 1 0 0-2H7a1 1 0 1 0 0 2m0 4.011h6a1 1 0 1 0 0-2H7a1 1 0 1 0 0 2m0 4h3a1 1 0 1 0 0-2H7a1 1 0 1 0 0 2"/>
   </g>
+</symbol><symbol id="wds-icons-pages-small" viewBox="0 0 18 18">
+  <g fill="#999" fill-rule="evenodd">
+    <path d="M13 0H4a1 1 0 1 0 0 2h8v10a1 1 0 1 0 2 0V1a1 1 0 0 0-1-1z"/>
+    <path d="M2 14h6V6H2v8zM9 4H1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1z"/>
+  </g>
 </symbol><symbol id="wds-icons-pencil-small" viewBox="0 0 18 18">
   <path d="M9.1 4.5l-7.8 7.8c-.2.2-.3.4-.3.7v3c0 .6.4 1 1 1h3c.3 0 .5-.1.7-.3l7.8-7.8-4.4-4.4zm7.6-.2l-3-3c-.4-.4-1-.4-1.4 0l-1.8 1.8 4.4 4.4 1.8-1.8c.4-.4.4-1 0-1.4z" fill-rule="evenodd"/>
 </symbol><symbol id="wds-icons-pencil" viewBox="0 0 24 24">
