@@ -1,0 +1,21 @@
+{
+  "notifications": {
+    "no-notifications-message": "No notifications yet.",
+    "mark-all-as-read": "Mark all as read",
+    "replied-by-multiple-users-with-title": "__mostRecentUser__ and __number__ other users <b>replied</b> to __postTitle__",
+    "replied-by-multiple-users-no-title": "__mostRecentUser__ and __number__ other users <b>replied</b> to a discussion you are following",
+    "replied-by-two-users-with-title": "__firstUser__ and __secondUser__ <b>replied</b> to __postTitle__",
+    "replied-by-two-users-no-title": "__firstUser__ and __secondUser__ <b>replied</b> to a discussion you are following",
+    "replied-by-with-title": "__user__ <b>replied</b> to __postTitle__",
+    "replied-by-no-title": "__user__ <b>replied</b> to a discussion you are following",
+    "post-upvote-single-user-with-title": "__user__ <b>upvoted</b> your discussion __postTitle__",
+    "post-upvote-single-user-no-title": "__user__ <b>upvoted</b> your discussion",
+    "post-upvote-multiple-users-with-title": "__number__ users <b>upvoted</b> your discussion __postTitle__",
+    "post-upvote-multiple-users-no-title": "__number__ users  <b>upvoted</b> your discussion",
+    "reply-upvote-single-user-with-title": "__user__ <b>upvoted</b> your reply to __postTitle__",
+    "reply-upvote-single-user-no-title": "__user__ <b>upvoted</b> your reply",
+    "reply-upvote-multiple-users-with-title": "__number__ users <b>upvoted</b> your reply to __postTitle__",
+    "reply-upvote-multiple-users-no-title": "__number__ users <b>upvoted</b> your reply",
+    "notifications": "Notifications"
+  }
+}

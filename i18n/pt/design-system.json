@@ -72,5 +72,24 @@
   "global-navigation-wikis-community-central":"Central da Comunidade",
   "global-navigation-wikis-explore":"Explorar wikis",
   "global-navigation-wikis-fandom-university":"Universidade Fandom",
-  "global-navigation-wikis-header":"Wikis"
+  "global-navigation-wikis-header":"Wikis",
+  "notifications":{
+    "no-notifications-message":"Nenhuma notificação ainda.",
+    "mark-all-as-read":"Marcar tudo como lido",
+    "replied-by-multiple-users-with-title":"__mostRecentUser__ e __number__ outros usuários <b>responderam</b> a __postTitle__",
+    "replied-by-multiple-users-no-title":"__mostRecentUser__ e __number__ outros usuários <b>responderam</b> a uma discussão que você está seguindo",
+    "replied-by-two-users-with-title":"__firstUser__ e __secondUser__ <b>responderam</b> a __postTitle__",
+    "replied-by-two-users-no-title":"__firstUser__ e __secondUser__ <b>responderam</b> a uma discussão que você está seguindo",
+    "replied-by-with-title":"__user__ <b>respondeu</b> a __postTitle__",
+    "replied-by-no-title":"__user__ <b>respondeu</b> a uma discussão que você está seguindo",
+    "post-upvote-single-user-with-title":"__user__ <b>votou</b> em sua discussão __postTitle__",
+    "post-upvote-single-user-no-title":"__user__ <b>votou</b> em sua discussão",
+    "post-upvote-multiple-users-with-title":"__number__ usuários <b>votaram</b> em sua discussão __postTitle__",
+    "post-upvote-multiple-users-no-title":"__number__ usuários <b>votaram</b> em sua discussão",
+    "reply-upvote-single-user-with-title":"__user__ <b>votou</b>em sua resposta em __postTitle__",
+    "reply-upvote-single-user-no-title":"__user__ <b>votou</b> em sua resposta",
+    "reply-upvote-multiple-users-with-title":"__number__ usuários <b>votaram</b> em sua resposta em __postTitle__",
+    "reply-upvote-multiple-users-no-title":"__number__ usuários <b>votaram</b> em sua resposta",
+    "notifications":"Notificações"
+  }
 }

@@ -72,5 +72,24 @@
   "global-navigation-wikis-community-central":"社區中心",
   "global-navigation-wikis-explore":"探索Wiki",
   "global-navigation-wikis-fandom-university":"Fandom課堂",
-  "global-navigation-wikis-header":"Wiki"
+  "global-navigation-wikis-header":"Wiki",
+  "notifications":{
+    "no-notifications-message":"還沒有通知。",
+    "mark-all-as-read":"標記全部為已讀",
+    "replied-by-multiple-users-with-title":"__mostRecentUser__和__number__個其他使用者<b>回覆了</b>__postTitle__",
+    "replied-by-multiple-users-no-title":"__mostRecentUser__和__number__個其他使用者<b>回覆了</b>你所關注的討論文章",
+    "replied-by-two-users-with-title":"__firstUser__和__secondUser__<b>回覆了</b>__postTitle__",
+    "replied-by-two-users-no-title":"__firstUser__和__secondUser__<b>回覆了</b>你所關注的討論文章",
+    "replied-by-with-title":"__user__<b>回覆了</b>__postTitle__",
+    "replied-by-no-title":"__user__<b>回覆了</b>你所關注的討論文章",
+    "post-upvote-single-user-with-title":"__user__<b>讚了</b>你的討論文章__postTitle__",
+    "post-upvote-single-user-no-title":"__user__<b>讚了</b>你的討論文章",
+    "post-upvote-multiple-users-with-title":"__number__個使用者<b>讚了</b>你的討論文章__postTitle__",
+    "post-upvote-multiple-users-no-title":"__number__個使用者<b>讚了</b>你的討論文章",
+    "reply-upvote-single-user-with-title":"__user__<b>讚了</b>你對__postTitle__的回覆",
+    "reply-upvote-single-user-no-title":"__user__<b>讚了</b>你的回覆",
+    "reply-upvote-multiple-users-with-title":"__number__個使用者<b>讚了</b>你對__postTitle__的回覆",
+    "reply-upvote-multiple-users-no-title":"__number__個使用者<b>讚了</b>你的回覆",
+    "notifications":"通知"
+  }
 }
