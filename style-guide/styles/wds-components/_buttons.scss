@@ -22,7 +22,8 @@
 
 	@include button-background-color($wds-color-link);
 
-	border: 1px solid;
+	border-style: solid;
+	border-width: 1px;
 	color: $wds-color-white;
 	cursor: pointer;
 	display: inline-block;
