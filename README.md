@@ -6,7 +6,9 @@ Reference Page and documentation are available at [http://fandomdesignsystem.com
 https://wikia-inc.atlassian.net/wiki/display/DESYS/Design+System
 
 ## Contributors
-See [contributors on GitHub](https://github.com/Wikia/design-system/graphs/contributors).
+[Contribute to this project](http://fandomdesignsystem.com/#/overview/contributing)
+
+See all [contributors on GitHub](https://github.com/Wikia/design-system/graphs/contributors).
 
 ## Copyright
 Code and documentation copyright 2016 Wikia, Inc.
