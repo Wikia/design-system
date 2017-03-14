@@ -103,6 +103,7 @@
 		googleplus: $wds-color-social-googleplus,
 		line: $wds-color-social-line,
 		linkedin: $wds-color-social-linkedin,
+		instagram: $wds-color-social-instagram,
 		meneame: $wds-color-social-meneame,
 		nk: $wds-color-social-nk,
 		odnoklassniki: $wds-color-social-odnoklassniki,
@@ -111,7 +112,8 @@
 		twitter: $wds-color-social-twitter,
 		vkontakte: $wds-color-social-vkontakte,
 		wykop: $wds-color-social-wykop,
-		weibo: $wds-color-social-weibo
+		weibo: $wds-color-social-weibo,
+		youtube: $wds-color-social-youtube
 	);
 
 	@each $social-name, $social-color in $social-colors {
