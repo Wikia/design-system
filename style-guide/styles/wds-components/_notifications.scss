@@ -1,9 +1,8 @@
-$notifications-dropdown-content-color: $wds-color-light-c7;
-$wds-icon-color: $wds-color-light-c5;
-
-$content-padding: 18px;
-
 .wds-notifications {
+	$notifications-dropdown-content-color: $wds-color-light-c7;
+	$wds-icon-color: $wds-color-light-c5;
+	$content-padding: 18px;
+
 	&__unread-mark {
 		align-items: center;
 		background-color: $wds-color-link;
@@ -64,10 +63,10 @@ $content-padding: 18px;
 	}
 }
 
-$notification-card-text-color: $wds-color-dark-blue-gray;
-$notification-card-anchor-color: $notifications-dropdown-content-color;
-
 .wds-notification-card {
+	$notification-card-text-color: $wds-color-dark-blue-gray;
+	$notification-card-anchor-color: $notifications-dropdown-content-color;
+
 	padding: 12px 0 8px;
 	text-align: left;
 

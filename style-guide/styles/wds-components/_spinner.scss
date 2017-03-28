@@ -1,8 +1,8 @@
-$duration: 0.5s;
-$spinner-color: $wds-color-link;
-$z-side-nav-overlay: $z-8;
-
 .wds-spinner {
+	$duration: 0.5s;
+	$spinner-color: $wds-color-link;
+	$z-side-nav-overlay: $z-8;
+
 	@keyframes rotator {
 		from {
 			transform: rotate(0);
@@ -34,12 +34,12 @@ $z-side-nav-overlay: $z-8;
 
 	&__stroke {
 		-webkit-backface-visibility: hidden;
-		animation: dash ($duration / 2.5) linear infinite alternate-reverse;
+		animation: dash ($duration * 2.5) linear infinite alternate-reverse;
 		stroke: $spinner-color;
 	}
 
 	&__overlay {
-		background: rgba(white, .5);
+		background: rgba($wds-color-white, .5);
 		bottom: 0;
 		left: 0;
 		position: fixed;
