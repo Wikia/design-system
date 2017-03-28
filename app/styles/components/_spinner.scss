@@ -1,5 +1,6 @@
-$duration: 1s;
+$duration: 0.5s;
 $spinner-color: $wds-color-link;
+$z-side-nav-overlay: $z-8;
 
 .wds-spinner {
 	@keyframes rotator {
@@ -31,13 +32,23 @@ $spinner-color: $wds-color-link;
 		position: relative;
 	}
 
-	&__path {
+	&__stroke {
 		-webkit-backface-visibility: hidden;
-		animation: dash ($duration * 3.5) linear infinite alternate-reverse;
+		animation: dash ($duration / 2.5) linear infinite alternate-reverse;
 		stroke: $spinner-color;
 	}
 
-	&.ember-initializing {
+	&__overlay {
+		background: rgba(white, .5);
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: $z-side-nav-overlay;
+	}
+
+	&__screen-initializing {
 		height: 75vh;
 	}
 }
