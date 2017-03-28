@@ -1,6 +1,5 @@
 .wds-notifications {
 	$notifications-dropdown-content-color: $wds-color-light-c7;
-	$wds-icon-color: $wds-color-light-c5;
 	$content-padding: 18px;
 
 	&__unread-mark {
@@ -65,7 +64,8 @@
 
 .wds-notification-card {
 	$notification-card-text-color: $wds-color-dark-blue-gray;
-	$notification-card-anchor-color: $notifications-dropdown-content-color;
+	$notification-card-anchor-color: $wds-color-light-c7;
+	$wds-icon-color: $wds-color-light-c5;
 
 	padding: 12px 0 8px;
 	text-align: left;
