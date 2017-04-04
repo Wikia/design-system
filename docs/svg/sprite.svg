@@ -338,14 +338,14 @@
 </symbol><symbol id="wds-icons-paragraph" viewBox="0 0 24 24">
   <path fill-rule="evenodd" d="M13.93 12.888v6.79c0 .723.592 1.322 1.323 1.322a1.32 1.32 0 0 0 1.324-1.323V5.647h1.34c.72 0 1.32-.593 1.32-1.324 0-.736-.592-1.323-1.32-1.323h-9.26v.005h-.023v.007C6.044 3.19 4 5.337 4 7.96s2.045 4.77 4.634 4.95v6.767c0 .724.593 1.323 1.324 1.323a1.32 1.32 0 0 0 1.324-1.323V5.64h2.648v7.248z"/>
 </symbol><symbol id="wds-icons-pause-small" viewBox="0 0 18 18">
-  <g transform="translate(2 1)" fill-rule="evenodd">
-    <rect width="5" height="16" rx="1"/>
-    <rect x="9" width="5" height="16" rx="1"/>
+  <g fill-rule="evenodd">
+    <rect width="5" height="16" rx="1" x="2" y="1"/>
+    <rect x="11" width="5" height="16" rx="1" y="1"/>
   </g>
 </symbol><symbol id="wds-icons-pause" viewBox="0 0 24 24">
-  <g transform="translate(3 1)" fill-rule="evenodd">
-    <rect width="7" height="22" rx="1"/>
-    <rect x="11" width="7" height="22" rx="1"/>
+  <g fill-rule="evenodd">
+    <rect width="7" height="22" rx="1" x="3" y="1"/>
+    <rect x="14" width="7" height="22" rx="1" y="1"/>
   </g>
 </symbol><symbol id="wds-icons-pencil-small" viewBox="0 0 18 18">
   <path d="M9.1 4.5l-7.8 7.8c-.2.2-.3.4-.3.7v3c0 .6.4 1 1 1h3c.3 0 .5-.1.7-.3l7.8-7.8-4.4-4.4zm7.6-.2l-3-3c-.4-.4-1-.4-1.4 0l-1.8 1.8 4.4 4.4 1.8-1.8c.4-.4.4-1 0-1.4z" fill-rule="evenodd"/>
