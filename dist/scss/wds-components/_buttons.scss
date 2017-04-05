@@ -118,13 +118,6 @@
 			background-color: transparent;
 			color: inherit;
 		}
-
-		.wds-is-linked & {
-			// wds-is-linked does this to <a>
-			display: block;
-			padding: 11px 0;
-			width: 100%;
-		}
 	}
 
 	$social-colors: (
