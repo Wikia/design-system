@@ -59,15 +59,13 @@
 	&__zero-state {
 		display: block;
 		padding: $content-padding $content-padding 4px;
-		color: $notifications-dropdown-content-color;
 	}
 }
 
 .wds-notification-card {
-	$text-color: $wds-color-dark-blue-gray;
-	$snippet-color: $wds-color-faint-gray;
-	$context-color: $wds-color-light-gray;
-	$icon-color: $wds-color-light-gray;
+	$notification-card-text-color: $wds-color-dark-blue-gray;
+	$notification-card-anchor-color: $wds-color-light-c7;
+	$wds-icon-color: $wds-color-light-c5;
 
 	padding: 12px 0 8px;
 	text-align: left;
@@ -86,7 +84,7 @@
 		width: 18px;
 
 		.wds-icon {
-			fill: $icon-color;
+			fill: $wds-icon-color;
 			height: 18px;
 			min-width: inherit;
 			width: 18px;
@@ -111,7 +109,7 @@
 	}
 
 	&__text {
-		color: $text-color;
+		color: $notification-card-text-color;
 		font-size: $wds-typescale-size-minus-1;
 		line-height: 18px;
 		margin: 0;
@@ -121,7 +119,7 @@
 	}
 
 	&__snippet {
-		color: $snippet-color;
+		color: $wds-color-blue-gray;
 		font-size: $wds-typescale-size-minus-1;
 		font-style: italic;
 		line-height: 18px;
@@ -129,7 +127,7 @@
 	}
 
 	&__context-list {
-		color: $context-color;
+		color: $wds-color-blue-gray;
 		display: flex;
 		font-size: $wds-typescale-size-minus-2;
 		font-weight: bold;
