@@ -24,6 +24,10 @@
 	<p>Default version for general use.</p>
 	{{#component-demo}}
 		{{#wds-button}}Primary button{{/wds-button}}
+		{{#wds-button class='wds-has-icon'}}
+			{{wds-icon name='fandom-heart' size='small'}}
+			Primary button
+		{{/wds-button}}
 		{{#wds-button disabled=true}}Primary disabled{{/wds-button}}
 	{{/component-demo}}
 </section>
@@ -33,6 +37,10 @@
 	<p>Adding class <code class="format-code">.wds-is-secondary</code> changes the button's looks. It is used to create a button that draws less user's attention.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-secondary'}}Secondary button{{/wds-button}}
+		{{#wds-button class='wds-is-secondary wds-has-icon'}}
+			{{wds-icon name='fandom-heart' size='small'}}
+			Secondary button
+		{{/wds-button}}
 		{{#wds-button class='wds-is-secondary' disabled=true}}Secondary disabled{{/wds-button}}
 	{{/component-demo}}
 </section>
@@ -42,6 +50,10 @@
 	<p>These buttons are denoted with <code class="format-code">.wds-is-text</code> class. They are the least obtrusive. Nevertheless, their paddings remain untouched, which provides the same clickable area.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-text'}}Text button{{/wds-button}}
+		{{#wds-button class='wds-is-text wds-has-icon'}}
+			{{wds-icon name='fandom-heart' size='small'}}
+			Text button
+		{{/wds-button}}
 		{{#wds-button class='wds-is-text' disabled=true}}Text disabled{{/wds-button}}
 	{{/component-demo}}
 </section>
@@ -51,6 +63,10 @@
 	<p>Size of the button of any aforementioned variant can be adjusted. These are the default sizes of the buttons — for comparison.</p>
 	{{#component-demo}}
 		{{#wds-button}}Primary{{/wds-button}}
+		{{#wds-button class='wds-has-icon'}}
+			{{wds-icon name='fandom-heart' size='small'}}
+			Primary button
+		{{/wds-button}}
 		{{#wds-button class='wds-is-secondary'}}Secondary{{/wds-button}}
 		{{#wds-button class='wds-is-text'}}Text{{/wds-button}}
 	{{/component-demo}}
@@ -61,6 +77,10 @@
 	<p>To make the button smaller use <code class="format-code">.wds-is-squished</code> class. This can help with fitting a button in tighter layouts.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-squished'}}Primary{{/wds-button}}
+		{{#wds-button class='wds-is-squished wds-has-icon'}}
+			{{wds-icon name='fandom-heart-small' class='wds-icon-tiny'}}
+			Primary
+		{{/wds-button}}
 		{{#wds-button class='wds-is-secondary wds-is-squished'}}Secondary{{/wds-button}}
 		{{#wds-button class='wds-is-text wds-is-squished'}}Text{{/wds-button}}
 	{{/component-demo}}
@@ -85,6 +105,10 @@ html[lang^='zh'] &__start-a-wiki-button {
 	<p>For a button greater in size use <code class="format-code">.wds-is-stretched</code> class. This may come in handy to draw more user's attention to the button and increase the clickable area around the label.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-stretched'}}Primary{{/wds-button}}
+		{{#wds-button class='wds-is-stretched wds-has-icon'}}
+			{{wds-icon name='fandom-heart' size='small'}}
+			Primary button
+		{{/wds-button}}
 		{{#wds-button class='wds-is-secondary wds-is-stretched'}}Secondary{{/wds-button}}
 		{{#wds-button class='wds-is-text wds-is-stretched'}}Text{{/wds-button}}
 	{{/component-demo}}
@@ -104,6 +128,10 @@ html[lang^='zh'] &__start-a-wiki-button {
 	<p>Button labels can wrap to multiple lines.</p>
 	{{#component-demo}}
 		{{#wds-button class='fixed-width-140px'}}Multiline button label with 3rd line{{/wds-button}}
+		{{#wds-button class='fixed-width-180px wds-has-icon'}}
+			{{wds-icon name='fandom-heart' size='small'}}
+			Multiline button label
+		{{/wds-button}}
 	{{/component-demo}}
 </section>
 
@@ -112,6 +140,10 @@ html[lang^='zh'] &__start-a-wiki-button {
 	<p>When no special handlers of the click event are needed — just navigation to a certain URL, consider using an anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code class="format-code">.wds-button</code> class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.</p>
 	{{#component-demo}}
 		{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
+		{{#wds-button tagName='a' href='#' class='wds-has-icon'}}
+			{{wds-icon name='fandom-heart' size='small'}}
+			Link button
+		{{/wds-button}}
 		{{#wds-button tagName='a' href='#' class='wds-is-secondary'}}Secondary link button{{/wds-button}}
 	{{/component-demo}}
 </section>
