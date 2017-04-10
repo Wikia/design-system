@@ -108,17 +108,21 @@
 			padding-left: $button-squished-padding-horizontal + $wds-icon-tiny-size + 6px;
 
 			.wds-icon {
+				height: $wds-icon-tiny-size;
 				left: $button-squished-padding-horizontal;
 				margin-top: -$wds-icon-tiny-size / 2;
+				width: $wds-icon-tiny-size;
 			}
 		}
 
 		.wds-icon {
+			height: $wds-icon-small-size;
 			left: $button-padding-horizontal;
 			margin-top: -$wds-icon-small-size / 2;
 			pointer-events: none;
 			position: absolute;
 			top: 50%;
+			width: $wds-icon-small-size;
 		}
 	}
 
