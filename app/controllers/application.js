@@ -51,6 +51,10 @@ export default Controller.extend({
 					name: 'Typography',
 					location: 'base-styles.typography'
 				},
+				{
+					name: 'Z-Index',
+					location: 'base-styles.z-index'
+				},
 			]
 		},
 		{
