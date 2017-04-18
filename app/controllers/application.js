@@ -81,6 +81,10 @@ export default Controller.extend({
 				{
 					name: 'Lists',
 					location: 'route-components.lists'
+				},
+				{
+					name: 'Progress indicators',
+					location: 'route-components.progress-indicators'
 				}
 			]
 		},
