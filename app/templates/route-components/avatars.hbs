@@ -11,3 +11,31 @@
 {{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
 	{{/component-demo}}
 </section>
+
+<section>
+	<h2 id="avatar-circle">Avatar stack</h2>
+	<p>
+		To display an avatar stack, as used in the notifications, wrap each of your avatar in
+		<code>wds-avatar-stack__avatar</code> and all of them in <code>wds-avatar-stack</code>.
+	</p>
+	{{#component-demo}}
+<div class="wds-avatar-stack">
+	<div class="wds-avatar-stack__avatar">
+		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
+	</div>
+	<div class="wds-avatar-stack__avatar">
+		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
+	</div>
+	<div class="wds-avatar-stack__avatar">
+		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
+	</div>
+	<div class="wds-avatar-stack__avatar">
+		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
+	</div>
+	<div class="wds-avatar-stack__avatar">
+		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
+	</div>
+	<div class="wds-avatar-stack__overflow">+12</div>
+</div>
+	{{/component-demo}}
+</section>
