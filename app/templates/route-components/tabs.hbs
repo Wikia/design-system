@@ -9,9 +9,25 @@
 	{{#component-demo}}
 		{{#wds-tabs-container}}
 
-	<li>List element 1</li>
-	<li>List element 2</li>
-	<li>List element 3</li>
+	{{#wds-tab}}
+		<a href="#">Tab with dropdown</a>
+		{{#wds-dropdown as |dropdown|}}
+			{{#dropdown.content}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			{{/dropdown.content}}
+		{{/wds-dropdown}}
+	{{/wds-tab}}
+	{{#wds-tab}}
+		<a href="#">Other tab</a>
+	{{/wds-tab}}
+	{{#wds-tab}}
+		<a href="#">One more tab</a>
+	{{/wds-tab}}
+
 		{{/wds-tabs-container}}
 	{{/component-demo}}
 </section>
