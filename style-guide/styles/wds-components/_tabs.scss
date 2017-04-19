@@ -1,0 +1,41 @@
+.wds-tabs-container {
+  align-items: flex-end;
+  display: flex;
+  list-style: none;
+  white-space: nowrap;
+
+  .wds-tab {
+    height: 40px;
+    position: relative;
+
+    > a {
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 40px;
+      padding: 12px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      .wds-icon {
+        height: 14px;
+        margin-right: 4px;
+        min-width: 14px;
+        vertical-align: top;
+        width: 14px;
+      }
+    }
+
+    > .wds-dropdown {
+      display: none;
+      min-width: 100%;
+      position: absolute;
+    }
+
+    &:hover {
+      > .wds-dropdown,
+      > .wds-dropdown .wds-dropdown__content {
+        display: block;
+      }
+    }
+  }
+}
