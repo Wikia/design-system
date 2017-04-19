@@ -85,6 +85,10 @@ export default Controller.extend({
 				{
 					name: 'Progress indicators',
 					location: 'route-components.progress-indicators'
+				},
+				{
+					name: 'Tabs',
+					location: 'route-components.tabs'
 				}
 			]
 		},

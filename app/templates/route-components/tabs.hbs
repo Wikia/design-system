@@ -1,0 +1,45 @@
+<h1>Tabs</h1>
+<p>
+</p>
+
+<section>
+	<h2 id="text-only">Tabs with text only</h2>
+	<p>To display a regular list, add <code class="format-code">.wds-list</code> class in your <code>&lt;ul&gt;</code> tag.</p>
+
+	{{#component-demo}}
+		{{#wds-tabs-container}}
+
+	<li>List element 1</li>
+	<li>List element 2</li>
+	<li>List element 3</li>
+		{{/wds-tabs-container}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="text-and-icons">Tabs with text and icon</h2>
+	<p>To display list with more space around its elements, add class <code class="format-code">.wds-has-big-items</code>. This modificator makes padding broader and font size bigger in each element. </p>
+
+	{{#component-demo}}
+		{{#wds-list class="wds-has-big-items"}}
+
+	<li>List element 1</li>
+	<li>List element 2</li>
+	<li>List element 3</li>
+		{{/wds-list}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="active-tab">Active tab indicator</h2>
+	<p><code class="format-code">.wds-has-lines-between</code> class adds subtle separator between each element of your list.</p>
+
+	{{#component-demo}}
+		{{#wds-list class="wds-has-lines-between"}}
+
+	<li>List element 1</li>
+	<li>List element 2</li>
+	<li>List element 3</li>
+		{{/wds-list}}
+	{{/component-demo}}
+</section>

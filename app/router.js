@@ -39,6 +39,7 @@ Router.map(function () {
 		this.route('dropdowns');
 		this.route('lists');
 		this.route('progress-indicators');
+		this.route('tabs');
 	});
 
 	this.route('identity', function () {

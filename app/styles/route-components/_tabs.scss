@@ -1,0 +1,26 @@
+.wds-tabs-container {
+	align-items: flex-end;
+	display: flex;
+	white-space: nowrap;
+
+	li:hover {
+		> .pph-local-nav-sub-menu {
+			display: block;
+			z-index: 0;
+		}
+
+		&.pph-local-nav-container {
+			> a {
+				z-index: 1;
+
+				&:before {
+					display: block;
+				}
+			}
+
+			&:after {
+				display: block;
+			}
+		}
+	}
+}
