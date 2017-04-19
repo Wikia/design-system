@@ -10,7 +10,7 @@
 		{{#wds-tabs-container}}
 
 			{{#wds-tab}}
-				<a href="#">Tab with dropdown</a>
+				<a href="#">Tab link 1</a>
 				{{#wds-dropdown as |dropdown|}}
 					{{#dropdown.content}}
 						<ul class="wds-list">
@@ -22,10 +22,10 @@
 				{{/wds-dropdown}}
 			{{/wds-tab}}
 			{{#wds-tab}}
-				<a href="#">Other tab</a>
+				<a href="#">Tab link 2</a>
 			{{/wds-tab}}
 			{{#wds-tab}}
-				<a href="#">One more tab</a>
+				<a href="#">Tab link 3</a>
 			{{/wds-tab}}
 
 		{{/wds-tabs-container}}
@@ -37,12 +37,28 @@
 	<!--<p>To display list with more space around its elements, add class <code class="format-code">.wds-has-big-items</code>. This modificator makes padding broader and font size bigger in each element. </p>-->
 
 	{{#component-demo}}
-		{{#wds-list class="wds-has-big-items"}}
+		{{#wds-tabs-container}}
 
-	<li>List element 1</li>
-	<li>List element 2</li>
-	<li>List element 3</li>
-		{{/wds-list}}
+			{{#wds-tab}}
+				<a href="#">Tab link 1</a>
+				{{#wds-dropdown as |dropdown|}}
+					{{#dropdown.content}}
+						<ul class="wds-list">
+							<li>List item 1</li>
+							<li>List item 2</li>
+							<li>List item 3</li>
+						</ul>
+					{{/dropdown.content}}
+				{{/wds-dropdown}}
+			{{/wds-tab}}
+			{{#wds-tab}}
+				<a href="#">Tab link 2</a>
+			{{/wds-tab}}
+			{{#wds-tab}}
+				<a href="#">Tab link 3</a>
+			{{/wds-tab}}
+
+		{{/wds-tabs-container}}
 	{{/component-demo}}
 </section>
 
