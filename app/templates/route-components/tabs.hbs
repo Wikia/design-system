@@ -8,6 +8,9 @@
 
 	{{#component-demo}}
 		{{#wds-tabs-container}}
+			{{#wds-tab }}
+				<a href="#">Text tab</a>
+			{{/wds-tab}}
 
 			{{#wds-tab class='has-dropdown' }}
 				<a href="#">Tab with dropdown</a>
@@ -23,23 +26,9 @@
 				{{/wds-dropdown}}
 			{{/wds-tab}}
 
-			{{#wds-tab class='has-dropdown'}}
-				<a href="#">{{wds-icon name='gear' size='small'}}Tab with icon</a>
-				{{wds-icon name='dropdown' size='tiny'}}
-			{{/wds-tab}}
-
-			{{#wds-tab class='is-active'}}
-				<a href="#">Active tab</a>
-			{{/wds-tab}}
-
-			{{#wds-tab class='is-disabled'}}
-				<a href="#">Disabled tab</a>
-			{{/wds-tab}}
-
 			{{#wds-tab}}
 				<a href="#">A really long tab that breaks into lines</a>
 			{{/wds-tab}}
-
 		{{/wds-tabs-container}}
 	{{/component-demo}}
 </section>
@@ -51,8 +40,13 @@
 	{{#component-demo}}
 		{{#wds-tabs-container}}
 
-			{{#wds-tab}}
-				<a href="#">Tab link 1</a>
+			{{#wds-tab }}
+				<a href="#">{{wds-icon name='gear' size='small'}}Icon tab</a>
+			{{/wds-tab}}
+
+			{{#wds-tab class='has-dropdown' }}
+				<a href="#">{{wds-icon name='gear' size='small'}}Icon tab with dropdown</a>
+				{{wds-icon name='dropdown' size='tiny'}}
 				{{#wds-dropdown as |dropdown|}}
 					{{#dropdown.content}}
 						<ul class="wds-list">
@@ -63,13 +57,10 @@
 					{{/dropdown.content}}
 				{{/wds-dropdown}}
 			{{/wds-tab}}
-			{{#wds-tab}}
-				<a href="#">Tab link 2</a>
-			{{/wds-tab}}
-			{{#wds-tab}}
-				<a href="#">Tab link 3</a>
-			{{/wds-tab}}
 
+			{{#wds-tab}}
+				<a href="#">{{wds-icon name='gear' size='small'}}A long icon tab that breaks into lines</a>
+			{{/wds-tab}}
 		{{/wds-tabs-container}}
 	{{/component-demo}}
 </section>
@@ -79,11 +70,24 @@
 	<!--<p><code class="format-code">.wds-has-lines-between</code> class adds subtle separator between each element of your list.</p>-->
 
 	{{#component-demo}}
-		{{#wds-list class="wds-has-lines-between"}}
+		{{#wds-tabs-container}}
+			{{#wds-tab class='is-active'}}
+				<a href="#">Active tab</a>
+			{{/wds-tab}}
+		{{/wds-tabs-container}}
+	{{/component-demo}}
+</section>
 
-	<li>List element 1</li>
-	<li>List element 2</li>
-	<li>List element 3</li>
-		{{/wds-list}}
+<section>
+	<h2 id="active-tab">Disabled tab</h2>
+	<!--<p><code class="format-code">.wds-has-lines-between</code> class adds subtle separator between each element of your list.</p>-->
+
+	{{#component-demo}}
+		{{#wds-tabs-container}}
+			{{#wds-tab class='is-disabled has-dropdown'}}
+				<a href="#">{{wds-icon name='gear' size='small'}}Disabled tab</a>
+				{{wds-icon name='dropdown' size='tiny'}}
+			{{/wds-tab}}
+		{{/wds-tabs-container}}
 	{{/component-demo}}
 </section>
