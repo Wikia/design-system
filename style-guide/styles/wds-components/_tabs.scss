@@ -10,7 +10,8 @@
 	$tab-padding-vertical: 13px;
 	$tab-default-color: $wds-color-link;
 	$tab-hover-color: darken($tab-default-color, 20%);
-	$icon-margin: 6px;
+	$tab-icon-size: 14px;
+	$tab-icon-margin: 6px;
 
 	align-items: flex-end;
 	cursor: pointer;
@@ -22,7 +23,7 @@
 		fill: $tab-default-color;
 	}
 
-	> a {
+	.wds-tab-label {
 		color: $tab-default-color;
 		font-size: $wds-typescale-size-minus-2;
 		font-weight: bold;
@@ -33,20 +34,20 @@
 		transition: color .1s;
 
 		.wds-icon {
-			height: 14px;
-			margin-right: $icon-margin;
-			min-width: 14px;
+			height: $tab-icon-size;
+			margin-right: $tab-icon-margin;
+			min-width: $tab-icon-size;
 			vertical-align: top;
-			width: 14px;
+			width: $tab-icon-size;
 		}
 	}
 
 	&.has-dropdown {
-		> a {
+		.wds-tab-label {
 			padding-right: 0;
 
 			+ .wds-icon {
-				margin: 0 $tab-padding-horizontal $tab-padding-vertical 6px;
+				margin: 0 $tab-padding-horizontal $tab-padding-vertical + 1px $tab-icon-margin;
 				min-width: 10px;
 				opacity: .5;
 				transition: fill .1s, opacity .1s;
@@ -65,7 +66,7 @@
 		border-bottom: 2px solid $tab-default-color;
 		transition: border-color .1s;
 
-		> a {
+		.wds-tab-label {
 			padding-bottom: $tab-padding-vertical - 2px;
 		}
 	}
@@ -81,7 +82,7 @@
 			display: block;
 		}
 
-		> a {
+		.wds-tab-label {
 			color: $tab-hover-color;
 		}
 
@@ -89,7 +90,7 @@
 			fill: $tab-hover-color;
 		}
 
-		&.has-dropdown > a + .wds-icon {
+		&.has-dropdown .wds-tab-label + .wds-icon {
 			opacity: 1;
 			transform: rotate(180deg);
 		}

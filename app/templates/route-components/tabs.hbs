@@ -3,90 +3,116 @@
 </p>
 
 <section>
-	<h2 id="text-only">Tabs with text only</h2>
-	<!--<p>To display a regular list, add <code class="format-code">.wds-list</code> class in your <code>&lt;ul&gt;</code> tag.</p>-->
+	<h2 id='text-only'>Tabs with text only</h2>
+	<p>
+		To display a set of tabs you need to place them inside <code>&lt;ul&gt;</code> tag with class <code class='format-code'>.wds-tabs-container</code>
+		Each <code>&lt;li&gt;</code> item (tab) needs to have <code class='format-code'>.wds-tab</code> class and some link <code>&lt;a&gt;</code> or plain text
+		<code>&lt;span&gt;</code> inside with class <code class='format-code'>.wds-tab-label</code>.
+	</p>
 
 	{{#component-demo}}
 		{{#wds-tabs-container}}
-			{{#wds-tab }}
-				<a href="#">Text tab</a>
-			{{/wds-tab}}
-
-			{{#wds-tab class='has-dropdown' }}
-				<a href="#">Tab with dropdown</a>
-				{{wds-icon name='dropdown' size='tiny'}}
-				{{#wds-dropdown as |dropdown|}}
-					{{#dropdown.content}}
-						<ul class="wds-list">
-							<li>List item 1</li>
-							<li>List item 2</li>
-							<li>List item 3</li>
-						</ul>
-					{{/dropdown.content}}
-				{{/wds-dropdown}}
+			{{#wds-tab}}
+				<span class='wds-tab-label'>Text tab</span>
 			{{/wds-tab}}
 
 			{{#wds-tab}}
-				<a href="#">A really long tab that breaks into lines</a>
+				<a href='#'  class='wds-tab-label'>A really long tab that breaks into lines and is a link</a>
 			{{/wds-tab}}
 		{{/wds-tabs-container}}
 	{{/component-demo}}
 </section>
 
 <section>
-	<h2 id="text-and-icons">Tabs with text and icon</h2>
-	<!--<p>To display list with more space around its elements, add class <code class="format-code">.wds-has-big-items</code>. This modificator makes padding broader and font size bigger in each element. </p>-->
+	<h2 id='text-and-icons'>Tabs with text and icon</h2>
+	<p>
+		To display tab with icon simply follow all instructions above and also add some svg icon before <code class='format-code'>.wds-tab-label</code>.
+		See {{#link-to 'overview.svg-assets'}}how to embed SVG icons in your code{{/link-to}}.
+	</p>
 
 	{{#component-demo}}
 		{{#wds-tabs-container}}
-
-			{{#wds-tab }}
-				<a href="#">{{wds-icon name='gear' size='small'}}Icon tab</a>
-			{{/wds-tab}}
-
-			{{#wds-tab class='has-dropdown' }}
-				<a href="#">{{wds-icon name='gear' size='small'}}Icon tab with dropdown</a>
-				{{wds-icon name='dropdown' size='tiny'}}
-				{{#wds-dropdown as |dropdown|}}
-					{{#dropdown.content}}
-						<ul class="wds-list">
-							<li>List item 1</li>
-							<li>List item 2</li>
-							<li>List item 3</li>
-						</ul>
-					{{/dropdown.content}}
-				{{/wds-dropdown}}
+			{{#wds-tab}}
+				<span class='wds-tab-label'>{{wds-icon name='gear' size='small'}}Icon tab</span>
 			{{/wds-tab}}
 
 			{{#wds-tab}}
-				<a href="#">{{wds-icon name='gear' size='small'}}A long icon tab that breaks into lines</a>
+				<span class='wds-tab-label'>{{wds-icon name='gear' size='small'}}A long icon tab that breaks into lines</span>
 			{{/wds-tab}}
 		{{/wds-tabs-container}}
 	{{/component-demo}}
 </section>
 
 <section>
-	<h2 id="active-tab">Active tab indicator</h2>
-	<!--<p><code class="format-code">.wds-has-lines-between</code> class adds subtle separator between each element of your list.</p>-->
+	<h2 id='active-tab'>Active tab indicator</h2>
+	<p>To mark specific tab as active (there should be only one active tab at once) add <code class='format-code'>.is-active</code> class to your tab's <code>&lt;li&gt;</code> tag.</p>
 
 	{{#component-demo}}
 		{{#wds-tabs-container}}
 			{{#wds-tab class='is-active'}}
-				<a href="#">Active tab</a>
+				<span class='wds-tab-label'>Active tab</span>
+			{{/wds-tab}}
+
+			{{#wds-tab}}
+				<span class='wds-tab-label'>Regular tab</span>
 			{{/wds-tab}}
 		{{/wds-tabs-container}}
 	{{/component-demo}}
 </section>
 
 <section>
-	<h2 id="active-tab">Disabled tab</h2>
-	<!--<p><code class="format-code">.wds-has-lines-between</code> class adds subtle separator between each element of your list.</p>-->
+	<h2 id='active-tab'>Disabled tab</h2>
+	<p>To disable some tab and make it completely non-interactive simply add <code class='format-code'>.is-disabled</code> class to your tab's <code>&lt;li&gt;</code> tag.</p>
 
 	{{#component-demo}}
 		{{#wds-tabs-container}}
 			{{#wds-tab class='is-disabled has-dropdown'}}
-				<a href="#">{{wds-icon name='gear' size='small'}}Disabled tab</a>
+				<span class='wds-tab-label'>{{wds-icon name='gear' size='small'}}Disabled tab</span>
 				{{wds-icon name='dropdown' size='tiny'}}
+			{{/wds-tab}}
+		{{/wds-tabs-container}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id='text-only'>Tab with dropdown</h2>
+	<p>
+		Tabs may have dropdown lists attached to them. To do so perform the following steps:
+		<ul>
+			<li>add <code class='format-code'>.has-dropdown</code> class to your tab's <code>&lt;li&gt;</code> tag</li>
+			<li>add dropdown SVG icon right after tab's label (the one marked with <code class='format-code'>.wds-tab-label</code> class) - it will be tab's chevron</li>
+			<li>after the chevron add a dropdown list - remember to follow {{#link-to 'route-components.dropdowns'}}these rules{{/link-to}}</li>
+		</ul>
+	</p>
+
+	{{#component-demo}}
+		{{#wds-tabs-container}}
+			{{#wds-tab class='has-dropdown'}}
+				<span class='wds-tab-label'>Tab with dropdown</span>
+				{{wds-icon name='dropdown' size='tiny'}}
+				{{#wds-dropdown as |dropdown|}}
+					{{#dropdown.content}}
+							<ul class='wds-list'>
+								<li>List item 1</li>
+								<li>List item 2</li>
+								<li>List item 3</li>
+							</ul>
+					{{/dropdown.content}}
+				{{/wds-dropdown}}
+			{{/wds-tab}}
+
+			{{#wds-tab class='has-dropdown'}}
+				<span class='wds-tab-label'>{{wds-icon name='gear' size='small'}}Tab with icon and dropdown</span>
+				{{wds-icon name='dropdown' size='tiny'}}
+				{{#wds-dropdown as |dropdown|}}
+					{{#dropdown.content}}
+						<ul class='wds-list'>
+							<li>List item 1</li>
+							<li>List item 2</li>
+							<li>List item 3</li>
+						</ul>
+					{{/dropdown.content}}
+				{{/wds-dropdown}}
 			{{/wds-tab}}
 		{{/wds-tabs-container}}
 	{{/component-demo}}
