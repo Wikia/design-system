@@ -9,8 +9,9 @@
 	{{#component-demo}}
 		{{#wds-tabs-container}}
 
-			{{#wds-tab}}
-				<a href="#">Tab link 1</a>
+			{{#wds-tab class='has-dropdown' }}
+				<a href="#">Tab with dropdown</a>
+				{{wds-icon name='dropdown' size='tiny'}}
 				{{#wds-dropdown as |dropdown|}}
 					{{#dropdown.content}}
 						<ul class="wds-list">
@@ -21,11 +22,22 @@
 					{{/dropdown.content}}
 				{{/wds-dropdown}}
 			{{/wds-tab}}
-			{{#wds-tab}}
-				<a href="#">Tab link 2</a>
+
+			{{#wds-tab class='has-dropdown'}}
+				<a href="#">{{wds-icon name='gear' size='small'}}Tab with icon</a>
+				{{wds-icon name='dropdown' size='tiny'}}
 			{{/wds-tab}}
+
+			{{#wds-tab class='is-active'}}
+				<a href="#">Active tab</a>
+			{{/wds-tab}}
+
+			{{#wds-tab class='is-disabled'}}
+				<a href="#">Disabled tab</a>
+			{{/wds-tab}}
+
 			{{#wds-tab}}
-				<a href="#">Tab link 3</a>
+				<a href="#">A really long tab that breaks into lines</a>
 			{{/wds-tab}}
 
 		{{/wds-tabs-container}}
