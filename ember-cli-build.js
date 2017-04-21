@@ -7,7 +7,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
 		autoprefixer: {
-			browsers: ['last 4 versions'],
+			browsers: ['last 5 versions'],
 			cascade: false
 		},
 		fingerprint: {
