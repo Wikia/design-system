@@ -61,6 +61,7 @@ module.exports = function(defaults) {
 	additionalTrees.push(SvgStore('style-guide/assets', {
 		outputFile: '/svg/sprite.svg',
 		svgstoreOpts: {
+			inline: true,
 			svgAttrs: {
 				style: 'position: absolute; width: 0; height: 0;',
 				width: '0',
