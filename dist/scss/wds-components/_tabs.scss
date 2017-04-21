@@ -1,0 +1,114 @@
+.wds-tabs-container {
+	align-items: flex-end;
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+
+.wds-tab {
+	$tab-padding-horizontal: 12px;
+	$tab-padding-vertical: 13px;
+	$tab-default-color: $wds-color-link;
+	$tab-hover-color: darken($tab-default-color, 20%);
+	$tab-icon-size: 14px;
+	$tab-chevron-size: 10px;
+	$tab-icon-margin: 6px;
+
+	cursor: pointer;
+	line-height: 1.17;
+	position: relative;
+
+	.wds-icon {
+		fill: $tab-default-color;
+	}
+
+	.wds-tab-label {
+		color: $tab-default-color;
+		display: inline-block;
+		font-size: $wds-typescale-size-minus-2;
+		font-weight: bold;
+		padding: $tab-padding-vertical $tab-padding-horizontal;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: color .1s;
+
+		&.has-icon {
+			padding-left: $tab-padding-horizontal + $tab-icon-size + $tab-icon-margin;
+
+			.wds-icon {
+				height: $tab-icon-size;
+				left: $tab-padding-horizontal;
+				margin-top: -$tab-icon-size / 2;
+				min-width: $tab-icon-size;
+				position: absolute;
+				top: 50%;
+				vertical-align: top;
+				width: $tab-icon-size;
+			}
+		}
+	}
+
+	&.has-dropdown {
+		padding-right: $tab-padding-horizontal + $tab-chevron-size + $tab-icon-margin;
+
+		.wds-tab-label {
+			padding-right: 0;
+
+			+ .wds-icon {
+				margin-top: -$tab-chevron-size / 2;
+				min-width: $tab-chevron-size;
+				opacity: .5;
+				position: absolute;
+				right: $tab-padding-horizontal;
+				top: 50%;
+				transition: fill .1s, opacity .1s;
+				width: $tab-chevron-size;
+			}
+		}
+
+		> .wds-dropdown {
+			display: none;
+			min-width: 100%;
+			position: absolute;
+		}
+	}
+
+	&.is-active {
+		border-bottom: 2px solid $tab-default-color;
+		transition: border-color .1s;
+
+		.wds-tab-label {
+			padding-bottom: $tab-padding-vertical - 2px;
+		}
+	}
+
+	&.is-disabled {
+		opacity: .5;
+		pointer-events: none;
+	}
+
+	&:hover {
+		> .wds-dropdown,
+		> .wds-dropdown .wds-dropdown__content {
+			display: block;
+		}
+
+		.wds-tab-label {
+			color: $tab-hover-color;
+		}
+
+		.wds-icon {
+			fill: $tab-hover-color;
+		}
+
+		&.has-dropdown .wds-tab-label + .wds-icon {
+			opacity: 1;
+			transform: rotate(180deg);
+		}
+
+		&.is-active {
+			border-color: $tab-hover-color;
+		}
+	}
+}
