@@ -27,18 +27,19 @@
 <section>
 	<h2 id='text-and-icons'>Tabs with text and icon</h2>
 	<p>
-		To display tab with icon simply follow all instructions above and also add some svg icon before <code class='format-code'>.wds-tab-label</code>.
+		To display tab with icon simply follow all instructions above and also add some svg icon before <code class='format-code'>.wds-tab-label</code>
+		and add <code class='format-code'>.has-icon</code> class to your tab's <code>&lt;li&gt;</code> tag.
 		See {{#link-to 'overview.svg-assets'}}how to embed SVG icons in your code{{/link-to}}.
 	</p>
 
 	{{#component-demo}}
 		{{#wds-tabs-container}}
 			{{#wds-tab}}
-				<span class='wds-tab-label'>{{wds-icon name='gear' size='small'}}Icon tab</span>
+				<span class='wds-tab-label has-icon'>{{wds-icon name='gear' size='small'}}Icon tab</span>
 			{{/wds-tab}}
 
 			{{#wds-tab}}
-				<span class='wds-tab-label'>{{wds-icon name='gear' size='small'}}A long icon tab that breaks into lines</span>
+				<span class='wds-tab-label has-icon'>{{wds-icon name='gear' size='small'}}A long icon tab that breaks into lines</span>
 			{{/wds-tab}}
 		{{/wds-tabs-container}}
 	{{/component-demo}}
@@ -68,7 +69,7 @@
 	{{#component-demo}}
 		{{#wds-tabs-container}}
 			{{#wds-tab class='is-disabled has-dropdown'}}
-				<span class='wds-tab-label'>{{wds-icon name='gear' size='small'}}Disabled tab</span>
+				<span class='wds-tab-label has-icon'>{{wds-icon name='gear' size='small'}}Disabled tab</span>
 				{{wds-icon name='dropdown' size='tiny'}}
 			{{/wds-tab}}
 		{{/wds-tabs-container}}
@@ -103,7 +104,7 @@
 			{{/wds-tab}}
 
 			{{#wds-tab class='has-dropdown'}}
-				<span class='wds-tab-label'>{{wds-icon name='gear' size='small'}}Tab with icon and dropdown</span>
+				<span class='wds-tab-label has-icon'>{{wds-icon name='gear' size='small'}}Very long tab with icon and dropdown</span>
 				{{wds-icon name='dropdown' size='tiny'}}
 				{{#wds-dropdown as |dropdown|}}
 					{{#dropdown.content}}
