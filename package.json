@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "5.13.4",
+  "version": "5.13.6",
   "description": "Design System developed for Wikia",
   "scripts": {
     "build": "npm run clean-build && npm run svgo-source && ember b -prod && cp -R style-guide/styles dist/scss && mv docs-dev/ docs &&  npm run svgo-dist",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "broccoli-asset-rev": "2.4.6",
     "broccoli-funnel": "1.0.7",
-    "broccoli-svgstore": "0.4.0",
+    "broccoli-svgstore": "0.4.2",
     "design-system-i18n": "Wikia/design-system-i18n#0.7.0",
     "ember-browserify": "1.1.13",
     "ember-cli": "2.8.0",

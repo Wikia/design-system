@@ -1,4 +1,18 @@
 {{#if model.subtitle}}
 	<div class="wds-global-navigation__account-menu-dropdown-caption">{{i18n model.subtitle.key}}</div>
 {{/if}}
-<a href="{{href}}" rel="nofollow" class="{{linkClasses}}">{{i18n model.title.key}}</a>
+
+{{#if (equal model.title.key 'global-navigation-user-sign-out') }}
+	<div class="{{linkClasses}}" id="{{model.title.key}}">
+		 <!--Logout is a POST, so we render a button inside a form here-->
+		<form method="POST" action="/signout">
+			{{input type="hidden" name="redirect" value="/d"}}
+		 	<!--wds-sign-out__button will make this look like a link-->
+			<button type="submit" class="wds-sign-out__button">
+				{{i18n title ns='design-system'}}
+			</button>
+		</form>
+	</div>
+{{else}}
+	<a href="{{href}}" rel="nofollow" class="{{linkClasses}}">{{i18n model.title.key}}</a>
+{{/if}}
