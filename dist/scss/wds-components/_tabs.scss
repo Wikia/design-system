@@ -1,11 +1,11 @@
-.wds-tabs-container {
+.wds-tabs {
 	align-items: flex-end;
 	display: flex;
 	list-style: none;
 	padding: 0;
 }
 
-.wds-tab {
+.wds-tabs__tab {
 	$tab-padding-horizontal: 12px;
 	$tab-padding-vertical: 13px;
 	$tab-default-color: $wds-color-link;
@@ -15,14 +15,14 @@
 	$tab-icon-margin: 6px;
 
 	cursor: pointer;
-	line-height: 1.17;
+	line-height: 14px;
 	position: relative;
 
 	.wds-icon {
 		fill: $tab-default-color;
 	}
 
-	.wds-tab-label {
+	&-label {
 		color: $tab-default-color;
 		display: inline-block;
 		font-size: $wds-typescale-size-minus-2;
@@ -33,7 +33,7 @@
 		text-transform: uppercase;
 		transition: color .1s;
 
-		&.has-icon {
+		&.wds-has-icon {
 			padding-left: $tab-padding-horizontal + $tab-icon-size + $tab-icon-margin;
 
 			.wds-icon {
@@ -43,16 +43,15 @@
 				min-width: $tab-icon-size;
 				position: absolute;
 				top: 50%;
-				vertical-align: top;
 				width: $tab-icon-size;
 			}
 		}
 	}
 
-	&.has-dropdown {
+	&.wds-has-dropdown {
 		padding-right: $tab-padding-horizontal + $tab-chevron-size + $tab-icon-margin;
 
-		.wds-tab-label {
+		.wds-tabs__tab-label {
 			padding-right: 0;
 
 			+ .wds-icon {
@@ -74,16 +73,16 @@
 		}
 	}
 
-	&.is-active {
+	&.wds-is-active {
 		border-bottom: 2px solid $tab-default-color;
 		transition: border-color .1s;
 
-		.wds-tab-label {
+		.wds-tabs__tab-label {
 			padding-bottom: $tab-padding-vertical - 2px;
 		}
 	}
 
-	&.is-disabled {
+	&.wds-is-disabled {
 		opacity: .5;
 		pointer-events: none;
 	}
@@ -94,7 +93,7 @@
 			display: block;
 		}
 
-		.wds-tab-label {
+		.wds-tabs__tab-label {
 			color: $tab-hover-color;
 		}
 
@@ -102,12 +101,12 @@
 			fill: $tab-hover-color;
 		}
 
-		&.has-dropdown .wds-tab-label + .wds-icon {
+		&.wds-has-dropdown .wds-tabs__tab-label + .wds-icon {
 			opacity: 1;
 			transform: rotate(180deg);
 		}
 
-		&.is-active {
+		&.wds-is-active {
 			border-color: $tab-hover-color;
 		}
 	}
