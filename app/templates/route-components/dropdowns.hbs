@@ -32,6 +32,7 @@
 <section>
 	<h2 id="dropdowns-default-variant">Default</h2>
 	<p>Default dropdown, aligned to left with delicate shadow.</p>
+	{{#ds-dropdown}}
 	<div class="wds-dropdown wds-is-active">
 		<div class="wds-dropdown__toggle">
 			<span>Default dropdown aligned to left</span>
@@ -47,6 +48,7 @@
 			</ul>
 		</div>
 	</div>
+	{{/ds-dropdown}}
 	{{#component-demo codeOnly=true}}
 <div class="wds-dropdown">
 	<div class="wds-dropdown__toggle">
@@ -71,6 +73,7 @@
 	<p>
 		Dropdown aligned to the right side of the container. To align dropdown to right, you have to add <code class="format-code">.wds-is-right-aligned</code> class to <code>wds-dropdown__content</code> element.
 	</p>
+	{{#ds-dropdown}}
 	<div class="wds-dropdown wds-is-active">
 		<div class="wds-dropdown__toggle">
 			<span>Right aligned dropdown</span>
@@ -86,6 +89,7 @@
 			</ul>
 		</div>
 	</div>
+	{{/ds-dropdown}}
 	{{#component-demo codeOnly=true}}
 <div class="wds-dropdown">
 	<div class="wds-dropdown__toggle">…</div>
@@ -99,6 +103,7 @@
 	<p>
 		Dropdown with increased shadow intensity. To increase dropdown shadow intensity, you have to add <code class="format-code">.wds-is-dark</code> class to <code>wds-dropdown__content</code> element.
 	</p>
+	{{#ds-dropdown}}
 	<div class="wds-dropdown wds-is-active">
 		<div class="wds-dropdown__toggle">
 			<span>Dark variant of dropdown</span>
@@ -114,26 +119,11 @@
 			</ul>
 		</div>
 	</div>
+	{{/ds-dropdown}}
 	{{#component-demo codeOnly=true}}
 <div class="wds-dropdown">
 	<div class="wds-dropdown__toggle">…</div>
 	<div class="wds-dropdown__content wds-is-dark">…</div>
 </div>
 	{{/component-demo}}
-</section>
-
-<section>
-	<h2 id="dropdowns-demo">Demo</h2>
-	{{#wds-dropdown as |dropdown|}}
-		{{#dropdown.toggle}}
-			<span>Click me!</span>
-		{{/dropdown.toggle}}
-		{{#dropdown.content}}
-			<ul class="wds-list">
-				<li>List item 1</li>
-				<li>List item 2</li>
-				<li>List item 3</li>
-			</ul>
-		{{/dropdown.content}}
-	{{/wds-dropdown}}
 </section>
