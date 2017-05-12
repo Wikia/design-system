@@ -7,7 +7,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
 		autoprefixer: {
-			browsers: ['last 4 versions'],
+			browsers: ['last 5 versions'],
 			cascade: false
 		},
 		fingerprint: {
@@ -61,6 +61,7 @@ module.exports = function(defaults) {
 	additionalTrees.push(SvgStore('style-guide/assets', {
 		outputFile: '/svg/sprite.svg',
 		svgstoreOpts: {
+			inline: true,
 			svgAttrs: {
 				style: 'position: absolute; width: 0; height: 0;',
 				width: '0',
