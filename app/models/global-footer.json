@@ -1,7 +1,7 @@
 {
   "with-hubs": {
     "header": {
-      "type": "link-image", "image": "wds-company-logo-fandom-powered-by-wikia-two-lines",
+      "type": "link-image", "image": "wds-company-logo-fandom-white",
       "href": "http:\/\/fandom.wikia.com", "title": { "type": "text", "value": "Fandom powered by Wikia" }
     }, "company_overview": {
       "header": { "type": "line-text", "title": { "type": "translatable-text", "key": "Overview" } }, "links": [
@@ -150,7 +150,7 @@
   },
   "without-hubs": {
     "header": {
-      "type": "link-image", "image": "wds-company-logo-fandom-powered-by-wikia-two-lines",
+      "type": "link-image", "image": "wds-company-logo-fandom-white",
       "href": "http:\/\/fandom.wikia.com", "title": { "type": "text", "value": "Fandom powered by Wikia" }
     }, "company_overview": {
       "header": { "type": "line-text", "title": { "type": "translatable-text", "key": "Overview" } }, "links": [
