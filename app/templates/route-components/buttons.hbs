@@ -202,7 +202,7 @@
 	<h2 id="primary">Buttons with dropdowns</h2>
 	<p>Description todo</p>
 	{{#component-demo}}
-		{{#wds-button class='wds-dropdown wds-is-active'}}
+		{{#wds-button class='wds-dropdown'}}
 				{{#wds-dropdown-toggle}}
 					<span>Click me!</span>
 				{{/wds-dropdown-toggle}}
@@ -214,5 +214,46 @@
 					</ul>
 				{{/wds-dropdown-content}}
 		{{/wds-button}}
+	{{/component-demo}}
+
+
+	<h2 id="group:icons">Button group with dropdown</h2>
+	<p>TODO desc</p>
+	{{#component-demo}}
+		<div class="wds-button-group">
+			{{#wds-button class='wds-has-icon wds-is-squished'}}
+				{{wds-icon name='pencil' size='small'}}
+				Edit
+			{{/wds-button}}
+			{{#wds-button class='wds-is-squished wds-dropdown wds-is-right-aligned'}}
+				{{wds-dropdown-toggle}}
+				{{#wds-dropdown-content}}
+					<ul class="wds-list">
+						<li>List item 1</li>
+						<li>List item 2</li>
+						<li>List item 3</li>
+					</ul>
+				{{/wds-dropdown-content}}
+			{{/wds-button}}
+		</div>
+	{{/component-demo}}
+
+	{{#component-demo}}
+		<div class="wds-button-group">
+			{{#wds-button class='wds-has-icon'}}
+				{{wds-icon name='pencil' size='small'}}
+				Edit
+			{{/wds-button}}
+			{{#wds-button class='wds-dropdown wds-is-right-aligned'}}
+				{{wds-dropdown-toggle}}
+				{{#wds-dropdown-content}}
+					<ul class="wds-list">
+						<li>List item 1</li>
+						<li>List item 2</li>
+						<li>List item 3</li>
+					</ul>
+				{{/wds-dropdown-content}}
+			{{/wds-button}}
+		</div>
 	{{/component-demo}}
 </section>
