@@ -39,7 +39,8 @@
 
 <section>
 	<h2 id="secondary">Secondary buttons</h2>
-	<p>Adding class <code class="format-code">.wds-is-secondary</code> changes the button's looks. It is used to create a button that draws less user's attention.</p>
+	<p>Adding class <code class="format-code">.wds-is-secondary</code> changes the button's looks. It is used to create
+		a button that draws less user's attention.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-secondary'}}Secondary button{{/wds-button}}
 		{{#wds-button class='wds-is-secondary wds-has-icon'}}
@@ -52,7 +53,8 @@
 
 <section>
 	<h2 id="text">Text buttons</h2>
-	<p>These buttons are denoted with <code class="format-code">.wds-is-text</code> class. They are the least obtrusive. Nevertheless, their paddings remain untouched, which provides the same clickable area.</p>
+	<p>These buttons are denoted with <code class="format-code">.wds-is-text</code> class. They are the least obtrusive.
+		Nevertheless, their paddings remain untouched, which provides the same clickable area.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-text'}}Text button{{/wds-button}}
 		{{#wds-button class='wds-is-text wds-has-icon'}}
@@ -65,7 +67,8 @@
 
 <section>
 	<h2 id="sizes:regular">Button sizes: regular</h2>
-	<p>Size of the button of any aforementioned variant can be adjusted. These are the default sizes of the buttons — for comparison.</p>
+	<p>Size of the button of any aforementioned variant can be adjusted. These are the default sizes of the buttons —
+		for comparison.</p>
 	{{#component-demo}}
 		{{#wds-button}}Primary{{/wds-button}}
 		{{#wds-button class='wds-has-icon'}}
@@ -79,7 +82,8 @@
 
 <section>
 	<h2 id="sizes:squished">Button sizes: squished</h2>
-	<p>To make the button smaller use <code class="format-code">.wds-is-squished</code> class. This can help with fitting a button in tighter layouts.</p>
+	<p>To make the button smaller use <code class="format-code">.wds-is-squished</code> class. This can help with
+		fitting a button in tighter layouts.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-squished'}}Primary{{/wds-button}}
 		{{#wds-button class='wds-is-squished wds-has-icon'}}
@@ -90,24 +94,28 @@
 		{{#wds-button class='wds-is-text wds-is-squished'}}Text{{/wds-button}}
 	{{/component-demo}}
 	<p class="warning-note">
-		<strong>Important note:</strong> for readability purposes we use different styling for squished button in Global Navigation for Chinese - the font is larger and has bold removed.
-		This is why in <code class="format-code">/scss/wds-components/_global-navigation.scss</code> you will find the following piece of code:
+		<strong>Important note:</strong> for readability purposes we use different styling for squished button in Global
+		Navigation for Chinese - the font is larger and has bold removed.
+		This is why in <code class="format-code">/scss/wds-components/_global-navigation.scss</code> you will find the
+		following piece of code:
 		{{#code-sample language='scss'}}
-html[lang^='zh'] &__start-a-wiki-button {
-	font-size: 12px;
-	font-weight: 400;
-	padding: 9px 12px 8px;
-}
+			html[lang^='zh'] &__start-a-wiki-button {
+			font-size: 12px;
+			font-weight: 400;
+			padding: 9px 12px 8px;
+			}
 		{{/code-sample}}
 
-		Please remember, that this solution is only single-use and temporary. It is not recommended to apply it as a common solution in other places/components.
+		Please remember, that this solution is only single-use and temporary. It is not recommended to apply it as a
+		common solution in other places/components.
 		If it becomes a broader issue, more versatile and maintainable solution must be implemented.
 	</p>
 </section>
 
 <section>
 	<h2 id="sizes:stretched">Button sizes: stretched</h2>
-	<p>For a button greater in size use <code class="format-code">.wds-is-stretched</code> class. This may come in handy to draw more user's attention to the button and increase the clickable area around the label.</p>
+	<p>For a button greater in size use <code class="format-code">.wds-is-stretched</code> class. This may come in handy
+		to draw more user's attention to the button and increase the clickable area around the label.</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-stretched'}}Primary{{/wds-button}}
 		{{#wds-button class='wds-is-stretched wds-has-icon'}}
@@ -121,7 +129,9 @@ html[lang^='zh'] &__start-a-wiki-button {
 
 <section>
 	<h2 id="sizes:stretched">Button sizes: square</h2>
-	<p>For a fixed size square button use <code class="format-code">.wds-is-square</code> class. This button will be 45px x 45px with content centered inside. This type of button is mostly used for icons, example: social icons.</p>
+	<p>For a fixed size square button use <code class="format-code">.wds-is-square</code> class. This button will be
+		45px x 45px with content centered inside. This type of button is mostly used for icons, example: social icons.
+	</p>
 	{{#component-demo}}
 		{{#wds-button class='wds-is-square wds-is-facebook-color'}}{{wds-icon name='facebook'}}{{/wds-button}}
 		{{#wds-button class='wds-is-square wds-is-nk-color'}}{{wds-icon name='nk'}}{{/wds-button}}
@@ -142,7 +152,10 @@ html[lang^='zh'] &__start-a-wiki-button {
 
 <section>
 	<h2 id="other:link">Other usages: link button</h2>
-	<p>When no special handlers of the click event are needed — just navigation to a certain URL, consider using an anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code class="format-code">.wds-button</code> class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.</p>
+	<p>When no special handlers of the click event are needed — just navigation to a certain URL, consider using an
+		anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code class="format-code">.wds-button</code>
+		class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.
+	</p>
 	{{#component-demo}}
 		{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
 		{{#wds-button tagName='a' href='#' class='wds-has-icon'}}
@@ -150,5 +163,62 @@ html[lang^='zh'] &__start-a-wiki-button {
 			Link button
 		{{/wds-button}}
 		{{#wds-button tagName='a' href='#' class='wds-is-secondary'}}Secondary link button{{/wds-button}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="group">Button group</h2>
+	<p>Group a series of buttons together on a single line with the button group.</p>
+	<p>Button group comes with no default styling of it's own. Colors, sizes and animations are driven by buttons.</p>
+	<p>Wrap a series of buttons with <code>.wds-button</code> in <code>.wds-button-group</code>.</p>
+	{{#component-demo}}
+		<div class="wds-button-group">
+			{{#wds-button}}1{{/wds-button}}
+			{{#wds-button}}2{{/wds-button}}
+			{{#wds-button disabled=true}}3{{/wds-button}}
+			{{#wds-button}}4{{/wds-button}}
+			{{#wds-button}}5{{/wds-button}}
+		</div>
+	{{/component-demo}}
+	<p>Mixed type buttons are not supported. All buttons have to be of the same type.</p>
+	{{#component-demo}}
+		<div class="wds-button-group">
+			{{#wds-button class='wds-is-secondary'}}6{{/wds-button}}
+			{{#wds-button class='wds-is-secondary'}}7{{/wds-button}}
+			{{#wds-button disabled=true class='wds-is-secondary'}}8{{/wds-button}}
+			{{#wds-button class='wds-is-secondary'}}9{{/wds-button}}
+			{{#wds-button class='wds-is-secondary'}}10{{/wds-button}}
+		</div>
+	{{/component-demo}}
+</section>
+
+<section class="button-group-icons-section">
+	<h2 id="group:icons">Button group with icons</h2>
+	<p>You can achieve basic theming by overriding color and background color of a button</p>
+	{{#code-sample language='sass'}}
+.wds-button {
+	border-color: white;
+	color: white;
+
+	&:focus:not(:disabled),
+	&:hover:not(:disabled) {
+		border-color: darken(white, 20%);
+		color: darken(white, 20%);
+	}
+}
+	{{/code-sample}}
+	{{#component-demo}}
+		<div class="wds-button-group white-theme">
+			{{#wds-button class='wds-has-icon wds-is-secondary wds-is-squished'}}
+				{{wds-icon name='activity' size='small'}}
+				Activity
+			{{/wds-button}}
+			{{#wds-button class='wds-is-square wds-is-secondary wds-is-squished'}}
+				{{wds-icon name='house' size='small'}}
+			{{/wds-button}}
+			{{#wds-button class='wds-is-square wds-is-secondary wds-is-squished'}}
+				{{wds-icon name='map'}}
+			{{/wds-button}}
+		</div>
 	{{/component-demo}}
 </section>
