@@ -52,6 +52,51 @@
 </section>
 
 <section>
+	<h2 id="primary">Dropdown button</h2>
+	<p>Adding <code class="format-code">.wds-dropdown</code> class and dropdown component inside button component will result in button with dropdown functionality</p>
+	{{#component-demo}}
+		{{#wds-button class='wds-dropdown wds-is-active'}}
+			{{#wds-dropdown-toggle}}
+				<span>Dropdown</span>
+			{{/wds-dropdown-toggle}}
+			{{#wds-dropdown-content}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			{{/wds-dropdown-content}}
+		{{/wds-button}}
+
+		{{#wds-button class='wds-dropdown'}}
+			{{#wds-dropdown-toggle}}
+				<span>Dropdown</span>
+			{{/wds-dropdown-toggle}}
+			{{#wds-dropdown-content}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			{{/wds-dropdown-content}}
+		{{/wds-button}}
+
+		{{#wds-button class='wds-dropdown wds-is-secondary'}}
+			{{#wds-dropdown-toggle}}
+				<span>Dropdown</span>
+			{{/wds-dropdown-toggle}}
+			{{#wds-dropdown-content}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			{{/wds-dropdown-content}}
+		{{/wds-button}}
+	{{/component-demo}}
+</section>
+
+<section>
 	<h2 id="text">Text buttons</h2>
 	<p>These buttons are denoted with <code class="format-code">.wds-is-text</code> class. They are the least obtrusive.
 		Nevertheless, their paddings remain untouched, which provides the same clickable area.</p>
@@ -75,6 +120,19 @@
 			{{wds-icon name='fandom-heart' size='small'}}
 			Primary button
 		{{/wds-button}}
+
+		{{#wds-button class='wds-dropdown'}}
+			{{#wds-dropdown-toggle}}
+				<span>Dropdown</span>
+			{{/wds-dropdown-toggle}}
+			{{#wds-dropdown-content}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			{{/wds-dropdown-content}}
+		{{/wds-button}}
 		{{#wds-button class='wds-is-secondary'}}Secondary{{/wds-button}}
 		{{#wds-button class='wds-is-text'}}Text{{/wds-button}}
 	{{/component-demo}}
@@ -89,6 +147,19 @@
 		{{#wds-button class='wds-is-squished wds-has-icon'}}
 			{{wds-icon name='fandom-heart-small' class='wds-icon-tiny'}}
 			Primary
+		{{/wds-button}}
+
+		{{#wds-button class='wds-dropdown wds-is-squished'}}
+			{{#wds-dropdown-toggle}}
+				<span>Dropdown</span>
+			{{/wds-dropdown-toggle}}
+			{{#wds-dropdown-content}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			{{/wds-dropdown-content}}
 		{{/wds-button}}
 		{{#wds-button class='wds-is-secondary wds-is-squished'}}Secondary{{/wds-button}}
 		{{#wds-button class='wds-is-text wds-is-squished'}}Text{{/wds-button}}
@@ -121,6 +192,19 @@
 		{{#wds-button class='wds-is-stretched wds-has-icon'}}
 			{{wds-icon name='fandom-heart' size='small'}}
 			Primary button
+		{{/wds-button}}
+
+		{{#wds-button class='wds-dropdown wds-is-stretched'}}
+			{{#wds-dropdown-toggle}}
+				<span>Dropdown</span>
+			{{/wds-dropdown-toggle}}
+			{{#wds-dropdown-content}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			{{/wds-dropdown-content}}
 		{{/wds-button}}
 		{{#wds-button class='wds-is-secondary wds-is-stretched'}}Secondary{{/wds-button}}
 		{{#wds-button class='wds-is-text wds-is-stretched'}}Text{{/wds-button}}

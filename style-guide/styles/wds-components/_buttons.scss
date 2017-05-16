@@ -66,6 +66,14 @@
 	&.wds-is-squished {
 		font-size: $wds-typescale-size-minus-3;
 		padding: 10px $button-squished-padding-horizontal 9px;
+
+		.wds-dropdown__toggle {
+			height: 13px;
+		}
+
+		.wds-dropdown__toggle-chevron {
+			margin: -2px 0;
+		}
 	}
 
 	&.wds-is-stretched {
@@ -134,12 +142,8 @@
 		text-align: left;
 	}
 
-	.wds-dropdown__toggle {
-		height: 12px;
-	}
-
 	.wds-dropdown__toggle-chevron {
-		margin: 0;
+		margin: -1px 0;
 	}
 
 	$social-colors: (
