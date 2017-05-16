@@ -126,6 +126,18 @@
 		}
 	}
 
+	.wds-list {
+		color: $wds-color-black;
+		font-weight: normal;
+		letter-spacing: normal;
+		text-transform: none;
+		text-align: left;
+	}
+
+	.wds-dropdown__toggle-chevron {
+		margin: 0;
+	}
+
 	$social-colors: (
 		facebook: $wds-color-social-facebook,
 		googleplus: $wds-color-social-googleplus,
