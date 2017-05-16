@@ -168,7 +168,9 @@
 
 <section>
 	<h2 id="group">Button group</h2>
-	<p>Group buttons</p>
+	<p>Group a series of buttons together on a single line with the button group.</p>
+	<p>Button group comes with no default styling of it's own. Colors, sizes and animations are driven by buttons.</p>
+	<p>Wrap a series of buttons with <code>.wds-button</code> in <code>.wds-button-group</code>.</p>
 	{{#component-demo}}
 		<div class="wds-button-group">
 			{{#wds-button}}1{{/wds-button}}
@@ -180,9 +182,21 @@
 
 <section class="button-group-icons-section">
 	<h2 id="group:icons">Button group with icons</h2>
-	<p>Group buttons</p>
+	<p>You can achieve basic theming by overriding color and background color of a button</p>
+	{{#code-sample language='sass'}}
+.wds-button {
+	border-color: white;
+	color: white;
+
+	&:focus:not(:disabled),
+	&:hover:not(:disabled) {
+		border-color: darken(white, 20%);
+		color: darken(white, 20%);
+	}
+}
+	{{/code-sample}}
 	{{#component-demo}}
-		<div class="wds-button-group">
+		<div class="wds-button-group white-theme">
 			{{#wds-button class='wds-has-icon wds-is-secondary wds-is-squished'}}
 				{{wds-icon name='activity' size='small'}}
 				Activity
