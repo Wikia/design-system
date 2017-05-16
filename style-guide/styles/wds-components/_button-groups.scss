@@ -1,0 +1,16 @@
+.wds-button-group {
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: stretch;
+
+	.wds-button {
+		//To achieve oneness of buttons, we overlap their border
+		margin-right: -1px;
+		height: auto;
+
+		//on hover we want to show whole border of a button
+		&:hover {
+			z-index: 1;
+		}
+	}
+}
