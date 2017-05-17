@@ -253,7 +253,7 @@ html[lang^='zh'] &__start-a-wiki-button {
 <section>
 	<h2 id="group">Button group</h2>
 	<p>Group a series of buttons together on a single line with the button group.</p>
-	<p>Button group comes with no default styling of it's own. Colors, sizes and animations are driven by buttons.</p>
+	<p>Button group comes with no default styling of its own. Colors, sizes and animations are driven by buttons.</p>
 	<p>Wrap a series of buttons with <code>.wds-button</code> in <code>.wds-button-group</code>.</p>
 	{{#component-demo}}
 		<div class="wds-button-group">
@@ -297,11 +297,11 @@ html[lang^='zh'] &__start-a-wiki-button {
 				{{wds-icon name='activity' size='small'}}
 				Activity
 			{{/wds-button}}
-			{{#wds-button class='wds-has-icon wds-is-square wds-is-secondary wds-is-squished'}}
-				{{wds-icon name='house' size='small'}}
+			{{#wds-button class='wds-is-square wds-is-secondary wds-is-squished'}}
+				{{wds-icon name='house' class='wds-icon-tiny'}}
 			{{/wds-button}}
-			{{#wds-button class='wds-has-icon wds-is-square wds-is-secondary wds-is-squished'}}
-				{{wds-icon name='map'}}
+			{{#wds-button class='wds-is-square wds-is-secondary wds-is-squished'}}
+				{{wds-icon name='map' class='wds-icon-tiny'}}
 			{{/wds-button}}
 		</div>
 	{{/component-demo}}
@@ -317,7 +317,7 @@ html[lang^='zh'] &__start-a-wiki-button {
 				{{wds-icon name='pencil' size='small'}}
 				Edit
 			{{/wds-button}}
-			{{#wds-button class='wds-is-squished wds-dropdown wds-is-active'}}
+			{{#wds-button class='wds-is-squished wds-dropdown wds-is-active wds-is-square'}}
 				{{wds-dropdown-toggle}}
 				{{#wds-dropdown-content}}
 					<ul class="wds-list">
