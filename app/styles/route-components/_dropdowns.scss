@@ -1,7 +1,15 @@
-.main-content .wds-dropdown {
-	margin-bottom: 120px;
+.main-content {
+	.wds-dropdown {
+		&.wds-is-active {
+			margin-bottom: 120px;
+		}
 
-	&__content {
-		min-width: 150px;
+		&__content {
+			min-width: 150px;
+		}
+	}
+
+	.wds-button-group .wds-dropdown {
+		margin-bottom: 0;
 	}
 }

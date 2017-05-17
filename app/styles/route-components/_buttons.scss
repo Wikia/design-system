@@ -5,3 +5,33 @@
 .fixed-width-180px {
 	width: 180px;
 }
+
+/* Button group sections */
+
+.button-group-icons-section {
+	.component-demo__rendered {
+		background: rgb(0, 51, 128);
+		padding: 7px;
+	}
+
+	// basic theming for buttons
+	.white-theme {
+		.wds-button {
+			border-color: white;
+			color: white;
+
+			&:focus:not(:disabled),
+			&:hover:not(:disabled) {
+				border-color: darken(white, 20%);
+				color: darken(white, 20%);
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+.button-group-dropdown-section {
+	.wds-button-group {
+		margin-bottom: 125px;
+	}
+}
