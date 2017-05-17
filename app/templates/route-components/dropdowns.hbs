@@ -24,7 +24,9 @@
 	<h2 id="dropdowns-interactions">Interactions</h2>
 	<p>
 		On desktop, dropdown content is showing whenever user hovers over dropdown toggle. For touch
-		devices //TODO: tablet hack
+		devices when user taps on a dropdown toggle you need to add
+		<code class="format-code">wds-is-active</code> class to the parent <code class="format-code">.wds-dropdown element</code>.
+		There should be only one dropdown open at any time, so you should also remove this class from all the other dropdowns.
 	</p>
 </section>
 
@@ -122,7 +124,7 @@
 </section>
 
 <section>
-	<h2 id="dropdowns-demo">Demo</h2>
+	<h2 id="dropdowns-demo">Demo for touch devices</h2>
 	{{#wds-dropdown as |dropdown|}}
 		{{#dropdown.toggle}}
 			<span>Click me!</span>
