@@ -96,10 +96,10 @@
 		// inline-flex does not work for button on safari
 		@at-root button#{&} {
 			display: inline-block;
-		}
 
-		&.wds-is-squished {
-			@include square(34px);
+			.wds-icon {
+				margin: auto;
+			}
 		}
 	}
 
@@ -141,6 +141,10 @@
 			top: 50%;
 			width: $wds-icon-small-size;
 		}
+	}
+
+	>.wds-icon {
+		display: block;
 	}
 
 	.wds-list {
