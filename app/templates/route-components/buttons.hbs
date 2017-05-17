@@ -170,11 +170,11 @@
 		This is why in <code class="format-code">/scss/wds-components/_global-navigation.scss</code> you will find the
 		following piece of code:
 		{{#code-sample language='scss'}}
-			html[lang^='zh'] &__start-a-wiki-button {
-			font-size: 12px;
-			font-weight: 400;
-			padding: 9px 12px 8px;
-			}
+html[lang^='zh'] &__start-a-wiki-button {
+	font-size: 12px;
+	font-weight: 400;
+	padding: 9px 12px 8px;
+}
 		{{/code-sample}}
 
 		Please remember, that this solution is only single-use and temporary. It is not recommended to apply it as a
@@ -297,10 +297,10 @@
 				{{wds-icon name='activity' size='small'}}
 				Activity
 			{{/wds-button}}
-			{{#wds-button class='wds-is-square wds-is-secondary wds-is-squished'}}
+			{{#wds-button class='wds-has-icon wds-is-square wds-is-secondary wds-is-squished'}}
 				{{wds-icon name='house' size='small'}}
 			{{/wds-button}}
-			{{#wds-button class='wds-is-square wds-is-secondary wds-is-squished'}}
+			{{#wds-button class='wds-has-icon wds-is-square wds-is-secondary wds-is-squished'}}
 				{{wds-icon name='map'}}
 			{{/wds-button}}
 		</div>
