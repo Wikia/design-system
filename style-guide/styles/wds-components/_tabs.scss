@@ -11,7 +11,7 @@
 	$tab-default-color: $wds-color-link;
 	$tab-hover-color: darken($tab-default-color, 20%);
 	$tab-icon-size: 14px;
-	$tab-chevron-size: 10px;
+	$tab-chevron-size: $wds-icon-tiny-size;
 	$tab-icon-margin: 6px;
 
 	cursor: pointer;
@@ -56,7 +56,6 @@
 
 			+ .wds-icon {
 				margin-top: -$tab-chevron-size / 2;
-				min-width: $tab-chevron-size;
 				opacity: .5;
 				position: absolute;
 				right: $tab-padding-horizontal;
