@@ -5,7 +5,9 @@
 	position: relative;
 
 	&__toggle {
+		align-items: center;
 		cursor: pointer;
+		display: flex;
 		position: relative;
 		// dropdown content has shadow that should be hidden below the toggle
 		z-index: $content-z-index + 1;
