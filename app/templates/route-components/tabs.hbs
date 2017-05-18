@@ -35,11 +35,17 @@
 	{{#component-demo}}
 		{{#wds-tabs}}
 			{{#wds-tab}}
-				<span class='wds-tabs__tab-label wds-has-icon'>{{wds-icon name='gear' size='small'}}Icon tab</span>
+				<div class='wds-tabs__tab-label'>
+					{{wds-icon name='gear' size='small' class='wds-icon-tiny'}}
+					<span>Icon tab</span>
+				</div>
 			{{/wds-tab}}
 
 			{{#wds-tab}}
-				<span class='wds-tabs__tab-label wds-has-icon'>{{wds-icon name='gear' size='small'}}A long icon tab that breaks into lines</span>
+				<div class='wds-tabs__tab-label'>
+					{{wds-icon name='gear' size='small' class='wds-icon-tiny'}}
+					<span>A long icon tab that breaks into lines</span>
+				</div>
 			{{/wds-tab}}
 		{{/wds-tabs}}
 	{{/component-demo}}
@@ -69,8 +75,10 @@
 	{{#component-demo}}
 		{{#wds-tabs}}
 			{{#wds-tab class='wds-is-disabled wds-has-dropdown'}}
-				<span class='wds-tabs__tab-label wds-has-icon'>{{wds-icon name='gear' size='small'}}Disabled tab</span>
-				{{wds-icon name='dropdown' size='tiny'}}
+				<div class='wds-tabs__tab-label'>
+					{{wds-icon name='gear' size='small' class='wds-icon-tiny'}}
+					<span>Disabled tab</span>
+				</div>
 			{{/wds-tab}}
 		{{/wds-tabs}}
 	{{/component-demo}}
@@ -107,7 +115,10 @@
 			{{#wds-tab}}
 				{{#wds-dropdown as |dropdown|}}
 					{{#dropdown.toggle}}
-						<span class='wds-tabs__tab-label wds-has-icon'>{{wds-icon name='gear' size='small'}}Very long tab with icon and dropdown</span>
+						<div class='wds-tabs__tab-label'>
+							{{wds-icon name='gear' size='small' class='wds-icon-tiny'}}
+							<span>Very long tab with icon and dropdown</span>
+						</div>
 					{{/dropdown.toggle}}
 					{{#dropdown.content}}
 						<ul class='wds-list'>
