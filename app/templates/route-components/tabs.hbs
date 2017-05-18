@@ -47,12 +47,12 @@
 
 <section>
 	<h2 id="active-tab">Active tab indicator</h2>
-	<p>To mark specific tab as active (there should be only one active tab at once) add <code class='format-code'>.wds-is-active</code> class to your tab's <code>&lt;li&gt;</code> tag.</p>
+	<p>To mark specific tab as opened (there should be only one opened tab at once) add <code class='format-code'>.wds-is-current</code> class to your tab's <code>&lt;li&gt;</code> tag.</p>
 
 	{{#component-demo}}
 		{{#wds-tabs}}
-			{{#wds-tab class='wds-is-active'}}
-				<span class='wds-tabs__tab-label'>Active tab</span>
+			{{#wds-tab class='wds-is-current'}}
+				<span class='wds-tabs__tab-label'>Opened tab</span>
 			{{/wds-tab}}
 
 			{{#wds-tab}}
