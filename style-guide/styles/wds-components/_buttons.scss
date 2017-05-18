@@ -159,6 +159,10 @@
 		margin: -1px 0;
 	}
 
+	.wds-dropdown__content {
+		top: calc(100% + 1px);
+	}
+
 	$social-colors: (
 		facebook: $wds-color-social-facebook,
 		googleplus: $wds-color-social-googleplus,
