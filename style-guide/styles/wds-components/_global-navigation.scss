@@ -114,7 +114,8 @@
 		}
 
 		&:active,
-		&.wds-is-active {
+		&.wds-is-active,
+		&:hover {
 			background-color: $wds-color-slate-gray;
 			border-color: darken($wds-color-slate-gray, 20%);
 			color: $wds-color-white;
