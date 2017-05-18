@@ -48,30 +48,6 @@
 		}
 	}
 
-	&.wds-has-dropdown {
-		padding-right: $tab-padding-horizontal + $tab-chevron-size + $tab-icon-margin;
-
-		.wds-tabs__tab-label {
-			padding-right: 0;
-
-			+ .wds-icon {
-				margin-top: -$tab-chevron-size / 2;
-				opacity: .5;
-				position: absolute;
-				right: $tab-padding-horizontal;
-				top: 50%;
-				transition: fill .1s, opacity .1s;
-				width: $tab-chevron-size;
-			}
-		}
-
-		> .wds-dropdown {
-			display: none;
-			min-width: 100%;
-			position: absolute;
-		}
-	}
-
 	&.wds-is-current {
 		border-bottom: 2px solid $tab-default-color;
 		transition: border-color .1s;
@@ -99,11 +75,6 @@
 
 		.wds-icon {
 			fill: $tab-hover-color;
-		}
-
-		&.wds-has-dropdown .wds-tabs__tab-label + .wds-icon {
-			opacity: 1;
-			transform: rotate(180deg);
 		}
 
 		&.wds-is-current {

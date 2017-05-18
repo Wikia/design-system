@@ -89,10 +89,11 @@
 
 	{{#component-demo}}
 		{{#wds-tabs}}
-			{{#wds-tab class='wds-has-dropdown'}}
-				<span class='wds-tabs__tab-label'>Tab with dropdown</span>
-				{{wds-icon name='dropdown' size='tiny'}}
+			{{#wds-tab}}
 				{{#wds-dropdown as |dropdown|}}
+					{{#dropdown.toggle}}
+						<span class='wds-tabs__tab-label'>Tab with dropdown</span>
+					{{/dropdown.toggle}}
 					{{#dropdown.content}}
 							<ul class='wds-list'>
 								<li>List item 1</li>
@@ -103,10 +104,11 @@
 				{{/wds-dropdown}}
 			{{/wds-tab}}
 
-			{{#wds-tab class='wds-has-dropdown'}}
-				<span class='wds-tabs__tab-label wds-has-icon'>{{wds-icon name='gear' size='small'}}Very long tab with icon and dropdown</span>
-				{{wds-icon name='dropdown' size='tiny'}}
+			{{#wds-tab}}
 				{{#wds-dropdown as |dropdown|}}
+					{{#dropdown.toggle}}
+						<span class='wds-tabs__tab-label wds-has-icon'>{{wds-icon name='gear' size='small'}}Very long tab with icon and dropdown</span>
+					{{/dropdown.toggle}}
 					{{#dropdown.content}}
 						<ul class='wds-list'>
 							<li>List item 1</li>
