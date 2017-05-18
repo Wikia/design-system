@@ -1,16 +1,28 @@
 .wds-dropdown {
 	$content-z-index: 1;
+	$gap-size: 3px;
 
 	display: inline-block;
 	position: relative;
 
 	&__toggle {
-		align-items: center;
 		cursor: pointer;
-		display: flex;
 		position: relative;
 		// dropdown content has shadow that should be hidden below the toggle
 		z-index: $content-z-index + 1;
+
+		// allows to have on-hover dropdowns with a gap between toggle and content
+		&::after {
+			// FIXME: `1px` is the bottom border of toggle element
+			// if border is larger than 1px, it won't work
+			bottom: -$gap-size - 1px;
+			content: '';
+			display: block;
+			height: $gap-size;
+			left: 0;
+			position: absolute;
+			right: 0;
+		}
 	}
 
 	&__toggle-chevron {
@@ -18,57 +30,103 @@
 	}
 
 	&__content {
-		background: {
-			color: $wds-color-white;
-			image: radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
-			radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-			position: 0 0, 0 100%;
-			repeat: no-repeat;
-			size: 100% 14px;
-		}
-		box-shadow: 0 0 10px 0 rgba($wds-color-black, .2);
+		background-color: $wds-color-white;
+		border: 1px solid $wds-color-faint-gray;
+		border-radius: 4px;
 		display: none;
-		left: 0;
-		max-height: 300px;
-		overflow-y: auto;
+		left: 50%;
+		padding: 24px;
 		position: absolute;
-		top: 100%;
-		z-index: $content-z-index;
-
-		&::after,
-		&::before {
-			background: linear-gradient(to bottom, $wds-color-white, $wds-color-white 30%, rgba(255, 255, 255, 0));
-			content: '';
-			display: block;
-			height: 30px;
-			margin: 0 0 -30px;
-			position: relative;
-			z-index: -1;
-		}
-
-		&::after {
-			background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $wds-color-white 70%, $wds-color-white);
-			margin: -30px 0 0;
-		}
-
-		&.wds-is-dark {
-			box-shadow: 0 0 20px 0 rgba($wds-color-black, .3);
-		}
+		top: calc(100% + #{$gap-size});
+		transform: translateX(-50%);
 
 		&.wds-is-right-aligned {
 			left: auto;
 			right: 0;
+			transform: none;
+		}
+
+		&.wds-is-left-aligned {
+			left: 0;
+			transform: none;
+		}
+
+		.wds-list {
+			@include scrollable-list;
 		}
 	}
 
+	&::after {
+		border: solid transparent;
+		border-bottom-color: #fff;
+		border-width: 8px;
+		bottom: -6px;
+		content: '';
+		display: none;
+		height: 0;
+		left: 50%;
+		margin-left: -8px;
+		pointer-events: none;
+		position: absolute;
+		width: 0;
+		z-index: 2;
+	}
+
+	&::before {
+		border: solid transparent;
+		border-bottom-color: #ccc;
+		border-width: 9px;
+		bottom: -6px;
+		content: '';
+		display: none;
+		height: 0;
+		left: 50%;
+		margin-left: -9px;
+		pointer-events: none;
+		position: absolute;
+		width: 0;
+	}
+
+	&:hover::after {
+		display: block;
+	}
+
+	&:hover::before {
+		display: block;
+	}
+
 	&.wds-is-active .wds-dropdown,
-	&:hover:not(.wds-global-navigation__search-input-wrapper) .wds-dropdown {
-		&__content {
+	&:hover:not(.wds-global-navigation__search-input-wrapper) {
+		.wds-dropdown__content {
 			display: inline-block;
 		}
 
-		&__toggle-chevron {
+		.wds-dropdown__toggle-chevron {
 			transform: rotate(180deg);
+		}
+
+		&.wds-has-shadow, &.wds-has-dark-shadow {
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&.wds-has-shadow {
+		.wds-dropdown__content {
+			box-shadow: 0 0 10px 0 rgba($wds-color-black, .2);
+		}
+	}
+
+	&.wds-has-dark-shadow {
+		.wds-dropdown__content {
+			box-shadow: 0 0 20px 0 rgba($wds-color-black, .3);
+		}
+	}
+
+	&.wds-has-shadow, &.wds-has-dark-shadow {
+		.wds-dropdown__content {
+			border: 0;
 		}
 	}
 }
