@@ -58,15 +58,15 @@
 		pointer-events: none;
 	}
 
+	.wds-dropdown__content {
+		left: $tab-padding-horizontal - $button-padding-horizontal;
+		transform: none;
+	}
+
 	&.wds-is-active,
 	&:hover {
 		.wds-tabs__tab-label {
 			color: $tab-hover-color;
-		}
-
-		.wds-dropdown__content {
-			left: $tab-padding-horizontal - $button-padding-horizontal;
-			transform: none;
 		}
 
 		&.wds-is-current {

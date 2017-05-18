@@ -13,14 +13,6 @@
 	z-index: 1;
 	padding: 0;
 
-	:first-child {
-		padding-top: 0;
-	}
-
-	:last-child {
-		padding-bottom: 1px;
-	}
-
 	&::after,
 	&::before {
 		background: linear-gradient(to bottom, $wds-color-white, $wds-color-white 30%, rgba(255, 255, 255, 0));
