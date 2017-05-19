@@ -23,7 +23,8 @@
 		border-radius: 4px;
 		display: none;
 		left: 50%;
-		padding: $wds-dropdown-padding;
+		// we assume that there will be regular size .wds-list inside the dropdown content
+		padding: $wds-dropdown-padding - $wds-list-item-vertical-padding 0;
 		position: absolute;
 		top: calc(100% + #{$gap-size});
 		transform: translateX(-50%);
@@ -44,22 +45,15 @@
 		&:not(.wds-is-not-scrollable) {
 			.wds-list {
 				@include scrollable-list;
-
-				> li {
-					&:first-child {
-						padding-top: 0;
-					}
-
-					&:last-child {
-						padding-bottom: 0;
-					}
-				}
 			}
 		}
 
-		:not(.wds-list li) {
-			// FIXME that should be equal to .wds-list item vertical padding
-			padding: 11px;
+		.wds-list {
+			li {
+				margin: 0 $wds-dropdown-padding / 2;
+				padding-left: $wds-dropdown-padding / 2;
+				padding-right: $wds-dropdown-padding / 2;
+			}
 		}
 	}
 
