@@ -214,6 +214,18 @@
 		flex: 1 1 auto;
 		height: 28px;
 		transition: border-bottom-color $search-transition-duration;
+
+		// Override default dropdowns behaviour which open on hover
+		&:hover {
+			.wds-global-navigation__search-suggestions {
+				display: none;
+			}
+
+			&::after,
+			&::before {
+				display: none;
+			}
+		}
 	}
 
 	&__search-label {
