@@ -33,49 +33,29 @@
 <section>
 	<h2 id="dropdowns-default-variant">Default</h2>
 	<p>Default dropdown, centered.</p>
-	<div class="wds-dropdown">
-		<div class="wds-dropdown__toggle">
-			<span>Default dropdown</span>
-			<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-			</svg>
+	{{#component-demo}}
+		<div class="wds-dropdown">
+			<div class="wds-dropdown__toggle">
+				<span>Default dropdown</span>
+				<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+				</svg>
+			</div>
+			<div class="wds-dropdown__content">
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+					<li>List item 4</li>
+					<li>List item 5</li>
+					<li>List item 6</li>
+					<li>List item 7</li>
+					<li>List item 8</li>
+					<li>List item 9</li>
+					<li>List item 10</li>
+				</ul>
+			</div>
 		</div>
-		<div class="wds-dropdown__content">
-			<ul class="wds-list">
-				<li>List item 1</li>
-				<li>List item 2</li>
-				<li>List item 3</li>
-				<li>List item 4</li>
-				<li>List item 5</li>
-				<li>List item 6</li>
-				<li>List item 7</li>
-				<li>List item 8</li>
-				<li>List item 9</li>
-				<li>List item 10</li>
-				<li>List item 11</li>
-				<li>List item 12</li>
-				<li>List item 13</li>
-				<li>List item 14</li>
-				<li>List item 15</li>
-			</ul>
-		</div>
-	</div>
-	{{#component-demo codeOnly=true}}
-<div class="wds-dropdown">
-	<div class="wds-dropdown__toggle">
-		<span>Default dropdown aligned to left</span>
-		<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-		</svg>
-	</div>
-	<div class="wds-dropdown__content">
-		<ul class="wds-list">
-			<li>List item 1</li>
-			<li>List item 2</li>
-			<li>List item 3</li>
-		</ul>
-	</div>
-</div>
 	{{/component-demo}}
 </section>
 
@@ -86,25 +66,21 @@
 		add <code class="format-code">.wds-is-left-aligned</code> class to
 		<code>wds-dropdown__content</code> element.
 	</p>
-	<div class="wds-dropdown">
-		<div class="wds-dropdown__toggle">
-			<span>Left aligned dropdown</span>
-			<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-			</svg>
-		</div>
-		<div class="wds-dropdown__content wds-is-left-aligned">
-			<ul class="wds-list">
-				<li>List item 1</li>
-				<li>List item 2</li>
-				<li>List item 3</li>
-			</ul>
-		</div>
-	</div>
-	{{#component-demo codeOnly=true}}
+	{{#component-demo}}
 		<div class="wds-dropdown">
-			<div class="wds-dropdown__toggle">…</div>
-			<div class="wds-dropdown__content wds-is-right-aligned">…</div>
+			<div class="wds-dropdown__toggle">
+				<span>Left aligned dropdown</span>
+				<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+				</svg>
+			</div>
+			<div class="wds-dropdown__content wds-is-left-aligned">
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			</div>
 		</div>
 	{{/component-demo}}
 </section>
@@ -114,77 +90,64 @@
 	<p>
 		Dropdown aligned to the right side of the container. To align dropdown to right, you have to add <code class="format-code">.wds-is-right-aligned</code> class to <code>wds-dropdown__content</code> element.
 	</p>
-	<div class="wds-dropdown">
-		<div class="wds-dropdown__toggle">
-			<span>Right aligned dropdown</span>
-			<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-			</svg>
+	{{#component-demo}}
+		<div class="wds-dropdown">
+			<div class="wds-dropdown__toggle">
+				<span>Right aligned dropdown</span>
+				<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+				</svg>
+			</div>
+			<div class="wds-dropdown__content wds-is-right-aligned">
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			</div>
 		</div>
-		<div class="wds-dropdown__content wds-is-right-aligned">
-			<ul class="wds-list">
-				<li>List item 1</li>
-				<li>List item 2</li>
-				<li>List item 3</li>
-			</ul>
-		</div>
-	</div>
-	{{#component-demo codeOnly=true}}
-<div class="wds-dropdown">
-	<div class="wds-dropdown__toggle">…</div>
-	<div class="wds-dropdown__content wds-is-right-aligned">…</div>
-</div>
 	{{/component-demo}}
 </section>
 
 <section>
 	<h2 id="dropdowns-dark-variant">Dropdown with shadow</h2>
 	<p>
-
 		Dropdowns can drop shadow. To add light shadow to dropdown, you have to
 		add <code class="format-code">.wds-has-shadow</code> class to
 		<code>wds-dropdown</code> element and <code
 		class="format-code">.wds-has-dark-shadow</code> to add darker shadow.
 	</p>
-	{{#wds-dropdown hasShadow=true}}
-		<div class="wds-dropdown__toggle">
-			<span>Dropdown with shadow</span>
-			<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-			</svg>
-		</div>
-		<div class="wds-dropdown__content">
-			<ul class="wds-list">
-				<li>List item 1</li>
-				<li>List item 2</li>
-				<li>List item 3</li>
-			</ul>
-		</div>
-	{{/wds-dropdown}}
-	{{#wds-dropdown hasDarkShadow=true}}
-		<div class="wds-dropdown__toggle">
-			<span>Dropdown with shadow</span>
-			<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-			</svg>
-		</div>
-		<div class="wds-dropdown__content">
-			<ul class="wds-list">
-				<li>List item 1</li>
-				<li>List item 2</li>
-				<li>List item 3</li>
-			</ul>
-		</div>
-	{{/wds-dropdown}}
-	{{#component-demo codeOnly=true}}
-		<div class="wds-dropdown wds-has-shadow">
-			<div class="wds-dropdown__toggle">…</div>
-			<div class="wds-dropdown__content">…</div>
-		</div>
-		<div class="wds-dropdown wds-has-dark-shadow">
-			<div class="wds-dropdown__toggle">…</div>
-			<div class="wds-dropdown__content">…</div>
-		</div>
+	{{#component-demo}}
+		{{#wds-dropdown hasShadow=true}}
+			<div class="wds-dropdown__toggle">
+				<span>Dropdown with shadow</span>
+				<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+				</svg>
+			</div>
+			<div class="wds-dropdown__content">
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			</div>
+		{{/wds-dropdown}}
+		{{#wds-dropdown hasDarkShadow=true}}
+			<div class="wds-dropdown__toggle">
+				<span>Dropdown with shadow</span>
+				<svg class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+				</svg>
+			</div>
+			<div class="wds-dropdown__content">
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			</div>
+		{{/wds-dropdown}}
 	{{/component-demo}}
 </section>
 
