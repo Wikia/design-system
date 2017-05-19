@@ -119,7 +119,7 @@
 		display: block;
 	}
 
-	&.wds-is-active .wds-dropdown,
+	&.wds-is-active,
 	&:hover {
 		.wds-dropdown__content {
 			display: inline-block;
