@@ -143,10 +143,6 @@
 		}
 	}
 
-	>.wds-icon {
-		display: block;
-	}
-
 	.wds-list {
 		color: $wds-color-black;
 		font-weight: normal;
@@ -156,7 +152,12 @@
 	}
 
 	.wds-dropdown__toggle-chevron {
+		display: block;
 		margin: -1px 0;
+	}
+
+	.wds-dropdown__content {
+		top: calc(100% + 1px);
 	}
 
 	$social-colors: (
