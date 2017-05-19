@@ -37,7 +37,7 @@
 	}
 
 	&.wds-is-active .wds-dropdown,
-	&:hover:not(.wds-global-navigation__search-input-wrapper) .wds-dropdown {
+	&:hover .wds-dropdown {
 		&__content {
 			display: inline-block;
 		}
