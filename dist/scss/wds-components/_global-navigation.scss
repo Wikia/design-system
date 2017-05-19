@@ -58,18 +58,6 @@
 		z-index: -1;
 	}
 
-	&__dropdown-link {
-		color: $wds-color-dark-blue-gray;
-		text-decoration: none;
-		transition: color $search-transition-duration;
-
-		&:active,
-		&:hover,
-		&.wds-is-active {
-			color: $wds-color-link;
-		}
-	}
-
 	&__content-bar {
 		display: flex;
 		height: $nav-height;
@@ -226,6 +214,18 @@
 		flex: 1 1 auto;
 		height: 28px;
 		transition: border-bottom-color $search-transition-duration;
+
+		// Override default dropdowns behaviour which open on hover
+		&:hover {
+			.wds-global-navigation__search-suggestions {
+				display: none;
+			}
+
+			&::after,
+			&::before {
+				display: none;
+			}
+		}
 	}
 
 	&__search-label {

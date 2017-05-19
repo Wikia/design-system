@@ -1,13 +1,14 @@
 .wds-dropdown {
 	$content-z-index: 1;
+	$dropdown-border-width: 1px;
+	$gap-size: 3px;
+	$link-transition-duration: 0.2s;
 
 	display: inline-block;
 	position: relative;
 
 	&__toggle {
-		align-items: center;
 		cursor: pointer;
-		display: flex;
 		position: relative;
 		// dropdown content has shadow that should be hidden below the toggle
 		z-index: $content-z-index + 1;
@@ -19,31 +20,148 @@
 
 	&__content {
 		background-color: $wds-color-white;
-		box-shadow: 0 0 10px 0 rgba($wds-color-black, .2);
+		border: $dropdown-border-width solid $wds-color-faint-gray;
+		border-radius: 4px;
 		display: none;
-		left: 0;
+		left: 50%;
+		min-width: 60%;
+		// we assume that there will be regular size .wds-list inside the dropdown content
+		padding: $wds-dropdown-padding - $wds-list-item-vertical-padding 0;
 		position: absolute;
-		top: 100%;
+		top: calc(100% + #{$gap-size});
+		transform: translateX(-50%);
 		z-index: $content-z-index;
-
-		&.wds-is-dark {
-			box-shadow: 0 0 20px 0 rgba($wds-color-black, .3);
-		}
 
 		&.wds-is-right-aligned {
 			left: auto;
 			right: 0;
+			transform: none;
+		}
+
+		&.wds-is-left-aligned {
+			left: 0;
+			transform: none;
+		}
+
+		// The default is to show scroll on long dropdowns
+		&:not(.wds-is-not-scrollable) {
+			.wds-list {
+				@include scrollable-list(270px);
+			}
+		}
+
+		.wds-list {
+			padding: 0;
+
+			li {
+				margin: 0 $wds-dropdown-padding / 2;
+				padding-left: $wds-dropdown-padding / 2;
+				padding-right: $wds-dropdown-padding / 2;
+				white-space: nowrap;
+			}
+
+			&.wds-is-linked {
+				li {
+					padding: 0;
+
+					> a {
+						color: $wds-color-dark-blue-gray;
+						padding-left: $wds-dropdown-padding / 2;
+						padding-right: $wds-dropdown-padding / 2;
+						text-decoration: none;
+						transition: color $link-transition-duration;
+					}
+
+					&:hover > a {
+						background-color: fade_out($wds-color-link, 0.9);
+						color: $wds-color-link;
+					}
+				}
+			}
 		}
 	}
 
+	&::after {
+		border: 8px solid transparent;
+		border-bottom-color: $wds-color-white;
+		bottom: -$gap-size - $dropdown-border-width;
+		content: '';
+		display: none;
+		height: 0;
+		left: 50%;
+		margin-left: -8px;
+		pointer-events: none;
+		position: absolute;
+		width: 0;
+		z-index: $content-z-index + 1;
+	}
+
+	&::before {
+		border: 9px solid transparent;
+		border-bottom-color: $wds-color-faint-gray;
+		bottom: -$gap-size - $dropdown-border-width;
+		content: '';
+		display: none;
+		height: 0;
+		left: 50%;
+		margin-left: -9px;
+		pointer-events: none;
+		position: absolute;
+		width: 0;
+		z-index: $content-z-index + 1;
+	}
+
+	&:hover::after {
+		display: block;
+	}
+
+	&:hover::before {
+		display: block;
+	}
+
 	&.wds-is-active .wds-dropdown,
-	&:hover .wds-dropdown {
-		&__content {
+	&:hover {
+		.wds-dropdown__content {
 			display: inline-block;
+
+			// allows to have on-hover dropdowns with a gap between toggle and content
+			&::before {
+				content: '';
+				display: block;
+				left: 0;
+				right: 0;
+				top: -$gap-size - $dropdown-border-width;
+				height: $gap-size + $dropdown-border-width;
+				position: absolute;
+			}
 		}
 
-		&__toggle-chevron {
+		.wds-dropdown__toggle-chevron {
 			transform: rotate(180deg);
+		}
+
+		&.wds-has-shadow, &.wds-has-dark-shadow {
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&.wds-has-shadow {
+		.wds-dropdown__content {
+			box-shadow: 0 0 10px 0 rgba($wds-color-black, .2);
+		}
+	}
+
+	&.wds-has-dark-shadow {
+		.wds-dropdown__content {
+			box-shadow: 0 0 20px 0 rgba($wds-color-black, .3);
+		}
+	}
+
+	&.wds-has-shadow, &.wds-has-dark-shadow {
+		.wds-dropdown__content {
+			border: 0;
 		}
 	}
 }
