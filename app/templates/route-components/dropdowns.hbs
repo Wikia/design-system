@@ -25,7 +25,7 @@
 	<p>
 		On desktop, dropdown content is showing whenever user hovers over dropdown toggle. For touch
 		devices when user taps on a dropdown toggle you need to add
-		<code class="format-code">wds-is-active</code> class to the parent <code class="format-code">.wds-dropdown element</code>.
+		<code class="format-code">.wds-is-active</code> class to the parent <code class="format-code">.wds-dropdown element</code>.
 		There should be only one dropdown open at any time, so you should also remove this class from all the other dropdowns.
 	</p>
 </section>
@@ -57,11 +57,41 @@
 </section>
 
 <section>
+	<h2 id="dropdowns-not-scrollable-variant">Not scrollable variant</h2>
+	<p>
+		There are special cases where we don't want a long dropdown to be scrollable, e.g. Wiki Local Navigation.
+		To disable the scroll, add <code class="format-code">.wds-is-not-scrollable</code>
+		to <code class="format-code">.wds-dropdown__content</code> element.
+	</p>
+	{{#component-demo}}
+		{{#wds-dropdown as |dropdown|}}
+			{{#dropdown.toggle}}
+				<span>Default dropdown</span>
+			{{/dropdown.toggle}}
+			{{#dropdown.content isNotScrollable=true}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+					<li>List item 4</li>
+					<li>List item 5</li>
+					<li>List item 6</li>
+					<li>List item 7</li>
+					<li>List item 8</li>
+					<li>List item 9</li>
+					<li>List item 10</li>
+				</ul>
+			{{/dropdown.content}}
+		{{/wds-dropdown}}
+	{{/component-demo}}
+</section>
+
+<section>
 	<h2 id="dropdowns-right-aligned-variant">Left aligned variant</h2>
 	<p>
 		Dropdown aligned to the left side of the container. To align dropdown to left, you have to
 		add <code class="format-code">.wds-is-left-aligned</code> class to
-		<code>wds-dropdown__content</code> element.
+		<code class="format-code">.wds-dropdown__content</code> element.
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
@@ -82,7 +112,9 @@
 <section>
 	<h2 id="dropdowns-right-aligned-variant">Right aligned variant</h2>
 	<p>
-		Dropdown aligned to the right side of the container. To align dropdown to right, you have to add <code class="format-code">.wds-is-right-aligned</code> class to <code>wds-dropdown__content</code> element.
+		Dropdown aligned to the right side of the container. To align dropdown to right, you have to add
+		<code class="format-code">.wds-is-right-aligned</code> class to
+		<code class="format-code">.wds-dropdown__content</code> element.
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
@@ -105,8 +137,8 @@
 	<p>
 		Dropdowns can drop shadow. To add light shadow to dropdown, you have to
 		add <code class="format-code">.wds-has-shadow</code> class to
-		<code>wds-dropdown</code> element and <code
-		class="format-code">.wds-has-dark-shadow</code> to add darker shadow.
+		<code class="format-code">.wds-dropdown</code> element and
+		<code class="format-code">.wds-has-dark-shadow</code> to add darker shadow.
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown hasShadow=true as |dropdown|}}
