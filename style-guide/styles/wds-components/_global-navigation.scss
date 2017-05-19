@@ -215,14 +215,19 @@
 		height: 28px;
 		transition: border-bottom-color $search-transition-duration;
 
-		// Override default dropdowns behaviour which open on hover
-		.wds-global-navigation__search-suggestions {
-			display: none;
+		// Strenghten selector to hide dropdown's arrow
+		&.wds-dropdown {
+			&::after,
+			&::before {
+				display: none;
+			}
 		}
 
-		&::after,
-		&::before {
-			display: none;
+		// Override default dropdowns behaviour which open on hover
+		&:hover:not(.wds-is-active) {
+			.wds-dropdown__content {
+				display: none;
+			}
 		}
 	}
 
@@ -323,6 +328,7 @@
 		left: 0;
 		right: 0;
 		top: calc(100% + 1px);
+		transform: none;
 	}
 
 	&__account-menu-caption {
