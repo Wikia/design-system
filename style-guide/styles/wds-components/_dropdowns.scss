@@ -11,19 +11,6 @@
 		position: relative;
 		// dropdown content has shadow that should be hidden below the toggle
 		z-index: $content-z-index + 1;
-
-		// allows to have on-hover dropdowns with a gap between toggle and content
-		&::after {
-			// FIXME: `1px` is the bottom border of toggle element
-			// if border is larger than 1px, it won't work
-			bottom: -$gap-size - 1px;
-			content: '';
-			display: block;
-			height: $gap-size;
-			left: 0;
-			position: absolute;
-			right: 0;
-		}
 	}
 
 	&__toggle-chevron {
@@ -118,6 +105,17 @@
 	&:hover:not(.wds-global-navigation__search-input-wrapper) {
 		.wds-dropdown__content {
 			display: inline-block;
+
+			// allows to have on-hover dropdowns with a gap between toggle and content
+			&::before {
+				content: '';
+				display: block;
+				left: 0;
+				right: 0;
+				top: -$gap-size - $dropdown-border-width;
+				height: $gap-size + $dropdown-border-width;
+				position: absolute;
+			}
 		}
 
 		.wds-dropdown__toggle-chevron {
