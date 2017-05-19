@@ -1,7 +1,8 @@
 .wds-dropdown {
 	$content-z-index: 1;
-	$gap-size: 3px;
 	$dropdown-border-width: 1px;
+	$gap-size: 3px;
+	$link-transition-duration: 0.2s;
 
 	display: inline-block;
 	position: relative;
@@ -50,11 +51,32 @@
 		}
 
 		.wds-list {
+			padding: 0;
+
 			li {
 				margin: 0 $wds-dropdown-padding / 2;
 				padding-left: $wds-dropdown-padding / 2;
 				padding-right: $wds-dropdown-padding / 2;
 				white-space: nowrap;
+			}
+
+			&.wds-is-linked {
+				li {
+					padding: 0;
+
+					> a {
+						color: $wds-color-dark-blue-gray;
+						padding-left: $wds-dropdown-padding / 2;
+						padding-right: $wds-dropdown-padding / 2;
+						text-decoration: none;
+						transition: color $link-transition-duration;
+					}
+
+					&:hover > a {
+						background-color: fade_out($wds-color-link, 0.9);
+						color: $wds-color-link;
+					}
+				}
 			}
 		}
 	}

@@ -133,6 +133,28 @@
 </section>
 
 <section>
+	<h2 id="dropdowns-linked-list-variant">Linked list variant</h2>
+	<p>
+		Dropdowns that have <code class="format-code">.wds-list.wds-is-linked</code> in the content.
+		Links have color and hover state different than when outside of a dropdown.
+	</p>
+	{{#component-demo}}
+		{{#wds-dropdown as |dropdown|}}
+			{{#dropdown.toggle}}
+				<span>Dropdown with linked list</span>
+			{{/dropdown.toggle}}
+			{{#dropdown.content isNotScrollable=true}}
+				<ul class="wds-list wds-is-linked">
+					<li><a href="http://fandom.wikia.com">List item 1</a></li>
+					<li><a href="http://fandom.wikia.com">List item 2</a></li>
+					<li><a href="http://fandom.wikia.com">List item 3</a></li>
+				</ul>
+			{{/dropdown.content}}
+		{{/wds-dropdown}}
+	{{/component-demo}}
+</section>
+
+<section>
 	<h2 id="dropdowns-dark-variant">Dropdown with shadow</h2>
 	<p>
 		Dropdowns can drop shadow. To add light shadow to dropdown, you have to

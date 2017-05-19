@@ -58,18 +58,6 @@
 		z-index: -1;
 	}
 
-	&__dropdown-link {
-		color: $wds-color-dark-blue-gray;
-		text-decoration: none;
-		transition: color $search-transition-duration;
-
-		&:active,
-		&:hover,
-		&.wds-is-active {
-			color: $wds-color-link;
-		}
-	}
-
 	&__content-bar {
 		display: flex;
 		height: $nav-height;
