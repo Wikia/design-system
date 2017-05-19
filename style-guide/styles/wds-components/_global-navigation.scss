@@ -216,15 +216,13 @@
 		transition: border-bottom-color $search-transition-duration;
 
 		// Override default dropdowns behaviour which open on hover
-		&:hover {
-			.wds-global-navigation__search-suggestions {
-				display: none;
-			}
+		.wds-global-navigation__search-suggestions {
+			display: none;
+		}
 
-			&::after,
-			&::before {
-				display: none;
-			}
+		&::after,
+		&::before {
+			display: none;
 		}
 	}
 
@@ -322,6 +320,7 @@
 	}
 
 	&__search-suggestions {
+		left: 0;
 		right: 0;
 		top: calc(100% + 1px);
 	}
