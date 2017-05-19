@@ -36,11 +36,11 @@
 		border-radius: 4px;
 		display: none;
 		left: 50%;
-		// FIXME 9px should be changed to $wds-dropdown-padding minus .wds-list item vertical padding size
-		padding: 9px $wds-dropdown-padding;
+		padding: $wds-dropdown-padding;
 		position: absolute;
 		top: calc(100% + #{$gap-size});
 		transform: translateX(-50%);
+		z-index: $content-z-index;
 
 		&.wds-is-right-aligned {
 			left: auto;
@@ -53,8 +53,21 @@
 			transform: none;
 		}
 
-		.wds-list {
-			@include scrollable-list;
+		// The default is to show scroll on long dropdowns
+		&:not(.wds-is-not-scrollable) {
+			.wds-list {
+				@include scrollable-list;
+
+				> li {
+					&:first-child {
+						padding-top: 0;
+					}
+
+					&:last-child {
+						padding-bottom: 0;
+					}
+				}
+			}
 		}
 
 		:not(.wds-list li) {
@@ -64,9 +77,8 @@
 	}
 
 	&::after {
-		border: solid transparent;
-		border-bottom-color: #fff;
-		border-width: 8px;
+		border: 8px solid transparent;
+		border-bottom-color: $wds-color-white;
 		bottom: -$gap-size - $dropdown-border-width;
 		content: '';
 		display: none;
@@ -76,13 +88,12 @@
 		pointer-events: none;
 		position: absolute;
 		width: 0;
-		z-index: 2;
+		z-index: $content-z-index + 1;
 	}
 
 	&::before {
-		border: solid transparent;
-		border-bottom-color: #ccc;
-		border-width: 9px;
+		border: 9px solid transparent;
+		border-bottom-color: $wds-color-faint-gray;
 		bottom: -$gap-size - $dropdown-border-width;
 		content: '';
 		display: none;
@@ -92,7 +103,7 @@
 		pointer-events: none;
 		position: absolute;
 		width: 0;
-		z-index: 2;
+		z-index: $content-z-index + 1;
 	}
 
 	&:hover::after {
