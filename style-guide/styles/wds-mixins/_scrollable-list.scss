@@ -1,5 +1,5 @@
 // scrollable list with shadow
-@mixin scrollable-list {
+@mixin scrollable-list($max-height) {
 	background: {
 		image: radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.12), transparent),
 		radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.12), transparent);
@@ -7,7 +7,7 @@
 		repeat: no-repeat;
 		size: 100% 9px;
 	}
-	max-height: 300px;
+	max-height: $max-height;
 	overflow-y: auto;
 	position: relative;
 	z-index: 1;
