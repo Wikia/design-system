@@ -3,7 +3,6 @@ $dropdown-border-width: 1px;
 
 .wds-dropdown {
 	$content-z-index: 1;
-	$gap-size: 3px;
 	$link-transition-duration: 0.2s;
 
 	display: inline-block;
@@ -30,7 +29,7 @@ $dropdown-border-width: 1px;
 		// we assume that there will be regular size .wds-list inside the dropdown content
 		padding: $wds-dropdown-padding - $wds-list-item-vertical-padding 0;
 		position: absolute;
-		top: calc(100% + #{$gap-size});
+		top: 100%;
 		transform: translateX(-50%);
 		z-index: $content-z-index;
 
@@ -96,7 +95,7 @@ $dropdown-border-width: 1px;
 	&::after {
 		border: 8px solid transparent;
 		border-bottom-color: $wds-color-white;
-		bottom: -$gap-size - $dropdown-border-width;
+		bottom: -$dropdown-border-width;
 		content: '';
 		display: none;
 		height: 0;
@@ -111,7 +110,7 @@ $dropdown-border-width: 1px;
 	&::before {
 		border: 9px solid transparent;
 		border-bottom-color: $wds-color-faint-gray;
-		bottom: -$gap-size - $dropdown-border-width;
+		bottom: -$dropdown-border-width;
 		content: '';
 		display: none;
 		height: 0;
@@ -135,17 +134,6 @@ $dropdown-border-width: 1px;
 	&:hover {
 		.wds-dropdown__content {
 			display: inline-block;
-
-			// allows to have on-hover dropdowns with a gap between toggle and content
-			&::before {
-				content: '';
-				display: block;
-				left: 0;
-				right: 0;
-				top: -$gap-size - $dropdown-border-width;
-				height: $gap-size + $dropdown-border-width;
-				position: absolute;
-			}
 		}
 
 		.wds-dropdown__toggle-chevron {
@@ -193,16 +181,16 @@ $dropdown-border-width: 1px;
 	.wds-dropdown-level-2__content {
 		background-color: $wds-color-white;
 		border: $dropdown-border-width solid $wds-color-faint-gray;
-		border-bottom-right-radius: $border-radius;
-		border-top-right-radius: $border-radius;
+		border-radius: $border-radius;
 		display: none;
-		left: calc(100% - 2px);
+		left: 100%;
 		padding: $wds-dropdown-padding - $wds-list-item-vertical-padding 0;
 		position: absolute;
 		top: -($wds-dropdown-padding - $wds-list-item-vertical-padding + $dropdown-border-width);
 	}
 
 	.wds-menu-chevron {
+		display: none;
 		fill: $wds-color-black;
 	}
 
