@@ -83,11 +83,6 @@ $dropdown-border-width: 1px;
 						@include wds-dropdown-linked-list-item-hover;
 					}
 				}
-
-				&.wds-has-small-items > li > a {
-					padding-left: $wds-dropdown-padding / 2;
-					padding-right: $wds-dropdown-padding / 2;
-				}
 			}
 		}
 	}
@@ -187,6 +182,12 @@ $dropdown-border-width: 1px;
 		padding: $wds-dropdown-padding - $wds-list-item-vertical-padding 0;
 		position: absolute;
 		top: -($wds-dropdown-padding - $wds-list-item-vertical-padding + $dropdown-border-width);
+
+		.wds-list.wds-is-linked > li > a {
+			font-size: $wds-typescale-size-minus-2;
+			// font-size is 2px smaller then regular list so we need to add 1px padding to have elements in the same size
+			padding: ($wds-list-item-vertical-padding + 1px) ($wds-dropdown-padding / 2);
+		}
 	}
 
 	.wds-menu-chevron {
