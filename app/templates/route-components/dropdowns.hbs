@@ -194,14 +194,14 @@
 	<h2 id="dropdowns-2-levels">2-levels dropdown</h2>
 	<p>
 		It's possible to create 2-levels menu using dropdowns. To add second level menu add <code
-		class="format-code">.wds-dropdown-l2</code>	class to <code class="format-code">.wds-list li</code>
-		element	and add <code class="format-code">.wds-dropdown-l2__content</code> element inside
+		class="format-code">.wds-dropdown-level-2</code> class to <code class="format-code">.wds-list li</code>
+		element	and add <code class="format-code">.wds-dropdown-level-2__content</code> element inside
 		the list element.
 
 		2nd level menu is aligned to the top of 1st level dropdown by default, but it doesn't
-		work for shorter list so we need to add class <code class="format-code">
-		.wds-is-sticked-to-parent</code> to elements that contains shorter level 2 menu. Look at the
-		`Broken 2-level` item to see what happens when you won't add that class.
+		work for shorter list so we need to add class <code class="format-code">.wds-is-sticked-to-parent</code>
+		to elements that contains shorter level 2 menu. Look at the
+		"Broken 2-level" item to see what happens when you won't add that class.
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
@@ -210,9 +210,9 @@
 			{{/dropdown.toggle}}
 			{{#dropdown.content isNotScrollable=true}}
 				<ul class="wds-list wds-is-linked wds-has-bolded-items">
-					<li class="wds-dropdown-l2">
-						<a href="#">List item 1</a>
-						<div class="wds-dropdown-l2__content">
+					<li class="wds-dropdown-level-2">
+						<a href="#">List item 1 {{svg 'wds-icons-menu-control' class='wds-icon wds-icon-tiny wds-menu-chevron'}}</a>
+						<div class="wds-dropdown-level-2__content">
 							<ul class="wds-list wds-is-linked wds-has-small-items">
 								<li><a href="#">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
@@ -228,9 +228,9 @@
 					<li>
 						<a href="#">List item 2</a>
 					</li>
-					<li class="wds-dropdown-l2">
-						<a href="#">List item 3</a>
-						<div class="wds-dropdown-l2__content">
+					<li class="wds-dropdown-level-2">
+						<a href="#">List item 3 {{svg 'wds-icons-menu-control' class='wds-icon wds-icon-tiny wds-menu-chevron'}}</a>
+						<div class="wds-dropdown-level-2__content">
 							<ul class="wds-list wds-is-linked">
 								<li><a href="#">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
@@ -248,18 +248,18 @@
 							</ul>
 						</div>
 					</li>
-					<li class="wds-dropdown-l2 wds-is-sticked-to-parent">
-						<a href="#">List item 4</a>
-						<div class="wds-dropdown-l2__content">
+					<li class="wds-dropdown-level-2 wds-is-sticked-to-parent">
+						<a href="#">List item 4 {{svg 'wds-icons-menu-control' class='wds-icon wds-icon-tiny wds-menu-chevron'}}</a>
+						<div class="wds-dropdown-level-2__content">
 							<ul class="wds-list wds-is-linked">
 								<li><a href="#">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 							</ul>
 						</div>
 					</li>
-					<li class="wds-dropdown-l2">
-						<a href="#">Broken 2-level</a>
-						<div class="wds-dropdown-l2__content">
+					<li class="wds-dropdown-level-2">
+						<a href="#">Broken 2-level {{svg 'wds-icons-menu-control' class='wds-icon wds-icon-tiny wds-menu-chevron'}}</a>
+						<div class="wds-dropdown-level-2__content">
 							<ul class="wds-list wds-is-linked">
 								<li><a href="#">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
