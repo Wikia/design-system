@@ -81,8 +81,7 @@ $dropdown-border-width: 1px;
 					}
 
 					&:hover > a {
-						background-color: fade_out($wds-color-link, 0.9);
-						color: $wds-color-link;
+						@include wds-dropdown-linked-list-item-hover;
 					}
 				}
 
