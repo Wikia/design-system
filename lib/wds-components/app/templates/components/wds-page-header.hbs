@@ -1,8 +1,11 @@
-<div class="wds-page-header__wordmark">
-	<a accesskey="z" href="{{model.mainPageHref}}">
-		<img src="{{model.wordmarkImageHref}}" alt="{{model.sitename}}" width="250" height="65">
-	</a>
-</div>
+{{#if model.wordmarkHref}}
+	<div class="wds-page-header__wordmark">
+		<a accesskey="z" href="{{model.mainPageHref}}">
+			<img src="{{model.wordmarkImageHref}}" alt="{{model.sitename}}" width="250" height="65">
+		</a>
+	</div>
+{{/if}}
+
 <div class="wds-page-header__wordmark-text">
 	<a href="{{model.mainPageHref}}">{{model.sitename}}</a>
 </div>
@@ -12,7 +15,7 @@
 </div>
 <div class="wds-page-header__wiki-buttons">
 	{{#wds-button class='wds-is-squished wds-has-icon wds-is-secondary'}}
-		{{wds-icon name='fandom-heart-small' class='wds-icon-tiny'}}
+		{{wds-icon name='add-new-page-small' class='wds-icon-tiny'}}
 		Add new Page
 	{{/wds-button}}
 </div>

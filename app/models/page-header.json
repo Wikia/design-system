@@ -6,5 +6,13 @@
     "sitename": "Wookieepedia",
     "counterValue": "7,834",
     "counterLabel": "Pages"
+  },
+
+  "anon-no-wordmark": {
+    "user": "anon",
+    "mainPageHref": "/wiki/Main_Page",
+    "sitename": "Wookieepedia",
+    "counterValue": "7,834",
+    "counterLabel": "Pages"
   }
 }

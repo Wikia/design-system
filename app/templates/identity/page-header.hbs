@@ -3,6 +3,7 @@
 {{else}}
 	<h1>Page Header</h1>
 
+	anon with wordmark
 	{{#component-demo
 			codeOnly=true
 			componentName='wds-page-header'
@@ -11,4 +12,15 @@
 	}}
 		{{wds-page-header model=model.anon}}
 	{{/component-demo}}
+
+	anon without wordmark
+	{{#component-demo
+			codeOnly=true
+			componentName='wds-page-header'
+			standalone=true
+			variantUrl='/identity/page-header/standalone/anon-no-wordmark'
+	}}
+		{{wds-page-header model=model.anon}}
+	{{/component-demo}}
+
 {{/if}}
