@@ -2,4 +2,13 @@
 	{{outlet}}
 {{else}}
 	<h1>Page Header</h1>
+
+	{{#component-demo
+			codeOnly=true
+			componentName='wds-page-header'
+			standalone=true
+			variantUrl='/identity/page-header/standalone/anon'
+	}}
+		{{wds-page-header model=model.anon}}
+	{{/component-demo}}
 {{/if}}
