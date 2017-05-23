@@ -1,0 +1,15 @@
+.wds-page-header {
+	background-color: #006cb0; //todo: remove it, it should be added in client to apply theming
+	color: $wds-color-white;	//todo: remove it, it should be added in client to apply theming
+
+	&__wordmark-text {
+		a {
+			color: $wds-color-white;	//todo: remove it, it should be added in client to apply theming
+		}
+	}
+
+	.wds-is-secondary {
+		border-color: $wds-color-white; //todo: remove it, it should be added in client to apply theming
+		color: $wds-color-white; //todo: remove it, it should be added in client to apply theming
+	}
+}

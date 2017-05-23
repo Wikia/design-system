@@ -1,0 +1,76 @@
+.wds-page-header {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: flex;
+	position: relative;
+
+	&__wordmark {
+		height: 65px;
+		margin: 20px 18px 20px 20px;
+		width: 250px;
+
+		@media #{$wds-breakpoint-l-down} {
+			height: 45px;
+			margin: 20px 18px 50px 20px;
+			width: 175px;
+
+			img {
+				height: auto;
+				width: 175px;
+			}
+		}
+	}
+
+	&__wordmark-text {
+		flex: 1;
+		font-size: $wds-typescale-size-plus-3;
+		font-weight: 600;
+		line-height: 1;
+		margin-bottom: auto;
+		margin-top: 24px;
+
+		a {
+			text-decoration: none;
+		}
+
+		@media #{$wds-breakpoint-l-down} {
+			font-size: $wds-typescale-size-plus-2;
+			margin-top: 20px;
+		}
+	}
+
+	&__counter{
+		font-weight: 600;
+		text-align: right;
+		margin: 20px 0 20px 20px;
+	}
+
+	&__counter-value {
+		display: block;
+		font-size: $wds-typescale-size-plus-2;
+		line-height: 1;
+
+		@media #{$wds-breakpoint-l-down} {
+			font-size: $wds-typescale-size-plus-1;
+		}
+	}
+
+	&__counter-label {
+		display: block;
+		font-size: $wds-typescale-size-minus-2;
+		line-height: 1;
+		text-transform: uppercase;
+
+		@media #{$wds-breakpoint-l-down} {
+			font-size: $wds-typescale-size-minus-3;
+		}
+	}
+
+	&__wiki-buttons {
+		margin: 20px 20px auto 15px;
+
+		.wds-is-secondary {
+			text-transform: uppercase;
+		}
+	}
+}

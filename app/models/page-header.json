@@ -1,5 +1,10 @@
 {
   "anon": {
-    "something": "aaa"
+    "user": "anon",
+    "mainPageHref": "/wiki/Main_Page",
+    "wordmarkImageHref": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
+    "sitename": "Wookieepedia",
+    "counterValue": "7,834",
+    "counterLabel": "Pages"
   }
 }

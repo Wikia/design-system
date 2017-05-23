@@ -1,1 +1,18 @@
-<span>just testing</span>
+<div class="wds-page-header__wordmark">
+	<a accesskey="z" href="{{model.mainPageHref}}">
+		<img src="{{model.wordmarkImageHref}}" alt="{{model.sitename}}" width="250" height="65">
+	</a>
+</div>
+<div class="wds-page-header__wordmark-text">
+	<a href="{{model.mainPageHref}}">{{model.sitename}}</a>
+</div>
+<div class="wds-page-header__counter">
+	<span class="wds-page-header__counter-value">{{model.counterValue}}</span>
+	<span class="wds-page-header__counter-label">{{model.counterLabel}}</span>
+</div>
+<div class="wds-page-header__wiki-buttons">
+	{{#wds-button class='wds-is-squished wds-has-icon wds-is-secondary'}}
+		{{wds-icon name='fandom-heart-small' class='wds-icon-tiny'}}
+		Add new Page
+	{{/wds-button}}
+</div>
