@@ -31,11 +31,28 @@
 </section>
 
 <section>
+	<h2 id="dropdowns-arrow-position">Arrow vertical position</h2>
+	<p>
+		Design System provides styles which ensure dropdown arrow is positioned as expected vertically
+		when you use the following elements as the dropdown toggle:
+	</p>
+	<ul>
+		<li><code class="format-code">.wds-button</code></li>
+		<li><code class="format-code">.wds-tabs__tab</code></li>
+	</ul>
+	<p>
+		If you want to use dropdown with other element as the toggle, you need to add custom
+		<code class="format-code">padding-bottom</code> to it, to push down the arrow.
+		In the examples below, we use text with chevron as toggle and add this padding locally.
+	</p>
+</section>
+
+<section>
 	<h2 id="dropdowns-default-variant">Default</h2>
 	<p>Default dropdown, centered.</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle}}
+			{{#dropdown.toggle class='push-dropdown-down'}}
 				<span>Default dropdown</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
@@ -65,7 +82,7 @@
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle}}
+			{{#dropdown.toggle class='push-dropdown-down'}}
 				<span>Not scrollable dropdown</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content isNotScrollable=true}}
@@ -95,7 +112,7 @@
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle}}
+			{{#dropdown.toggle class='push-dropdown-down'}}
 				<span>Left aligned dropdown</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content dropdownLeftAligned=true}}
@@ -118,7 +135,7 @@
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle}}
+			{{#dropdown.toggle class='push-dropdown-down'}}
 				<span>Right aligned dropdown</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content dropdownRightAligned=true}}
@@ -140,7 +157,7 @@
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle}}
+			{{#dropdown.toggle class='push-dropdown-down'}}
 				<span>Dropdown with linked list</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content isNotScrollable=true}}
@@ -164,7 +181,7 @@
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown hasShadow=true as |dropdown|}}
-			{{#dropdown.toggle}}
+			{{#dropdown.toggle class='push-dropdown-down'}}
 				<span>Dropdown with shadow</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
@@ -176,7 +193,7 @@
 			{{/dropdown.content}}
 		{{/wds-dropdown}}
 		{{#wds-dropdown hasDarkShadow=true as |dropdown|}}
-			{{#dropdown.toggle}}
+			{{#dropdown.toggle class='push-dropdown-down'}}
 				<span>Dropdown with shadow</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
@@ -205,7 +222,7 @@
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle}}
+			{{#dropdown.toggle class='push-dropdown-down'}}
 				<span>2-levels dropdown</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content isNotScrollable=true}}
@@ -275,7 +292,7 @@
 <section>
 	<h2 id="dropdowns-demo">Demo for touch devices</h2>
 	{{#wds-dropdown as |dropdown|}}
-		{{#dropdown.toggle}}
+		{{#dropdown.toggle class='push-dropdown-down'}}
 			<span>Click me!</span>
 		{{/dropdown.toggle}}
 		{{#dropdown.content}}
