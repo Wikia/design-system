@@ -199,7 +199,8 @@ $dropdown-border-width: 1px;
 		}
 	}
 
-	&:hover {
+	&:hover,
+	&.wds-is-active {
 		.wds-dropdown-level-2__content {
 			display: block;
 		}
