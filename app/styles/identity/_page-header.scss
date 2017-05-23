@@ -1,15 +1,19 @@
 .wds-page-header {
-	background-color: #006cb0; //todo: remove it, it should be added in client to apply theming
-	color: $wds-color-white;	//todo: remove it, it should be added in client to apply theming
+	background-color: #006cb0;
+	color: $wds-color-white;
+
+	&::before {
+		background: linear-gradient(to right,rgba(0,108,176,0.5),rgba(0,108,176,0.5)),linear-gradient(to left,rgba(0,108,176,0) 200px,#006cb0 430px);
+	}
 
 	&__wordmark-text {
 		a {
-			color: $wds-color-white;	//todo: remove it, it should be added in client to apply theming
+			color: $wds-color-white;
 		}
 	}
 
 	.wds-is-secondary {
-		border-color: $wds-color-white; //todo: remove it, it should be added in client to apply theming
-		color: $wds-color-white; //todo: remove it, it should be added in client to apply theming
+		border-color: $wds-color-white;
+		color: $wds-color-white;
 	}
 }

@@ -5,7 +5,8 @@
     "wordmarkImageHref": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
     "sitename": "Wookieepedia",
     "counterValue": "7,834",
-    "counterLabel": "Pages"
+    "counterLabel": "Pages",
+    "backgroundImageHref": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
   },
 
   "anon-no-wordmark": {
@@ -13,6 +14,7 @@
     "mainPageHref": "/wiki/Main_Page",
     "sitename": "Wookieepedia",
     "counterValue": "7,834",
-    "counterLabel": "Pages"
+    "counterLabel": "Pages",
+    "backgroundImageHref": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
   }
 }
