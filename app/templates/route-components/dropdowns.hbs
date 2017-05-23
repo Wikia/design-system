@@ -223,19 +223,17 @@
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
 			{{#dropdown.toggle class='push-dropdown-down'}}
-				<span>2-levels dropdown</span>
+				<a href="0">2-levels dropdown</a>
 			{{/dropdown.toggle}}
 			{{#dropdown.content isNotScrollable=true}}
 				<ul class="wds-list wds-is-linked wds-has-bolded-items">
-					<li class="wds-dropdown-level-2">
-						<a href="#">
+					{{#wds-dropdown isLevel2=true tagName='li' as |dropdown|}}
+						{{#dropdown.toggle tagName='a' href='1'}}
 							List item 1
-							{{svg 'wds-icons-menu-control-tiny' class='wds-icon wds-icon-tiny
-							wds-dropdown-chevron'}}
-						</a>
+						{{/dropdown.toggle}}
 						<div class="wds-dropdown-level-2__content">
 							<ul class="wds-list wds-is-linked">
-								<li><a href="#">List item 1</a></li>
+								<li><a href="2">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 								<li><a href="#">List item 3</a></li>
 								<li><a href="#">List item 4</a></li>
@@ -245,19 +243,17 @@
 								<li><a href="#">List item 8</a></li>
 							</ul>
 						</div>
-					</li>
+					{{/wds-dropdown}}
 					<li>
 						<a href="#">List item 2</a>
 					</li>
-					<li class="wds-dropdown-level-2">
-						<a href="#">
+					{{#wds-dropdown isLevel2=true tagName='li' as |dropdown|}}
+						{{#dropdown.toggle tagName='a' href='1'}}
 							List item 3
-							{{svg 'wds-icons-menu-control-tiny' class='wds-icon wds-icon-tiny
-							wds-dropdown-chevron'}}
-						</a>
-						<div class="wds-dropdown-level-2__content">
+						{{/dropdown.toggle}}
+						{{#dropdown.content}}
 							<ul class="wds-list wds-is-linked">
-								<li><a href="#">List item 1</a></li>
+								<li><a href="#2">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 								<li><a href="#">List item 3</a></li>
 								<li><a href="#">List item 4</a></li>
@@ -271,8 +267,11 @@
 								<li><a href="#">List item 12</a></li>
 								<li><a href="#">List item 13</a></li>
 							</ul>
+						{{/dropdown.content}}
+						<div class="wds-dropdown-level-2__content">
+
 						</div>
-					</li>
+					{{/wds-dropdown}}
 					<li class="wds-dropdown-level-2 wds-is-sticked-to-parent">
 						<a href="#">
 							List item 4
