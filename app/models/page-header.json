@@ -1,20 +1,116 @@
 {
   "anon": {
     "user": "anon",
-    "mainPageHref": "/wiki/Main_Page",
-    "wordmarkImageHref": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
-    "sitename": "Wookieepedia",
-    "counterValue": "7,834",
-    "counterLabel": "Pages",
-    "backgroundImageHref": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
+    "wordmark": {
+      "href": "/wiki/Main_Page",
+      "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
+      "sitename": "Wookiepedia"
+    },
+    "counter": {
+      "value": "7,834",
+      "label": "Pages"
+    },
+    "wiki-buttons": [
+      {
+        "href": "/wiki/Special:CreatePage",
+        "label": "Add new page",
+        "icon": "add-new-page-small"
+      }
+    ],
+    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
+  },
+
+  "anon-no-background": {
+    "user": "anon",
+    "wordmark": {
+      "href": "/wiki/Main_Page",
+      "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
+      "sitename": "Wookiepedia"
+    },
+    "counter": {
+      "value": "7,834",
+      "label": "Pages"
+    },
+    "wiki-buttons": [
+      {
+        "href": "/wiki/Special:CreatePage",
+        "label": "Add new page",
+        "icon": "add-new-page-small"
+      }
+    ],
   },
 
   "anon-no-wordmark": {
-    "user": "anon",
-    "mainPageHref": "/wiki/Main_Page",
-    "sitename": "Wookieepedia",
-    "counterValue": "7,834",
-    "counterLabel": "Pages",
-    "backgroundImageHref": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
+    "wordmark": {
+      "href": "/wiki/Main_Page",
+      "sitename": "Wookiepedia"
+    },
+    "counter": {
+      "value": "7,834",
+      "label": "Pages"
+    },
+    "wiki-buttons": [
+      {
+        "href": "/wiki/Special:CreatePage",
+        "label": "Add new page",
+        "icon": "add-new-page-small"
+      }
+    ],
+    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
+  },
+
+  "logged-in": {
+    "wordmark": {
+      "href": "/wiki/Main_Page",
+      "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
+      "sitename": "Wookiepedia"
+    },
+    "counter": {
+      "value": "7,834",
+      "label": "Pages"
+    },
+    "wiki-buttons": [
+      {
+        "href": "/wiki/Special:CreatePage",
+        "label": "Add",
+        "icon": "add-new-page-small"
+      },
+      {
+        "href": "/wiki/Special:WikiActivity",
+        "label": "",
+        "icon": "activity-small"
+      }
+    ],
+    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
+  },
+
+  "admin": {
+    "wordmark": {
+      "href": "/wiki/Main_Page",
+      "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
+      "sitename": "Wookiepedia"
+    },
+    "counter": {
+      "value": "7,834",
+      "label": "Pages"
+    },
+    "wiki-buttons": [
+      {
+        "href": "/wiki/Special:CreatePage",
+        "label": "",
+        "icon": "add-new-page-small"
+      },
+      {
+        "href": "/wiki/Special:WikiActivity",
+        "label": "",
+        "icon": "activity-small"
+      },
+      {
+        "href": "/wiki/Special:AdminDashboard",
+        "label": "",
+        "icon": "dashboard-small"
+      }
+    ],
+    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
   }
 }

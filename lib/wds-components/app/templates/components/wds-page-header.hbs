@@ -1,21 +1,30 @@
-{{#if model.wordmarkHref}}
+{{#if model.wordmark.image-url}}
 	<div class="wds-page-header__wordmark">
-		<a accesskey="z" href="{{model.mainPageHref}}">
-			<img src="{{model.wordmarkImageHref}}" alt="{{model.sitename}}" width="250" height="65">
+		<a accesskey="z" href="{{model.wordmark.href}}">
+			<img src="{{model.wordmark.image-url}}" alt="{{model.wordmark.sitename}}" width="250" height="65">
 		</a>
 	</div>
 {{/if}}
 
 <div class="wds-page-header__wordmark-text">
-	<a href="{{model.mainPageHref}}">{{model.sitename}}</a>
+	<a href="{{model.wordmark.href}}">{{model.wordmark.sitename}}</a>
 </div>
 <div class="wds-page-header__counter">
-	<span class="wds-page-header__counter-value">{{model.counterValue}}</span>
-	<span class="wds-page-header__counter-label">{{model.counterLabel}}</span>
+	<span class="wds-page-header__counter-value">{{model.counter.value}}</span>
+	<span class="wds-page-header__counter-label">{{model.counter.label}}</span>
 </div>
-<div class="wds-page-header__wiki-buttons">
-	{{#wds-button class='wds-is-squished wds-has-icon wds-is-secondary'}}
-		{{wds-icon name='add-new-page-small' class='wds-icon-tiny'}}
-		Add new Page
-	{{/wds-button}}
+<div class="wds-page-header__wiki-buttons wds-button-group">
+	{{#each model.wiki-buttons as |button|}}
+		{{#if button.label}}
+			<a class="wds-button wds-is-squished wds-is-secondary wds-has-icon" href="{{button.href}}">
+				{{wds-icon name=button.icon class='wds-icon-tiny'}}
+				{{button.label}}
+			</a>
+		{{else}}
+			<a class="wds-button wds-is-squished wds-is-secondary" href="{{button.href}}">
+				{{wds-icon name=button.icon class='wds-icon-tiny'}}
+			</a>
+		{{/if}}
+
+	{{/each}}
 </div>

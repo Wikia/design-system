@@ -23,4 +23,33 @@
 		{{wds-page-header model=model.anon-no-wordmark}}
 	{{/component-demo}}
 
+	anon without background image
+	{{#component-demo
+			codeOnly=true
+			componentName='wds-page-header'
+			standalone=true
+			variantUrl='/identity/page-header/standalone/anon-no-background'
+	}}
+		{{wds-page-header model=model.anon-no-background}}
+	{{/component-demo}}
+
+	logged in
+	{{#component-demo
+			codeOnly=true
+			componentName='wds-page-header'
+			standalone=true
+			variantUrl='/identity/page-header/standalone/logged-in'
+	}}
+		{{wds-page-header model=model.logged-in}}
+	{{/component-demo}}
+
+	admin
+	{{#component-demo
+			codeOnly=true
+			componentName='wds-page-header'
+			standalone=true
+			variantUrl='/identity/page-header/standalone/admin'
+	}}
+		{{wds-page-header model=model.admin}}
+	{{/component-demo}}
 {{/if}}
