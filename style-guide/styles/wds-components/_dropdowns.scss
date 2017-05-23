@@ -185,8 +185,6 @@ $dropdown-border-width: 1px;
 
 		.wds-list.wds-is-linked > li > a {
 			font-size: $wds-typescale-size-minus-2;
-			// font-size is 2px smaller then regular list so we need to add 1px padding to have elements in the same size
-			padding: ($wds-list-item-vertical-padding + 1px) ($wds-dropdown-padding / 2);
 		}
 	}
 
