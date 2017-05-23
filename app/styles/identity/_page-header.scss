@@ -1,21 +1,24 @@
 //Theming. TODO: extract colors to variables so it is easily adjustable
 
+$wds-page-header-bg-color: #006cb0;
+$wds-page-header-text-color: $wds-color-white;
+
 .wds-page-header {
-	background-color: #006cb0;
-	color: $wds-color-white;
+	background-color: $wds-page-header-bg-color;
+	color: $wds-page-header-text-color;
 
 	&::before {
-		background: linear-gradient(to right,rgba(0,108,176,0.5),rgba(0,108,176,0.5)),linear-gradient(to left,rgba(0,108,176,0) 200px,#006cb0 430px);
+		background: linear-gradient(to right,rgba($wds-page-header-bg-color,0.5),rgba($wds-page-header-bg-color,0.5)),linear-gradient(to left,rgba(0,108,176,0) 200px,$wds-page-header-bg-color 430px);
 	}
 
 	&__wordmark-text {
 		a {
-			color: $wds-color-white;
+			color: $wds-page-header-text-color;
 		}
 	}
 
 	.wds-is-secondary {
-		border-color: $wds-color-white;
-		color: $wds-color-white;
+		border-color: $wds-page-header-text-color;
+		color: $wds-page-header-text-color;
 	}
 }
