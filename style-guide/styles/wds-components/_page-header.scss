@@ -56,6 +56,8 @@
 		font-weight: 600;
 		line-height: 1;
 		margin: 24px 0 auto 18px;
+		overflow: hidden;
+		white-space: nowrap;
 
 		a {
 			text-decoration: none;
@@ -64,6 +66,8 @@
 		@media #{$wds-breakpoint-l-down} {
 			font-size: $wds-typescale-size-plus-2;
 			margin-top: 20px;
+			max-height: 2*$wds-typescale-size-plus-2;
+			white-space: normal;
 		}
 	}
 
