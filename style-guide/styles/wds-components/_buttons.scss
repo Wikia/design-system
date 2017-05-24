@@ -155,6 +155,12 @@
 		margin: -1px 0;
 	}
 
+	// when button contains only icon, the icon has extra spacing at the bottom which makes whole
+	// button higher by 2px
+	>.wds-icon {
+		margin-bottom: -2px;
+	}
+
 	$social-colors: (
 		facebook: $wds-color-social-facebook,
 		googleplus: $wds-color-social-googleplus,
