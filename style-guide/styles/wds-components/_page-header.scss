@@ -25,16 +25,16 @@
 	&__wordmark {
 		height: 65px;
 		margin: 20px 0 20px 20px;
-		width: 250px;
+		width: auto;
 
 		@media #{$wds-breakpoint-l-down} {
 			height: 45px;
 			margin: 20px 0 50px 20px;
-			width: 175px;
+			width: auto;
 
 			img {
-				height: auto;
-				width: 175px;
+				max-height: 45px;
+				width: auto;
 			}
 		}
 	}
