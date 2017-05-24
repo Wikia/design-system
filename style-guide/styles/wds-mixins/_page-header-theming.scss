@@ -1,0 +1,49 @@
+@mixin page-headder-theming($background-color, $text-color) {
+	background-color: $background-color;
+	color: $text-color;
+
+	&::before {
+		background: linear-gradient(to right,rgba($background-color,0.5),rgba($background-color,0.5)),linear-gradient(to left,rgba(0,108,176,0) 200px,$background-color 430px);
+	}
+
+	.wds-button.wds-is-secondary {
+		background-color: rgba($background-color, 0.2);
+		border-color: $text-color;
+		color: $text-color;
+		transition: border-color,background-color,color;
+		transition-duration: .2s;
+
+		a {
+			color: $text-color;
+		}
+
+		svg {
+			fill: $text-color;
+		}
+	}
+
+	.wds-button.wds-is-secondary:hover {
+		background-color: rgba($background-color, 0.4);
+		border-color: rgba($text-color, 0.8);
+		color: rgba($text-color, 0.8);
+
+		svg {
+			fill: rgba($text-color, 0.8);
+			transition: color .2s
+		}
+
+		a {
+			color: rgba($text-color, 0.8);
+			transition: color .2s
+		}
+	}
+
+	a {
+		color: $text-color;
+	}
+
+	a:hover {
+		color: rgba($text-color, 0.8);
+		transition: color .2s
+	}
+}
