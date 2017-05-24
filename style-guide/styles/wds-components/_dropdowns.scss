@@ -162,7 +162,7 @@
 	margin-right: 0;
 
 	> a {
-		padding-right: 18px;
+		padding-right: $wds-dropdown-padding;
 		display: flex;
 		justify-content: space-between;
 	}
