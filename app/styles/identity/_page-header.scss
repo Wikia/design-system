@@ -1,5 +1,3 @@
-//Theming. TODO: extract colors to variables so it is easily adjustable
-
 $wds-page-header-bg-color: #006cb0;
 $wds-page-header-text-color: $wds-color-white;
 
@@ -11,14 +9,44 @@ $wds-page-header-text-color: $wds-color-white;
 		background: linear-gradient(to right,rgba($wds-page-header-bg-color,0.5),rgba($wds-page-header-bg-color,0.5)),linear-gradient(to left,rgba(0,108,176,0) 200px,$wds-page-header-bg-color 430px);
 	}
 
-	&__wordmark-text {
+	.wds-button.wds-is-secondary {
+		background-color: rgba($wds-page-header-bg-color, 0.2);
+		border-color: $wds-page-header-text-color;
+		color: $wds-page-header-text-color;
+		transition: border-color,background-color,color;
+		transition-duration: .2s;
+
 		a {
 			color: $wds-page-header-text-color;
 		}
+
+		svg {
+			fill: $wds-page-header-text-color;
+		}
 	}
 
-	.wds-is-secondary {
-		border-color: $wds-page-header-text-color;
+	.wds-button.wds-is-secondary:hover {
+		background-color: rgba($wds-page-header-bg-color, 0.4);
+		border-color: rgba($wds-page-header-text-color, 0.8);
+		color: rgba($wds-page-header-text-color, 0.8);
+
+		svg {
+			fill: rgba($wds-page-header-text-color, 0.8);
+			transition: color .2s
+		}
+
+		a {
+			color: rgba($wds-page-header-text-color, 0.8);
+			transition: color .2s
+		}
+	}
+
+	a {
 		color: $wds-page-header-text-color;
+	}
+
+	a:hover {
+		color: rgba($wds-page-header-text-color, 0.8);
+		transition: color .2s
 	}
 }
