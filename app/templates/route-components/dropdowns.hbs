@@ -214,11 +214,15 @@
 		class="format-code">.wds-dropdown-level-2</code> class to <code class="format-code">.wds-list li</code>
 		element	and add <code class="format-code">.wds-dropdown-level-2__content</code> element inside
 		the list element.
-
+	</p>
+	<p>
 		2nd level menu is aligned to the top of 1st level dropdown by default, but it doesn't
 		work for shorter list so we need to add class <code class="format-code">.wds-is-sticked-to-parent</code>
 		to elements that contains shorter level 2 menu. Look at the
 		"Broken 2-level" item to see what happens when you won't add that class.
+	</p>
+	<p>
+		2-levels dropdowns do not support shadows and scrollable lists
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
