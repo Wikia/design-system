@@ -25,25 +25,28 @@
 	<p>
 		On desktop, dropdown content is showing whenever user hovers over dropdown toggle. For touch
 		devices when user taps on a dropdown toggle you need to add
-		<code class="format-code">.wds-is-active</code> class to the parent <code class="format-code">.wds-dropdown element</code>.
-		There should be only one dropdown open at any time, so you should also remove this class from all the other dropdowns.
+		<code class="format-code">.wds-is-active</code> class to the parent
+		<code class="format-code">.wds-dropdown</code> element.
+		There should be only one dropdown open at any time, so you should also remove
+		this class from all the other dropdowns.
 	</p>
 </section>
 
 <section>
 	<h2 id="dropdowns-arrow-position">Arrow vertical position</h2>
 	<p>
-		Design System provides styles which ensure dropdown arrow is positioned as expected vertically
-		when you use the following elements as the dropdown toggle:
+		Dropdown arrow will be correctly positioned vertically if you use
+		the following elements as the toggle:
 	</p>
 	<ul>
 		<li><code class="format-code">.wds-button</code></li>
 		<li><code class="format-code">.wds-tabs__tab</code></li>
 	</ul>
 	<p>
-		If you want to use dropdown with other element as the toggle, you need to add custom
-		<code class="format-code">padding-bottom</code> to it, to push down the arrow.
-		In the examples below, we use text with chevron as toggle and add this padding locally.
+		However, if you wish to use other elements as dropdown toggle,
+		you need to add custom <code class="format-code">padding-bottom</code> parameter
+		to push the arrow down. In the examples below, we use text with chevron as toggle
+		and add this padding locally.
 	</p>
 </section>
 
@@ -219,10 +222,10 @@
 		2nd level menu is aligned to the top of 1st level dropdown by default, but it doesn't
 		work for shorter list so we need to add class <code class="format-code">.wds-is-sticked-to-parent</code>
 		to elements that contains shorter level 2 menu. Look at the
-		"Broken 2-level" item to see what happens when you won't add that class.
+		"Broken 2-level" item to see what happens when you don't add that class.
 	</p>
 	<p>
-		2-levels dropdowns do not support shadows and scrollable lists
+		2-levels dropdowns do not support shadows and scrollable lists.
 	</p>
 	{{#component-demo}}
 		{{#wds-dropdown as |dropdown|}}
@@ -300,20 +303,4 @@
 			{{/dropdown.content}}
 		{{/wds-dropdown}}
 	{{/component-demo}}
-</section>
-
-<section>
-	<h2 id="dropdowns-demo">Demo for touch devices</h2>
-	{{#wds-dropdown as |dropdown|}}
-		{{#dropdown.toggle class='push-dropdown-down'}}
-			<span>Click me!</span>
-		{{/dropdown.toggle}}
-		{{#dropdown.content}}
-			<ul class="wds-list">
-				<li>List item 1</li>
-				<li>List item 2</li>
-				<li>List item 3</li>
-			</ul>
-		{{/dropdown.content}}
-	{{/wds-dropdown}}
 </section>
