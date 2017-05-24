@@ -44,6 +44,10 @@
 	&__top-container {
 		display: flex;
 		height: 59px;
+
+		@media #{$wds-breakpoint-l-down} {
+			height: 69px;
+		}
 	}
 
 	&__wordmark-text {
