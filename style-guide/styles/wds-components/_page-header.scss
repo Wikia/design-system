@@ -70,7 +70,11 @@
 	&__counter{
 		font-weight: 600;
 		text-align: right;
-		margin: 20px 0 20px 20px;
+		margin: 18px 0 20px 20px;
+
+		@media #{$wds-breakpoint-l-down} {
+			margin-top: 22px;
+		}
 	}
 
 	&__counter-value {
