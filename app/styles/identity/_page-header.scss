@@ -1,7 +1,6 @@
 
 $background-color: #006cb0;
-$text-color: $wds-color-white;
 
 .wds-page-header {
-	@include page-headder-theming($background-color, $text-color);
+	@include page-headder-theming($background-color);
 }

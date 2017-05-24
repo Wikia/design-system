@@ -1,4 +1,15 @@
-@mixin page-headder-theming($background-color, $text-color) {
+@import '../wds-functions/index';
+
+@mixin page-headder-theming($background-color) {
+
+	$text-color: white;
+	@if luminance($background-color) > 0.3 {
+		$text-color: black;
+	}
+
+	$text-hover-color: rgba($text-color, 0.8);
+	$text-hover-transition: color .2s;
+
 	background-color: $background-color;
 	color: $text-color;
 
@@ -24,17 +35,17 @@
 
 	.wds-button.wds-is-secondary:hover {
 		background-color: rgba($background-color, 0.4);
-		border-color: rgba($text-color, 0.8);
-		color: rgba($text-color, 0.8);
+		border-color: $text-hover-color;
+		color: $text-hover-color;
 
 		svg {
-			fill: rgba($text-color, 0.8);
-			transition: color .2s
+			fill: $text-hover-color;
+			transition: $text-hover-transition;
 		}
 
 		a {
-			color: rgba($text-color, 0.8);
-			transition: color .2s
+			color: $text-hover-color;
+			transition: $text-hover-transition;
 		}
 	}
 
@@ -43,7 +54,7 @@
 	}
 
 	a:hover {
-		color: rgba($text-color, 0.8);
-		transition: color .2s
+		color: $text-hover-color;
+		transition: $text-hover-transition;
 	}
 }
