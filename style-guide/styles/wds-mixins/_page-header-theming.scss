@@ -57,7 +57,8 @@
 		}
 	}
 
-	.wds-tabs__tab-label:hover {
+	.wds-tabs__tab.wds-is-active .wds-tabs__tab-label,
+	.wds-tabs__tab:hover .wds-tabs__tab-label{
 		color: $text-hover-color;
 		transition: $text-hover-transition;
 
