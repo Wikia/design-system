@@ -26,163 +26,318 @@
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
     "local-navigation": [
       {
-        "label": "label 1",
+        "label": {
+          "type": "text",
+          "value": "label 1"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 1.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.5",
+            "label": {
+              "type": "text",
+              "value": "label 1.5"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 1.5.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
-          },
+          }
         ]
       },
       {
-        "label": "label 2",
+        "label": {
+          "type": "text",
+          "value": "label 2"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 2.1",
+            "label": {
+              "type": "text",
+              "value": "label 2.1"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 2.1.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
           },
           {
-            "label": "label 2.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 2.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 3",
+        "label": {
+          "type": "text",
+          "value": "label 3"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 3.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.3"
+            },
             "submenu": [
               {
-                "label": "label 3.3.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.4"
+                },
                 "href": "#"
-              },
-            ]
+              }
+            ],
+            "href": "#"
           },
           {
-            "label": "label 3.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 3.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 4",
+        "label": {
+          "type": "text",
+          "value": "label 4"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 4.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 4.5"
+            },
+            "href": "#"
+          }
         ]
       },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-explore"
+        },
+        "icon": "explore-small",
+        "submenu": [
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-wiki-activity"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-random-page"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-community"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-videos"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-images"
+            }
+          }
+        ]
+      },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-forum"
+        },
+        "icon": "reply-small",
+        "href": "#"
+      }
     ]
   },
 
@@ -212,163 +367,318 @@
     ],
     "local-navigation": [
       {
-        "label": "label 1",
+        "label": {
+          "type": "text",
+          "value": "label 1"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 1.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.5",
+            "label": {
+              "type": "text",
+              "value": "label 1.5"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 1.5.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
-          },
+          }
         ]
       },
       {
-        "label": "label 2",
+        "label": {
+          "type": "text",
+          "value": "label 2"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 2.1",
+            "label": {
+              "type": "text",
+              "value": "label 2.1"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 2.1.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
           },
           {
-            "label": "label 2.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 2.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 3",
+        "label": {
+          "type": "text",
+          "value": "label 3"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 3.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.3"
+            },
             "submenu": [
               {
-                "label": "label 3.3.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.4"
+                },
                 "href": "#"
-              },
-            ]
+              }
+            ],
+            "href": "#"
           },
           {
-            "label": "label 3.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 3.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 4",
+        "label": {
+          "type": "text",
+          "value": "label 4"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 4.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 4.5"
+            },
+            "href": "#"
+          }
         ]
       },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-explore"
+        },
+        "icon": "explore-small",
+        "submenu": [
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-wiki-activity"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-random-page"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-community"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-videos"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-images"
+            }
+          }
+        ]
+      },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-forum"
+        },
+        "icon": "reply-small",
+        "href": "#"
+      }
     ]
   },
 
@@ -397,163 +707,318 @@
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
     "local-navigation": [
       {
-        "label": "label 1",
+        "label": {
+          "type": "text",
+          "value": "label 1"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 1.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.5",
+            "label": {
+              "type": "text",
+              "value": "label 1.5"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 1.5.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
-          },
+          }
         ]
       },
       {
-        "label": "label 2",
+        "label": {
+          "type": "text",
+          "value": "label 2"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 2.1",
+            "label": {
+              "type": "text",
+              "value": "label 2.1"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 2.1.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
           },
           {
-            "label": "label 2.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 2.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 3",
+        "label": {
+          "type": "text",
+          "value": "label 3"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 3.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.3"
+            },
             "submenu": [
               {
-                "label": "label 3.3.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.4"
+                },
                 "href": "#"
-              },
-            ]
+              }
+            ],
+            "href": "#"
           },
           {
-            "label": "label 3.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 3.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 4",
+        "label": {
+          "type": "text",
+          "value": "label 4"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 4.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 4.5"
+            },
+            "href": "#"
+          }
         ]
       },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-explore"
+        },
+        "icon": "explore-small",
+        "submenu": [
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-wiki-activity"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-random-page"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-community"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-videos"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-images"
+            }
+          }
+        ]
+      },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-forum"
+        },
+        "icon": "reply-small",
+        "href": "#"
+      }
     ]
   },
 
@@ -588,163 +1053,318 @@
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
     "local-navigation": [
       {
-        "label": "label 1",
+        "label": {
+          "type": "text",
+          "value": "label 1"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 1.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.5",
+            "label": {
+              "type": "text",
+              "value": "label 1.5"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 1.5.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
-          },
+          }
         ]
       },
       {
-        "label": "label 2",
+        "label": {
+          "type": "text",
+          "value": "label 2"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 2.1",
+            "label": {
+              "type": "text",
+              "value": "label 2.1"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 2.1.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
           },
           {
-            "label": "label 2.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 2.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 3",
+        "label": {
+          "type": "text",
+          "value": "label 3"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 3.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.3"
+            },
             "submenu": [
               {
-                "label": "label 3.3.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.4"
+                },
                 "href": "#"
-              },
-            ]
+              }
+            ],
+            "href": "#"
           },
           {
-            "label": "label 3.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 3.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 4",
+        "label": {
+          "type": "text",
+          "value": "label 4"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 4.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 4.5"
+            },
+            "href": "#"
+          }
         ]
       },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-explore"
+        },
+        "icon": "explore-small",
+        "submenu": [
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-wiki-activity"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-random-page"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-community"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-videos"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-images"
+            }
+          }
+        ]
+      },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-forum"
+        },
+        "icon": "reply-small",
+        "href": "#"
+      }
     ]
   },
 
@@ -781,163 +1401,318 @@
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
     "local-navigation": [
       {
-        "label": "label 1",
+        "label": {
+          "type": "text",
+          "value": "label 1"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 1.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 1.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 1.5",
+            "label": {
+              "type": "text",
+              "value": "label 1.5"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 1.5.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 1.5.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 1.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
-          },
+          }
         ]
       },
       {
-        "label": "label 2",
+        "label": {
+          "type": "text",
+          "value": "label 2"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 2.1",
+            "label": {
+              "type": "text",
+              "value": "label 2.1"
+            },
             "href": "#",
             "submenu": [
               {
-                "label": "label 2.1.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 2.1.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 2.5.4"
+                },
                 "href": "#"
-              },
+              }
             ]
           },
           {
-            "label": "label 2.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 2.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 2.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 2.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 3",
+        "label": {
+          "type": "text",
+          "value": "label 3"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 3.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.3"
+            },
             "submenu": [
               {
-                "label": "label 3.3.1",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.1"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.2",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.2"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.3",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.3"
+                },
                 "href": "#"
               },
               {
-                "label": "label 3.3.4",
+                "label": {
+                  "type": "text",
+                  "value": "label 3.5.4"
+                },
                 "href": "#"
-              },
-            ]
+              }
+            ],
+            "href": "#"
           },
           {
-            "label": "label 3.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 3.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 3.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 3.5"
+            },
+            "href": "#"
+          }
         ]
       },
       {
-        "label": "label 4",
+        "label": {
+          "type": "text",
+          "value": "label 4"
+        },
         "href": "#",
         "submenu": [
           {
-            "label": "label 4.1",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.1"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.2",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.2"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.3",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.3"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.4",
-            "href": "#",
+            "label": {
+              "type": "text",
+              "value": "label 4.4"
+            },
+            "href": "#"
           },
           {
-            "label": "label 4.5",
-            "href": "#",
-          },
+            "label": {
+              "type": "text",
+              "value": "label 4.5"
+            },
+            "href": "#"
+          }
         ]
       },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-explore"
+        },
+        "icon": "explore-small",
+        "submenu": [
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-wiki-activity"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-random-page"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-community"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-videos"
+            }
+          },
+          {
+            "label": {
+              "type": "translatable-text",
+              "key": "community-header-images"
+            }
+          }
+        ]
+      },
+      {
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-forum"
+        },
+        "icon": "reply-small",
+        "href": "#"
+      }
     ]
   }
 }
