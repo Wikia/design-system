@@ -6,7 +6,7 @@
       "sitename": "Wookiepedia"
     },
     "counter": {
-      "value": "7,834",
+      "value": 7834,
       "label": {
         "type": "translatable-text",
         "key": "community-header-pages"
@@ -192,7 +192,7 @@
       "sitename": "Wookiepedia"
     },
     "counter": {
-      "value": "7,834",
+      "value": 7834,
       "label": {
         "type": "translatable-text",
         "key": "community-header-pages"
@@ -376,7 +376,7 @@
       "sitename": "Wookiepedia"
     },
     "counter": {
-      "value": "7,834",
+      "value": 7834,
       "label": {
         "type": "translatable-text",
         "key": "community-header-pages"
@@ -562,7 +562,7 @@
       "sitename": "Wookiepedia"
     },
     "counter": {
-      "value": "7,834",
+      "value": 7834,
       "label": {
         "type": "translatable-text",
         "key": "community-header-pages"
@@ -760,7 +760,7 @@
       "sitename": "Wookiepedia"
     },
     "counter": {
-      "value": "7,834",
+      "value": 7834,
       "label": {
         "type": "translatable-text",
         "key": "community-header-pages"
