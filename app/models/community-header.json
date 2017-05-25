@@ -1,9 +1,23 @@
 {
   "anon": {
+    "sitename": {
+      "href": "/wiki/Main_Page",
+      "label": {
+        "type": "text",
+        "value": "Wookiepedia"
+      }
+    },
     "wordmark": {
       "href": "/wiki/Main_Page",
-      "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
-      "sitename": "Wookiepedia"
+      "label": {
+        "type": "text",
+        "value": "Wookiepedia"
+      },
+      "image": {
+        "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
+        "width": 250,
+        "height": 65
+      }
     },
     "counter": {
       "value": 7834,
@@ -295,6 +309,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
+        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {
@@ -341,10 +356,24 @@
   },
 
   "anon-no-background": {
+    "sitename": {
+      "href": "/wiki/Main_Page",
+      "label": {
+        "type": "text",
+        "value": "Wookiepedia"
+      }
+    },
     "wordmark": {
       "href": "/wiki/Main_Page",
-      "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
-      "sitename": "Wookiepedia"
+      "label": {
+        "type": "text",
+        "value": "Wookiepedia"
+      },
+      "image": {
+        "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
+        "width": 250,
+        "height": 65
+      }
     },
     "counter": {
       "value": 7834,
@@ -635,6 +664,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
+        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {
@@ -681,9 +711,12 @@
   },
 
   "anon-no-wordmark": {
-    "wordmark": {
+    "sitename": {
       "href": "/wiki/Main_Page",
-      "sitename": "Wookiepedia"
+      "label": {
+        "type": "text",
+        "value": "Wookiepedia"
+      }
     },
     "counter": {
       "value": 7834,
@@ -975,6 +1008,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
+        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {
@@ -1021,10 +1055,24 @@
   },
 
   "logged-in": {
+    "sitename": {
+      "href": "/wiki/Main_Page",
+      "label": {
+        "type": "text",
+        "value": "Wookiepedia"
+      }
+    },
     "wordmark": {
       "href": "/wiki/Main_Page",
-      "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
-      "sitename": "Wookiepedia"
+      "label": {
+        "type": "text",
+        "value": "Wookiepedia"
+      },
+      "image": {
+        "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
+        "width": 250,
+        "height": 65
+      }
     },
     "counter": {
       "value": 7834,
@@ -1328,6 +1376,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
+        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {
@@ -1374,10 +1423,24 @@
   },
 
   "admin": {
+    "sitename": {
+      "href": "/wiki/Main_Page",
+      "label": {
+        "type": "text",
+        "value": "Wookiepedia"
+      }
+    },
     "wordmark": {
       "href": "/wiki/Main_Page",
-      "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
-      "sitename": "Wookiepedia"
+      "label": {
+        "type": "text",
+        "value": "Wookiepedia"
+      },
+      "image": {
+        "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
+        "width": 250,
+        "height": 65
+      }
     },
     "counter": {
       "value": 7834,
@@ -1685,6 +1748,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
+        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {

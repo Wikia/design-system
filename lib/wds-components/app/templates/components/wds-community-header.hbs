@@ -1,14 +1,18 @@
-{{#if model.wordmark.image-url}}
+{{#if model.wordmark.image.url}}
 	<div class="wds-community-header__wordmark">
 		<a accesskey="z" href="{{model.wordmark.href}}">
-			<img src="{{model.wordmark.image-url}}" alt="{{model.wordmark.sitename}}" width="250" height="65">
+			<img src="{{model.wordmark.image.url}}"
+				 width="{{model.wordmark.image.width}}"
+				 height="{{model.wordmark.image.height}}"
+				 alt="{{model.wordmark.label}}"
+			>
 		</a>
 	</div>
 {{/if}}
 
 <div class="wds-community-header__top-container">
-	<div class="wds-community-header__wordmark-text">
-		<a href="{{model.wordmark.href}}">{{model.wordmark.sitename}}</a>
+	<div class="wds-community-header__sitename">
+		<a href="{{model.sitename.href}}">{{model.sitename.label.value}}</a>
 	</div>
 	<div class="wds-community-header__counter">
 		<span class="wds-community-header__counter-value">{{numeral model.counter.value}}</span>
@@ -30,4 +34,3 @@
 </div>
 
 {{wds-community-header/local-navigation model=model.local-navigation}}
-

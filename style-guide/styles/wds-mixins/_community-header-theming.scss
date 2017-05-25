@@ -76,13 +76,13 @@
 		}
 	}
 
-	.wds-community-header__wordmark-text a {
+	.wds-community-header__sitename a {
 		color: $text-color;
-	}
 
-	.wds-community-header__wordmark-text a:hover {
-		color: $text-hover-color;
-		transition: $text-hover-transition;
+		&:hover {
+			color: $text-hover-color;
+			transition: $text-hover-transition;
+		}
 	}
 
 	.wds-community-header__counter {
