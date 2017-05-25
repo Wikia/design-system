@@ -1,15 +1,15 @@
 {{#wds-dropdown as |dropdown|}}
 	{{#dropdown.toggle class='wds-tabs__tab-label'}}
-		{{#if model.icon}}
-			{{wds-icon name=model.icon class='wds-icon-tiny'}}
-		{{/if}}
-		<span>
+		<a href="{{model.href}}">
+			{{#if model.icon}}
+				{{wds-icon name=model.icon class='wds-icon-tiny'}}
+			{{/if}}
 			{{#if model.label.key}}
 				{{i18n model.label.key}}
 			{{else}}
 				{{model.label.value}}
 			{{/if}}
-		</span>
+		</a>
 	{{/dropdown.toggle}}
 	{{#dropdown.content isNotScrollable=true}}
 		<ul class="wds-list wds-is-linked wds-has-bolded-items">
