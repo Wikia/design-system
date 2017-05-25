@@ -13,9 +13,9 @@
 	{{/dropdown.toggle}}
 	{{#dropdown.content isNotScrollable=true}}
 		<ul class="wds-list wds-is-linked wds-has-bolded-items">
-			{{#each model.submenu as |secondLevelItem|}}
+			{{#each model.submenu as |secondLevelItem index|}}
 				{{#if secondLevelItem.submenu}}
-					{{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem}}
+					{{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem currentIndex=index}}
 				{{else}}
 					<li>
 						<a href="{{secondLevelItem.href}}">
