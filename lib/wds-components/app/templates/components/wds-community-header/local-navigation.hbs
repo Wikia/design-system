@@ -1,0 +1,22 @@
+{{#wds-tabs}}
+	{{#each model as |firstLevelItem|}}
+		{{#wds-tab}}
+			{{#if firstLevelItem.submenu}}
+				{{wds-community-header/local-navigation-dropdown model=firstLevelItem}}
+			{{else}}
+				<div class="wds-tabs__tab-label">
+					{{#if firstLevelItem.icon}}
+						{{wds-icon name=firstLevelItem.icon class='wds-icon-tiny'}}
+					{{/if}}
+					<a href="{{firstLevelItem.href}}">
+						{{#if firstLevelItem.label.key}}
+							{{i18n firstLevelItem.label.key}}
+						{{else}}
+							{{firstLevelItem.label.value}}
+						{{/if}}
+					</a>
+				</div>
+			{{/if}}
+		{{/wds-tab}}
+	{{/each}}
+{{/wds-tabs}}

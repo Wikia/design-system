@@ -1,0 +1,33 @@
+{{#wds-dropdown as |dropdown|}}
+	{{#dropdown.toggle class='wds-tabs__tab-label'}}
+		{{#if model.icon}}
+			{{wds-icon name=model.icon class='wds-icon-tiny'}}
+		{{/if}}
+		<span>
+			{{#if model.label.key}}
+				{{i18n model.label.key}}
+			{{else}}
+				{{model.label.value}}
+			{{/if}}
+		</span>
+	{{/dropdown.toggle}}
+	{{#dropdown.content isNotScrollable=true}}
+		<ul class="wds-list wds-is-linked wds-has-bolded-items">
+			{{#each model.submenu as |secondLevelItem|}}
+				{{#if secondLevelItem.submenu}}
+					{{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem}}
+				{{else}}
+					<li>
+						<a href="{{secondLevelItem.href}}">
+							{{#if model.label.key}}
+								{{i18n secondLevelItem.label.key}}
+							{{else}}
+								{{secondLevelItem.label.value}}
+							{{/if}}
+						</a>
+					</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	{{/dropdown.content}}
+{{/wds-dropdown}}
