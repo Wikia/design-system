@@ -1,6 +1,6 @@
 @import '../wds-functions/index';
 
-@mixin page-headder-theming($background-color) {
+@mixin page-header-theming($background-color) {
 
 	$text-color: white;
 	@if luminance($background-color) > 0.3 {
@@ -12,8 +12,6 @@
 
 	background-color: $background-color;
 
-	//color: $text-color;
-
 	&::before {
 		background: linear-gradient(to right,rgba($background-color,0.5),rgba($background-color,0.5)),linear-gradient(to left,rgba(0,108,176,0) 200px,$background-color 430px);
 	}
@@ -22,7 +20,7 @@
 		background-color: rgba($background-color, 0.2);
 		border-color: $text-color;
 		color: $text-color;
-		transition: border-color,background-color,color;
+		transition-property: border-color,background-color,color;
 		transition-duration: .2s;
 
 		a {
