@@ -1,0 +1,55 @@
+{{#if standalone}}
+	{{outlet}}
+{{else}}
+	<h1>Community Header</h1>
+
+	anon with wordmark
+	{{#component-demo
+		codeOnly=true
+		componentName='wds-community-header'
+		standalone=true
+		variantUrl='/identity/community-header/standalone/anon'
+	}}
+		{{wds-community-header model=model.anon}}
+	{{/component-demo}}
+
+	anon without wordmark
+	{{#component-demo
+		codeOnly=true
+		componentName='wds-community-header'
+		standalone=true
+		variantUrl='/identity/community-header/standalone/anon-no-wordmark'
+	}}
+		{{wds-community-header model=model.anon-no-wordmark}}
+	{{/component-demo}}
+
+	anon without background image
+	{{#component-demo
+		codeOnly=true
+		componentName='wds-community-header'
+		standalone=true
+		variantUrl='/identity/community-header/standalone/anon-no-background'
+	}}
+		{{wds-community-header model=model.anon-no-background}}
+	{{/component-demo}}
+
+	logged in
+	{{#component-demo
+		codeOnly=true
+		componentName='wds-community-header'
+		standalone=true
+		variantUrl='/identity/community-header/standalone/logged-in'
+	}}
+		{{wds-community-header model=model.logged-in}}
+	{{/component-demo}}
+
+	admin
+	{{#component-demo
+		codeOnly=true
+		componentName='wds-community-header'
+		standalone=true
+		variantUrl='/identity/community-header/standalone/admin'
+	}}
+		{{wds-community-header model=model.admin}}
+	{{/component-demo}}
+{{/if}}

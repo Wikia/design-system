@@ -1,5 +1,5 @@
 import Ember from "ember";
-import model from "../../../models/page-header";
+import model from "../../../models/community-header";
 
 const {Route} = Ember;
 
@@ -11,6 +11,6 @@ export default Route.extend({
 	setupController(controller) {
 		this._super(...arguments);
 		this.controllerFor('application').set('standalone', true);
-		this.controllerFor('identity.page-header').set('standalone', true);
+		this.controllerFor('identity.community-header').set('standalone', true);
 	}
 });

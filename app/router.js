@@ -54,7 +54,7 @@ Router.map(function () {
 				path: 'standalone/:variant_name'
 			});
 		});
-		this.route('page-header', function () {
+		this.route('community-header', function () {
 			this.route('standalone', {
 				path: 'standalone/:variant_name'
 			})
