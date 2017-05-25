@@ -1,6 +1,5 @@
 {
   "anon": {
-    "user": "anon",
     "wordmark": {
       "href": "/wiki/Main_Page",
       "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
@@ -187,7 +186,6 @@
   },
 
   "anon-no-background": {
-    "user": "anon",
     "wordmark": {
       "href": "/wiki/Main_Page",
       "image-url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
@@ -577,11 +575,18 @@
           "type": "translatable-text",
           "key": "community-header-add"
         },
+        "title": {
+          "type": "translatable-text",
+          "key": "community-header-add-new-page"
+        },
         "icon": "add-new-page-small"
       },
       {
         "href": "/wiki/Special:WikiActivity",
-        "label": "",
+        "title": {
+          "type": "translatable-text",
+          "key": "community-header-wiki-activity"
+        },
         "icon": "activity-small"
       }
     ],
@@ -764,17 +769,26 @@
     "wiki-buttons": [
       {
         "href": "/wiki/Special:CreatePage",
-        "label": "",
+        "title": {
+          "type": "translatable-text",
+          "key": "community-header-add-new-page"
+        },
         "icon": "add-new-page-small"
       },
       {
         "href": "/wiki/Special:WikiActivity",
-        "label": "",
+        "title": {
+          "type": "translatable-text",
+          "key": "community-header-wiki-activity"
+        },
         "icon": "activity-small"
       },
       {
         "href": "/wiki/Special:AdminDashboard",
-        "label": "",
+        "title": {
+          "type": "translatable-text",
+          "key": "community-header-admin-dashboard"
+        },
         "icon": "dashboard-small"
       }
     ],
