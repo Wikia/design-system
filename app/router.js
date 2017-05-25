@@ -2,9 +2,9 @@ import Ember from "ember";
 import config from "./config/environment";
 
 const Router = Ember.Router.extend({
-									   location: config.locationType,
-									   rootURL: config.rootURL
-								   });
+	location: config.locationType,
+	rootURL: config.rootURL
+});
 
 Router.map(function () {
 	this.route('overview', function () {
@@ -22,8 +22,7 @@ Router.map(function () {
 		this.route('z-index');
 	});
 
-	// We have a good reason to call this route `route-components` and put it in `/components`
-	// path.
+	// We have a good reason to call this route `route-components` and put it in `/components` path.
 	// Ember requires you to keep route's (or to be strict - controller's) templates in
 	// `/templates` dir. It also requires you to keep Ember component's templates in
 	// `/templates/components` dir. If we had a route named `components` then its children's

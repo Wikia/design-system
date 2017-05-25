@@ -8,12 +8,18 @@
     },
     "counter": {
       "value": "7,834",
-      "label": "Pages"
+      "label": {
+        "type": "translatable-text",
+        "key": "community-header-pages"
+      }
     },
     "wiki-buttons": [
       {
         "href": "/wiki/Special:CreatePage",
-        "label": "Add new page",
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-add-new-page"
+        },
         "icon": "add-new-page-small"
       }
     ],
@@ -189,12 +195,18 @@
     },
     "counter": {
       "value": "7,834",
-      "label": "Pages"
+      "label": {
+        "type": "translatable-text",
+        "key": "community-header-pages"
+      }
     },
     "wiki-buttons": [
       {
         "href": "/wiki/Special:CreatePage",
-        "label": "Add new page",
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-add-new-page"
+        },
         "icon": "add-new-page-small"
       }
     ],
@@ -367,12 +379,18 @@
     },
     "counter": {
       "value": "7,834",
-      "label": "Pages"
+      "label": {
+        "type": "translatable-text",
+        "key": "community-header-pages"
+      }
     },
     "wiki-buttons": [
       {
         "href": "/wiki/Special:CreatePage",
-        "label": "Add new page",
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-add-new-page"
+        },
         "icon": "add-new-page-small"
       }
     ],
@@ -547,12 +565,18 @@
     },
     "counter": {
       "value": "7,834",
-      "label": "Pages"
+      "label": {
+        "type": "translatable-text",
+        "key": "community-header-pages"
+      }
     },
     "wiki-buttons": [
       {
         "href": "/wiki/Special:CreatePage",
-        "label": "Add",
+        "label": {
+          "type": "translatable-text",
+          "key": "community-header-add"
+        },
         "icon": "add-new-page-small"
       },
       {
@@ -732,7 +756,10 @@
     },
     "counter": {
       "value": "7,834",
-      "label": "Pages"
+      "label": {
+        "type": "translatable-text",
+        "key": "community-header-pages"
+      }
     },
     "wiki-buttons": [
       {
