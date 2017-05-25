@@ -85,16 +85,19 @@
 						{{/dropdown.content}}
 					{{/wds-dropdown}}
 				{{else}}
-					<a href="{{first-level-item.href}}" class="wds-tabs__tab-label">
+					<div class="wds-tabs__tab-label">
 						{{#if first-level-item.icon}}
 							{{wds-icon name=first-level-item.icon class='wds-icon-tiny'}}
 						{{/if}}
-						{{#if first-level-item.label.key}}
-							{{i18n first-level-item.label.key}}
-						{{else}}
-							{{first-level-item.label.value}}
-						{{/if}}
-					</a>
+						<a href="{{first-level-item.href}}">
+							{{#if first-level-item.label.key}}
+								{{i18n first-level-item.label.key}}
+							{{else}}
+								{{first-level-item.label.value}}
+							{{/if}}
+						</a>
+					</div>
+
 				{{/if}}
 			{{/wds-tab}}
 		{{/each}}

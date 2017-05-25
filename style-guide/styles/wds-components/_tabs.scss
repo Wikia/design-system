@@ -32,6 +32,10 @@
 		:not(:first-child):not(:only-child) {
 			margin: 0 4px;
 		}
+
+		a {
+			text-decoration: none;
+		}
 	}
 
 	&.wds-is-current {
