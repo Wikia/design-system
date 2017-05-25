@@ -1,6 +1,6 @@
 @import '../wds-functions/index';
 
-@mixin page-header-theming($background-color) {
+@mixin community-header-theming($background-color) {
 
 	$text-color: white;
 	@if luminance($background-color) > 0.3 {
@@ -67,16 +67,16 @@
 		}
 	}
 
-	.wds-page-header__wordmark-text a {
+	.wds-community-header__wordmark-text a {
 		color: $text-color;
 	}
 
-	.wds-page-header__wordmark-text a:hover {
+	.wds-community-header__wordmark-text a:hover {
 		color: $text-hover-color;
 		transition: $text-hover-transition;
 	}
 
-	.wds-page-header__counter {
+	.wds-community-header__counter {
 		color: $text-color;
 	}
 }

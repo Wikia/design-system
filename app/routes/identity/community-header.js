@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import model from '../../models/page-header';
+import model from '../../models/community-header';
 
 export default Ember.Route.extend({
 	model() {
