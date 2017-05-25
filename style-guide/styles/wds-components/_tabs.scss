@@ -12,7 +12,6 @@
 	$tab-default-color: $wds-color-link;
 	$tab-hover-color: darken($tab-default-color, 20%);
 
-	cursor: pointer;
 	line-height: 14px;
 	padding: 0 $tab-padding-horizontal;
 	position: relative;
@@ -20,6 +19,7 @@
 	&-label {
 		align-items: center;
 		color: $tab-default-color;
+		cursor: pointer;
 		display: inline-flex;
 		font-size: $wds-typescale-size-minus-2;
 		font-weight: bold;
