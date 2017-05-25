@@ -2,16 +2,24 @@
 $background-color: #006cb0;
 .wds-page-header {
 	@include page-headder-theming($background-color);
+
+	z-index: $z-4;
 }
 
 .color-5F1023.wds-page-header {
 	@include page-headder-theming(#5F1023);
+
+	z-index: $z-3;
 }
 
 .color-787878.wds-page-header {
 	@include page-headder-theming(#787878);
+
+	z-index: $z-2;
 }
 
 .color-FB7383.wds-page-header {
 	@include page-headder-theming(#FB7383);
+
+	z-index: $z-1;
 }

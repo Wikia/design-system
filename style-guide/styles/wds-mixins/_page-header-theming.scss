@@ -49,6 +49,24 @@
 		}
 	}
 
+	.wds-tabs__tab-label {
+		color: $text-color;
+
+		svg {
+			fill: $text-color;
+		}
+	}
+
+	.wds-tabs__tab-label:hover {
+		color: $text-hover-color;
+		transition: $text-hover-transition;
+
+		svg {
+			fill: $text-hover-color;
+			transition: $text-hover-transition;
+		}
+	}
+
 	a {
 		color: $text-color;
 	}
