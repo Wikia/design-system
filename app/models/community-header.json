@@ -198,6 +198,166 @@
         "icon": "add-new-page-small"
       }
     ],
+    "local-navigation": [
+      {
+        "label": "label 1",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 1.1",
+            "href": "#",
+          },
+          {
+            "label": "label 1.2",
+            "href": "#",
+          },
+          {
+            "label": "label 1.3",
+            "href": "#",
+          },
+          {
+            "label": "label 1.4",
+            "href": "#",
+          },
+          {
+            "label": "label 1.5",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 1.5.1",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.2",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.3",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.4",
+                "href": "#"
+              },
+            ]
+          },
+        ]
+      },
+      {
+        "label": "label 2",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 2.1",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 2.1.1",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.2",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.3",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.4",
+                "href": "#"
+              },
+            ]
+          },
+          {
+            "label": "label 2.2",
+            "href": "#",
+          },
+          {
+            "label": "label 2.3",
+            "href": "#",
+          },
+          {
+            "label": "label 2.4",
+            "href": "#",
+          },
+          {
+            "label": "label 2.5",
+            "href": "#",
+          },
+        ]
+      },
+      {
+        "label": "label 3",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 3.1",
+            "href": "#",
+          },
+          {
+            "label": "label 3.2",
+            "href": "#",
+          },
+          {
+            "label": "label 3.3",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 3.3.1",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.2",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.3",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.4",
+                "href": "#"
+              },
+            ]
+          },
+          {
+            "label": "label 3.4",
+            "href": "#",
+          },
+          {
+            "label": "label 3.5",
+            "href": "#",
+          },
+        ]
+      },
+      {
+        "label": "label 4",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 4.1",
+            "href": "#",
+          },
+          {
+            "label": "label 4.2",
+            "href": "#",
+          },
+          {
+            "label": "label 4.3",
+            "href": "#",
+          },
+          {
+            "label": "label 4.4",
+            "href": "#",
+          },
+          {
+            "label": "label 4.5",
+            "href": "#",
+          },
+        ]
+      },
+    ]
   },
 
   "anon-no-wordmark": {
@@ -216,7 +376,167 @@
         "icon": "add-new-page-small"
       }
     ],
-    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
+    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
+    "local-navigation": [
+      {
+        "label": "label 1",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 1.1",
+            "href": "#",
+          },
+          {
+            "label": "label 1.2",
+            "href": "#",
+          },
+          {
+            "label": "label 1.3",
+            "href": "#",
+          },
+          {
+            "label": "label 1.4",
+            "href": "#",
+          },
+          {
+            "label": "label 1.5",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 1.5.1",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.2",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.3",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.4",
+                "href": "#"
+              },
+            ]
+          },
+        ]
+      },
+      {
+        "label": "label 2",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 2.1",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 2.1.1",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.2",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.3",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.4",
+                "href": "#"
+              },
+            ]
+          },
+          {
+            "label": "label 2.2",
+            "href": "#",
+          },
+          {
+            "label": "label 2.3",
+            "href": "#",
+          },
+          {
+            "label": "label 2.4",
+            "href": "#",
+          },
+          {
+            "label": "label 2.5",
+            "href": "#",
+          },
+        ]
+      },
+      {
+        "label": "label 3",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 3.1",
+            "href": "#",
+          },
+          {
+            "label": "label 3.2",
+            "href": "#",
+          },
+          {
+            "label": "label 3.3",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 3.3.1",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.2",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.3",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.4",
+                "href": "#"
+              },
+            ]
+          },
+          {
+            "label": "label 3.4",
+            "href": "#",
+          },
+          {
+            "label": "label 3.5",
+            "href": "#",
+          },
+        ]
+      },
+      {
+        "label": "label 4",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 4.1",
+            "href": "#",
+          },
+          {
+            "label": "label 4.2",
+            "href": "#",
+          },
+          {
+            "label": "label 4.3",
+            "href": "#",
+          },
+          {
+            "label": "label 4.4",
+            "href": "#",
+          },
+          {
+            "label": "label 4.5",
+            "href": "#",
+          },
+        ]
+      },
+    ]
   },
 
   "logged-in": {
@@ -241,7 +561,167 @@
         "icon": "activity-small"
       }
     ],
-    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
+    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
+    "local-navigation": [
+      {
+        "label": "label 1",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 1.1",
+            "href": "#",
+          },
+          {
+            "label": "label 1.2",
+            "href": "#",
+          },
+          {
+            "label": "label 1.3",
+            "href": "#",
+          },
+          {
+            "label": "label 1.4",
+            "href": "#",
+          },
+          {
+            "label": "label 1.5",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 1.5.1",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.2",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.3",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.4",
+                "href": "#"
+              },
+            ]
+          },
+        ]
+      },
+      {
+        "label": "label 2",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 2.1",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 2.1.1",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.2",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.3",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.4",
+                "href": "#"
+              },
+            ]
+          },
+          {
+            "label": "label 2.2",
+            "href": "#",
+          },
+          {
+            "label": "label 2.3",
+            "href": "#",
+          },
+          {
+            "label": "label 2.4",
+            "href": "#",
+          },
+          {
+            "label": "label 2.5",
+            "href": "#",
+          },
+        ]
+      },
+      {
+        "label": "label 3",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 3.1",
+            "href": "#",
+          },
+          {
+            "label": "label 3.2",
+            "href": "#",
+          },
+          {
+            "label": "label 3.3",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 3.3.1",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.2",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.3",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.4",
+                "href": "#"
+              },
+            ]
+          },
+          {
+            "label": "label 3.4",
+            "href": "#",
+          },
+          {
+            "label": "label 3.5",
+            "href": "#",
+          },
+        ]
+      },
+      {
+        "label": "label 4",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 4.1",
+            "href": "#",
+          },
+          {
+            "label": "label 4.2",
+            "href": "#",
+          },
+          {
+            "label": "label 4.3",
+            "href": "#",
+          },
+          {
+            "label": "label 4.4",
+            "href": "#",
+          },
+          {
+            "label": "label 4.5",
+            "href": "#",
+          },
+        ]
+      },
+    ]
   },
 
   "admin": {
@@ -271,6 +751,166 @@
         "icon": "dashboard-small"
       }
     ],
-    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398"
+    "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
+    "local-navigation": [
+      {
+        "label": "label 1",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 1.1",
+            "href": "#",
+          },
+          {
+            "label": "label 1.2",
+            "href": "#",
+          },
+          {
+            "label": "label 1.3",
+            "href": "#",
+          },
+          {
+            "label": "label 1.4",
+            "href": "#",
+          },
+          {
+            "label": "label 1.5",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 1.5.1",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.2",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.3",
+                "href": "#"
+              },
+              {
+                "label": "label 1.5.4",
+                "href": "#"
+              },
+            ]
+          },
+        ]
+      },
+      {
+        "label": "label 2",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 2.1",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 2.1.1",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.2",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.3",
+                "href": "#"
+              },
+              {
+                "label": "label 2.1.4",
+                "href": "#"
+              },
+            ]
+          },
+          {
+            "label": "label 2.2",
+            "href": "#",
+          },
+          {
+            "label": "label 2.3",
+            "href": "#",
+          },
+          {
+            "label": "label 2.4",
+            "href": "#",
+          },
+          {
+            "label": "label 2.5",
+            "href": "#",
+          },
+        ]
+      },
+      {
+        "label": "label 3",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 3.1",
+            "href": "#",
+          },
+          {
+            "label": "label 3.2",
+            "href": "#",
+          },
+          {
+            "label": "label 3.3",
+            "href": "#",
+            "submenu": [
+              {
+                "label": "label 3.3.1",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.2",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.3",
+                "href": "#"
+              },
+              {
+                "label": "label 3.3.4",
+                "href": "#"
+              },
+            ]
+          },
+          {
+            "label": "label 3.4",
+            "href": "#",
+          },
+          {
+            "label": "label 3.5",
+            "href": "#",
+          },
+        ]
+      },
+      {
+        "label": "label 4",
+        "href": "#",
+        "submenu": [
+          {
+            "label": "label 4.1",
+            "href": "#",
+          },
+          {
+            "label": "label 4.2",
+            "href": "#",
+          },
+          {
+            "label": "label 4.3",
+            "href": "#",
+          },
+          {
+            "label": "label 4.4",
+            "href": "#",
+          },
+          {
+            "label": "label 4.5",
+            "href": "#",
+          },
+        ]
+      },
+    ]
   }
 }
