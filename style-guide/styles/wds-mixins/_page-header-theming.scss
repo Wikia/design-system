@@ -11,7 +11,8 @@
 	$text-hover-transition: color .2s;
 
 	background-color: $background-color;
-	color: $text-color;
+
+	//color: $text-color;
 
 	&::before {
 		background: linear-gradient(to right,rgba($background-color,0.5),rgba($background-color,0.5)),linear-gradient(to left,rgba(0,108,176,0) 200px,$background-color 430px);
@@ -68,12 +69,16 @@
 		}
 	}
 
-	a {
+	.wds-page-header__wordmark-text a {
 		color: $text-color;
 	}
 
-	a:hover {
+	.wds-page-header__wordmark-text a:hover {
 		color: $text-hover-color;
 		transition: $text-hover-transition;
+	}
+
+	.wds-page-header__counter {
+		color: $text-color;
 	}
 }
