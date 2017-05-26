@@ -1,5 +1,12 @@
-html {
-	height: 50px;
+.component-demo__standalone {
+	height: 900px;
+}
+
+.separator {
+	background-color: white;
+	height: 100px;
+	margin-bottom: 20px;
+	width: 100%;
 }
 
 .wds-community-header {
@@ -24,6 +31,10 @@ html {
 	z-index: $z-3;
 }
 
+.separator-5F1023 {
+	background-color: #181818;
+}
+
 .color-787878.wds-community-header {
 	$background-color: #2193d7;
 	$local-nav-base-bg: #0E182B;
@@ -35,6 +46,10 @@ html {
 	z-index: $z-2;
 }
 
+.separator-787878 {
+	background-color: #0E182B;
+}
+
 .color-FB7383.wds-community-header {
 	$background-color: #FE7E03;
 	$local-nav-base-bg: #fee77d;
@@ -44,4 +59,8 @@ html {
 	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
 
 	z-index: $z-1;
+}
+
+.separator-FB7383 {
+	background-color: #fee77d;
 }
