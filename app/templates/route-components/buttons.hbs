@@ -30,7 +30,7 @@
 		{{#wds-button}}Primary button{{/wds-button}}
 		{{#wds-button class='wds-has-icon'}}
 			{{wds-icon name='fandom-heart' size='small'}}
-			Primary button
+			<span>Primary button</span>
 		{{/wds-button}}
 		{{#wds-button disabled=true}}Primary disabled{{/wds-button}}
 	{{/component-demo}}
@@ -44,7 +44,7 @@
 		{{#wds-button class='wds-is-secondary'}}Secondary button{{/wds-button}}
 		{{#wds-button class='wds-is-secondary wds-has-icon'}}
 			{{wds-icon name='fandom-heart' size='small'}}
-			Secondary button
+			<span>Secondary button</span>
 		{{/wds-button}}
 		{{#wds-button class='wds-is-secondary' disabled=true}}Secondary disabled{{/wds-button}}
 	{{/component-demo}}
@@ -111,7 +111,7 @@
 		{{#wds-button class='wds-is-text'}}Text button{{/wds-button}}
 		{{#wds-button class='wds-is-text wds-has-icon'}}
 			{{wds-icon name='fandom-heart' size='small'}}
-			Text button
+			<span>Text button</span>
 		{{/wds-button}}
 		{{#wds-button class='wds-is-text' disabled=true}}Text disabled{{/wds-button}}
 	{{/component-demo}}
@@ -125,7 +125,7 @@
 		{{#wds-button}}Primary{{/wds-button}}
 		{{#wds-button class='wds-has-icon'}}
 			{{wds-icon name='fandom-heart' size='small'}}
-			Primary button
+			<span>Primary button</span>
 		{{/wds-button}}
 
 		{{#wds-dropdown as |dropdown|}}
@@ -153,7 +153,7 @@
 		{{#wds-button class='wds-is-squished'}}Primary{{/wds-button}}
 		{{#wds-button class='wds-is-squished wds-has-icon'}}
 			{{wds-icon name='fandom-heart' size='small'}}
-			Primary
+			<span>Primary</span>
 		{{/wds-button}}
 
 		{{#wds-dropdown as |dropdown|}}
@@ -198,7 +198,7 @@ html[lang^='zh'] &__start-a-wiki-button {
 		{{#wds-button class='wds-is-stretched'}}Primary{{/wds-button}}
 		{{#wds-button class='wds-is-stretched wds-has-icon'}}
 			{{wds-icon name='fandom-heart' size='small'}}
-			Primary button
+			<span>Primary button</span>
 		{{/wds-button}}
 
 		{{#wds-dropdown as |dropdown|}}
@@ -236,7 +236,7 @@ html[lang^='zh'] &__start-a-wiki-button {
 		{{#wds-button class='fixed-width-140px'}}Multiline button label with 3rd line{{/wds-button}}
 		{{#wds-button class='fixed-width-180px wds-has-icon'}}
 			{{wds-icon name='fandom-heart' size='small'}}
-			Multiline button label
+			<span>Multiline button label</span>
 		{{/wds-button}}
 	{{/component-demo}}
 </section>
@@ -251,7 +251,7 @@ html[lang^='zh'] &__start-a-wiki-button {
 		{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
 		{{#wds-button tagName='a' href='#' class='wds-has-icon'}}
 			{{wds-icon name='fandom-heart' size='small'}}
-			Link button
+			<span>Link button</span>
 		{{/wds-button}}
 		{{#wds-button tagName='a' href='#' class='wds-is-secondary'}}Secondary link button{{/wds-button}}
 	{{/component-demo}}
@@ -302,7 +302,7 @@ html[lang^='zh'] &__start-a-wiki-button {
 		<div class="wds-button-group white-theme">
 			{{#wds-button class='wds-has-icon wds-is-secondary wds-is-squished'}}
 				{{wds-icon name='activity' size='small'}}
-				Activity
+				<span>Activity</span>
 			{{/wds-button}}
 			{{#wds-button class='wds-is-secondary wds-is-squished'}}
 				{{wds-icon name='house' size='small'}}
@@ -322,7 +322,7 @@ html[lang^='zh'] &__start-a-wiki-button {
 		<div class="wds-button-group">
 			{{#wds-button class='wds-has-icon wds-is-squished'}}
 				{{wds-icon name='pencil' size='small'}}
-				Edit
+				<span>Edit</span>
 			{{/wds-button}}
 			{{#wds-dropdown as |dropdown|}}
 				{{dropdown.toggle class='wds-button wds-is-squished'}}

@@ -111,9 +111,7 @@
 
 	.wds-icon:first-child {
 		align-self: center;
-		height: $wds-icon-small-size;
 		pointer-events: none;
-		width: $wds-icon-small-size;
 
 		&:not(:only-child) {
 			margin-right: $wds-button-padding-horizontal / 2;
