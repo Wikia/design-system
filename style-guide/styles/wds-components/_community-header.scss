@@ -28,16 +28,16 @@
 		max-width: 250px;
 		width: auto;
 
+		img {
+			height: auto;
+			max-height: 100%;
+			width: auto;
+		}
+
 		@media #{$wds-breakpoint-l-down} {
 			height: 49px;
-			margin: 20px 0 0 20px;
+			margin-bottom: 0;
 			max-width: 175px;
-			width: auto;
-
-			img {
-				max-height: 49px;
-				width: auto;
-			}
 		}
 	}
 
