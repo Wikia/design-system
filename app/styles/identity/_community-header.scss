@@ -2,31 +2,46 @@ html {
 	height: 50px;
 }
 
-$background-color: #006cb0;
-$local-nav-base-bg: #0E182B;
-$local-nav-border-color: #3e4757;
-$local-nav-text-color: #D5D4D4;
-$local-nav-hover-text-color: #71d1ef;
 .wds-community-header {
+	$background-color: #006cb0;
+	$local-nav-base-bg: white;
+	$local-nav-border-color: #ccc;
+	$local-nav-text-color: #3a3a3a;
+	$local-nav-hover-text-color: #006cb0;;
 	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
 
 	z-index: $z-4;
 }
 
 .color-5F1023.wds-community-header {
-	@include community-header-theming(#5F1023, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+	$background-color: black;
+	$local-nav-base-bg: black;
+	$local-nav-border-color: #464646;
+	$local-nav-text-color: #D5D4D4;
+	$local-nav-hover-text-color: #5a91cf;
+	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
 
 	z-index: $z-3;
 }
 
 .color-787878.wds-community-header {
-	@include community-header-theming(#787878, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+	$background-color: #2193d7;
+	$local-nav-base-bg: #0E182B;
+	$local-nav-border-color: #3e4757;
+	$local-nav-text-color: #D5D4D4;
+	$local-nav-hover-text-color: #71d1ef;
+	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
 
 	z-index: $z-2;
 }
 
 .color-FB7383.wds-community-header {
-	@include community-header-theming(#FB7383, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+	$background-color: #FE7E03;
+	$local-nav-base-bg: #fee77d;
+	$local-nav-border-color: #cbb964;
+	$local-nav-text-color: #3a3a3a;
+	$local-nav-hover-text-color: #7e0400;
+	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
 
 	z-index: $z-1;
 }
