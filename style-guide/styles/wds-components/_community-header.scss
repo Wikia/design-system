@@ -106,17 +106,8 @@
 	&__wiki-buttons {
 		margin: 20px 20px auto 15px;
 
-		// making possible to use 18x18 icons within button
-		// TODO: move it to button component?
 		.wds-is-secondary {
-			display: flex;
-			padding: 8px 9px 8px 9px;
 			text-transform: uppercase;
-
-			span {
-				align-self: center;
-				margin-left: 4px;
-			}
 		}
 	}
 
