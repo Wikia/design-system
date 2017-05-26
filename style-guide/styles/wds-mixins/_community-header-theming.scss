@@ -106,12 +106,16 @@
 	.wds-dropdown__content {
 		background-color: $dropdown-background-color;
 
-		.wds-list.wds-is-linked a {
-			color: $color-text;
+		.wds-list.wds-is-linked li {
+			>a {
+				color: $color-text;
+			}
 
 			&:hover {
-				background-color: rgba($color-links, .1);
-				color: $color-links;
+				>a {
+					background-color: rgba($color-links, .1);
+					color: $color-links;
+				}
 			}
 		}
 
