@@ -9,11 +9,13 @@
 						{{#if firstLevelItem.icon}}
 							{{wds-icon name=firstLevelItem.icon class='wds-icon-tiny'}}
 						{{/if}}
-						{{#if firstLevelItem.label.key}}
-							{{i18n firstLevelItem.label.key}}
-						{{else}}
-							{{firstLevelItem.label.value}}
-						{{/if}}
+						<span>
+							{{#if firstLevelItem.label.key}}
+								{{i18n firstLevelItem.label.key}}
+							{{else}}
+								{{firstLevelItem.label.value}}
+							{{/if}}
+						</span>
 					</a>
 				</div>
 			{{/if}}

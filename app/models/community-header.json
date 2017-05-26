@@ -309,7 +309,6 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {
@@ -664,7 +663,6 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {
@@ -1008,7 +1006,6 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {
@@ -1376,7 +1373,6 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {
@@ -1748,7 +1744,6 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "href": "#",
         "icon": "explore-small",
         "submenu": [
           {
