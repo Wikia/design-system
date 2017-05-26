@@ -21,7 +21,7 @@
 	background-color: $header-background-color;
 
 	&::before {
-		background: linear-gradient(to right, rgba($header-background-color, 0.5), rgba($header-background-color, 0.5)), linear-gradient(to left, rgba(0, 108, 176, 0) 200px, $header-background-color 430px);
+		background: linear-gradient(to right, rgba($header-background-color, 0.5), rgba($header-background-color, 0.5)), linear-gradient(to left, rgba($header-background-color, 0) 200px, $header-background-color 430px);
 	}
 
 	.wds-button.wds-is-secondary {
