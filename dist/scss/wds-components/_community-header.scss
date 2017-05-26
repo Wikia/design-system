@@ -72,7 +72,7 @@
 		}
 	}
 
-	&__counter {
+	&__counter{
 		font-weight: 600;
 		text-align: right;
 		margin: 18px 0 20px 20px;
@@ -105,10 +105,6 @@
 
 	&__wiki-buttons {
 		margin: 20px 20px auto 15px;
-
-		.wds-is-secondary {
-			text-transform: uppercase;
-		}
 	}
 
 	&__local-navigation {
