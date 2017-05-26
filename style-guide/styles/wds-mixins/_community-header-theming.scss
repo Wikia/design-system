@@ -29,11 +29,6 @@
 		border-color: $text-color;
 		color: $text-color;
 		transition-property: border-color, background-color, color;
-		transition-duration: .2s;
-
-		a {
-			color: $text-color;
-		}
 
 		svg {
 			fill: $text-color;
@@ -47,12 +42,10 @@
 
 		svg {
 			fill: $text-hover-color;
-			transition: $text-hover-transition;
 		}
 
 		a {
 			color: $text-hover-color;
-			transition: $text-hover-transition;
 		}
 	}
 
@@ -60,36 +53,25 @@
 		color: $text-color;
 
 		a {
-			color: $text-color;
-		}
-
-		svg {
-			fill: $text-color;
+			color:inherit;
 		}
 	}
 
 	.wds-tabs__tab.wds-is-active .wds-tabs__tab-label,
 	.wds-tabs__tab:hover .wds-tabs__tab-label {
 		color: $text-hover-color;
-		transition: $text-hover-transition;
 
 		a {
-			color: $text-hover-color;
-			transition: $text-hover-transition;
-		}
-
-		svg {
-			fill: $text-hover-color;
-			transition: $text-hover-transition;
+			color: inherit;
 		}
 	}
 
 	.wds-community-header__sitename a {
 		color: $text-color;
+		transition: $text-hover-transition;
 
 		&:hover {
 			color: $text-hover-color;
-			transition: $text-hover-transition;
 		}
 	}
 
