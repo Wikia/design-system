@@ -12,6 +12,7 @@
 	$tab-default-color: $wds-color-link;
 	$tab-hover-color: darken($tab-default-color, 20%);
 
+	cursor: default;
 	line-height: 14px;
 	padding: 0 $tab-padding-horizontal;
 	position: relative;
@@ -19,7 +20,6 @@
 	&-label {
 		align-items: center;
 		color: $tab-default-color;
-		cursor: pointer;
 		display: inline-flex;
 		font-size: $wds-typescale-size-minus-2;
 		font-weight: bold;
@@ -33,7 +33,9 @@
 			margin: 0 4px;
 		}
 
-		a {
+		> a {
+			align-items: center;
+			display: inline-flex;
 			text-decoration: none;
 		}
 	}
@@ -61,6 +63,10 @@
 	&:hover {
 		.wds-tabs__tab-label {
 			color: $tab-hover-color;
+
+			> a {
+				color: $tab-hover-color;
+			}
 		}
 
 		&.wds-is-current {

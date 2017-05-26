@@ -27,7 +27,7 @@
 	border-width: $wds-button-border-width;
 	box-sizing: border-box;
 	color: $wds-color-white;
-	cursor: pointer;
+	cursor: default;
 	display: inline-block;
 	font-size: $wds-typescale-size-minus-2;
 	font-weight: 600;
@@ -44,6 +44,9 @@
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 
+	@at-root button#{&} {
+		cursor: pointer;
+	}
 
 	&:disabled,
 	&.wds-is-disabled {
