@@ -16,7 +16,6 @@
 		$text-color: $wds-color-black;
 	}
 	$text-hover-color: rgba($text-color, .8);
-	$text-hover-transition: color .2s;
 
 	$dropdown-background-color: mix($color-page, #000, 90%);
 	@if $is-dark-theme {
@@ -73,7 +72,7 @@
 
 	.wds-community-header__sitename a {
 		color: $text-color;
-		transition: $text-hover-transition;
+		transition: color .2s;
 
 		&:hover {
 			color: $text-hover-color;
