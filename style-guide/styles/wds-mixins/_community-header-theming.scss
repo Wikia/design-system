@@ -12,20 +12,20 @@
 	$is-dark-theme: lightness($color-page) < 50;
 
 	$text-color: $wds-color-white;
-	@if luminance($header-background-color) > 0.3 {
+	@if luminance($header-background-color) > .3 {
 		$text-color: $wds-color-black;
 	}
-	$text-hover-color: rgba($text-color, 0.8);
+	$text-hover-color: rgba($text-color, .8);
 	$text-hover-transition: color .2s;
 
 	background-color: $header-background-color;
 
 	&::before {
-		background: linear-gradient(to right, rgba($header-background-color, 0.5), rgba($header-background-color, 0.5)), linear-gradient(to left, rgba($header-background-color, 0) 200px, $header-background-color 430px);
+		background: linear-gradient(to right, rgba($header-background-color, .5), rgba($header-background-color, .5)), linear-gradient(to left, rgba($header-background-color, 0) 200px, $header-background-color 430px);
 	}
 
 	.wds-button.wds-is-secondary {
-		background-color: rgba($header-background-color, 0.2);
+		background-color: rgba($header-background-color, .2);
 		border-color: $text-color;
 		color: $text-color;
 		transition-property: border-color, background-color, color;
@@ -41,7 +41,7 @@
 	}
 
 	.wds-button.wds-is-secondary:hover {
-		background-color: rgba($header-background-color, 0.4);
+		background-color: rgba($header-background-color, .4);
 		border-color: $text-hover-color;
 		color: $text-hover-color;
 
@@ -104,6 +104,7 @@
 
 	.wds-dropdown__content {
 		background-color: $dropdown-background-color;
+		border-color: $color-page-border;
 
 		.wds-list.wds-is-linked li {
 			> a {
@@ -120,6 +121,7 @@
 
 		.wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content {
 			background-color: $dropdown-background-color;
+			border-color: $color-page-border;
 			color: $color-text;
 		}
 	}
