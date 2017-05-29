@@ -14,7 +14,7 @@
 	$local-nav-base-bg: white;
 	$local-nav-border-color: #ccc;
 	$local-nav-text-color: #3a3a3a;
-	$local-nav-hover-text-color: #006cb0;;
+	$local-nav-hover-text-color: #006cb0;
 	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
 
 	z-index: $z-4;
