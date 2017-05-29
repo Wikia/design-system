@@ -35,14 +35,14 @@
 		{{#wds-tabs}}
 			{{#wds-tab}}
 				<div class='wds-tabs__tab-label'>
-					{{wds-icon name='gear' size='small'}}
+					{{wds-icon name='gear-small' class='wds-icon-tiny'}}
 					<span>Icon tab</span>
 				</div>
 			{{/wds-tab}}
 
 			{{#wds-tab}}
 				<div class='wds-tabs__tab-label'>
-					{{wds-icon name='gear' size='small'}}
+					{{wds-icon name='gear-small' class='wds-icon-tiny'}}
 					<span>Very long icon tab that breaks into lines</span>
 				</div>
 			{{/wds-tab}}
@@ -75,7 +75,7 @@
 		{{#wds-tabs}}
 			{{#wds-tab class='wds-is-disabled wds-has-dropdown'}}
 				<div class='wds-tabs__tab-label'>
-					{{wds-icon name='gear' size='small'}}
+					{{wds-icon name='gear-small' class='wds-icon-tiny'}}
 					<span>Disabled tab</span>
 				</div>
 			{{/wds-tab}}
@@ -94,7 +94,7 @@
 		{{#wds-tabs}}
 			{{#wds-tab}}
 				{{#wds-dropdown as |dropdown|}}
-					{{#dropdown.toggle  class='wds-tabs__tab-label'}}
+					{{#dropdown.toggle class='wds-tabs__tab-label'}}
 						<span>Tab with dropdown</span>
 					{{/dropdown.toggle}}
 					{{#dropdown.content}}
@@ -110,8 +110,25 @@
 			{{#wds-tab}}
 				{{#wds-dropdown as |dropdown|}}
 					{{#dropdown.toggle class='wds-tabs__tab-label'}}
-						{{wds-icon name='gear' size='small'}}
-						<span>Very long tab with icon and dropdown</span>
+						<a href="#">Tab with link dropdown</a>
+					{{/dropdown.toggle}}
+					{{#dropdown.content}}
+						<ul class="wds-list">
+							<li>List item 1</li>
+							<li>List item 2</li>
+							<li>List item 3</li>
+						</ul>
+					{{/dropdown.content}}
+				{{/wds-dropdown}}
+			{{/wds-tab}}
+
+			{{#wds-tab}}
+				{{#wds-dropdown as |dropdown|}}
+					{{#dropdown.toggle  class='wds-tabs__tab-label'}}
+						<a href="#">
+							{{wds-icon name='gear-small' class='wds-icon-tiny'}}
+							<span>Tab with link dropdown with icon</span>
+						</a>
 					{{/dropdown.toggle}}
 					{{#dropdown.content}}
 						<ul class="wds-list">
@@ -123,6 +140,7 @@
 				{{/wds-dropdown}}
 
 			{{/wds-tab}}
+
 		{{/wds-tabs}}
 	{{/component-demo}}
 </section>

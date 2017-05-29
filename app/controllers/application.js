@@ -110,6 +110,10 @@ export default Controller.extend({
 					location: 'identity.global-navigation.index'
 				},
 				{
+					name: 'Community Header',
+					location: 'identity.community-header.index'
+				},
+				{
 					name: 'API',
 					location: 'identity.api'
 				},
