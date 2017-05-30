@@ -8,7 +8,6 @@
 
 .wds-tabs__tab {
 	$tab-padding-horizontal: 12px;
-	$tab-padding-vertical: 13px;
 	$tab-height: 40px;
 	$tab-default-color: $wds-color-link;
 	$tab-hover-color: darken($tab-default-color, 20%);
@@ -48,6 +47,8 @@
 		transition: border-color .1s;
 
 		.wds-tabs__tab-label {
+			// 4px is a height needed to align text after adding 2px bottom-border - it is 2 * 2px
+			// (we need to subtract 2px from bottom and top of the label container for text to be aligned properly)
 			height: $tab-height - 4px;
 		}
 	}
