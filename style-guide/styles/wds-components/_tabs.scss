@@ -28,6 +28,7 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: color .1s;
+		white-space: nowrap;
 
 		:not(:first-child):not(:only-child) {
 			margin-left: 4px;
