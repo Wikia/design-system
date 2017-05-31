@@ -53,7 +53,7 @@
 	}
 
 	.wds-dropdown__content {
-		left: -$wds-dropdown-padding;
+		left: -$wds-dropdown-padding + $tab-margin-horizontal;
 		transform: none;
 	}
 
