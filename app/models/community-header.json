@@ -309,7 +309,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-small",
+        "icon": "explore-tiny",
         "submenu": [
           {
             "label": {
@@ -663,7 +663,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-small",
+        "icon": "explore-tiny",
         "submenu": [
           {
             "label": {
@@ -1006,7 +1006,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-small",
+        "icon": "explore-tiny",
         "submenu": [
           {
             "label": {
@@ -1373,7 +1373,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-small",
+        "icon": "explore-tiny",
         "submenu": [
           {
             "label": {
@@ -1744,7 +1744,7 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-small",
+        "icon": "explore-tiny",
         "submenu": [
           {
             "label": {
