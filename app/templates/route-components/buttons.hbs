@@ -256,10 +256,12 @@ html[lang^='zh'] &__start-a-wiki-button {
 	{{/component-demo}}
 </section>
 
-<section class="theming">
+<section class="button-theming">
 	<h2 id="theming">Theming</h2>
-	Theming can be applied to buttons by <code class="format-code">button-theming</code> mixin. Example usage:
-
+	<p>
+		Theming can be applied to buttons by <code class="format-code">button-theming</code> mixin.
+		For basic usage, mixin takes two parameters: primary-background-color and prmary-text-color:
+	</p>
 	{{#code-sample language='sass'}}
 		.wds-button {
 			@include button-theming($wds-color-dark-blue, $wds-color-white);
@@ -267,14 +269,14 @@ html[lang^='zh'] &__start-a-wiki-button {
 	{{/code-sample}}
 
 	{{#component-demo}}
-		{{#wds-button}}Primary{{/wds-button}}
-		{{#wds-button}}
+		{{#wds-button class='primary-only'}}Primary{{/wds-button}}
+		{{#wds-button class='primary-only'}}
 			{{wds-icon name='fandom-heart' size='small'}}
 			<span>Primary button</span>
 		{{/wds-button}}
 
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle tagName='button' class='wds-button'}}
+			{{#dropdown.toggle tagName='button' class='wds-button primary-only'}}
 				<span>Dropdown</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
@@ -285,8 +287,38 @@ html[lang^='zh'] &__start-a-wiki-button {
 				</ul>
 			{{/dropdown.content}}
 		{{/wds-dropdown}}
-		{{#wds-button class='wds-is-secondary'}}Secondary{{/wds-button}}
-		{{#wds-button class='wds-is-text'}}Text{{/wds-button}}
+		{{#wds-button class='wds-is-secondary primary-only'}}Secondary{{/wds-button}}
+		{{#wds-button class='wds-is-text primary-only'}}Text{{/wds-button}}
+	{{/component-demo}}
+
+	<p>It is also possible to apply different color for secondary and text buttons than to primary ones:</p>
+	{{#code-sample language='sass'}}
+		.wds-button {
+			@include button-theming($wds-color-slate-gray, $wds-color-white, $wds-color-link);
+		}
+	{{/code-sample}}
+
+	{{#component-demo}}
+		{{#wds-button class='different-secondary'}}Primary{{/wds-button}}
+		{{#wds-button class='different-secondary'}}
+			{{wds-icon name='fandom-heart' size='small'}}
+			<span>Primary button</span>
+		{{/wds-button}}
+
+		{{#wds-dropdown as |dropdown|}}
+			{{#dropdown.toggle tagName='button' class='wds-button different-secondary'}}
+				<span>Dropdown</span>
+			{{/dropdown.toggle}}
+			{{#dropdown.content}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			{{/dropdown.content}}
+		{{/wds-dropdown}}
+		{{#wds-button class='wds-is-secondary different-secondary'}}Secondary{{/wds-button}}
+		{{#wds-button class='wds-is-text different-secondary'}}Text{{/wds-button}}
 	{{/component-demo}}
 </section>
 
