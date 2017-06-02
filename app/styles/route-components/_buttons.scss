@@ -2,6 +2,9 @@
 	width: 140px;
 }
 
+.theming .wds-button {
+	@include button-theming($wds-color-dark-blue, $wds-color-white);
+}
 /* Button group sections */
 
 .button-group-icons-section {
@@ -10,18 +13,7 @@
 		padding: 7px;
 	}
 
-	// basic theming for buttons
-	.white-theme {
-		.wds-button {
-			border-color: white;
-			color: white;
-
-			&:focus:not(:disabled),
-			&:hover:not(:disabled) {
-				border-color: darken(white, 20%);
-				color: darken(white, 20%);
-				opacity: 0.8;
-			}
-		}
+	.white-theme .wds-button {
+		@include button-theming(white, blue);
 	}
 }

@@ -256,6 +256,40 @@ html[lang^='zh'] &__start-a-wiki-button {
 	{{/component-demo}}
 </section>
 
+<section class="theming">
+	<h2 id="theming">Theming</h2>
+	Theming can be applied to buttons by <code class="format-code">button-theming</code> mixin. Example usage:
+
+	{{#code-sample language='sass'}}
+		.wds-button {
+			@include button-theming($wds-color-dark-blue, $wds-color-white);
+		}
+	{{/code-sample}}
+
+	{{#component-demo}}
+		{{#wds-button}}Primary{{/wds-button}}
+		{{#wds-button}}
+			{{wds-icon name='fandom-heart' size='small'}}
+			<span>Primary button</span>
+		{{/wds-button}}
+
+		{{#wds-dropdown as |dropdown|}}
+			{{#dropdown.toggle tagName='button' class='wds-button'}}
+				<span>Dropdown</span>
+			{{/dropdown.toggle}}
+			{{#dropdown.content}}
+				<ul class="wds-list">
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			{{/dropdown.content}}
+		{{/wds-dropdown}}
+		{{#wds-button class='wds-is-secondary'}}Secondary{{/wds-button}}
+		{{#wds-button class='wds-is-text'}}Text{{/wds-button}}
+	{{/component-demo}}
+</section>
+
 <section>
 	<h2 id="group">Button group</h2>
 	<p>Group a series of buttons together on a single line with the button group.</p>
@@ -284,19 +318,7 @@ html[lang^='zh'] &__start-a-wiki-button {
 
 <section class="button-group-icons-section">
 	<h2 id="group:icons">Button group with icons</h2>
-	<p>You can achieve basic theming by overriding color and background color of a button</p>
-	{{#code-sample language='sass'}}
-.white-theme {
-	border-color: white;
-	color: white;
 
-	&:focus:not(:disabled),
-	&:hover:not(:disabled) {
-		border-color: darken(white, 20%);
-		color: darken(white, 20%);
-	}
-}
-	{{/code-sample}}
 	{{#component-demo}}
 		<div class="wds-button-group white-theme">
 			{{#wds-button class='wds-is-secondary wds-is-squished'}}
