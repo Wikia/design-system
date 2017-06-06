@@ -31,10 +31,8 @@
 		cursor: pointer;
 	}
 
-	&:disabled,
-	&.wds-is-disabled {
-		cursor: default;
-		opacity: .5;
+	&:disabled {
+		@include is-disabled();
 	}
 
 	&:focus:not(:disabled),
