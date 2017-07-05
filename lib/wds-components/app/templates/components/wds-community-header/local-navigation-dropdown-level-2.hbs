@@ -1,0 +1,18 @@
+{{#wds-dropdown isLevel2=true tagName='li' class=stickedClassName as |dropdown|}}
+	{{#dropdown.toggle tagName='a' href='#'}}
+		<span>
+			{{#if model.label.key}}
+				{{i18n model.label.key}}
+			{{else}}
+				{{model.label.value}}
+			{{/if}}
+		</span>
+	{{/dropdown.toggle}}
+	{{#dropdown.content isNotScrollable=true}}
+		<ul class="wds-list wds-is-linked">
+			{{#each model.submenu as |thirdLevelItem|}}
+				<li><a href="{{thirdLevelItem.href}}">{{thirdLevelItem.label.value}}</a></li>
+			{{/each}}
+		</ul>
+	{{/dropdown.content}}
+{{/wds-dropdown}}

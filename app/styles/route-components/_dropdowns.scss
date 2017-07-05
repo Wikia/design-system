@@ -1,7 +1,15 @@
-.main-content .wds-dropdown {
-	margin-bottom: 120px;
+.push-dropdown-down {
+	padding-bottom: 4px;
+}
 
-	&__content {
-		min-width: 150px;
-	}
+.dropdown-margin-right {
+	margin-right: 24px;
+}
+
+.dropdowns-theming {
+	$color-page: #0E182B;
+	$color-page-border: #3E4757;
+	$color-text: #D5D4D4;
+	$color-links: #71D1EF;
+	@include dropdown-theming($color-page, $color-text, $color-links, $color-page-border);
 }
