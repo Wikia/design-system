@@ -60,7 +60,7 @@
 	}
 
 	.wds-tabs__tab.wds-is-current {
-		@include box-underline($text-color);
+		@include wds-box-underline($text-color);
 	}
 
 	.wds-tabs__tab:hover {
@@ -73,7 +73,7 @@
 		}
 
 		&.wds-is-current {
-			@include box-underline($text-hover-color);
+			@include wds-box-underline($text-hover-color);
 		}
 	}
 
