@@ -59,12 +59,21 @@
 		}
 	}
 
-	.wds-tabs__tab.wds-is-active .wds-tabs__tab-label,
-	.wds-tabs__tab:hover .wds-tabs__tab-label {
-		color: $text-hover-color;
+	.wds-tabs__tab.wds-is-current {
+		@include box-underline($text-color);
+	}
 
-		a {
-			color: inherit;
+	.wds-tabs__tab:hover {
+		.wds-tabs__tab-label {
+			color: $text-hover-color;
+
+			a {
+				color: inherit;
+			}
+		}
+
+		&.wds-is-current {
+			@include box-underline($text-hover-color);
 		}
 	}
 
