@@ -76,7 +76,7 @@
 						transition-property: background-color, color;
 					}
 
-					&:hover, .wds-is-selected {
+					&:hover, &.wds-is-selected {
 						> a {
 							@include wds-dropdown-linked-list-item-hover;
 						}
