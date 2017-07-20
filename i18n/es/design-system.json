@@ -102,5 +102,7 @@
   "community-header-videos":"Videos",
   "community-header-images":"Imágenes",
   "community-header-forum":"Foro",
-  "community-header-admin-dashboard":"Panel de administración"
+  "community-header-admin-dashboard":"Panel de administración",
+  "community-header-discussions-post":"Discusión",
+  "community-header-discussions-posts":"Discusiones"
 }

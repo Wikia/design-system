@@ -102,5 +102,7 @@
   "community-header-videos":"视频",
   "community-header-images":"图片",
   "community-header-forum":"论坛",
-  "community-header-admin-dashboard":"管理员控制面板"
+  "community-header-admin-dashboard":"管理员控制面板",
+  "community-header-discussions-post":"条帖子",
+  "community-header-discussions-posts":"条帖子"
 }
