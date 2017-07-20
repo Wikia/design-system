@@ -102,5 +102,7 @@
   "community-header-videos":"動画",
   "community-header-images":"画像",
   "community-header-forum":"フォーラム",
-  "community-header-admin-dashboard":"アドミン・ダッシュボード"
+  "community-header-admin-dashboard":"アドミン・ダッシュボード",
+  "community-header-discussions-post":"件の投稿",
+  "community-header-discussions-posts":"件の投稿"
 }

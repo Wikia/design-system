@@ -102,5 +102,7 @@
   "community-header-videos":"동영상",
   "community-header-images":"그림",
   "community-header-forum":"포럼",
-  "community-header-admin-dashboard":"관리 대시보드"
+  "community-header-admin-dashboard":"관리 대시보드",
+  "community-header-discussions-post":"Post",
+  "community-header-discussions-posts":"Posts"
 }

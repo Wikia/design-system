@@ -102,5 +102,7 @@
   "community-header-videos":"Videos",
   "community-header-images":"Bilder",
   "community-header-forum":"Forum",
-  "community-header-admin-dashboard":"Wiki-Verwaltung"
+  "community-header-admin-dashboard":"Wiki-Verwaltung",
+  "community-header-discussions-post":"Beitrag",
+  "community-header-discussions-posts":"Beiträge"
 }

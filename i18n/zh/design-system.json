@@ -102,5 +102,7 @@
   "community-header-videos":"影片",
   "community-header-images":"圖片",
   "community-header-forum":"論壇",
-  "community-header-admin-dashboard":"管理員面板"
+  "community-header-admin-dashboard":"管理員面板",
+  "community-header-discussions-post":"篇討論文章",
+  "community-header-discussions-posts":"篇討論文章"
 }
