@@ -89,4 +89,8 @@
 	.wds-community-header__counter {
 		color: $text-color;
 	}
+
+	.wds-avatar-stack .user-avatar .avatar .user-avatar__image {
+		border-color: $text-color;
+	}
 }
