@@ -15,10 +15,10 @@
 	background-color: $header-background-color;
 
 	&::before {
-		@include community-header-gradient($header-background-color, $wds-community-header-background-width);
+		@include community-header-gradient($header-background-color, 200px, $wds-community-header-background-width);
 
 		@media #{$wds-breakpoint-l-down} {
-			@include community-header-gradient($header-background-color, $wds-community-header-background-width-small-breakpoint);
+			@include community-header-gradient($header-background-color, 200px, $wds-community-header-background-width-small-breakpoint);
 		}
 	}
 
