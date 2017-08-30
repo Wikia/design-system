@@ -1,0 +1,90 @@
+/* Layout independent classes */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	grid-area: header;
+	border: 1px solid orange;
+}
+
+nav {
+	grid-area: nav;
+	border: 1px solid fuchsia;
+}
+
+main {
+	grid-area: main;
+	border: 1px solid green;
+}
+
+aside {
+	grid-area: aside;
+	border: 1px solid blue;
+}
+
+footer {
+	grid-area: footer;
+	border: 1px solid purple;
+}
+
+aside > div {
+	border: 1px dashed red;
+}
+
+/* Layout definitions */
+/* Small */
+body {
+	grid-template-areas:
+		"header header header header header header header header header header header header header header"
+		"nav nav nav nav nav nav nav nav nav nav nav nav nav nav"
+		". main main main main main main main main main main main main ."
+		". aside aside aside aside aside aside aside aside aside aside aside aside ."
+		"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+	;
+}
+
+/* Medium */
+@media only screen and (min-width: 768px)  {
+	body {
+		grid-template-areas:
+			"header header header header header header header header header header header header header header"
+			"nav nav nav nav nav nav nav nav nav nav nav nav nav nav"
+			". . main main main main main main main main main main . ."
+			". . aside aside aside aside aside aside aside aside aside aside . ."
+			"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+		;
+	}
+
+	aside {
+		grid-template-columns: repeat(3, auto);
+	}
+}
+
+/* Large */
+@media only screen and (min-width: 1024px)  {
+	body {
+		grid-template-areas:
+			"header header header header header header header header header header header header header header"
+			"nav nav nav nav nav nav nav nav nav nav nav nav nav nav"
+			". main main main main main main main main aside aside aside aside ."
+			"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+		;
+	}
+}
+
+/* Extra Large */
+@media only screen and (min-width: 1440px)  {
+	body {
+		grid-template-areas:
+			"header header header header header header header header header header header header header header"
+			"nav nav nav nav nav nav nav nav nav nav nav nav nav nav"
+			". . main main main main main main main aside aside aside . ."
+			"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+		;
+	}
+}
