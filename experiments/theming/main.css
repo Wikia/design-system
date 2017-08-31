@@ -1,0 +1,57 @@
+/* Themeable elements... */
+body {
+	/* Older browsers (e.g. IE 11) should get a sensible fallback.  In real life, these would use the WDS SASS variables. */
+	/* For now, though, we'll just hardcode the fallbacks. */
+	background-color: #f6f6f6;
+	background-color: var(--wds-theme-color-c2);
+	color: #333;
+	color: var(--wds-theme-color-c6);
+}
+
+button {
+	background-color: #00acac;
+	background-color: var(--wds-theme-color-link);
+	color: #f6f6f6;
+	color: var(--wds-theme-color-c2);
+}
+
+button:hover {
+	background-color: #008989;
+	background-color: var(--wds-theme-color-link-hover);
+}
+
+a {
+	color: #00acac;
+	color: var(--wds-theme-color-link);
+}
+
+a:hover {
+	color: #008989;
+	color: var(--wds-theme-color-link-hover);
+}
+
+hr {
+	color: #e6e6e6;
+	color: var(--wds-theme-color-c3);
+}
+
+.card {
+	border: 1px solid #ccc;
+	border: 1px solid var(--wds-theme-color-c4);
+	background-color: #262626;
+	background-color: var(--wds-theme-color-c1);
+	width: 50%;
+	margin: auto;
+	padding: 1rem;
+}
+
+h1 {
+	color: #666666;
+	color: var(--wds-theme-color-c7);
+}
+
+.upvoted {
+	background-color: #e3bd00;
+	background-color: var(--wds-theme-color-c8);
+	padding: 0.25rem;
+}
