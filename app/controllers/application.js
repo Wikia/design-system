@@ -89,6 +89,10 @@ export default Controller.extend({
 				{
 					name: 'Tabs',
 					location: 'route-components.tabs'
+				},
+				{
+					name: 'Banner notifications',
+					location: 'route-components.banner-notifications'
 				}
 			]
 		},
