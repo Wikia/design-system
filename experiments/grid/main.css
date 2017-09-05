@@ -93,10 +93,6 @@ article > aside {
 	margin: 0;
 }
 
-.article-section > section {
-	border: 1px solid red;
-}
-
 /* $wds-breakpoint-m */
 @media only screen and (min-width: 768px) {
 	article > aside {
