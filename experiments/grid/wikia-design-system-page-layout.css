@@ -1,0 +1,45 @@
+/* NOTE: There's discussion happening right now on what the appropriate set of breakpoints should be.  For this
+experiment, I've picked the set that's on http://fandomdesignsystem.com/#/base-styles/breakpoints at time of writing,
+minus the 1084px breakpoint (because it's almost certainly going to be removed/replaced).
+ */
+
+/* $wds-breakpoint-s */
+.wds-content-well {
+	width: 100%;
+}
+
+.wds-has-right-rail > section {
+	display: none;
+}
+
+/* $wds-breakpoint-m */
+@media (min-width: 768px) {
+}
+
+/* $wds-breakpoint-l */
+@media (min-width: 1024px) {
+	.wds-content-well {
+		margin: auto;
+		max-width: 1004px;
+	}
+
+	.wds-has-right-rail {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.wds-has-right-rail > section {
+		display: block;
+		width: 300px;
+		flex-shrink: 0;
+		margin-left: 0;
+		margin-right: var(--wds-grid-margin);
+	}
+}
+
+/* $wds-breakpoint-xxl */
+@media (min-width: 1596px) {
+	.wds-content-well {
+		max-width: 1238px;
+	}
+}

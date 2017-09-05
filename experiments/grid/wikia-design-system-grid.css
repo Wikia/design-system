@@ -1,9 +1,23 @@
-/* Small */
-.wds-page-grid {
+/* NOTE: to support older browsers, sensible defaults will need to be added anywhere these CSS custom properties
+are used. This fallback behavior is better demonstrated in the 'theming' experiment, and is omitted here for brevity. */
+
+/* NOTE: There's discussion happening right now on what the appropriate set of breakpoints should be.  For this
+experiment, I've picked the set that's on http://fandomdesignsystem.com/#/base-styles/breakpoints at time of writing,
+minus the 1084px breakpoint (because it's almost certainly going to be removed/replaced).
+ */
+
+/* $wds-breakpoint-s */
+:root {
+	--wds-grid-margin: 12px;
+	--wds-gutter-width: 5px;
+}
+
+.wds-content-grid {
 	display: grid;
-	grid-template-columns: 13px repeat(12, 1fr) 13px;
+	margin: 0 var(--wds-grid-margin);
+	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: auto;
-	grid-column-gap: 5px;
+	grid-column-gap: var(--wds-gutter-width);
 	grid-row-gap: 0;
 	justify-items: stretch;
 	align-items: stretch;
@@ -11,36 +25,29 @@
 	align-content: stretch;
 }
 
-/* Medium */
-@media only screen and (min-width: 768px)  {
-	.wds-page-grid {
-		grid-column-gap: 12px;
-		grid-template-columns: 6px repeat(12, 1fr) 6px;
+/* $wds-breakpoint-m */
+@media (min-width: 768px) {
+	:root {
+		--wds-grid-margin: 18px;
+		--wds-gutter-width: 12px;
 	}
 }
 
-/* Large */
-@media only screen and (min-width: 1024px)  {
-	.wds-page-grid {
-		grid-template-columns: 4px repeat(12, 1fr) 4px;
-		grid-column-gap: 16px;
+/* $wds-breakpoint-l */
+@media (min-width: 1024px) {
+	:root {
+		--wds-grid-margin: 20px;
+		--wds-gutter-width: 12px;
+	}
+
+	.wds-content-grid {
+		grid-template-columns: repeat(12, 1fr);
 	}
 }
 
-/* Extra Large */
-@media only screen and (min-width: 1440px)  {
-	.wds-page-grid {
-		grid-template-columns: 5px repeat(12, 1fr) 5px;
-		grid-column-gap: 25px;
+/* $wds-breakpoint-xxl */
+@media (min-width: 1596px) {
+	:root {
+		--wds-gutter-width: 25px;
 	}
-}
-
-.wds-subgrid {
-	display: grid;
-	grid-column-gap: 0;
-	grid-row-gap: 0;
-	justify-items: stretch;
-	align-items: stretch;
-	justify-content: stretch;
-	align-content: stretch;
 }

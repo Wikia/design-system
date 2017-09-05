@@ -5,100 +5,232 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Grid Experiment</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="wikia-design-system-page-layout.css">
 	<link rel="stylesheet" href="wikia-design-system-grid.css">
 	<link rel="stylesheet" href="main.css">
+	<script>
+		function onRemoveBorders() {
+			const elements = document.body.getElementsByTagName("*");
+			for (let i = 0; i < elements.length; i++) {
+				elements[i].style.border = 'none';
+			}
+
+			document.getElementById('removeBorders').style.display = 'none';
+		}
+	</script>
 </head>
-<body class="wds-page-grid">
+<body>
 <header>
-	<h1>I'm a header</h1>
+	<section class="wds-content-well">
+		<section class="wds-content-grid">
+			<div>Header section 1</div>
+			<div>Header section 2</div>
+			<div>Header section 3</div>
+		</section>
+	</section>
 </header>
-<nav>
-	I'm some navigation.
+<nav class="wds-content-well">
+	<section class="wds-content-grid">
+		<div>Nav section 1</div>
+		<div>Nav section 2</div>
+		<div>Nav section 3</div>
+		<div>Nav section 4</div>
+		<div>Nav section 5</div>
+		<div>Nav section 6</div>
+		<div>Nav section 7</div>
+		<div>Nav section 8</div>
+		<div>Nav section 9</div>
+		<div>Nav section 10</div>
+		<div>Nav section 11</div>
+		<div>Nav section 12</div>
+	</section>
 </nav>
-<main>
-	<div>
-		Things to look for in this demo:
-		<ul>
-			<li>
-				Layout changes as the browser width changes
-			</li>
-			<li>
-				The aside (with the 3 elements) is 3 separate lines when in Small format, and broken into a 3-column grid for larger layouts.
-			</li>
-		</ul>
-	</div>
-	<p>
-		Biodiesel chambray church-key hashtag tumeric. Put a bird on it plaid vinyl bitters synth slow-carb. Hella
-		try-hard godard thundercats tousled, activated charcoal fixie keytar bespoke organic helvetica man braid
-		glossier. Swag hexagon kale chips tumblr stumptown, XOXO farm-to-table venmo tote bag yr fanny pack cardigan
-		jianbing. Austin flannel meh, you probably haven't heard of them raw denim prism lyft hella kale chips
-		cold-pressed fanny pack umami swag ramps. Cloud bread glossier try-hard craft beer literally. Try-hard
-		gastropub mixtape kitsch retro hashtag. Butcher chia shoreditch gastropub stumptown. DIY semiotics brooklyn
-		heirloom food truck enamel pin. Unicorn pop-up plaid vegan artisan forage VHS enamel pin XOXO lyft.
-		Stumptown truffaut activated charcoal viral, tumblr tacos messenger bag gastropub flexitarian XOXO taiyaki
-		enamel pin tofu neutra. Williamsburg put a bird on it austin, chartreuse beard tumeric 8-bit tofu whatever
-		listicle. You probably haven't heard of them narwhal kitsch tofu fashion axe pinterest tote bag austin
-		direct trade vice lo-fi williamsburg. Butcher tumblr activated charcoal selvage knausgaard pitchfork.
-	</p>
-	<p>
-		Farm-to-table butcher lomo keffiyeh PBR&B. Pour-over typewriter celiac squid, four loko retro hella. Yr
-		humblebrag tilde poke gochujang cardigan food truck craft beer bitters. Tumeric farm-to-table tousled squid
-		enamel pin lomo chambray hammock keytar. Woke cronut portland schlitz 90's before they sold out craft beer
-		distillery organic meggings thundercats. Cloud bread occupy chia copper mug. Viral photo booth direct trade
-		irony sustainable beard. Waistcoat listicle shoreditch, farm-to-table yr shabby chic tilde man braid
-		live-edge kinfolk synth chillwave before they sold out art party snackwave. Man bun fanny pack health goth
-		shoreditch bicycle rights put a bird on it butcher everyday carry shabby chic pabst mustache heirloom yr
-		farm-to-table slow-carb. Sustainable PBR&B semiotics lomo iceland chillwave authentic beard vegan seitan
-		franzen. Fingerstache cardigan four dollar toast tacos prism 3 wolf moon.
-	</p>
-	<p>
+<section class="wds-content-well">
+	<section class="article-section wds-has-right-rail">
+		<main class="wds-content-grid">
+			<article>
+				<aside>
+					<p>This is an infobox or something.</p>
+					<p>Unfortunately, it can't have layout on the grid, because there's no
+						way to have content flow around it. (i.e. there can be no "L-shaped" or "T-shaped" grid
+						areas, and 'float' is meaningless in the grid context).</p>
+					<p>This is really only an issue on tablet sizes. For mobile, the infobox would expand to fill the
+						whole width, so it's already appropriately dynamic. For desktop sizes, the content well is a
+						fixed size, so we can set the width of the infobox to match the grid width. In tablet, though,
+						the grid changes size depending on the width of the viewport, so we don't actually know how wide
+						to make the infobox to make it match the grid in the article area.</p>
+				</aside>
+				<div>
+					<button id="removeBorders">Remove Borders</button>
+				</div>
+				<div>
+					Things to look for in this demo:
+					<ul>
+						<li>
+							Layout changes as the browser width changes
+						</li>
+						<li>
+							The header, footer, and nav all use the grid, so sections are always lined up nicely
+						</li>
+						<li>
+							The article section has its own grid, which intentionally doesn't line up with the others,
+							due to its different width
+						</li>
+						<li>
+							All spacing done with either margins or the grid, for greater consistency of layout
+						</li>
+						<li>
+							Appropriate semantic element usage
+						</li>
+						<li>
+							Infobox moves around in the layout as appropriate
+						</li>
+						<li>
+							The right rail disappears at mobile and tablet sizes
+						</li>
+						<li>
+							The grid is 6 columns on mobile and tablet, and 12 columns on larger viewports.
+						</li>
+					</ul>
+				</div>
+				<p>
+					Biodiesel chambray church-key hashtag tumeric. Put a bird on it plaid vinyl bitters synth slow-carb.
+					Hella
+					try-hard godard thundercats tousled, activated charcoal fixie keytar bespoke organic helvetica man
+					braid
+					glossier. Swag hexagon kale chips tumblr stumptown, XOXO farm-to-table venmo tote bag yr fanny pack
+					cardigan
+					jianbing. Austin flannel meh, you probably haven't heard of them raw denim prism lyft hella kale
+					chips
+					cold-pressed fanny pack umami swag ramps. Cloud bread glossier try-hard craft beer literally.
+					Try-hard
+					gastropub mixtape kitsch retro hashtag. Butcher chia shoreditch gastropub stumptown. DIY semiotics
+					brooklyn
+					heirloom food truck enamel pin. Unicorn pop-up plaid vegan artisan forage VHS enamel pin XOXO lyft.
+					Stumptown truffaut activated charcoal viral, tumblr tacos messenger bag gastropub flexitarian XOXO
+					taiyaki
+					enamel pin tofu neutra. Williamsburg put a bird on it austin, chartreuse beard tumeric 8-bit tofu
+					whatever
+					listicle. You probably haven't heard of them narwhal kitsch tofu fashion axe pinterest tote bag
+					austin
+					direct trade vice lo-fi williamsburg. Butcher tumblr activated charcoal selvage knausgaard
+					pitchfork.
+				</p>
+				<p>
+					Farm-to-table butcher lomo keffiyeh PBR&B. Pour-over typewriter celiac squid, four loko retro hella.
+					Yr
+					humblebrag tilde poke gochujang cardigan food truck craft beer bitters. Tumeric farm-to-table
+					tousled
+					squid
+					enamel pin lomo chambray hammock keytar. Woke cronut portland schlitz 90's before they sold out
+					craft
+					beer
+					distillery organic meggings thundercats. Cloud bread occupy chia copper mug. Viral photo booth
+					direct
+					trade
+					irony sustainable beard. Waistcoat listicle shoreditch, farm-to-table yr shabby chic tilde man braid
+					live-edge kinfolk synth chillwave before they sold out art party snackwave. Man bun fanny pack
+					health
+					goth
+					shoreditch bicycle rights put a bird on it butcher everyday carry shabby chic pabst mustache
+					heirloom yr
+					farm-to-table slow-carb. Sustainable PBR&B semiotics lomo iceland chillwave authentic beard vegan
+					seitan
+					franzen. Fingerstache cardigan four dollar toast tacos prism 3 wolf moon.
+				</p>
+				<p>
 
-		Shaman man braid synth gastropub paleo raw denim cred, taiyaki irony. Direct trade organic craft beer,
-		portland wayfarers next level keytar freegan selvage hashtag thundercats VHS meh. Glossier bitters banjo
-		tousled, tacos keytar tilde echo park crucifix meditation copper mug selfies. Neutra roof party photo booth
-		ramps synth, 90's iceland vaporware tote bag. Tattooed cred lyft distillery quinoa bitters food truck man
-		braid adaptogen DIY chambray XOXO keytar unicorn. Irony fixie schlitz cold-pressed jean shorts, ramps
-		listicle. You probably haven't heard of them meggings pinterest master cleanse, live-edge franzen distillery
-		tumeric VHS williamsburg +1 paleo. Bushwick cronut skateboard kale chips paleo synth. Snackwave stumptown
-		dreamcatcher, before they sold out kombucha 3 wolf moon hot chicken etsy air plant coloring book offal ugh
-		williamsburg pug. Franzen four dollar toast coloring book quinoa pour-over etsy fingerstache art party. Pok
-		pok disrupt vexillologist meditation schlitz, sartorial copper mug umami cornhole celiac cronut lumbersexual
-		lomo neutra.
-	</p>
-	<p>
+					Shaman man braid synth gastropub paleo raw denim cred, taiyaki irony. Direct trade organic craft
+					beer,
+					portland wayfarers next level keytar freegan selvage hashtag thundercats VHS meh. Glossier bitters
+					banjo
+					tousled, tacos keytar tilde echo park crucifix meditation copper mug selfies. Neutra roof party
+					photo
+					booth
+					ramps synth, 90's iceland vaporware tote bag. Tattooed cred lyft distillery quinoa bitters food
+					truck
+					man
+					braid adaptogen DIY chambray XOXO keytar unicorn. Irony fixie schlitz cold-pressed jean shorts,
+					ramps
+					listicle. You probably haven't heard of them meggings pinterest master cleanse, live-edge franzen
+					distillery
+					tumeric VHS williamsburg +1 paleo. Bushwick cronut skateboard kale chips paleo synth. Snackwave
+					stumptown
+					dreamcatcher, before they sold out kombucha 3 wolf moon hot chicken etsy air plant coloring book
+					offal
+					ugh
+					williamsburg pug. Franzen four dollar toast coloring book quinoa pour-over etsy fingerstache art
+					party.
+					Pok
+					pok disrupt vexillologist meditation schlitz, sartorial copper mug umami cornhole celiac cronut
+					lumbersexual
+					lomo neutra.
+				</p>
+				<p>
 
-		Shabby chic kinfolk blue bottle, chicharrones vape ugh sustainable tofu put a bird on it iPhone live-edge
-		gochujang. You probably haven't heard of them ethical farm-to-table distillery iceland. Meggings heirloom
-		craft beer butcher, sartorial hot chicken distillery meh cray franzen church-key next level subway tile.
-		Shoreditch blog pickled actually. Selvage asymmetrical kickstarter neutra butcher meh swag ethical kitsch
-		pop-up try-hard literally. Selvage cloud bread dreamcatcher lomo unicorn man bun activated charcoal. Banjo
-		vexillologist +1 wolf, iPhone food truck selvage copper mug subway tile messenger bag humblebrag air plant.
-		Green juice palo santo bitters, raw denim hexagon flannel pug cardigan kale chips street art. Twee PBR&B
-		lumbersexual, letterpress VHS subway tile taiyaki 8-bit. Sustainable blue bottle listicle humblebrag
-		vaporware cardigan lyft. Scenester iceland kitsch seitan skateboard artisan kale chips. Cray migas echo park
-		raw denim poutine. DIY typewriter gluten-free, flexitarian ugh meditation gentrify trust fund lomo.
-	</p>
-	<p>
+					Shabby chic kinfolk blue bottle, chicharrones vape ugh sustainable tofu put a bird on it iPhone
+					live-edge
+					gochujang. You probably haven't heard of them ethical farm-to-table distillery iceland. Meggings
+					heirloom
+					craft beer butcher, sartorial hot chicken distillery meh cray franzen church-key next level subway
+					tile.
+					Shoreditch blog pickled actually. Selvage asymmetrical kickstarter neutra butcher meh swag ethical
+					kitsch
+					pop-up try-hard literally. Selvage cloud bread dreamcatcher lomo unicorn man bun activated charcoal.
+					Banjo
+					vexillologist +1 wolf, iPhone food truck selvage copper mug subway tile messenger bag humblebrag air
+					plant.
+					Green juice palo santo bitters, raw denim hexagon flannel pug cardigan kale chips street art. Twee
+					PBR&B
+					lumbersexual, letterpress VHS subway tile taiyaki 8-bit. Sustainable blue bottle listicle humblebrag
+					vaporware cardigan lyft. Scenester iceland kitsch seitan skateboard artisan kale chips. Cray migas
+					echo
+					park
+					raw denim poutine. DIY typewriter gluten-free, flexitarian ugh meditation gentrify trust fund lomo.
+				</p>
+				<p>
 
-		Cray four loko keytar venmo pok pok vegan edison bulb pitchfork. Subway tile PBR&B put a bird on it kale
-		chips tbh. Blue bottle migas ramps slow-carb portland, taiyaki iPhone. XOXO celiac truffaut microdosing
-		quinoa cold-pressed tousled vape bespoke knausgaard roof party health goth. Swag offal succulents copper
-		mug, palo santo schlitz literally franzen banh mi gochujang. Snackwave keytar roof party you probably
-		haven't heard of them, raclette chambray cornhole la croix plaid banh mi yr copper mug heirloom direct
-		trade. Prism whatever church-key readymade, flexitarian polaroid mixtape kale chips. Flannel skateboard
-		health goth austin, vexillologist swag tattooed. Tousled raclette air plant, retro godard whatever street
-		art bespoke. Kitsch forage locavore, jianbing tilde fanny pack food truck knausgaard literally shaman
-		cardigan +1 listicle health goth normcore. Try-hard normcore 8-bit, banh mi selfies tbh snackwave. Neutra
-		four loko chambray yuccie vegan scenester tumblr hoodie hell of crucifix cred poke la croix taxidermy pabst.
-	</p>
-</main>
-<aside class="wds-subgrid">
-	<div>This is subgrid 1</div>
-	<div>This is subgrid 2</div>
-	<div>This is subgrid 3</div>
-</aside>
+					Cray four loko keytar venmo pok pok vegan edison bulb pitchfork. Subway tile PBR&B put a bird on it
+					kale
+					chips tbh. Blue bottle migas ramps slow-carb portland, taiyaki iPhone. XOXO celiac truffaut
+					microdosing
+					quinoa cold-pressed tousled vape bespoke knausgaard roof party health goth. Swag offal succulents
+					copper
+					mug, palo santo schlitz literally franzen banh mi gochujang. Snackwave keytar roof party you
+					probably
+					haven't heard of them, raclette chambray cornhole la croix plaid banh mi yr copper mug heirloom
+					direct
+					trade. Prism whatever church-key readymade, flexitarian polaroid mixtape kale chips. Flannel
+					skateboard
+					health goth austin, vexillologist swag tattooed. Tousled raclette air plant, retro godard whatever
+					street
+					art bespoke. Kitsch forage locavore, jianbing tilde fanny pack food truck knausgaard literally
+					shaman
+					cardigan +1 listicle health goth normcore. Try-hard normcore 8-bit, banh mi selfies tbh snackwave.
+					Neutra
+					four loko chambray yuccie vegan scenester tumblr hoodie hell of crucifix cred poke la croix
+					taxidermy
+					pabst.
+				</p>
+			</article>
+		</main>
+		<section>
+			<div>This is the right rail, probably has an ad. It's fixed to 300px wide, regardless of context.</div>
+		</section>
+	</section>
+</section>
 <footer>
-	I'm the footer.
+	<section class="wds-content-well">
+		<section class="wds-content-grid">
+			<div>I'm the footer.</div>
+			<div>Footer section 1</div>
+			<div>Footer section 2</div>
+			<div>Footer section 3</div>
+		</section>
+	</section>
 </footer>
+<script>
+	document.getElementById('removeBorders').addEventListener('click', onRemoveBorders);
+</script>
 </body>
 </html>

@@ -7,84 +7,110 @@ body {
 	margin: 0;
 }
 
+body > section {
+	border: 1px solid black;
+}
+
 header {
-	grid-area: header;
 	border: 1px solid orange;
 }
 
+header > section {
+	border: 1px dashed orange;
+}
+
+header > section > section {
+	border: 1px dotted orange;
+	overflow: hidden;
+}
+
+header > section > section > div {
+	border: 1px dotted orange;
+	overflow: hidden;
+}
+
 nav {
-	grid-area: nav;
 	border: 1px solid fuchsia;
 }
 
-main {
-	grid-area: main;
+nav > section {
+	border: 1px dashed fuchsia;
+	overflow: hidden;
+}
+
+nav > section > div {
+	border: 1px dotted fuchsia;
+	overflow: hidden;
+}
+
+article {
+	grid-area: article;
 	border: 1px solid green;
 }
 
 aside {
-	grid-area: aside;
 	border: 1px solid blue;
 }
 
 footer {
-	grid-area: footer;
 	border: 1px solid purple;
 }
 
-aside > div {
-	border: 1px dashed red;
+footer > section {
+	border: 1px dashed purple;
+}
+
+footer > section > section {
+	border: 1px dotted purple;
+	overflow: hidden;
+}
+
+footer > section > section > div {
+	border: 1px dotted purple;
+	overflow: hidden;
+}
+
+.article-section > section {
+	border: 1px solid red;
 }
 
 /* Layout definitions */
-/* Small */
-body {
-	grid-template-areas:
-		"header header header header header header header header header header header header header header"
-		"nav nav nav nav nav nav nav nav nav nav nav nav nav nav"
-		". main main main main main main main main main main main main ."
-		". aside aside aside aside aside aside aside aside aside aside aside aside ."
-		"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
-	;
+
+/* NOTE: There's discussion happening right now on what the appropriate set of breakpoints should be.  For this
+experiment, I've picked the set that's on http://fandomdesignsystem.com/#/base-styles/breakpoints at time of writing,
+minus the 1084px breakpoint (because it's almost certainly going to be removed/replaced).
+ */
+
+/* $wds-breakpoint-s */
+main {
+	border: 1px solid gray;
+	grid-template-areas: "article article article article article article article article article article article article";
 }
 
-/* Medium */
-@media only screen and (min-width: 768px)  {
-	body {
-		grid-template-areas:
-			"header header header header header header header header header header header header header header"
-			"nav nav nav nav nav nav nav nav nav nav nav nav nav nav"
-			". . main main main main main main main main main main . ."
-			". . aside aside aside aside aside aside aside aside aside aside . ."
-			"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
-		;
-	}
-
-	aside {
-		grid-template-columns: repeat(3, auto);
-	}
+article > aside {
+	height: 25rem;
+	width: 100%;
+	margin: 0;
 }
 
-/* Large */
-@media only screen and (min-width: 1024px)  {
-	body {
-		grid-template-areas:
-			"header header header header header header header header header header header header header header"
-			"nav nav nav nav nav nav nav nav nav nav nav nav nav nav"
-			". main main main main main main main main aside aside aside aside ."
-			"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
-		;
+.article-section > section {
+	border: 1px solid red;
+}
+
+/* $wds-breakpoint-m */
+@media only screen and (min-width: 768px) {
+	article > aside {
+		float: right;
+		width: 300px;
+		margin-left: var(--wds-grid-margin);
+		margin-bottom: var(--wds-grid-margin);
 	}
 }
 
-/* Extra Large */
-@media only screen and (min-width: 1440px)  {
-	body {
-		grid-template-areas:
-			"header header header header header header header header header header header header header header"
-			"nav nav nav nav nav nav nav nav nav nav nav nav nav nav"
-			". . main main main main main main main aside aside aside . ."
-			"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
-		;
-	}
+/* $wds-breakpoint-l */
+@media only screen and (min-width: 1024px) {
+}
+
+/* $wds-breakpoint-xxl */
+@media only screen and (min-width: 1596px) {
 }
