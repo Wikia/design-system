@@ -75,6 +75,10 @@ export default Controller.extend({
 					location: 'route-components.buttons'
 				},
 				{
+					name: 'Toggles',
+					location: 'route-components.toggles'
+				},
+				{
 					name: 'Dropdowns',
 					location: 'route-components.dropdowns'
 				},
