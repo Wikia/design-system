@@ -19,6 +19,22 @@
 
 	{{#component-demo}}
 		<input type="checkbox" id="toggleB" class="wds-switch__input">
-		<label for="toggleB" class="wds-switch__label">Autoplay</label>
+		<label for="toggleB" class="wds-switch__label">Slide me if you wish</label>
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2 id="text-only">Disabled toggle</h2>
+
+	{{#component-demo}}
+		<input type="checkbox" id="toggleDisabled" class="wds-switch__input" disabled>
+		<label for="toggleDisabled" class="wds-switch__label">Yep I'm disabled</label>
+	{{/component-demo}}
+
+	<h2 id="text-only">Disabled and checked toggle</h2>
+
+	{{#component-demo}}
+		<input type="checkbox" id="toggleDisabled" class="wds-switch__input" disabled checked>
+		<label for="toggleDisabled" class="wds-switch__label">Yep I'm disabled</label>
 	{{/component-demo}}
 </section>
