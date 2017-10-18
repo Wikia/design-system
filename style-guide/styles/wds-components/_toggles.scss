@@ -62,5 +62,15 @@
 				background-color: lighten($wds-color-light-c2, 20%);
 			}
 		}
+
+		.wds-switch__input:disabled:checked + & {
+			&:before {
+				background-color: lighten($wds-color-link, 40%);
+			}
+
+			&:after {
+				background-color: lighten($wds-color-link, 20%);
+			}
+		}
 	}
 }
