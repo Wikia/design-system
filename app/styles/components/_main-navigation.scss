@@ -1,7 +1,9 @@
 .main-navigation {
 	color: $wds-color-dark-blue-gray;
 	float: left;
+	height: 100vh;
 	max-width: 220px;
+	overflow-y: auto;
 	width: 25%;
 
 	.wds-list {
