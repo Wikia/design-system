@@ -1,13 +1,13 @@
 @import '../wds-variables/colors';
 
-.wds-switch {
+.wds-toggle {
 	&__input {
 		display: none;
 	}
 
 	&__label {
 		cursor: pointer;
-		font-size: 16px;
+		font-size: $wds-typescale-size-base;
 		padding: 7px 5px 7px 52px;
 		position: relative;
 
@@ -15,17 +15,17 @@
 			padding-left: 45px;
 		}
 
-		&:before, &:after {
+		&::before, &::after {
 			content: '';
 			margin: 0;
 			outline: 0;
 			position: absolute;
 			top: 50%;
-			transform: translate(0, -50%);
-			transition: all 0.3s ease;
+			transform: translateY(-50%);
+			transition: all .3s ease;
 		}
 
-		&:before {
+		&::before {
 			background-color: $wds-color-light-c5;
 			border-radius: 8px;
 			height: 14px;
@@ -33,42 +33,42 @@
 			width: 34px;
 		}
 
-		&:after {
+		&::after {
 			background-color: $wds-color-light-c2;
 			border-radius: 50%;
-			box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+			box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
 			height: 20px;
 			left: 5px;
 			width: 20px;
 		}
 
-		.wds-switch__input:checked + &:before {
+		.wds-toggle__input:checked + &::before {
 			background-color: lighten($wds-color-link, 30%);
 		}
 
-		.wds-switch__input:checked + &:after {
+		.wds-toggle__input:checked + &::after {
 			background-color: $wds-color-link;
 			transform: translate(80%, -50%);
 		}
 
-		.wds-switch__input:disabled + & {
+		.wds-toggle__input:disabled + & {
 			color: $wds-color-light-c4;
 
-			&:before {
+			&::before {
 				background-color: lighten($wds-color-light-c5, 20%);
 			}
 
-			&:after {
+			&::after {
 				background-color: lighten($wds-color-light-c2, 20%);
 			}
 		}
 
-		.wds-switch__input:disabled:checked + & {
-			&:before {
+		.wds-toggle__input:disabled:checked + & {
+			&::before {
 				background-color: lighten($wds-color-link, 40%);
 			}
 
-			&:after {
+			&::after {
 				background-color: lighten($wds-color-link, 20%);
 			}
 		}
