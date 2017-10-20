@@ -35,6 +35,7 @@ Router.map(function () {
 		this.route('assets');
 		this.route('avatars');
 		this.route('buttons');
+		this.route('toggles');
 		this.route('dropdowns');
 		this.route('lists');
 		this.route('progress-indicators');
