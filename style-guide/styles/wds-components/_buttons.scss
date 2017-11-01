@@ -1,12 +1,10 @@
 .wds-button {
-	$button-squished-padding-horizontal: 12px;
-	$line-height: 1.3em;
-
 	@include button-theming($wds-color-link, $wds-color-white);
 
 	align-items: center;
 	border-style: solid;
-	border-width: $wds-button-border-width;
+	border-width: 1px;
+	border-radius: $wds-rounded-corner-radius;
 	box-sizing: content-box;
 	cursor: default;
 	display: inline-flex;
@@ -14,18 +12,18 @@
 	font-weight: 600;
 	justify-content: center;
 	letter-spacing: .15px;
-	line-height: $line-height;
+	line-height: 16px;
 	margin: 0;
 	min-height: $wds-icon-small-size;
 	outline: none;
-	padding: 14px $wds-button-padding-horizontal;
+	padding: 7px 18px;
 	text-decoration: none;
 	text-transform: uppercase;
 	transition-duration: $wds-button-transition-duration;
 	transition-property: background-color, border-color, color;
 	vertical-align: top;
 	-webkit-appearance: none;
-	-webkit-border-radius: 0;
+	-webkit-border-radius: $wds-rounded-corner-radius;
 
 	@at-root button#{&}, a#{&} {
 		cursor: pointer;
@@ -42,25 +40,12 @@
 		text-decoration: none;
 	}
 
-	&.wds-is-squished {
-		font-size: $wds-typescale-size-minus-3;
-		padding: 7px $button-squished-padding-horizontal;
-
-		.wds-dropdown__toggle {
-			height: 13px;
-		}
-	}
-
-	&.wds-is-stretched {
-		padding: 28px 18px 27px;
-	}
-
 	&.wds-is-full-width {
 		display: flex;
 	}
 
 	&.wds-is-square {
-		@include square(45px);
+		@include square(36px);
 
 		align-items: center;
 		display: inline-flex;
@@ -77,7 +62,7 @@
 		pointer-events: none;
 
 		&:not(:only-child) {
-			margin-right: $wds-button-padding-horizontal / 2;
+			margin-right: 6px;
 		}
 	}
 

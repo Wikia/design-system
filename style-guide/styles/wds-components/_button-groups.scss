@@ -10,6 +10,17 @@
 		height: auto;
 		margin-left: auto;
 		margin-right: -1px;
+		border-radius: 0;
+
+		&:first-child {
+			border-top-left-radius: $wds-rounded-corner-radius;
+			border-bottom-left-radius: $wds-rounded-corner-radius;
+		}
+
+		&:last-child {
+			border-top-right-radius: $wds-rounded-corner-radius;
+			border-bottom-right-radius: $wds-rounded-corner-radius;
+		}
 
 		//on hover we want to show whole border of a button
 		&:hover {

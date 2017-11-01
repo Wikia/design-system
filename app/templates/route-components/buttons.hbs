@@ -117,107 +117,6 @@
 </section>
 
 <section>
-	<h2 id="sizes:regular">Button sizes: regular</h2>
-	<p>Size of the button of any aforementioned variant can be adjusted. These are the default sizes of the buttons —
-		for comparison.</p>
-	{{#component-demo}}
-		{{#wds-button}}Primary{{/wds-button}}
-		{{#wds-button}}
-			{{wds-icon name='fandom-heart' size='small'}}
-			<span>Primary button</span>
-		{{/wds-button}}
-
-		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle tagName='button' class='wds-button'}}
-				<span>Dropdown</span>
-			{{/dropdown.toggle}}
-			{{#dropdown.content}}
-				<ul class="wds-list">
-					<li>List item 1</li>
-					<li>List item 2</li>
-					<li>List item 3</li>
-				</ul>
-			{{/dropdown.content}}
-		{{/wds-dropdown}}
-		{{#wds-button class='wds-is-secondary'}}Secondary{{/wds-button}}
-		{{#wds-button class='wds-is-text'}}Text{{/wds-button}}
-	{{/component-demo}}
-</section>
-
-<section>
-	<h2 id="sizes:squished">Button sizes: squished</h2>
-	<p>To make the button smaller use <code class="format-code">.wds-is-squished</code> class. This can help with
-		fitting a button in tighter layouts.</p>
-	{{#component-demo}}
-		{{#wds-button class='wds-is-squished'}}Primary{{/wds-button}}
-		{{#wds-button class='wds-is-squished'}}
-			{{wds-icon name='fandom-heart' size='small'}}
-			<span>Primary</span>
-		{{/wds-button}}
-
-		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle tagName='button' class='wds-button wds-is-squished'}}
-				<span>Dropdown</span>
-			{{/dropdown.toggle}}
-			{{#dropdown.content}}
-				<ul class="wds-list">
-					<li>List item 1</li>
-					<li>List item 2</li>
-					<li>List item 3</li>
-				</ul>
-			{{/dropdown.content}}
-		{{/wds-dropdown}}
-		{{#wds-button class='wds-is-secondary wds-is-squished'}}Secondary{{/wds-button}}
-		{{#wds-button class='wds-is-text wds-is-squished'}}Text{{/wds-button}}
-	{{/component-demo}}
-	<p class="warning-note">
-		<strong>Important note:</strong> for readability purposes we use different styling for squished button in Global
-		Navigation for Chinese - the font is larger and has bold removed.
-		This is why in <code class="format-code">/scss/wds-components/_global-navigation.scss</code> you will find the
-		following piece of code:
-		{{#code-sample language='scss'}}
-html[lang^='zh'] &__start-a-wiki-button {
-	font-size: 12px;
-	font-weight: 400;
-	padding: 9px 12px 8px;
-}
-		{{/code-sample}}
-
-		Please remember, that this solution is only single-use and temporary. It is not recommended to apply it as a
-		common solution in other places/components.
-		If it becomes a broader issue, more versatile and maintainable solution must be implemented.
-	</p>
-</section>
-
-<section>
-	<h2 id="sizes:stretched">Button sizes: stretched</h2>
-	<p>For a button greater in size use <code class="format-code">.wds-is-stretched</code> class. This may come in handy
-		to draw more user's attention to the button and increase the clickable area around the label.</p>
-	{{#component-demo}}
-		{{#wds-button class='wds-is-stretched'}}Primary{{/wds-button}}
-		{{#wds-button class='wds-is-stretched'}}
-			{{wds-icon name='fandom-heart' size='small'}}
-			<span>Primary button</span>
-		{{/wds-button}}
-
-		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle tagName='button' class='wds-button wds-is-stretched'}}
-				<span>Dropdown</span>
-			{{/dropdown.toggle}}
-			{{#dropdown.content}}
-				<ul class="wds-list">
-					<li>List item 1</li>
-					<li>List item 2</li>
-					<li>List item 3</li>
-				</ul>
-			{{/dropdown.content}}
-		{{/wds-dropdown}}
-		{{#wds-button class='wds-is-secondary wds-is-stretched'}}Secondary{{/wds-button}}
-		{{#wds-button class='wds-is-text wds-is-stretched'}}Text{{/wds-button}}
-	{{/component-demo}}
-</section>
-
-<section>
 	<h2 id="sizes:square">Button sizes: square</h2>
 	<p>For a fixed size square button use <code class="format-code">.wds-is-square</code> class. This button will be
 		45px x 45px with content centered inside. This type of button is mostly used for icons, example: social icons.
@@ -353,14 +252,14 @@ html[lang^='zh'] &__start-a-wiki-button {
 
 	{{#component-demo}}
 		<div class="wds-button-group white-theme">
-			{{#wds-button class='wds-is-secondary wds-is-squished'}}
+			{{#wds-button class='wds-is-secondary'}}
 				{{wds-icon name='activity' size='small'}}
 				<span>Activity</span>
 			{{/wds-button}}
-			{{#wds-button class='wds-is-secondary wds-is-squished'}}
+			{{#wds-button class='wds-is-secondary'}}
 				{{wds-icon name='house' size='small'}}
 			{{/wds-button}}
-			{{#wds-button class='wds-is-secondary wds-is-squished'}}
+			{{#wds-button class='wds-is-secondary'}}
 				{{wds-icon name='map' class='wds-icon-small'}}
 			{{/wds-button}}
 		</div>
@@ -373,12 +272,12 @@ html[lang^='zh'] &__start-a-wiki-button {
 	<p>It is also possible to include dropdown button within button-group</p>
 	{{#component-demo}}
 		<div class="wds-button-group">
-			{{#wds-button class='wds-is-squished'}}
+			{{#wds-button}}
 				{{wds-icon name='pencil' size='small'}}
 				<span>Edit</span>
 			{{/wds-button}}
 			{{#wds-dropdown as |dropdown|}}
-				{{dropdown.toggle class='wds-button wds-is-squished'}}
+				{{dropdown.toggle class='wds-button'}}
 				{{#dropdown.content}}
 					<ul class="wds-list">
 						<li>List item 1</li>
