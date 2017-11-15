@@ -64,3 +64,116 @@
 .separator-FB7383 {
 	background-color: #FEE77D;
 }
+
+//////
+
+//color-body: "#a",
+//color-body-middle: "#7d090a",
+//color-page: "#ffffff",
+//color-buttons: "#003380",
+//color-community-header: "#003380",
+//color-links: "#006cb0",
+//color-header: "#002266"
+
+
+// marvel
+.color-1.wds-community-header {
+	$background-color: #003380;
+	$local-nav-base-bg: #ffffff;
+	$local-nav-border-color: mix($local-nav-base-bg, #000, 80%);
+	$local-nav-text-color: #3A3A3A;
+	$local-nav-hover-text-color: #006cb0;
+	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+
+	z-index: $z-1;
+}
+
+.separator-1 {
+	background-color: #003380;
+	color: #fff;
+}
+
+//WARFRAME
+.color-2.wds-community-header {
+	$background-color: #061212;
+	$local-nav-base-bg: #eeeeee;
+	$local-nav-border-color: mix($local-nav-base-bg, #000, 80%);
+	$local-nav-text-color: #3A3A3A;
+	$local-nav-hover-text-color: #0148c2;
+	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+
+	z-index: $z-1;
+}
+
+.separator-2 {
+	background-color: #061212;
+	color: #fff;
+}
+
+// oldschoolrunescape
+.color-3.wds-community-header {
+	$background-color: #cfc09a;
+	$local-nav-base-bg: #dbcba3;
+	$local-nav-border-color: mix($local-nav-base-bg, #000, 80%);
+	$local-nav-text-color: #3A3A3A;
+	$local-nav-hover-text-color: #61411d;
+	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+
+	z-index: $z-1;
+}
+
+.separator-3 {
+	background-color: #061212;
+	color: #fff;
+}
+
+// elderscrolls
+.color-4.wds-community-header {
+	$background-color: #000;
+	$local-nav-base-bg: #181818;
+	$local-nav-border-color: mix($local-nav-base-bg, #000, 80%);
+	$local-nav-text-color: #D5D4D4;
+	$local-nav-hover-text-color: #5a91cf;
+	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+
+	z-index: $z-1;
+}
+
+.separator-4 {
+	background-color: #000;
+	color: #fff;
+}
+
+// yugioh
+.color-5.wds-community-header {
+	$background-color: #fec356;
+	$local-nav-base-bg: #ffffff;
+	$local-nav-border-color: mix($local-nav-base-bg, #000, 80%);
+	$local-nav-text-color: #3A3A3A;
+	$local-nav-hover-text-color: #0148c2;
+	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+
+	z-index: $z-1;
+}
+
+.separator-5 {
+	background-color: #fec356;
+	color: #fff;
+}
+
+// runescape
+.color-6.wds-community-header {
+	$background-color: #438ab5;
+	$local-nav-base-bg: #fff;
+	$local-nav-border-color: mix($local-nav-base-bg, #000, 80%);
+	$local-nav-text-color: #3A3A3A;
+	$local-nav-hover-text-color: #438ab5;
+	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+
+	z-index: $z-1;
+}
+
+.separator-6 {
+	background-color: #438ab5;
+	color: #fff;
+}
