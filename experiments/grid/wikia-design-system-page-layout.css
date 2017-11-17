@@ -1,45 +1,53 @@
-/* NOTE: There's discussion happening right now on what the appropriate set of breakpoints should be.  For this
-experiment, I've picked the set that's on http://fandomdesignsystem.com/#/base-styles/breakpoints at time of writing,
-minus the 1084px breakpoint (because it's almost certainly going to be removed/replaced).
- */
+/*
+	NOTE: The breakpoints presented here match where the DS breakpoints will be going, not where they are now.
+	small		0-599        covers all phones in portrait mode
+	medium  	600-1023     more inclusive of larger phones being viewed in portrait mode
+	large   	1024-1279    standard breakpoint
+	xlarge  	1280-1499    common article viewing size
+	xxlarge 	1500+        covers all of our largest screen sizes
+*/
 
-/* $wds-breakpoint-s */
+/* small */
 .wds-content-well {
-	width: 100%;
+    width: 100%;
 }
 
 .wds-has-right-rail > section {
-	display: none;
+    display: none;
 }
 
-/* $wds-breakpoint-m */
-@media (min-width: 768px) {
+/* medium */
+@media (min-width: 600px) {
 }
 
-/* $wds-breakpoint-l */
+/* large */
 @media (min-width: 1024px) {
-	.wds-content-well {
-		margin: auto;
-		max-width: 1004px;
-	}
+    .wds-content-well {
+        margin: auto;
+        max-width: 1004px;
+    }
 
-	.wds-has-right-rail {
-		display: flex;
-		flex-direction: row;
-	}
+    .wds-has-right-rail {
+        display: flex;
+        flex-direction: row;
+    }
 
-	.wds-has-right-rail > section {
-		display: block;
-		width: 300px;
-		flex-shrink: 0;
-		margin-left: 0;
-		margin-right: var(--wds-grid-margin);
-	}
+    .wds-has-right-rail > section {
+        display: block;
+        width: 300px;
+        flex-shrink: 0;
+        margin-left: 0;
+        margin-right: var(--wds-grid-margin);
+    }
 }
 
-/* $wds-breakpoint-xxl */
-@media (min-width: 1596px) {
-	.wds-content-well {
-		max-width: 1238px;
-	}
+/* x-large */
+@media (min-width: 1280px) {
+    .wds-content-well {
+        max-width: 1238px;
+    }
+}
+
+/* xx-large */
+@media only screen and (min-width: 1500px) {
 }

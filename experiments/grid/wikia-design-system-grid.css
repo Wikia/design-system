@@ -1,53 +1,64 @@
 /* NOTE: to support older browsers, sensible defaults will need to be added anywhere these CSS custom properties
 are used. This fallback behavior is better demonstrated in the 'theming' experiment, and is omitted here for brevity. */
 
-/* NOTE: There's discussion happening right now on what the appropriate set of breakpoints should be.  For this
-experiment, I've picked the set that's on http://fandomdesignsystem.com/#/base-styles/breakpoints at time of writing,
-minus the 1084px breakpoint (because it's almost certainly going to be removed/replaced).
- */
+/*
+	NOTE: The breakpoints presented here match where the DS breakpoints will be going, not where they are now.
+	small		0-599        covers all phones in portrait mode
+	medium  	600-1023     more inclusive of larger phones being viewed in portrait mode
+	large   	1024-1279    standard breakpoint
+	xlarge  	1280-1499    common article viewing size
+	xxlarge 	1500+        covers all of our largest screen sizes
+*/
 
-/* $wds-breakpoint-s */
+/* small */
 :root {
-	--wds-grid-margin: 12px;
-	--wds-gutter-width: 5px;
+    --wds-grid-margin: 12px;
+    --wds-gutter-width: 5px;
 }
 
 .wds-content-grid {
-	display: grid;
-	margin: 0 var(--wds-grid-margin);
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: auto;
-	grid-column-gap: var(--wds-gutter-width);
-	grid-row-gap: 0;
-	justify-items: stretch;
-	align-items: stretch;
-	justify-content: stretch;
-	align-content: stretch;
+    display: grid;
+    margin: 0 var(--wds-grid-margin);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: var(--wds-gutter-width);
+    grid-row-gap: 0;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+    align-content: stretch;
 }
 
-/* $wds-breakpoint-m */
-@media (min-width: 768px) {
-	:root {
-		--wds-grid-margin: 18px;
-		--wds-gutter-width: 12px;
-	}
+/* medium */
+@media (min-width: 600px) {
+    :root {
+        --wds-grid-margin: 18px;
+        --wds-gutter-width: 12px;
+    }
 }
 
-/* $wds-breakpoint-l */
+/* large */
 @media (min-width: 1024px) {
-	:root {
-		--wds-grid-margin: 20px;
-		--wds-gutter-width: 12px;
-	}
+    :root {
+        --wds-grid-margin: 20px;
+        --wds-gutter-width: 12px;
+    }
 
-	.wds-content-grid {
-		grid-template-columns: repeat(12, 1fr);
-	}
+    .wds-content-grid {
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
 
-/* $wds-breakpoint-xxl */
-@media (min-width: 1596px) {
-	:root {
-		--wds-gutter-width: 25px;
-	}
+/* x-large */
+@media (min-width: 1280px) {
+    :root {
+        --wds-gutter-width: 25px;
+    }
+}
+
+/* xx-large */
+@media (min-width: 1500px) {
+    :root {
+        --wds-gutter-width: 25px;
+    }
 }
