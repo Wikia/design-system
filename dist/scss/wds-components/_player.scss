@@ -9,8 +9,6 @@ $sizes: (
 
 @each $name, $size in $sizes {
 	.wds-player-icon-play-#{$name} {
-		// since play icon contains shadow around icon and designers provide sizes of icon without shadow, we need to
-		// calculate exact size of icon box
-		@include wds-player-icon-play($size * 1.2);
+		@include wds-player-icon-play($size);
 	}
 }
