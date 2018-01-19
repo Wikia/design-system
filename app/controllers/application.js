@@ -41,7 +41,11 @@ export default Controller.extend({
 			items: [
 				{
 					name: 'Breakpoints',
-					location: 'base-styles.breakpoints'
+					location: 'base-styles.wds-breakpoints'
+				},
+				{
+					name: 'Grid',
+					location: 'base-styles.wds-grid'
 				},
 				{
 					name: 'Colors',
