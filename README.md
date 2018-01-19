@@ -11,4 +11,4 @@ https://wikia-inc.atlassian.net/wiki/display/DESYS/Design+System
 See all [contributors on GitHub](https://github.com/Wikia/design-system/graphs/contributors).
 
 ## Copyright
-Code and documentation copyright 2016 Wikia, Inc.
+Code and documentation copyright 2018 Wikia, Inc.

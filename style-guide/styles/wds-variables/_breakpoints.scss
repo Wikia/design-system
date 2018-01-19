@@ -1,9 +1,12 @@
+// @FIXME Breakpoints defined here are OUTDATED
+// @see _wds-breakpoints.scss for up-to-date definition
+
+$wds-screen: "screen";
+
 $wds-breakpoint-m: 768px;
 $wds-breakpoint-l: 1024px;
 $wds-breakpoint-xl: 1084px;
 $wds-breakpoint-xxl: 1596px;
-
-$wds-screen: 'only screen';
 
 $wds-breakpoint-s-up: "#{$wds-screen}";
 $wds-breakpoint-s-only: "#{$wds-screen} and (max-width:#{$wds-breakpoint-m - 1})";
