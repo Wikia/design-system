@@ -1,4 +1,5 @@
-@mixin wds-content-well($use-xxl-breakpoint: true) {
+// news and stories do not use xxlarge breakpoint
+@mixin wds-content-well($use-xxlarge-breakpoint: true) {
 	box-sizing: border-box;
 
 	@media #{$wds-breakpoint-small-only} {
@@ -17,7 +18,7 @@
 		width: $wds-breakpoint-large - 2 * $wds-content-well-margins;
 	}
 
-	@if ($use-xxl-breakpoint) {
+	@if ($use-xxlarge-breakpoint) {
 		@media #{$wds-breakpoint-xlarge-only} {
 			width: $wds-breakpoint-xlarge - 2 * $wds-content-well-margins;
 		}
