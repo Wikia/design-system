@@ -57,7 +57,7 @@
 	<p>
 		Grid can be (and should be) combined with {{#link-to 'base-styles.breakpoints'}}breakpoints{{/link-to}} to create full experience.
 		Some elements may change places from one breakpoint to another, other can be completely hidden on some of them and visible on another -
-		for, due to limitation of the CSS grid - we need to use the same HTML twice and hide it with breakpoint mixins.<br />
+		due to limitation of the CSS grid - we need to use the same HTML twice and hide it with breakpoint mixins.<br />
 		See longer example below.
 	</p>
 	<h3>Example:</h3>
@@ -95,7 +95,7 @@
 
 	&__rail{
 		// CSS will show item even if there's no grid area, so hide it on small breakpoint
-		@include wds-hide-on-breakpoints(small)
+		@include wds-hide-on-breakpoint(small)
 
 		grid-area: right;
 	}
@@ -105,17 +105,44 @@
 	...
 
 	&.in-main {
-		@include wds-hide-on-breakpoints(medium large xlarge xxlarge)
+		@include wds-hide-on-breakpoint(medium-up)
 	}
 
 	&.in-rail {
-		@include wds-hide-on-breakpoints(small)
+		@include wds-hide-on-breakpoint(small)
 	}
 }
-
 	{{/code-sample}}
 </section>
 
 <section>
-	<h2 id="mixins">Variabes</h2>
+	<h2 id="variables">Variabes</h2>
+	<p>
+		There are few variables that can be usefull.
+	</p>
+	<table class="variables-table is-fluid">
+		<tr class="variables-table__header">
+			<th>Variable</th>
+			<th>Value</th>
+			<th>Description</th>
+		</tr>
+
+		<tr>
+			<td><code class="format-code">$wds-grid-gap</code></td>
+			<td><code>10px</code></td>
+			<td>gutter / gap between columns</td>
+		</tr>
+
+		<tr>
+			<td><code class="format-code">$wds-grid-columns</code></td>
+			<td><code>12</code></td>
+			<td>number of columns</td>
+		</tr>
+
+		<tr>
+			<td><code class="format-code">$wds-grid-gap-space</code></td>
+			<td><code>110px</code></td>
+			<td>how much width is taken by gaps</td>
+		</tr>
+	</table>
 </section>

@@ -1,4 +1,4 @@
-@mixin wds-hide-on-breakpoints($breakpoints) {
+@mixin wds-hide-on-breakpoint($breakpoints) {
 	@if index($breakpoints, small) {
 		@media #{$wds-breakpoint-small-only} { display: none; }
 	}

@@ -180,8 +180,8 @@
 	</p>
 	<h3>Hide on breakpoints mixin</h3>
 	<p>
-		If there's a need to hide particular element on some of the breakpoints the <code class="format-code">wds-hide-on-breakpoints(<em>breakpoints</em>)</code> mixin should be used.<br/>
-		The list of breakpoints is passes as a list in the param.
+		If there's a need to hide particular element on some of the breakpoints the <code class="format-code">wds-hide-on-breakpoint(<em>breakpoint</em>)</code> mixin should be used.<br/>
+		The breakpoint (or list of breakpoints) is passed in the param.
 	</p>
 	<h3>Examples:</h3>
 	{{#code-sample language='scss'}}
@@ -189,15 +189,15 @@
 	@include wds-content-well;
 
 	.extra-content {
-		@include wds-hide-on-breakpoints(small)
+		@include wds-hide-on-breakpoint(small)
 	}
 
 	.content-only-on-mobile {
-		@include wds-hide-on-breakpoints(medium large xlarge xxlarge);
+		@include wds-hide-on-breakpoint(medium-up);
 	}
 
-	.content-only-on-large-monitors {
-		@include wds-hide-on-breakpoints(small medium);
+	.content-only-on-medium-and-large {
+		@include wds-hide-on-breakpoint(small xlarge-up);
 	}
 }
 	{{/code-sample}}
