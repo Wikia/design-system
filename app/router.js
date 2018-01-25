@@ -16,10 +16,12 @@ Router.map(function () {
 	});
 
 	this.route('base-styles', function () {
-		this.route('breakpoints');
+		this.route('wds-breakpoints');
+		this.route('wds-grid');
 		this.route('typography');
 		this.route('colors');
 		this.route('z-index');
+		this.route('breakpoints');
 	});
 
 	// We have a good reason to call this route `route-components` and put it in `/components` path.
