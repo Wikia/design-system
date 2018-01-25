@@ -1,0 +1,54 @@
+/*
+	NOTE: in the real world, this would be built using SASS, pull in the WDS colors from the SASS variables,
+	and then output to a static CSS file.
+*/
+:root, .wds-theme-light {
+	--wds-theme-color-c1: #fff;
+	--wds-theme-color-c2: #f6f6f6;
+	--wds-theme-color-c3: #e6e6e6;
+	--wds-theme-color-c4: #ccc;
+	--wds-theme-color-c5: #999;
+	--wds-theme-color-c6: #333;
+	--wds-theme-color-c7: #666;
+	--wds-theme-color-c8: #e3bd00;
+	--wds-theme-color-alert: #d71035;
+	--wds-theme-color-warning: #dfec24;
+	--wds-theme-color-success: #4cda9a;
+	--wds-theme-color-message: #460084;
+	--wds-theme-color-link: #00acac;
+	--wds-theme-color-link-hover: #008989;
+}
+
+.wds-theme-dark {
+	--wds-theme-color-c1: #262626;
+	--wds-theme-color-c2: #1a1a1a;
+	--wds-theme-color-c3: #e6e6e6333;
+	--wds-theme-color-c4: #666;
+	--wds-theme-color-c5: #999;
+	--wds-theme-color-c6: #ccc;
+	--wds-theme-color-c7: #fff;
+	--wds-theme-color-c8: #e3bd00;
+	--wds-theme-color-alert: #d71035;
+	--wds-theme-color-warning: #dfec24;
+	--wds-theme-color-success: #4cda9a;
+	--wds-theme-color-message: #460084;
+	--wds-theme-color-link: #00acac;
+	--wds-theme-color-link-hover: #008989;
+}
+
+.wds-theme-obnoxious {
+	--wds-theme-color-c1: #ff00ff;
+	--wds-theme-color-c2: #ff0000;
+	--wds-theme-color-c3: #00ff00;
+	--wds-theme-color-c4: #0000ff;
+	--wds-theme-color-c5: #ffff00;
+	--wds-theme-color-c6: #00ffff;
+	--wds-theme-color-c7: #000000;
+	--wds-theme-color-c8: #ffffff;
+	--wds-theme-color-alert: #ffddcc;
+	--wds-theme-color-warning: #002244;
+	--wds-theme-color-success: #442299;
+	--wds-theme-color-message: #666;
+	--wds-theme-color-link: #00acac;
+	--wds-theme-color-link-hover: #008989;
+}
