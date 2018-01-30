@@ -5,11 +5,14 @@
 	@include button-theming($wds-color-link, $wds-color-white);
 
 	align-items: center;
+	background-image: none;
+	border-radius: 0;
 	border-style: solid;
 	border-width: $wds-button-border-width;
 	box-sizing: content-box;
 	cursor: default;
 	display: inline-flex;
+	font-family: inherit;
 	font-size: $wds-typescale-size-minus-2;
 	font-weight: 600;
 	justify-content: center;
@@ -25,7 +28,6 @@
 	transition-property: background-color, border-color, color;
 	vertical-align: top;
 	-webkit-appearance: none;
-	-webkit-border-radius: 0;
 
 	@at-root button#{&}, a#{&} {
 		cursor: pointer;
@@ -115,5 +117,9 @@
 		&.wds-is-#{$social-name}-color {
 			@include button-theming($social-color, $wds-color-white);
 		}
+	}
+
+	&:hover {
+		background-image: none;
 	}
 }
