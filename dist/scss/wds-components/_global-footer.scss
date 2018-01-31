@@ -334,7 +334,7 @@
 		padding: 0;
 	}
 
-	@media #{$wds-breakpoint-l-down} {
+	@media #{$wds-breakpoint-medium-down} {
 		&__main {
 			margin: 0 20px;
 		}
@@ -421,7 +421,7 @@
 		}
 	}
 
-	@media #{$wds-breakpoint-xl-up} {
+	@media #{$wds-breakpoint-large-up} {
 		&__main {
 			flex-direction: row;
 			margin: 0 auto;
