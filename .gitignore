@@ -1,4 +1,5 @@
 .idea/
+/design-system.iml
 *.DS_Store
 *._.DS_Store
 npm-debug.log

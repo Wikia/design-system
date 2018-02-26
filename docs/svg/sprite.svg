@@ -193,6 +193,10 @@
     <path d="M12 18.5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5M23 6h-5.5l-1.7-2.6c-.2-.2-.5-.4-.8-.4H9c-.3 0-.6.2-.8.4L6.5 6H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h22c.6 0 1-.4 1-1V7c0-.6-.4-1-1-1"/>
     <path d="M12 10.5c-1.68 0-3 1.32-3 3s1.32 3 3 3 3-1.32 3-3-1.32-3-3-3M1.5 5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0 0 1"/>
   </g>
+</symbol><symbol id="wds-icons-chart-small" viewBox="0 0 18 18">
+  <rect x="1" y="11" width="4" height="6" rx="1"/>
+  <rect x="7" y="1" width="4" height="16" rx="1"/>
+  <rect x="13" y="6" width="4" height="11" rx="1"/>
 </symbol><symbol id="wds-icons-checkbox" viewBox="0 0 24 24">
   <path d="M17.03 9.53l-6 6a.748.748 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l2.47 2.47 5.47-5.47a.75.75 0 1 1 1.06 1.06M20.25 3H3.75a.75.75 0 0 0-.75.75v16.5c0 .414.335.75.75.75h16.5a.75.75 0 0 0 .75-.75V3.75a.75.75 0 0 0-.75-.75" fill-rule="evenodd"/>
 </symbol><symbol id="wds-icons-checkmark-circle-small" viewBox="0 0 18 18">
