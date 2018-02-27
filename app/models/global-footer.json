@@ -69,10 +69,10 @@
       "header": { "type": "line-text", "title": { "type": "translatable-text", "key": "Advertise" } }, "links": [
         {
           "type": "link-text", "title": { "type": "translatable-text", "key": "Media Kit" },
-          "href": "http:\/\/www.wikia.com\/mediakit"
+          "href": "http:\/\/fandom.wikia.com\/mediakit"
         }, {
           "type": "link-text", "title": { "type": "translatable-text", "key": "Contact" },
-          "href": "http:\/\/www.wikia.com\/mediakit\/contact"
+          "href": "http:\/\/fandom.wikia.com\/mediakit#contact"
         }
       ]
     }, "licensing_and_vertical": {
@@ -218,10 +218,10 @@
       "header": { "type": "line-text", "title": { "type": "translatable-text", "key": "Advertise" } }, "links": [
         {
           "type": "link-text", "title": { "type": "translatable-text", "key": "Media Kit" },
-          "href": "http:\/\/www.wikia.com\/mediakit"
+          "href": "http:\/\/fandom.wikia.com\/mediakit"
         }, {
           "type": "link-text", "title": { "type": "translatable-text", "key": "Contact" },
-          "href": "http:\/\/www.wikia.com\/mediakit\/contact"
+          "href": "http:\/\/fandom.wikia.com\/mediakit#contact"
         }
       ]
     }, "licensing_and_vertical": {
