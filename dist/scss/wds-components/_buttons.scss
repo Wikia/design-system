@@ -23,7 +23,6 @@
 	transition-property: background-color, border-color, color;
 	vertical-align: top;
 	-webkit-appearance: none;
-	-webkit-border-radius: $wds-rounded-corner-radius;
 
 	@at-root button#{&}, a#{&} {
 		cursor: pointer;

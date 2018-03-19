@@ -7,10 +7,11 @@
 
 	> .wds-button {
 		//To achieve oneness of buttons, we overlap their border
+		border-radius: 0;
 		height: auto;
 		margin-left: auto;
 		margin-right: -1px;
-		border-radius: 0;
+		padding: 7px 12px;
 
 		&:first-child {
 			border-top-left-radius: $wds-rounded-corner-radius;
@@ -41,6 +42,17 @@
 	}
 
 	> .wds-dropdown {
+		&:first-child .wds-button {
+			border-radius: 0;
+			border-top-left-radius: $wds-rounded-corner-radius;
+			border-bottom-left-radius: $wds-rounded-corner-radius;
+		}
+
+		&:last-child .wds-button {
+			border-radius: 0;
+			border-top-right-radius: $wds-rounded-corner-radius;
+			border-bottom-right-radius: $wds-rounded-corner-radius;
+		}
 		&:not(:last-child) {
 			.wds-button {
 				border-right-width: 1px;
