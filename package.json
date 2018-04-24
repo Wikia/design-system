@@ -15,7 +15,7 @@
     "release-breaking": "git checkout master && git pull && npm version major && git push --follow-tags",
     "release-feature": "git checkout master && git pull && npm version minor && git push --follow-tags",
     "release-fix": "git checkout master && git pull && npm version patch && git push --follow-tags",
-    "setup": "npm i && bower update",
+    "setup": "npm i",
     "svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/svg",
     "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets"
   },
