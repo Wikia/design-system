@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-const {Controller} = Ember;
+import Controller from '@ember/controller';
 
 export default Controller.extend({
 	// Routes with standalone components set this property

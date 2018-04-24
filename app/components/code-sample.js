@@ -1,7 +1,6 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import {run} from '@ember/runloop';
 import {registerHljsLanguage} from '../utils/beautify';
-
-const {Component, run} = Ember;
 
 export default Component.extend({
 	language: 'html',

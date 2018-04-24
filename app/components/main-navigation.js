@@ -1,6 +1,6 @@
-import Ember from 'ember';
-
-const {Component, run} = Ember;
+import Component from '@ember/component';
+import {run} from '@ember/runloop';
+import $ from 'jquery';
 
 export default Component.extend({
 	classNames: 'main-navigation',
