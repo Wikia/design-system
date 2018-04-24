@@ -1,11 +1,11 @@
 'use strict';
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 const Funnel = require('broccoli-funnel');
 const SvgStore = require('broccoli-svgstore');
 
 module.exports = function(defaults) {
-	var app = new EmberApp(defaults, {
+	var app = new EmberAddon(defaults, {
 		autoprefixer: {
 			browsers: ['last 5 versions'],
 			cascade: false
@@ -31,12 +31,12 @@ module.exports = function(defaults) {
 			{
 				src: '/assets/wds.css',
 				dest: 'dist/css/styles.css',
-				enabled: EmberApp.env() === 'production'
+				enabled: EmberAddon.env() === 'production'
 			},
 			{
 				src: '/svg/*.svg',
 				dest: 'dist/svg/',
-				enabled: EmberApp.env() === 'production'
+				enabled: EmberAddon.env() === 'production'
 			}
 		],
 		sassOptions: {
