@@ -18,8 +18,8 @@
 		}}
 		{{wds-global-navigation.search
 			model=model.search.module
-			activateSearch='activateSearch'
-			deactivateSearch='deactivateSearch'
+			activateSearch=(action 'activateSearch')
+			deactivateSearch=(action 'deactivateSearch')
 		}}
 	</div>
 	{{#if model.user}}

@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import {run} from '@ember/runloop';
+import {run, throttle} from '@ember/runloop';
 import $ from 'jquery';
 
 export default Component.extend({
@@ -14,7 +14,9 @@ export default Component.extend({
 
 		run.schedule('afterRender', () => {
 			$(window).on('scroll', () => {
-				this.set('isFixed', this.get('offset') < window.pageYOffset);
+				throttle(this, function () {
+					this.set('isFixed', this.get('offset') < window.pageYOffset);
+				}, 100);
 			});
 		});
 	}
