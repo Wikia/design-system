@@ -19,6 +19,8 @@ export default Component.extend({
 		$component.find('.ember-view').removeAttr('id').removeClass('ember-view');
 
 		this.set('code', beautify($component.html()));
+
+		this.toggleView(this.get('name'));
 	},
 
 	click(event) {
@@ -37,8 +39,12 @@ export default Component.extend({
 		onTabChange(tab) {
 			const isHBS = tab.element.innerText.includes('HBS');
 			
-			this.set('showHBS', isHBS);
-			this.set('showHTML', !isHBS);
+			this.toggleView(isHBS);
 		}
+	},
+
+	toggleView(showHBS) {
+		this.set('showHBS', showHBS);
+		this.set('showHTML', !showHBS);
 	}
 });

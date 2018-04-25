@@ -1,11 +1,11 @@
 import Component from '@ember/component';
 
 export default Component.extend({
+	classNameBindings: ['language'],
 	language: 'html',
+	tagName: 'pre',
 
 	didInsertElement() {
-		const code = this.element.querySelector('pre');
-
-		hljs.highlightBlock(code);
+		hljs.highlightBlock(this.element);
 	}
 });

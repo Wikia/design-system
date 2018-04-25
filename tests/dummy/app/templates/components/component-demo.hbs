@@ -28,22 +28,22 @@
 {{/if}}
 
 {{#if (and code name)}}
-{{#wds-tabs onChange=(action 'onTabChange') as |tabs|}}
-	{{#tabs.tab}}
-		<div class='wds-tabs__tab-label'>
-			HBS
-		</div>
-	{{/tabs.tab}}
-	{{#tabs.tab}}
-		<div class='wds-tabs__tab-label'>
-			HTML
-		</div>
-	{{/tabs.tab}}
-{{/wds-tabs}}
+	{{#wds-tabs onChange=(action 'onTabChange') as |tabs|}}
+		{{#tabs.tab}}
+			<div class='wds-tabs__tab-label'>
+				HBS
+			</div>
+		{{/tabs.tab}}
+		{{#tabs.tab}}
+			<div class='wds-tabs__tab-label'>
+				HTML
+			</div>
+		{{/tabs.tab}}
+	{{/wds-tabs}}
 {{/if}}
 
 {{#if (and code showHTML)}}
-	{{#code-sample language='html' }}{{code}}{{/code-sample}}
+	{{#code-sample}}{{code}}{{/code-sample}}
 {{/if}}
 
 {{#if (and name showHBS)}}

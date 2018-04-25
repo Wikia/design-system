@@ -30,23 +30,13 @@ img {
 	max-width: 100%;
 }
 
-pre {
-	background-color: $wds-color-off-white;
-	border: 1px solid $wds-color-mist-gray;
-	line-height: $wds-line-height;
 
-	&::before,
-	&::after {
-		content: '\00a0';
-		letter-spacing: -.25rem;
-	}
-}
 
 pre {
 	background-color: $wds-color-off-white;
 	border: 1px solid $wds-color-mist-gray;
 	font-size: 12px;
-	line-height: $wds-typescale-size-minus-1;
+	line-height: 18px;
 	max-height: 300px;
 	overflow-x: auto;
 	padding: 14px;
