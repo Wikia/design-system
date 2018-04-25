@@ -17,7 +17,7 @@ module.exports = {
 	rules: {
 	},
 	globals: {
-		'hljs': false
+		hljs: false
 	},
 	overrides: [
 		// node files
@@ -26,17 +26,14 @@ module.exports = {
 				'ember-cli-build.js',
 				'testem.js',
 				'config/**/*.js',
-				'lib/*/index.js'
+				'lib/*/index.js',
+				'tests/dummy/config/**/*.js'
 			],
 			excludedFiles: [
 				'app/**',
 				'addon/**',
 				'tests/dummy/app/**'
 			],
-			parserOptions: {
-				sourceType: 'script',
-				ecmaVersion: 2015
-			},
 			env: {
 				browser: false,
 				node: true

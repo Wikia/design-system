@@ -29,4 +29,9 @@
 	</div>
 {{/if}}
 
-{{#code-sample language='html'}}{{code}}{{/code-sample}}
+{{#if code}}
+	{{#code-sample language='html'}}{{code}}{{/code-sample}}
+{{/if}}
+{{#if name}}
+	{{code-snippet name=name}}
+{{/if}}

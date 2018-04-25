@@ -4,20 +4,18 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 const Funnel = require('broccoli-funnel');
 const SvgStore = require('broccoli-svgstore');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
 	var app = new EmberAddon(defaults, {
-		autoprefixer: {
-			browsers: ['last 5 versions'],
-			cascade: false
-		},
 		fingerprint: {
 			enabled: false
 		},
-		nodeAssets: {
-			'highlight.js': {
-				import: ['lib/highlight.js']
-			}
+		snippetPaths: ['tests/dummy/snippets'],
+		snippetSearchPaths: ['tests/dummy/app'],
+		snippetRegexes: {
+			begin: /{{#component-demo\sname='(\S+)'/,
+			end: /{{\/component-demo}}/,
 		},
+		includeFileExtensionInSnippetNames: false,
 		outputPaths: {
 			app: {
 				css: {
@@ -29,7 +27,7 @@ module.exports = function(defaults) {
 		},
 		postBuildCopy: [
 			{
-				src: '/assets/wds.css',
+				src: '/tests/dummy/assets/wds.css',
 				dest: 'dist/css/styles.css',
 				enabled: EmberAddon.env() === 'production'
 			},

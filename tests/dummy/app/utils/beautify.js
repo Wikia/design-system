@@ -1,17 +1,4 @@
-import scss from 'npm:highlight.js/lib/languages/scss';
-import xml from 'npm:highlight.js/lib/languages/xml';
-
 const indentChar = '  ';
-let hljsLanguagesRegistered = false;
-
-export function registerHljsLanguage() {
-	if (hljsLanguagesRegistered) {
-		return;
-	}
-
-	hljs.registerLanguage('scss', scss);
-	hljs.registerLanguage('xml', xml);
-}
 
 /**
  * @see http://stackoverflow.com/a/26361620/1050577
@@ -20,9 +7,9 @@ export function registerHljsLanguage() {
  * @returns {Element}
  */
 function format(node, level) {
-	let indentBefore = new Array(level++ + 1).join(indentChar),
-		indentAfter  = new Array(level - 1).join(indentChar),
-		textNode;
+	let indentBefore = new Array(level++ + 1).join(indentChar);
+	let indentAfter = new Array(level - 1).join(indentChar);
+	let textNode;
 
 	for (let i = 0; i < node.children.length; i++) {
 		textNode = document.createTextNode('\n' + indentBefore);

@@ -25,7 +25,7 @@
 <section>
 	<h2 id="primary">Primary buttons</h2>
 	<p>Default version for general use.</p>
-	{{#component-demo}}
+	{{#component-demo name='buttons'}}
 		{{#wds-button}}Primary button{{/wds-button}}
 		{{#wds-button}}
 			{{wds-icon name='fandom-heart' size='small'}}
@@ -39,7 +39,7 @@
 	<h2 id="secondary">Secondary buttons</h2>
 	<p>Adding class <code class="format-code">.wds-is-secondary</code> changes the button's looks. It is used to create
 		a button that draws less user's attention.</p>
-	{{#component-demo}}
+	{{#component-demo name='buttons-secondary'}}
 		{{#wds-button class='wds-is-secondary'}}Secondary button{{/wds-button}}
 		{{#wds-button class='wds-is-secondary'}}
 			{{wds-icon name='fandom-heart' size='small'}}
@@ -52,7 +52,7 @@
 <section>
 	<h2 id="dropdown">Dropdown button</h2>
 	<p>Adding <code class="format-code">.wds-dropdown</code> class and dropdown component inside button component will result in dropdown hidden behind a button</p>
-	{{#component-demo}}
+	{{#component-demo name='dropdown-buttons'}}
 		{{#wds-dropdown as |dropdown|}}
 			{{#dropdown.toggle tagName='button' class='wds-button'}}
 				<span>Dropdown</span>
@@ -106,7 +106,7 @@
 	<h2 id="text">Text buttons</h2>
 	<p>These buttons are denoted with <code class="format-code">.wds-is-text</code> class. They are the least obtrusive.
 		Nevertheless, their paddings remain untouched, which provides the same clickable area.</p>
-	{{#component-demo}}
+	{{#component-demo name='text-buttons'}}
 		{{#wds-button class='wds-is-text'}}Text button{{/wds-button}}
 		{{#wds-button class='wds-is-text'}}
 			{{wds-icon name='fandom-heart' size='small'}}
@@ -121,7 +121,7 @@
 	<p>For a fixed size square button use <code class="format-code">.wds-is-square</code> class. This button will be
 		45px x 45px with content centered inside. This type of button is mostly used for icons, example: social icons.
 	</p>
-	{{#component-demo}}
+	{{#component-demo name='button-square'}}
 		{{#wds-button class='wds-is-square wds-is-facebook-color'}}{{wds-icon name='facebook'}}{{/wds-button}}
 		{{#wds-button class='wds-is-square wds-is-nk-color'}}{{wds-icon name='nk'}}{{/wds-button}}
 	{{/component-demo}}
@@ -130,7 +130,7 @@
 <section>
 	<h2 id="other:multiline">Other usages: multiline button</h2>
 	<p>Button labels can wrap to multiple lines.</p>
-	{{#component-demo}}
+	{{#component-demo name='multiline-button'}}
 		{{#wds-button class='fixed-width-140px'}}Multiline button label with 3rd line{{/wds-button}}
 		{{#wds-button class='fixed-width-140px'}}
 			{{wds-icon name='fandom-heart' size='small'}}
@@ -145,7 +145,7 @@
 		anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code class="format-code">.wds-button</code>
 		class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.
 	</p>
-	{{#component-demo}}
+	{{#component-demo name='link-buttons'}}
 		{{#wds-button tagName='a' href='#'}}Link button{{/wds-button}}
 		{{#wds-button tagName='a' href='#'}}
 			{{wds-icon name='fandom-heart' size='small'}}

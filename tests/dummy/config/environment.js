@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
 	let ENV = {
-		modulePrefix: 'design-system',
+		modulePrefix: 'dummy',
 		environment,
 		rootURL: '/',
 		locationType: 'hash',
