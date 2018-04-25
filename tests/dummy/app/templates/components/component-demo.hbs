@@ -29,7 +29,7 @@
 
 {{#if (and code name)}}
 	{{#wds-tabs onChange=(action 'onTabChange') as |tabs|}}
-		{{#tabs.tab}}
+		{{#tabs.tab selected=true}}
 			<div class='wds-tabs__tab-label'>
 				HBS
 			</div>
@@ -43,9 +43,9 @@
 {{/if}}
 
 {{#if (and code showHTML)}}
-	{{#code-sample}}{{code}}{{/code-sample}}
+	{{#code-sample language=language}}{{code}}{{/code-sample}}
 {{/if}}
 
 {{#if (and name showHBS)}}
-	{{code-snippet name=name}}
+	{{code-snippet name=name language=language}}
 {{/if}}

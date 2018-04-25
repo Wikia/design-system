@@ -12,15 +12,20 @@ export default Component.extend({
 
 	showHTML: false,
 	showHBS: true,
+	language: 'handlebars',
 
 	didInsertElement() {
-		const $component = this.$('.component-demo__rendered').clone();
+		const name = this.get('name');
 
-		$component.find('.ember-view').removeAttr('id').removeClass('ember-view');
+		this.toggleView(name);
 
-		this.set('code', beautify($component.html()));
+		if (this.get('language') !== 'scss') {
+			const $component = this.$('.component-demo__rendered').clone();
 
-		this.toggleView(this.get('name'));
+			$component.find('.ember-view').removeAttr('id').removeClass('ember-view');
+	
+			this.set('code', beautify($component.html()));
+		}
 	},
 
 	click(event) {

@@ -164,13 +164,13 @@
 		Theming can be applied to buttons by <code class="format-code">button-theming</code> mixin.
 		For basic usage, mixin takes two parameters: primary-background-color and prmary-text-color:
 	</p>
-	{{#code-sample language='sass'}}
+	{{#component-demo name='button-theming-scss' language='scss' codeOnly=true}}
 		.wds-button {
 			@include button-theming($wds-color-dark-blue, $wds-color-white);
 		}
-	{{/code-sample}}
+	{{/component-demo}}
 
-	{{#component-demo}}
+	{{#component-demo name='buttons-theming'}}
 		{{#wds-button class='primary-only'}}Primary{{/wds-button}}
 		{{#wds-button class='primary-only'}}
 			{{wds-icon name='fandom-heart' size='small'}}
@@ -200,7 +200,7 @@
 		}
 	{{/code-sample}}
 
-	{{#component-demo}}
+	{{#component-demo name='buttons-theming-2'}}
 		{{#wds-button class='different-secondary'}}Primary{{/wds-button}}
 		{{#wds-button class='different-secondary'}}
 			{{wds-icon name='fandom-heart' size='small'}}

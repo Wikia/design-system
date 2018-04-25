@@ -60,7 +60,7 @@
 
 	{{#component-demo name='tabs-active'}}
 		{{#wds-tabs}}
-			{{#wds-tab class='wds-is-current'}}
+			{{#wds-tab selected=true}}
 				<div class='wds-tabs__tab-label'>
 					<span>Opened tab</span>
 				</div>
@@ -81,7 +81,7 @@
 
 	{{#component-demo name='tabs-disabled'}}
 		{{#wds-tabs}}
-			{{#wds-tab class='wds-is-disabled'}}
+			{{#wds-tab disabled=true}}
 				<div class='wds-tabs__tab-label'>
 					{{wds-icon name='gear-small' class='wds-icon-tiny'}}
 					<span>Disabled tab</span>
@@ -102,53 +102,52 @@
 		{{#wds-tabs}}
 			{{#wds-tab}}
 				{{#wds-dropdown as |dropdown|}}
-					{{#dropdown.toggle class='wds-tabs__tab-label'}}
-						<span>Tab with dropdown</span>
+					{{#dropdown.toggle class='wds-tabs__tab-label' as |toggle|}}
+						<span>Tab with dropdown</span>{{toggle.chevron}}
 					{{/dropdown.toggle}}
 					{{#dropdown.content}}
-						<ul class="wds-list">
+						{{#wds-list}}
 							<li>List item 1</li>
 							<li>List item 2</li>
 							<li>List item 3</li>
-						</ul>
+						{{/wds-list}}
 					{{/dropdown.content}}
 				{{/wds-dropdown}}
 			{{/wds-tab}}
 
 			{{#wds-tab}}
 				{{#wds-dropdown as |dropdown|}}
-					{{#dropdown.toggle class='wds-tabs__tab-label'}}
-						<a href="#">Tab with link dropdown</a>
+					{{#dropdown.toggle class='wds-tabs__tab-label' as |toggle|}}
+						<a href="#">Tab with link dropdown</a>{{toggle.chevron}}
 					{{/dropdown.toggle}}
 					{{#dropdown.content}}
-						<ul class="wds-list">
+						{{#wds-list}}
 							<li>List item 1</li>
 							<li>List item 2</li>
 							<li>List item 3</li>
-						</ul>
+						{{/wds-list}}
 					{{/dropdown.content}}
 				{{/wds-dropdown}}
 			{{/wds-tab}}
 
 			{{#wds-tab}}
 				{{#wds-dropdown as |dropdown|}}
-					{{#dropdown.toggle class='wds-tabs__tab-label'}}
+					{{#dropdown.toggle class='wds-tabs__tab-label' as |toggle|}}
 						<a href="#">
 							{{wds-icon name='gear-small' class='wds-icon-tiny'}}
 							<span>Tab with link dropdown with icon</span>
 						</a>
+						{{toggle.chevron}}
 					{{/dropdown.toggle}}
 					{{#dropdown.content}}
-						<ul class="wds-list">
+						{{#wds-list}}
 							<li>List item 1</li>
 							<li>List item 2</li>
 							<li>List item 3</li>
-						</ul>
+						{{/wds-list}}
 					{{/dropdown.content}}
 				{{/wds-dropdown}}
-
 			{{/wds-tab}}
-
 		{{/wds-tabs}}
 	{{/component-demo}}
 </section>

@@ -17,6 +17,7 @@ module.exports = function (defaults) {
 		},
 		includeFileExtensionInSnippetNames: false,
 		includeHighlightStyle: false,
+		includeHighlightJS: false,
 		outputPaths: {
 			app: {
 				css: {
@@ -40,7 +41,8 @@ module.exports = function (defaults) {
 		],
 		sassOptions: {
 			includePaths: [
-				'style-guide/styles'
+				'style-guide/styles',
+				'node_modules/highlight.js/styles'
 			]
 		}
 	});
