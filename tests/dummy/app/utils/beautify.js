@@ -1,4 +1,4 @@
-const indentChar = '  ';
+const indentChar = '	';
 
 /**
  * @see http://stackoverflow.com/a/26361620/1050577
