@@ -48,7 +48,7 @@ module.exports = function (environment) {
 	}
 
 	if (environment === 'devbox') {
-		ENV.rootURL = '/design-system/docs';
+		ENV.rootURL = '/design-system';
 	}
 
 	return ENV;

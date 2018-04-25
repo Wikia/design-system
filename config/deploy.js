@@ -15,7 +15,7 @@ module.exports = function (deployTarget) {
 		ENV.sftp = {
 			host: `dev-${process.env.USER}`,
 			distDir: 'docs-dev',
-			remoteDir: '/var/www/design-system/docs',
+			remoteDir: '/var/www/design-system',
 			remoteUser: process.env.USER,
 			agent: process.env.SSH_AUTH_SOCK
 		};
