@@ -29,12 +29,12 @@
 
 {{#if (and code name)}}
 	{{#wds-tabs onChange=(action 'onTabChange') as |tabs|}}
-		{{#tabs.tab selected=true}}
+		{{#tabs.tab value=0}}
 			<div class='wds-tabs__tab-label'>
 				HBS
 			</div>
 		{{/tabs.tab}}
-		{{#tabs.tab}}
+		{{#tabs.tab value=1}}
 			<div class='wds-tabs__tab-label'>
 				HTML
 			</div>
