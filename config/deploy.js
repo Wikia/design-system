@@ -9,14 +9,14 @@ module.exports = function (deployTarget) {
 		// include other plugin configuration that applies to all deploy targets here
 	};
 
-	if (deployTarget === 'devbox') {
+	if (deployTarget.startsWith('dev-')) {
 		ENV.build.environment = 'devbox';
 
 		ENV.sftp = {
-			host: `dev-${process.env.USER}`,
+			host: deployTarget,
 			distDir: 'docs-dev',
 			remoteDir: '/var/www/design-system',
-			remoteUser: process.env.USER,
+			remoteUser: deployTarget.replace('dev-', ''),
 			agent: process.env.SSH_AUTH_SOCK
 		};
 	}
