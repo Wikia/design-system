@@ -6,9 +6,7 @@
 		</div>
 	</div>
 {{/if}}
-
 <div class="component-demo__rendered{{if codeOnly ' is-hidden'}}">{{yield}}</div>
-
 {{#if standalone}}
 	<div class="component-demo__devices">
 		<div class="component-demo__device">
@@ -29,9 +27,25 @@
 	</div>
 {{/if}}
 
-{{#if code}}
-	{{#code-sample language='html'}}{{code}}{{/code-sample}}
+{{#if (and code name)}}
+{{#wds-tabs onChange=(action 'onTabChange') as |tabs|}}
+	{{#tabs.tab}}
+		<div class='wds-tabs__tab-label'>
+			HBS
+		</div>
+	{{/tabs.tab}}
+	{{#tabs.tab}}
+		<div class='wds-tabs__tab-label'>
+			HTML
+		</div>
+	{{/tabs.tab}}
+{{/wds-tabs}}
 {{/if}}
-{{#if name}}
+
+{{#if (and code showHTML)}}
+	{{#code-sample language='html' }}{{code}}{{/code-sample}}
+{{/if}}
+
+{{#if (and name showHBS)}}
 	{{code-snippet name=name}}
 {{/if}}

@@ -30,7 +30,7 @@ img {
 	max-width: 100%;
 }
 
-code {
+pre {
 	background-color: $wds-color-off-white;
 	border: 1px solid $wds-color-mist-gray;
 	line-height: $wds-line-height;
@@ -46,21 +46,11 @@ pre {
 	background-color: $wds-color-off-white;
 	border: 1px solid $wds-color-mist-gray;
 	font-size: 12px;
-	line-height: $wds-typescale-size-minus-2;
-	margin-top: 30px;
+	line-height: $wds-typescale-size-minus-1;
 	max-height: 300px;
 	overflow-x: auto;
 	padding: 14px;
-
-	code {
-		border: 0;
-		color: $wds-color-black;
-
-		&::before,
-		&::after {
-			display: none;
-		}
-	}
+	color: $wds-color-black;
 }
 
 ////////////////////////////////////// END of Selectors section //////////////////////////////////////

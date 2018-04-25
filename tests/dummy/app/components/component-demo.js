@@ -10,6 +10,9 @@ export default Component.extend({
 	standalone: false,
 	standaloneDevice: null,
 
+	showHTML: false,
+	showHBS: true,
+
 	didInsertElement() {
 		const $component = this.$('.component-demo__rendered').clone();
 
@@ -30,6 +33,12 @@ export default Component.extend({
 		},
 		showFullscreen(device) {
 			this.set('standaloneDevice', device);
+		},
+		onTabChange(tab) {
+			const isHBS = tab.element.innerText.includes('HBS');
+			
+			this.set('showHBS', isHBS);
+			this.set('showHTML', !isHBS);
 		}
 	}
 });

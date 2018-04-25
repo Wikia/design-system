@@ -16,6 +16,7 @@ module.exports = function (defaults) {
 			end: /{{\/component-demo}}/,
 		},
 		includeFileExtensionInSnippetNames: false,
+		includeHighlightStyle: false,
 		outputPaths: {
 			app: {
 				css: {

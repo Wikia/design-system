@@ -8,12 +8,11 @@
 	<h2 id="list">List</h2>
 	<p>To display a regular list, add <code class="format-code">.wds-list</code> class in your <code>&lt;ul&gt;</code> tag.</p>
 
-	{{#component-demo}}
+	{{#component-demo name='list'}}
 		{{#wds-list}}
-
-	<li>List element 1</li>
-	<li>List element 2</li>
-	<li>List element 3</li>
+			<li>List element 1</li>
+			<li>List element 2</li>
+			<li>List element 3</li>
 		{{/wds-list}}
 	{{/component-demo}}
 </section>
@@ -26,7 +25,7 @@
 		This modificator makes padding broader and font size bigger in each element.
 	</p>
 
-	{{#component-demo}}
+	{{#component-demo name='list-big'}}
 		{{#wds-list class="wds-has-big-items"}}
 			<li>List element 1</li>
 			<li>List element 2</li>
@@ -43,7 +42,7 @@
 		This modificator sets <code class="format-code">font-weight</code> to bold.
 	</p>
 
-	{{#component-demo}}
+	{{#component-demo name='list-bold'}}
 		{{#wds-list class="wds-has-bolded-items"}}
 			<li>List element 1</li>
 			<li>List element 2</li>
@@ -59,9 +58,8 @@
 		adds subtle separator between each element of your list.
 	</p>
 
-	{{#component-demo}}
+	{{#component-demo name='list-lines'}}
 		{{#wds-list class="wds-has-lines-between"}}
-
 			<li>List element 1</li>
 			<li>List element 2</li>
 			<li>List element 3</li>
@@ -79,7 +77,7 @@
 		wrapping each elements content.
 	</p>
 
-	{{#component-demo}}
+	{{#component-demo name='list-linked'}}
 		{{#wds-list class="wds-is-linked"}}
 			<li><a href="http://wikia.com">Linked element 1</a></li>
 			<li><a href="http://wikia.com">Linked element 2</a></li>
