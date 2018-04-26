@@ -8,33 +8,35 @@
 <section>
 	<h2 id="text-only">Simple toggle</h2>
 
-	{{#component-demo}}
-		<input type="checkbox" id="toggleA" class="wds-toggle__input">
-		<label for="toggleA" class="wds-toggle__label"></label>
+	{{#component-demo name='toggle-a'}}
+		{{wds-toggle id='toggleA'}}
 	{{/component-demo}}
 </section>
 
 <section>
 	<h2 id="text-only">Toggle with a label</h2>
 
-	{{#component-demo}}
-		<input type="checkbox" id="toggleB" class="wds-toggle__input">
-		<label for="toggleB" class="wds-toggle__label">Slide me if you wish</label>
+	{{#component-demo name='toggle-b'}}
+		{{#wds-toggle id='toggleB'}}
+			Slide me if you wish
+		{{/wds-toggle}}
 	{{/component-demo}}
 </section>
 
 <section>
 	<h2 id="text-only">Disabled toggle</h2>
 
-	{{#component-demo}}
-		<input type="checkbox" id="toggleDisabled" class="wds-toggle__input" disabled>
-		<label for="toggleDisabled" class="wds-toggle__label">Yep I'm disabled</label>
+	{{#component-demo name='toggle-disabled'}}
+		{{#wds-toggle id='toggleDisabled' disabled=true}}
+			Yep I'm disabled
+		{{/wds-toggle}}
 	{{/component-demo}}
 
 	<h2 id="text-only">Disabled and checked toggle</h2>
 
-	{{#component-demo}}
-		<input type="checkbox" id="toggleDisabledB" class="wds-toggle__input" disabled checked>
-		<label for="toggleDisabledB" class="wds-toggle__label">Yep I'm disabled</label>
+	{{#component-demo name='toggle-disabled-b'}}
+		{{#wds-toggle id='toggleDisabledB' disabled=true checked=true}}
+			Yep I'm disabled
+		{{/wds-toggle}}
 	{{/component-demo}}
 </section>
