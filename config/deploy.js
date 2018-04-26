@@ -29,7 +29,6 @@ module.exports = function (deployTarget) {
 		ENV.git = {
 			repo: 'git@github.com:wikia/design-system.git',
 			branch: 'gh-pages',
-			worktreePath: distDir,
 			commitMessage: 'Deployed %@'
 		};
 	}
