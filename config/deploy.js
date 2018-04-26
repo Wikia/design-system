@@ -2,28 +2,38 @@
 'use strict';
 
 module.exports = function (deployTarget) {
+	const distDir = 'docs-dev';
+
 	let ENV = {
 		build: {
-			outputPath: 'docs-dev',
+			outputPath: distDir,
 		},
+		plugins: ['build']
 		// include other plugin configuration that applies to all deploy targets here
 	};
 
 	if (deployTarget.startsWith('dev-')) {
 		ENV.build.environment = 'devbox';
+		ENV.plugins.push('sftp');
 
 		ENV.sftp = {
 			host: deployTarget,
-			distDir: 'docs-dev',
+			distDir: distDir,
 			remoteDir: '/var/www/design-system',
 			remoteUser: deployTarget.replace('dev-', ''),
 			agent: process.env.SSH_AUTH_SOCK
 		};
 	}
 
-	if (deployTarget === 'production') {
+	if (deployTarget === 'github') {
 		ENV.build.environment = 'production';
-		// configure other plugins for production deploy target here
+		ENV.plugins.push('git');
+
+		ENV.git = {
+			repo: 'git@github.com:wikia/design-system.git',
+			branch: 'gh-pages',
+			commitMessage: 'Deployed %@'
+		};
 	}
 
 	// Note: if you need to build some configuration asynchronously, you can return
