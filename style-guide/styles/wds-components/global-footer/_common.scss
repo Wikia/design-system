@@ -1,4 +1,7 @@
-@import 'global-footer-variables';
+@import 'variables';
+
+$international-logo-height: 30px;
+$footer-line-height: 1.3em;
 
 .wds-global-footer {
 	background-color: $wds-color-dark-blue-gray;

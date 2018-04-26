@@ -1,4 +1,23 @@
-@import 'global-footer-variables';
+@import 'variables';
+
+// columns
+$desktop-column-fandom: 25%;
+$desktop-column-wikia: 75%;
+$desktop-first-column-width: 200px;
+$desktop-second-column-width: 124px;
+$desktop-third-column-width: 290px;
+$desktop-fourth-column-width: 200px;
+
+// rows
+$desktop-row-header-en-margin-top: 47px;
+$desktop-row-header-en-margin-bottom: 35px;
+
+$desktop-row-header-international-padding-top: 43px;
+$desktop-row-header-international-padding-bottom: 34px;
+$desktop-row-top-height: 206px + $section-line-width;
+
+// other
+$desktop-width: 1024px;
 
 .wds-global-footer {
 	@media #{$wds-breakpoint-xl-up} {

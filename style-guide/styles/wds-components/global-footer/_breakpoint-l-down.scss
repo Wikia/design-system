@@ -1,4 +1,11 @@
-@import 'global-footer-variables';
+@import 'variables';
+
+$mobile-row-header-en-fandom-margin-top: 38px;
+$mobile-row-header-en-wikia-margin-top: 61px;
+$mobile-row-header-en-margin-bottom: 29px;
+
+$mobile-row-header-international-padding-top: 34px;
+$mobile-row-header-international-padding-bottom: 35px;
 
 .wds-global-footer {
 	@media #{$wds-breakpoint-l-down} {
