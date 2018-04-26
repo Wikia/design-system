@@ -104,6 +104,26 @@ $desktop-width: 1024px;
 				display: block;
 				order: 5;
 				width: $desktop-third-column-width;
+
+				.wds-global-footer__link {
+					border: solid 1px $wds-color-blue-gray;
+					color: $wds-color-blue-gray;
+					display: inline-block;
+					font: {
+						size: $wds-typescale-size-minus-2;
+						weight: bold;
+					}
+					letter-spacing: .3px;
+					line-height: $footer-line-height;
+					margin-top: 13px;
+					padding: 14px 18px;
+					text-decoration: none;
+					text-transform: uppercase;
+
+					&:hover {
+						color: $wds-color-white;
+					}
+				}
 			}
 
 			&.wds-is-community-apps {
