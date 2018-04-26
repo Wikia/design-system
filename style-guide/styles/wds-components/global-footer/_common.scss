@@ -1,6 +1,5 @@
 @import 'variables';
 
-$international-logo-height: 30px;
 $footer-line-height: 1.3em;
 
 .wds-global-footer {
@@ -20,12 +19,6 @@ $footer-line-height: 1.3em;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-	}
-
-	// main title and license
-	&__header-wrapper {
-		display: block;
-		width: 100%;
 	}
 
 	&__header {
@@ -88,46 +81,6 @@ $footer-line-height: 1.3em;
 		width: 164px;
 	}
 
-	&__fandom-logo {
-		fill: $wds-color-white;
-		height: $en-logo-height;
-		width: 122px;
-	}
-
-	&__wikia-logo {
-		fill: $wds-color-white;
-		height: $en-logo-height;
-		width: 67px;
-
-		&.wds-is-large {
-			height: $international-logo-height;
-			padding: 0;
-			width: 84px;
-		}
-	}
-
-	// "Home of Fandom" subtitle
-	&__home-of-fandom {
-		border: {
-			bottom: 1px solid $wds-color-blue-gray;
-			top: 1px solid $wds-color-blue-gray;
-		}
-		color: #7f90a1;
-		display: block;
-		font: {
-			size: $wds-typescale-size-minus-2;
-			weight: bold;
-		}
-		letter-spacing: .5px;
-		margin: {
-			left: 13px;
-			top: 5px;
-		}
-		padding: 3px 0;
-		text-transform: uppercase;
-		white-space: nowrap;
-	}
-
 	// main content
 	&__main {
 		display: flex;
@@ -135,12 +88,6 @@ $footer-line-height: 1.3em;
 			direction: column;
 			wrap: wrap;
 		}
-	}
-
-	// left (Fandom) and right (Wikia) header and sections
-	&__fandom-header,
-	&__wikia-header {
-		margin: 0;
 	}
 
 	&__fandom-sections,
