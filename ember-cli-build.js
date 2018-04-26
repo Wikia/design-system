@@ -7,7 +7,6 @@ const SvgStore = require('broccoli-svgstore');
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
 		autoprefixer: {
-			browsers: ['last 5 versions'],
 			cascade: false
 		},
 		fingerprint: {
