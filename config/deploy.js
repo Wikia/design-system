@@ -8,11 +8,13 @@ module.exports = function (deployTarget) {
 		build: {
 			outputPath: distDir,
 		},
+		plugins: ['build']
 		// include other plugin configuration that applies to all deploy targets here
 	};
 
 	if (deployTarget.startsWith('dev-')) {
 		ENV.build.environment = 'devbox';
+		ENV.plugins.push('sftp');
 
 		ENV.sftp = {
 			host: deployTarget,
@@ -25,6 +27,7 @@ module.exports = function (deployTarget) {
 
 	if (deployTarget === 'github') {
 		ENV.build.environment = 'production';
+		ENV.plugins.push('git');
 
 		ENV.git = {
 			repo: 'git@github.com:wikia/design-system.git',
