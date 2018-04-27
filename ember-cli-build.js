@@ -1,13 +1,12 @@
-/*jshint node:true*/
-/* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
-	Funnel = require('broccoli-funnel'),
-	SvgStore = require('broccoli-svgstore');
+'use strict';
+
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const Funnel = require('broccoli-funnel');
+const SvgStore = require('broccoli-svgstore');
 
 module.exports = function(defaults) {
 	var app = new EmberApp(defaults, {
 		autoprefixer: {
-			browsers: ['last 5 versions'],
 			cascade: false
 		},
 		fingerprint: {

@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import {helper as buildHelper} from '@ember/component/helper';
 
 /**
  * Check if two arguments are equals
@@ -6,6 +6,6 @@ import Ember from 'ember';
  * @param {Array} params
  * @returns {string}
  */
-export default Ember.Helper.helper((params) => {
+export default buildHelper((params) => {
 	return params[0] === params[1];
 });

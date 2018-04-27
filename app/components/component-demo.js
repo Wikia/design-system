@@ -1,12 +1,11 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import ENV from '../config/environment';
 import beautify from '../utils/beautify';
-
-const {Component} = Ember;
 
 export default Component.extend({
 	classNames: ['component-demo'],
 
+	code: '',
 	codeOnly: false,
 	rootURL: ENV.rootURL,
 	standalone: false,
