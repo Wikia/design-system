@@ -32,7 +32,7 @@ module.exports = function(defaults) {
 		},
 		postBuildCopy: [
 			{
-				src: '/tests/dummy/assets/wds.css',
+				src: '/assets/wds.css',
 				dest: 'dist/css/styles.css',
 				enabled: EmberAddon.env() === 'production'
 			},
