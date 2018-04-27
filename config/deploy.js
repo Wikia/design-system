@@ -3,15 +3,14 @@
 
 module.exports = function (deployTarget) {
 	let ENV = {
-		build: {
-			outputPath: 'docs-dev',
-		},
 		// include other plugin configuration that applies to all deploy targets here
 	};
 
 	if (deployTarget.startsWith('dev-')) {
-		ENV.build.environment = 'devbox';
-
+		ENV.build = {
+			environment: 'devbox',
+			outputPath: 'docs-dev',
+		};
 		ENV.sftp = {
 			host: deployTarget,
 			distDir: 'docs-dev',
@@ -19,15 +18,10 @@ module.exports = function (deployTarget) {
 			remoteUser: deployTarget.replace('dev-', ''),
 			agent: process.env.SSH_AUTH_SOCK
 		};
-	}
 
-	if (deployTarget === 'production') {
-		ENV.build.environment = 'production';
-		// configure other plugins for production deploy target here
+		// Note: if you need to build some configuration asynchronously, you can return
+		// a promise that resolves with the ENV object instead of returning the
+		// ENV object synchronously.
+		return ENV;
 	}
-
-	// Note: if you need to build some configuration asynchronously, you can return
-	// a promise that resolves with the ENV object instead of returning the
-	// ENV object synchronously.
-	return ENV;
 };
