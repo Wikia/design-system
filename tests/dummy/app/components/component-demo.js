@@ -5,6 +5,7 @@ import beautify from '../utils/beautify';
 export default Component.extend({
 	classNames: ['component-demo'],
 
+	code: '',
 	codeOnly: false,
 	rootURL: ENV.rootURL,
 	standalone: false,

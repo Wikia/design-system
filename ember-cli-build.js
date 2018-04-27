@@ -4,8 +4,11 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 const Funnel = require('broccoli-funnel');
 const SvgStore = require('broccoli-svgstore');
 
-module.exports = function (defaults) {
+module.exports = function(defaults) {
 	var app = new EmberAddon(defaults, {
+		autoprefixer: {
+			cascade: false
+		},
 		fingerprint: {
 			enabled: false
 		},

@@ -20,7 +20,7 @@ plugins:
   - removeUnknownsAndDefaults
   - removeNonInheritableGroupAttrs
   - removeUselessStrokeAndFill
-  - removeViewBox
+  - removeViewBox: false
   - cleanupEnableBackground
   - removeHiddenElems
   - removeEmptyText
@@ -38,7 +38,7 @@ plugins:
   - sortAttrs
   - removeTitle: true
   - removeDesc
-  - removeDimensions
+  - removeDimensions: true
   - removeAttrs
   - addClassesToSVGElement
   - removeStyleElement

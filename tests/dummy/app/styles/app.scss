@@ -31,18 +31,16 @@ img {
 	max-width: 100%;
 }
 
-
-
 pre {
 	background-color: $wds-color-off-white;
 	border: 1px solid $wds-color-mist-gray;
 	font-size: 12px;
-	line-height: 18px;
+	line-height: $wds-line-height;
+	margin-top: 0;
 	max-height: 300px;
 	overflow-x: auto;
 	padding: 14px;
 	color: $wds-color-black;
-	margin-top: 0;
 }
 
 ////////////////////////////////////// END of Selectors section //////////////////////////////////////
