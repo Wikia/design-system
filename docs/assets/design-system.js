@@ -48,4 +48,4 @@ for(var i=0;i<e.children.length;i++)o=document.createTextNode("\n"+s),e.insertBe
 return e}(e,0).innerHTML.trim().replace(/disabled=""/g,"disabled")}
 var a="  ",s=!1}),define("design-system/config/environment",[],function(){try{var t="design-system/config/environment",e=document.querySelector('meta[name="'+t+'"]').getAttribute("content"),n={default:JSON.parse(unescape(e))}
 return Object.defineProperty(n,"__esModule",{value:!0}),n}catch(e){throw new Error('Could not read config from meta tag with name "'+t+'".')}})
-runningTests||require("design-system/app").default.create({name:"design-system",version:"11.0.2+d6e08470"})
+runningTests||require("design-system/app").default.create({name:"design-system",version:"11.0.3+1281690a"})
