@@ -15,7 +15,7 @@ module.exports = function(defaults) {
 		snippetPaths: ['tests/dummy/snippets'],
 		snippetSearchPaths: ['tests/dummy/app'],
 		snippetRegexes: {
-			begin: /{{#component-demo\sname='(\S+)'/,
+			begin: /{{#component-demo[^}]+name='(\S+)'/,
 			end: /{{\/component-demo}}/,
 		},
 		includeFileExtensionInSnippetNames: false,
