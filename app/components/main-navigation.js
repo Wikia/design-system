@@ -1,6 +1,6 @@
-import Ember from 'ember';
-
-const {Component, run} = Ember;
+import Component from '@ember/component';
+import {run, throttle} from '@ember/runloop';
+import $ from 'jquery';
 
 export default Component.extend({
 	classNames: 'main-navigation',
@@ -14,7 +14,9 @@ export default Component.extend({
 
 		run.schedule('afterRender', () => {
 			$(window).on('scroll', () => {
-				this.set('isFixed', this.get('offset') < window.pageYOffset);
+				throttle(this, function () {
+					this.set('isFixed', this.get('offset') < window.pageYOffset);
+				}, 100);
 			});
 		});
 	}

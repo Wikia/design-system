@@ -1,7 +1,5 @@
-import Ember from 'ember';
-
-const {Helper, String} = Ember;
-
+import Helper from '@ember/component/helper';
+import {htmlSafe} from '@ember/string'
 /**
  * Helper to generate SVGs in the form:
  * {{svg name viewBox classes}}
@@ -20,12 +18,12 @@ const {Helper, String} = Ember;
  */
 export function svg(params, hash) {
 	const optionalParams = [
-			'class',
-			'role',
-			'viewBox',
-			'width',
-			'height'
-		],
+		'class',
+		'role',
+		'viewBox',
+		'width',
+		'height'
+	],
 		name = params[0];
 
 	let ret = '<svg';
@@ -37,7 +35,7 @@ export function svg(params, hash) {
 	});
 	ret += `><use xlink:href="#${name}"></use></svg>`;
 
-	return new String.htmlSafe(ret);
+	return htmlSafe(ret);
 }
 
 export default Helper.helper(svg);

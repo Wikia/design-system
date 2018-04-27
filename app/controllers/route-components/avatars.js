@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
 import ENV from '../../config/environment';
-
-const {Controller} = Ember;
 
 export default Controller.extend({
 	rootURL: ENV.rootURL
