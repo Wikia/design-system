@@ -4,7 +4,7 @@ import {computed} from '@ember/object';
 export default Component.extend({
 	tagName: 'svg',
 	classNames: ['wds-icon'],
-	classNameBindings: ['sizeClassName'],
+	classNameBindings: ['sizeClassName', 'chevron:wds-menu-chevron'],
 	attributeBindings: ['width', 'height'],
 
 	sizeClassName: computed(function () {
