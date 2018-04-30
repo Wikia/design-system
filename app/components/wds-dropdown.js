@@ -1,23 +1,27 @@
-import {computed} from '@ember/object';
 import Component from '@ember/component';
 
+const isTouchDevice = ('ontouchstart' in window);
+
 export default Component.extend({
-	classNameBindings: ['isClicked:wds-is-clicked', 'dropdownExpanded:wds-is-active', 'hasShadow:wds-has-shadow', 'hasDarkShadow:wds-has-dark-shadow', 'isLevel2:wds-dropdown-level-2:wds-dropdown'],
+	classNameBindings: [
+		'isClicked:wds-is-clicked',
+		'dropdownExpanded:wds-is-active',
+		'hasShadow:wds-has-shadow',
+		'hasDarkShadow:wds-has-dark-shadow',
+		'isLevel2:wds-dropdown-level-2:wds-dropdown'
+	],
 	isLevel2: false,
-	isTouchDevice: computed(function () {
-		return ('ontouchstart' in window);
-	}),
 
 	actions: {
 		click(e) {
-			if (this.get('isTouchDevice') && !this.get('isClicked')) {
+			if (isTouchDevice && !this.get('isClicked')) {
 				this.set('isClicked', true);
 				e.preventDefault();
 			}
 		},
 
 		mouseLeave() {
-			if (this.get('isTouchDevice')) {
+			if (isTouchDevice) {
 				this.set('isClicked', false);
 			}
 		}

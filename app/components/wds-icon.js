@@ -7,14 +7,15 @@ export default Component.extend({
 	classNameBindings: ['sizeClassName', 'chevron:wds-menu-chevron'],
 	attributeBindings: ['width', 'height'],
 
-	sizeClassName: computed(function () {
+	sizeClassName: computed('size', function () {
 		const size = this.get('size');
 
 		return size ? `wds-icon-${size}` : '';
 	}),
-	iconName: computed(function () {
-		const name = this.get('name'),
-			size = this.get('size');
+
+	iconName: computed('name', 'size', function () {
+		const name = this.get('name');
+		const size = this.get('size');
 
 		return `wds-icons-${name}${size ? `-${size}` : ''}`;
 	})
