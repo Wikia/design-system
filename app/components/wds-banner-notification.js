@@ -1,22 +1,21 @@
 import Component from '@ember/component';
 import {computed} from '@ember/object';
 
+const iconMap = {
+	alert: 'error',
+	warning: 'alert',
+	success: 'checkmark',
+	message: 'flag'
+};
+
 export default Component.extend({
 	classNames: 'wds-banner-notification',
 	classNameBindings: ['typeClassName'],
+
 	icon: computed('type', function () {
-		const prefix = 'wds-icons-';
-		switch (this.get('type')) {
-			case 'alert':
-				return `${prefix}error-small`;
-			case 'warning':
-				return `${prefix}alert-small`;
-			case 'success':
-				return `${prefix}checkmark-circle-small`;
-			case 'message':
-				return `${prefix}flag-small`;
-		}
+		return iconMap[this.get('type')];
 	}),
+
 	typeClassName: computed('type', function () {
 		return 'wds-' + this.get('type');
 	})
