@@ -43,7 +43,8 @@ export default Component.extend({
 	name: null,
 	showHTML: false,
 	showHBS: true,
-	language: 'handlebars',
+	language: 'htmlbars',
+	
 
 	didInsertElement() {
 		const name = this.get('name');
