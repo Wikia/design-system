@@ -27,7 +27,7 @@
 	</div>
 {{/if}}
 
-{{#if (and code name)}}
+{{#if (and renderedCode name)}}
 	{{#wds-tabs onChange=(action 'onTabChange') as |tabs|}}
 		{{#tabs.tab value=0}}
 			<div class='wds-tabs__tab-label'>
@@ -42,8 +42,8 @@
 	{{/wds-tabs}}
 {{/if}}
 
-{{#if (and code showHTML)}}
-	{{#code-sample language=language}}{{code}}{{/code-sample}}
+{{#if (and renderedCode showHTML)}}
+	{{#code-sample language=language}}{{renderedCode}}{{/code-sample}}
 {{/if}}
 
 {{#if (and name showHBS)}}
