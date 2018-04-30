@@ -14,18 +14,9 @@
 		and applied to an SVG with a circle. The properties of the SVG have to be either calculated beforehand
 		or via JavaScript code.
 	</p>
-	{{#component-demo}}
-<!--size = full diameter = r * 2 + stroke width-->
-<svg class="wds-spinner wds-spinner__block" width="78" height="78"
-	 viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg">
-	<!--transform over full radius = r  + strokeWidth / 2-->
-	<g transform="translate(39, 39)">
-		<!--stroke-dasharray and stroke-dashoffset="238" are equal to 2*PI*r = 2*PI*38-->
-		<circle class="wds-spinner__stroke" fill="none" stroke-width="2"
-				stroke-dasharray="239" stroke-dashoffset="239"
-				stroke-linecap="round" r="38"></circle>
-	</g>
-</svg>
+	{{#component-demo name='progress-indicator-intro' codeOnly=true}}
+		<!--size = full diameter = r * 2 + stroke width-->
+		{{wds-spinner active=true radius=38 strokeWidth=2 isBlock=true}}
 	{{/component-demo}}
 	<div>
 		In addition to <code>wds-spinner</code> and <code>wds-spinner__stroke</code>, other classes can be used,
