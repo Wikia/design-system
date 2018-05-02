@@ -8,7 +8,7 @@
 			{{/if}}
 		</span>
 	{{/dropdown.toggle}}
-	{{#dropdown.content isNotScrollable=true}}
+	{{#dropdown.content scrollable=false}}
 		<ul class="wds-list wds-is-linked">
 			{{#each model.submenu as |thirdLevelItem|}}
 				<li><a href="{{thirdLevelItem.href}}">{{thirdLevelItem.label.value}}</a></li>
