@@ -164,7 +164,7 @@
 				<span>Dropdown with linked list</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content scrollable=false}}
-				{{#wds-list class='wds-is-linked'}}
+				{{#wds-list linked=true}}
 					<li><a href="http://fandom.wikia.com">List item 1</a></li>
 					<li><a href="http://fandom.wikia.com">List item 2</a></li>
 					<li><a href="http://fandom.wikia.com">List item 3</a></li>
@@ -233,13 +233,13 @@
 				<span>2-levels dropdown</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content scrollable=false}}
-				{{#wds-list class='wds-is-linked wds-has-bolded-items'}}
+				{{#wds-list linked=true bold=true}}
 					{{#wds-dropdown isLevel2=true tagName='li' as |dropdown|}}
 						{{#dropdown.toggle tagName='a' href='#'}}
 							<span>List item 1</span>
 						{{/dropdown.toggle}}
 						{{#dropdown.content}}
-							{{#wds-list class='wds-is-linked'}}
+							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 								<li><a href="#">List item 3</a></li>
@@ -259,7 +259,7 @@
 							List item 3
 						{{/dropdown.toggle}}
 						{{#dropdown.content}}
-							{{#wds-list class='wds-is-linked'}}
+							{{#wds-list linked=true}}
 								<li><a href="#2">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 								<li><a href="#">List item 3</a></li>
@@ -282,7 +282,7 @@
 							List item 4
 						{{/dropdown.toggle}}
 						{{#dropdown.content}}
-							{{#wds-list class='wds-is-linked'}}
+							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 							{{/wds-list}}
@@ -293,7 +293,7 @@
 							Broken 2-level
 						{{/dropdown.toggle}}
 						{{#dropdown.content}}
-							{{#wds-list class='wds-is-linked'}}
+							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 							{{/wds-list}}
@@ -312,15 +312,21 @@
 	<p>
 		To apply theming to dropdown, use  <code class="format-code">dropdown-theming</code> mixin.
 		For example:
-		{{#code-sample language='sass'}}
-			.some-wrapper {
+		{{#component-demo name='dropdown-theming-sass' language='scss' codeOnly=true}}
+			.dropdowns-theming {
 				$color-page: #0E182B;
 				$color-page-border: #3e4757;
 				$color-text: #D5D4D4;
 				$color-links: #71d1ef;
-				@include dropdown-theming($color-page, $color-text, $color-links, $color-page-border);
+
+				@include dropdown-theming(
+					$color-page,
+					$color-text,
+					$color-links,
+					$color-page-border
+				);
 			}
-		{{/code-sample}}
+		{{/component-demo}}
 		will give you following theme:
 	</p>
 
@@ -330,13 +336,13 @@
 				<span>2-levels dropdown</span>
 			{{/dropdown.toggle}}
 			{{#dropdown.content scrollable=false}}
-				{{#wds-list class='wds-is-linked wds-has-bolded-items'}}
+				{{#wds-list linked=true bold=true}}
 					{{#wds-dropdown isLevel2=true tagName='li' as |dropdown|}}
 						{{#dropdown.toggle tagName='a' href='#'}}
 							<span>List item 1</span>
 						{{/dropdown.toggle}}
 						{{#dropdown.content}}
-							{{#wds-list class='wds-is-linked'}}
+							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 								<li><a href="#">List item 3</a></li>
@@ -356,7 +362,7 @@
 							List item 3
 						{{/dropdown.toggle}}
 						{{#dropdown.content}}
-							{{#wds-list class='wds-is-linked'}}
+							{{#wds-list linked=true}}
 								<li><a href="#2">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 								<li><a href="#">List item 3</a></li>
@@ -379,7 +385,7 @@
 							List item 4
 						{{/dropdown.toggle}}
 						{{#dropdown.content}}
-							{{#wds-list class='wds-is-linked'}}
+							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
 								<li><a href="#">List item 2</a></li>
 							{{/wds-list}}
