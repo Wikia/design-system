@@ -1,7 +1,11 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-	attributeBindings: ['disabled', 'href'],
+	attributeBindings: [
+		'disabled',
+		'href',
+		'title'
+	],
 	classNames: 'wds-button',
 	classNameBindings: [
 		'secondary:wds-is-secondary',
