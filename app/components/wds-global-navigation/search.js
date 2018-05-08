@@ -13,6 +13,8 @@ export default Component.extend({
 	hasSuggestions: notEmpty('suggestions'),
 	isEmptyQuery: empty('query'),
 
+	onQueryChanged() {},
+
 	init() {
 		this._super(...arguments);
 
@@ -43,7 +45,14 @@ export default Component.extend({
 		},
 
 		onQueryChanged() {
-			this.updateSuggestions(this.get('query'));
+			this.setProperties({
+				suggestions: [],
+				selectedSuggestionIndex: -1
+			});
+
+			this.set('suggestions', 
+				this.get('onQueryChanged')(this.get('query'))
+			);
 		},
 
 		onKeyDown(value, event) {
@@ -64,31 +73,6 @@ export default Component.extend({
 				event.currentTarget.blur();
 				this.send('closeSearch');
 			}
-
-		}
-	},
-
-	updateSuggestions(query) {
-		this.setProperties({
-			suggestions: [],
-			selectedSuggestionIndex: -1
-		});
-
-		if (query) {
-			this.set('suggestions', [
-				{
-					text: 'One',
-					uri: '#'
-				},
-				{
-					text: 'Two',
-					uri: '#'
-				},
-				{
-					text: 'Three',
-					uri: '#'
-				}
-			]);
 		}
 	}
 });

@@ -19,6 +19,23 @@ export default Component.extend({
 
 		deactivateSearch() {
 			this.set('searchIsActive', false);
+		},
+
+		onSearchQueryChanged(query) {
+			return [
+					{
+						text: `${query} One`,
+						uri: '#'
+					},
+					{
+						text: `${query} Two`,
+						uri: '#'
+					},
+					{
+						text: `${query} Three`,
+						uri: '#'
+					}
+				];
 		}
 	}
 });
