@@ -57,7 +57,11 @@
 <section>
 	<h2 id="active-tab">Active tab indicator</h2>
 	<p>To mark specific tab as opened (there should be only one opened tab at once) add <code class='format-code'>.wds-is-current</code> class to your tab's <code>&lt;li&gt;</code> tag.</p>
-
+	<p>
+		In Ember component you can have tabs marked as active automatically by passing a unique <code class='format-code'>value</code> to tabs.tab components.
+		A tab with value=0 will be marked as selected. If you want to change which tab is selected on initial render - pass <code class='format-code'>selected=value</code> to \{{wds-tabs}} component.
+		If you don't need tabs to be marked as active - don't pass value to tabs.tab components.
+	</p>
 	{{#component-demo name='tabs-active'}}
 		{{#wds-tabs selected=1 as |tabs|}}
 			{{#tabs.tab value=0}}
