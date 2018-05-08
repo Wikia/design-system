@@ -106,8 +106,11 @@ sh deploy-devbox.sh -h dev-developer -u developer
 	<h2>Repository structure</h2>
 	<ul>
 		<li>
-			<code class="format-code">app</code> — source files for Ember Reference Page application.
-			You will need to edit them when modifying the RP. See "Repository APP (Reference Page) structure" section below
+			<code class="format-code">app</code> — source files for Ember Addon, (in our case, a collection of reusable Ember.js components).
+			<ul>
+				<li><code class="format-code">app/components</code> - Javascript files of Ember Components</li>
+				<li><code class="format-code">app/templates</code> - Template / markup files of Ember Components</li>
+			</ul>
 		</li>
 		<li><code class="format-code">config</code> — configuration for Reference Page. It's unlikely that you will need to touch it.</li>
 		<li>
@@ -123,14 +126,10 @@ sh deploy-devbox.sh -h dev-developer -u developer
 			It's built when using npm run dev and is accessible on <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>.
 		</li>
 		<li><code class="format-code">lib</code> — Ember's in-repo addons</li>
-		<li>
-			<code class="format-code">lib/wds-components</code> — Ember components that wrap Design System
-			components. Consider using them instead of the pure HTML when there is logic involved.
-			It's currently an in-repo addon but it's possible to extract it to a separate addon and reuse in all Ember apps.
-		</li>
 		<li><code class="format-code">public</code> — contents of this directory are copied to Reference Page assets during the build.</li>
 		<li><code class="format-code">style-guide</code> — source files for Design System. This is what gets compiled to dist.</li>
 		<li><code class="format-code">ember-cli-build.js</code> — configuration file for the Ember CLI which is our build pipeline.</li>
+		<li><code class="format-code">index.js</code> — Ember addon entry-point file.</li>
 	</ul>
 </section>
 
