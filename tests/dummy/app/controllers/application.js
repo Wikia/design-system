@@ -32,6 +32,10 @@ export default Controller.extend({
 					{
 						name: 'SVG assets',
 						location: 'overview.svg-assets'
+					},
+					{
+						name: 'Ember Addon',
+						location: 'overview.ember-addon'
 					}
 				]
 			},

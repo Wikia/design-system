@@ -78,41 +78,36 @@
 	<h2>How to deploy Reference Page to devbox</h2>
 	<p>
 		You can present your work on Reference Page by deploying it to your devbox. To do so you can use
-		<code class="format-code">deploy-debox.sh</code> script which will make the Reference Page available on
+		<code class="format-code">ember deploy</code> command which will make the Reference Page available on
 		<code class="format-code">http://dev-developer/design-system/</code>.
 	</p>
 
 	<p>How to use the script:</p>
 	{{#code-sample}}
-./deploy-devbox.sh -h dev-developer
-sh deploy-devbox.sh -h dev-developer
-sh deploy-devbox.sh -h dev-developer -u developer
+ember deploy dev-developerName
 	{{/code-sample}}
 
 	<p>
-		It builds the app and uses <code class="format-code">scp</code> to send the files to devbox.
+		It builds the app and uses <code class="format-code">SFTP</code> to send the files to devbox.
 		If you have configured the SSH keys in your system then no additional authorization is required.
-		If you haven't then you will need to use your password.
+		If you haven't then you will need to use your password. In order to use the script you'll need to have a key-based
+		ssh authentication set up between your local machine and devbox.
 	</p>
-
-	<p>Parameters:</p>
-	<ul>
-		<li><code class="format-code">-h host</code> — devbox name i.e. <code class="format-code">dev-developer</code> <b>(required)</b></li>
-		<li><code class="format-code">-u username</code> — devbox username (optional, needed if you didn't configure SSH keys and have a different username locally than on devbox)</li>
-	</ul>
 </section>
 
 <section>
 	<h2>Repository structure</h2>
 	<ul>
 		<li>
-			<code class="format-code">app</code> — source files for Ember Reference Page application.
-			You will need to edit them when modifying the RP. See "Repository APP (Reference Page) structure" section below
+			<code class="format-code">app</code> — source files for Ember Addon, (in our case, a collection of reusable Ember.js components).
+			<ul>
+				<li><code class="format-code">app/components</code> - Javascript files of Ember Components</li>
+				<li><code class="format-code">app/templates</code> - Template / markup files of Ember Components</li>
+			</ul>
 		</li>
 		<li><code class="format-code">config</code> — configuration for Reference Page. It's unlikely that you will need to touch it.</li>
 		<li>
 			<code class="format-code">dist</code> — Design System distributable files.
-			This is the only directory that you will get when installing DS using Bower.
 			It shouldn't be modified manually as it's built by Ember CLI when using <code class="format-code">npm run build</code>.
 		</li>
 		<li>
@@ -124,19 +119,15 @@ sh deploy-devbox.sh -h dev-developer -u developer
 			It's built when using npm run dev and is accessible on <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>.
 		</li>
 		<li><code class="format-code">lib</code> — Ember's in-repo addons</li>
-		<li>
-			<code class="format-code">lib/wds-components</code> — Ember components that wrap Design System
-			components. Consider using them instead of the pure HTML when there is logic involved.
-			It's currently an in-repo addon but it's possible to extract it to a separate addon and reuse in all Ember apps.
-		</li>
 		<li><code class="format-code">public</code> — contents of this directory are copied to Reference Page assets during the build.</li>
 		<li><code class="format-code">style-guide</code> — source files for Design System. This is what gets compiled to dist.</li>
 		<li><code class="format-code">ember-cli-build.js</code> — configuration file for the Ember CLI which is our build pipeline.</li>
+		<li><code class="format-code">index.js</code> — Ember addon entry-point file.</li>
 	</ul>
 </section>
 
 <section>
-	<h2>Repository APP (Reference Page) structure</h2>
+	<h2>Reference Page structure (lives under /tests/dummy)</h2>
 	<ul>
 		<li>
 			<code class="format-code">components</code> — Definitions of RP-only components, see
@@ -190,4 +181,10 @@ sh deploy-devbox.sh -h dev-developer -u developer
 			<a href="https://guides.emberjs.com/v2.8.0/routing/defining-your-routes/" target="_blank">Defining your routes</a> for more details.
 		</li>
 	</ul>
+</section>
+
+<section>
+	<h2>Adding new Ember Components to Fandom Design System</h2>
+	<p>To add a new component, one can use built-in Ember Component generator:</p>
+	<pre>ember generate component wds-component-name</pre>
 </section>

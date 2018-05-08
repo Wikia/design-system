@@ -2,9 +2,9 @@
 <p>All steps you need to make to start using Design System on your site.</p>
 
 <section>
-	<h2>1. Install with Bower</h2>
+	<h2>1. Install with NPM</h2>
 	<p>As a first step, you need to install Design System libraries using Bower.</p>
-	<pre>bower install Wikia/design-system --save</pre>
+	<pre>npm install Wikia/design-system --save</pre>
 </section>
 
 <section>
@@ -13,7 +13,7 @@
 {{#code-sample language='html'}}
 &lt;head&gt;
 	...
-	&lt;link rel="stylesheet" type="text/css" href="bower_components/design-system/dist/css/styles.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="node_modules/design-system/dist/css/styles.css"&gt;
 &lt;/head&gt;
 {{/code-sample}}
 </section>
@@ -21,7 +21,7 @@
 <section>
 	<h2>3. Start using Design System goodies!</h2>
 	<p>Now you can start using DS classes in your application. To check if everything works, just add an example button and check if it is displayed correctly on your site.</p>
-{{#code-sample language='html'}}
-&lt;button class="wds-button"&gt;Test&lt;/button&gt;
-{{/code-sample}}
+	{{#component-demo name='quick-start-component' codeOnly=true}}
+		{{wds-icon name='alert' size='small'}}
+	{{/component-demo}}
 </section>
