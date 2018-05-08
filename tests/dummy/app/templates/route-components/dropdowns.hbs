@@ -81,7 +81,9 @@
 	<p>
 		There are special cases where we don't want a long dropdown to be scrollable, e.g. Wiki Local Navigation.
 		To disable the scroll, add <code class="format-code">.wds-is-not-scrollable</code>
-		to <code class="format-code">.wds-dropdown__content</code> element.
+		to <code class="format-code">.wds-dropdown__content</code> element or (in Ember Component) add
+		<code class="format-code">scrollable=false</code>
+		to the <code class="format-code">dropdown.content</code> component.
 	</p>
 	{{#component-demo name='dropdown-scrollable'}}
 		{{#wds-dropdown as |dropdown|}}
@@ -111,7 +113,8 @@
 	<p>
 		Dropdown aligned to the left side of the container. To align dropdown to left, you have to
 		add <code class="format-code">.wds-is-left-aligned</code> class to
-		<code class="format-code">.wds-dropdown__content</code> element.
+		<code class="format-code">.wds-dropdown__content</code> element or (in Ember Component) add <code class="format-code">dropdownLeftAligned=true</code>
+		to the dropdown.content component.
 	</p>
 	{{#component-demo name='dropdown-left'}}
 		{{#wds-dropdown as |dropdown|}}
@@ -134,7 +137,9 @@
 	<p>
 		Dropdown aligned to the right side of the container. To align dropdown to right, you have to add
 		<code class="format-code">.wds-is-right-aligned</code> class to
-		<code class="format-code">.wds-dropdown__content</code> element.
+		<code class="format-code">.wds-dropdown__content</code> element or (in Ember Component) add
+		<code class="format-code">dropdownRightAligned=true</code>
+		to the dropdown.content component.
 	</p>
 	{{#component-demo name='dropdown-right'}}
 		{{#wds-dropdown as |dropdown|}}
@@ -155,7 +160,8 @@
 <section>
 	<h2 id="dropdowns-linked-list-variant">Linked list variant</h2>
 	<p>
-		Dropdowns that have <code class="format-code">.wds-list.wds-is-linked</code> in the content.
+		Dropdowns that have <code class="format-code">.wds-list.wds-is-linked</code> (or Ember component
+		<code class="format-code">wds-list</code> with <code class="format-code">linked=true</code>) in the content.
 		Links have color and hover state different than when outside of a dropdown.
 	</p>
 	{{#component-demo name='dropdown-linked'}}
@@ -180,7 +186,8 @@
 		Dropdowns can drop shadow. To add light shadow to dropdown, you have to
 		add <code class="format-code">.wds-has-shadow</code> class to
 		<code class="format-code">.wds-dropdown</code> element and
-		<code class="format-code">.wds-has-dark-shadow</code> to add darker shadow.
+		<code class="format-code">.wds-has-dark-shadow</code> to add darker shadow, or, if you use Ember components,
+		add <code class="format-code">hasShadow=true</code> or <code class="format-code">hasDarkShadow=true</code>.
 	</p>
 	{{#component-demo name='dropdown-shadow'}}
 		{{#wds-dropdown class='dropdown-margin-right' hasShadow=true as |dropdown|}}
@@ -213,8 +220,18 @@
 <section>
 	<h2 id="dropdowns-2-levels">2-levels dropdown</h2>
 	<p>
-		It's possible to create 2-levels menu using dropdowns. To add second level menu add <code
-		class="format-code">.wds-dropdown-level-2</code> class to <code class="format-code">.wds-list li</code>
+		It's possible to create 2-levels menu using dropdowns.
+	</p>
+	<h3>For Ember component:</h3>
+	<p>
+		Add <code
+		class="format-code">isLevel2=true</code> class to <code class="format-code">.wds-list li</code>
+		element.
+	</p>
+	<h3>For pure HTML:</h3>
+	<p>
+		Add <code
+		class="format-code">.wds-dropdown-level-2</code> class to <code class="format-code">wds-dropdown tagName='li'</code>
 		element	and add <code class="format-code">.wds-dropdown-level-2__content</code> element inside
 		the list element.
 	</p>
