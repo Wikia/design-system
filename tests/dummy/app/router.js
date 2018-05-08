@@ -13,6 +13,7 @@ Router.map(function () {
 		this.route('contributing');
 		this.route('svg-assets');
 		this.route('installation');
+		this.route('ember-addon');
 	});
 
 	this.route('base-styles', function () {
