@@ -54,8 +54,8 @@
 	<p>Adding <code class="format-code">.wds-dropdown</code> class and dropdown component inside button component will result in dropdown hidden behind a button</p>
 	{{#component-demo name='dropdown-buttons'}}
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle as |toggle|}}
-				{{#wds-button}}<span>Dropdown</span> {{toggle.chevron}}{{/wds-button}}
+			{{#dropdown.toggle as |chevron|}}
+				{{#wds-button}}<span>Dropdown</span> {{chevron}}{{/wds-button}}
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
 				{{#wds-list}}
@@ -74,11 +74,11 @@
 		{{/wds-dropdown}}
 
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle as |toggle|}}
+			{{#dropdown.toggle as |chevron|}}
 				{{#wds-button}}
 					{{wds-icon name='fandom-heart' size='small'}}
 					<span>Dropdown</span>
-					{{toggle.chevron}}
+					{{chevron}}
 				{{/wds-button}}
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
@@ -91,8 +91,8 @@
 		{{/wds-dropdown}}
 
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle as |toggle|}}
-				{{#wds-button secondary=true}}<span>Dropdown</span>{{toggle.chevron}}{{/wds-button}}
+			{{#dropdown.toggle as |chevron|}}
+				{{#wds-button secondary=true}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
 				{{#wds-list}}
@@ -178,8 +178,8 @@
 		{{/wds-button}}
 
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle as |toggle|}}
-				{{#wds-button class='primary-only'}}<span>Dropdown</span>{{toggle.chevron}}{{/wds-button}}
+			{{#dropdown.toggle as |chevron|}}
+				{{#wds-button class='primary-only'}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
 				{{#wds-list}}
@@ -208,8 +208,8 @@
 		{{/wds-button}}
 
 		{{#wds-dropdown as |dropdown|}}
-			{{#dropdown.toggle as |toggle|}}
-				{{#wds-button class='different-secondary'}}<span>Dropdown</span>{{toggle.chevron}}{{/wds-button}}
+			{{#dropdown.toggle as |chevron|}}
+				{{#wds-button class='different-secondary'}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
 				{{#wds-list}}
@@ -280,8 +280,8 @@
 				<span>Edit</span>
 			{{/wds-button}}
 			{{#wds-dropdown as |dropdown|}}
-				{{#dropdown.toggle as |toggle|}}
-					{{#wds-button}}{{toggle.chevron}}{{/wds-button}}
+				{{#dropdown.toggle as |chevron|}}
+					{{#wds-button}}{{chevron}}{{/wds-button}}
 				{{/dropdown.toggle}}
 				{{#dropdown.content}}
 					{{#wds-list}}

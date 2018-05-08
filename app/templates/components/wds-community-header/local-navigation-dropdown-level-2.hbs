@@ -1,5 +1,5 @@
 {{#wds-dropdown isLevel2=true tagName='li' class=stickedClassName as |dropdown|}}
-	{{#dropdown.toggle tagName='a' href='#' as |toggle|}}
+	{{#dropdown.toggle tagName='a' href='#' as |chevron|}}
 		<span>
 			{{#if model.label.key}}
 				{{i18n model.label.key}}
@@ -7,7 +7,7 @@
 				{{model.label.value}}
 			{{/if}}
 		</span>
-		{{toggle.chevron}}
+		{{chevron}}
 	{{/dropdown.toggle}}
 	{{#dropdown.content scrollable=false}}
 		{{#wds-list linked=true}}
