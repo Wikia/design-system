@@ -10,26 +10,27 @@
 	{{/if}}
 	<div class="wds-global-navigation__links-and-search">
 		{{#each model.fandom_overview.links as |link|}}
-			{{wds-global-navigation.link-branded model=link}}
+			{{wds-global-navigation/link-branded model=link}}
 		{{/each}}
-		{{wds-global-navigation.links
+		{{wds-global-navigation/links
 			model=model.wikis
 			type='wikis-menu'
 		}}
-		{{wds-global-navigation.search
+
+		{{wds-global-navigation/search
 			model=model.search.module
 			activateSearch=(action 'activateSearch')
 			deactivateSearch=(action 'deactivateSearch')
 		}}
 	</div>
 	{{#if model.user}}
-		{{wds-global-navigation.links
+		{{wds-global-navigation/links
 			dropdownRightAligned=true
 			model=model.user
 			type='user-menu'
 		}}
 	{{else if model.anon}}
-		{{wds-global-navigation.account-navigation
+		{{wds-global-navigation/account-navigation
 			model=model.anon
 		}}
 	{{/if}}

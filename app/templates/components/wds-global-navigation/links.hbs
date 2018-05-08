@@ -1,12 +1,12 @@
 {{#if model.header}}
-	{{wds-global-navigation.dropdown
+	{{wds-global-navigation/dropdown
 		dropdownRightAligned=dropdownRightAligned
 		model=model
 		type=type
 	}}
 {{else}}
 	{{#each model.links as |link|}}
-		{{wds-global-navigation.link
+		{{wds-global-navigation/link
 			model=link
 		}}
 	{{/each}}
