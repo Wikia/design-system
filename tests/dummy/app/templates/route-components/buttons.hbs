@@ -33,6 +33,25 @@
 		{{/wds-button}}
 		{{#wds-button disabled=true}}Primary disabled{{/wds-button}}
 	{{/component-demo}}
+
+	<h2>Parameters</h2>
+	<div>
+		<h3>HBS Properties</h3>
+		<ul>
+			<li><strong>disabled</strong> (bool): whether button should be disabled or not</li>
+			<li><strong>secondary</strong> (bool): whether button should be secondary or not</li>
+			<li><strong>text</strong> (bool): whether button should be of type text or not</li>
+			<li><strong>square</strong> (bool): whether button should be square or not</li>
+			<li><strong>class</strong> (string): additional class names</li>
+		</ul>
+	</div>
+	<div>
+		<h3>HTML Attributes/CSS Classes</h3>
+		<ul>
+			<li><strong>wds-is-secondary</strong>: whether button should be secondary or not</li>
+			<li><strong>wds-is-text</strong>: whether button should be of type text or not</li>
+		</ul>
+	</div>
 </section>
 
 <section>
@@ -52,6 +71,10 @@
 <section>
 	<h2 id="dropdown">Dropdown button</h2>
 	<p>Adding <code class="format-code">.wds-dropdown</code> class and dropdown component inside button component will result in dropdown hidden behind a button</p>
+	<p>
+		*For dropdown properties see dropdown reference page.
+	</p>
+
 	{{#component-demo name='dropdown-buttons'}}
 		{{#wds-dropdown as |dropdown|}}
 			{{#dropdown.toggle as |chevron|}}
