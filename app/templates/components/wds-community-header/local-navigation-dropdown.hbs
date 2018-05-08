@@ -1,9 +1,9 @@
 {{#wds-dropdown as |dropdown|}}
-	{{#dropdown.toggle class='wds-tabs__tab-label'}}
+	{{#dropdown.toggle class='wds-tabs__tab-label' as |toggle|}}
 		{{#if model.href}}
 			<a href="{{model.href}}">
 				{{#if model.icon}}
-					{{wds-icon name=model.icon class='wds-icon-tiny'}}
+					{{wds-icon name=model.icon size='tiny'}}
 				{{/if}}
 				<span>
 					{{#if model.label.key}}
@@ -15,7 +15,7 @@
 			</a>
 		{{else}}
 			{{#if model.icon}}
-				{{wds-icon name=model.icon class='wds-icon-tiny'}}
+				{{wds-icon name=model.icon size='tiny'}}
 			{{/if}}
 			<span>
 				{{#if model.label.key}}
@@ -25,9 +25,10 @@
 				{{/if}}
 			</span>
 		{{/if}}
+		{{toggle.chevron}}
 	{{/dropdown.toggle}}
-	{{#dropdown.content isNotScrollable=true}}
-		<ul class="wds-list wds-is-linked wds-has-bolded-items">
+	{{#dropdown.content scrollable=false}}
+		{{#wds-list linked=true bold=true}}
 			{{#each model.submenu as |secondLevelItem index|}}
 				{{#if secondLevelItem.submenu}}
 					{{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem currentIndex=index}}
@@ -43,6 +44,6 @@
 					</li>
 				{{/if}}
 			{{/each}}
-		</ul>
+		{{/wds-list}}
 	{{/dropdown.content}}
 {{/wds-dropdown}}

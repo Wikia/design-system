@@ -33,7 +33,7 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "add-new-page-small"
+        "icon": "article-small"
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
@@ -388,7 +388,7 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "add-new-page-small"
+        "icon": "article-small"
       }
     ],
     "local-navigation": [
@@ -730,7 +730,7 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "add-new-page-small"
+        "icon": "article-small"
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
@@ -1089,7 +1089,7 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "add-new-page-small"
+        "icon": "article-small"
       },
       {
         "href": "/wiki/Special:WikiActivity",
@@ -1452,7 +1452,7 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "add-new-page-small"
+        "icon": "article-small"
       },
       {
         "href": "/wiki/Special:WikiActivity",

@@ -20,15 +20,12 @@
 	</div>
 	<div class="wds-community-header__wiki-buttons wds-button-group">
 		{{#each model.wiki-buttons as |button|}}
-			<a class="wds-button wds-is-secondary"
-			   href="{{button.href}}"
-			   title={{if button.title (i18n button.title.key) null}}
-			>
-				{{wds-icon name=button.icon class='wds-icon-small'}}
+			{{#wds-button secondary=true href=button.href title=(if button.title (i18n button.title.key) null)}}
+				{{wds-icon name=button.icon size='small'}}
 				{{#if button.label}}
 					<span>{{i18n button.label.key}}</span>
 				{{/if}}
-			</a>
+			{{/wds-button}}
 		{{/each}}
 	</div>
 </div>

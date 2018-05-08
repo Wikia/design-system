@@ -1,13 +1,13 @@
-{{#wds-tabs}}
+{{#wds-tabs as |tabs|}}
 	{{#each model as |firstLevelItem|}}
-		{{#wds-tab}}
+		{{#tabs.tab}}
 			{{#if firstLevelItem.submenu}}
 				{{wds-community-header/local-navigation-dropdown model=firstLevelItem}}
 			{{else}}
 				<div class="wds-tabs__tab-label">
 					<a href="{{firstLevelItem.href}}">
 						{{#if firstLevelItem.icon}}
-							{{wds-icon name=firstLevelItem.icon class='wds-icon-tiny'}}
+							{{wds-icon name=firstLevelItem.icon size='tiny'}}
 						{{/if}}
 						<span>
 							{{#if firstLevelItem.label.key}}
@@ -19,6 +19,6 @@
 					</a>
 				</div>
 			{{/if}}
-		{{/wds-tab}}
+		{{/tabs.tab}}
 	{{/each}}
 {{/wds-tabs}}

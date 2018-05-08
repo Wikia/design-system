@@ -84,6 +84,10 @@ export default Controller.extend({
 						location: 'route-components.buttons'
 					},
 					{
+						name: 'Action Buttons',
+						location: 'route-components.wds-action-buttons'
+					},
+					{
 						name: 'Toggles',
 						location: 'route-components.toggles'
 					},

@@ -7,7 +7,7 @@
 		title=(if showAvatar model.header.username.value)
 	}}
 		{{#if showAvatar}}
-			<img class="wds-avatar" src="{{model.header.url}}" alt="{{model.header.username.value}}" />
+			{{wds-avatar src=model.header.url alt=model.header.username.value}}
 		{{else}}
 			<span>{{i18n model.header.title.key}}</span>
 		{{/if}}
@@ -16,13 +16,13 @@
 		class='wds-global-navigation__dropdown-content'
 		dropdownRightAligned=dropdownRightAligned
 	}}
-		{{#wds-list class='wds-is-linked'}}
+		{{#wds-list linked=true}}
 			{{#each model.links as |link|}}
 				<li>
 					{{component
 						(if (equal link.type 'link-authentication')
-							'wds-global-navigation.link-authentication'
-							'wds-global-navigation.link-dropdown'
+							'wds-global-navigation/link-authentication'
+							'wds-global-navigation/link-dropdown'
 						)
 						model=link
 					}}

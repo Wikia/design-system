@@ -10,10 +10,10 @@
 		class='wds-global-navigation__dropdown-content'
 		dropdownRightAligned=true
 	}}
-		{{#wds-list class='wds-has-lines-between'}}
+		{{#wds-list lines=true}}
 			{{#each model.links as |link|}}
 				<li>
-					{{wds-global-navigation.link-authentication
+					{{wds-global-navigation/link-authentication
 						model=link
 					}}
 				</li>

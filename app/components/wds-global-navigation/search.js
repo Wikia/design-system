@@ -2,7 +2,6 @@ import {notEmpty, empty} from '@ember/object/computed';
 import Component from '@ember/component';
 import {computed} from '@ember/object';
 import translations from 'npm:design-system-i18n/i18n/en/design-system';
-import $ from 'jquery';
 
 export default Component.extend({
 	tagName: 'form',
@@ -13,6 +12,8 @@ export default Component.extend({
 	selectedSuggestionIndex: -1,
 	hasSuggestions: notEmpty('suggestions'),
 	isEmptyQuery: empty('query'),
+
+	onQueryChanged() {},
 
 	init() {
 		this._super(...arguments);
@@ -29,7 +30,7 @@ export default Component.extend({
 	}),
 
 	actions: {
-		focusSearch() {
+		onFocusSearch() {
 			this.set('searchIsActive', true);
 			this.get('activateSearch')();
 		},
@@ -43,50 +44,35 @@ export default Component.extend({
 			this.get('deactivateSearch')();
 		},
 
-		queryChanged(query) {
-			this.set('query', query);
-			this.updateSuggestions(query);
+		onQueryChanged() {
+			this.setProperties({
+				suggestions: [],
+				selectedSuggestionIndex: -1
+			});
+
+			this.set('suggestions', 
+				this.get('onQueryChanged')(this.get('query'))
+			);
 		},
 
-		onKeyEscape() {
-			$('.wds-global-navigation__search-input').blur();
-			this.send('closeSearch');
-		},
+		onKeyDown(value, event) {
+			const keyCode = event.originalEvent ? event.originalEvent.keyCode : event.keyCode;
 
-		onKeyDown() {
-			if (this.get('selectedSuggestionIndex') < this.get('suggestions.length') - 1) {
-				this.incrementProperty('selectedSuggestionIndex');
-			}
-		},
-
-		onKeyUp() {
-			if (this.get('suggestions.length') && this.get('selectedSuggestionIndex') > -1) {
-				this.decrementProperty('selectedSuggestionIndex');
-			}
-		},
-	},
-
-	updateSuggestions(query) {
-		this.setProperties({
-			suggestions: [],
-			selectedSuggestionIndex: -1
-		});
-
-		if (query) {
-			this.set('suggestions', [
-				{
-					text: 'One',
-					uri: '#'
-				},
-				{
-					text: 'Two',
-					uri: '#'
-				},
-				{
-					text: 'Three',
-					uri: '#'
+			// down arrow
+			if (keyCode === 40) {
+				if (this.get('selectedSuggestionIndex') < this.get('suggestions.length') - 1) {
+					this.incrementProperty('selectedSuggestionIndex');
 				}
-			]);
+			// up arrow
+			} else if (keyCode === 38) {
+				if (this.get('suggestions.length') && this.get('selectedSuggestionIndex') > -1) {
+					this.decrementProperty('selectedSuggestionIndex');
+				}
+			// ESC key
+			} else if (keyCode === 27) {
+				event.currentTarget.blur();
+				this.send('closeSearch');
+			}
 		}
 	}
 });

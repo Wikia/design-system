@@ -7,6 +7,7 @@ export default Component.extend({
 		'big:wds-has-big-items',
 		'bold:wds-has-bolded-items',
 		'lines:wds-has-lines-between',
-		'linked:wds-is-linked'
+		'linked:wds-is-linked',
+		'ellipsis:wds-has-ellipsis'
 	],
 });

@@ -7,7 +7,9 @@ export default Component.extend({
 	classNameBindings: ['isSelected:wds-is-current', 'disabled:wds-is-disabled'],
 
 	isSelected: computed('selected', 'value', function () {
-		return this.get('selected') === this.get('value');
+		const value = this.get('value');
+
+		return value !== undefined && this.get('selected') === value;
 	}),
 
 	onSelect() {},
