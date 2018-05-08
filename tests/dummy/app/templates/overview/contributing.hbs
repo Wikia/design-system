@@ -78,28 +78,21 @@
 	<h2>How to deploy Reference Page to devbox</h2>
 	<p>
 		You can present your work on Reference Page by deploying it to your devbox. To do so you can use
-		<code class="format-code">deploy-debox.sh</code> script which will make the Reference Page available on
+		<code class="format-code">ember deploy</code> command which will make the Reference Page available on
 		<code class="format-code">http://dev-developer/design-system/</code>.
 	</p>
 
 	<p>How to use the script:</p>
 	{{#code-sample}}
-./deploy-devbox.sh -h dev-developer
-sh deploy-devbox.sh -h dev-developer
-sh deploy-devbox.sh -h dev-developer -u developer
+ember deploy dev-developerName
 	{{/code-sample}}
 
 	<p>
-		It builds the app and uses <code class="format-code">scp</code> to send the files to devbox.
+		It builds the app and uses <code class="format-code">SFTP</code> to send the files to devbox.
 		If you have configured the SSH keys in your system then no additional authorization is required.
-		If you haven't then you will need to use your password.
+		If you haven't then you will need to use your password. In order to use the script you'll need to have a key-based
+		ssh authentication set up between your local machine and devbox.
 	</p>
-
-	<p>Parameters:</p>
-	<ul>
-		<li><code class="format-code">-h host</code> — devbox name i.e. <code class="format-code">dev-developer</code> <b>(required)</b></li>
-		<li><code class="format-code">-u username</code> — devbox username (optional, needed if you didn't configure SSH keys and have a different username locally than on devbox)</li>
-	</ul>
 </section>
 
 <section>
@@ -134,7 +127,7 @@ sh deploy-devbox.sh -h dev-developer -u developer
 </section>
 
 <section>
-	<h2>Repository APP (Reference Page) structure</h2>
+	<h2>Reference Page structure (lives under /tests/dummy)</h2>
 	<ul>
 		<li>
 			<code class="format-code">components</code> — Definitions of RP-only components, see
