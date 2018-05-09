@@ -4,6 +4,15 @@ import {render, click} from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import {capture} from 'ember-visual-test/test-support/helpers';
 
+
+function getCaptureOptions() {
+	return {
+		delayMs: 10,
+		fullPage: false,
+		selector: 'body'
+	};
+}
+
 module('Integration | Component | wds-toggle', function (hooks) {
 	setupRenderingTest(hooks);
 
@@ -11,23 +20,17 @@ module('Integration | Component | wds-toggle', function (hooks) {
 		await render(hbs`{{wds-toggle}}`);
 
 		assert.equal(this.element.textContent.trim(), '');
+		await capture(assert, 'wds-toggle-inline', getCaptureOptions());
 
-		await capture(assert, 'toggle-basic-inline');
+		await render(hbs`{{#wds-toggle}}test{{/wds-toggle}}`);
 
-		// Template block usage:
-		await render(hbs`
-			{{#wds-toggle}}
-				template block text
-			{{/wds-toggle}}`
-		);
+		assert.equal(this.element.textContent.trim(), 'test');
 
-		assert.equal(this.element.textContent.trim(), 'template block text');
-
-		await capture(assert, 'toggle-basic-block');
+		await capture(assert, 'wds-toggle-block', getCaptureOptions());
 	});
 
 	test('on/off toggle', async function (assert) {
-		await render(hbs`{{#wds-toggle}}text{{/wds-toggle}}`);
+		await render(hbs`{{#wds-toggle}}test{{/wds-toggle}}`);
 
 		assert.notOk(this.element.querySelector('input').checked);
 
@@ -35,11 +38,13 @@ module('Integration | Component | wds-toggle', function (hooks) {
 
 		assert.ok(this.element.querySelector('input').checked);
 
-		await capture(assert, 'toggle-basic-checked');
+		await render(hbs`{{#wds-toggle checked=true}}test{{/wds-toggle}}`);
+
+		await capture(assert, 'wds-toggle-checked', getCaptureOptions());
 	});
 
 	test('disabled state', async function (assert) {
-		await render(hbs`{{#wds-toggle disabled=true}}text{{/wds-toggle}}`);
+		await render(hbs`{{#wds-toggle disabled=true}}test{{/wds-toggle}}`);
 
 		assert.notOk(this.element.querySelector('input').checked);
 
@@ -47,6 +52,6 @@ module('Integration | Component | wds-toggle', function (hooks) {
 
 		assert.notOk(this.element.querySelector('input').checked);
 
-		await capture(assert, 'toggle-basic-disabled');
+		await capture(assert, 'wds-toggle-disabled', getCaptureOptions());
 	});
 });
