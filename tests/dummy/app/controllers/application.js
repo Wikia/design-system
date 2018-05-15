@@ -85,7 +85,7 @@ export default Controller.extend({
 					},
 					{
 						name: 'Floating Buttons',
-						location: 'route-components.wds-floating-buttons'
+						location: 'route-components.floating-buttons'
 					},
 					{
 						name: 'Toggles',
