@@ -17,7 +17,7 @@ module.exports = {
 	rules: {
 	},
 	globals: {
-		'hljs': false
+		hljs: false
 	},
 	overrides: [
 		// node files
@@ -26,16 +26,22 @@ module.exports = {
 				'ember-cli-build.js',
 				'testem.js',
 				'config/**/*.js',
-				'lib/*/index.js'
+				'lib/*/index.js',
+				'tests/dummy/config/**/*.js'
 			],
-			parserOptions: {
-				sourceType: 'script',
-				ecmaVersion: 2015
-			},
+			excludedFiles: [
+				'app/**',
+				'addon/**',
+				'tests/dummy/app/**'
+			],
 			env: {
 				browser: false,
 				node: true
-			}
+			},
+			plugins: ['node'],
+			rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
+				// add your custom rules and overrides for node files here
+			})
 		}
 	]
 };
