@@ -2,5 +2,9 @@ import Controller from '@ember/controller';
 import ENV from '../../config/environment';
 
 export default Controller.extend({
-	rootURL: ENV.rootURL
+	rootURL: ENV.rootURL,
+	avatars: new Array(10).fill({
+		src: `${ENV.rootURL}images/ludwik.jpeg`,
+		alt: 'user name'
+	})
 });
