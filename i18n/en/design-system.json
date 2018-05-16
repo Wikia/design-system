@@ -35,7 +35,7 @@
   "global-footer-site-overview-link-local-sitemap": "Local Sitemap",
   "global-footer-site-overview-link-terms-of-use": "Terms of Use",
   "global-footer-site-overview-link-privacy-policy": "Privacy Policy",
-  "global-footer-licensing-and-vertical-description": "{sitename} is a FANDOM {vertical} Community. Content is available under {license}.",
+  "global-footer-licensing-and-vertical-description": "{sitename} is a FANDOM {vertical} Community.",
   "global-footer-licensing-and-vertical-description-param-vertical-tv": "TV",
   "global-footer-licensing-and-vertical-description-param-vertical-games": "Games",
   "global-footer-licensing-and-vertical-description-param-vertical-books": "Books",
