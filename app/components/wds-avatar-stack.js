@@ -4,12 +4,20 @@ import {computed} from '@ember/object';
 
 export default Component.extend({
 	classNames: ['wds-avatar-stack'],
-	overflow: computed('avatars', function() {
-		const count = this.get('avatars').length;
+	maxStackSize: 5,
+	avatars: null,
 
-		return count > 5 ? this.get('avatars').length - 5 : 0;
+	overflow: computed('avatars', function() {
+		const count = this.get('avatars').length || 0;
+		const maxStackSize = this.get('maxStackSize');
+
+		return count > maxStackSize ? count - maxStackSize : 0;
 	}),
-	displayableAvatars: computed('avatars', function() {
-		return this.get('avatars').slice(5);
+	displayableAvatars: computed('avatars', 'maxStackSize', function() {
+		const avatars = this.get('avatars') || [];
+		const count = avatars.length;
+		const maxStackSize = this.get('maxStackSize');
+
+		return count > maxStackSize ? avatars.slice(0, maxStackSize) : avatars;
 	}),
 });
