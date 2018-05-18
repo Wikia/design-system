@@ -68,4 +68,4 @@ var s=void 0
 for(var i=0;i<n.children.length;i++)s=document.createTextNode("\n"+l),n.insertBefore(s,n.children[i]),t(n.children[i],a),n.lastElementChild==n.children[i]&&(s=document.createTextNode("\n"+o),n.appendChild(s))
 return n}(n,0).innerHTML.trim().replace(/disabled=""/g,"disabled")}
 var e="\t"}),define("dummy/config/environment",[],function(){try{var t="dummy/config/environment",e=document.querySelector('meta[name="'+t+'"]').getAttribute("content"),n={default:JSON.parse(unescape(e))}
-return Object.defineProperty(n,"__esModule",{value:!0}),n}catch(e){throw new Error('Could not read config from meta tag with name "'+t+'".')}}),runningTests||require("dummy/app").default.create({name:"design-system",version:"12.1.0+bcebc2c2"})
+return Object.defineProperty(n,"__esModule",{value:!0}),n}catch(e){throw new Error('Could not read config from meta tag with name "'+t+'".')}}),runningTests||require("dummy/app").default.create({name:"design-system",version:"12.1.0+565da3e4"})
