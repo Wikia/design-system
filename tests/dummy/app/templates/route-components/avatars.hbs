@@ -8,7 +8,7 @@
 	<p>To display an avatar image encapsulated in a circle, use <code class="format-code">.wds-avatar</code> class in your <code>&lt;img&gt;</code> tag.</p>
 
 	{{#component-demo name='avatar'}}
-		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
+		{{wds-avatar src=(concat rootURL 'images/ludwik.jpeg') alt='user name'}}
 	{{/component-demo}}
 
 	<h2>Parameters</h2>
@@ -33,24 +33,8 @@
 		To display an avatar stack, as used in the notifications, wrap each of your avatar in
 		<code>wds-avatar-stack__avatar</code> and all of them in <code>wds-avatar-stack</code>.
 	</p>
+
 	{{#component-demo name='avatar-stack'}}
-<div class="wds-avatar-stack">
-	<div class="wds-avatar-stack__avatar">
-		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
-	</div>
-	<div class="wds-avatar-stack__avatar">
-		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
-	</div>
-	<div class="wds-avatar-stack__avatar">
-		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
-	</div>
-	<div class="wds-avatar-stack__avatar">
-		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
-	</div>
-	<div class="wds-avatar-stack__avatar">
-		{{wds-avatar src=(concat rootURL 'images/craig.jpg') alt='user name'}}
-	</div>
-	<div class="wds-avatar-stack__overflow">+12</div>
-</div>
+		{{wds-avatar-stack avatars=avatars}}
 	{{/component-demo}}
 </section>
