@@ -2,6 +2,7 @@
 language: node_js
 node_js:
   - "8"
+  - "10"
 
 sudo: false
 dist: trusty
@@ -18,8 +19,6 @@ env:
 
 matrix:
   fast_finish: true
-  allow_failures:
-    - env: EMBER_TRY_SCENARIO=ember-canary
 
 before_install:
   - npm config set spin false
@@ -28,4 +27,4 @@ before_install:
 
 script:
   - npm run lint:js
-  - node_modules/.bin/ember try:each --skip-cleanup
+  - node_modules/.bin/ember test
