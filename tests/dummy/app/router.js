@@ -38,7 +38,7 @@ Router.map(function () {
 		this.route('assets');
 		this.route('avatars');
 		this.route('buttons');
-		this.route('wds-action-buttons');
+		this.route('floating-buttons');
 		this.route('toggles');
 		this.route('dropdowns');
 		this.route('lists');
