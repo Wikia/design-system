@@ -5,14 +5,6 @@ import hbs from 'htmlbars-inline-precompile';
 import {capture} from 'ember-visual-test/test-support/helpers';
 
 
-function getCaptureOptions() {
-	return {
-		delayMs: 10,
-		fullPage: false,
-		selector: 'body'
-	};
-}
-
 module('Integration | Component | wds-toggle', function (hooks) {
 	setupRenderingTest(hooks);
 
@@ -20,13 +12,13 @@ module('Integration | Component | wds-toggle', function (hooks) {
 		await render(hbs`{{wds-toggle}}`);
 
 		assert.equal(this.element.textContent.trim(), '');
-		await capture(assert, 'wds-toggle-inline', getCaptureOptions());
+		await capture(assert, 'wds-toggle-inline');
 
 		await render(hbs`{{#wds-toggle}}test{{/wds-toggle}}`);
 
 		assert.equal(this.element.textContent.trim(), 'test');
 
-		await capture(assert, 'wds-toggle-block', getCaptureOptions());
+		await capture(assert, 'wds-toggle-block');
 	});
 
 	test('on/off toggle', async function (assert) {
@@ -40,7 +32,7 @@ module('Integration | Component | wds-toggle', function (hooks) {
 
 		await render(hbs`{{#wds-toggle checked=true}}test{{/wds-toggle}}`);
 
-		await capture(assert, 'wds-toggle-checked', getCaptureOptions());
+		await capture(assert, 'wds-toggle-checked');
 	});
 
 	test('disabled state', async function (assert) {
@@ -52,6 +44,6 @@ module('Integration | Component | wds-toggle', function (hooks) {
 
 		assert.notOk(this.element.querySelector('input').checked);
 
-		await capture(assert, 'wds-toggle-disabled', getCaptureOptions());
+		await capture(assert, 'wds-toggle-disabled');
 	});
 });
