@@ -7,9 +7,7 @@ import {capture} from 'ember-visual-test/test-support/helpers';
 
 function getCaptureOptions() {
 	return {
-		delayMs: 10,
-		fullPage: false,
-		selector: 'body'
+		selector: '.toggle-wrapper'
 	};
 }
 
@@ -17,12 +15,12 @@ module('Integration | Component | wds-toggle', function (hooks) {
 	setupRenderingTest(hooks);
 
 	test('simple toggle', async function (assert) {
-		await render(hbs`{{wds-toggle}}`);
+		await render(hbs`<span class='toggle-wrapper'>{{wds-toggle}}</span>`);
 
 		assert.equal(this.element.textContent.trim(), '');
 		await capture(assert, 'wds-toggle-inline', getCaptureOptions());
 
-		await render(hbs`{{#wds-toggle}}test{{/wds-toggle}}`);
+		await render(hbs`<span class='toggle-wrapper'>{{#wds-toggle}}test{{/wds-toggle}}</span>`);
 
 		assert.equal(this.element.textContent.trim(), 'test');
 
@@ -30,7 +28,7 @@ module('Integration | Component | wds-toggle', function (hooks) {
 	});
 
 	test('on/off toggle', async function (assert) {
-		await render(hbs`{{#wds-toggle}}test{{/wds-toggle}}`);
+		await render(hbs`<span class='toggle-wrapper'>{{#wds-toggle}}test{{/wds-toggle}}</span>`);
 
 		assert.notOk(this.element.querySelector('input').checked);
 
@@ -38,13 +36,13 @@ module('Integration | Component | wds-toggle', function (hooks) {
 
 		assert.ok(this.element.querySelector('input').checked);
 
-		await render(hbs`{{#wds-toggle checked=true}}test{{/wds-toggle}}`);
+		await render(hbs`<span class='toggle-wrapper'>{{#wds-toggle checked=true}}test{{/wds-toggle}}</span>`);
 
 		await capture(assert, 'wds-toggle-checked', getCaptureOptions());
 	});
 
 	test('disabled state', async function (assert) {
-		await render(hbs`{{#wds-toggle disabled=true}}test{{/wds-toggle}}`);
+		await render(hbs`<span class='toggle-wrapper'>{{#wds-toggle disabled=true}}test{{/wds-toggle}}</span>`);
 
 		assert.notOk(this.element.querySelector('input').checked);
 
