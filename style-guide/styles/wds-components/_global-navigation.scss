@@ -130,19 +130,6 @@
 			width: 120px;
 		}
 
-		&.wds-is-wds-company-logo-powered-by-wikia {
-			// borders and height set for fandom logo swap in May 2017
-			// horizontal bars are only displayed on desktop global nav
-			border-bottom: 2px solid $new-fandom-logo-color;
-			border-top: 2px solid $new-fandom-logo-color;
-			height: 10px;
-			padding: 1px 0;
-			margin: 0 1px 3px 11px;
-			width: 98px;
-			// hack fix for Safari 9
-			zoom: 1.0000001;
-		}
-
 		&.wds-is-wds-company-logo-wikia-org {
 			width: 105px;
 		}
