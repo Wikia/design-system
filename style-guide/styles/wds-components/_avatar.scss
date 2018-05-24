@@ -1,5 +1,7 @@
+svg.wds-avatar,
 .wds-avatar {
 	@include square(28px);
+	background-color: $wds-color-white;
 	border: solid 2px currentColor;
 	border-radius: 50%;
 }
