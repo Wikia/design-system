@@ -1,5 +1,7 @@
-{{#if src}}
-	<img src="{{src}}" alt="{{alt}}" title="{{alt}}" class="wds-avatar">
+{{#if link}}
+	<a href="{{link}}">
+		{{wds-avatar/avatar-image src=src alt=alt}}
+	</a>
 {{else}}
-	{{wds-icon name='user' class='wds-avatar'}}
+	{{wds-avatar/avatar-image src=src alt=alt}}
 {{/if}}

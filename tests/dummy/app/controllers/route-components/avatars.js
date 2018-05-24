@@ -6,7 +6,8 @@ export default Controller.extend({
 	avatars: [
 		{
 			src: `${ENV.rootURL}images/ludwik.jpeg`,
-			alt: 'user name'
+			alt: 'user name',
+			link: 'http://fandom.wikia.com'
 		},
 		{
 			src: null,
@@ -14,7 +15,8 @@ export default Controller.extend({
 		},
 		{
 			src: `${ENV.rootURL}images/ludwik.jpeg`,
-			alt: 'user name'
+			alt: 'user name',
+			link: 'http://fandom.wikia.com'
 		},
 		{
 			src: `${ENV.rootURL}images/ludwik.jpeg`,

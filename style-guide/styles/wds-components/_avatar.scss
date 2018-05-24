@@ -1,5 +1,13 @@
-svg.wds-avatar,
 .wds-avatar {
+	display: inline-block;
+
+	a {
+		color: currentColor;
+	}
+}
+
+svg.wds-avatar__image,
+.wds-avatar__image {
 	@include square(28px);
 	background-color: $wds-color-white;
 	border: solid 2px currentColor;
