@@ -4,12 +4,12 @@
 	a {
 		color: currentColor;
 	}
-}
 
-svg.wds-avatar__image,
-.wds-avatar__image {
-	@include square(28px);
-	background-color: $wds-color-white;
-	border: solid 2px currentColor;
-	border-radius: 50%;
+	img, svg {
+		@include square(28px);
+		background-color: $wds-color-white;
+		border: solid 2px currentColor;
+		border-radius: 50%;
+	}
+
 }
