@@ -110,5 +110,11 @@
   "notifications-reply-upvote-multiple-users-no-title": "{number}个用户<b>赞了</b>你的回复", 
   "notifications-reply-upvote-multiple-users-with-title": "{number}个用户<b>赞了</b>你对{postTitle}的回复", 
   "notifications-reply-upvote-single-user-no-title": "1个用户<b>赞了</b>你的回复", 
-  "notifications-reply-upvote-single-user-with-title": "1个用户<b>赞了</b>你对{postTitle}的回复"
+  "notifications-reply-upvote-single-user-with-title": "1个用户<b>赞了</b>你对{postTitle}的回复",
+  "wds-avatar-badges-admin-tooltip": "社區管理員",
+  "wds-avatar-badges-global-discussions-moderator-tooltip": "全域話題版主",
+  "wds-avatar-badges-helper-tooltip": "FANDOM助手",
+  "wds-avatar-badges-discussion-moderator-tooltip": "話題版主",
+  "wds-avatar-badges-staff-tooltip": "FANDOM工作人員",
+  "wds-avatar-badges-vstf-tooltip": "反破壞小組"
 }

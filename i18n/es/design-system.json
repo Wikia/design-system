@@ -110,5 +110,11 @@
   "notifications-reply-upvote-multiple-users-no-title": "{number} usuarios <b>votaron</b> tu respuesta", 
   "notifications-reply-upvote-multiple-users-with-title": "{number} usuarios <b>votaron</b> tu respuesta en {postTitle}", 
   "notifications-reply-upvote-single-user-no-title": "1 usuario <b>votó</b> tu respuesta", 
-  "notifications-reply-upvote-single-user-with-title": "1 usuario <b>votó</b> tu respuesta en {postTitle}"
+  "notifications-reply-upvote-single-user-with-title": "1 usuario <b>votó</b> tu respuesta en {postTitle}",
+  "wds-avatar-badges-admin-tooltip": "Administrador",
+  "wds-avatar-badges-global-discussions-moderator-tooltip": "Moderador global de discusiones",
+  "wds-avatar-badges-helper-tooltip": "Helper",
+  "wds-avatar-badges-discussion-moderator-tooltip": "Moderador",
+  "wds-avatar-badges-staff-tooltip": "Staff",
+  "wds-avatar-badges-vstf-tooltip": "VSTF"
 }
