@@ -1,4 +1,4 @@
-@mixin wds-avatar($diameter:30px, $border-width:2px, $color:$wds-color-black, $bg-color:$wds-color-white) {
+@mixin wds-avatar($diameter:30px, $border-width:2px, $color:$wds-color-black, $color-hover:$wds-color-white, $bg-color:$wds-color-white) {
 	.wds-avatar {
 		@include square($diameter);
 
@@ -10,6 +10,10 @@
 			height: 100%;
 			width: 100%;
 		}
+
+		a:hover {
+			color: $color-hover;
+		}
 	}
 
 	img.wds-avatar__image,
@@ -20,6 +24,10 @@
 		border: solid $border-width $color;
 		border-radius: 50%;
 		color: $color;
+
+		&:hover {
+			border-color: $color-hover;
+		}
 	}
 
 
