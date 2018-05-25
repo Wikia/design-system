@@ -1,15 +1,33 @@
 .wds-avatar {
+	@include square(32px);
+
 	display: inline-block;
+	position: relative;
 
 	a {
 		color: currentColor;
+		height: 100%;
+		width: 100%;
 	}
+}
 
-	img, svg {
-		@include square(28px);
-		background-color: $wds-color-white;
-		border: solid 2px currentColor;
-		border-radius: 50%;
+.wds-avatar__image,
+svg.wds-avatar__image {
+	@include square(28px);
+
+	background-color: $wds-color-white;
+	border: solid 2px currentColor;
+	border-radius: 50%;
+}
+
+.wds-avatar__badge {
+	left: -6px;
+	position: absolute;
+	top: -7px;
+
+	svg {
+		height: 18px;
+		min-width: 18px;
+		width: 18px;
 	}
-
 }
