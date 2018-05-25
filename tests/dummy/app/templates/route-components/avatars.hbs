@@ -5,7 +5,6 @@
 
 <section>
 	<h2 id="avatar-circle">Circle avatar</h2>
-	<p>To display an avatar image encapsulated in a circle, use <code class="format-code">.wds-avatar</code> class in your <code>&lt;img&gt;</code> tag.</p>
 
 	{{#component-demo name='avatar'}}
 		{{wds-avatar src=(concat rootURL 'images/ludwik.jpeg') alt='user name' badge='admin' translateFunc=translate}}
@@ -19,13 +18,40 @@
 		<ul>
 			<li><strong>src</strong> (string): path to the the icon</li>
 			<li><strong>alt</strong> (string): alternative title</li>
+			<li><strong>badge</strong> (string): if provided, badge will be displayed on top of avatar</li>
+			<li><strong>link</strong> (string): if provided, avatar will be wrapped in <code class="format-code">&lt;a&gt;</code> tag and linked to url provided as value.</li>
+			<li><strong>translate</strong> (function): function to translate strings that takes translation key as an argument. Used to translate badges tooltip, if badge is not provided this function may be omitted as well.</li>
 		</ul>
 	</div>
-	<div>
-		<h3>HTML Attributes/CSS Classes</h3>
-		<ul>
-			<li><strong>.wds-avatar</strong></li>
-		</ul>
+
+	<h2>Styling</h2>
+	<p>Size and colors of avatar can be set via SCSS mixin <code class="format-code">wds-avatar</code>.</p>
+	<div id="avatar-24" class="wds-avatar-style-demo">
+		{{wds-avatar src=(concat rootURL 'images/ludwik.jpeg') alt='user name' badge='admin' translateFunc=translate}}
+	</div>
+
+	<div id="avatar-30" class="wds-avatar-style-demo">
+		{{wds-avatar src=(concat rootURL 'images/ludwik.jpeg') alt='user name' badge='admin' translateFunc=translate}}
+	</div>
+
+	<div id="avatar-36" class="wds-avatar-style-demo">
+		{{wds-avatar src=(concat rootURL 'images/ludwik.jpeg') alt='user name' badge='admin' translateFunc=translate}}
+	</div>
+
+	<div id="avatar-48" class="wds-avatar-style-demo">
+		{{wds-avatar src=(concat rootURL 'images/ludwik.jpeg') alt='user name' badge='admin' translateFunc=translate}}
+	</div>
+
+	<div id="avatar-60" class="wds-avatar-style-demo">
+		{{wds-avatar src=(concat rootURL 'images/ludwik.jpeg') alt='user name' badge='admin' translateFunc=translate}}
+	</div>
+
+	<div id="avatar-100" class="wds-avatar-style-demo">
+		{{wds-avatar src=(concat rootURL 'images/ludwik.jpeg') alt='user name' badge='admin' translateFunc=translate}}
+	</div>
+
+	<div id="avatar-150" class="wds-avatar-style-demo">
+		{{wds-avatar src=(concat rootURL 'images/ludwik.jpeg') alt='user name' badge='admin' translateFunc=translate}}
 	</div>
 </section>
 
