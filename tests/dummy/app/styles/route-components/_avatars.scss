@@ -5,7 +5,7 @@
 }
 
 #avatar-24 {
-	@include wds-avatar(24px, 1px);
+	@include wds-avatar(24px);
 }
 
 #avatar-30 {
@@ -21,13 +21,13 @@
 }
 
 #avatar-60 {
-	@include wds-avatar(60px, 3px);
+	@include wds-avatar(60px);
 }
 
 #avatar-100 {
-	@include wds-avatar(100px, 3px);
+	@include wds-avatar(100px);
 }
 
 #avatar-150 {
-	@include wds-avatar(150px, 4px);
+	@include wds-avatar(150px);
 }

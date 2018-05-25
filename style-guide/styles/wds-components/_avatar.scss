@@ -1,4 +1,12 @@
-@mixin wds-avatar($diameter:30px, $border-width:2px, $color:$wds-color-black, $color-hover:$wds-color-white, $bg-color:$wds-color-white) {
+@mixin wds-avatar($diameter:30px, $color:$wds-color-black, $color-hover:$wds-color-white, $bg-color:$wds-color-white) {
+	$border-width: 2px;
+	@if($diameter >= 48px) {
+		$border-width: 3px;
+	}
+	@if($diameter >= 150px) {
+		$border-width: 7.5px;
+	}
+
 	.wds-avatar {
 		@include square($diameter);
 
@@ -31,7 +39,10 @@
 	}
 
 
-	$badge-size: $diameter * 0.5;
+	$badge-size: $diameter * 0.6;
+	@if ($diameter >= 48px) {
+		$badge-size: $diameter * 0.375
+	}
 	.wds-avatar__badge {
 		@include square($badge-size);
 
