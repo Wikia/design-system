@@ -6,6 +6,7 @@ export default Component.extend({
 	classNames: 'wds-avatar__badge',
 	attributeBindings: ['title'],
 	name: null,
+	translateFunc: null,
 
 	badgeAssetName: computed('name', function() {
 		const name = this.get('name');
@@ -14,6 +15,8 @@ export default Component.extend({
 	}),
 
 	title: computed('name', function() {
-		return this.get('name');
-	}), // TODO: i18n for badge tooltips (copy from discussions)
+		const name = this.get('name');
+
+		return name ? this.get('translateFunc')(`wds-avatar-badges-${name}-tooltip`) : '';
+	}),
 });

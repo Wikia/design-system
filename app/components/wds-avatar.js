@@ -6,4 +6,5 @@ export default Component.extend({
 	alt: null,
 	link: null,
 	badge: null,
+	translateFunc: null,
 });

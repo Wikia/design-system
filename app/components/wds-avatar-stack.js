@@ -5,6 +5,7 @@ export default Component.extend({
 	classNames: ['wds-avatar-stack'],
 	maxStackSize: 5,
 	avatars: null,
+	translateFunc: null,
 
 	overflow: computed('avatars', function() {
 		const count = this.get('avatars').length || 0;
