@@ -1,5 +1,6 @@
 {{#if src}}
 	<img src="{{src}}" alt="{{alt}}" title="{{alt}}" class="wds-avatar__image">
 {{else}}
-	{{wds-icon name='user' class='wds-avatar__image'}}
+	<div class="wds-avatar__inner-border"></div>
+	{{svg 'wds-avatar-icon-user' class='wds-avatar__image'}}
 {{/if}}
