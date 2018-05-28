@@ -20,46 +20,81 @@
 			<li><strong>alt</strong> (string): alternative title</li>
 			<li><strong>badge</strong> (string): if provided, badge will be displayed on top of avatar</li>
 			<li><strong>link</strong> (string): if provided, avatar will be wrapped in <code class="format-code">&lt;a&gt;</code> tag and linked to url provided as value.</li>
-			<li><strong>translate</strong> (function): function to translate strings that takes translation key as an argument. Used to translate badges tooltip, if badge is not provided this function may be omitted as well.</li>
+			<li><strong>translateFunc</strong> (function): function to translate strings that takes translation key as an argument. Used to translate badges tooltip, if badge is not provided this function may be omitted as well.</li>
 		</ul>
 	</div>
 
-	<h2>Styling</h2>
-	<p>Size and colors of avatar can be set via SCSS mixin <code class="format-code">wds-avatar</code>.</p>
-	<div id="avatar-24" class="wds-avatar-style-demo">
-		{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
-	</div>
+	<h2>Sizes and theming</h2>
+	<p>Size and colors of avatar can be set via SCSS mixin <code class="format-code">wds-avatar</code>, for example
 
-	<div id="avatar-30" class="wds-avatar-style-demo">
-		{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
-	</div>
+<pre class="hljs htmlbars"><code class="format-code">.wds-avatar {
+	@include wds-avatar(30px, $color, $color-hover, $color-background);
+}</code></pre>
 
-	<div id="avatar-36" class="wds-avatar-style-demo">
-		{{wds-avatar alt='user name' badge='admin' translateFunc=translate}}
-	</div>
+	</p>
+	<div class="assets-wrapper">
+		<div id="avatar-24" class="asset_box wds-avatar-style-demo">
+			<div class="asset-box__asset">
+				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+			</div>
+			<div class="asset-box__name">24px</div>
+		</div>
 
-	<div id="avatar-48" class="wds-avatar-style-demo">
-		{{wds-avatar alt='user name' badge='admin' translateFunc=translate}}
-	</div>
+		<div id="avatar-30" class="wds-avatar-style-demo">
+			<div class="asset-box__asset">
+				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+			</div>
+			<div class="asset-box__name">30px</div>
+		</div>
 
-	<div id="avatar-60" class="wds-avatar-style-demo">
-		{{wds-avatar alt='user name' badge='admin' translateFunc=translate}}
-	</div>
+		<div id="avatar-36" class="wds-avatar-style-demo">
+			<div class="asset-box__asset">
+				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+			</div>
+			<div class="asset-box__name">36px</div>
+		</div>
 
-	<div id="avatar-100" class="wds-avatar-style-demo">
-		{{wds-avatar alt='user name' badge='admin' translateFunc=translate}}
-	</div>
+		<div id="avatar-42" class="wds-avatar-style-demo">
+			<div class="asset-box__asset">
+				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+			</div>
+			<div class="asset-box__name">42px</div>
+		</div>
 
-	<div id="avatar-150" class="wds-avatar-style-demo">
-		{{wds-avatar alt='user name' badge='admin' translateFunc=translate}}
+		<div id="avatar-48" class="wds-avatar-style-demo">
+			<div class="asset-box__asset">
+				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+			</div>
+			<div class="asset-box__name">48px</div>
+		</div>
+
+		<div id="avatar-60" class="wds-avatar-style-demo">
+			<div class="asset-box__asset">
+				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+			</div>
+			<div class="asset-box__name">60px</div>
+		</div>
+
+		<div id="avatar-100" class="wds-avatar-style-demo">
+			<div class="asset-box__asset">
+				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+			</div>
+			<div class="asset-box__name">100px</div>
+		</div>
+
+		<div id="avatar-150" class="wds-avatar-style-demo">
+			<div class="asset-box__asset">
+				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+			</div>
+			<div class="asset-box__name">150px</div>
+		</div>
 	</div>
 </section>
 
 <section>
 	<h2 id="avatar-circle">Avatar stack</h2>
 	<p>
-		To display an avatar stack, as used in the notifications, wrap each of your avatar in
-		<code>wds-avatar-stack__avatar</code> and all of them in <code>wds-avatar-stack</code>.
+		To display an avatar stack, wrap all of avatars in <code class="format-code">.wds-avatar-stack</code>.
 	</p>
 
 	{{#component-demo name='avatar-stack'}}

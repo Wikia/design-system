@@ -1,5 +1,5 @@
 .wds-avatar {
-	@include wds-avatar(42px);
+	@include wds-avatar(30px);
 }
 
 .wds-avatar-style-demo {
@@ -21,6 +21,12 @@
 #avatar-36 {
 	.wds-avatar {
 		@include wds-avatar(36px);
+	}
+}
+
+#avatar-42 {
+	.wds-avatar {
+		@include wds-avatar(42px);
 	}
 }
 

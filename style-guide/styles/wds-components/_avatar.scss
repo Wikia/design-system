@@ -1,4 +1,4 @@
-@mixin wds-avatar($diameter:30px, $color:$wds-color-black, $color-hover:$wds-color-link, $bg-color:$wds-color-white) {
+@mixin wds-avatar($diameter: 30px, $color: $wds-color-black, $color-hover: $wds-color-link, $color-background: $wds-color-white) {
 	$border-width: 2px;
 	$inner-border-width: 2px;
 	@if($diameter >= 48px) {
@@ -22,7 +22,7 @@
 
 
 	.wds-avatar__image {
-		background-color: $bg-color;
+		background-color: $color-background;
 		border: solid $border-width $color;
 
 		&:hover {
@@ -46,7 +46,7 @@
 	.wds-avatar__inner-border {
 		@include square($diameter - 2*$border-width);
 
-		border: solid $inner-border-width $bg-color;
+		border: solid $inner-border-width $color-background;
 		left: $border-width;
 		top: $border-width;
 	}
