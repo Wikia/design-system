@@ -14,26 +14,19 @@
 
 	a {
 		color: $color;
-	}
 
-	a:hover {
-		color: $color-hover;
+		&:hover {
+			color: $color-hover;
+		}
 	}
-
 
 	.wds-avatar__image {
 		background-color: $color-background;
 		border: solid $border-width $color;
-
-		&:hover {
-			border-color: $color-hover;
-		}
-	}
-
-	svg.wds-avatar__image {
 		fill: $color;
 
 		&:hover {
+			border-color: $color-hover;
 			fill: $color-hover;
 		}
 	}

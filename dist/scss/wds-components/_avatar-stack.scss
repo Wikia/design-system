@@ -4,17 +4,11 @@
 	margin: 8px 18px 6px 40px;
 
 	&__overflow {
-		background-color: $wds-color-white;
 		border: 0;
-		color: $wds-color-light-c6;
 		font-size: $wds-typescale-size-minus-2;
 		padding-left: 6px;
 		transform: translate(-40px);
 		width: auto;
-	}
-
-	.wds-avatar {
-		color: $wds-color-light-c4;
 	}
 
 	@for $i from 1 to 6 {
