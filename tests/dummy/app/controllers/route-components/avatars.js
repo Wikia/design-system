@@ -11,7 +11,7 @@ export default Controller.extend({
 
 		this.set('avatars', [
 			{
-				src: `${ENV.rootURL}images/ludwik.jpeg`,
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
 				alt: 'user name',
 				link: 'http://fandom.wikia.com',
 			},
@@ -20,12 +20,12 @@ export default Controller.extend({
 				alt: 'user name'
 			},
 			{
-				src: `${ENV.rootURL}images/ludwik.jpeg`,
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
 				alt: 'user name',
 				link: 'http://fandom.wikia.com'
 			},
 			{
-				src: `${ENV.rootURL}images/ludwik.jpeg`,
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
 				alt: 'user name',
 				badge: 'admin',
 			},
@@ -34,19 +34,19 @@ export default Controller.extend({
 				alt: 'user name'
 			},
 			{
-				src: `${ENV.rootURL}images/ludwik.jpeg`,
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
 				alt: 'user name'
 			},
 			{
-				src: `${ENV.rootURL}images/ludwik.jpeg`,
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
 				alt: 'user name'
 			},
 			{
-				src: `${ENV.rootURL}images/ludwik.jpeg`,
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
 				alt: 'user name'
 			},
 			{
-				src: `${ENV.rootURL}images/ludwik.jpeg`,
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
 				alt: 'user name'
 			},
 		]);
