@@ -110,11 +110,12 @@
   "notifications-reply-upvote-multiple-users-no-title": "{number}人のユーザーが、あなたの返信に<b>「イイね！」</b>しました", 
   "notifications-reply-upvote-multiple-users-with-title": "{number}人のユーザーが、{postTitle}のあなたの返信に<b>「イイね！」</b>しました", 
   "notifications-reply-upvote-single-user-no-title": "1人のユーザーが、あなたの返信に<b>「イイね！」</b>しました", 
-  "notifications-reply-upvote-single-user-with-title": "1人のユーザーが、{postTitle}のあなたの返信に<b>「イイね！」</b>しました",
-  "wds-avatar-badges-admin-tooltip": "コミュニティ・アドミン",
-  "wds-avatar-badges-global-discussions-moderator-tooltip": "グローバル・ディスカッション・モデレーター",
-  "wds-avatar-badges-helper-tooltip": "FANDOMヘルパー",
-  "wds-avatar-badges-discussion-moderator-tooltip": "ディスカッション・モデレーター",
-  "wds-avatar-badges-staff-tooltip": "FANDOMスタッフ",
+  "notifications-reply-upvote-single-user-with-title": "1人のユーザーが、{postTitle}のあなたの返信に<b>「イイね！」</b>しました", 
+  "wds-avatar-badges-admin-tooltip": "コミュニティ・アドミン", 
+  "wds-avatar-badges-content-moderator-tooltip": "コンテンツ・モデレーター", 
+  "wds-avatar-badges-discussion-moderator-tooltip": "ディスカッション・モデレーター", 
+  "wds-avatar-badges-global-discussions-moderator-tooltip": "グローバル・ディスカッション・モデレーター", 
+  "wds-avatar-badges-helper-tooltip": "FANDOMヘルパー", 
+  "wds-avatar-badges-staff-tooltip": "FANDOMスタッフ", 
   "wds-avatar-badges-vstf-tooltip": "VSTF"
 }

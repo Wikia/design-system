@@ -110,11 +110,12 @@
   "notifications-reply-upvote-multiple-users-no-title": "{number} Benutzer haben deiner Antwort <b>zugestimmt</b>", 
   "notifications-reply-upvote-multiple-users-with-title": "{number} Benutzer haben deiner Antwort auf {postTitle} <b>zugestimmt</b>", 
   "notifications-reply-upvote-single-user-no-title": "1 Benutzer hat deiner Antwort <b>zugestimmt</b>", 
-  "notifications-reply-upvote-single-user-with-title": "1 Benutzer hat deiner Antwort auf {postTitle} <b>zugestimmt</b>",
-  "wds-avatar-badges-admin-tooltip": "Admin",
-  "wds-avatar-badges-global-discussions-moderator-tooltip": "Globaler Diskussions-Moderator",
-  "wds-avatar-badges-helper-tooltip": "FANDOM-Helfer",
-  "wds-avatar-badges-discussion-moderator-tooltip": "Diskussions-Moderator",
-  "wds-avatar-badges-staff-tooltip": "FANDOM-Mitarbeiter",
+  "notifications-reply-upvote-single-user-with-title": "1 Benutzer hat deiner Antwort auf {postTitle} <b>zugestimmt</b>", 
+  "wds-avatar-badges-admin-tooltip": "Admin", 
+  "wds-avatar-badges-content-moderator-tooltip": "Inhalts-Moderator", 
+  "wds-avatar-badges-discussion-moderator-tooltip": "Diskussions-Moderator", 
+  "wds-avatar-badges-global-discussions-moderator-tooltip": "Globaler Diskussions-Moderator", 
+  "wds-avatar-badges-helper-tooltip": "FANDOM-Helfer", 
+  "wds-avatar-badges-staff-tooltip": "FANDOM-Mitarbeiter", 
   "wds-avatar-badges-vstf-tooltip": "VSTF"
 }

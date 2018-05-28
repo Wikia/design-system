@@ -110,11 +110,12 @@
   "notifications-reply-upvote-multiple-users-no-title": "{number} thành viên <b>đã thích</b> bình luận của bạn", 
   "notifications-reply-upvote-multiple-users-with-title": "{number} thành viên <b>đã thích</b> bình luận của bạn trong {postTitle}", 
   "notifications-reply-upvote-single-user-no-title": "1 thành viên <b>đã thích</b> bình luận của bạn", 
-  "notifications-reply-upvote-single-user-with-title": "1 thành viên <b>đã thích</b> bình luận của bạn trong {postTitle}",
-  "wds-avatar-badges-admin-tooltip": "Bảo quản viên wiki",
-  "wds-avatar-badges-global-discussions-moderator-tooltip": "Điều phối viên bàn luận toàn cầu",
-  "wds-avatar-badges-helper-tooltip": "Hỗ trợ viên FANDOM",
-  "wds-avatar-badges-discussion-moderator-tooltip": "Điều phối viên bàn luận",
-  "wds-avatar-badges-staff-tooltip": "Nhân viên FANDOM",
+  "notifications-reply-upvote-single-user-with-title": "1 thành viên <b>đã thích</b> bình luận của bạn trong {postTitle}", 
+  "wds-avatar-badges-admin-tooltip": "Bảo quản viên wiki", 
+  "wds-avatar-badges-content-moderator-tooltip": "Điều phối viên nội dung", 
+  "wds-avatar-badges-discussion-moderator-tooltip": "Điều phối viên bàn luận", 
+  "wds-avatar-badges-global-discussions-moderator-tooltip": "Điều phối viên bàn luận toàn cầu", 
+  "wds-avatar-badges-helper-tooltip": "Hỗ trợ viên FANDOM", 
+  "wds-avatar-badges-staff-tooltip": "Nhân viên FANDOM", 
   "wds-avatar-badges-vstf-tooltip": "VSTF"
 }

@@ -110,11 +110,12 @@
   "notifications-reply-upvote-multiple-users-no-title": "{number} utilisateurs <b>ont voté pour</b> votre réponse.", 
   "notifications-reply-upvote-multiple-users-with-title": "{number} utilisateurs <b>ont voté pour</b> votre réponse à {postTitle}.", 
   "notifications-reply-upvote-single-user-no-title": "1 utilisateur <b>a voté pour</b> votre réponse.", 
-  "notifications-reply-upvote-single-user-with-title": "1 utilisateur <b>a voté pour</b> votre réponse à {postTitle}.",
-  "wds-avatar-badges-admin-tooltip": "Administrateur de la communauté",
-  "wds-avatar-badges-global-discussions-moderator-tooltip": "Modérateur global de discussions",
-  "wds-avatar-badges-helper-tooltip": "Assistant de FANDOM",
-  "wds-avatar-badges-discussion-moderator-tooltip": "Modérateur de discussions",
-  "wds-avatar-badges-staff-tooltip": "Staff de FANDOM",
+  "notifications-reply-upvote-single-user-with-title": "1 utilisateur <b>a voté pour</b> votre réponse à {postTitle}.", 
+  "wds-avatar-badges-admin-tooltip": "Administrateur de la communauté", 
+  "wds-avatar-badges-content-moderator-tooltip": "Modérateur de contenu", 
+  "wds-avatar-badges-discussion-moderator-tooltip": "Modérateur de discussions", 
+  "wds-avatar-badges-global-discussions-moderator-tooltip": "Modérateur global de discussions", 
+  "wds-avatar-badges-helper-tooltip": "Assistant de FANDOM", 
+  "wds-avatar-badges-staff-tooltip": "Staff de FANDOM", 
   "wds-avatar-badges-vstf-tooltip": "VSTF"
 }
