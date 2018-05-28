@@ -10,30 +10,20 @@
 		$inner-border-width: 6px;
 	}
 
-	.wds-avatar {
-		@include square($diameter);
+	@include square($diameter);
 
-		display: inline-block;
-		position: relative;
-
-		a {
-			color: $color;
-			height: 100%;
-			width: 100%;
-		}
-
-		a:hover {
-			color: $color-hover;
-		}
+	a {
+		color: $color;
 	}
 
-	.wds-avatar__image {
-		@include square($diameter);
+	a:hover {
+		color: $color-hover;
+	}
 
+
+	.wds-avatar__image {
 		background-color: $bg-color;
 		border: solid $border-width $color;
-		border-radius: 50%;
-		box-sizing: border-box;
 
 		&:hover {
 			border-color: $color-hover;
@@ -57,12 +47,8 @@
 		@include square($diameter - 2*$border-width);
 
 		border: solid $inner-border-width $bg-color;
-		border-radius: 50%;
-		box-sizing: border-box;
 		left: $border-width;
 		top: $border-width;
-		position: absolute;
-
 	}
 
 	$badge-size: $diameter * 0.6;
@@ -78,12 +64,39 @@
 		@include square($badge-size);
 
 		left: $left;
-		line-height: 0;
-		position: absolute;
 		top: $right;
+	}
+}
 
-		svg {
-			@include square(100%);
-		}
+
+.wds-avatar {
+	display: inline-block;
+	position: relative;
+
+	a {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.wds-avatar__image {
+	@include square(100%);
+
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+.wds-avatar__inner-border {
+	border-radius: 50%;
+	box-sizing: border-box;
+	position: absolute;
+}
+
+.wds-avatar__badge {
+	line-height: 0;
+	position: absolute;
+
+	svg {
+		@include square(100%);
 	}
 }
