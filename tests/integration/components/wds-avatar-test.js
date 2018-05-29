@@ -1,4 +1,5 @@
 import {module, test} from 'qunit';
+import Service from '@ember/service';
 import {setupRenderingTest} from 'ember-qunit';
 import {render} from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
@@ -25,6 +26,12 @@ module('Integration | Component | wds-avatar', function (hooks) {
 	});
 
 	test('it renders badge if provided', async function (assert) {
+		this.owner.register('service:i18n', Service.extend({
+			t() {
+				return 'some string';
+			}
+		}));
+
 		await render(hbs`{{wds-avatar badge="admin"}}`);
 
 		assert.equal(this.element.querySelectorAll('.wds-avatar__badge').length, 1, 'should render badge');
