@@ -1,8 +1,4 @@
 .wds-global-navigation {
-	$border-top-width: 6px;
-	$logo-width: 230px;
-	$nav-height: $wds-global-navigation-height - $border-top-width;
-	$nav-background-color: $wds-color-white;
 	$search-input-padding: 3px 4px;
 	$notification-counter-size: 18px;
 
@@ -10,8 +6,7 @@
 	$search-buttons-transition-duration: 50ms;
 	$search-buttons-transition-delay: $search-transition-duration - $search-buttons-transition-duration;
 
-	// this should be moved to _colors in the future as that color is from the new palette of Fandom colors
-	$new-fandom-logo-color: #00d6d6;
+	$partner-slot-width: 80px;
 
 	@mixin visible-search-input {
 		&__search-input {
@@ -34,22 +29,21 @@
 		}
 	}
 
-	background-color: $nav-background-color;
-	border-image: linear-gradient(to right, $wds-color-dark-blue-gray 40%, $wds-color-slate-gray 40%) 1 0 0;
-	border-top: $border-top-width solid $wds-color-slate-gray;
-	border-width: $border-top-width 0 0;
-	box-shadow: 0 1px 0 0 $wds-color-faint-gray;
+	background-color: $wds-fandom-color-navy;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 19px;
 	position: relative;
 
 	&__dropdown-toggle {
-		align-items: center;
-		display: flex;
-		// Safari doesn't set default flex values if we use `flex: 1;`
-		// it requires us to put these values explicitly.
-		flex: 1 1 auto;
-		height: $nav-height;
-		justify-content: center;
-	}
+			 align-items: center;
+			 display: flex;
+			 // Safari doesn't set default flex values if we use `flex: 1;`
+			 // it requires us to put these values explicitly.
+			 flex: 1 1 auto;
+			 height: 100%;
+			 justify-content: center;
+		 }
 
 	&__dropdown-content {
 		border-top: 1px solid $wds-color-light-c4;
@@ -57,133 +51,60 @@
 		min-width: 190px;
 	}
 
-	&__content-bar {
-		display: flex;
-		height: $nav-height;
-		margin: 0 auto;
-		position: relative;
-		width: 768px;
-		z-index: 1;
-	}
-
-	&__account-menu,
-	&__link,
-	&__logo,
-	&__notifications-menu,
-	&__search,
-	&__start-a-wiki,
-	&__user-menu,
-	&__wikis-menu {
+	&__content-bar-left,
+	&__content-bar-right {
 		align-items: center;
-		background-color: $nav-background-color;
-		border-top: $border-top-width solid $wds-color-slate-gray;
-		color: $wds-color-dark-blue-gray;
 		display: flex;
-		font-size: $wds-typescale-size-minus-1;
-		height: $nav-height;
-		justify-content: center;
-		margin-top: -$border-top-width;
-		padding: 0 8px;
-		text-decoration: none;
-		white-space: nowrap;
+		height: $wds-global-navigation-height;
 	}
 
-	&__account-menu,
-	&__link,
-	&__notifications-menu,
-	&__user-menu,
-	&__wikis-menu {
-		transition-duration: $search-transition-duration;
-		transition-property: background-color, border-color, color;
+	&__links {
+		display: flex;
+		font-size: 18px;
+		font-weight: bold;
+		height: 100%;
 
-		&:hover {
-			color: $wds-color-link;
+		@media #{$wds-breakpoint-large-down} {
+			font-size: 16px;
 		}
+	}
 
-		&:active,
-		&.wds-is-active,
+	&__link, &__wikis-menu > &__dropdown-toggle {
+		text-transform: uppercase;
+	}
+
+	&__link,
+	&__wikis-menu,
+	&__user-menu,
+	&__account-menu,
+	&__start-a-wiki {
+		align-items: center;
+		color: $wds-fandom-color-aqua;
+		display: flex;
+		height: 100%;
+		margin-left: 24px;
+		text-decoration: none;
+		transition-duration: $wds-button-transition-duration;
+		transition-property: color;
+
+
 		&:hover {
-			background-color: $wds-color-slate-gray;
-			border-color: darken($wds-color-slate-gray, 20%);
 			color: $wds-color-white;
 		}
+
+		.wds-dropdown__toggle-chevron {
+			fill: $wds-fandom-color-coral;
+		}
 	}
 
-	&__logo {
-		border-top: $border-top-width solid $wds-color-dark-blue-gray;
-	}
-
-	&__logo-fandom {
-		// For backwards compatibility after splitting logo and tagline
-		height: 100%;
-		padding-bottom: 4px;
-		width: 230px;
+	&__start-a-wiki-button {
+		@include button-theming($wds-fandom-color-aqua, $wds-color-white);
 	}
 
 	&__logo-image {
-		height: 100%;
-
-		// 'wds' is doubled because second part is name of the asset that we style.
-		&.wds-is-wds-company-logo-fandom {
-			fill: $wds-color-dark-blue-gray;
-			padding-bottom: 4px;
-			width: 120px;
-		}
-
-		&.wds-is-wds-company-logo-wikia-org {
-			width: 105px;
-		}
-	}
-
-	&__links-and-search {
-		display: flex;
-		flex: 4 1 auto;
-	}
-
-	&__link,
-	&__wikis-menu {
-		transition-duration: $search-transition-duration;
-		transition-property: background-color, color, flex, font-size, padding;
-	}
-
-	&__link {
-		// Safari doesn't set default flex values if we use `flex: 1;`
-		// it requires us to put these values explicitly.
-		flex: 1 1 auto;
-
-		&.wds-is-games {
-			border-color: $wds-color-games;
-
-			&:active,
-			&.wds-is-active {
-				background-color: $wds-color-games;
-				border-color: darken($wds-color-games, 10%);
-			}
-		}
-
-		&.wds-is-movies {
-			border-color: $wds-color-movies;
-
-			&:active,
-			&.wds-is-active {
-				background-color: $wds-color-movies;
-				border-color: darken($wds-color-movies, 10%);
-			}
-		}
-
-		&.wds-is-tv {
-			border-color: $wds-color-tv;
-
-			&:active,
-			&.wds-is-active {
-				background-color: $wds-color-tv;
-				border-color: darken($wds-color-tv, 10%);
-			}
-		}
-	}
-
-	&__wikis-menu {
-		flex: 0 1 auto;
+		display: block;
+		height: 27px;
+		width: 126px;
 	}
 
 	&__search {
@@ -362,37 +283,23 @@
 		padding: 9px 12px 8px;
 	}
 
-	&__start-a-wiki-icon {
-		@include square(14px);
-
-		display: none;
-	}
-
 	&__partner-slot {
-		$slot-width: 80px;
 		$link-padding: 10px;
 
-		border-left: 1px solid $wds-color-blue-gray;
-		display: none;
+		align-items: center;
+		display: flex;
+		border-left: 1px solid rgba($wds-color-white, .25);
 		height: 100%;
-		max-width: $slot-width;
+		max-width: $partner-slot-width;
 		position: absolute;
 		right: 0;
 		top: 0;
-
-		// 1280px is a minimum for right slot to appear, on smaller screen there is no space for it
-		@media (min-width: 1280px) {
-			align-items: center;
-			display: flex;
-		}
 
 		&-link {
 			padding: $link-padding;
 		}
 
 		&-image {
-			max-width: $slot-width - 2 * $link-padding;
-			max-height: $nav-height - 2 * $link-padding;
 			vertical-align: middle;
 		}
 	}
@@ -478,70 +385,14 @@
 		}
 	}
 
-	.wds-user-is-logged-in {
-		.wds-global-navigation__start-a-wiki-caption {
+	&.wds-has-partner-slot &__content-bar-right {
+		margin-right: $partner-slot-width;
+	}
+
+	&__start-a-wiki {
+		@media #{$wds-breakpoint-medium-down} {
 			display: none;
 		}
-
-		.wds-global-navigation__start-a-wiki-icon {
-			display: inline;
-		}
 	}
 
-	@media #{$wds-breakpoint-l-up} {
-		@include visible-search-input;
-		@include search-label-icon-default-hover-color;
-		@include search-input-default-placeholder-color;
-
-		&__content-bar {
-			width: 1004px;
-		}
-
-		&__wikis-menu {
-			// Safari doesn't set default flex values if we use `flex: 1;`
-			// it requires us to put these values explicitly.
-			flex: 1 1 auto;
-		}
-
-		&__search {
-			// Safari doesn't set default flex values if we use `flex: 2;`
-			// it requires us to put these values explicitly.
-			flex: 2 1 auto;
-		}
-
-		&__search-input-wrapper {
-			border-bottom: 1px solid $wds-color-slate-gray;
-		}
-
-		&__account-menu-caption,
-		&__start-a-wiki-caption {
-			display: inline;
-		}
-
-		&__start-a-wiki-icon {
-			display: none;
-		}
-
-		.wds-user-is-logged-in {
-			.wds-global-navigation__start-a-wiki-caption {
-				display: inline;
-			}
-
-			.wds-global-navigation__start-a-wiki-icon {
-				display: none;
-			}
-		}
-	}
-
-	@media #{$wds-breakpoint-xl-up} {
-		&__content-bar {
-			width: 1064px;
-		}
-	}
-
-	@media #{$wds-breakpoint-xxl-up} {
-		&__content-bar {
-			width: 1238px;
-		}
-	}
 }
