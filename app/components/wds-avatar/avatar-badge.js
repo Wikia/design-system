@@ -1,7 +1,10 @@
 import Component from '@ember/component';
 import {computed} from '@ember/object';
+import {inject as service} from '@ember/service';
 
 export default Component.extend({
+	i18n: service(),
+
 	tagName: 'span',
 	classNames: 'wds-avatar__badge',
 	attributeBindings: ['title'],
@@ -17,6 +20,6 @@ export default Component.extend({
 	title: computed('name', function() {
 		const name = this.get('name');
 
-		return name ? this.get('translateFunc')(`wds-avatar-badges-${name}-tooltip`) : '';
+		return name ? this.get('i18n').t(`design-system:wds-avatar-badges-${name}-tooltip`) : '';
 	}),
 });

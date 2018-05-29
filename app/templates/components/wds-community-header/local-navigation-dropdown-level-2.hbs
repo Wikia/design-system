@@ -2,7 +2,7 @@
 	{{#dropdown.toggle tagName='a' href='#' as |chevron|}}
 		<span>
 			{{#if model.label.key}}
-				{{i18n model.label.key}}
+				{{i18n model.label.key ns='design-system'}}
 			{{else}}
 				{{model.label.value}}
 			{{/if}}
