@@ -44,13 +44,12 @@
 		top: $border-width;
 	}
 
-	$badge-size: $diameter * 0.6;
-	$left: -$badge-size / 3;
-	$right: -$badge-size / 2;
+	$badge-size: (0.2539 * $diameter) + 8px;
+	$left: -$badge-size / 3.5;
+	$right: -$badge-size / 2.5;
 	@if ($diameter >= 48px) {
-		$badge-size: $diameter * 0.375;
-		$left: -$badge-size / 4;
-		$right: -$badge-size / 3;
+		$left: -$badge-size / 4.5;
+		$right: -$badge-size / 3.5;
 	}
 
 	.wds-avatar__badge {
