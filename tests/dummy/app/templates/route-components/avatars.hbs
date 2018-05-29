@@ -7,7 +7,7 @@
 	<h2 id="avatar-circle">Circle avatar</h2>
 
 	{{#component-demo name='avatar'}}
-		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' badge='admin' translateFunc=translate}}
+		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' badge='admin'}}
 		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' link='http://fandom.wikia.com'}}
 		{{wds-avatar src='' alt='user name'}}
 	{{/component-demo}}
@@ -20,7 +20,6 @@
 			<li><strong>alt</strong> (string): alternative title</li>
 			<li><strong>badge</strong> (string): if provided, badge will be displayed on top of avatar</li>
 			<li><strong>link</strong> (string): if provided, avatar will be wrapped in <code class="format-code">&lt;a&gt;</code> tag and linked to url provided as value.</li>
-			<li><strong>translateFunc</strong> (function): function to translate strings that takes translation key as an argument. Used to translate badges tooltip, if badge is not provided this function may be omitted as well.</li>
 		</ul>
 	</div>
 
@@ -35,56 +34,56 @@
 	<div class="assets-wrapper">
 		<div id="avatar-24" class="asset_box wds-avatar-style-demo">
 			<div class="asset-box__asset">
-				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+				{{wds-avatar  alt='user name' badge='admin'}}
 			</div>
 			<div class="asset-box__name">24px</div>
 		</div>
 
 		<div id="avatar-30" class="wds-avatar-style-demo">
 			<div class="asset-box__asset">
-				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+				{{wds-avatar  alt='user name' badge='admin'}}
 			</div>
 			<div class="asset-box__name">30px</div>
 		</div>
 
 		<div id="avatar-36" class="wds-avatar-style-demo">
 			<div class="asset-box__asset">
-				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+				{{wds-avatar  alt='user name' badge='admin'}}
 			</div>
 			<div class="asset-box__name">36px</div>
 		</div>
 
 		<div id="avatar-42" class="wds-avatar-style-demo">
 			<div class="asset-box__asset">
-				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+				{{wds-avatar  alt='user name' badge='admin'}}
 			</div>
 			<div class="asset-box__name">42px</div>
 		</div>
 
 		<div id="avatar-48" class="wds-avatar-style-demo">
 			<div class="asset-box__asset">
-				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+				{{wds-avatar  alt='user name' badge='admin'}}
 			</div>
 			<div class="asset-box__name">48px</div>
 		</div>
 
 		<div id="avatar-60" class="wds-avatar-style-demo">
 			<div class="asset-box__asset">
-				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+				{{wds-avatar  alt='user name' badge='admin'}}
 			</div>
 			<div class="asset-box__name">60px</div>
 		</div>
 
 		<div id="avatar-100" class="wds-avatar-style-demo">
 			<div class="asset-box__asset">
-				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+				{{wds-avatar  alt='user name' badge='admin'}}
 			</div>
 			<div class="asset-box__name">100px</div>
 		</div>
 
 		<div id="avatar-150" class="wds-avatar-style-demo">
 			<div class="asset-box__asset">
-				{{wds-avatar  alt='user name' badge='admin' translateFunc=translate}}
+				{{wds-avatar  alt='user name' badge='admin'}}
 			</div>
 			<div class="asset-box__name">150px</div>
 		</div>
@@ -98,6 +97,6 @@
 	</p>
 
 	{{#component-demo name='avatar-stack'}}
-		{{wds-avatar-stack avatars=avatars translateFunc=translate}}
+		{{wds-avatar-stack avatars=avatars}}
 	{{/component-demo}}
 </section>
