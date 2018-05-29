@@ -91,6 +91,19 @@
 </section>
 
 <section>
+	<h2>Badges</h2>
+	{{#component-demo name='avatar-with-badge'}}
+		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' badge='admin'}}
+		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' badge='content-moderator'}}
+		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' badge='discussion-moderator'}}
+		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' badge='global-discussions-moderator'}}
+		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' badge='helper'}}
+		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' badge='staff'}}
+		{{wds-avatar src=(concat rootURL 'images/FANDOM-Avatar.jpg') alt='user name' badge='vstf'}}
+	{{/component-demo}}
+</section>
+
+<section>
 	<h2 id="avatar-circle">Avatar stack</h2>
 	<p>
 		To display an avatar stack, wrap all of avatars in <code class="format-code">.wds-avatar-stack</code>.
