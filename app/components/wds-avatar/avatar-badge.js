@@ -9,7 +9,6 @@ export default Component.extend({
 	classNames: 'wds-avatar__badge',
 	attributeBindings: ['title'],
 	name: null,
-	translateFunc: null,
 
 	badgeAssetName: computed('name', function() {
 		const name = this.get('name');

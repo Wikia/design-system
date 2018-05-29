@@ -1,6 +1,5 @@
 import Controller from '@ember/controller';
 import ENV from '../../config/environment';
-import {i18n} from '../../helpers/i18n';
 
 export default Controller.extend({
 	rootURL: ENV.rootURL,
@@ -51,8 +50,4 @@ export default Controller.extend({
 			},
 		]);
 	},
-
-	translate(params) {
-		return i18n([params]);
-	}
 });

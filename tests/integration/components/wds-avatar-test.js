@@ -25,8 +25,7 @@ module('Integration | Component | wds-avatar', function (hooks) {
 	});
 
 	test('it renders badge if provided', async function (assert) {
-		this.set('t', function(key) {return key});
-		await render(hbs`{{wds-avatar badge="admin" translateFunc=t}}`);
+		await render(hbs`{{wds-avatar badge="admin"}}`);
 
 		assert.equal(this.element.querySelectorAll('.wds-avatar__badge').length, 1, 'should render badge');
 	});
