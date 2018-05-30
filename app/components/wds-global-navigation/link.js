@@ -1,6 +1,9 @@
 import Component from '@ember/component';
+import {computed} from '@ember/object';
 
 export default Component.extend({
-	tagName: 'a',
-	classNames: ['wds-global-navigation__link']
+	computedComponentName: computed('model.type', function () {
+		return this.get('model.type') === 'link-authentication' ?
+			   'wds-global-navigation/link-authentication' : 'wds-global-navigation/link-dropdown';
+	})
 });

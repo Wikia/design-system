@@ -1,1 +1,11 @@
-{{i18n model.title.key}}
+{{#if dropdownLinks}}
+	{{#unless (equal model.type 'link-button')}}
+		{{component computedComponentName model=model}}
+	{{else}}
+		{{#wds-button secondary=true href=model.href class="wds-global-navigation__start-a-wiki-button"}}
+			<span class="wds-global-navigation__start-a-wiki-caption">{{i18n model.title.key}}</span>
+		{{/wds-button}}
+	{{/unless}}
+{{else}}
+		{{i18n model.title.key}}
+{{/if}}

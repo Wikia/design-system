@@ -18,15 +18,11 @@
 	}}
 		{{#wds-list linked=true}}
 			{{#each model.links as |link|}}
-				<li>
-					{{component
-						(if (equal link.type 'link-authentication')
-							'wds-global-navigation/link-authentication'
-							'wds-global-navigation/link-dropdown'
-						)
-						model=link
-					}}
-				</li>
+				{{wds-global-navigation/link
+					model=link
+					dropdownLinks=true
+					tagName='li'
+				}}
 			{{/each}}
 		{{/wds-list}}
 	{{/dropdown.content}}

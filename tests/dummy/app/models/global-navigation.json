@@ -460,6 +460,10 @@
           "type": "link-text",
           "title": { "type": "translatable-text", "key": "global-navigation-wikis-fandom-university" },
           "href": "http:\/\/community.wikia.com\/wiki\/Wikia_University"
+        }, {
+          "type": "link-button",
+          "title": { "type": "translatable-text", "key": "global-navigation-create-wiki-link-start-wikia" },
+          "href": "//www.sandbox-xw1.wikia.com/Special:CreateNewWiki"
         }
       ]
     }, "user": {

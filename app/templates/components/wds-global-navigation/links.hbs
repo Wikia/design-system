@@ -8,6 +8,8 @@
 	{{#each model.links as |link|}}
 		{{wds-global-navigation/link
 			model=link
+			tagName='a'
+			classNames='wds-global-navigation__link'
 		}}
 	{{/each}}
 {{/if}}
