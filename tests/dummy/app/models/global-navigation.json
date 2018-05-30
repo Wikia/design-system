@@ -46,7 +46,7 @@
           "type": "translatable-text", "key": "global-navigation-search-placeholder-in-wiki",
           "params": { "sitename": { "type": "text", "value": "Muppet Wiki" } }
         }, "suggestions": {
-          "url": "http:\/\/muppet.wikia.com\/index.php?action=ajax&rs=getLinkSuggest&format=json",
+          "url": "\/mocks/searchSuggestions.json?",
           "param-name": "query"
         }
       }

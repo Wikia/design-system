@@ -17,7 +17,7 @@
 		{{svg 'wds-icons-cross' class='wds-icon wds-icon-small wds-global-navigation__search-close-icon'}}
 	{{/wds-button}}
 	{{#dropdown.content class='wds-global-navigation__search-suggestions'}}
-		{{#wds-list linked=true ellipsis=true}} 
+		{{#wds-list linked=true ellipsis=true}}
 			{{#each suggestions as |suggestion index|}}
 				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}}">
 					<a href="{{suggestion.uri}}" class="wds-global-navigation__dropdown-link">

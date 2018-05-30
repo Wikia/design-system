@@ -40,6 +40,14 @@ export default Component.extend({
 		this.cachedResults = {};
 	},
 
+	didInsertElement() {
+		this._super(...arguments);
+
+		run.scheduleOnce('afterRender', this, () => {
+			this.set('inputField', this.element.querySelector('.wds-global-navigation__search-input'));
+		});
+	},
+
 	searchPlaceholder: computed('searchIsActive', function () {
 		if (this.get('searchIsActive')) {
 			return translations[this.get('model.placeholder-active.key')];
@@ -281,6 +289,14 @@ export default Component.extend({
 	},
 
 	actions: {
+		enter(value) {
+			this.get('inputField').blur();
+			this.set('searchRequestInProgress', true);
+			this.setSearchSuggestionItems();
+			this.get('onEnterHandler')(value);
+			this.get('goToSearchResults')(value);
+		},
+
 		onFocusSearch() {
 			this.set('searchIsActive', true);
 			this.get('activateSearch')();
@@ -291,7 +307,7 @@ export default Component.extend({
 				query: '',
 				searchIsActive: false
 			});
-			this.updateSuggestions();
+			this.set('suggestions', []);
 			this.get('deactivateSearch')();
 		},
 
