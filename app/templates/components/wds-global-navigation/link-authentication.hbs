@@ -4,10 +4,10 @@
 		<form method="POST" action="/signout">
 		 	{{! wds-sign-out__button will make this look like a link }}
 			<button type="submit" class="wds-sign-out__button">
-				{{i18n model.title.key}}
+				{{i18n model.title.key ns='design-system'}}
 			</button>
 		</form>
 	</div>
 {{else}}
-	<a href="{{model.href}}" rel="nofollow" class="{{linkClasses}}">{{i18n model.title.key}}</a>
+	<a href="{{model.href}}" rel="nofollow" class="{{linkClasses}}">{{i18n model.title.key ns='design-system'}}</a>
 {{/if}}
