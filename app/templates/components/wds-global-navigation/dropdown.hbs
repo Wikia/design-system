@@ -5,11 +5,12 @@
 	{{#dropdown.toggle
 		class='wds-global-navigation__dropdown-toggle'
 		title=(if showAvatar model.header.username.value)
+		as |chevron|
 	}}
 		{{#if showAvatar}}
-			{{wds-avatar src=model.header.url alt=model.header.username.value}}
+			{{wds-avatar src=model.header.url alt=model.header.username.value}}{{chevron}}
 		{{else}}
-			<span>{{i18n model.header.title.key}}</span>
+			<span>{{i18n model.header.title.key ns='design-system'}}</span>{{chevron}}
 		{{/if}}
 	{{/dropdown.toggle}}
 	{{#dropdown.content

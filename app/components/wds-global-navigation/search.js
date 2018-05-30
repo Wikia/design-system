@@ -5,10 +5,13 @@ import translations from 'npm:design-system-i18n/i18n/en/design-system';
 import fetch from 'fetch';
 import {run} from '@ember/runloop';
 import wrapMeHelper from '../../helpers/wrap-me';
+import {inject as service} from '@ember/service';
 
 export default Component.extend({
 	tagName: 'form',
 	classNames: ['wds-global-navigation__search'],
+
+	logger: service(),
 
 	query: '',
 	searchRequestInProgress: false,
@@ -109,10 +112,10 @@ export default Component.extend({
 
 					this.cacheResult(query);
 				} else {
-					console.error('Search suggestions error', response);
+					this.get('logger').error('Search suggestions error', response);
 				}
 			})
-			.catch((reason) => console.error('Search suggestions error', reason))
+			.catch((reason) => this.get('logger').error('Search suggestions error', reason))
 			.finally(() => {
 				// We have a response, so we're no longer loading the results
 				if (query === this.get('query') && !this.get('isDestroyed')) {

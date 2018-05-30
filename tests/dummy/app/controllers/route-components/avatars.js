@@ -3,8 +3,51 @@ import ENV from '../../config/environment';
 
 export default Controller.extend({
 	rootURL: ENV.rootURL,
-	avatars: new Array(9).fill({
-		src: `${ENV.rootURL}images/ludwik.jpeg`,
-		alt: 'user name'
-	})
+	avatars: null,
+
+	init() {
+		this._super(...arguments);
+
+		this.set('avatars', [
+			{
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
+				alt: 'user name',
+				link: 'http://fandom.wikia.com',
+			},
+			{
+				src: null,
+				alt: 'user name'
+			},
+			{
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
+				alt: 'user name',
+				link: 'http://fandom.wikia.com'
+			},
+			{
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
+				alt: 'user name',
+				badge: 'admin',
+			},
+			{
+				src: null,
+				alt: 'user name'
+			},
+			{
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
+				alt: 'user name'
+			},
+			{
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
+				alt: 'user name'
+			},
+			{
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
+				alt: 'user name'
+			},
+			{
+				src: `${ENV.rootURL}images/FANDOM-Avatar.jpg`,
+				alt: 'user name'
+			},
+		]);
+	},
 });

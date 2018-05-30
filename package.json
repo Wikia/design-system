@@ -13,7 +13,7 @@
     "url": "git+https://github.com/Wikia/design-system.git"
   },
   "scripts": {
-    "build": "npm run clean-build && npm run svgo-source && ember b -prod && cp -R style-guide/styles dist/scss && mv docs-dev/ docs &&  npm run svgo-dist",
+    "build": "npm run clean-build && npm run svgo-source && ember b -prod && cp -R style-guide/styles dist/scss && mv docs-dev/ docs &&  npm run svgo-dist && cp CNAME docs/",
     "lint:js": "eslint ./*.js app config lib server tests",
     "clean-build": "rm -rf dist docs-dev docs",
     "dev": "ember s",
@@ -28,7 +28,7 @@
     "broccoli-asset-rev": "2.7.0",
     "broccoli-funnel": "2.0.1",
     "broccoli-svgstore": "0.4.2",
-    "design-system-i18n": "Wikia/design-system-i18n#0.9.0",
+    "design-system-i18n": "Wikia/design-system-i18n#2a93d9d36acf9801d897fbd885a5e8a839e44934",
     "ember-browserify": "1.2.2",
     "ember-cli": "3.1.4",
     "ember-cli-autoprefixer": "0.8.1",
@@ -63,7 +63,8 @@
     "glob": "7.1.2",
     "highlight.js": "9.12.0",
     "loader.js": "^4.2.3",
-    "svgo": "1.0.5"
+    "svgo": "1.0.5",
+    "i18next": "10.5.0"
   },
   "bugs": {
     "url": "https://github.com/Wikia/design-system/issues"
@@ -81,5 +82,8 @@
     "ember-cli-babel": "6.12.0",
     "ember-fetch": "4.0.2",
     "fetch": "1.1.0"
+  },
+  "peerDependencies": {
+    "i18next": "10.5.0"
   }
 }

@@ -5,7 +5,8 @@ export default Component.extend({
 	classNames: 'wds-global-navigation',
 	classNameBindings: [
 		'searchIsActive:wds-search-is-active',
-		'searchIsAlwaysVisible:wds-search-is-always-visible'
+		'searchIsAlwaysVisible:wds-search-is-always-visible',
+		'model.partner_slot:wds-has-partner-slot'
 	],
 
 	searchIsActive: false,

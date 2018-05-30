@@ -7,7 +7,7 @@
 				{{/if}}
 				<span>
 					{{#if model.label.key}}
-						{{i18n model.label.key}}
+						{{i18n model.label.key ns='design-system'}}
 					{{else}}
 						{{model.label.value}}
 					{{/if}}
@@ -19,7 +19,7 @@
 			{{/if}}
 			<span>
 				{{#if model.label.key}}
-					{{i18n model.label.key}}
+					{{i18n model.label.key ns='design-system'}}
 				{{else}}
 					{{model.label.value}}
 				{{/if}}
@@ -36,7 +36,7 @@
 					<li>
 						<a href="{{secondLevelItem.href}}">
 							{{#if model.label.key}}
-								{{i18n secondLevelItem.label.key}}
+								{{i18n secondLevelItem.label.key ns='design-system'}}
 							{{else}}
 								{{secondLevelItem.label.value}}
 							{{/if}}
