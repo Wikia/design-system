@@ -31,6 +31,9 @@
 			model=model.anon
 		}}
 	{{/if}}
+	{{#if model.user}}
+		{{wds-on-site-notifications/notifications}}
+	{{/if}}
 	<div class="wds-global-navigation__start-a-wiki{{if model.user ' wds-user-is-logged-in'}}">
 		{{#wds-button secondary=true href=model.create_wiki.header.href class="wds-global-navigation__start-a-wiki-button"}}
 			{{i18n model.create_wiki.header.title.key ns='design-system'}}
