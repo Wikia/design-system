@@ -37,6 +37,10 @@ export default Component.extend({
 						uri: '#'
 					}
 				];
+		},
+
+		onSearchSuggestionChosen() {
+
 		}
 	}
 });

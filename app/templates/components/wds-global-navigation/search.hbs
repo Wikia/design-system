@@ -19,7 +19,7 @@
 	{{#dropdown.content class='wds-global-navigation__search-suggestions'}}
 		{{#wds-list linked=true ellipsis=true}}
 			{{#each suggestions as |suggestion index|}}
-				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}}">
+				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}}" {{action 'onSearchSuggestionChosen' suggestion}}>
 					<a href="{{suggestion.uri}}" class="wds-global-navigation__dropdown-link">
 						{{{suggestion.text}}}
 					</a>

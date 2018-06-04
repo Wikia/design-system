@@ -296,11 +296,23 @@ export default Component.extend({
 
 	actions: {
 		enter(value) {
+			const index = this.get('selectedSuggestionIndex');
+
 			this.get('inputField').blur();
-			this.set('searchRequestInProgress', true);
+
+			if (this.get('selectedSuggestionIndex') !== -1) {
+				this.get('onSearchSuggestionChosen')(this.get('suggestions')[index]);
+			} else {
+				this.set('searchRequestInProgress', true);
+				this.get('onEnterHandler')(value);
+				this.get('goToSearchResults')(value);
+			}
+
 			this.setSearchSuggestionItems();
-			this.get('onEnterHandler')(value);
-			this.get('goToSearchResults')(value);
+		},
+
+		onSearchSuggestionChosen(suggestion) {
+			this.get('onSearchSuggestionChosen')(suggestion);
 		},
 
 		onFocusSearch() {
