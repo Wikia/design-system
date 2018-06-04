@@ -151,12 +151,14 @@ export default Component.extend({
 		return this.requestSuggestionsFromAPI(this.get('query'));
 	},
 
+	//ToDo move to in-repo addon while workign on on-site notifications
 	normalizeToUnderscore(title = '') {
 		return title
 			.replace(/\s/g, '_')
 			.replace(/_+/g, '_');
 	},
 
+	//ToDo move to in-repo addon while workign on on-site notifications
 	escapeRegex(text) {
 		return text.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
 	},
