@@ -14,11 +14,12 @@
 	</nav>
 </div>
 <div class="wds-global-navigation__content-bar-right">
-	{{!wds-global-navigation/search
-		model=model.search.module
+	{{wds-global-navigation/search
+		model=model.search
 		activateSearch=(action 'activateSearch')
 		deactivateSearch=(action 'deactivateSearch')
 		onQueryChanged=(action 'onSearchQueryChanged')
+		onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
 	}}
 	{{#if model.user}}
 		{{wds-global-navigation/links
