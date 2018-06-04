@@ -45,10 +45,7 @@ export default Component.extend({
 
 	didInsertElement() {
 		this._super(...arguments);
-
-		run.scheduleOnce('afterRender', this, () => {
-			this.set('inputField', this.element.querySelector('.wds-global-navigation__search-input'));
-		});
+		this.set('inputField', this.element.querySelector('.wds-global-navigation__search-input'));
 	},
 
 	searchPlaceholder: computed('searchIsActive', function () {
