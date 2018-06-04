@@ -113,7 +113,7 @@
   "notifications-reply-upvote-single-user-with-title": "1 usuario <b>votó</b> tu respuesta en {postTitle}", 
   "wds-avatar-badges-admin-tooltip": "Administrador", 
   "wds-avatar-badges-content-moderator-tooltip": "Moderador de contenido", 
-  "wds-avatar-badges-discussion-moderator-tooltip": "Moderador", 
+  "wds-avatar-badges-discussion-moderator-tooltip": "Moderador de discusiones", 
   "wds-avatar-badges-global-discussions-moderator-tooltip": "Moderador global de discusiones", 
   "wds-avatar-badges-helper-tooltip": "Helper", 
   "wds-avatar-badges-staff-tooltip": "Staff", 
