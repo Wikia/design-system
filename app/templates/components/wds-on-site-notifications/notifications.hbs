@@ -1,62 +1,14 @@
-{{#wds-dropdown
-	class='wds-global-navigation__notifications-menu notifications-container wds-notifications'
-	mouseEnter=(action 'onOpen')
-	as |dropdown|
-}}
-	{{#dropdown.toggle class='wds-global-navigation__dropdown-toggle'}}
-		{{#if unreadCount}}
-			<span class="wds-notifications__unread-mark">
-				{{unreadCount}}
-			</span>
-		{{/if}}
-		{{svg 'wds-icons-bell' class='wds-icon wds-icon-small icon-bell'}}
-	{{/dropdown.toggle}}
-	{{#dropdown.content
-		class='wds-notifications__dropdown-content'
-		dropdownRightAligned=true
-	}}
-		{{#if hasUnread}}
-			<div class="wds-notifications__mark-all-as-read-button">
-				<a {{action 'markAllAsRead'}} class="wds-notifications__mark-all-as-read">
-					{{i18n 'notifications-mark-all-as-read' ns='design-system'}}
-				</a>
-			</div>
-		{{/if}}
-		{{#if notificationsList.length}}
-			<ul class="scrolling-part wds-notifications__notification-list wds-list wds-has-lines-between">
-				{{#each notificationsList as |notification|}}
-					{{wds-on-site-notifications/notification-card
-						model=notification
-					}}
-				{{/each}}
-				{{#if isLoadingNewResults }}
-					<li>
-						{{wds-spinner
-							active=true
-							isBlock=true
-							isThemed=false
-							overlay=false
-							radius=13
-							strokeWidth=2
-						}}
-					</li>
-				{{/if}}
-			</ul>
-		{{else}}
-			<p class="wds-notifications__zero-state">
-				{{#if isLoadingNewResults}}
-					{{wds-spinner
-						active=true
-						isBlock=true
-						isThemed=false
-						overlay=false
-						radius=15
-						strokeWidth=2
-					}}
-				{{else}}
-					{{i18n 'notifications-no-notifications-message' ns='design-system'}}
-				{{/if}}
-			</p>
-		{{/if}}
-	{{/dropdown.content}}
-{{/wds-dropdown}}
+{{#if hasUnread}}
+	<div class="wds-notifications__mark-all-as-read-button">
+		<a {{action 'markAllAsRead'}} class="wds-notifications__mark-all-as-read">
+			{{i18n 'notifications-mark-all-as-read' ns='design-system'}}
+		</a>
+	</div>
+{{/if}}
+{{#if isNotificationsListVisible}}
+	{{wds-on-site-notifications/notifications-list}}
+{{else}}
+	<p class="wds-notifications__zero-state">
+		{{i18n 'notifications-no-notifications-message' ns='design-system'}}
+	</p>
+{{/if}}

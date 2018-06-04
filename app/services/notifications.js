@@ -60,6 +60,7 @@ export default Service.extend({
 			return;
 		}
 		this.set('isLoading', true);
+
 		this.get('model')
 			.loadPageReturningNextPageLink(this.get('nextPage'))
 			.then((nextPage) => {

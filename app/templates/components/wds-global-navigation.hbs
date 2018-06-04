@@ -32,7 +32,7 @@
 		}}
 	{{/if}}
 	{{#if model.user}}
-		{{wds-on-site-notifications/notifications}}
+		{{wds-on-site-notifications/notifications-dropdown}}
 	{{/if}}
 	<div class="wds-global-navigation__start-a-wiki{{if model.user ' wds-user-is-logged-in'}}">
 		{{#wds-button secondary=true href=model.create_wiki.header.href class="wds-global-navigation__start-a-wiki-button"}}

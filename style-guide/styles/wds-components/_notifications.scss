@@ -2,25 +2,6 @@
 	$notifications-dropdown-content-color: $wds-color-light-c7;
 	$content-padding: 18px;
 
-	&__unread-mark {
-		align-items: center;
-		background-color: $wds-color-link;
-		//border-radius needs to be in pixels
-		//to handle 3 and more digits situation correctly
-		border-radius: 18px;
-		border: 1px solid $wds-color-white;
-		color: $wds-color-white;
-		display: flex;
-		font-size: $wds-typescale-size-minus-3;
-		height: 18px;
-		justify-content: center;
-		left: -2px;
-		min-width: 18px - 8px;
-		padding: 0 4px;
-		position: absolute;
-		top: 7px;
-	}
-
 	&__mark-all-as-read-button {
 		display: flex;
 		justify-content: flex-start;

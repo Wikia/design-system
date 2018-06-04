@@ -252,28 +252,29 @@
 		text-align: center;
 	}
 
-	&__notifications-menu {
-		padding-right: 0;
+	&__notifications-dropdown {
+		color: $wds-fandom-color-aqua;
+		height: 100%;
+		margin-left: 12px;
 		position: relative;
 		width: 50px;
 	}
 
-	&__notifications-menu-counter {
+	&__notifications-counter {
 		align-items: center;
-		background-color: $wds-color-link;
-		border: 1px solid $wds-color-white;
+		background-color: $wds-color-white;
 		border-radius: $notification-counter-size / 2;
 		box-sizing: border-box;
-		color: $wds-color-white;
+		color: $wds-fandom-color-navy;
 		display: flex;
 		font-size: $wds-typescale-size-minus-3;
 		height: $notification-counter-size;
 		justify-content: center;
-		left: -1px;
+		left: calc(50% - 18px);
 		min-width: $notification-counter-size;
 		padding: 0 4px;
 		position: absolute;
-		top: 8px;
+		top: 12px;
 	}
 
 	// XW-2106 | enhance readability of Chinese Start a Wiki button in nav

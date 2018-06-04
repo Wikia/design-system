@@ -1,36 +1,37 @@
-import $ from 'jquery';
-
 import Mixin from '@ember/object/mixin';
 import {on} from '@ember/object/evented';
 import {run} from '@ember/runloop';
 
 export default Mixin.create({
-	classNames: ['notifications-scroll-menu'],
 	classNameBindings: ['isLoadingNewResults'],
-	scrollableElement: '.scrolling-part',
 	almostBottom: 100,
 
-	bindScrollObserver: on('didRender', function () {
-		run.later(() => {
-			this.$(this.get('scrollableElement')).on('scroll', this.onScroll.bind(this));
-			this.$(this.get('scrollableElement')).on('mousewheel DOMMouseScroll', this.onMouseWheel);
-		}, 0);
-	}),
+	didInsertElement() {
+		this._super(...arguments);
 
-	onScrollRemover: on('willDestroyElement', function () {
-		this.$(this.get('scrollableElement')).off('scroll', this.onScroll.bind(this));
-	}),
+		this.onScroll = this.onScroll.bind(this);
+
+		this.element.addEventListener('scroll', this.onScroll);
+		this.element.addEventListener('mousewheel', this.onMouseWheel);
+		this.element.addEventListener('DOMMouseScroll', this.onMouseWheel);
+	},
+
+	willDestroyElement() {
+		this._super(...arguments);
+
+		this.element.removeEventListener('scroll', this.onScroll);
+		this.element.addEventListener('mousewheel', this.onMouseWheel);
+		this.element.addEventListener('DOMMouseScroll', this.onMouseWheel);
+	},
 
 	onScroll(event) {
-		const target = $(event.target);
-
-		if (this.hasAlmostScrolledToTheBottom(target)) {
+		if (this.hasAlmostScrolledToTheBottom(event.target)) {
 			this.get('notifications').loadNextPage();
 		}
 	},
 
 	onMouseWheel(e) {
-		const delta = -e.originalEvent.wheelDelta || e.originalEvent.detail,
+		const delta = -e.wheelDelta || e.detail,
 			scrollTop = this.scrollTop;
 		if ((delta < 0 && scrollTop === 0) || (delta > 0 && this.scrollHeight - this.clientHeight - scrollTop === 0)) {
 			e.preventDefault();
@@ -42,7 +43,7 @@ export default Mixin.create({
 	 * @private
 	 */
 	hasAlmostScrolledToTheBottom(element) {
-		return element[0].scrollHeight - this.get('almostBottom') <= element.scrollTop() + element.innerHeight();
+		return element.scrollHeight - this.get('almostBottom') <= element.scrollTop + element.offsetHeight;
 	}
 
 });
