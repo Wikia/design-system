@@ -1,7 +1,6 @@
 import {notEmpty, empty} from '@ember/object/computed';
 import Component from '@ember/component';
 import EmberObject, {computed} from '@ember/object';
-import translations from 'npm:design-system-i18n/i18n/en/design-system';
 import fetch from 'fetch';
 import {run} from '@ember/runloop';
 import wrapMeHelper from '../../helpers/wrap-me';
@@ -12,6 +11,7 @@ export default Component.extend({
 	classNames: ['wds-global-navigation__search'],
 
 	logger: service(),
+	i18n: service(),
 
 	query: '',
 	searchRequestInProgress: false,
@@ -53,10 +53,10 @@ export default Component.extend({
 
 	searchPlaceholder: computed('searchIsActive', function () {
 		if (this.get('searchIsActive')) {
-			return translations[this.get('model.placeholder-active.key')];
+			return this.get('i18n').t(`design-system:${this.get('model.placeholder-active.key')}`);
 		}
 
-		return translations[this.get('model.placeholder-inactive.key')];
+		return this.get('i18n').t(`design-system:${this.get('model.placeholder-inactive.key')}`);
 	}),
 
 	requestSuggestionsFromAPI() {
