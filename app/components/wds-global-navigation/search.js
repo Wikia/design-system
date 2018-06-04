@@ -146,8 +146,12 @@ export default Component.extend({
 			this.setSearchSuggestionItems(this.getCachedResult(query));
 		} else {
 			this.set('isLoadingResultsSuggestions', true);
-			run.debounce(this, () => this.requestSuggestionsFromAPI(query), this.get('debounceDuration'));
+			run.debounce(this, this.runSuggestionsRequest, this.get('debounceDuration'));
 		}
+	},
+
+	runSuggestionsRequest() {
+		return this.requestSuggestionsFromAPI(this.get('query'));
 	},
 
 	normalizeToUnderscore(title = '') {
