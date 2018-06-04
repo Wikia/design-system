@@ -57,8 +57,8 @@ export default Component.extend({
 	}),
 
 	requestSuggestionsFromAPI() {
-		const query = this.get('query'),
-			uri = `${this.get('model.suggestions.url')}&query=${query}`;
+		const query = this.get('query');
+		const uri = `${this.get('model.suggestions.url')}&query=${query}`;
 
 		/**
 		 * This was queued to run before the user has finished typing, and when they
