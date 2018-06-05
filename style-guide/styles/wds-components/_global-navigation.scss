@@ -400,7 +400,7 @@
 	}
 
 	.wds-dropdown {
-		.wds-dropdown__toggle {
+		&__toggle {
 			display: flex;
 			align-items: center;
 		}

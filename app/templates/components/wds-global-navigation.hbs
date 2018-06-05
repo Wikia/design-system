@@ -20,9 +20,7 @@
 		{{wds-global-navigation/anon model=model.anon}}
 	{{/if}}
 
-	{{!wds-global-navigation/user-menu model=model}}
-
-	<div class="wds-global-navigation__start-a-wiki{{if model.user ' wds-user-is-logged-in'}}">
+	<div class="wds-global-navigation__start-a-wiki">
 		{{#wds-button secondary=true href=model.create_wiki.href
 					  class="wds-global-navigation__start-a-wiki-button"}}
 			{{i18n model.create_wiki.title.key ns='design-system'}}
