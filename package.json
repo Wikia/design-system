@@ -28,7 +28,7 @@
     "broccoli-asset-rev": "2.7.0",
     "broccoli-funnel": "2.0.1",
     "broccoli-svgstore": "0.4.2",
-    "design-system-i18n": "Wikia/design-system-i18n#be97755393b1f47a161f0d6263961b315854979c",
+    "design-system-i18n": "Wikia/design-system-i18n#ecf3ffccd4b02fad2574da63845da3e5f9b2ef0b",
     "ember-browserify": "1.2.2",
     "ember-cli": "3.1.4",
     "ember-cli-autoprefixer": "0.8.1",
