@@ -1,6 +1,6 @@
 {{#wds-dropdown hasShadow=true as |dropdown|}}
 	{{#dropdown.toggle as |chevron|}}
-		{{wds-avatar src=model.avatar_url alt=model.username}}
+		{{wds-avatar src=model.avatar_url alt=model.username}}{{chevron}}
 	{{/dropdown.toggle}}
 	{{#dropdown.content}}
 		{{#wds-list linked=true}}
