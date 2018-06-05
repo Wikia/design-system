@@ -73,6 +73,7 @@
   "homepage": "https://github.com/Wikia/design-system#readme",
   "ember-addon": {
     "paths": [
+      "lib/fandom-shared",
       "lib/post-build-copy"
     ],
     "versionCompatibility": {

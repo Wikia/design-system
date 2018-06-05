@@ -2,6 +2,7 @@ import {inject as service} from '@ember/service';
 import {alias} from '@ember/object/computed';
 import Component from '@ember/component';
 import {computed} from '@ember/object';
+// it's from in-repo addon
 import wrapMeHelper from '../../helpers/wrap-me';
 import NewReplyNotificationMixin from '../../mixins/new-reply-notification';
 import PostUpvoteNotificationMixin from '../../mixins/post-upvote-notification';
