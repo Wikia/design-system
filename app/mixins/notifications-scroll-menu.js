@@ -1,6 +1,4 @@
 import Mixin from '@ember/object/mixin';
-import {on} from '@ember/object/evented';
-import {run} from '@ember/runloop';
 
 export default Mixin.create({
 	classNameBindings: ['isLoadingNewResults'],

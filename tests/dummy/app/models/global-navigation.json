@@ -203,7 +203,8 @@
           "tracking_label": "account.register"
         }
       ]
-    }
+    },
+    "services_domain": "https://services.wikia.com/"
   },
   "logged-in-default": {
     "logo": {
@@ -442,7 +443,8 @@
         "type": "notifications",
         "url": "\/\/harrypotter.wikia.com\/wiki\/User_talk:Ktatala"
       }
-    }
+    },
+    "services_domain": "https://services.wikia.com/"
   },
   "logged-out-wikia-org": {
     "logo": {
@@ -607,7 +609,8 @@
         "type": "notifications",
         "url": "\/\/solarcooking.wikia.com\/wiki\/User_talk:Ktatala"
       }
-    }
+    },
+    "services_domain": "https://services.wikia.com/"
   },
   "logged-out-with-partner-slot": {
     "logo": {
@@ -799,6 +802,7 @@
         "value": "entertainweb"
       },
       "tracking_label": "entertainweb"
-    }
+    },
+    "services_domain": "https://services.wikia.com/"
   }
 }

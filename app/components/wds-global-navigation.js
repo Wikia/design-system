@@ -1,7 +1,11 @@
 import {empty} from '@ember/object/computed';
+import {inject as service} from '@ember/service';
+
 import Component from '@ember/component';
 
 export default Component.extend({
+	fetch: service(),
+
 	classNames: 'wds-global-navigation',
 	classNameBindings: [
 		'searchIsActive:wds-search-is-active',
@@ -12,6 +16,12 @@ export default Component.extend({
 	searchIsActive: false,
 
 	searchIsAlwaysVisible: empty('model.fandom_overview'),
+
+	init() {
+		this._super(...arguments);
+
+		this.set('fetch.servicesDomain', this.get('model.services_domain'));
+	},
 
 	actions: {
 		activateSearch() {

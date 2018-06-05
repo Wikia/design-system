@@ -1,5 +1,4 @@
 import RSVP from 'rsvp';
-import fetch from 'fetch';
 
 import {getOwner} from '@ember/application';
 import {A} from '@ember/array';
