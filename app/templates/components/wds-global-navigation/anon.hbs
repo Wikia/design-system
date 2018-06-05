@@ -1,0 +1,12 @@
+{{#wds-dropdown hasShadow=true as |dropdown|}}
+	{{#dropdown.toggle as |chevron|}}
+		{{wds-avatar}}
+	{{/dropdown.toggle}}
+	{{#dropdown.content}}
+		{{#wds-list}}
+			<li><a href="{{model.signin.href}}" rel="nofollow">{{i18n model.signin.title.key ns='design-system'}}</a></li>
+			<li>don't have an account</li>
+			<li><a href="{{model.register.href}}" rel="nofollow">{{i18n model.register.title.key ns='design-system'}}</a></li>
+		{{/wds-list}}
+	{{/dropdown.content}}
+{{/wds-dropdown}}

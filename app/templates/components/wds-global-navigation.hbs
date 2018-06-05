@@ -14,16 +14,11 @@
 		onQueryChanged=(action 'onSearchQueryChanged')
 	}}
 	{{#if model.user}}
-		{{wds-global-navigation/links
-			dropdownRightAligned=true
-			model=model.user
-			type='user-menu'
-		}}
+		{{wds-global-navigation/user model=model.user}}
 	{{else if model.anon}}
-		{{wds-global-navigation/account-navigation
-			model=model.anon
-		}}
+		{{wds-global-navigation/anon model=model.anon}}
 	{{/if}}
+
 	<div class="wds-global-navigation__start-a-wiki{{if model.user ' wds-user-is-logged-in'}}">
 		{{#wds-button secondary=true href=model.create_wiki.header.href class="wds-global-navigation__start-a-wiki-button"}}
 			{{i18n model.create_wiki.header.title.key ns='design-system'}}
