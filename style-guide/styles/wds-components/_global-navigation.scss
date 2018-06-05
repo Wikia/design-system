@@ -35,6 +35,10 @@
 	padding: 0 19px;
 	position: relative;
 
+	&__dropdown-content {
+
+	}
+
 	&__content-bar-left,
 	&__content-bar-right {
 		align-items: center;
@@ -398,5 +402,16 @@
 			color: $wds-color-dark-blue-gray;
 			min-width: 190px;
 		}
+		.wds-global-navigation__start-a-wiki {
+			margin: 6px auto;
+		}
 	}
+
+	&__start-a-wiki {
+		&-button:hover {
+			border-color: $wds-color-white!important;
+			color: $wds-color-white!important;
+		}
+	}
+
 }
