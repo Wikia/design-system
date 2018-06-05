@@ -1,9 +1,7 @@
-<nav class="wds-global-navigation__links">
-	{{#each model as |item|}}
-		{{component
-			(concat 'wds-global-navigation/' item.type)
-			model=item
-			standaloneLink=true
-		}}
-	{{/each}}
-</nav>
+{{#each model as |item|}}
+	{{component
+		(concat 'wds-global-navigation/' item.type)
+		model=item
+		standaloneLink=true
+	}}
+{{/each}}
