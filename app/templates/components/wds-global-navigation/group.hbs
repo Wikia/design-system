@@ -12,10 +12,7 @@
 			{{#each model.items as |item|}}
 				<li>
 					{{component
-						(if (equal item.type 'link')
-							'wds-global-navigation/link'
-							'wds-global-navigation/button'
-						)
+						(concat 'wds-global-navigation/' item.type)
 						model=item
 						inDropdown=true
 					}}
