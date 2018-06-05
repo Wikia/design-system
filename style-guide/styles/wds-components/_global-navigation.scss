@@ -119,12 +119,13 @@
 
 	&__search-input-wrapper {
 		border: solid transparent;
-		border-width: 0 0 1px;
+		border-width: 0 0 2px;
 		display: flex;
 		// Safari doesn't set default flex values if we use `flex: 1;`
 		// it requires us to put these values explicitly.
 		flex: 1 1 auto;
 		height: 28px;
+		padding: 3px 0;
 		transition: border-bottom-color $search-transition-duration;
 
 		// Strenghten selector to hide dropdown's arrow
@@ -145,7 +146,6 @@
 
 	&__search-label {
 		align-items: center;
-		background-color: $wds-color-white;
 		display: flex;
 		// Safari doesn't set default flex values if we use `flex: 1;`
 		// it requires us to put these values explicitly.
@@ -155,6 +155,7 @@
 	}
 
 	&__search-label-icon {
+		color: $wds-color-white;
 		cursor: pointer;
 		transition: color $search-transition-duration;
 		z-index: 1;
@@ -166,9 +167,10 @@
 
 	&__search-input {
 		-webkit-appearance: none;
+		background: transparent;
 		border: 0;
 		box-sizing: border-box;
-		color: $wds-color-dark-gray;
+		color: $wds-color-white;
 		// Safari doesn't set default flex values if we use `flex: 1;`
 		// it requires us to put these values explicitly.
 		flex: 1 1 auto;
@@ -217,7 +219,7 @@
 	}
 
 	&__search-close-icon {
-		color: $wds-color-light-gray;
+		color: $wds-color-white;
 		display: block;
 	}
 
@@ -333,7 +335,7 @@
 		}
 
 		&__search-input-wrapper {
-			border-bottom-color: $wds-color-slate-gray;
+			border-bottom-color: $wds-fandom-color-aqua;
 		}
 	}
 
@@ -363,10 +365,10 @@
 
 		&__search-input-wrapper {
 			// transitioned property: border-bottom-color;
-			border-bottom-color: $wds-color-slate-gray;
+			border-bottom-color: $wds-fandom-color-aqua;
 
 			&.wds-is-active {
-				border-bottom-color: $wds-color-link;
+				border-bottom-color: $wds-fandom-color-aqua;
 			}
 		}
 
