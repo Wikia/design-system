@@ -3,10 +3,12 @@
 		{{wds-avatar}}
 	{{/dropdown.toggle}}
 	{{#dropdown.content}}
-		{{#wds-list}}
+		{{#wds-list lines=true}}
 			<li>{{#wds-button href=model.signin.href rel='nofollow'}}{{i18n model.signin.title.key ns='design-system'}}{{/wds-button}}</li>
-			<li>{{i18n 'global-navigation-anon-register-description' ns='design-system'}}</li>
-			<li>{{#wds-button href=model.register.href rel="nofollow" secondary=true}}{{i18n model.register.title.key ns='design-system'}}{{/wds-button}}</li>
+			<li>
+				<div class="wds-global-navigation__account-menu-dropdown-caption">{{i18n 'global-navigation-anon-register-description' ns='design-system'}}</div>
+				{{#wds-button href=model.register.href rel="nofollow" secondary=true}}{{i18n model.register.title.key ns='design-system'}}{{/wds-button}}
+			</li>
 		{{/wds-list}}
 	{{/dropdown.content}}
 {{/wds-dropdown}}
