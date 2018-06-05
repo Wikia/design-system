@@ -21,8 +21,11 @@
 	{{/if}}
 
 	<div class="wds-global-navigation__start-a-wiki">
-		{{#wds-button secondary=true href=model.create_wiki.href
-					  class="wds-global-navigation__start-a-wiki-button"}}
+		{{#wds-button
+			secondary=true
+			href=model.create_wiki.href
+			class="wds-global-navigation__start-a-wiki-button"
+		}}
 			{{i18n model.create_wiki.title.key ns='design-system'}}
 		{{/wds-button}}
 	</div>
