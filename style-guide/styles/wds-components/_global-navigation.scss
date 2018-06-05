@@ -398,4 +398,11 @@
 	.wds-avatar {
 		@include wds-avatar(30px, #00d6d6, $wds-color-white, $wds-fandom-color-navy);
 	}
+
+	.wds-dropdown {
+		.wds-dropdown__toggle {
+			display: flex;
+			align-items: center;
+		}
+	}
 }
