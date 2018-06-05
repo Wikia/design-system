@@ -4,13 +4,13 @@
 }}
 	{{#dropdown.toggle
 		class='wds-global-navigation__dropdown-toggle'
-		title=(if showAvatar model.header.username.value)
+		title=(if showAvatar model.username)
 		as |chevron|
 	}}
 		{{#if showAvatar}}
-			{{wds-avatar src=model.header.url alt=model.header.username.value}}{{chevron}}
+			{{wds-avatar src=model.avatar_url alt=model.username}}{{chevron}}
 		{{else}}
-			<span>{{i18n model.header.title.key ns='design-system'}}</span>{{chevron}}
+			<span>{{i18n model.title.key ns='design-system'}}</span>{{chevron}}
 		{{/if}}
 	{{/dropdown.toggle}}
 	{{#dropdown.content
@@ -18,14 +18,14 @@
 		dropdownRightAligned=dropdownRightAligned
 	}}
 		{{#wds-list linked=true}}
-			{{#each model.links as |link|}}
+			{{#each model.items as |item|}}
 				<li>
 					{{component
-						(if (equal link.type 'link-authentication')
-							'wds-global-navigation/link-authentication'
+						(if (equal item.type 'link')
+							'wds-global-navigation/link'
 							'wds-global-navigation/link-dropdown'
 						)
-						model=link
+						model=item
 					}}
 				</li>
 			{{/each}}

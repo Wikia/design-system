@@ -2,11 +2,9 @@
 	{{#each model as |item|}}
 		{{!wds-global-navigation/link model=link}}
 		{{component
-			(if (equal item.type 'link')
-				'wds-global-navigation/link'
-				'wds-global-navigation/group'
-			)
+			(concat 'wds-global-navigation/' item.type)
 			model=item
+			standaloneLink=true
 		}}
 		{{!wds-global-navigation/link-branded model=link}}
 	{{/each}}
