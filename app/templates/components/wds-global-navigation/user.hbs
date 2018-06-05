@@ -1,0 +1,14 @@
+{{#wds-dropdown hasShadow=true as |dropdown|}}
+	{{#dropdown.toggle as |chevron|}}
+		{{wds-avatar src=model.avatar_url alt=model.username}}
+	{{/dropdown.toggle}}
+	{{#dropdown.content}}
+		{{#wds-list linked=true}}
+			{{#each model.items as |item|}}
+				<li>
+					{{component (concat 'wds-global-navigation/' item.type)  model=item}}
+				</li>
+			{{/each}}
+		{{/wds-list}}
+	{{/dropdown.content}}
+{{/wds-dropdown}}

@@ -14,6 +14,12 @@
 		deactivateSearch=(action 'deactivateSearch')
 		onQueryChanged=(action 'onSearchQueryChanged')
 	}}
+	{{#if model.user}}
+		{{wds-global-navigation/user model=model.user}}
+	{{else if model.anon}}
+		{{wds-global-navigation/anon model=model.anon}}
+	{{/if}}
+
 	{{wds-global-navigation/user-menu model=model}}
 
 	<div class="wds-global-navigation__start-a-wiki{{if model.user ' wds-user-is-logged-in'}}">
