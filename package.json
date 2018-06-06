@@ -57,7 +57,7 @@
     "ember-source-channel-url": "1.1.0",
     "ember-truth-helpers": "2.0.0",
     "ember-try": "0.2.23",
-    "ember-visual-test": "0.2.7",
+    "ember-visual-test": "0.2.8",
     "eslint-plugin-ember": "5.2.0",
     "eslint-plugin-node": "^6.0.1",
     "fs-extra": "5.0.0",
