@@ -355,8 +355,7 @@ export default Component.extend({
 				}
 			// ESC key
 			} else if (keyCode === 27) {
-				event.currentTarget.blur();
-				this.send('closeSearch');
+				this.closeSearch();
 			}
 		}
 	}

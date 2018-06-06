@@ -3,11 +3,6 @@
 .wds-global-navigation {
 	$search-input-padding: 3px 4px;
 	$notification-counter-size: 18px;
-
-	$search-transition-duration: 200ms;
-	$search-buttons-transition-duration: 50ms;
-	$search-buttons-transition-delay: $search-transition-duration - $search-buttons-transition-duration;
-
 	$partner-slot-width: 80px;
 
 	background-color: $wds-fandom-color-navy;
