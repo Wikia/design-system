@@ -373,7 +373,7 @@
 	}
 
 	.wds-button {
-		@include button-theming($wds-fandom-color-aqua, $wds-color-white);
+		@include button-theming($wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-aqua, "darker");
 	}
 
 	.wds-dropdown {

@@ -2,7 +2,7 @@
 	{{#dropdown.toggle as |chevron|}}
 		{{wds-avatar src=model.avatar_url alt=model.username}}{{chevron}}
 	{{/dropdown.toggle}}
-	{{#dropdown.content}}
+	{{#dropdown.content dropdownRightAligned=true}}
 		{{#wds-list linked=true}}
 			{{#each model.items as |item|}}
 				<li>
