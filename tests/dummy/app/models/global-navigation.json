@@ -37,7 +37,7 @@
       }
     },
     "create_wiki": {
-      "type": "button",
+      "type": "link-button",
       "title": {
         "type": "translatable-text",
         "key": "global-navigation-create-wiki-link-start-wikia"
@@ -47,7 +47,7 @@
     },
     "main_navigation": [
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-games"
@@ -56,7 +56,7 @@
         "tracking_label": "link.games"
       },
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-movies"
@@ -65,7 +65,7 @@
         "tracking_label": "link.movies"
       },
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-tv"
@@ -74,7 +74,7 @@
         "tracking_label": "link.tv"
       },
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-video"
@@ -83,7 +83,7 @@
         "tracking_label": "link.video"
       },
       {
-        "type": "group",
+        "type": "link-group",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-wikis-header"
@@ -91,7 +91,7 @@
         "tracking_label": "link.wikis",
         "items": [
           {
-            "type": "link",
+            "type": "link-text",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-wikis-explore"
@@ -100,7 +100,7 @@
             "tracking_label": "link.explore"
           },
           {
-            "type": "link",
+            "type": "link-text",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-wikis-community-central"
@@ -109,7 +109,7 @@
             "tracking_label": "link.community-central"
           },
           {
-            "type": "link",
+            "type": "link-text",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-wikis-fandom-university"
@@ -118,7 +118,7 @@
             "tracking_label": "link.fandom-university"
           },
           {
-            "type": "button",
+            "type": "link-button",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-create-wiki-link-start-wikia"
@@ -188,7 +188,7 @@
       }
     },
     "create_wiki": {
-      "type": "button",
+      "type": "link-button",
       "title": {
         "type": "translatable-text",
         "key": "global-navigation-create-wiki-link-start-wikia"
@@ -198,7 +198,7 @@
     },
     "main_navigation": [
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-games"
@@ -207,7 +207,7 @@
         "tracking_label": "link.games"
       },
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-movies"
@@ -216,7 +216,7 @@
         "tracking_label": "link.movies"
       },
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-tv"
@@ -225,7 +225,7 @@
         "tracking_label": "link.tv"
       },
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-video"
@@ -234,7 +234,7 @@
         "tracking_label": "link.video"
       },
       {
-        "type": "group",
+        "type": "link-group",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-wikis-header"
@@ -242,7 +242,7 @@
         "tracking_label": "link.wikis",
         "items": [
           {
-            "type": "link",
+            "type": "link-text",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-wikis-explore"
@@ -251,7 +251,7 @@
             "tracking_label": "link.explore"
           },
           {
-            "type": "link",
+            "type": "link-text",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-wikis-community-central"
@@ -260,7 +260,7 @@
             "tracking_label": "link.community-central"
           },
           {
-            "type": "link",
+            "type": "link-text",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-wikis-fandom-university"
@@ -269,7 +269,7 @@
             "tracking_label": "link.fandom-university"
           },
           {
-            "type": "button",
+            "type": "link-button",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-create-wiki-link-start-wikia"
@@ -286,7 +286,7 @@
       "tracking_label": "account",
       "items": [
         {
-          "type": "link",
+          "type": "link-text",
           "title": {
             "type": "translatable-text",
             "key": "global-navigation-user-view-profile"
@@ -295,7 +295,7 @@
           "tracking_label": "account.profile"
         },
         {
-          "type": "link",
+          "type": "link-text",
           "title": {
             "type": "translatable-text",
             "key": "global-navigation-user-my-talk"
@@ -304,7 +304,7 @@
           "tracking_label": "account.talk"
         },
         {
-          "type": "link",
+          "type": "link-text",
           "title": {
             "type": "translatable-text",
             "key": "global-navigation-user-my-preferences"
@@ -313,7 +313,7 @@
           "tracking_label": "account.preferences"
         },
         {
-          "type": "link",
+          "type": "link-text",
           "title": {
             "type": "translatable-text",
             "key": "global-navigation-user-help"
@@ -390,7 +390,7 @@
       }
     },
     "create_wiki": {
-      "type": "button",
+      "type": "link-button",
       "title": {
         "type": "translatable-text",
         "key": "global-navigation-create-wiki-link-start-wikia"
@@ -399,7 +399,7 @@
       "tracking_label": "start-a-wiki"
     },
     "main_navigation": {
-      "type": "link",
+      "type": "link-text",
       "title": {
         "type": "translatable-text",
         "key": "global-navigation-wikis-community-central"
@@ -466,7 +466,7 @@
       }
     },
     "create_wiki": {
-      "type": "button",
+      "type": "link-button",
       "title": {
         "type": "translatable-text",
         "key": "global-navigation-create-wiki-link-start-wikia"
@@ -476,7 +476,7 @@
     },
     "main_navigation": [
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-games"
@@ -485,7 +485,7 @@
         "tracking_label": "link.games"
       },
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-movies"
@@ -494,7 +494,7 @@
         "tracking_label": "link.movies"
       },
       {
-        "type": "link",
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-tv"
@@ -503,7 +503,7 @@
         "tracking_label": "link.tv"
       },
       {
-        "type": "group",
+        "type": "link-group",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-wikis-header"
@@ -511,7 +511,7 @@
         "tracking_label": "link.wikis",
         "items": [
           {
-            "type": "link",
+            "type": "link-text",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-wikis-explore"
@@ -520,7 +520,7 @@
             "tracking_label": "link.explore"
           },
           {
-            "type": "link",
+            "type": "link-text",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-wikis-community-central"
@@ -529,7 +529,7 @@
             "tracking_label": "link.community-central"
           },
           {
-            "type": "link",
+            "type": "link-text",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-wikis-fandom-university"
@@ -538,7 +538,7 @@
             "tracking_label": "link.fandom-university"
           },
           {
-            "type": "button",
+            "type": "link-button",
             "title": {
               "type": "translatable-text",
               "key": "global-navigation-create-wiki-link-start-wikia"
