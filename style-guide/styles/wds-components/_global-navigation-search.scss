@@ -1,0 +1,152 @@
+.wds-global-navigation__search {
+	$search-transition-duration: 200ms;
+
+	align-items: center;
+	color: $wds-fandom-color-aqua;
+	display: flex;
+	height: 100%;
+	justify-content: flex-end;
+
+	&-container {
+		height: 100%;
+		flex: 1;
+	}
+
+	&-input-wrapper {
+		align-items: center;
+		display: flex;
+		flex: 0 1 auto;
+		padding-bottom: 3px;
+		transition: flex $search-transition-duration;
+	}
+
+	&-input {
+		-webkit-appearance: none;
+		background: transparent;
+		border: 0;
+		box-sizing: border-box;
+		color: $wds-color-white;
+		//display: none;
+		// Safari doesn't set default flex values if we use `flex: 1;`
+		// it requires us to put these values explicitly.
+		flex: 1 1 auto;
+		font-size: $wds-typescale-size-minus-1;
+		width: 0;
+
+
+		&::-webkit-search-decoration,
+		&::-webkit-search-cancel-button {
+			display: none;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			color: $wds-color-white;
+		}
+
+		&::-ms-clear {
+			display: none;
+		}
+	}
+
+	&-submit {
+		@include button-theming($wds-fandom-color-aqua, $wds-color-white);
+		border-radius: 0;
+		display: none;
+		padding: 4px 10px;
+
+		&-icon {
+			transform: rotate(180deg);
+		}
+	}
+
+	&-close {
+		display: none;
+		padding: 5px 9px;
+
+		&.wds-button.wds-is-text {
+			color: #fff;
+		}
+	}
+
+	&-suggestions {
+		border-top: 0;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		left: 0;
+		right: 0;
+		top: calc(100% + 1px);
+		transform: none;
+	}
+
+
+	&-toggle {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+
+		&-icon {
+			margin-right: 8px;
+		}
+
+		&-text {
+			@include wds-hide-on-breakpoint(medium-down);
+		}
+	}
+
+	&.wds-dropdown {
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+
+	&:hover:not(.wds-is-active) {
+		.wds-dropdown__content {
+			display: none;
+		}
+	}
+}
+
+.wds-search-is-active .wds-global-navigation {
+	&__link, &__wikis-menu {
+		font-size: 0;
+		margin-left: 0;
+	}
+
+	&__wikis-menu {
+		.wds-dropdown__toggle-chevron {
+			display: none;
+		}
+	}
+
+	&__search {
+		&-container {
+			margin-left: 34px;
+		}
+
+		&-input-wrapper {
+			border-bottom: 2px solid $wds-fandom-color-aqua;
+			flex: 1 1 auto;
+		}
+
+		&-submit, &-close {
+			display: inline-flex;
+		}
+
+		&-toggle-icon {
+			margin-right: 17px;
+		}
+
+		&-toggle-text {
+			display: none;
+		}
+	}
+}
+
+.wds-global-navigation:not(.wds-search-is-active) .wds-global-navigation__search-suggestions {
+	display: none;
+}

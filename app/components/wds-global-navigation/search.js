@@ -8,7 +8,7 @@ import {inject as service} from '@ember/service';
 
 export default Component.extend({
 	tagName: 'form',
-	classNames: ['wds-global-navigation__search'],
+	classNames: ['wds-global-navigation__search-container'],
 
 	logger: service(),
 	i18n: service(),
@@ -22,8 +22,6 @@ export default Component.extend({
 	isEmptyQuery: empty('query'),
 	cachedResultsLimit: 100,
 	debounceDuration: 250,
-
-	onQueryChanged() {},
 
 	init() {
 		this._super(...arguments);
@@ -47,14 +45,6 @@ export default Component.extend({
 		this._super(...arguments);
 		this.set('inputField', this.element.querySelector('.wds-global-navigation__search-input'));
 	},
-
-	searchPlaceholder: computed('searchIsActive', function () {
-		if (this.get('searchIsActive')) {
-			return this.get('i18n').t(`design-system:${this.get('model.placeholder-active.key')}`);
-		}
-
-		return this.get('i18n').t(`design-system:${this.get('model.placeholder-inactive.key')}`);
-	}),
 
 	requestSuggestionsFromAPI() {
 		const query = this.get('query');
@@ -294,6 +284,15 @@ export default Component.extend({
 		return this.get('cachedResults')[query];
 	},
 
+	closeSearch() {
+		this.setProperties({
+			query: '',
+			searchIsActive: false
+		});
+		this.set('suggestions', []);
+		this.get('deactivateSearch')();
+	},
+
 	actions: {
 		enter(value) {
 			const index = this.get('selectedSuggestionIndex');
@@ -315,18 +314,10 @@ export default Component.extend({
 			this.get('onSearchSuggestionChosen')(suggestion);
 		},
 
-		onFocusSearch() {
+		openSearch() {
 			this.set('searchIsActive', true);
 			this.get('activateSearch')();
-		},
-
-		closeSearch() {
-			this.setProperties({
-				query: '',
-				searchIsActive: false
-			});
-			this.set('suggestions', []);
-			this.get('deactivateSearch')();
+			this.get('inputField').focus();
 		},
 
 		onQueryChanged() {
@@ -336,6 +327,17 @@ export default Component.extend({
 			});
 
 			this.getSuggestions(this.get('query'));
+		},
+
+		onCloseSearchClick(event) {
+			event.stopPropagation();
+			this.closeSearch();
+		},
+
+		onFocusOut() {
+			if (!this.get('query')) {
+				this.closeSearch();
+			}
 		},
 
 		onKeyDown(value, event) {
