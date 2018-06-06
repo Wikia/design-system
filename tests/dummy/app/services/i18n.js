@@ -33,7 +33,10 @@ const allTranslations = {
 	ru: translationsRu,
 	vi: translationsVi,
 	zh: translationsZh,
+	'zh-hans': translationsZh,
+	'zh-tw': translationsZhHant,
 	'zh-hant': translationsZhHant,
+	'zh-hk': translationsZhHant
 };
 
 export default Service.extend({
