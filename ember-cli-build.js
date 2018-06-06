@@ -49,7 +49,8 @@ module.exports = function (defaults) {
 			]
 		},
 		visualTest: {
-			groupByOs: false
+			groupByOs: false,
+			imgurClientId: 'ab7e2d559faef26',
 		},
 		includePolyfill: EmberAddon.env() === 'test'
 	});
