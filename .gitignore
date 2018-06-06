@@ -28,5 +28,5 @@ package.json.ember-try
 *.DS_Store
 *._.DS_Store
 debug.log
-/visual-test-output/tmp/*.png
-/visual-test-output/diff/*.png
+/visual-test-output/tmp/**/*.png
+/visual-test-output/diff/**/*.png

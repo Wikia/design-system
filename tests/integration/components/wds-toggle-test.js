@@ -18,13 +18,13 @@ module('Integration | Component | wds-toggle', function (hooks) {
 		await render(hbs`<span class='toggle-wrapper'>{{wds-toggle}}</span>`);
 
 		assert.equal(this.element.textContent.trim(), '');
-		await capture(assert, 'wds-toggle-inline', getCaptureOptions());
+		await capture(assert, 'wds-toggle/inline', getCaptureOptions());
 
 		await render(hbs`<span class='toggle-wrapper'>{{#wds-toggle}}test{{/wds-toggle}}</span>`);
 
 		assert.equal(this.element.textContent.trim(), 'test');
 
-		await capture(assert, 'wds-toggle-block', getCaptureOptions());
+		await capture(assert, 'wds-toggle/block', getCaptureOptions());
 	});
 
 	test('on/off toggle', async function (assert) {
@@ -38,7 +38,7 @@ module('Integration | Component | wds-toggle', function (hooks) {
 
 		await render(hbs`<span class='toggle-wrapper'>{{#wds-toggle checked=true}}test{{/wds-toggle}}</span>`);
 
-		await capture(assert, 'wds-toggle-checked', getCaptureOptions());
+		await capture(assert, 'wds-toggle/checked', getCaptureOptions());
 	});
 
 	test('disabled state', async function (assert) {
@@ -50,6 +50,6 @@ module('Integration | Component | wds-toggle', function (hooks) {
 
 		assert.notOk(this.element.querySelector('input').checked);
 
-		await capture(assert, 'wds-toggle-disabled', getCaptureOptions());
+		await capture(assert, 'wds-toggle/disabled', getCaptureOptions());
 	});
 });
