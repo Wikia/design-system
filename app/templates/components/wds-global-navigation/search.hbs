@@ -14,7 +14,9 @@
 			type='search'
 			autocomplete='off'
 			input=(action 'onQueryChanged')
+			enter=(action 'enter')
 			key-down=(action 'onKeyDown')
+			focusIn=(action 'onFocusIn')
 			focusOut=(action 'onFocusOut')
 		}}
 		{{#wds-button text=true class='wds-global-navigation__search-close' type='button' click=(action 'onCloseSearchClick')}}
@@ -27,7 +29,9 @@
 	{{#dropdown.content class='wds-global-navigation__search-suggestions'}}
 		{{#wds-list linked=true ellipsis=true}}
 			{{#each suggestions as |suggestion index|}}
-				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}}" {{action 'onSearchSuggestionChosen' suggestion}}>
+				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}}"
+					onmousedown={{action 'onSearchSuggestionChosen' suggestion}} onmouseenter={{action
+					'selectItem' index}}>
 					<a href="{{suggestion.uri}}" class="wds-global-navigation__dropdown-link">
 						{{{suggestion.text}}}
 					</a>

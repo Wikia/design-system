@@ -2,7 +2,7 @@ import {notEmpty, empty} from '@ember/object/computed';
 import Component from '@ember/component';
 import EmberObject, {computed} from '@ember/object';
 import fetch from 'fetch';
-import {run} from '@ember/runloop';
+import {run,scheduleOnce} from '@ember/runloop';
 import wrapMeHelper from '../../helpers/wrap-me';
 import {inject as service} from '@ember/service';
 
@@ -10,9 +10,13 @@ export default Component.extend({
 	tagName: 'form',
 	classNames: ['wds-global-navigation__search-container'],
 
+	attributeBindings: ['action'],
+	classNameBindings: ['inputFocused:wds-search-is-focused'],
+
 	logger: service(),
 	i18n: service(),
 
+	action: '/search',
 	query: '',
 	searchRequestInProgress: false,
 	isLoadingResultsSuggestions: false,
@@ -44,6 +48,13 @@ export default Component.extend({
 	didInsertElement() {
 		this._super(...arguments);
 		this.set('inputField', this.element.querySelector('.wds-global-navigation__search-input'));
+	},
+
+	submit(event) {
+		event.preventDefault();
+
+		this.set('searchRequestInProgress', true);
+		this.goToSearchResults(this.get('query'));
 	},
 
 	requestSuggestionsFromAPI() {
@@ -290,7 +301,7 @@ export default Component.extend({
 			searchIsActive: false
 		});
 		this.set('suggestions', []);
-		this.get('deactivateSearch')();
+		this.deactivateSearch();
 	},
 
 	actions: {
@@ -300,23 +311,19 @@ export default Component.extend({
 			this.get('inputField').blur();
 
 			if (this.get('selectedSuggestionIndex') !== -1) {
-				this.get('onSearchSuggestionChosen')(this.get('suggestions')[index]);
-			} else {
-				this.set('searchRequestInProgress', true);
-				this.get('onEnterHandler')(value);
-				this.get('goToSearchResults')(value);
+				this.onSearchSuggestionChosen(this.get('suggestions')[index]);
 			}
 
 			this.setSearchSuggestionItems();
 		},
 
 		onSearchSuggestionChosen(suggestion) {
-			this.get('onSearchSuggestionChosen')(suggestion);
+			this.onSearchSuggestionChosen(suggestion);
 		},
 
 		openSearch() {
 			this.set('searchIsActive', true);
-			this.get('activateSearch')();
+			this.activateSearch();
 			this.get('inputField').focus();
 		},
 
@@ -334,14 +341,23 @@ export default Component.extend({
 			this.closeSearch();
 		},
 
+		onFocusIn() {
+			this.set('inputFocused', true);
+		},
+
 		onFocusOut() {
 			if (!this.get('query')) {
 				this.closeSearch();
 			}
+			this.set('inputFocused', false);
+
+			run.scheduleOnce('afterRender', () => {
+				this.set('selectedSuggestionIndex', -1);
+			});
 		},
 
 		onKeyDown(value, event) {
-			const keyCode = event.originalEvent ? event.originalEvent.keyCode : event.keyCode;
+			const keyCode = event.keyCode;
 
 			// down arrow
 			if (keyCode === 40) {
@@ -357,6 +373,10 @@ export default Component.extend({
 			} else if (keyCode === 27) {
 				this.closeSearch();
 			}
+		},
+
+		selectItem(index) {
+			this.set('selectedSuggestionIndex', index);
 		}
 	}
 });

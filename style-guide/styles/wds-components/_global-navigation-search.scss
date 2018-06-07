@@ -89,6 +89,15 @@ $toggle-active-margin-right: 17px;
 				}
 			}
 		}
+
+		&.wds-dropdown__content .wds-list.wds-is-linked > li:hover:not(.wds-is-selected) > a {
+			background-color: transparent;
+			color: $wds-color-dark-blue-gray;
+		}
+
+		.wds-global-navigation__search-container:not(.wds-search-is-focused) &, .wds-global-navigation:not(.wds-search-is-active) & {
+			display: none;
+		}
 	}
 
 
@@ -154,8 +163,4 @@ $toggle-active-margin-right: 17px;
 			display: none;
 		}
 	}
-}
-
-.wds-global-navigation:not(.wds-search-is-active) .wds-global-navigation__search-suggestions {
-	display: none;
 }
