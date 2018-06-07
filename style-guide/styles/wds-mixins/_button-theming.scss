@@ -2,7 +2,7 @@
 
 @mixin button-theming($color-primary, $color-primary-text, $color-secondary: "", $manual-override: "") {
 	$color-primary-active: lighten($color-primary, 20%);
-	@if lightness($color-primary) > 49 {
+	@if lightness($color-primary) > 49 or ($manual-override) == "darker" {
 		$color-primary-active: darken($color-primary, 20%);
 	}
 
@@ -11,16 +11,8 @@
 	}
 
 	$color-secondary-active: lighten($color-secondary, 20%);
-	@if lightness($color-secondary) > 49 {
+	@if lightness($color-secondary) > 49  or ($manual-override) == "darker" {
 		$color-secondary-active: darken($color-secondary, 20%);
-	}
-
-	@if ($manual-override) == "lighter" {
-		$color-primary-active: lighten($color-secondary, 20%);
-		$color-secondary-active: lighten($color-secondary, 20%);
-	} @else if ($manual-override) == "darker" {
-		$color-primary-active: darken($color-secondary, 20%);
-		$color-secondary-active: darken($color-primary, 20%);
 	}
 
 	background-color: $color-primary;
