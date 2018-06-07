@@ -42,6 +42,11 @@
 		height: $wds-global-navigation-height;
 	}
 
+	&__content-bar-right {
+		flex-grow: 1;
+		justify-content: flex-end;
+	}
+
 	&__links {
 		display: flex;
 		font-size: 18px;
