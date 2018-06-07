@@ -305,7 +305,7 @@ export default Component.extend({
 	},
 
 	actions: {
-		enter(value) {
+		enter() {
 			const index = this.get('selectedSuggestionIndex');
 
 			this.get('inputField').blur();
