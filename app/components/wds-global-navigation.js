@@ -39,11 +39,11 @@ export default Component.extend({
 				];
 		},
 
-		onSearchSuggestionChosen(item) {
+		onSearchSuggestionChosen() {
 			// TODO
 		},
 
-		goToSearchResults(query) {
+		goToSearchResults() {
 			// TODO
 		}
 	}

@@ -1,8 +1,8 @@
 import {notEmpty, empty} from '@ember/object/computed';
 import Component from '@ember/component';
-import EmberObject, {computed} from '@ember/object';
+import EmberObject from '@ember/object';
 import fetch from 'fetch';
-import {run,scheduleOnce} from '@ember/runloop';
+import {run} from '@ember/runloop';
 import wrapMeHelper from '../../helpers/wrap-me';
 import {inject as service} from '@ember/service';
 
