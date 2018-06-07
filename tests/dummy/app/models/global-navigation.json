@@ -322,7 +322,7 @@
           "tracking_label": "account.help"
         },
         {
-          "type": "logout",
+          "type": "link-logout",
           "href": "https:\/\/www.jakubjt.wikia-dev.pl\/logout",
           "title": {
             "type": "translatable-text",

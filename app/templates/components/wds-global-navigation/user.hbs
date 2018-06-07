@@ -6,6 +6,11 @@
 		{{#wds-list linked=true}}
 			{{#each model.items as |item|}}
 				<li>
+					{{!
+    					Componenets that can be rendere here are:
+    					- link-text
+    					- link-logout
+					}}
 					{{component (concat 'wds-global-navigation/' item.type)  model=item}}
 				</li>
 			{{/each}}
