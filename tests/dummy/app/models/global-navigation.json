@@ -398,15 +398,17 @@
       "href": "\/\/www.jakubjt.wikia-dev.pl\/Special:CreateNewWiki",
       "tracking_label": "start-a-wiki"
     },
-    "main_navigation": {
-      "type": "link-text",
-      "title": {
-        "type": "translatable-text",
-        "key": "global-navigation-wikis-community-central"
-      },
-      "href": "\/\/community.jakubjt.wikia-dev.pl\/wiki\/Community_Central",
-      "tracking_label": "link.community-central"
-    },
+    "main_navigation": [
+      {
+        "type": "link-text",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-wikis-community-central"
+        },
+        "href": "\/\/community.jakubjt.wikia-dev.pl\/wiki\/Community_Central",
+        "tracking_label": "link.community-central"
+      }
+    ],
     "anon": {
       "signin": {
         "title": {
