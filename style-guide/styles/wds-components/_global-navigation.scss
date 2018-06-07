@@ -381,10 +381,10 @@
 		@include wds-avatar(30px, $wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-navy);
 	}
 
-	.wds-global-navigation__user-menu:hover {
+	&__user-menu:hover {
 		.wds-avatar__image {
-			fill: $wds-color-white;
 			border-color: $wds-color-white;
+			fill: $wds-color-white;
 		}
 	}
 
@@ -418,7 +418,7 @@
 		}
 	}
 
-	&__start-a-wiki-button {
+	&__link-button {
 		margin: 6px;
 		text-align: center;
 	}
