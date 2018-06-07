@@ -416,8 +416,10 @@
 			color: $wds-color-dark-blue-gray;
 			min-width: 190px;
 		}
-		.wds-global-navigation__start-a-wiki {
-			margin: 6px auto;
-		}
+	}
+
+	&__start-a-wiki-button {
+		margin: 6px;
+		text-align: center;
 	}
 }
