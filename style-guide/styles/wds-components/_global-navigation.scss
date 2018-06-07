@@ -365,6 +365,16 @@
 		@media #{$wds-breakpoint-medium-down} {
 			display: none;
 		}
+
+		.wds-button.wds-is-secondary:not(:disabled) {
+			border-color: $wds-fandom-color-aqua;
+			color: $wds-fandom-color-aqua;
+
+			&:hover {
+				border-color: $wds-color-white;
+				color: $wds-color-white;
+			}
+		}
 	}
 
 	.wds-avatar {
@@ -375,7 +385,8 @@
 		.wds-avatar__inner-border + .wds-avatar__image {
 			fill: $wds-color-white;
 			border-color: $wds-color-white;
-		};
+		}
+	;
 	}
 
 	.wds-dropdown__content {
@@ -408,18 +419,6 @@
 		}
 		.wds-global-navigation__start-a-wiki {
 			margin: 6px auto;
-		}
-	}
-
-	&__start-a-wiki {
-		.wds-button.wds-is-secondary:not(:disabled) {
-			border-color: $wds-fandom-color-aqua;
-			color: $wds-fandom-color-aqua;
-
-			&:hover {
-				border-color: $wds-color-white;
-				color: $wds-color-white;
-			}
 		}
 	}
 }
