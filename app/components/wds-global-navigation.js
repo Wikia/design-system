@@ -2,7 +2,7 @@ import {empty} from '@ember/object/computed';
 import Component from '@ember/component';
 
 export default Component.extend({
-	classNames: 'wds-global-navigation',
+	classNames: ['wds-global-navigation'],
 	classNameBindings: [
 		'searchIsActive:wds-search-is-active',
 		'searchIsAlwaysVisible:wds-search-is-always-visible',
@@ -40,7 +40,11 @@ export default Component.extend({
 		},
 
 		onSearchSuggestionChosen() {
+			// TODO
+		},
 
+		goToSearchResults() {
+			// TODO
 		}
 	}
 });
