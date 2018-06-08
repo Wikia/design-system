@@ -22,7 +22,8 @@
     "release-fix": "git checkout master && git pull && npm version patch && git push --follow-tags",
     "setup": "npm i",
     "svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/svg",
-    "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets"
+    "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets",
+    "regenerate-lock": "npm cache clean --force && rm -rf node_modules package-lock.json && npm run setup"
   },
   "devDependencies": {
     "broccoli-asset-rev": "2.7.0",
