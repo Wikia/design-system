@@ -13,15 +13,15 @@ export default Component.extend({
 
 	searchIsAlwaysVisible: empty('model.fandom_overview'),
 
-	track(label) {
-    // To be passed by client
+	track(/*label*/) {
+		// Needs to be passed from client
 	},
 
 	click(event) {
 		const elementToTrack = event.target.closest('[data-tracking-label]');
 
 		if (elementToTrack) {
-			this.get('track')(elementToTrack.getAttribute('data-tracking-label'));
+			this.track(elementToTrack.getAttribute('data-tracking-label'));
 		}
 	},
 
