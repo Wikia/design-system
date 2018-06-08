@@ -4,7 +4,8 @@ export default Component.extend({
 	attributeBindings: [
 		'disabled',
 		'href',
-		'title'
+		'title',
+		'type'
 	],
 	classNames: 'wds-button',
 	classNameBindings: [

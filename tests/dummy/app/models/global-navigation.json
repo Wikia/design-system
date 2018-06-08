@@ -1,50 +1,164 @@
 {
   "logged-out-default": {
     "logo": {
-      "header": {
-        "type": "link-image",
-        "href": "\/\/fandom.wikia.com\/",
-        "image": "wds-company-logo-fandom-powered-by-wikia",
-        "image-data": {
-          "type": "wds-svg",
-          "name": "wds-company-logo-fandom-powered-by-wikia"
-        },
-        "title": {
-          "type": "text",
-          "value": "Fandom powered by Wikia"
-        },
-        "tracking_label": "logo"
+      "type": "link-image",
+      "href": "\/\/fandom.wikia.com\/",
+      "image-data": {
+        "type": "wds-svg",
+        "name": "wds-company-logo-fandom-white"
       },
-      "module": {
-        "type": "logo",
-        "main": {
-          "type": "link-image",
-          "href": "\/\/fandom.wikia.com\/",
-          "image": "wds-company-logo-fandom-white",
-          "image-data": {
-            "type": "wds-svg",
-            "name": "wds-company-logo-fandom-white"
-          },
-          "title": {
+      "tracking_label": "logo"
+    },
+    "search": {
+      "type": "search",
+      "results": {
+        "tracking_label": "search",
+        "param-name": "query",
+        "url": "\/\/starwars.mateuszr.wikia-dev.pl\/wiki\/Special:Search"
+      },
+      "placeholder-inactive": {
+        "type": "translatable-text",
+        "key": "global-navigation-search-placeholder-inactive"
+      },
+      "placeholder-active": {
+        "type": "translatable-text",
+        "key": "global-navigation-search-placeholder-in-wiki",
+        "params": {
+          "sitename": {
             "type": "text",
-            "value": "Fandom powered by Wikia"
-          },
-          "tracking_label": "logo"
-        },
-        "tagline": {
-          "type": "link-image",
-          "href": "\/\/fandom.wikia.com\/",
-          "image-data": {
-            "type": "wds-svg",
-            "name": "wds-company-logo-powered-by-wikia"
-          },
-          "title": {
-            "type": "text",
-            "value": "Fandom powered by Wikia"
-          },
-          "tracking_label": "logo-tagline"
+            "value": "Wookieepedia"
+          }
         }
+      },
+      "suggestions": {
+        "url": "\/\/starwars.jakubjt.wikia-dev.pl\/index.php?action=ajax&rs=getLinkSuggest&format=json",
+        "param-name": "query",
+        "tracking_label": "search-suggestion"
       }
+    },
+    "create_wiki": {
+      "type": "link-button",
+      "title": {
+        "type": "translatable-text",
+        "key": "global-navigation-create-wiki-link-start-wikia"
+      },
+      "href": "\/\/www.jakubjt.wikia-dev.pl\/Special:CreateNewWiki",
+      "tracking_label": "start-a-wiki"
+    },
+    "main_navigation": [
+      {
+        "type": "link-text",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-fandom-overview-link-vertical-games"
+        },
+        "href": "\/\/fandom.wikia.com\/topics\/games",
+        "tracking_label": "link.games"
+      },
+      {
+        "type": "link-text",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-fandom-overview-link-vertical-movies"
+        },
+        "href": "\/\/fandom.wikia.com\/topics\/movies",
+        "tracking_label": "link.movies"
+      },
+      {
+        "type": "link-text",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-fandom-overview-link-vertical-tv"
+        },
+        "href": "\/\/fandom.wikia.com\/topics\/tv",
+        "tracking_label": "link.tv"
+      },
+      {
+        "type": "link-text",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-fandom-overview-link-video"
+        },
+        "href": "\/\/fandom.wikia.com\/video",
+        "tracking_label": "link.video"
+      },
+      {
+        "type": "link-group",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-wikis-header"
+        },
+        "tracking_label": "link.wikis",
+        "items": [
+          {
+            "type": "link-text",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-wikis-explore"
+            },
+            "href": "\/\/fandom.wikia.com\/explore",
+            "tracking_label": "link.explore"
+          },
+          {
+            "type": "link-text",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-wikis-community-central"
+            },
+            "href": "\/\/community.jakubjt.wikia-dev.pl\/wiki\/Community_Central",
+            "tracking_label": "link.community-central"
+          },
+          {
+            "type": "link-text",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-wikis-fandom-university"
+            },
+            "href": "\/\/community.jakubjt.wikia-dev.pl\/wiki\/Fandom_University",
+            "tracking_label": "link.fandom-university"
+          },
+          {
+            "type": "link-button",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-create-wiki-link-start-wikia"
+            },
+            "href": "\/\/www.jakubjt.wikia-dev.pl\/Special:CreateNewWiki",
+            "tracking_label": "link.start-a-wiki"
+          }
+        ]
+      }
+    ],
+    "anon": {
+      "signin": {
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-anon-sign-in"
+        },
+        "href": "https:\/\/www.jakubjt.wikia-dev.pl\/signin",
+        "param-name": "redirect",
+        "tracking_label": "account.sign-in"
+      },
+      "register": {
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-anon-register"
+        },
+        "href": "https:\/\/www.jakubjt.wikia-dev.pl\/register",
+        "param-name": "redirect",
+        "tracking_label": "account.register"
+      }
+    }
+  },
+  "logged-in-default": {
+    "logo": {
+      "type": "link-image",
+      "href": "\/\/fandom.wikia.com\/",
+      "image-data": {
+        "type": "wds-svg",
+        "name": "wds-company-logo-fandom-white"
+      },
+      "tracking_label": "logo"
     },
     "search": {
       "type": "search",
@@ -74,346 +188,142 @@
       }
     },
     "create_wiki": {
-      "header": {
+      "type": "link-button",
+      "title": {
+        "type": "translatable-text",
+        "key": "global-navigation-create-wiki-link-start-wikia"
+      },
+      "href": "\/\/www.jakubjt.wikia-dev.pl\/Special:CreateNewWiki",
+      "tracking_label": "start-a-wiki"
+    },
+    "main_navigation": [
+      {
         "type": "link-text",
         "title": {
           "type": "translatable-text",
-          "key": "global-navigation-create-wiki-link-start-wikia"
+          "key": "global-navigation-fandom-overview-link-vertical-games"
         },
-        "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
-        "tracking_label": "start-a-wiki"
-      }
-    },
-    "fandom_overview": {
-      "links": [
-        {
-          "type": "link-branded",
-          "brand": "games",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-fandom-overview-link-vertical-games"
-          },
-          "href": "\/\/fandom.wikia.com\/topics\/games",
-          "tracking_label": "link.games"
+        "href": "\/\/fandom.wikia.com\/topics\/games",
+        "tracking_label": "link.games"
+      },
+      {
+        "type": "link-text",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-fandom-overview-link-vertical-movies"
         },
-        {
-          "type": "link-branded",
-          "brand": "movies",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-fandom-overview-link-vertical-movies"
-          },
-          "href": "\/\/fandom.wikia.com\/topics\/movies",
-          "tracking_label": "link.movies"
+        "href": "\/\/fandom.wikia.com\/topics\/movies",
+        "tracking_label": "link.movies"
+      },
+      {
+        "type": "link-text",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-fandom-overview-link-vertical-tv"
         },
-        {
-          "type": "link-branded",
-          "brand": "tv",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-fandom-overview-link-vertical-tv"
-          },
-          "href": "\/\/fandom.wikia.com\/topics\/tv",
-          "tracking_label": "link.tv"
-        }
-      ]
-    },
-    "wikis": {
-      "header": {
-        "type": "line-text",
+        "href": "\/\/fandom.wikia.com\/topics\/tv",
+        "tracking_label": "link.tv"
+      },
+      {
+        "type": "link-text",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-fandom-overview-link-video"
+        },
+        "href": "\/\/fandom.wikia.com\/video",
+        "tracking_label": "link.video"
+      },
+      {
+        "type": "link-group",
         "title": {
           "type": "translatable-text",
           "key": "global-navigation-wikis-header"
         },
-        "tracking_label": "link.wikis"
-      },
-      "links": [
-        {
-          "type": "link-text",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-wikis-explore"
+        "tracking_label": "link.wikis",
+        "items": [
+          {
+            "type": "link-text",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-wikis-explore"
+            },
+            "href": "\/\/fandom.wikia.com\/explore",
+            "tracking_label": "link.explore"
           },
-          "href": "\/\/fandom.wikia.com\/explore",
-          "tracking_label": "link.explore"
-        },
-        {
-          "type": "link-text",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-wikis-community-central"
+          {
+            "type": "link-text",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-wikis-community-central"
+            },
+            "href": "\/\/community.jakubjt.wikia-dev.pl\/wiki\/Community_Central",
+            "tracking_label": "link.community-central"
           },
-          "href": "\/\/community.wikia.com\/wiki\/Community_Central",
-          "tracking_label": "link.community-central"
-        },
-        {
-          "type": "link-text",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-wikis-fandom-university"
+          {
+            "type": "link-text",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-wikis-fandom-university"
+            },
+            "href": "\/\/community.jakubjt.wikia-dev.pl\/wiki\/Fandom_University",
+            "tracking_label": "link.fandom-university"
           },
-          "href": "\/\/community.wikia.com\/wiki\/Fandom_University",
-          "tracking_label": "link.fandom-university"
-        }
-      ]
-    },
-    "anon": {
-      "header": {
-        "type": "line-image",
-        "image": "wds-icons-user",
-        "image-data": {
-          "type": "wds-svg",
-          "name": "wds-icons-user"
-        },
-        "title": {
-          "type": "translatable-text",
-          "key": "global-navigation-anon-my-account"
-        },
-        "subtitle": {
-          "type": "translatable-text",
-          "key": "global-navigation-anon-my-account"
-        },
-        "tracking_label": "account"
-      },
-      "links": [
-        {
-          "type": "link-authentication",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-anon-sign-in"
-          },
-          "href": "https:\/\/www.wikia.com\/signin",
-          "param-name": "redirect",
-          "tracking_label": "account.sign-in"
-        },
-        {
-          "type": "link-authentication",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-anon-register"
-          },
-          "subtitle": {
-            "type": "translatable-text",
-            "key": "global-navigation-anon-register-description"
-          },
-          "href": "https:\/\/www.wikia.com\/register",
-          "param-name": "redirect",
-          "tracking_label": "account.register"
-        }
-      ]
-    },
-    "services_domain": "https://services.wikia.com/"
-  },
-  "logged-in-default": {
-    "logo": {
-      "header": {
-        "type": "link-image",
-        "href": "\/\/fandom.wikia.com\/",
-        "image": "wds-company-logo-fandom-powered-by-wikia",
-        "image-data": {
-          "type": "wds-svg",
-          "name": "wds-company-logo-fandom-powered-by-wikia"
-        },
-        "title": {
-          "type": "text",
-          "value": "Fandom powered by Wikia"
-        },
-        "tracking_label": "logo"
-      },
-      "module": {
-        "type": "logo",
-        "main": {
-          "type": "link-image",
-          "href": "\/\/fandom.wikia.com\/",
-          "image": "wds-company-logo-fandom-white",
-          "image-data": {
-            "type": "wds-svg",
-            "name": "wds-company-logo-fandom-white"
-          },
-          "title": {
-            "type": "text",
-            "value": "Fandom powered by Wikia"
-          },
-          "tracking_label": "logo"
-        },
-        "tagline": {
-          "type": "link-image",
-          "href": "\/\/fandom.wikia.com\/",
-          "image-data": {
-            "type": "wds-svg",
-            "name": "wds-company-logo-powered-by-wikia"
-          },
-          "title": {
-            "type": "text",
-            "value": "Fandom powered by Wikia"
-          },
-          "tracking_label": "logo-tagline"
-        }
-      }
-    },
-    "search": {
-      "module": {
-        "type": "search",
-        "results": {
-          "tracking_label": "search",
-          "param-name": "query",
-          "url": "\/\/harrypotter.wikia.com\/wiki\/Special:Search"
-        },
-        "placeholder-inactive": {
-          "type": "translatable-text",
-          "key": "global-navigation-search-placeholder-inactive"
-        },
-        "placeholder-active": {
-          "type": "translatable-text",
-          "key": "global-navigation-search-placeholder-in-wiki",
-          "params": {
-            "sitename": {
-              "type": "text",
-              "value": "Harry Potter Wiki"
-            }
+          {
+            "type": "link-button",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-create-wiki-link-start-wikia"
+            },
+            "href": "\/\/www.jakubjt.wikia-dev.pl\/Special:CreateNewWiki",
+            "tracking_label": "link.start-a-wiki"
           }
-        },
-        "suggestions": {
-          "url": "\/\/harrypotter.wikia.com\/index.php?action=ajax&rs=getLinkSuggest&format=json",
-          "param-name": "query",
-          "tracking_label": "search-suggestion"
-        }
+        ]
       }
-    },
-    "create_wiki": {
-      "header": {
-        "type": "link-text",
-        "title": {
-          "type": "translatable-text",
-          "key": "global-navigation-create-wiki-link-start-wikia"
-        },
-        "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
-        "tracking_label": "start-a-wiki"
-      }
-    },
-    "fandom_overview": {
-      "links": [
-        {
-          "type": "link-branded",
-          "brand": "games",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-fandom-overview-link-vertical-games"
-          },
-          "href": "\/\/fandom.wikia.com\/topics\/games",
-          "tracking_label": "link.games"
-        },
-        {
-          "type": "link-branded",
-          "brand": "movies",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-fandom-overview-link-vertical-movies"
-          },
-          "href": "\/\/fandom.wikia.com\/topics\/movies",
-          "tracking_label": "link.movies"
-        },
-        {
-          "type": "link-branded",
-          "brand": "tv",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-fandom-overview-link-vertical-tv"
-          },
-          "href": "\/\/fandom.wikia.com\/topics\/tv",
-          "tracking_label": "link.tv"
-        }
-      ]
-    },
-    "wikis": {
-      "header": {
-        "type": "line-text",
-        "title": {
-          "type": "translatable-text",
-          "key": "global-navigation-wikis-header"
-        },
-        "tracking_label": "link.wikis"
-      },
-      "links": [
-        {
-          "type": "link-text",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-wikis-explore"
-          },
-          "href": "\/\/fandom.wikia.com\/explore",
-          "tracking_label": "link.explore"
-        },
-        {
-          "type": "link-text",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-wikis-community-central"
-          },
-          "href": "\/\/community.wikia.com\/wiki\/Community_Central",
-          "tracking_label": "link.community-central"
-        },
-        {
-          "type": "link-text",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-wikis-fandom-university"
-          },
-          "href": "\/\/community.wikia.com\/wiki\/Fandom_University",
-          "tracking_label": "link.fandom-university"
-        }
-      ]
-    },
+    ],
     "user": {
-      "header": {
-        "type": "avatar",
-        "username": {
-          "type": "text",
-          "value": "Ktatala"
-        },
-        "url": "https:\/\/vignette.wikia.nocookie.net\/messaging\/images\/1\/19\/Avatar.jpg\/revision\/latest\/scale-to-width-down\/50",
-        "tracking_label": "account"
-      },
-      "links": [
+      "avatar_url": "/images/FANDOM-Avatar.jpg",
+      "username": "JamesHawking",
+      "tracking_label": "account",
+      "items": [
         {
           "type": "link-text",
-          "href": "\/\/harrypotter.wikia.com\/wiki\/User:Ktatala",
           "title": {
             "type": "translatable-text",
             "key": "global-navigation-user-view-profile"
           },
+          "href": "\/\/starwars.mateuszr.wikia-dev.pl\/wiki\/User:JamesHawking",
           "tracking_label": "account.profile"
         },
         {
           "type": "link-text",
-          "href": "\/\/harrypotter.wikia.com\/wiki\/User_talk:Ktatala",
           "title": {
             "type": "translatable-text",
             "key": "global-navigation-user-my-talk"
           },
+          "href": "\/\/starwars.mateuszr.wikia-dev.pl\/wiki\/User_talk:JamesHawking",
           "tracking_label": "account.talk"
         },
         {
           "type": "link-text",
-          "href": "\/\/harrypotter.wikia.com\/wiki\/Special:Preferences",
           "title": {
             "type": "translatable-text",
             "key": "global-navigation-user-my-preferences"
           },
+          "href": "\/\/starwars.mateuszr.wikia-dev.pl\/wiki\/Special:Preferences",
           "tracking_label": "account.preferences"
         },
         {
           "type": "link-text",
-          "href": "\/\/community.wikia.com\/wiki\/Help:Contents",
           "title": {
             "type": "translatable-text",
             "key": "global-navigation-user-help"
           },
+          "href": "\/\/community.jakubjt.wikia-dev.pl\/wiki\/Help:Contents",
           "tracking_label": "account.help"
         },
         {
-          "type": "link-authentication",
-          "href": "https:\/\/www.wikia.com\/logout",
+          "type": "link-logout",
+          "href": "https:\/\/www.jakubjt.wikia-dev.pl\/logout",
           "title": {
             "type": "translatable-text",
             "key": "global-navigation-user-sign-out"
@@ -426,7 +336,6 @@
     "notifications": {
       "header": {
         "type": "line-image",
-        "image": "wds-icons-note",
         "image-data": {
           "type": "wds-svg",
           "name": "wds-icons-note"
@@ -439,353 +348,227 @@
       },
       "module": {
         "type": "notifications",
-        "url": "\/\/harrypotter.wikia.com\/wiki\/User_talk:Ktatala"
+        "url": "\/\/starwars.mateuszr.wikia-dev.pl\/wiki\/User_talk:JamesHawking"
       }
-    },
-    "services_domain": "https://services.wikia.com/"
+    }
   },
   "logged-out-wikia-org": {
     "logo": {
-      "header": {
-        "type": "link-image",
-        "href": "\/\/fandom.wikia.com\/",
-        "image": "wds-company-logo-fandom-powered-by-wikia",
-        "image-data": {
-          "type": "wds-svg",
-          "name": "wds-company-logo-fandom-powered-by-wikia"
-        },
-        "title": {
-          "type": "text",
-          "value": "Fandom powered by Wikia"
-        },
-        "tracking_label": "logo"
+      "type": "link-image",
+      "href": "https:\/\/www.wikia.org",
+      "image-data": {
+        "type": "wds-svg",
+        "name": "wds-company-logo-wikia-org-white"
       },
-      "module": {
-        "type": "logo",
-        "main": {
-          "type": "link-image",
-          "href": "https:\/\/www.wikia.org",
-          "image-data": {
-            "type": "wds-svg",
-            "name": "wds-company-logo-wikia-org"
-          },
-          "title": {
-            "type": "text",
-            "value": "Wikia.org"
-          },
-          "tracking_label": "logo"
-        }
-      }
+      "tracking_label": "logo"
     },
     "search": {
-      "module": {
-        "type": "search",
-        "results": {
-          "tracking_label": "search",
-          "param-name": "query",
-          "url": "\/\/solarcooking.wikia.com\/wiki\/Special:Search"
-        },
-        "placeholder-inactive": {
-          "type": "translatable-text",
-          "key": "global-navigation-search-placeholder-inactive"
-        },
-        "placeholder-active": {
-          "type": "translatable-text",
-          "key": "global-navigation-search-placeholder-in-wiki",
-          "params": {
-            "sitename": {
-              "type": "text",
-              "value": "Solar Cooking"
-            }
+      "type": "search",
+      "results": {
+        "tracking_label": "search",
+        "param-name": "query",
+        "url": "\/\/concf.jakubjt.wikia-dev.pl\/wiki\/Special:Search"
+      },
+      "placeholder-inactive": {
+        "type": "translatable-text",
+        "key": "global-navigation-search-placeholder-inactive"
+      },
+      "placeholder-active": {
+        "type": "translatable-text",
+        "key": "global-navigation-search-placeholder-in-wiki",
+        "params": {
+          "sitename": {
+            "type": "text",
+            "value": "Concf Wiki"
           }
-        },
-        "suggestions": {
-          "url": "\/\/solarcooking.wikia.com\/index.php?action=ajax&rs=getLinkSuggest&format=json",
-          "param-name": "query",
-          "tracking_label": "search-suggestion"
         }
+      },
+      "suggestions": {
+        "url": "\/\/concf.jakubjt.wikia-dev.pl\/index.php?action=ajax&rs=getLinkSuggest&format=json",
+        "param-name": "query",
+        "tracking_label": "search-suggestion"
       }
     },
     "create_wiki": {
-      "header": {
+      "type": "link-button",
+      "title": {
+        "type": "translatable-text",
+        "key": "global-navigation-create-wiki-link-start-wikia"
+      },
+      "href": "\/\/www.jakubjt.wikia-dev.pl\/Special:CreateNewWiki",
+      "tracking_label": "start-a-wiki"
+    },
+    "main_navigation": [
+      {
         "type": "link-text",
         "title": {
           "type": "translatable-text",
-          "key": "global-navigation-create-wiki-link-start-wikia"
+          "key": "global-navigation-wikis-community-central"
         },
-        "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
-        "tracking_label": "start-a-wiki"
+        "href": "\/\/community.jakubjt.wikia-dev.pl\/wiki\/Community_Central",
+        "tracking_label": "link.community-central"
       }
-    },
-    "wikis": {
-      "links": [
-        {
-          "type": "link-text",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-wikis-community-central"
-          },
-          "href": "\/\/community.wikia.com\/wiki\/Community_Central",
-          "tracking_label": "link.community-central"
-        }
-      ]
-    },
-    "user": {
-      "header": {
-        "type": "avatar",
-        "username": {
-          "type": "text",
-          "value": "Ktatala"
-        },
-        "url": "https:\/\/vignette.wikia.nocookie.net\/messaging\/images\/1\/19\/Avatar.jpg\/revision\/latest\/scale-to-width-down\/50",
-        "tracking_label": "account"
-      },
-      "links": [
-        {
-          "type": "link-text",
-          "href": "\/\/solarcooking.wikia.com\/wiki\/User:Ktatala",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-view-profile"
-          },
-          "tracking_label": "account.profile"
-        },
-        {
-          "type": "link-text",
-          "href": "\/\/solarcooking.wikia.com\/wiki\/User_talk:Ktatala",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-my-talk"
-          },
-          "tracking_label": "account.talk"
-        },
-        {
-          "type": "link-text",
-          "href": "\/\/solarcooking.wikia.com\/wiki\/Special:Preferences",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-my-preferences"
-          },
-          "tracking_label": "account.preferences"
-        },
-        {
-          "type": "link-text",
-          "href": "\/\/community.wikia.com\/wiki\/Help:Contents",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-help"
-          },
-          "tracking_label": "account.help"
-        },
-        {
-          "type": "link-authentication",
-          "href": "https:\/\/www.wikia.com\/logout",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-sign-out"
-          },
-          "param-name": "returnto",
-          "tracking_label": "account.sign-out"
-        }
-      ]
-    },
-    "notifications": {
-      "header": {
-        "type": "line-image",
-        "image": "wds-icons-note",
-        "image-data": {
-          "type": "wds-svg",
-          "name": "wds-icons-note"
-        },
+    ],
+    "anon": {
+      "signin": {
         "title": {
           "type": "translatable-text",
-          "key": "global-navigation-notifications-title"
+          "key": "global-navigation-anon-sign-in"
         },
-        "tracking_label": "notifications"
+        "href": "https:\/\/www.jakubjt.wikia-dev.pl\/signin",
+        "param-name": "redirect",
+        "tracking_label": "account.sign-in"
       },
-      "module": {
-        "type": "notifications",
-        "url": "\/\/solarcooking.wikia.com\/wiki\/User_talk:Ktatala"
+      "register": {
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-anon-register"
+        },
+        "href": "https:\/\/www.jakubjt.wikia-dev.pl\/register",
+        "param-name": "redirect",
+        "tracking_label": "account.register"
       }
-    },
-    "services_domain": "https://services.wikia.com/"
+    }
   },
   "logged-out-with-partner-slot": {
     "logo": {
-      "header": {
-        "type": "link-image",
-        "href": "\/\/fandom.wikia.com\/explore-de",
-        "image": "wds-company-logo-fandom-powered-by-wikia",
-        "image-data": {
-          "type": "wds-svg",
-          "name": "wds-company-logo-fandom-powered-by-wikia"
-        },
-        "title": {
-          "type": "text",
-          "value": "Fandom powered by Wikia"
-        },
-        "tracking_label": "logo"
+      "type": "link-image",
+      "href": "\/\/fandom.wikia.com\/explore-de",
+      "image-data": {
+        "type": "wds-svg",
+        "name": "wds-company-logo-fandom-white"
       },
-      "module": {
-        "type": "logo",
-        "main": {
-          "type": "link-image",
-          "href": "\/\/fandom.wikia.com\/explore-de",
-          "image": "wds-company-logo-fandom-white",
-          "image-data": {
-            "type": "wds-svg",
-            "name": "wds-company-logo-fandom-white"
-          },
-          "title": {
-            "type": "text",
-            "value": "Fandom powered by Wikia"
-          },
-          "tracking_label": "logo"
-        },
-        "tagline": {
-          "type": "link-image",
-          "href": "\/\/fandom.wikia.com\/explore-de",
-          "image-data": {
-            "type": "wds-svg",
-            "name": "wds-company-logo-powered-by-wikia"
-          },
-          "title": {
-            "type": "text",
-            "value": "Fandom powered by Wikia"
-          },
-          "tracking_label": "logo-tagline"
-        }
-      }
+      "tracking_label": "logo"
     },
     "search": {
-      "module": {
-        "type": "search",
-        "results": {
-          "tracking_label": "search",
-          "param-name": "query",
-          "url": "\/\/de.harrypotter.wikia.com\/wiki\/Spezial:Suche"
-        },
-        "placeholder-inactive": {
-          "type": "translatable-text",
-          "key": "global-navigation-search-placeholder-inactive"
-        },
-        "placeholder-active": {
-          "type": "translatable-text",
-          "key": "global-navigation-search-placeholder-in-wiki",
-          "params": {
-            "sitename": {
-              "type": "text",
-              "value": "Harry-Potter-Lexikon"
-            }
+      "type": "search",
+      "results": {
+        "tracking_label": "search",
+        "param-name": "query",
+        "url": "\/\/de.gta.jakubjt.wikia-dev.pl\/wiki\/Spezial:Suche"
+      },
+      "placeholder-inactive": {
+        "type": "translatable-text",
+        "key": "global-navigation-search-placeholder-inactive"
+      },
+      "placeholder-active": {
+        "type": "translatable-text",
+        "key": "global-navigation-search-placeholder-in-wiki",
+        "params": {
+          "sitename": {
+            "type": "text",
+            "value": "MediaWiki"
           }
-        },
-        "suggestions": {
-          "url": "\/\/de.harrypotter.wikia.com\/index.php?action=ajax&rs=getLinkSuggest&format=json",
-          "param-name": "query",
-          "tracking_label": "search-suggestion"
         }
+      },
+      "suggestions": {
+        "url": "\/\/de.gta.jakubjt.wikia-dev.pl\/index.php?action=ajax&rs=getLinkSuggest&format=json",
+        "param-name": "query",
+        "tracking_label": "search-suggestion"
       }
     },
     "create_wiki": {
-      "header": {
+      "type": "link-button",
+      "title": {
+        "type": "translatable-text",
+        "key": "global-navigation-create-wiki-link-start-wikia"
+      },
+      "href": "\/\/www.jakubjt.wikia-dev.pl\/Special:CreateNewWiki?uselang=de",
+      "tracking_label": "start-a-wiki"
+    },
+    "main_navigation": [
+      {
         "type": "link-text",
         "title": {
           "type": "translatable-text",
-          "key": "global-navigation-create-wiki-link-start-wikia"
+          "key": "global-navigation-fandom-overview-link-vertical-games"
         },
-        "href": "\/\/www.wikia.com\/Special:CreateNewWiki?uselang=de",
-        "tracking_label": "start-a-wiki"
-      }
-    },
-    "wikis": {
-      "links": [
-        {
-          "type": "link-text",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-wikis-community-central"
-          },
-          "href": "http:\/\/de.community.wikia.com\/wiki\/Community_Deutschland",
-          "tracking_label": "link.community-central"
-        }
-      ]
-    },
-    "user": {
-      "header": {
-        "type": "avatar",
-        "username": {
-          "type": "text",
-          "value": "Ktatala"
-        },
-        "url": "https:\/\/vignette.wikia.nocookie.net\/messaging\/images\/1\/19\/Avatar.jpg\/revision\/latest\/scale-to-width-down\/50",
-        "tracking_label": "account"
+        "href": "\/\/fandom.wikia.com\/topics\/games",
+        "tracking_label": "link.games"
       },
-      "links": [
-        {
-          "type": "link-text",
-          "href": "\/\/de.harrypotter.wikia.com\/wiki\/Benutzer:Ktatala",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-view-profile"
-          },
-          "tracking_label": "account.profile"
-        },
-        {
-          "type": "link-text",
-          "href": "\/\/de.harrypotter.wikia.com\/wiki\/Nachrichtenseite:Ktatala",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-message-wall"
-          },
-          "tracking_label": "account.message-wall"
-        },
-        {
-          "type": "link-text",
-          "href": "\/\/de.harrypotter.wikia.com\/wiki\/Spezial:Einstellungen",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-my-preferences"
-          },
-          "tracking_label": "account.preferences"
-        },
-        {
-          "type": "link-text",
-          "href": "http:\/\/de.community.wikia.com\/wiki\/Hilfe:%C3%9Cbersicht",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-help"
-          },
-          "tracking_label": "account.help"
-        },
-        {
-          "type": "link-authentication",
-          "href": "https:\/\/www.wikia.com\/logout",
-          "title": {
-            "type": "translatable-text",
-            "key": "global-navigation-user-sign-out"
-          },
-          "param-name": "returnto",
-          "tracking_label": "account.sign-out"
-        }
-      ]
-    },
-    "notifications": {
-      "header": {
-        "type": "line-image",
-        "image": "wds-icons-note",
-        "image-data": {
-          "type": "wds-svg",
-          "name": "wds-icons-note"
-        },
+      {
+        "type": "link-text",
         "title": {
           "type": "translatable-text",
-          "key": "global-navigation-notifications-title"
+          "key": "global-navigation-fandom-overview-link-vertical-movies"
         },
-        "tracking_label": "notifications"
+        "href": "\/\/fandom.wikia.com\/topics\/movies",
+        "tracking_label": "link.movies"
       },
-      "module": {
-        "type": "notifications",
-        "url": "\/\/de.harrypotter.wikia.com\/wiki\/Nachrichtenseite:Ktatala"
+      {
+        "type": "link-text",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-fandom-overview-link-vertical-tv"
+        },
+        "href": "\/\/fandom.wikia.com\/topics\/tv",
+        "tracking_label": "link.tv"
+      },
+      {
+        "type": "link-group",
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-wikis-header"
+        },
+        "tracking_label": "link.wikis",
+        "items": [
+          {
+            "type": "link-text",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-wikis-explore"
+            },
+            "href": "\/\/fandom.wikia.com\/explore-de",
+            "tracking_label": "link.explore"
+          },
+          {
+            "type": "link-text",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-wikis-community-central"
+            },
+            "href": "http:\/\/de.community.jakubjt.wikia-dev.pl\/wiki\/Community_Deutschland",
+            "tracking_label": "link.community-central"
+          },
+          {
+            "type": "link-text",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-wikis-fandom-university"
+            },
+            "href": "\/\/community.jakubjt.wikia-dev.pl\/wiki\/Fandom_University",
+            "tracking_label": "link.fandom-university"
+          },
+          {
+            "type": "link-button",
+            "title": {
+              "type": "translatable-text",
+              "key": "global-navigation-create-wiki-link-start-wikia"
+            },
+            "href": "\/\/www.jakubjt.wikia-dev.pl\/Special:CreateNewWiki?uselang=de",
+            "tracking_label": "link.start-a-wiki"
+          }
+        ]
+      }
+    ],
+    "anon": {
+      "signin": {
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-anon-sign-in"
+        },
+        "href": "https:\/\/www.jakubjt.wikia-dev.pl\/signin?uselang=de",
+        "param-name": "redirect",
+        "tracking_label": "account.sign-in"
+      },
+      "register": {
+        "title": {
+          "type": "translatable-text",
+          "key": "global-navigation-anon-register"
+        },
+        "href": "https:\/\/www.jakubjt.wikia-dev.pl\/register?uselang=de",
+        "param-name": "redirect",
+        "tracking_label": "account.register"
       }
     },
     "partner_slot": {
@@ -793,14 +576,13 @@
       "href": "http:\/\/www.entertainweb.de\/",
       "image-data": {
         "type": "image-external",
-        "url": "https:\/\/services.wikia.com\/static-assets\/image\/4461fa34-c8fd-44ed-a1f5-301099c687e3"
+        "url": "https:\/\/services.wikia.com\/static-assets\/image\/5588e692-fae8-4dc3-8db6-5f62e37fed47"
       },
       "title": {
         "type": "text",
         "value": "entertainweb"
       },
       "tracking_label": "entertainweb"
-    },
-    "services_domain": "https://services.wikia.com/"
+    }
   }
 }
