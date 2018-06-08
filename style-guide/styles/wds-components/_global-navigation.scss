@@ -171,12 +171,6 @@
 		}
 	}
 
-	.wds-dropdown__content {
-		.wds-button {
-			@include button-theming($wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-aqua, "darker");
-		}
-	}
-
 	&__link-group, &__user-menu {
 		height: 100%;
 
@@ -199,6 +193,12 @@
 				border-top: 1px solid $wds-color-light-c4;
 				color: $wds-color-dark-blue-gray;
 				min-width: 190px;
+
+				.wds-button {
+					@include button-theming($wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-aqua, "darker");
+
+					padding: 7px 18px 7px;
+				}
 			}
 		}
 	}
