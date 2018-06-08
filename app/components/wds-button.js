@@ -5,7 +5,8 @@ export default Component.extend({
 		'disabled',
 		'href',
 		'title',
-		'data-tracking-label'
+		'data-tracking-label',
+		'type',
 	],
 	classNames: 'wds-button',
 	classNameBindings: [
