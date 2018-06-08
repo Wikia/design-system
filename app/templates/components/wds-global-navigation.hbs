@@ -1,5 +1,5 @@
 <div class="wds-global-navigation__content-bar-left">
-	<a href="{{model.logo.href}}" class="wds-global-navigation__logo">
+	<a href="{{model.logo.href}}" class="wds-global-navigation__logo" data-tracking-label="{{model.logo.tracking_label}}">
 		{{! available class names: wds-is-wds-company-logo-fandom wds-is-wds-company-logo-wikia-org}}
 		{{svg
 			model.logo.image-data.name
@@ -30,7 +30,7 @@
 </div>
 {{#if model.partner_slot}}
 	<div class="wds-global-navigation__partner-slot">
-		<a href="{{model.partner_slot.href}}" class="wds-global-navigation__partner-slot-link">
+		<a href="{{model.partner_slot.href}}" class="wds-global-navigation__partner-slot-link" data-tracking-label="{{model.partner_slot.tracking_label}}">
 			<img class="wds-global-navigation__partner-slot-image"
 				 width="55"
 				 height="20"
