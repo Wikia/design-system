@@ -22,13 +22,14 @@
     "release-fix": "git checkout master && git pull && npm version patch && git push --follow-tags",
     "setup": "npm i",
     "svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/svg",
-    "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets"
+    "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets",
+    "regenerate-lock": "npm cache clean --force && rm -rf node_modules package-lock.json && npm run setup"
   },
   "devDependencies": {
     "broccoli-asset-rev": "2.7.0",
     "broccoli-funnel": "2.0.1",
     "broccoli-svgstore": "0.4.2",
-    "design-system-i18n": "Wikia/design-system-i18n#2a93d9d36acf9801d897fbd885a5e8a839e44934",
+    "design-system-i18n": "Wikia/design-system-i18n#ecf3ffccd4b02fad2574da63845da3e5f9b2ef0b",
     "ember-browserify": "1.2.2",
     "ember-cli": "3.1.4",
     "ember-cli-autoprefixer": "0.8.1",

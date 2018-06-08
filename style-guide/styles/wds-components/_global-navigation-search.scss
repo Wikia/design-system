@@ -10,6 +10,7 @@ $toggle-active-margin-right: 17px;
 	&-container {
 		height: 100%;
 		flex: 1;
+		margin-right: 45px;
 	}
 
 	&-input-wrapper {
@@ -130,12 +131,12 @@ $toggle-active-margin-right: 17px;
 }
 
 .wds-search-is-active .wds-global-navigation {
-	&__link, &__wikis-menu {
+	&__link, &__link-group {
 		font-size: 0;
 		margin-left: 0;
 	}
 
-	&__wikis-menu {
+	&__link-group {
 		.wds-dropdown__toggle-chevron {
 			display: none;
 		}
