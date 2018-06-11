@@ -28,11 +28,11 @@ export default Mixin.create({
 		}
 	},
 
-	onMouseWheel(e) {
-		const delta = -e.wheelDelta || e.detail,
+	onMouseWheel(event) {
+		const delta = -event.wheelDelta || event.detail,
 			scrollTop = this.scrollTop;
 		if ((delta < 0 && scrollTop === 0) || (delta > 0 && this.scrollHeight - this.clientHeight - scrollTop === 0)) {
-			e.preventDefault();
+			event.preventDefault();
 		}
 	},
 
