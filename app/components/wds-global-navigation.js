@@ -63,8 +63,8 @@ export default Component.extend({
 			this.searchSuggestionChosen(suggestion);
 		},
 
-		goToSearchResults() {
-			this.goToSearchResults()
+		goToSearchResults(querystring) {
+			this.goToSearchResults(querystring)
 		}
 	}
 });
