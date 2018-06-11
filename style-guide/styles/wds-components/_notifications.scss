@@ -141,4 +141,10 @@
 	&__context-separator {
 		margin: 0 8px;
 	}
+
+	.wds-global-navigation & {
+		.wds-avatar {
+			@include wds-avatar(30px, $wds-color-faint-gray, $wds-color-faint-gray, $wds-color-white);
+		}
+	}
 }

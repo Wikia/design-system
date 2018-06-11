@@ -1,8 +1,6 @@
 {{#if showAvatars}}
 	{{wds-avatar-stack
-			users=model.latestActors
-			displayLimit=5
-			totalCount=model.totalUniqueActors
+			avatars=avatars
 	}}
 {{/if}}
 <a class="wds-notification-card__outer-body" href="{{model.latestEventUri}}"

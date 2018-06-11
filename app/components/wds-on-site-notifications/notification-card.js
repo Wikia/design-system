@@ -85,6 +85,19 @@ export default Component.extend(
 				this.isDiscussionReply(this.get('model.type'));
 		}),
 
+		avatars: computed('model', function () {
+			const avatars = [];
+			const latestActors = this.get('model.latestActors') || [];
+
+			latestActors.forEach((actor) => {
+				avatars.push({
+					src: actor.avatarUrl,
+					link: `/wiki/User:${actor.name}`
+				});
+			});
+			return avatars;
+		}),
+
 		actions: {
 			onNotificationClicked() {
 				// trackClick(this.get('model'));

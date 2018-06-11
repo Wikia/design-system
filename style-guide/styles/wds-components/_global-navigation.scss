@@ -173,6 +173,14 @@
 	}
 
 	&__link-group, &__user-menu {
+		.wds-dropdown {
+			&__content {
+				min-width: 190px;
+			}
+		}
+	}
+
+	&__link-group, &__user-menu, &__notifications-dropdown {
 		height: 100%;
 
 		.wds-dropdown {
@@ -193,7 +201,6 @@
 			&__content {
 				border-top: 1px solid $wds-color-light-c4;
 				color: $wds-color-dark-blue-gray;
-				min-width: 190px;
 
 				.wds-button {
 					@include button-theming($wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-aqua, "darker");

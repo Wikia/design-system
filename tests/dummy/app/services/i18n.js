@@ -5,7 +5,6 @@ import translationsEn from 'npm:design-system-i18n/i18n/en/design-system';
 import translationsEs from 'npm:design-system-i18n/i18n/es/design-system';
 import translationsFi from 'npm:design-system-i18n/i18n/fi/design-system';
 import translationsFr from 'npm:design-system-i18n/i18n/fr/design-system';
-import translationsId from 'npm:design-system-i18n/i18n/id/design-system';
 import translationsIt from 'npm:design-system-i18n/i18n/it/design-system';
 import translationsJa from 'npm:design-system-i18n/i18n/ja/design-system';
 import translationsKo from 'npm:design-system-i18n/i18n/ko/design-system';
@@ -23,7 +22,6 @@ const allTranslations = {
 	es: translationsEs,
 	fi: translationsFi,
 	fr: translationsFr,
-	id: translationsId,
 	it: translationsIt,
 	ja: translationsJa,
 	ko: translationsKo,
