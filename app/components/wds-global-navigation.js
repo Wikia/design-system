@@ -23,6 +23,14 @@ export default Component.extend({
 		this.set('fetch.servicesDomain', this.get('model.services_domain'));
 	},
 
+	click(event) {
+		const elementToTrack = event.target.closest('[data-tracking-label]');
+
+		if (elementToTrack) {
+			this.track(elementToTrack.getAttribute('data-tracking-label'));
+		}
+	},
+
 	actions: {
 		activateSearch() {
 			this.set('searchIsActive', true);
@@ -49,12 +57,12 @@ export default Component.extend({
 				];
 		},
 
-		onSearchSuggestionChosen() {
-			// TODO
+		onSearchSuggestionChosen(suggestion) {
+			this.searchSuggestionChosen(suggestion);
 		},
 
-		goToSearchResults() {
-			// TODO
+		goToSearchResults(querystring) {
+			this.goToSearchResults(querystring)
 		}
 	}
 });

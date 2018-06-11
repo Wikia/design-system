@@ -22,7 +22,11 @@
 		{{#wds-button text=true class='wds-global-navigation__search-close' type='button' click=(action 'onCloseSearchClick')}}
 			{{svg 'wds-icons-cross' class='wds-icon wds-icon-tiny wds-global-navigation__search-close-icon'}}
 		{{/wds-button}}
-		{{#wds-button class='wds-global-navigation__search-submit' disabled=isEmptyQuery}}
+		{{#wds-button
+			class='wds-global-navigation__search-submit'
+			disabled=isEmptyQuery
+			data-tracking-label=model.results.tracking_label
+		}}
 			{{wds-icon name='arrow' size='small' class='wds-global-navigation__search-submit-icon'}}
 		{{/wds-button}}
 	{{/dropdown.toggle}}
@@ -32,7 +36,9 @@
 				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}}"
 					onmousedown={{action 'onSearchSuggestionChosen' suggestion}} onmouseenter={{action
 					'selectItem' index}}>
-					<a href="{{suggestion.uri}}" class="wds-global-navigation__dropdown-link">
+					<a href="{{suggestion.uri}}"
+					   class="wds-global-navigation__dropdown-link"
+					   data-tracking-label="{{model.suggestions.tracking_label}}">
 						{{{suggestion.text}}}
 					</a>
 				</li>
