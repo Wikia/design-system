@@ -47,9 +47,6 @@
 
 	&__link {
 		text-transform: uppercase;
-	}
-
-	&__link, &__wikis-menu {
 		transition: color $wds-button-transition-duration, font-size $search-transition-duration, margin-left $search-transition-duration;
 	}
 
@@ -71,11 +68,23 @@
 		}
 	}
 
-	&__user-menu,
-	&__account-menu,
 	&__start-a-wiki {
 		transition-duration: $wds-button-transition-duration;
 		transition-property: color;
+
+		@media #{$wds-breakpoint-medium-down} {
+			display: none;
+		}
+
+		.wds-button.wds-is-secondary:not(:disabled) {
+			border-color: $wds-fandom-color-aqua;
+			color: $wds-fandom-color-aqua;
+
+			&:hover {
+				border-color: $wds-color-white;
+				color: $wds-color-white;
+			}
+		}
 	}
 
 	&__start-a-wiki-button {
@@ -88,12 +97,7 @@
 		width: 126px;
 	}
 
-	&__account-menu-caption {
-		display: none;
-		margin-left: 5px;
-	}
-
-	&__account-menu-dropdown-caption {
+	&__user-menu-dropdown-caption {
 		font-size: $wds-typescale-size-minus-2;
 		padding-bottom: 10px;
 		text-align: center;
@@ -156,22 +160,6 @@
 		margin-right: $partner-slot-width;
 	}
 
-	&__start-a-wiki {
-		@media #{$wds-breakpoint-medium-down} {
-			display: none;
-		}
-
-		.wds-button.wds-is-secondary:not(:disabled) {
-			border-color: $wds-fandom-color-aqua;
-			color: $wds-fandom-color-aqua;
-
-			&:hover {
-				border-color: $wds-color-white;
-				color: $wds-color-white;
-			}
-		}
-	}
-
 	.wds-avatar {
 		@include wds-avatar(30px, $wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-navy);
 	}
@@ -180,6 +168,8 @@
 		.wds-avatar__image {
 			border-color: $wds-color-white;
 			fill: $wds-color-white;
+
+			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
 		}
 	}
 
