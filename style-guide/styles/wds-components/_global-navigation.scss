@@ -66,9 +66,14 @@
 		.wds-dropdown__toggle-chevron {
 			fill: $wds-fandom-color-coral;
 		}
+
+		.wds-global-navigation__link-button {
+			margin: 0;
+		}
 	}
 
 	&__start-a-wiki {
+		margin-left: 18px;
 		transition-duration: $wds-button-transition-duration;
 		transition-property: color;
 
