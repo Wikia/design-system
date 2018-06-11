@@ -6,10 +6,21 @@
 	$partner-slot-width: 80px;
 
 	background-color: $wds-fandom-color-navy;
-	display: flex;
-	justify-content: space-between;
 	padding: 0 19px;
 	position: relative;
+
+	&__content-container {
+		margin: 0 auto;
+		display: flex;
+
+		@media #{$wds-breakpoint-xxl-up} {
+			width: 1278px;
+		}
+
+		@media #{$wds-breakpoint-xl-only} {
+			width: 1064px;
+		}
+	}
 
 	&__content-bar-left,
 	&__content-bar-right {
