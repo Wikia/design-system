@@ -13,6 +13,14 @@ export default Component.extend({
 
 	searchIsAlwaysVisible: empty('model.fandom_overview'),
 
+	click(event) {
+		const elementToTrack = event.target.closest('[data-tracking-label]');
+
+		if (elementToTrack) {
+			this.track(elementToTrack.getAttribute('data-tracking-label'));
+		}
+	},
+
 	actions: {
 		activateSearch() {
 			this.set('searchIsActive', true);
@@ -39,12 +47,12 @@ export default Component.extend({
 				];
 		},
 
-		onSearchSuggestionChosen() {
-			// TODO
+		onSearchSuggestionChosen(suggestion) {
+			this.searchSuggestionChosen(suggestion);
 		},
 
-		goToSearchResults() {
-			// TODO
+		goToSearchResults(querystring) {
+			this.goToSearchResults(querystring)
 		}
 	}
 });
