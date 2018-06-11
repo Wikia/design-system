@@ -107,6 +107,10 @@ $toggle-active-margin-right: 17px;
 		cursor: pointer;
 		display: flex;
 
+		&:hover {
+			color: $wds-color-white;
+		}
+
 		&-icon {
 			margin-right: 8px;
 		}

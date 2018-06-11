@@ -114,6 +114,10 @@
 		margin-left: 12px;
 		position: relative;
 		width: 50px;
+
+		&:hover {
+			color: $wds-color-white;
+		}
 	}
 
 	&__notifications-counter {
