@@ -17,6 +17,14 @@ export default Component.extend({
 		// Needs to be passed from client
 	},
 
+	searchSuggestionChosen(/*suggestion*/) {
+		// Needs to be passed from client
+	},
+
+	goToSearchResults() {
+		// Needs to be passed from client
+	},
+
 	click(event) {
 		const elementToTrack = event.target.closest('[data-tracking-label]');
 
@@ -51,12 +59,12 @@ export default Component.extend({
 				];
 		},
 
-		onSearchSuggestionChosen() {
-			// TODO
+		onSearchSuggestionChosen(suggestion) {
+			this.searchSuggestionChosen(suggestion);
 		},
 
 		goToSearchResults() {
-			// TODO
+			this.goToSearchResults()
 		}
 	}
 });
