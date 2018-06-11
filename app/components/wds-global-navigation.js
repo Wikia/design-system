@@ -13,18 +13,6 @@ export default Component.extend({
 
 	searchIsAlwaysVisible: empty('model.fandom_overview'),
 
-	track(/*label*/) {
-		// Needs to be passed from client
-	},
-
-	searchSuggestionChosen(/*suggestion*/) {
-		// Needs to be passed from client
-	},
-
-	goToSearchResults() {
-		// Needs to be passed from client
-	},
-
 	click(event) {
 		const elementToTrack = event.target.closest('[data-tracking-label]');
 
