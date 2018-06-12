@@ -154,6 +154,7 @@
     "services_domain": "https:\/\/services.wikia.com\/"
   },
   "logged-in-default": {
+    "services_domain": "https://services.wikia.com/",
     "logo": {
       "type": "link-image",
       "href": "\/\/fandom.wikia.com\/",

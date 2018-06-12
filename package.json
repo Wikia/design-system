@@ -29,7 +29,7 @@
     "broccoli-asset-rev": "2.7.0",
     "broccoli-funnel": "2.0.1",
     "broccoli-svgstore": "0.4.2",
-    "design-system-i18n": "Wikia/design-system-i18n#ecf3ffccd4b02fad2574da63845da3e5f9b2ef0b",
+    "design-system-i18n": "Wikia/design-system-i18n#2f6486e174bc3145aef5283a740e1546a47e3955",
     "ember-browserify": "1.2.2",
     "ember-cli": "3.1.4",
     "ember-cli-autoprefixer": "0.8.1",
@@ -43,6 +43,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "1.7.0",
     "ember-cli-json-module": "0.0.3",
+    "ember-cli-mirage": "0.4.7",
     "ember-cli-numeral": "0.2.0",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-sass": "7.1.7",
@@ -63,9 +64,9 @@
     "fs-extra": "5.0.0",
     "glob": "7.1.2",
     "highlight.js": "9.12.0",
+    "i18next": "10.5.0",
     "loader.js": "^4.2.3",
-    "svgo": "1.0.5",
-    "i18next": "10.5.0"
+    "svgo": "1.0.5"
   },
   "bugs": {
     "url": "https://github.com/Wikia/design-system/issues"
@@ -73,6 +74,7 @@
   "homepage": "https://github.com/Wikia/design-system#readme",
   "ember-addon": {
     "paths": [
+      "lib/fandom-shared",
       "lib/post-build-copy"
     ],
     "versionCompatibility": {
