@@ -174,14 +174,16 @@
 		@include wds-avatar(30px, $wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-navy);
 	}
 
-	&__user-menu .wds-avatar__image {
-		transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
-	}
-
-	&__user-menu:hover {
+	&__user-menu {
 		.wds-avatar__image {
-			border-color: $wds-color-white;
-			fill: $wds-color-white;
+			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
+		}
+
+		&:hover {
+			.wds-avatar__image {
+				border-color: $wds-color-white;
+				fill: $wds-color-white;
+			}
 		}
 	}
 
