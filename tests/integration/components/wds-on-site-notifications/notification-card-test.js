@@ -17,14 +17,13 @@ const notificationDataStub = {
 	}],
 	latestEventUri: 'http://community.wikia.com/d/p/123',
 	snippet: 'Snippet.',
-	title: 'Title',
 	uri: 'http://community.wikia.com/d/p/123'
 };
 
-function getModelStub(type) {
+function getModelStub(type, title) {
 	const modelStub = new EmberObject(notificationDataStub);
 
-	modelStub.set('type', type);
+	modelStub.setProperties({ type, title });
 
 	return modelStub;
 }
@@ -40,7 +39,7 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		}));
 	});
 
-	module('for notification of any type discussion-reply', function(hooks) {
+	module('for notification of any type', function(hooks) {
 		hooks.beforeEach(function () {
 			this.set('model', getModelStub('discussion-reply'));
 		});
@@ -76,4 +75,41 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 			assert.dom('.wds-notification-card__community').hasText(notificationDataStub.communityName);
 		});
 	});
+
+	module('for notification of type discussion-reply without title', function(hooks) {
+		hooks.beforeEach(function () {
+			this.set('model', getModelStub('discussion-reply', null));
+		});
+
+		test('it should render snippet', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.wds-notification-card__snippet').exists();
+		});
+
+		test('it should not render announcement actor', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.notification-entity-announcement-author').doesNotExist();
+		});
+	});
+
+	module('for notification of type discussion-reply with title', function(hooks) {
+		hooks.beforeEach(function () {
+			this.set('model', getModelStub('discussion-reply', 'My Title'));
+		});
+
+		test('it should not render snippet', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.wds-notification-card__snippet').doesNotExist();
+		});
+
+		test('it should not render announcement actor', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.notification-entity-announcement-author').doesNotExist();
+		});
+	});
+
 });
