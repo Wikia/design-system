@@ -57,21 +57,21 @@ module('Integration | Component | wds-on-site-notifications/notifications-list',
 		test('it should render as a UL element with proper classnames', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
 
-			assert.equal(this.element.querySelector('ul').classList.contains('wds-notifications__notification-list'), true);
-			assert.equal(this.element.querySelector('ul').classList.contains('wds-list'), true);
-			assert.equal(this.element.querySelector('ul').classList.contains('wds-has-lines-between'), true);
+			assert.dom('ul').hasClass('wds-notifications__notification-list');
+			assert.dom('ul').hasClass('wds-list');
+			assert.dom('ul').hasClass('wds-has-lines-between');
 		});
 
 		test('it should render a proper number of notification-card components', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
 
-			assert.equal(this.element.querySelectorAll('.wds-notification-card').length, 2);
+			assert.dom('.wds-notification-card').exists({ count: 2 });
 		});
 
 		test('it should not render loading spinner', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
 
-			assert.equal(this.element.querySelectorAll('.wds-spinner').length, 0);
+			assert.dom('.wds-spinner').doesNotExist();
 		});
 	});
 
@@ -90,15 +90,15 @@ module('Integration | Component | wds-on-site-notifications/notifications-list',
 		test('it should render as a UL element with proper classnames', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
 
-			assert.equal(this.element.querySelector('ul').classList.contains('wds-notifications__notification-list'), true);
-			assert.equal(this.element.querySelector('ul').classList.contains('wds-list'), true);
-			assert.equal(this.element.querySelector('ul').classList.contains('wds-has-lines-between'), true);
+			assert.dom('ul').hasClass('wds-notifications__notification-list');
+			assert.dom('ul').hasClass('wds-list');
+			assert.dom('ul').hasClass('wds-has-lines-between');
 		});
 
 		test('it should render loading spinner', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
 
-			assert.equal(this.element.querySelectorAll('.wds-spinner').length, 1);
+			assert.dom('.wds-spinner').exists();
 		});
 	});
 });
