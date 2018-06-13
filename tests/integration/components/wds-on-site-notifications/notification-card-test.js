@@ -9,15 +9,31 @@ const notificationDataStub = {
 	communityId: 123,
 	communityName: 'My Test Wiki',
 	timestamp: 1528793961358,
-	latestActors: [{
-		avatarUrl: 'https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a',
-		id: 24851773,
-		name: 'Username1',
-		profileUrl: 'http://undefined/wiki/User'
-	}],
+	latestActors: [
+		{
+			avatarUrl: 'https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a',
+			id: 24851773,
+			name: 'Username1',
+			profileUrl: 'http://undefined/wiki/User1'
+		},
+		{
+			avatarUrl: 'https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a',
+			id: 24851774,
+			name: 'Username2',
+			profileUrl: 'http://undefined/wiki/User2'
+		},
+		{
+			avatarUrl: 'https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a',
+			id: 24851775,
+			name: 'Username3',
+			profileUrl: 'http://undefined/wiki/User3'
+		}
+
+	],
 	latestEventUri: 'http://community.wikia.com/d/p/123',
 	snippet: 'Snippet.',
-	uri: 'http://community.wikia.com/d/p/123'
+	uri: 'http://community.wikia.com/d/p/123',
+	totalUniqueActors: 3
 };
 
 function getModelStub(type, title) {
@@ -87,7 +103,7 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 			assert.dom('.wds-notification-card__snippet').exists();
 		});
 
-		test('it should not render announcement actor', async function (assert) {
+		test('it should not render announcement author', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
 
 			assert.dom('.notification-entity-announcement-author').doesNotExist();
@@ -105,10 +121,28 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 			assert.dom('.wds-notification-card__snippet').doesNotExist();
 		});
 
-		test('it should not render announcement actor', async function (assert) {
+		test('it should not render announcement author', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
 
 			assert.dom('.notification-entity-announcement-author').doesNotExist();
+		});
+	});
+
+	module('for notification of type discussion-reply with  more that 2 latest actors', function(hooks) {
+		hooks.beforeEach(function () {
+			this.set('model', getModelStub('discussion-reply', 'My Title'));
+		});
+
+		test('it should render wds-avatar-stack', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.wds-avatar-stack').exists();
+		});
+
+		test('it should render specific number of avatars inside avatar stack', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.wds-avatar-stack .wds-avatar').exists({ count: 3 });
 		});
 	});
 
