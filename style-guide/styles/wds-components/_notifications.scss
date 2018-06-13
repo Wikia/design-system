@@ -10,7 +10,7 @@
 	}
 
 	&__mark-all-as-read {
-		color: $wds-color-link;
+		color: $wds-fandom-color-aqua;
 		cursor: pointer;
 		font-size: $wds-typescale-size-minus-2;
 		font-weight: bold;
@@ -82,7 +82,7 @@
 			width: 18px;
 
 			.wds-is-unread & {
-				fill: $wds-color-link;
+				fill: $wds-fandom-color-aqua;
 			}
 		}
 	}

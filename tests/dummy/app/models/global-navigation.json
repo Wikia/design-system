@@ -109,15 +109,6 @@
             "tracking_label": "link.community-central"
           },
           {
-            "type": "link-text",
-            "title": {
-              "type": "translatable-text",
-              "key": "global-navigation-wikis-fandom-university"
-            },
-            "href": "\/\/community.wikia.com\/wiki\/Fandom_University",
-            "tracking_label": "link.fandom-university"
-          },
-          {
             "type": "link-button",
             "title": {
               "type": "translatable-text",
@@ -154,7 +145,6 @@
     "services_domain": "https:\/\/services.wikia.com\/"
   },
   "logged-in-default": {
-    "services_domain": "https://services.wikia.com/",
     "logo": {
       "type": "link-image",
       "href": "\/\/fandom.wikia.com\/",
@@ -264,15 +254,6 @@
             "tracking_label": "link.community-central"
           },
           {
-            "type": "link-text",
-            "title": {
-              "type": "translatable-text",
-              "key": "global-navigation-wikis-fandom-university"
-            },
-            "href": "\/\/community.wikia.com\/wiki\/Fandom_University",
-            "tracking_label": "link.fandom-university"
-          },
-          {
             "type": "link-button",
             "title": {
               "type": "translatable-text",
@@ -285,7 +266,7 @@
       }
     ],
     "user": {
-      "avatar_url": "/images/FANDOM-Avatar.jpg",
+      "avatar_url": "/design-system/images/FANDOM-Avatar.jpg",
       "username": "Ryba777",
       "tracking_label": "account",
       "items": [
@@ -491,7 +472,7 @@
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-games"
         },
-        "href": "\/\/fandom.wikia.com\/topics\/games",
+        "href": "\/\/fandom.wikia.com\/explore-de#Videospiele",
         "tracking_label": "link.games"
       },
       {
@@ -500,7 +481,7 @@
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-movies"
         },
-        "href": "\/\/fandom.wikia.com\/topics\/movies",
+        "href": "\/\/fandom.wikia.com\/explore-de#Filme",
         "tracking_label": "link.movies"
       },
       {
@@ -509,7 +490,7 @@
           "type": "translatable-text",
           "key": "global-navigation-fandom-overview-link-vertical-tv"
         },
-        "href": "\/\/fandom.wikia.com\/topics\/tv",
+        "href": "\/\/fandom.wikia.com\/explore-de#TV",
         "tracking_label": "link.tv"
       },
       {
@@ -537,15 +518,6 @@
             },
             "href": "http:\/\/de.community.wikia.com\/wiki\/Community_Deutschland",
             "tracking_label": "link.community-central"
-          },
-          {
-            "type": "link-text",
-            "title": {
-              "type": "translatable-text",
-              "key": "global-navigation-wikis-fandom-university"
-            },
-            "href": "\/\/community.wikia.com\/wiki\/Fandom_University",
-            "tracking_label": "link.fandom-university"
           },
           {
             "type": "link-button",
@@ -586,7 +558,7 @@
       "href": "http:\/\/www.entertainweb.de\/",
       "image-data": {
         "type": "image-external",
-        "url": "https:\/\/services.wikia.com\/static-assets\/image\/5588e692-fae8-4dc3-8db6-5f62e37fed47"
+        "url": "https:\/\/services.wikia.com\/static-assets\/image\/4461fa34-c8fd-44ed-a1f5-301099c687e3"
       },
       "title": {
         "type": "text",
