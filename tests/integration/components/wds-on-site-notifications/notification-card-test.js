@@ -128,7 +128,7 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 	});
 
-	module('for notification of type discussion-reply with  more that 2 latest actors', function(hooks) {
+	module('for notification of type discussion-reply with more that 2 latest actors', function(hooks) {
 		hooks.beforeEach(function () {
 			this.set('model', getModelStub('discussion-reply', 'My Title'));
 		});
@@ -146,4 +146,53 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 	});
 
+	module('for notification of type discussion-upvote-reply with more that 2 latest actors', function(hooks) {
+		hooks.beforeEach(function () {
+			this.set('model', getModelStub('discussion-upvote-reply', 'My Title'));
+		});
+
+		test('it should not render wds-avatar-stack', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.wds-avatar-stack').doesNotExist();
+		});
+	});
+
+	module('for notification of type discussion-upvote-post with more that 2 latest actors', function(hooks) {
+		hooks.beforeEach(function () {
+			this.set('model', getModelStub('discussion-upvote-post', 'My Title'));
+		});
+
+		test('it should not render wds-avatar-stack', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.wds-avatar-stack').doesNotExist();
+		});
+	});
+
+	module('for notification of type announcement', function(hooks) {
+		const announcementTitle = 'My announcement';
+
+		hooks.beforeEach(function () {
+			this.set('model', getModelStub('announcement', announcementTitle));
+		});
+
+		test('it should not render wds-avatar-stack', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.wds-avatar-stack').doesNotExist();
+		});
+
+		test('it should render its title in the text container', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.wds-notification-card__text').hasText(announcementTitle);
+		});
+
+		test('it should not render announcement author', async function (assert) {
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+
+			assert.dom('.notification-entity-announcement-author').hasText(notificationDataStub.latestActors[0].name);
+		});
+	});
 });
