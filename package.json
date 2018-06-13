@@ -66,6 +66,7 @@
     "highlight.js": "9.12.0",
     "i18next": "10.5.0",
     "loader.js": "^4.2.3",
+    "qunit-dom": "0.6.3",
     "svgo": "1.0.5"
   },
   "bugs": {
