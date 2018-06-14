@@ -5,7 +5,7 @@
 */
 @function brightness($color) {
 	@return floor(sqrt(
-		0.299 * (red($color) * red($color))
+		.299 * (red($color) * red($color))
 		+ .587 * (green($color) * green($color))
 		+ .114 * (blue($color) * blue($color))
 	));
