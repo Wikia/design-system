@@ -3932,8 +3932,7 @@ return this.podBasedLookupWithPrefix(t,e)},podBasedComponentsInSubdir:function(e
 if(t+="/components","component"===e.type||/^components/.test(e.fullNameWithoutType))return this.podBasedLookupWithPrefix(t,e)},resolveEngine:function(e){var t=e.fullNameWithoutType+"/engine"
 if(this._moduleRegistry.has(t))return this._extractDefaultExport(t)},resolveRouteMap:function(e){var t=e.fullNameWithoutType,n=t+"/routes"
 if(this._moduleRegistry.has(n)){var r=this._extractDefaultExport(n)
-return Ember.assert("The route map for "+t+" should be wrapped by 'buildRoutes' before exporting.",r.isRouteMap),r}},mainModuleName:function(e){var t=e.prefix+"/"+e.type
-if("main"===e.fullNameWithoutType)return t},defaultModuleName:function(e){return e.prefix+"/"+this.pluralize(e.type)+"/"+e.fullNameWithoutType},prefix:function(e){var t=this.namespace.modulePrefix
+return Ember.assert("The route map for "+t+" should be wrapped by 'buildRoutes' before exporting.",r.isRouteMap),r}},mainModuleName:function(e){if("main"===e.fullNameWithoutType)return e.prefix+"/"+e.type},defaultModuleName:function(e){return e.prefix+"/"+this.pluralize(e.type)+"/"+e.fullNameWithoutType},prefix:function(e){var t=this.namespace.modulePrefix
 return this.namespace[e.type+"Prefix"]&&(t=this.namespace[e.type+"Prefix"]),t},moduleNameLookupPatterns:Ember.computed(function(){return[this.podBasedModuleName,this.podBasedComponentsInSubdir,this.mainModuleName,this.defaultModuleName]}).readOnly(),findModuleName:function(e,t){for(var n=this.get("moduleNameLookupPatterns"),r=void 0,i=0,o=n.length;i<o;i++){var a=n[i].call(this,e)
 if(a&&(a=this.chooseModuleName(a,e)),a&&this._moduleRegistry.has(a)&&(r=a),t||this._logLookup(r,e,a),r)return r}},chooseModuleName:function(e,t){var n=this,r=o(e)
 if(e!==r&&this._moduleRegistry.has(e)&&this._moduleRegistry.has(r))throw new TypeError("Ambiguous module names: '"+e+"' and '"+r+"'")
