@@ -1,7 +1,7 @@
 import {module, test} from 'qunit';
 import {setupRenderingTest} from 'ember-qunit';
 import Service from '@ember/service';
-import {click, render, fillIn, triggerEvent} from '@ember/test-helpers';
+import {click, render, fillIn, triggerKeyEvent} from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import modelStub from '../../../mocks/search-model';
 
@@ -11,9 +11,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 	hooks.beforeEach(function () {
 		this.set('model', modelStub);
 		this.owner.register('service:i18n', Service.extend({
-			t(key) {
-				return key;
-			}
+			t(key) {return key;}
 		}));
 		this.set('activateSearch', () => {});
 		this.set('deactivateSearch', () => {});
@@ -88,18 +86,18 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 		});
 
 		await render(hbs`
-		{{wds-global-navigation/search 
-			model=model.search 
-			goToSearchResults=goToSearchResults 
-			activateSearch=activateSearch
-			deactivateSearch=deactivateSearch
+			{{wds-global-navigation/search 
+				model=model.search 
+				goToSearchResults=goToSearchResults 
+				activateSearch=activateSearch
+				deactivateSearch=deactivateSearch
 			}}`);
 
 		const searchInput = '.wds-global-navigation__search-input';
 
 		await click('.wds-global-navigation__search-toggle-icon');
 		await fillIn(searchInput, 'query');
-		await triggerEvent(searchInput, 'keyUp', {key: 13});
+		await triggerKeyEvent(searchInput, 'keyup', 'Enter');
 	});
 
 	test('search suggestion can be chosen by keyboard', async function (assert) {
@@ -116,14 +114,15 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 			goToSearchResults=goToSearchResults 
 			activateSearch=activateSearch
 			deactivateSearch=deactivateSearch
+			onSearchSuggestionChosen=onSearchSuggestionChosen
 			}}`);
 
 		const searchInput = '.wds-global-navigation__search-input';
 
 		await click('.wds-global-navigation__search-toggle-icon');
 		await fillIn(searchInput, 'query');
-		await triggerEvent(searchInput, 'keyUp', {key: 40});
-		await triggerEvent(searchInput, 'keyUp', {key: 13});
+		await triggerKeyEvent(searchInput, 'keydown', 'ArrowDown');
+		await triggerKeyEvent(searchInput, 'keyup', 'Enter');
 	});
 
 	test('search suggestion can be chosen by mouse click', async function (assert) {
@@ -137,9 +136,9 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 		await render(hbs`
 		{{wds-global-navigation/search 
 			model=model.search 
-			goToSearchResults=goToSearchResults 
 			activateSearch=activateSearch
 			deactivateSearch=deactivateSearch
+			onSearchSuggestionChosen=onSearchSuggestionChosen
 			}}`);
 
 		const searchInput = '.wds-global-navigation__search-input';
