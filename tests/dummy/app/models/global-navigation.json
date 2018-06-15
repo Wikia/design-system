@@ -31,7 +31,7 @@
         }
       },
       "suggestions": {
-        "url": "\/\/starwars.jakubjt.wikia-dev.pl\/index.php?action=ajax&rs=getLinkSuggest&format=json",
+        "url": "\/mocks/searchSuggestions.json?",
         "param-name": "query",
         "tracking_label": "search-suggestion"
       }
@@ -384,7 +384,7 @@
         }
       },
       "suggestions": {
-        "url": "\/\/concf.jakubjt.wikia-dev.pl\/index.php?action=ajax&rs=getLinkSuggest&format=json",
+        "url": "\\/mocks/searchSuggestions.json?",
         "param-name": "query",
         "tracking_label": "search-suggestion"
       }
@@ -462,7 +462,7 @@
         }
       },
       "suggestions": {
-        "url": "\/\/de.gta.jakubjt.wikia-dev.pl\/index.php?action=ajax&rs=getLinkSuggest&format=json",
+        "url": "\/mocks/searchSuggestions.json?",
         "param-name": "query",
         "tracking_label": "search-suggestion"
       }

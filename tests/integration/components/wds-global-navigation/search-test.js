@@ -1,7 +1,7 @@
 import {module, test} from 'qunit';
 import {setupRenderingTest} from 'ember-qunit';
 import Service from '@ember/service';
-import {click, render} from '@ember/test-helpers';
+import {click, render, fillIn, triggerEvent} from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import modelStub from '../../../mocks/search-model';
 
@@ -15,62 +15,137 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 				return key;
 			}
 		}));
+		this.set('activateSearch', () => {});
+		this.set('deactivateSearch', () => {});
 	});
 
-	test('search is present', async function (assert) {
+	test('search is present in GN', async function (assert) {
 		await render(hbs`{{wds-global-navigation/search model=model.search}}`);
 
 		assert.equal(this.element.querySelectorAll('.wds-global-navigation__search').length, 1,
 			'should render component');
 	});
 
-	test('button label is correct', async function (assert) {
+	test('search button label is correct', async function (assert) {
 		await render(hbs`{{wds-global-navigation/search model=model.search}}`);
 
 		assert.equal(this.element.querySelectorAll('.wds-global-navigation__search-toggle-text')[0].innerText.trim(), "design-system:global-navigation-search-placeholder-inactive",
 			'should render "search" text');
 	});
 
-	test('search is activated', async function (assert) {
-		assert.expect(1);
+	test('search activating and deactivating works', async function (assert) {
 
-		this.set('model', modelStub);
+		assert.expect(2);
+
 		this.set('activateSearch', function() {
-			assert.ok(true);
+			assert.ok(true, 'search is activated');
 		});
 
-		await render(hbs`{{wds-global-navigation/search model=model.search activateSearch=activateSearch}}`);
-	});
-
-	test('search is deactivated', async function (assert) {
-		assert.expect(1);
-
-		this.set('model', modelStub);
 		this.set('deactivateSearch', function() {
-			assert.ok(true);
+			assert.ok(true, 'search was deactivated');
 		});
+		await render(hbs`
+		{{wds-global-navigation/search 
+			model=model.search 
+			activateSearch=activateSearch 
+			deactivateSearch=deactivateSearch
+			}}`
+		);
+		await click('.wds-global-navigation__search-toggle-icon');
 
-		await render(hbs`{{wds-global-navigation/search model=model.search deactivateSearch=deactivateSearch}}`);
+		await click('.wds-global-navigation__search-close');
 	});
 
-		test('search suggestion is chosen', async function (assert) {
-			assert.expect(1);
+	test('search input results are shown after click on submit button', async function (assert) {
 
-			this.set('model', modelStub);
-			this.set('onSearchSuggestionChosen', function() {
-				assert.ok(true);
-			});
-
-		await render(hbs`{{wds-global-navigation/search model=model.search onSearchSuggestionChosen=onSearchSuggestionChosen}}`);
-	});
-
-	test('search suggestion is chosen', async function (assert) {
 		assert.expect(1);
 
-		this.set('model', modelStub);
 		this.set('goToSearchResults', function() {
-			assert.ok(true);
+			assert.ok(true, 'one suggestion was picked');
 		});
 
-		await render(hbs`{{wds-global-navigation/search model=model.search goToSearchResults=goToSearchResults}}`);
-})
+		await render(hbs`
+		{{wds-global-navigation/search 
+			model=model.search 
+			goToSearchResults=goToSearchResults 
+			activateSearch=activateSearch
+			deactivateSearch=deactivateSearch
+			}}`);
+
+		const searchInput = '.wds-global-navigation__search-input';
+
+		await click('.wds-global-navigation__search-toggle-icon');
+		await fillIn(searchInput, 'query');
+		await click('.wds-global-navigation__search-submit');
+	});
+
+	test('search input results are shown after click on Enter', async function (assert) {
+
+		assert.expect(1);
+
+		this.set('goToSearchResults', function() {
+			assert.ok(true, 'one suggestion was picked');
+		});
+
+		await render(hbs`
+		{{wds-global-navigation/search 
+			model=model.search 
+			goToSearchResults=goToSearchResults 
+			activateSearch=activateSearch
+			deactivateSearch=deactivateSearch
+			}}`);
+
+		const searchInput = '.wds-global-navigation__search-input';
+
+		await click('.wds-global-navigation__search-toggle-icon');
+		await fillIn(searchInput, 'query');
+		await triggerEvent(searchInput, 'keyUp', {key: 13});
+	});
+
+	test('search suggestion can be chosen by keyboard', async function (assert) {
+
+		assert.expect(1);
+
+		this.set('onSearchSuggestionChosen', function() {
+			assert.ok(true, 'search suggestion was chosen');
+		});
+
+		await render(hbs`
+		{{wds-global-navigation/search 
+			model=model.search 
+			goToSearchResults=goToSearchResults 
+			activateSearch=activateSearch
+			deactivateSearch=deactivateSearch
+			}}`);
+
+		const searchInput = '.wds-global-navigation__search-input';
+
+		await click('.wds-global-navigation__search-toggle-icon');
+		await fillIn(searchInput, 'query');
+		await triggerEvent(searchInput, 'keyUp', {key: 40});
+		await triggerEvent(searchInput, 'keyUp', {key: 13});
+	});
+
+	test('search suggestion can be chosen by mouse click', async function (assert) {
+
+		assert.expect(1);
+
+		this.set('onSearchSuggestionChosen', function() {
+			assert.ok(true, 'search suggestion was chosen');
+		});
+
+		await render(hbs`
+		{{wds-global-navigation/search 
+			model=model.search 
+			goToSearchResults=goToSearchResults 
+			activateSearch=activateSearch
+			deactivateSearch=deactivateSearch
+			}}`);
+
+		const searchInput = '.wds-global-navigation__search-input';
+
+		await click('.wds-global-navigation__search-toggle-icon');
+		await fillIn(searchInput, 'query');
+		await click('.wds-list li:first-of-type');
+	});
+});
