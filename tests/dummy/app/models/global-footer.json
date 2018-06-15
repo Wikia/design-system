@@ -49,14 +49,6 @@
 						"key": "Contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/contact"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Wikia.org"
-					},
-					"href": "http:\/\/wikia.org"
 				}
 			]
 		},
@@ -395,14 +387,6 @@
 						"key": "Contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/contact"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Wikia.org"
-					},
-					"href": "http:\/\/wikia.org"
 				}
 			]
 		},
