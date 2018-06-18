@@ -109,12 +109,12 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 		});
 
 		await render(hbs`
-		{{wds-global-navigation/search 
-			model=model.search 
-			goToSearchResults=goToSearchResults 
-			activateSearch=activateSearch
-			deactivateSearch=deactivateSearch
-			onSearchSuggestionChosen=onSearchSuggestionChosen
+			{{wds-global-navigation/search 
+				model=model.search 
+				goToSearchResults=goToSearchResults 
+				activateSearch=activateSearch
+				deactivateSearch=deactivateSearch
+				onSearchSuggestionChosen=onSearchSuggestionChosen
 			}}`);
 
 		const searchInput = '.wds-global-navigation__search-input';
@@ -134,11 +134,11 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 		});
 
 		await render(hbs`
-		{{wds-global-navigation/search 
-			model=model.search 
-			activateSearch=activateSearch
-			deactivateSearch=deactivateSearch
-			onSearchSuggestionChosen=onSearchSuggestionChosen
+			{{wds-global-navigation/search 
+				model=model.search 
+				activateSearch=activateSearch
+				deactivateSearch=deactivateSearch
+				onSearchSuggestionChosen=onSearchSuggestionChosen
 			}}`);
 
 		const searchInput = '.wds-global-navigation__search-input';

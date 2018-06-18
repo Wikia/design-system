@@ -21,7 +21,7 @@ export default {
 			}
 		},
 		"suggestions": {
-			"url": "\/mocks/searchSuggestions.json?",
+			"url": "/mocks/searchSuggestions.json?",
 			"param-name": "query",
 			"tracking_label": "search-suggestion"
 		}
