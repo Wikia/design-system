@@ -1,7 +1,7 @@
 <div class="wds-global-navigation__content-bar">
 	{{#if model.logo.header}}
 		<a href="{{model.logo.module.main.href}}" class="wds-global-navigation__logo">
-			{{! available class names: wds-is-wds-company-logo-fandom wds-is-wds-company-logo-powered-by-wikia wds-is-wds-company-logo-wikia-org}}
+			{{! available class names: wds-is-wds-company-logo-fandom wds-is-wds-company-logo-powered-by-wikia}}
 			{{svg model.logo.module.main.image-data.name class=(concat 'wds-global-navigation__logo-image wds-is-' model.logo.module.main.image-data.name)}}
 			{{#if model.logo.module.tagline}}
 				{{svg model.logo.module.tagline.image-data.name class=(concat 'wds-global-navigation__logo-image wds-is-' model.logo.module.tagline.image-data.name)}}
