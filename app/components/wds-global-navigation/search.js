@@ -312,9 +312,12 @@ export default Component.extend({
 
 			if (this.get('selectedSuggestionIndex') !== -1) {
 				this.onSearchSuggestionChosen(this.get('suggestions')[index]);
+			} else {
+				this.goToSearchResults(this.get('query'));
 			}
 
 			this.setSearchSuggestionItems();
+
 		},
 
 		onSearchSuggestionChosen(suggestion) {
