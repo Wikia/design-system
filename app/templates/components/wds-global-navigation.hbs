@@ -33,21 +33,21 @@
 			</div>
 		</div>
 		<div class="wds-global-navigation__modal-controls">
-			{{#wds-button class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
+			{{#wds-button click=(action 'openModal' 'search') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
 				{{wds-icon name='magnifying-glass'}}
 			{{/wds-button}}
 
 			{{#if model.user}}
-				{{#wds-button class='wds-global-navigation__modal-control wds-global-navigation__modal-control-user' text=true type='button'}}
+				{{#wds-button click=(action 'openModal' 'user') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-user' text=true type='button'}}
 					{{wds-avatar src=model.user.avatar_url alt=model.user.username}}
 				{{/wds-button}}
 			{{else if model.anon}}
-				{{#wds-button class='wds-global-navigation__modal-control wds-global-navigation__modal-control-anon' text=true type='button' href='/signin'}}
+				{{#wds-button click='closeModal' class='wds-global-navigation__modal-control wds-global-navigation__modal-control-anon' text=true type='button' href='/signin'}}
 					{{wds-avatar}}
 				{{/wds-button}}
 			{{/if}}
 
-			{{#wds-button class='wds-global-navigation__modal-control wds-global-navigation__modal-control-close' text=true type='button'}}
+			{{#wds-button click=(action 'closeModal') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-close' text=true type='button'}}
 				{{svg 'wds-icons-cross' class='wds-icon'}}
 			{{/wds-button}}
 		</div>
