@@ -10,25 +10,46 @@
 		{{wds-global-navigation/main-navigation model=model.main_navigation}}
 	</div>
 	<div class="wds-global-navigation__content-bar-right">
-		{{wds-global-navigation/search
-			model=model.search
-			activateSearch=(action 'activateSearch')
-			deactivateSearch=(action 'deactivateSearch')
-			onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
-			goToSearchResults=(action 'goToSearchResults')
-		}}
-		{{#if model.user}}
-			{{wds-global-navigation/user model=model.user}}
-		{{else if model.anon}}
-			{{wds-global-navigation/anon model=model.anon}}
-		{{/if}}
-		{{#if model.user}}
-			{{wds-on-site-notifications/notifications-dropdown}}
-		{{/if}}
-		<div class="wds-global-navigation__start-a-wiki">
-			{{wds-global-navigation/link-button
-				model=model.create_wiki
+		<div class="wds-global-navigation__dropdown-controls">
+			{{wds-global-navigation/search
+				model=model.search
+				activateSearch=(action 'activateSearch')
+				deactivateSearch=(action 'deactivateSearch')
+				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
+				goToSearchResults=(action 'goToSearchResults')
 			}}
+			{{#if model.user}}
+				{{wds-global-navigation/user model=model.user}}
+			{{else if model.anon}}
+				{{wds-global-navigation/anon model=model.anon}}
+			{{/if}}
+			{{#if model.user}}
+				{{wds-on-site-notifications/notifications-dropdown}}
+			{{/if}}
+			<div class="wds-global-navigation__start-a-wiki">
+				{{wds-global-navigation/link-button
+					model=model.create_wiki
+				}}
+			</div>
+		</div>
+		<div class="wds-global-navigation__modal-controls">
+			{{#wds-button class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
+				{{wds-icon name='magnifying-glass'}}
+			{{/wds-button}}
+
+			{{#if model.user}}
+				{{#wds-button class='wds-global-navigation__modal-control wds-global-navigation__modal-control-user' text=true type='button'}}
+					{{wds-avatar src=model.user.avatar_url alt=model.user.username}}
+				{{/wds-button}}
+			{{else if model.anon}}
+				{{#wds-button class='wds-global-navigation__modal-control wds-global-navigation__modal-control-anon' text=true type='button' href='/signin'}}
+					{{wds-avatar}}
+				{{/wds-button}}
+			{{/if}}
+
+			{{#wds-button class='wds-global-navigation__modal-control wds-global-navigation__modal-control-close' text=true type='button'}}
+				{{svg 'wds-icons-cross' class='wds-icon'}}
+			{{/wds-button}}
 		</div>
 	</div>
 	{{#if model.partner_slot}}
