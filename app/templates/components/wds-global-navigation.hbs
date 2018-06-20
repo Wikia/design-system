@@ -33,9 +33,10 @@
 			</div>
 		</div>
 		<div class="wds-global-navigation__modal-controls">
-			{{#wds-button click=(action 'openModal' 'search') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
-				{{wds-icon name='magnifying-glass'}}
-			{{/wds-button}}
+			{{wds-global-navigation/search-modal
+				isOpen=isSearchModalOpen
+				openModal=(action 'openModal')
+			}}
 
 			{{#if model.user}}
 				{{#wds-button click=(action 'openModal' 'user') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-user' text=true type='button'}}
