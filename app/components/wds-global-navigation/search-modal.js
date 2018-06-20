@@ -10,6 +10,32 @@ export default Component.extend({
 	actions: {
 		openModal(modalType) {
 			this.get('openModal')(modalType);
+		},
+
+		onSearchSuggestionChosen(suggestion) {
+			this.onSearchSuggestionChosen(suggestion);
+		},
+
+		onQueryChanged() {
+			this.setProperties({
+				suggestions: [],
+				selectedSuggestionIndex: -1
+			});
+
+			this.getSuggestions(this.get('query'));
+		},
+
+		onCloseSearchClick(event) {
+			event.stopPropagation();
+			this.closeSearch();
+		},
+
+		onFocusIn() {
+			this.set('inputFocused', true);
+		},
+
+		selectItem(index) {
+			this.set('selectedSuggestionIndex', index);
 		}
 	}
 });

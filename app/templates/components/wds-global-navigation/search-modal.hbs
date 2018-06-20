@@ -1,3 +1,35 @@
 {{#wds-button click=(action 'openModal' 'search') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
 	{{wds-icon name='magnifying-glass'}}
 {{/wds-button}}
+
+{{#if isOpen}}
+	<div class="wds-global-navigation__modal">
+		{{input
+			value=query
+			class='wds-global-navigation__search-input'
+			name=model.results.param-name
+			placeholder=(i18n model.placeholder-active.key ns='design-system' sitename=model.placeholder-active.params.sitename.value)
+			type='search'
+			autocomplete='off'
+			input=(action 'onQueryChanged')
+			enter=(action 'enter')
+			key-down=(action 'onKeyDown')
+			focusIn=(action 'onFocusIn')
+			focusOut=(action 'onFocusOut')
+		}}
+
+		{{#wds-list linked=true ellipsis=true}}
+			{{#each suggestions as |suggestion index|}}
+				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}}"
+					onmousedown={{action 'onSearchSuggestionChosen' suggestion}} onmouseenter={{action
+					'selectItem' index}}>
+					<a href="{{suggestion.uri}}"
+					   class="wds-global-navigation__dropdown-link"
+					   data-tracking-label="{{model.suggestions.tracking_label}}">
+						{{{suggestion.text}}}
+					</a>
+				</li>
+			{{/each}}
+		{{/wds-list}}
+	</div>
+{{/if}}
