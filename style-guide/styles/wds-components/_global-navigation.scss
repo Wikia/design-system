@@ -71,6 +71,14 @@
 		}
 	}
 
+	&__modal {
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: $wds-global-navigation-height;
+		width: 100%;
+	}
+
 	&.wds-is-modal-opened {
 		.wds-global-navigation__modal-control {
 			align-items: center;
