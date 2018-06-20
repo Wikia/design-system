@@ -6,10 +6,30 @@
 	$partner-slot-width: 80px;
 
 	background-color: $wds-fandom-color-navy;
-	display: flex;
-	justify-content: space-between;
-	padding: 0 19px;
+	box-sizing: border-box;
+	font-family: Rubik,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	position: relative;
+
+	&__content-container {
+		margin: 0 auto;
+		display: flex;
+
+		@media #{$wds-breakpoint-medium-up} {
+			width: 768px;
+		}
+
+		@media #{$wds-breakpoint-l-up} {
+			width: 1004px;
+		}
+
+		@media #{$wds-breakpoint-xl-up} {
+			width: 1064px;
+		}
+
+		@media #{$wds-breakpoint-xxl-up} {
+			width: 1278px;
+		}
+	}
 
 	&__content-bar-left,
 	&__content-bar-right {
@@ -36,9 +56,6 @@
 
 	&__link {
 		text-transform: uppercase;
-	}
-
-	&__link, &__wikis-menu {
 		transition: color $wds-button-transition-duration, font-size $search-transition-duration, margin-left $search-transition-duration;
 	}
 
@@ -48,7 +65,7 @@
 		color: $wds-fandom-color-aqua;
 		display: flex;
 		height: 100%;
-		margin-left: 24px;
+		margin-left: 30px;
 		text-decoration: none;
 
 		&:hover {
@@ -58,13 +75,34 @@
 		.wds-dropdown__toggle-chevron {
 			fill: $wds-fandom-color-coral;
 		}
+
+		.wds-global-navigation__link-button {
+			margin: 0;
+		}
+
+		@media #{$wds-breakpoint-medium-down} {
+			margin-left: 24px;
+		}
 	}
 
-	&__user-menu,
-	&__account-menu,
 	&__start-a-wiki {
+		margin-left: 18px;
 		transition-duration: $wds-button-transition-duration;
 		transition-property: color;
+
+		@media #{$wds-breakpoint-medium-down} {
+			display: none;
+		}
+
+		.wds-button.wds-is-secondary:not(:disabled) {
+			border-color: $wds-fandom-color-aqua;
+			color: $wds-fandom-color-aqua;
+
+			&:hover {
+				border-color: $wds-color-white;
+				color: $wds-color-white;
+			}
+		}
 	}
 
 	&__start-a-wiki-button {
@@ -77,46 +115,40 @@
 		width: 126px;
 	}
 
-	&__account-menu-caption {
-		display: none;
-		margin-left: 5px;
-	}
-
-	&__account-menu-dropdown-caption {
+	&__user-menu-dropdown-caption {
 		font-size: $wds-typescale-size-minus-2;
 		padding-bottom: 10px;
 		text-align: center;
 	}
 
-	&__notifications-menu {
-		padding-right: 0;
+	&__notifications-dropdown {
+		color: $wds-fandom-color-aqua;
+		height: 100%;
+		margin-left: 12px;
 		position: relative;
+		transition: color $wds-button-transition-duration;
 		width: 50px;
+
+		&:hover {
+			color: $wds-color-white;
+		}
 	}
 
-	&__notifications-menu-counter {
+	&__notifications-counter {
 		align-items: center;
-		background-color: $wds-color-link;
-		border: 1px solid $wds-color-white;
+		background-color: $wds-color-white;
 		border-radius: $notification-counter-size / 2;
 		box-sizing: border-box;
-		color: $wds-color-white;
+		color: $wds-fandom-color-navy;
 		display: flex;
 		font-size: $wds-typescale-size-minus-3;
 		height: $notification-counter-size;
 		justify-content: center;
-		left: -1px;
+		left: 0;
 		min-width: $notification-counter-size;
 		padding: 0 4px;
 		position: absolute;
-		top: 8px;
-	}
-
-	// XW-2106 | enhance readability of Chinese Start a Wiki button in nav
-	html[lang^='zh'] &__start-a-wiki-button {
-		font-size: 12px;
-		font-weight: 400;
-		padding: 9px 12px 8px;
+		top: 12px;
 	}
 
 	&__partner-slot {
@@ -144,34 +176,32 @@
 		margin-right: $partner-slot-width;
 	}
 
-	&__start-a-wiki {
-		@media #{$wds-breakpoint-medium-down} {
-			display: none;
-		}
-
-		.wds-button.wds-is-secondary:not(:disabled) {
-			border-color: $wds-fandom-color-aqua;
-			color: $wds-fandom-color-aqua;
-
-			&:hover {
-				border-color: $wds-color-white;
-				color: $wds-color-white;
-			}
-		}
-	}
-
 	.wds-avatar {
 		@include wds-avatar(30px, $wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-navy);
 	}
 
-	&__user-menu:hover {
+	&__user-menu {
 		.wds-avatar__image {
-			border-color: $wds-color-white;
-			fill: $wds-color-white;
+			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
+		}
+
+		&:hover {
+			.wds-avatar__image {
+				border-color: $wds-color-white;
+				fill: $wds-color-white;
+			}
 		}
 	}
 
 	&__link-group, &__user-menu {
+		.wds-dropdown {
+			&__content {
+				min-width: 190px;
+			}
+		}
+	}
+
+	&__link-group, &__user-menu, &__notifications-dropdown {
 		height: 100%;
 
 		.wds-dropdown {
@@ -192,7 +222,6 @@
 			&__content {
 				border-top: 1px solid $wds-color-light-c4;
 				color: $wds-color-dark-blue-gray;
-				min-width: 190px;
 
 				.wds-button {
 					@include button-theming($wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-aqua, "darker");

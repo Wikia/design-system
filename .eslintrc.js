@@ -17,6 +17,8 @@ module.exports = {
 	rules: {
 	},
 	globals: {
+		server: true,
+		FastBoot: true,
 		hljs: false
 	},
 	overrides: [

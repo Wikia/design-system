@@ -1,7 +1,11 @@
 import {empty} from '@ember/object/computed';
+import {inject as service} from '@ember/service';
+
 import Component from '@ember/component';
 
 export default Component.extend({
+	fetch: service(),
+
 	classNames: ['wds-global-navigation'],
 	classNameBindings: [
 		'searchIsActive:wds-search-is-active',
@@ -12,6 +16,20 @@ export default Component.extend({
 	searchIsActive: false,
 
 	searchIsAlwaysVisible: empty('model.fandom_overview'),
+
+	init() {
+		this._super(...arguments);
+
+		this.set('fetch.servicesDomain', this.get('model.services_domain'));
+	},
+
+	click(event) {
+		const elementToTrack = event.target.closest('[data-tracking-label]');
+
+		if (elementToTrack) {
+			this.track(elementToTrack.getAttribute('data-tracking-label'));
+		}
+	},
 
 	actions: {
 		activateSearch() {
@@ -39,12 +57,12 @@ export default Component.extend({
 				];
 		},
 
-		onSearchSuggestionChosen() {
-			// TODO
+		onSearchSuggestionChosen(suggestion) {
+			this.searchSuggestionChosen(suggestion);
 		},
 
-		goToSearchResults() {
-			// TODO
+		goToSearchResults(querystring) {
+			this.goToSearchResults(querystring)
 		}
 	}
 });

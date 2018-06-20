@@ -27,27 +27,6 @@
 				component's page{{/link-to}}.
 			</li>
 			<li>
-				Global Navigation bar behaviour
-				<ul>
-					<li>
-						Desktop, logged in users — bar disappears when user scrolls down and
-						reappears when user
-						starts to scroll up, so far all products use
-						<a href="http://wicky.nillia.ms/headroom.js/"
-						   target="_blank">Headroom.js</a>
-						for that. When there is a dropdown or search suggestions open in the Global
-						Navigation,
-						then it should stay visible even when user is scrolling down.
-					</li>
-					<li>
-						Desktop, anons — bar stays visible all the time.
-					</li>
-					<li>
-						Mobile — bar stays visible all the time.
-					</li>
-				</ul>
-			</li>
-			<li>
 				Search
 				<ul>
 					<li>
@@ -132,7 +111,7 @@
 		<h2 id="logged-out-with-hubs">Default logged out</h2>
 
 		{{#component-demo name='global-nav' codeOnly=true componentName='wds-global-navigation' standalone=true variantUrl='/identity/global-navigation/standalone/logged-out-default'}}
-			{{wds-global-navigation model=model.logged-out-with-hubs}}
+			{{wds-global-navigation model=model.logged-out-default track=track}}
 		{{/component-demo}}
 	</section>
 
@@ -140,7 +119,7 @@
 		<h2 id="logged-in-with-hubs">Default logged in</h2>
 
 		{{#component-demo name='global-nav-logged-in-with-hubs' codeOnly=true componentName='wds-global-navigation' standalone=true variantUrl='/identity/global-navigation/standalone/logged-in-default'}}
-			{{wds-global-navigation model=model.logged-in-with-hubs}}
+			{{wds-global-navigation model=model.logged-in-default track=track}}
 		{{/component-demo}}
 	</section>
 
@@ -148,7 +127,7 @@
 		<h2 id="logged-out-with-partner-slot">Logged out with partner slot</h2>
 
 		{{#component-demo name='global-nav-partner-logo' codeOnly=true componentName='wds-global-navigation' standalone=true variantUrl='/identity/global-navigation/standalone/logged-out-with-partner-slot'}}
-			{{wds-global-navigation model=model.logged-out-with-partner-slot}}
+			{{wds-global-navigation model=model.logged-out-with-partner-slot track=track}}
 		{{/component-demo}}
 	</section>
 
@@ -156,7 +135,7 @@
 		<h2 id="logged-out-wikia-org">Logged out with Wikia.org logo</h2>
 
 		{{#component-demo name='global-nav-logged-out' codeOnly=true componentName='wds-global-navigation' standalone=true variantUrl='/identity/global-navigation/standalone/logged-out-wikia-org'}}
-			{{wds-global-navigation model=model.logged-out-wikia-org}}
+			{{wds-global-navigation model=model.logged-out-wikia-org track=track}}
 		{{/component-demo}}
 	</section>
 {{/if}}
