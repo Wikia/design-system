@@ -5,7 +5,8 @@
       "title": {
         "type": "text",
         "value": "Wookiepedia"
-      }
+      },
+      "tracking_label": "sitename"
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
@@ -17,7 +18,8 @@
         "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
         "width": 250,
         "height": 65
-      }
+      },
+      "tracking_label": "wordmark"
     },
     "counter": {
       "value": 7834,
@@ -714,7 +716,8 @@
       "title": {
         "type": "text",
         "value": "Wookiepedia"
-      }
+      },
+      "tracking_label": "sitename"
     },
     "counter": {
       "value": 7834,
@@ -1424,7 +1427,8 @@
       "title": {
         "type": "text",
         "value": "Wookiepedia"
-      }
+      },
+      "tracking_label": "sitename"
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
@@ -1436,7 +1440,8 @@
         "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
         "width": 250,
         "height": 65
-      }
+      },
+      "tracking_label": "wordmark"
     },
     "counter": {
       "value": 7834,
