@@ -118,5 +118,9 @@
   "wds-avatar-badges-global-discussions-moderator-tooltip": "Moderador global de discusiones", 
   "wds-avatar-badges-helper-tooltip": "Helper", 
   "wds-avatar-badges-staff-tooltip": "Staff", 
-  "wds-avatar-badges-vstf-tooltip": "VSTF"
+  "wds-avatar-badges-vstf-tooltip": "VSTF",
+  "days-ago": "{days}d",
+  "hours-ago": "{hours}h",
+  "minutes-ago": "{minutes}m",
+  "now-label": "Ahora"
 }

@@ -118,5 +118,9 @@
   "wds-avatar-badges-global-discussions-moderator-tooltip": "Global Discussions Moderator", 
   "wds-avatar-badges-helper-tooltip": "FANDOM Helper", 
   "wds-avatar-badges-staff-tooltip": "FANDOM Medewerkers", 
-  "wds-avatar-badges-vstf-tooltip": "Vrijwilliger Spamtaskforce"
+  "wds-avatar-badges-vstf-tooltip": "Vrijwilliger Spamtaskforce",
+  "days-ago": "{days}d",
+  "hours-ago": "{hours}h",
+  "minutes-ago": "{minutes}m",
+  "now-label": "nu"
 }

@@ -118,5 +118,9 @@
   "wds-avatar-badges-discussion-moderator-tooltip": "Discussions Moderator",
   "wds-avatar-badges-staff-tooltip": "FANDOM Staff",
   "wds-avatar-badges-vstf-tooltip": "VSTF",
-  "wds-avatar-badges-global-discussions-moderator-tooltip": "Global Discussions Moderator"
+  "wds-avatar-badges-global-discussions-moderator-tooltip": "Global Discussions Moderator",
+  "days-ago": "{days}d",
+  "hours-ago": "{hours}h",
+  "minutes-ago": "{minutes}m",
+  "now-label": "now"
 }

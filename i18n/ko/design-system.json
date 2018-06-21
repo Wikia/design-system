@@ -118,5 +118,9 @@
   "wds-avatar-badges-global-discussions-moderator-tooltip": "Global Discussions Moderator", 
   "wds-avatar-badges-helper-tooltip": "팬덤 헬퍼", 
   "wds-avatar-badges-staff-tooltip": "팬덤 스태프", 
-  "wds-avatar-badges-vstf-tooltip": "VSTF"
+  "wds-avatar-badges-vstf-tooltip": "VSTF",
+  "days-ago": "{days}d",
+  "hours-ago": "{hours}h",
+  "minutes-ago": "{minutes}m",
+  "now-label": "지금"
 }
