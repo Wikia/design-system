@@ -2,18 +2,18 @@
   "anon": {
     "sitename": {
       "href": "/wiki/Main_Page",
-      "label": {
+      "title": {
         "type": "text",
         "value": "Wookiepedia"
       }
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
-      "label": {
+      "title": {
         "type": "text",
         "value": "Wookiepedia"
       },
-      "image": {
+      "image-data": {
         "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
         "width": 250,
         "height": 65
@@ -21,7 +21,7 @@
     },
     "counter": {
       "value": 7834,
-      "label": {
+      "title": {
         "type": "translatable-text",
         "key": "community-header-pages"
       }
@@ -39,70 +39,70 @@
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
     "local-navigation": [
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 1"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.5"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.4"
                 },
@@ -113,42 +113,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 2"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.1"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.4"
                 },
@@ -157,28 +157,28 @@
             ]
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.5"
             },
@@ -187,55 +187,55 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 3"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.3"
             },
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.4"
                 },
@@ -245,14 +245,14 @@
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.5"
             },
@@ -261,42 +261,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 4"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.5"
             },
@@ -305,38 +305,38 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-explore"
         },
         "icon": "explore-tiny",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-wiki-activity"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-random-page"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-community"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-videos"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-images"
             }
@@ -344,7 +344,7 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-forum"
         },
@@ -357,18 +357,18 @@
   "anon-no-background": {
     "sitename": {
       "href": "/wiki/Main_Page",
-      "label": {
+      "title": {
         "type": "text",
         "value": "Wookiepedia"
       }
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
-      "label": {
+      "title": {
         "type": "text",
         "value": "Wookiepedia"
       },
-      "image": {
+      "image-data": {
         "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
         "width": 250,
         "height": 65
@@ -376,7 +376,7 @@
     },
     "counter": {
       "value": 7834,
-      "label": {
+      "title": {
         "type": "translatable-text",
         "key": "community-header-pages"
       }
@@ -384,7 +384,7 @@
     "wiki-buttons": [
       {
         "href": "/wiki/Special:CreatePage",
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
@@ -393,70 +393,70 @@
     ],
     "local-navigation": [
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 1"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.5"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.4"
                 },
@@ -467,42 +467,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 2"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.1"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.4"
                 },
@@ -511,28 +511,28 @@
             ]
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.5"
             },
@@ -541,55 +541,55 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 3"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.3"
             },
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.4"
                 },
@@ -599,14 +599,14 @@
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.5"
             },
@@ -615,42 +615,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 4"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.5"
             },
@@ -659,38 +659,38 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-explore"
         },
         "icon": "explore-tiny",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-wiki-activity"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-random-page"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-community"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-videos"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-images"
             }
@@ -698,7 +698,7 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-forum"
         },
@@ -711,14 +711,14 @@
   "anon-no-wordmark": {
     "sitename": {
       "href": "/wiki/Main_Page",
-      "label": {
+      "title": {
         "type": "text",
         "value": "Wookiepedia"
       }
     },
     "counter": {
       "value": 7834,
-      "label": {
+      "title": {
         "type": "translatable-text",
         "key": "community-header-pages"
       }
@@ -726,7 +726,7 @@
     "wiki-buttons": [
       {
         "href": "/wiki/Special:CreatePage",
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
@@ -736,70 +736,70 @@
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
     "local-navigation": [
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 1"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.5"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.4"
                 },
@@ -810,42 +810,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 2"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.1"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.4"
                 },
@@ -854,28 +854,28 @@
             ]
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.5"
             },
@@ -884,55 +884,55 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 3"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.3"
             },
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.4"
                 },
@@ -942,14 +942,14 @@
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.5"
             },
@@ -958,42 +958,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 4"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.5"
             },
@@ -1002,38 +1002,38 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-explore"
         },
         "icon": "explore-tiny",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-wiki-activity"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-random-page"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-community"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-videos"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-images"
             }
@@ -1041,7 +1041,7 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-forum"
         },
@@ -1054,18 +1054,18 @@
   "logged-in": {
     "sitename": {
       "href": "/wiki/Main_Page",
-      "label": {
+      "title": {
         "type": "text",
         "value": "Wookiepedia"
       }
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
-      "label": {
+      "title": {
         "type": "text",
         "value": "Wookiepedia"
       },
-      "image": {
+      "image-data": {
         "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
         "width": 250,
         "height": 65
@@ -1073,7 +1073,7 @@
     },
     "counter": {
       "value": 7834,
-      "label": {
+      "title": {
         "type": "translatable-text",
         "key": "community-header-pages"
       }
@@ -1081,11 +1081,11 @@
     "wiki-buttons": [
       {
         "href": "/wiki/Special:CreatePage",
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-add"
         },
-        "title": {
+        "label": {
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
@@ -1093,7 +1093,7 @@
       },
       {
         "href": "/wiki/Special:WikiActivity",
-        "title": {
+        "label": {
           "type": "translatable-text",
           "key": "community-header-wiki-activity"
         },
@@ -1103,70 +1103,70 @@
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
     "local-navigation": [
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 1"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.5"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.4"
                 },
@@ -1177,42 +1177,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 2"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.1"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.4"
                 },
@@ -1221,28 +1221,28 @@
             ]
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.5"
             },
@@ -1251,55 +1251,55 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 3"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.3"
             },
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.4"
                 },
@@ -1309,14 +1309,14 @@
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.5"
             },
@@ -1325,42 +1325,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 4"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.5"
             },
@@ -1369,38 +1369,38 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-explore"
         },
         "icon": "explore-tiny",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-wiki-activity"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-random-page"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-community"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-videos"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-images"
             }
@@ -1408,7 +1408,7 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-forum"
         },
@@ -1421,18 +1421,18 @@
   "admin": {
     "sitename": {
       "href": "/wiki/Main_Page",
-      "label": {
+      "title": {
         "type": "text",
         "value": "Wookiepedia"
       }
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
-      "label": {
+      "title": {
         "type": "text",
         "value": "Wookiepedia"
       },
-      "image": {
+      "image-data": {
         "url": "http://img3.wikia.nocookie.net/__cb23/starwars/images/8/89/Wiki-wordmark.png",
         "width": 250,
         "height": 65
@@ -1440,7 +1440,7 @@
     },
     "counter": {
       "value": 7834,
-      "label": {
+      "title": {
         "type": "translatable-text",
         "key": "community-header-pages"
       }
@@ -1448,7 +1448,7 @@
     "wiki-buttons": [
       {
         "href": "/wiki/Special:CreatePage",
-        "title": {
+        "label": {
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
@@ -1456,7 +1456,7 @@
       },
       {
         "href": "/wiki/Special:WikiActivity",
-        "title": {
+        "label": {
           "type": "translatable-text",
           "key": "community-header-wiki-activity"
         },
@@ -1464,7 +1464,7 @@
       },
       {
         "href": "/wiki/Special:AdminDashboard",
-        "title": {
+        "label": {
           "type": "translatable-text",
           "key": "community-header-admin-dashboard"
         },
@@ -1474,70 +1474,70 @@
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
     "local-navigation": [
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 1"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 1.5"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 1.5.4"
                 },
@@ -1548,42 +1548,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 2"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.1"
             },
             "href": "#",
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 2.5.4"
                 },
@@ -1592,28 +1592,28 @@
             ]
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 2.5"
             },
@@ -1622,55 +1622,55 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 3"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.3"
             },
-            "submenu": [
+            "items": [
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.1"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.2"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.3"
                 },
                 "href": "#"
               },
               {
-                "label": {
+                "title": {
                   "type": "text",
                   "value": "label 3.5.4"
                 },
@@ -1680,14 +1680,14 @@
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 3.5"
             },
@@ -1696,42 +1696,42 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "text",
           "value": "label 4"
         },
         "href": "#",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.1"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.2"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.3"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.4"
             },
             "href": "#"
           },
           {
-            "label": {
+            "title": {
               "type": "text",
               "value": "label 4.5"
             },
@@ -1740,38 +1740,38 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-explore"
         },
         "icon": "explore-tiny",
-        "submenu": [
+        "items": [
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-wiki-activity"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-random-page"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-community"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-videos"
             }
           },
           {
-            "label": {
+            "title": {
               "type": "translatable-text",
               "key": "community-header-images"
             }
@@ -1779,7 +1779,7 @@
         ]
       },
       {
-        "label": {
+        "title": {
           "type": "translatable-text",
           "key": "community-header-forum"
         },
