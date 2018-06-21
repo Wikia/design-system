@@ -117,5 +117,9 @@
   "wds-avatar-badges-global-discussions-moderator-tooltip": "全网话题版主", 
   "wds-avatar-badges-helper-tooltip": "FANDOM助手", 
   "wds-avatar-badges-staff-tooltip": "FANDOM职员", 
-  "wds-avatar-badges-vstf-tooltip": "反破坏小组"
+  "wds-avatar-badges-vstf-tooltip": "反破坏小组",
+  "days-ago": "{days}天", 
+  "hours-ago": "{hours}小时", 
+  "minutes-ago": "{minutes}分钟", 
+  "now-label": "现在"
 }
