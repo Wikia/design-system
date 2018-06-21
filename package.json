@@ -26,6 +26,7 @@
     "regenerate-lock": "npm cache clean --force && rm -rf node_modules package-lock.json && npm run setup"
   },
   "devDependencies": {
+    "@wikia/ember-fandom": "Wikia/ember-fandom#8d43530ece7f92d39ce362082d42c7f87ac82e69",
     "broccoli-asset-rev": "2.7.0",
     "broccoli-funnel": "2.0.1",
     "broccoli-svgstore": "0.4.2",

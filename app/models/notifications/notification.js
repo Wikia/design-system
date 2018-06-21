@@ -5,7 +5,7 @@ import {inject as service} from '@ember/service';
 
 import DiscussionContributor from '../discussion/domain/contributor';
 import notificationTypes from '../../utils/notification-types';
-import {convertToTimestamp} from '../../utils/iso-date-time';
+import {convertToTimestamp} from '@wikia/ember-fandom/utils/iso-date-time';
 
 const defaultAvatar = 'https://static.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg' +
 	'/revision/latest/scale-to-width-down/50';

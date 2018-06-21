@@ -6,7 +6,7 @@ import {inject as service} from '@ember/service';
 import EmberObject, {get} from '@ember/object';
 
 import Notification from './notification';
-import {convertToIsoString} from '../../utils/iso-date-time';
+import {convertToIsoString} from '@wikia/ember-fandom/utils/iso-date-time';
 
 export default EmberObject.extend({
 	fetch: service(),
