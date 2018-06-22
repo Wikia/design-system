@@ -1,71 +1,19 @@
 {{#wds-community-header model=model track=track}}
-	<div class="wds-community-header__counter">
-		<span class="wds-community-header__counter-value">{{numeral model.counter.value}}</span>
-		<span class="wds-community-header__counter-label">{{i18n model.counter.title.key ns='design-system'}}</span>
-	</div>
-	<div class="wds-community-header__wiki-buttons wds-button-group">
-		{{#each model.wiki-buttons as |button|}}
-			{{#wds-button secondary=true href=button.href title=(if button.title (i18n button.title.key ns='design-system') null)}}
-				{{wds-icon name=button.icon size='small'}}
-				{{#if button.title}}
-					<span>{{i18n button.title.key ns='design-system'}}</span>
-				{{/if}}
-			{{/wds-button}}
-		{{/each}}
-	</div>
+	{{partial 'partials/community-header-wiki-content'}}
 {{/wds-community-header}}
 <div class="separator"></div>
 {{#wds-community-header model=model class='color-5F1023' track=track}}
-	<div class="wds-community-header__counter">
-		<span class="wds-community-header__counter-value">{{numeral model.counter.value}}</span>
-		<span class="wds-community-header__counter-label">{{i18n model.counter.title.key ns='design-system'}}</span>
-	</div>
-	<div class="wds-community-header__wiki-buttons wds-button-group">
-		{{#each model.wiki-buttons as |button|}}
-			{{#wds-button secondary=true href=button.href title=(if button.title (i18n button.title.key ns='design-system') null)}}
-				{{wds-icon name=button.icon size='small'}}
-				{{#if button.title}}
-					<span>{{i18n button.title.key ns='design-system'}}</span>
-				{{/if}}
-			{{/wds-button}}
-		{{/each}}
-	</div>
+	{{partial 'partials/community-header-wiki-content'}}
 {{/wds-community-header}}
 
 <div class="separator separator-5F1023"></div>
 {{#wds-community-header model=model class='color-787878' track=track}}
-<div class="wds-community-header__counter">
-	<span class="wds-community-header__counter-value">{{numeral model.counter.value}}</span>
-	<span class="wds-community-header__counter-label">{{i18n model.counter.title.key ns='design-system'}}</span>
-</div>
-<div class="wds-community-header__wiki-buttons wds-button-group">
-	{{#each model.wiki-buttons as |button|}}
-		{{#wds-button secondary=true href=button.href title=(if button.title (i18n button.title.key ns='design-system') null)}}
-			{{wds-icon name=button.icon size='small'}}
-			{{#if button.title}}
-				<span>{{i18n button.title.key ns='design-system'}}</span>
-			{{/if}}
-		{{/wds-button}}
-	{{/each}}
-</div>
+	{{partial 'partials/community-header-wiki-content'}}
 {{/wds-community-header}}
 
 <div class="separator separator-787878"></div>
 {{#wds-community-header model=model class='color-FB7383' track=track}}
-<div class="wds-community-header__counter">
-	<span class="wds-community-header__counter-value">{{numeral model.counter.value}}</span>
-	<span class="wds-community-header__counter-label">{{i18n model.counter.title.key ns='design-system'}}</span>
-</div>
-<div class="wds-community-header__wiki-buttons wds-button-group">
-	{{#each model.wiki-buttons as |button|}}
-		{{#wds-button secondary=true href=button.href title=(if button.title (i18n button.title.key ns='design-system') null)}}
-			{{wds-icon name=button.icon size='small'}}
-			{{#if button.title}}
-				<span>{{i18n button.title.key ns='design-system'}}</span>
-			{{/if}}
-		{{/wds-button}}
-	{{/each}}
-</div>
+	{{partial 'partials/community-header-wiki-content'}}
 {{/wds-community-header}}
 
 <div class="separator separator-FB7383"></div>
