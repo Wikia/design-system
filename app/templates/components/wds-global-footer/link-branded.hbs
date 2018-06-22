@@ -1,5 +1,4 @@
-<div>{{model.title.key}}</div>
-{{wds-icon
-	class='wds-global-footer__image'
-	name='wds-icons-arrow'
-}}
+<a href="{{model.href}}" class="wds-global-footer__link wds-is-{{model.brand}}" {{action this.attrs.track model.tracking_label preventDefault=false}}>
+	<div>{{i18n model.title.key ns='design-system'}}</div>
+	{{svg 'wds-icons-arrow' class='wds-global-footer__image wds-icon'}}
+</a>
