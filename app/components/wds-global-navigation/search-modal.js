@@ -7,6 +7,18 @@ import wrapMeHelper from '../../helpers/wrap-me';
 import {inject as service} from '@ember/service';
 
 export default Component.extend({
+	search: service(),
+
+	query: '',
+	searchRequestInProgress: false,
+	isLoadingResultsSuggestions: false,
+	searchIsActive: false,
+	selectedSuggestionIndex: -1,
+	hasSuggestions: notEmpty('suggestions'),
+	isEmptyQuery: empty('query'),
+	cachedResultsLimit: 100,
+	debounceDuration: 250,
+
 	actions: {
 		openModal(modalType) {
 			this.get('openModal')(modalType);
@@ -22,7 +34,7 @@ export default Component.extend({
 				selectedSuggestionIndex: -1
 			});
 
-			this.getSuggestions(this.get('query'));
+			this.get('search').getSuggestions(this.get('query'));
 		},
 
 		onCloseSearchClick(event) {
