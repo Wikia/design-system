@@ -62,7 +62,7 @@ export default Component.extend({
 		},
 
 		onSearchSuggestionChosen(suggestion) {
-			this.searchSuggestionChosen(suggestion);
+			this.get('onSearchSuggestionChosen')(suggestion);
 		},
 
 		goToSearchResults(querystring) {
