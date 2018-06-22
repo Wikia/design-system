@@ -7,6 +7,8 @@ export default Service.extend({
 	servicesDomain: 'https://services.wikia.com/',
 
 	fetch(path, options) {
+		options.credentials = 'include';
+		
 		return fetch(`${this.get('servicesDomain')}${path}`, options).then((response) => {
 			if (response.ok) {
 				return response.json();
