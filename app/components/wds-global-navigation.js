@@ -11,7 +11,7 @@ export default Component.extend({
 		'searchIsActive:wds-search-is-active',
 		'searchIsAlwaysVisible:wds-search-is-always-visible',
 		'model.partner_slot:wds-has-partner-slot',
-		'currentModal:wds-is-modal-opened'
+		'currentModal:wds-is-modal-opened',
 	],
 
 	searchIsActive: false,
@@ -71,9 +71,17 @@ export default Component.extend({
 
 		openModal(modalType) {
 			this.set('currentModal', modalType);
+
+			if (modalType === 'search') {
+				this.send('activateSearch');
+			}
 		},
 
 		closeModal() {
+			if (this.get('currentModal') === 'search') {
+				this.send('deactivateSearch');
+			}
+
 			this.set('currentModal', null);
 		}
 	}
