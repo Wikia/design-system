@@ -148,3 +148,23 @@
 		}
 	}
 }
+
+@media #{$wds-breakpoint-small-down} {
+	.wds-notifications {
+		&__mark-all-as-read-button {
+			align-items: baseline;
+			border-bottom: 1px solid $wds-fandom-color-pine;
+			justify-content: space-between;
+			margin: 0 12px;
+			width: unset;
+		}
+
+		&__mark-all-as-read {
+			padding: unset;
+		}
+
+		&__header {
+			font-weight: bold;
+		}
+	}
+}

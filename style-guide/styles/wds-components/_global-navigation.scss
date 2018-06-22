@@ -72,8 +72,10 @@
 	}
 
 	&__modal {
+		background-color: $wds-fandom-color-light-gray;
 		height: 100%;
 		left: 0;
+		overflow-y: scroll;
 		position: fixed;
 		top: $wds-global-navigation-height;
 		width: 100%;

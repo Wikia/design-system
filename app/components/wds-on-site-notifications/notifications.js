@@ -6,6 +6,7 @@ import MarkAllNotificationsMixin from '../../mixins/mark-all-notifications';
 // import {trackOpenMenu} from '../../utils/tracking/notifications-tracker';
 
 export default Component.extend(NotificationsUnreadCount, MarkAllNotificationsMixin, {
+	tagName: '',
 	notifications: service(),
 
 	notificationsList: oneWay('notifications.model.data'),

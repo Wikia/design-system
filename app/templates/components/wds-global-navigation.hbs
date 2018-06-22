@@ -47,6 +47,8 @@
 				{{/wds-button}}
 			{{/if}}
 
+			{{wds-global-navigation/user-modal isOpen=isUserModalOpen user=model.user header=model.notifications.header.title.key}}
+
 			{{#wds-button click=(action 'closeModal') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-close' text=true type='button'}}
 				{{svg 'wds-icons-cross' class='wds-icon'}}
 			{{/wds-button}}

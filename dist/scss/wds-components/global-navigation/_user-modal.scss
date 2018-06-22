@@ -1,0 +1,40 @@
+.wds-global-navigation {
+	.wds-user-modal {
+		&__info {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			margin-top: 18px;
+
+			.wds-avatar {
+				@include wds-avatar(94px, $wds-fandom-color-middle-gray, $wds-color-white, $wds-fandom-color-middle-gray);
+			}
+		}
+
+		&__username {
+			color: $wds-fandom-color-navy;
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 18px;
+		}
+
+		&__notifications-wrapper {
+			display: flex;
+			flex-direction: column;
+			margin-top: 24px;
+		}
+
+		&__sign-out-button {
+			background-color: $wds-fandom-color-light-gray;
+			bottom: 0;
+			border-style: unset;
+			box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.2);
+			color: #00acac;
+			font-size: 12px;
+			font-weight: bold;
+			height: 44px;
+			width: 100%;
+			position: fixed;
+		}
+	}
+}
