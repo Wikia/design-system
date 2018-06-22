@@ -1,6 +1,7 @@
 import Service from '@ember/service';
 import fetch from "fetch";
 
+// FIXME get rid of wdsFetch service and use ember-fandom fetch service
 export default Service.extend({
 
 	servicesDomain: 'https://services.wikia.com/',

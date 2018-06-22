@@ -4,7 +4,7 @@ import {inject as service} from '@ember/service';
 import Component from '@ember/component';
 
 export default Component.extend({
-	fetch: service(),
+	wdsFetch: service(),
 
 	classNames: ['wds-global-navigation'],
 	classNameBindings: [
@@ -20,7 +20,7 @@ export default Component.extend({
 	init() {
 		this._super(...arguments);
 
-		this.set('fetch.servicesDomain', this.get('model.services_domain'));
+		this.set('wdsFetch.servicesDomain', this.get('model.services_domain'));
 	},
 
 	click(event) {

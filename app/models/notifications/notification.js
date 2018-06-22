@@ -11,7 +11,7 @@ const defaultAvatar = 'https://static.wikia.nocookie.net/messaging/images/1/19/A
 	'/revision/latest/scale-to-width-down/50';
 
 export default EmberObject.extend({
-	fetch: service(),
+	wdsFetch: service(),
 
 	title: null,
 	snippet: null,
@@ -72,7 +72,7 @@ export default EmberObject.extend({
 	},
 
 	markAsRead() {
-		return this.get('fetch').fetchFromOnSiteNotifications(`/notifications/mark-as-read/by-uri`, {
+		return this.get('wdsFetch').fetchFromOnSiteNotifications(`/notifications/mark-as-read/by-uri`, {
 			body: JSON.stringify([this.get('uri')]),
 			headers: {
 				'Content-Type': 'application/json'
