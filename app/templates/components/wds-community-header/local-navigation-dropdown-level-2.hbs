@@ -1,6 +1,6 @@
 {{#wds-dropdown isLevel2=true tagName='li' class=stickedClassName as |dropdown|}}
 	{{#dropdown.toggle tagName='a' data-tracking-label=item.tracking_label href=itemHref as	|chevron|}}
-		{{partial 'partials/nav-item'}}
+		{{wds-community-header/nav-item item=item}}
 		{{chevron}}
 	{{/dropdown.toggle}}
 	{{#dropdown.content scrollable=false}}

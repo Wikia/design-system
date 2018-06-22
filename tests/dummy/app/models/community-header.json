@@ -39,7 +39,7 @@
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
-    "local-navigation": [
+    "navigation": [
       {
         "title": {
           "type": "text",
@@ -393,7 +393,7 @@
         "icon": "article-small"
       }
     ],
-    "local-navigation": [
+    "navigation": [
       {
         "title": {
           "type": "text",
@@ -737,7 +737,7 @@
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
-    "local-navigation": [
+    "navigation": [
       {
         "title": {
           "type": "text",
@@ -1104,7 +1104,7 @@
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
-    "local-navigation": [
+    "navigation": [
       {
         "title": {
           "type": "text",
@@ -1477,7 +1477,7 @@
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
-    "local-navigation": [
+    "navigation": [
       {
         "title": {
           "type": "text",

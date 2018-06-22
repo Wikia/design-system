@@ -2,10 +2,10 @@
 	{{#dropdown.toggle class='wds-tabs__tab-label' as |chevron|}}
 		{{#if item.href}}
 			<a href="{{item.href}}">
-				{{partial 'partials/nav-item-with-icon'}}
+				{{wds-community-header/nav-item-with-icon item=item}}
 			</a>
 		{{else}}
-			{{partial 'partials/nav-item-with-icon'}}
+			{{wds-community-header/nav-item-with-icon item=item}}
 		{{/if}}
 		{{chevron}}
 	{{/dropdown.toggle}}
