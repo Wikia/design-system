@@ -1,26 +1,26 @@
 {{#wds-dropdown as |dropdown|}}
 	{{#dropdown.toggle class='wds-tabs__tab-label' as |chevron|}}
-		{{#if item.href}}
-			<a href="{{item.href}}">
-				{{wds-community-header/nav-item-with-icon item=item}}
+		{{#if model.href}}
+			<a href="{{model.href}}">
+				{{wds-community-header/nav-item-with-icon item=model}}
 			</a>
 		{{else}}
-			{{wds-community-header/nav-item-with-icon item=item}}
+			{{wds-community-header/nav-item-with-icon item=model}}
 		{{/if}}
 		{{chevron}}
 	{{/dropdown.toggle}}
 	{{#dropdown.content scrollable=false}}
 		{{#wds-list linked=true bold=true}}
-			{{#each item.items as |item index|}}
-				{{#if item.items}}
-					{{wds-community-header/local-navigation-dropdown-level-2 item=item currentIndex=index}}
+			{{#each model.items as |secondLevelItem index|}}
+				{{#if secondLevelItem.items}}
+					{{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem currentIndex=index}}
 				{{else}}
 					<li>
-						<a href="{{item.href}}" data-tracking-label="{{item.tracking_label}}">
-							{{#if (equal item.title.type 'translatable-text')}}
-								{{i18n item.title.key ns='design-system'}}
+						<a href="{{secondLevelItem.href}}" data-tracking-label="{{secondLevelItem.tracking_label}}">
+							{{#if (equal secondLevelItem.title.type 'translatable-text')}}
+								{{i18n secondLevelItem.title.key ns='design-system'}}
 							{{else}}
-								{{item.title.value}}
+								{{secondLevelItem.title.value}}
 							{{/if}}
 						</a>
 					</li>
