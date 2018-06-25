@@ -28,7 +28,7 @@
     "test-existing": "ember test --path=\"test-dist\""
   },
   "devDependencies": {
-    "@wikia/ember-fandom": "Wikia/ember-fandom#8d43530ece7f92d39ce362082d42c7f87ac82e69",
+    "@wikia/ember-fandom": "Wikia/ember-fandom#c3e89602dcbda13b4e5b09c82b49970b85d94b04",
     "broccoli-asset-rev": "2.7.0",
     "broccoli-funnel": "2.0.1",
     "broccoli-svgstore": "0.4.2",
