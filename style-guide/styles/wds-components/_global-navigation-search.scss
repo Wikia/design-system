@@ -25,7 +25,7 @@ $toggle-active-margin-right: 17px;
 		transform: rotate(45deg);
 
 		svg {
-			fill: white;
+			fill: $wds-color-white;
 		}
 
 		@media #{$wds-breakpoint-medium-up} {

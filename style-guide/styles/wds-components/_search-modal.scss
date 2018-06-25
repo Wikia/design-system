@@ -7,7 +7,7 @@
 			display: flex;
 			font-size: 12px;
 			justify-content: space-between;
-			margin: 30px 6px 0 6px;
+			margin: 30px 6px 0;
 
 			.wds-dropdown__content {
 				@include is-right-aligned;
@@ -27,7 +27,7 @@
 
 .wds-search-is-active .wds-search-modal {
 	.wds-global-navigation__search-container {
-		border-top: 1px solid rgba(255, 255, 255, 0.25);
+		border-top: 1px solid rgba($wds-color-white, .25);
 		height: auto;
 		margin: 0;
 		padding-top: 18px;
