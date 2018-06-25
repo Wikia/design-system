@@ -13,8 +13,8 @@
 		<div class="wds-global-navigation__dropdown-controls">
 			{{wds-global-navigation/search
 				model=model.search
-				activateSearch=(action 'activateSearch')
-				deactivateSearch=(action 'deactivateSearch')
+				onSearchToggleClicked=(action 'onSearchToggleClicked')
+				onSearchCloseClicked=(action 'onSearchCloseClicked')
 				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
 				goToSearchResults=(action 'goToSearchResults')
 			}}
@@ -38,7 +38,7 @@
 				navigationModel=model.main_navigation
 				isOpen=isSearchModalOpen
 				openModal=(action 'openModal')
-				activateSearch=(action 'activateSearch')
+				onSearchToggleClicked=(action 'onSearchToggleClicked')
 				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
 				goToSearchResults=(action 'goToSearchResults')
 			}}

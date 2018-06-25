@@ -7,8 +7,8 @@
 		<div class="wds-search-modal__form-and-links-wrapper">
 			{{wds-global-navigation/search
 				model=model
-				activateSearch=activateSearch
-				deactivateSearch=(action 'deactivateSearch')
+				onSearchToggleClicked=onSearchToggleClicked
+				onSearchCloseClicked=(action 'onSearchCloseClicked')
 				onSearchSuggestionChosen=onSearchSuggestionChosen
 				goToSearchResults=goToSearchResults
 			}}

@@ -52,6 +52,8 @@
 		right: -12px;
 	}
 
+	// there is no special classname or id of the CreateNewWiki dropdown to hide it in css
+	// so we are detecting if href contains Special:CreateNewWiki
 	.wds-global-navigation__link-button[href *= "Special:CreateNewWiki"] {
 		display: none;
 	}

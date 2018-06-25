@@ -21,6 +21,18 @@ $toggle-active-margin-right: 17px;
 		transition: flex $search-transition-duration;
 	}
 
+	&-clear {
+		transform: rotate(45deg);
+
+		svg {
+			fill: white;
+		}
+
+		@media #{$wds-breakpoint-medium-up} {
+			display: none;
+		}
+	}
+
 	&-input {
 		-webkit-appearance: none;
 		background: transparent;

@@ -5,6 +5,7 @@ import fetch from 'fetch';
 import {run} from '@ember/runloop';
 import wrapMeHelper from '../../helpers/wrap-me';
 import {inject as service} from '@ember/service';
+import { assert } from '@ember/debug';
 
 export default Component.extend({
 	tagName: 'form',
@@ -29,6 +30,12 @@ export default Component.extend({
 
 	init() {
 		this._super(...arguments);
+
+		assert('Required property `model` is not set', this.model);
+		assert('Required function `onSearchToggleClicked` is not set', this.onSearchToggleClicked);
+		assert('Required function `onSearchCloseClicked` is not set', this.onSearchCloseClicked);
+		assert('Required function `onSearchSuggestionChosen` is not set', this.onSearchSuggestionChosen);
+		assert('Required function `goToSearchResults` is not set', this.goToSearchResults);
 
 		this.suggestions = [];
 
@@ -301,7 +308,7 @@ export default Component.extend({
 			searchIsActive: false
 		});
 		this.set('suggestions', []);
-		this.deactivateSearch();
+		this.onSearchCloseClicked();
 	},
 
 	actions: {
@@ -323,7 +330,7 @@ export default Component.extend({
 
 		openSearch() {
 			this.set('searchIsActive', true);
-			this.activateSearch();
+			this.onSearchToggleClicked();
 			this.get('inputField').focus();
 		},
 
