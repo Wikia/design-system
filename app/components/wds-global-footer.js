@@ -8,7 +8,7 @@ export default Component.extend({
 		this._super(...arguments);
 
 		if(!this.track) {
-			// throw new Error('Required `track` function for wds-global-footer component is not set');
+			throw new Error('Required `track` function for wds-global-footer component is not set');
 		}
 	},
 
@@ -18,11 +18,6 @@ export default Component.extend({
 		if (elementToTrack) {
 			this.track(elementToTrack.getAttribute('data-tracking-label'));
 		}
-	},
-
-	actions: {
-		track() {
-
-		}
 	}
+
 });
