@@ -33,7 +33,6 @@ export default Component.extend({
 
 		assert('Required property `model` is not set', this.model);
 		assert('Required function `onSearchToggleClicked` is not set', this.onSearchToggleClicked);
-		assert('Required function `onSearchCloseClicked` is not set', this.onSearchCloseClicked);
 		assert('Required function `onSearchSuggestionChosen` is not set', this.onSearchSuggestionChosen);
 		assert('Required function `goToSearchResults` is not set', this.goToSearchResults);
 
@@ -308,7 +307,10 @@ export default Component.extend({
 			searchIsActive: false
 		});
 		this.set('suggestions', []);
-		this.onSearchCloseClicked();
+
+		if (this.onSearchCloseClicked) {
+			this.onSearchCloseClicked();
+		}
 	},
 
 	actions: {
