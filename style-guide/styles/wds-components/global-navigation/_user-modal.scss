@@ -24,12 +24,12 @@
 			margin-top: 24px;
 		}
 
-		&__sign-out-button {
+		&__sign-out-container {
 			align-items: center;
 			background-color: $wds-fandom-color-light-gray;
 			bottom: 0;
 			border-style: unset;
-			box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.2);
+			box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, .2);
 			color: $wds-fandom-color-link;
 			display: flex;
 			font-size: 12px;
@@ -38,8 +38,11 @@
 			justify-content: center;
 			position: fixed;
 			text-align: center;
-			text-transform: uppercase;
 			width: 100%;
+		}
+
+		.wds-sign-out__button {
+			text-transform: uppercase;
 		}
 	}
 }
