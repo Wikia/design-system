@@ -341,6 +341,12 @@ export default Component.extend({
 			this.closeSearch();
 		},
 
+
+		onClearSearchClick() {
+			this.closeSearch();
+			this.get('inputField').focus();
+		},
+
 		onFocusIn() {
 			this.set('inputFocused', true);
 		},
