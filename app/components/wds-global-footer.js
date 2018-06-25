@@ -1,4 +1,6 @@
 import Component from '@ember/component';
+import { assert } from '@ember/debug';
+import track from '../utils/track';
 
 export default Component.extend({
 	tagName: 'footer',
@@ -7,17 +9,11 @@ export default Component.extend({
 	init() {
 		this._super(...arguments);
 
-		if(!this.track) {
-			throw new Error('Required `track` function for wds-global-footer component is not set');
-		}
+		assert('Required `track` function for wds-global-footer component is not set', this.track);
 	},
 
 	click(event) {
-		const elementToTrack = event.target.closest('[data-tracking-label]');
-
-		if (elementToTrack) {
-			this.track(elementToTrack.getAttribute('data-tracking-label'));
-		}
+		track(event, this.element, this.track);
 	}
 
 });
