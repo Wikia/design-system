@@ -51,4 +51,8 @@
 		left: -12px;
 		right: -12px;
 	}
+
+	.wds-global-navigation__link-button[href *= "Special:CreateNewWiki"] {
+		display: none;
+	}
 }
