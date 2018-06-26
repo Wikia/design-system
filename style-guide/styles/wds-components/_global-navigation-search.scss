@@ -22,6 +22,7 @@ $toggle-active-margin-right: 17px;
 	}
 
 	&-clear {
+		padding: 2px;
 		transform: rotate(45deg);
 
 		svg {
@@ -115,6 +116,10 @@ $toggle-active-margin-right: 17px;
 		.wds-global-navigation__search-container:not(.wds-search-is-focused) &, .wds-global-navigation:not(.wds-search-is-active) & {
 			display: none;
 		}
+	}
+
+	&-suggestion-highlight {
+		font-weight: bold;
 	}
 
 

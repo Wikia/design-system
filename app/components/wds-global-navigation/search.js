@@ -187,7 +187,7 @@ export default Component.extend({
 		const query = this.get('query'),
 			highlightRegexp = new RegExp(`(${this.escapeRegex(query)})`, 'ig'),
 			highlighted = wrapMeHelper.compute(['$1'], {
-				className: 'wikia-search__suggestion-highlighted'
+				className: 'wds-global-navigation__search-suggestion-highlight'
 			});
 
 		suggestions.forEach(
