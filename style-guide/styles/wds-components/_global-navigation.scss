@@ -6,19 +6,32 @@
 	$partner-slot-width: 80px;
 
 	background-color: $wds-fandom-color-navy;
-	padding: 0 19px;
+	box-sizing: border-box;
+	font-family: Rubik,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	position: relative;
+
+	@media #{$wds-breakpoint-small-down} {
+		padding: 0 3px 0 12px;
+	}
 
 	&__content-container {
 		margin: 0 auto;
 		display: flex;
 
-		@media #{$wds-breakpoint-xxl-up} {
-			width: 1278px;
+		@media #{$wds-breakpoint-medium-up} {
+			width: 768px;
 		}
 
-		@media #{$wds-breakpoint-xl-only} {
+		@media #{$wds-breakpoint-l-up} {
+			width: 1004px;
+		}
+
+		@media #{$wds-breakpoint-xl-up} {
 			width: 1064px;
+		}
+
+		@media #{$wds-breakpoint-xxl-up} {
+			width: 1278px;
 		}
 	}
 
@@ -34,11 +47,87 @@
 		justify-content: flex-end;
 	}
 
-	&__links {
+	&__dropdown-controls,
+	&__modal-controls {
+		align-items: center;
+		height: $wds-global-navigation-height;
+		justify-content: flex-end;
+		width: 100%;
+	}
+
+	&__dropdown-controls {
+		display: none;
+
+		@media #{$wds-breakpoint-medium-up} {
+			display: flex;
+		}
+	}
+
+	&__modal-controls {
+		display: none;
+
+		@media #{$wds-breakpoint-small-down} {
+			display: flex;
+		}
+	}
+
+	&__modal {
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: $wds-global-navigation-height;
+		width: 100%;
+	}
+
+	&.wds-is-modal-opened {
+		.wds-global-navigation__modal-control {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			height: 100%;
+			padding: 10px;
+
+			&-search,
+			&-user,
+			&-anon {
+				display: none;
+			}
+
+			&-close {
+				display: block;
+			}
+		}
+	}
+
+	&__modal-control {
+		align-items: center;
+		box-sizing: border-box;
 		display: flex;
+		justify-content: center;
+		height: 100%;
+		padding: 10px;
+
+		&-search,
+		&-close {
+			svg {
+				fill: $wds-fandom-color-aqua;
+			}
+		}
+
+		&-close {
+			display: none;
+		}
+	}
+
+	&__links {
+		display: none;
 		font-size: 18px;
 		font-weight: bold;
 		height: 100%;
+
+		@media #{$wds-breakpoint-medium-up} {
+			display: flex
+		}
 
 		@media #{$wds-breakpoint-large-down} {
 			font-size: 16px;
@@ -56,7 +145,7 @@
 		color: $wds-fandom-color-aqua;
 		display: flex;
 		height: 100%;
-		margin-left: 24px;
+		margin-left: 30px;
 		text-decoration: none;
 
 		&:hover {
@@ -70,15 +159,20 @@
 		.wds-global-navigation__link-button {
 			margin: 0;
 		}
+
+		@media #{$wds-breakpoint-medium-down} {
+			margin-left: 24px;
+		}
 	}
 
 	&__start-a-wiki {
+		display: none;
 		margin-left: 18px;
 		transition-duration: $wds-button-transition-duration;
 		transition-property: color;
 
-		@media #{$wds-breakpoint-medium-down} {
-			display: none;
+		@media #{$wds-breakpoint-large-up} {
+			display: flex;
 		}
 
 		.wds-button.wds-is-secondary:not(:disabled) {
@@ -136,13 +230,6 @@
 		padding: 0 4px;
 		position: absolute;
 		top: 12px;
-	}
-
-	// XW-2106 | enhance readability of Chinese Start a Wiki button in nav
-	html[lang^='zh'] &__start-a-wiki-button {
-		font-size: 12px;
-		font-weight: 400;
-		padding: 9px 12px 8px;
 	}
 
 	&__partner-slot {

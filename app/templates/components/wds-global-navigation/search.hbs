@@ -1,6 +1,7 @@
 {{#wds-dropdown dropdownExpanded=hasSuggestions class='wds-global-navigation__search' as |dropdown|}}
-	<div class="wds-global-navigation__search-toggle" {{action 'openSearch'}}>
+	<div class="wds-global-navigation__search-toggle" role="searchbox" {{action 'openSearch'}}>
 		{{wds-icon name='magnifying-glass' size='small' class='wds-global-navigation__search-toggle-icon'}}
+		{{wds-icon name='magnifying-glass' class='wds-global-navigation__search-toggle-icon'}}
 		<span class="wds-global-navigation__search-toggle-text">
 			{{i18n 'global-navigation-search-placeholder-inactive' ns='design-system'}}
 		</span>

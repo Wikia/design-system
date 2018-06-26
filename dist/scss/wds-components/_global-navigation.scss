@@ -6,19 +6,28 @@
 	$partner-slot-width: 80px;
 
 	background-color: $wds-fandom-color-navy;
-	padding: 0 19px;
+	box-sizing: border-box;
+	font-family: Rubik,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	position: relative;
 
 	&__content-container {
 		margin: 0 auto;
 		display: flex;
 
-		@media #{$wds-breakpoint-xxl-up} {
-			width: 1278px;
+		@media #{$wds-breakpoint-medium-up} {
+			width: 768px;
 		}
 
-		@media #{$wds-breakpoint-xl-only} {
+		@media #{$wds-breakpoint-l-up} {
+			width: 1004px;
+		}
+
+		@media #{$wds-breakpoint-xl-up} {
 			width: 1064px;
+		}
+
+		@media #{$wds-breakpoint-xxl-up} {
+			width: 1278px;
 		}
 	}
 
@@ -56,7 +65,7 @@
 		color: $wds-fandom-color-aqua;
 		display: flex;
 		height: 100%;
-		margin-left: 24px;
+		margin-left: 30px;
 		text-decoration: none;
 
 		&:hover {
@@ -69,6 +78,10 @@
 
 		.wds-global-navigation__link-button {
 			margin: 0;
+		}
+
+		@media #{$wds-breakpoint-medium-down} {
+			margin-left: 24px;
 		}
 	}
 
@@ -136,13 +149,6 @@
 		padding: 0 4px;
 		position: absolute;
 		top: 12px;
-	}
-
-	// XW-2106 | enhance readability of Chinese Start a Wiki button in nav
-	html[lang^='zh'] &__start-a-wiki-button {
-		font-size: 12px;
-		font-weight: 400;
-		padding: 9px 12px 8px;
 	}
 
 	&__partner-slot {
