@@ -1,7 +1,6 @@
 import Component from '@ember/component';
 import {computed} from '@ember/object';
 import {htmlSafe} from '@ember/string';
-import { assert } from '@ember/debug';
 import track from '../utils/track';
 
 export default Component.extend({

@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import { assert } from '@ember/debug';
 import track from '../utils/track';
 
 export default Component.extend({
