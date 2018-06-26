@@ -58,10 +58,14 @@ export default Component.extend({
 	},
 
 	submit(event) {
-		event.preventDefault();
+		if (this.goToSearchResults) {
+			event.preventDefault();
+			this.goToSearchResults(this.get('query'));
+			return;
+		}
 
 		this.set('searchRequestInProgress', true);
-		this.goToSearchResults(this.get('query'));
+
 	},
 
 	requestSuggestionsFromAPI() {
@@ -315,21 +319,6 @@ export default Component.extend({
 	},
 
 	actions: {
-		enter() {
-			const index = this.get('selectedSuggestionIndex');
-
-			this.inputField.blur();
-
-			if (this.get('selectedSuggestionIndex') !== -1) {
-				this.onSearchSuggestionChosen(this.get('suggestions')[index]);
-			} else {
-				this.goToSearchResults(this.get('query'));
-			}
-
-			this.setSearchSuggestionItems();
-
-		},
-
 		onSearchSuggestionChosen(suggestion) {
 			this.onSearchSuggestionChosen(suggestion);
 		},
@@ -391,6 +380,15 @@ export default Component.extend({
 			// ESC key
 			} else if (keyCode === 27) {
 				this.closeSearch();
+			} else if (keyCode === 13) {
+				const index = this.get('selectedSuggestionIndex');
+
+				if (this.get('selectedSuggestionIndex') !== -1) {
+					this.inputField.blur();
+					this.onSearchSuggestionChosen(this.get('suggestions')[index]);
+				}
+
+				this.setSearchSuggestionItems();
 			}
 		},
 
