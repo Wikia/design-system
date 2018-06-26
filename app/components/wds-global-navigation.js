@@ -1,4 +1,4 @@
-import {empty} from '@ember/object/computed';
+import {empty, equal} from '@ember/object/computed';
 import {inject as service} from '@ember/service';
 
 import Component from '@ember/component';
@@ -10,12 +10,16 @@ export default Component.extend({
 	classNameBindings: [
 		'searchIsActive:wds-search-is-active',
 		'searchIsAlwaysVisible:wds-search-is-always-visible',
-		'model.partner_slot:wds-has-partner-slot'
+		'model.partner_slot:wds-has-partner-slot',
+		'currentModal:wds-is-modal-opened'
 	],
 
 	searchIsActive: false,
 
 	searchIsAlwaysVisible: empty('model.fandom_overview'),
+
+	isSearchModalOpen: equal('currentModal', 'search'),
+	isUserModalOpen: equal('currentModal', 'user'),
 
 	init() {
 		this._super(...arguments);
@@ -63,6 +67,14 @@ export default Component.extend({
 
 		goToSearchResults(querystring) {
 			this.goToSearchResults(querystring)
+		},
+
+		openModal(modalType) {
+			this.set('currentModal', modalType);
+		},
+
+		closeModal() {
+			this.set('currentModal', null);
 		}
 	}
 });
