@@ -4,4 +4,9 @@
 <span class="wds-banner-notification__text">
 	{{yield}}
 </span>
-{{wds-icon name='cross' size='tiny' class='wds-banner-notification__close'}}
+{{wds-icon
+	class='wds-banner-notification__close'
+	click=(action (optional onClose))
+	name='cross'
+	size='tiny'
+}}
