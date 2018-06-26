@@ -17,6 +17,10 @@
 		.wds-global-navigation__link {
 			margin-left: 0;
 		}
+
+		.wds-global-navigation__search-suggestions {
+			top: calc(100% + 12px);
+		}
 	}
 
 	&__search-icon {
