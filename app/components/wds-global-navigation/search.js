@@ -19,6 +19,7 @@ export default Component.extend({
 
 	action: '/search',
 	query: '',
+	minimalQueryLength: 3,
 	searchRequestInProgress: false,
 	isLoadingResultsSuggestions: false,
 	searchIsActive: false,
@@ -144,7 +145,7 @@ export default Component.extend({
 		});
 
 		// If the query string is empty or shorter than the minimal length, return to leave the view blank
-		if (!query || query.length < this.get('queryMinimalLength')) {
+		if (!query || query.length < this.get('minimalQueryLength')) {
 			this.set('isLoadingResultsSuggestions', false);
 		} else if (this.hasCachedResult(query)) {
 			this.setSearchSuggestionItems(this.getCachedResult(query));
