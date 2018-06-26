@@ -2,6 +2,7 @@ import {empty} from '@ember/object/computed';
 import {inject as service} from '@ember/service';
 
 import Component from '@ember/component';
+import track from '../utils/track';
 
 export default Component.extend({
 	wdsFetch: service(),
@@ -24,11 +25,7 @@ export default Component.extend({
 	},
 
 	click(event) {
-		const elementToTrack = event.target.closest('[data-tracking-label]');
-
-		if (elementToTrack) {
-			this.track(elementToTrack.getAttribute('data-tracking-label'));
-		}
+		track(event, this.element, this.track);
 	},
 
 	actions: {
