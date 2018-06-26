@@ -111,7 +111,7 @@
 		<h2 id="logged-out-with-hubs">Default logged out</h2>
 
 		{{#component-demo name='global-nav' codeOnly=true componentName='wds-global-navigation' standalone=true variantUrl='/identity/global-navigation/standalone/logged-out-default'}}
-			{{wds-global-navigation model=model.logged-out-default track=track onSearchSuggestionChosen=onSearchSuggestionChosen}}
+			{{wds-global-navigation model=model.logged-out-default track=(action track) onSearchSuggestionChosen=(action onSearchSuggestionChosen) goToSearchResults=(action goToSearchResults)}}
 		{{/component-demo}}
 	</section>
 
@@ -119,7 +119,7 @@
 		<h2 id="logged-in-with-hubs">Default logged in</h2>
 
 		{{#component-demo name='global-nav-logged-in-with-hubs' codeOnly=true componentName='wds-global-navigation' standalone=true variantUrl='/identity/global-navigation/standalone/logged-in-default'}}
-			{{wds-global-navigation model=model.logged-in-default track=track onSearchSuggestionChosen=onSearchSuggestionChosen}}
+			{{wds-global-navigation model=model.logged-in-default track=(action track) onSearchSuggestionChosen=(action onSearchSuggestionChosen) goToSearchResults=(action goToSearchResults)}}
 		{{/component-demo}}
 	</section>
 
@@ -127,7 +127,7 @@
 		<h2 id="logged-out-with-partner-slot">Logged out with partner slot</h2>
 
 		{{#component-demo name='global-nav-partner-logo' codeOnly=true componentName='wds-global-navigation' standalone=true variantUrl='/identity/global-navigation/standalone/logged-out-with-partner-slot'}}
-			{{wds-global-navigation model=model.logged-out-with-partner-slot track=track onSearchSuggestionChosen=onSearchSuggestionChosen}}
+			{{wds-global-navigation model=model.logged-out-with-partner-slot track=(action track) onSearchSuggestionChosen=(action onSearchSuggestionChosen) goToSearchResults=(action goToSearchResults)}}
 		{{/component-demo}}
 	</section>
 
@@ -135,7 +135,7 @@
 		<h2 id="logged-out-wikia-org">Logged out with Wikia.org logo</h2>
 
 		{{#component-demo name='global-nav-logged-out' codeOnly=true componentName='wds-global-navigation' standalone=true variantUrl='/identity/global-navigation/standalone/logged-out-wikia-org'}}
-			{{wds-global-navigation model=model.logged-out-wikia-org track=track onSearchSuggestionChosen=onSearchSuggestionChosen}}
+			{{wds-global-navigation model=model.logged-out-wikia-org track=(action track) onSearchSuggestionChosen=(action onSearchSuggestionChosen) goToSearchResults=(action goToSearchResults)}}
 		{{/component-demo}}
 	</section>
 {{/if}}

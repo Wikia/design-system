@@ -1,4 +1,4 @@
-{{#wds-button click=(action 'openModal' 'search') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
+{{#wds-button click=(action openModal 'search') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
 	{{wds-icon name='magnifying-glass'}}
 {{/wds-button}}
 
@@ -7,9 +7,9 @@
 		<div class="wds-search-modal__form-and-links-wrapper">
 			{{wds-global-navigation/search
 				model=model
-				onSearchToggleClicked=onSearchToggleClicked
-				onSearchSuggestionChosen=onSearchSuggestionChosen
-				goToSearchResults=goToSearchResults
+				onSearchToggleClicked=(action onSearchToggleClicked)
+				onSearchSuggestionChosen=(action onSearchSuggestionChosen)
+				goToSearchResults=(action goToSearchResults)
 			}}
 			{{wds-global-navigation/main-navigation model=navigationModel}}
 		</div>

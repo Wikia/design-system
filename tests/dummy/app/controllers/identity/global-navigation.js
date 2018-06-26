@@ -9,5 +9,10 @@ export default Controller.extend({
 	onSearchSuggestionChosen({title}) {
 		// eslint-disable-next-line no-console
 		console.info('Suggestion clicked', title);
+	},
+
+	goToSearchResults(query) {
+		// eslint-disable-next-line no-console
+		console.info('goToSearchResults triggered', query);
 	}
 });

@@ -317,7 +317,7 @@ export default Component.extend({
 		enter() {
 			const index = this.get('selectedSuggestionIndex');
 
-			this.get('inputField').blur();
+			this.inputField.blur();
 
 			if (this.get('selectedSuggestionIndex') !== -1) {
 				this.onSearchSuggestionChosen(this.get('suggestions')[index]);
@@ -333,7 +333,7 @@ export default Component.extend({
 		openSearch() {
 			this.set('searchIsActive', true);
 			this.onSearchToggleClicked();
-			this.get('inputField').focus();
+			this.inputField.focus();
 		},
 
 		onQueryChanged() {
@@ -353,7 +353,7 @@ export default Component.extend({
 
 		onClearSearchClick() {
 			this.closeSearch();
-			this.get('inputField').focus();
+			this.inputField.focus();
 		},
 
 		onFocusIn() {
