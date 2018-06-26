@@ -63,6 +63,10 @@ $toggle-active-margin-right: 17px;
 		&::-ms-clear {
 			display: none;
 		}
+
+		&:placeholder-shown + .wds-global-navigation__search-clear {
+			opacity: 0.5;
+		}
 	}
 
 	&-submit {
