@@ -9,12 +9,6 @@ export default Component.extend({
 	classNames: 'wds-community-header',
 	tagName: 'header',
 
-	init() {
-		this._super(...arguments);
-
-		assert('Required `track` function for wds-global-footer component is not set', this.track);
-	},
-
 	style: computed('model.background_image', function () {
 		const backgroundImage = this.get('model.background_image');
 
@@ -26,6 +20,8 @@ export default Component.extend({
 	}),
 
 	click(event) {
-		track(event, this.element, this.track);
+		if (this.track) {
+			track(event, this.element, this.track);
+		}
 	},
 });
