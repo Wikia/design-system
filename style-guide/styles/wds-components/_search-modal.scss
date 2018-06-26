@@ -61,4 +61,14 @@
 	.wds-global-navigation__link-button[href *= "Special:CreateNewWiki"] {
 		display: none;
 	}
+
+	.wds-dropdown {
+		&__content {
+			top: calc(100% + 12px);
+		}
+
+		&:after {
+			bottom: -12px;
+		}
+	}
 }
