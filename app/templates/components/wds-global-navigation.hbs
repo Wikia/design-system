@@ -40,6 +40,11 @@
 			{{#if model.user}}
 				{{#wds-button click=(action 'openModal' 'user') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-user' text=true type='button'}}
 					{{wds-avatar src=model.user.avatar_url alt=model.user.username}}
+					{{#if unreadCount}}
+						<span class="wds-global-navigation__avatar-notifications-counter">
+							{{unreadCount}}
+						</span>
+					{{/if}}
 				{{/wds-button}}
 			{{else if model.anon}}
 				{{#wds-button click='closeModal' class='wds-global-navigation__modal-control wds-global-navigation__modal-control-anon' text=true type='button' href='/signin'}}
