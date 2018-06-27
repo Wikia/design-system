@@ -11,12 +11,12 @@
 	&__field {
 		border: 0;
 		border-bottom: 1px solid $wds-color-blue-gray;
+		box-sizing: border-box;
 		color: $wds-color-dark-blue-gray;
 		font-size: $wds-typescale-size-base;
 		line-height: 1rem;
 		outline: 0;
-		padding: 0;
-		padding-bottom: $field-bottom-padding;
+		padding: 0 0 $field-bottom-padding;
 		resize: none;
 		width: 100%;
 
@@ -50,6 +50,12 @@
 			&__hint {
 				color: $wds-fandom-color-red;
 			}
+		}
+	}
+
+	&.wds-has-length-hint {
+		.wds-textarea__field {
+			padding-right: 50px;
 		}
 	}
 }
