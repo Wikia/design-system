@@ -18,6 +18,13 @@
 </section>
 
 <section>
+	<h2>Textarea with event handlers</h2>
+	{{#component-demo name='inputs'}}
+		{{wds-textarea value=initialValue placeholder='Placeholder' hint='Example hint' input=(action 'input') focus-in=(action 'focusIn') focus-out=(action 'focusOut')}}
+	{{/component-demo}}
+</section>
+
+<section>
 	<h2>Textarea error state</h2>
 	{{#component-demo name='inputs'}}
 		{{wds-textarea value=initialValue placeholder='Placeholder' hint='Example hint' hasError=true}}
