@@ -1,0 +1,18 @@
+<h1>Inputs</h1>
+<p>
+	Currently Design System supports only textarea fields
+</p>
+
+<section>
+	<h2>Textarea</h2>
+	{{#component-demo name='inputs'}}
+		{{wds-textarea value=initialValue placeholder='Placeholder' showLengthHint=true hint='Example hint' hasError=true maxlength=1000}}
+	{{/component-demo}}
+</section>
+
+<section>
+	<h2>Disabled textarea</h2>
+	{{#component-demo name='inputs'}}
+		{{wds-textarea value=initialValue placeholder='Placeholder' showLengthHint=true hint='Example hint' disabled=true maxlength=1000}}
+	{{/component-demo}}
+</section>
