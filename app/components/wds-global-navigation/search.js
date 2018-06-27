@@ -2,7 +2,7 @@ import {notEmpty, empty} from '@ember/object/computed';
 import Component from '@ember/component';
 import EmberObject from '@ember/object';
 import fetch from 'fetch';
-import {run} from '@ember/runloop';
+import {run, scheduleOnce} from '@ember/runloop';
 import wrapMeHelper from '../../helpers/wrap-me';
 import {inject as service} from '@ember/service';
 import { assert } from '@ember/debug';
@@ -28,6 +28,7 @@ export default Component.extend({
 	isEmptyQuery: empty('query'),
 	cachedResultsLimit: 100,
 	debounceDuration: 250,
+	shouldWaitForClickOnCloseSuggestion: false,
 
 	init() {
 		this._super(...arguments);
@@ -55,6 +56,21 @@ export default Component.extend({
 	didInsertElement() {
 		this._super(...arguments);
 		this.set('inputField', this.element.querySelector('.wds-global-navigation__search-input'));
+	},
+
+	click(event) {
+		if (event.target.closest('.wds-global-navigation__search__suggestion')) {
+			if (this.onSearchSuggestionChosen) {
+				event.preventDefault();
+				this.onSearchSuggestionChosen(this.suggestions[this.selectedSuggestionIndex]);
+			}
+
+			this.setProperties({
+				shouldWaitForClickOnCloseSuggestion: false,
+			});
+			this.resetSearchState();
+
+		}
 	},
 
 	submit(event) {
@@ -318,6 +334,16 @@ export default Component.extend({
 		}
 	},
 
+	resetSearchState() {
+		this.set('inputFocused', false);
+
+		run(() => {
+			scheduleOnce('afterRender', this, () => {
+				this.set('selectedSuggestionIndex', -1);
+			});
+		});
+	},
+
 	actions: {
 		onSearchSuggestionChosen(suggestion) {
 			this.onSearchSuggestionChosen(suggestion);
@@ -357,11 +383,16 @@ export default Component.extend({
 			if (!this.get('query')) {
 				this.closeSearch();
 			}
-			this.set('inputFocused', false);
 
-			run.scheduleOnce('afterRender', () => {
-				this.set('selectedSuggestionIndex', -1);
-			});
+			if (!this.shouldWaitForClickOnCloseSuggestion) {
+				this.resetSearchState();
+			}
+
+
+		},
+
+		onSuggestionMouseDown() {
+			this.set('shouldWaitForClickOnCloseSuggestion', true);
 		},
 
 		onKeyDown(value, event) {
@@ -371,11 +402,13 @@ export default Component.extend({
 			if (keyCode === 40) {
 				if (this.get('selectedSuggestionIndex') < this.get('suggestions.length') - 1) {
 					this.incrementProperty('selectedSuggestionIndex');
+					event.preventDefault();
 				}
 			// up arrow
 			} else if (keyCode === 38) {
 				if (this.get('suggestions.length') && this.get('selectedSuggestionIndex') > -1) {
 					this.decrementProperty('selectedSuggestionIndex');
+					event.preventDefault();
 				}
 			// ESC key
 			} else if (keyCode === 27) {
