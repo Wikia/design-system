@@ -5,13 +5,13 @@ import {inject as service} from '@ember/service';
 
 import DiscussionContributor from '../discussion/domain/contributor';
 import notificationTypes from '../../utils/notification-types';
-import {convertToTimestamp} from '../../utils/iso-date-time';
+import {convertToTimestamp} from '@wikia/ember-fandom/utils/iso-date-time';
 
 const defaultAvatar = 'https://static.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg' +
 	'/revision/latest/scale-to-width-down/50';
 
 export default EmberObject.extend({
-	fetch: service(),
+	wdsFetch: service(),
 
 	title: null,
 	snippet: null,
@@ -72,7 +72,7 @@ export default EmberObject.extend({
 	},
 
 	markAsRead() {
-		return this.get('fetch').fetchFromOnSiteNotifications(`/notifications/mark-as-read/by-uri`, {
+		return this.get('wdsFetch').fetchFromOnSiteNotifications(`/notifications/mark-as-read/by-uri`, {
 			body: JSON.stringify([this.get('uri')]),
 			headers: {
 				'Content-Type': 'application/json'
