@@ -21,6 +21,7 @@ export default Component.extend({
 
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
+	currentModal: null,
 
 	init() {
 		this._super(...arguments);
@@ -43,11 +44,17 @@ export default Component.extend({
 
 	actions: {
 		onSearchToggleClicked() {
-			this.set('searchIsActive', true);
+			this.setProperties({
+				searchIsActive: true,
+				currentModal: 'search'
+			});
 		},
 
 		onSearchCloseClicked() {
-			this.set('searchIsActive', false);
+			this.setProperties({
+				searchIsActive: false,
+				currentModal: null
+			});
 		},
 
 		onSearchQueryChanged(query) {

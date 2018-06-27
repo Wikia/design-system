@@ -8,7 +8,8 @@
 	background-color: $wds-fandom-color-navy;
 	box-sizing: border-box;
 	font-family: Rubik,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	position: relative;
+	position: fixed;
+	width: 100%;
 
 	@media #{$wds-breakpoint-small-down} {
 		padding: 0 3px 0 12px;
