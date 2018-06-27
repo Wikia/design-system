@@ -88,6 +88,10 @@ export default Controller.extend({
 						location: 'route-components.floating-buttons'
 					},
 					{
+						name: 'Dialogs',
+						location: 'route-components.dialogs'
+					},
+					{
 						name: 'Toggles',
 						location: 'route-components.toggles'
 					},
