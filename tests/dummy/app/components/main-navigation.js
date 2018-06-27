@@ -9,7 +9,7 @@ export default Component.extend({
 	offset: 0,
 
 	didInsertElement() {
-		this.set('offset', this.$().offset().top || 0);
+		this.set('offset', this.element.getBoundingClientRect().top + document.body.scrollTop || 0);
 
 		run.schedule('afterRender', () => {
 			window.addEventListener('scroll', () => {
