@@ -194,6 +194,10 @@ $toggle-active-margin-right: 17px;
 			display: inline-flex;
 		}
 
+		&-toggle {
+			pointer-events: none;
+		}
+
 		&-toggle-icon {
 			margin-right: $toggle-active-margin-right;
 		}
