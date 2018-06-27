@@ -3,6 +3,9 @@ import {computed} from '@ember/object';
 
 export default Component.extend({
 	tagName: 'li',
+	attributeBindings: [
+		'data-tracking-label',
+	],
 	classNames: 'wds-tabs__tab',
 	classNameBindings: ['isSelected:wds-is-current', 'disabled:wds-is-disabled'],
 
