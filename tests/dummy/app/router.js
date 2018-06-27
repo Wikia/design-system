@@ -45,6 +45,7 @@ Router.map(function () {
 		this.route('progress-indicators');
 		this.route('tabs');
 		this.route('banner-notifications');
+		this.route('inputs');
 	});
 
 	this.route('identity', function () {

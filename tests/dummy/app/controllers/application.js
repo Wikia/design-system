@@ -80,6 +80,10 @@ export default Controller.extend({
 						location: 'route-components.avatars'
 					},
 					{
+						name: 'Inputs',
+						location: 'route-components.inputs'
+					},
+					{
 						name: 'Buttons',
 						location: 'route-components.buttons'
 					},
