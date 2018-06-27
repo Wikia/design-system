@@ -5,6 +5,7 @@ export default Component.extend({
 	classNames: 'wds-textarea',
 	classNameBindings: [
 		'hasError:wds-has-error',
+		'hasLengthHint:wds-has-length-hint'
 	],
 	disabled: false,
 
