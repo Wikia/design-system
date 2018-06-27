@@ -54,7 +54,6 @@
 		justify-content: flex-end;
 		width: 100%;
 	}
-
 	&__dropdown-controls {
 		display: none;
 
@@ -69,6 +68,9 @@
 		@media #{$wds-breakpoint-small-down} {
 			display: flex;
 		}
+	}
+	&__modal-control-user {
+		position: relative;
 	}
 
 	&__modal {
@@ -217,6 +219,7 @@
 		}
 	}
 
+	&__avatar-notifications-counter,
 	&__notifications-counter {
 		align-items: center;
 		background-color: $wds-color-white;
@@ -232,6 +235,11 @@
 		padding: 0 4px;
 		position: absolute;
 		top: 12px;
+	}
+
+	&__avatar-notifications-counter {
+		left: 3px;
+		top: 6px;
 	}
 
 	&__partner-slot {

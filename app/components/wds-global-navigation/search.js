@@ -3,8 +3,8 @@ import Component from '@ember/component';
 import EmberObject from '@ember/object';
 import fetch from 'fetch';
 import {run} from '@ember/runloop';
-import wrapMeHelper from '../../helpers/wrap-me';
 import {inject as service} from '@ember/service';
+import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
 
 export default Component.extend({
 	tagName: 'form',
@@ -312,9 +312,12 @@ export default Component.extend({
 
 			if (this.get('selectedSuggestionIndex') !== -1) {
 				this.onSearchSuggestionChosen(this.get('suggestions')[index]);
+			} else {
+				this.goToSearchResults(this.get('query'));
 			}
 
 			this.setSearchSuggestionItems();
+
 		},
 
 		onSearchSuggestionChosen(suggestion) {
