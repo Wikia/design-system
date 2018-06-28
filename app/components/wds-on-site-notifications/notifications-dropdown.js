@@ -16,7 +16,8 @@ export default Component.extend(NotificationsUnreadCount, {
 		onOpen() {
 			this.track({
 				label: this.get('model.tracking_label'),
-				category: 'on-site-notifications'
+				category: 'on-site-notifications',
+				action: 'impression'
 			});
 			this.get('notifications').loadFirstPage();
 		}
