@@ -101,7 +101,7 @@ export default Component.extend(
 			this.track({
 				action: 'impression',
 				category: 'on-site-notifications',
-				label: model.type,
+				label: model.get('type'),
 				value: model.get('isUnread') ? 1 : 0
 			});
 		},
@@ -113,7 +113,7 @@ export default Component.extend(
 				this.track({
 					action: 'click',
 					category: 'on-site-notifications',
-					label: model.type,
+					label: model.get('type'),
 					value: model.get('isUnread') ? 1 : 0
 				});
 			},
