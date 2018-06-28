@@ -13,7 +13,7 @@ export default Component.extend({
 			this.track({
 				label: 'open-menu',
 				category: 'on-site-notifications',
-				action: 'impression',
+				action: 'click',
 				value: this.get('notifications').getUnreadCount()
 			});
 
