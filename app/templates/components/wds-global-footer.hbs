@@ -1,10 +1,10 @@
-<h2 class="wds-global-footer__header">
-	<a href="{{model.header.href}}">
-		{{svg model.header.image
-			class='wds-global-footer__header-logo'
-		}}
-	</a>
-</h2>
+{{#if model.header}}
+	<h2 class="wds-global-footer__header">
+		<a href="{{model.header.href}}" title="{{model.header.title.value}}">
+			{{svg model.header.image-data.name class='wds-global-footer__header-logo'}}
+		</a>
+	</h2>
+{{/if}}
 <div class="wds-global-footer__main">
 	<div class="wds-global-footer__fandom-sections">
 		{{wds-global-footer/section model=model.fandom_overview name='fandom-overview' parentName='fandom'}}
@@ -19,4 +19,4 @@
 		{{wds-global-footer/section model=model.advertise name='advertise' parentName='wikia'}}
 	</div>
 </div>
-{{wds-global-footer/bottom-bar}}
+{{wds-global-footer/bottom-bar model=model}}

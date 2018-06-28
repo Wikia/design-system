@@ -6,10 +6,10 @@ import {inject as service} from '@ember/service';
 import EmberObject, {get} from '@ember/object';
 
 import Notification from './notification';
-import {convertToIsoString} from '../../utils/iso-date-time';
+import {convertToIsoString} from '@wikia/ember-fandom/utils/iso-date-time';
 
 export default EmberObject.extend({
-	fetch: service(),
+	wdsFetch: service(),
 	logger: service(),
 
 	unreadCount: 0,
@@ -25,7 +25,7 @@ export default EmberObject.extend({
 	},
 
 	loadFirstPageReturningNextPageLink() {
-		return this.get('fetch').fetchFromOnSiteNotifications('notifications')
+		return this.get('wdsFetch').fetchFromOnSiteNotifications('notifications')
 		.then((data) => {
 			this.addNotifications(data.notifications);
 			return this.getNext(data);
@@ -33,7 +33,7 @@ export default EmberObject.extend({
 	},
 
 	loadPageReturningNextPageLink(page) {
-		return this.get('fetch').fetchFromOnSiteNotifications(page)
+		return this.get('wdsFetch').fetchFromOnSiteNotifications(page)
 			.then((data) => {
 				this.addNotifications(data.notifications);
 				return this.getNext(data);
@@ -58,7 +58,7 @@ export default EmberObject.extend({
 	markAllAsRead() {
 		const since = this.getNewestNotificationISODate();
 
-		return this.get('fetch').fetchFromOnSiteNotifications(`notifications/mark-all-as-read`, {
+		return this.get('wdsFetch').fetchFromOnSiteNotifications(`notifications/mark-all-as-read`, {
 			body: JSON.stringify({since}),
 			headers: {
 				'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ export default EmberObject.extend({
 	 * @return {Promise.<T>}
 	 */
 	loadUnreadNotificationCount() {
-		return this.get('fetch').fetchFromOnSiteNotifications('notifications/unread-count')
+		return this.get('wdsFetch').fetchFromOnSiteNotifications('notifications/unread-count')
 			.then((result) => {
 				this.set('unreadCount', result.unreadCount);
 			}).catch((error) => {

@@ -2,7 +2,9 @@
 	"with-hubs": {
 		"header": {
 			"type": "link-image",
-			"image": "wds-company-logo-fandom-white",
+			"image-data": {
+				"name": "wds-company-logo-fandom-white"
+			},
 			"href": "http:\/\/fandom.wikia.com",
 			"title": {
 				"type": "text",
@@ -49,14 +51,6 @@
 						"key": "Contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/contact"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Wikia.org"
-					},
-					"href": "http:\/\/wikia.org"
 				}
 			]
 		},
@@ -127,7 +121,9 @@
 			"links": [
 				{
 					"type": "link-image",
-					"image": "wds-company-store-appstore",
+					"image-data": {
+						"name": "wds-company-store-appstore"
+					},
 					"title": {
 						"type": "translatable-text",
 						"key": "global-footer-community-apps-link-app-store"
@@ -136,7 +132,9 @@
 				},
 				{
 					"type": "link-image",
-					"image": "wds-company-store-googleplay",
+					"image-data": {
+						"name": "wds-company-store-googleplay"
+					},
 					"title": {
 						"type": "translatable-text",
 						"key": "global-footer-community-apps-link-google-play"
@@ -395,14 +393,6 @@
 						"key": "Contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/contact"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Wikia.org"
-					},
-					"href": "http:\/\/wikia.org"
 				}
 			]
 		},

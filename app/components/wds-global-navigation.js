@@ -3,9 +3,10 @@ import {inject as service} from '@ember/service';
 import { assert } from '@ember/debug';
 
 import Component from '@ember/component';
+import track from '../utils/track';
 
 export default Component.extend({
-	fetch: service(),
+	wdsFetch: service(),
 
 	classNames: ['wds-global-navigation'],
 	classNameBindings: [
@@ -31,15 +32,11 @@ export default Component.extend({
 		assert('Required function `onSearchSuggestionChosen` is not set', this.onSearchSuggestionChosen);
 		assert('Required function `goToSearchResults` is not set', this.goToSearchResults);
 
-		this.set('fetch.servicesDomain', this.get('model.services_domain'));
+		this.set('wdsFetch.servicesDomain', this.get('model.services_domain'));
 	},
 
 	click(event) {
-		const elementToTrack = event.target.closest('[data-tracking-label]');
-
-		if (elementToTrack) {
-			this.track(elementToTrack.getAttribute('data-tracking-label'));
-		}
+		track(event, this.element, this.track);
 	},
 
 	actions: {
