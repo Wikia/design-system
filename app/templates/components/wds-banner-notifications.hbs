@@ -1,0 +1,10 @@
+<div class="wds-banner-notification__container">
+	{{#each model as |notification|}}
+		{{#wds-banner-notification
+			type=notification.type
+			onClose=(action 'onClose' notification.id)
+		}}
+			{{notification.text}}
+		{{/wds-banner-notification}}
+	{{/each}}
+</div>
