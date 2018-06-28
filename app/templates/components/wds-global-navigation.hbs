@@ -24,7 +24,7 @@
 				{{wds-global-navigation/anon model=model.anon}}
 			{{/if}}
 			{{#if model.user}}
-				{{wds-on-site-notifications/notifications-dropdown track=track}}
+				{{wds-on-site-notifications/notifications-dropdown track=(action track)}}
 			{{/if}}
 			<div class="wds-global-navigation__start-a-wiki">
 				{{wds-global-navigation/link-button

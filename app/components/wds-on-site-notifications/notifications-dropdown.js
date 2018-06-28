@@ -14,8 +14,10 @@ export default Component.extend(NotificationsUnreadCount, {
 
 	actions: {
 		onOpen() {
-			// TODO tracking
-			// trackOpenMenu(this.get('notifications').getUnreadCount());
+			this.track({
+				label: this.get('model.tracking_label'),
+				category: 'on-site-notifications'
+			});
 			this.get('notifications').loadFirstPage();
 		}
 	}
