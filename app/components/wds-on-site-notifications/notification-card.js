@@ -95,12 +95,26 @@ export default Component.extend(
 			return avatars;
 		}),
 
+		didInsertElement() {
+			const model = this.get('model');
+
+			this.track({
+				action: 'impression',
+				category: 'on-site-notifications',
+				label: model.type,
+				value: model.get('isUnread') ? 1 : 0
+			});
+		},
+
 		actions: {
-			onNotificationClicked(notification) {
+			onNotificationClicked() {
+				const model = this.get('model');
+
 				this.track({
 					action: 'click',
 					category: 'on-site-notifications',
-					label: notification.type
+					label: model.type,
+					value: model.get('isUnread') ? 1 : 0
 				});
 			},
 

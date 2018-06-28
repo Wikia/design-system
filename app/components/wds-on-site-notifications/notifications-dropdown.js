@@ -15,10 +15,12 @@ export default Component.extend(NotificationsUnreadCount, {
 	actions: {
 		onOpen() {
 			this.track({
-				label: this.get('model.tracking_label'),
+				label: 'open-menu',
 				category: 'on-site-notifications',
-				action: 'impression'
+				action: 'impression',
+				value: this.get('notifications').getUnreadCount()
 			});
+
 			this.get('notifications').loadFirstPage();
 		}
 	}
