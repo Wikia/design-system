@@ -34,6 +34,17 @@ export default function() {
 		};
 	});
 
+
+	this.get('mocks/searchSuggestions.json', () => {
+		return {
+			"suggestions": [
+				"A phrase",
+				"Another phrase",
+				"Phrase number three!"
+			]
+		};
+	});
+
 	this.get('https://services.wikia.com/on-site-notifications/notifications', () => {
 		return {
 			"notifications": [

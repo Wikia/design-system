@@ -1,5 +1,6 @@
 import {empty, equal} from '@ember/object/computed';
 import {inject as service} from '@ember/service';
+import { assert } from '@ember/debug';
 
 import Component from '@ember/component';
 import track from '../utils/track';
@@ -12,7 +13,7 @@ export default Component.extend({
 		'searchIsActive:wds-search-is-active',
 		'searchIsAlwaysVisible:wds-search-is-always-visible',
 		'model.partner_slot:wds-has-partner-slot',
-		'currentModal:wds-is-modal-opened'
+		'currentModal:wds-is-modal-opened',
 	],
 
 	searchIsActive: false,
@@ -21,9 +22,15 @@ export default Component.extend({
 
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
+	currentModal: null,
 
 	init() {
 		this._super(...arguments);
+
+		assert('Required property `model` is not set', this.model);
+		assert('Required function `track` is not set', this.track);
+		assert('Required function `onSearchSuggestionChosen` is not set', this.onSearchSuggestionChosen);
+		assert('Required function `goToSearchResults` is not set', this.goToSearchResults);
 
 		this.set('wdsFetch.servicesDomain', this.get('model.services_domain'));
 	},
@@ -33,12 +40,18 @@ export default Component.extend({
 	},
 
 	actions: {
-		activateSearch() {
-			this.set('searchIsActive', true);
+		onSearchToggleClicked() {
+			this.setProperties({
+				searchIsActive: true,
+				currentModal: 'search'
+			});
 		},
 
-		deactivateSearch() {
-			this.set('searchIsActive', false);
+		onSearchCloseClicked() {
+			this.setProperties({
+				searchIsActive: false,
+				currentModal: null
+			});
 		},
 
 		onSearchQueryChanged(query) {
@@ -59,7 +72,7 @@ export default Component.extend({
 		},
 
 		onSearchSuggestionChosen(suggestion) {
-			this.searchSuggestionChosen(suggestion);
+			this.onSearchSuggestionChosen(suggestion);
 		},
 
 		goToSearchResults(querystring) {
@@ -68,9 +81,17 @@ export default Component.extend({
 
 		openModal(modalType) {
 			this.set('currentModal', modalType);
+
+			if (modalType === 'search') {
+				this.set('searchIsActive', true);
+			}
 		},
 
 		closeModal() {
+			if (this.get('currentModal') === 'search') {
+				this.set('searchIsActive', false);
+			}
+
 			this.set('currentModal', null);
 		}
 	}
