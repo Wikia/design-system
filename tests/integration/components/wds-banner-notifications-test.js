@@ -38,7 +38,7 @@ module('Integration | Component | wds-banner-notifications', function (hooks) {
 		assert.dom('.wds-banner-notification__text').hasText(alertText);
 
 		assert.dom('.wds-banner-notification__icon use[*|href="#wds-icons-alert-small"]').exists();
-		assert.dom('.wds-banner-notification__text').hasText(warningTextText);
+		assert.dom('.wds-banner-notification__text').hasText(warningText);
 
 		try {
 			await waitFor('.wds-banner-notification', {
