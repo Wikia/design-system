@@ -1,11 +1,14 @@
 import {empty, equal} from '@ember/object/computed';
 import {inject as service} from '@ember/service';
 import { assert } from '@ember/debug';
+import NotificationsUnreadCount from '../mixins/notifications-unread-count';
 
 import Component from '@ember/component';
 import track from '../utils/track';
 
-export default Component.extend({
+
+export default Component.extend(NotificationsUnreadCount, {
+	notifications: service(),
 	wdsFetch: service(),
 
 	classNames: ['wds-global-navigation'],
@@ -36,7 +39,7 @@ export default Component.extend({
 	},
 
 	click(event) {
-		track(event, this.element, this.track);
+		track(event, this.element, this.track, 'click', 'navigation');
 	},
 
 	actions: {

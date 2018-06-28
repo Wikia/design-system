@@ -6,7 +6,6 @@ import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
 import NewReplyNotificationMixin from '../../mixins/new-reply-notification';
 import PostUpvoteNotificationMixin from '../../mixins/post-upvote-notification';
 import ReplyUpvoteNotificationMixin from '../../mixins/reply-upvote-notification';
-import MarkAsReadNotificationMixin from '../../mixins/mark-as-read-notification';
 import notificationTypes from '../../utils/notification-types';
 import extend from '@wikia/ember-fandom/utils/extend';
 
@@ -14,7 +13,6 @@ export default Component.extend(
 	NewReplyNotificationMixin,
 	PostUpvoteNotificationMixin,
 	ReplyUpvoteNotificationMixin,
-	MarkAsReadNotificationMixin,
 	{
 		i18n: service(),
 		logger: service(),
@@ -97,9 +95,36 @@ export default Component.extend(
 			return avatars;
 		}),
 
+		didInsertElement() {
+			const model = this.get('model');
+
+			this.track({
+				action: 'impression',
+				category: 'on-site-notifications',
+				label: model.get('type'),
+				value: model.get('isUnread') ? 1 : 0
+			});
+		},
+
 		actions: {
 			onNotificationClicked() {
-				// trackClick(this.get('model'));
+				const model = this.get('model');
+
+				this.track({
+					action: 'click',
+					category: 'on-site-notifications',
+					label: model.get('type'),
+					value: model.get('isUnread') ? 1 : 0
+				});
+			},
+
+			markAsRead(notification) {
+				this.track({
+					action: 'click',
+					category: 'on-site-notifications',
+					label: `mark-as-read-${notification.type}`
+				});
+				this.get('notifications').markAsRead(notification);
 			}
 		},
 

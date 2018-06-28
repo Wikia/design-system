@@ -55,7 +55,6 @@
 		justify-content: flex-end;
 		width: 100%;
 	}
-
 	&__dropdown-controls {
 		display: none;
 
@@ -71,10 +70,15 @@
 			display: flex;
 		}
 	}
+	&__modal-control-user {
+		position: relative;
+	}
 
 	&__modal {
+		background-color: $wds-fandom-color-light-gray;
 		height: 100%;
 		left: 0;
+		overflow-y: scroll;
 		position: fixed;
 		top: $wds-global-navigation-height;
 		width: 100%;
@@ -220,6 +224,7 @@
 		}
 	}
 
+	&__avatar-notifications-counter,
 	&__notifications-counter {
 		align-items: center;
 		background-color: $wds-color-white;
@@ -235,6 +240,11 @@
 		padding: 0 4px;
 		position: absolute;
 		top: 12px;
+	}
+
+	&__avatar-notifications-counter {
+		left: 3px;
+		top: 6px;
 	}
 
 	&__partner-slot {
