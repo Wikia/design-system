@@ -18,17 +18,22 @@ export default Component.extend({
 	i18n: service(),
 
 	action: '/search',
-	query: '',
 	minimalQueryLength: 3,
 	searchRequestInProgress: false,
 	isLoadingResultsSuggestions: false,
 	searchIsActive: false,
 	selectedSuggestionIndex: -1,
 	hasSuggestions: notEmpty('suggestions'),
-	isEmptyQuery: empty('query'),
 	cachedResultsLimit: 100,
 	debounceDuration: 250,
 	shouldWaitForClickOnCloseSuggestion: false,
+	// this object is declared inline to enable sharing it's internals between all instances of search
+	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
+	state: {
+		query: ''
+	},
+	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
+	isEmptyQuery: empty('state.query'),
 
 	init() {
 		this._super(...arguments);
@@ -76,7 +81,7 @@ export default Component.extend({
 	submit(event) {
 		if (this.goToSearchResults) {
 			event.preventDefault();
-			this.goToSearchResults(this.get('query'));
+			this.goToSearchResults(this.get('state.query'));
 			return;
 		}
 
@@ -85,7 +90,7 @@ export default Component.extend({
 	},
 
 	requestSuggestionsFromAPI() {
-		const query = this.get('query');
+		const query = this.get('state.query');
 		const uri = `${this.get('model.suggestions.url')}&query=${query}`;
 
 		/**
@@ -123,7 +128,7 @@ export default Component.extend({
 						 * Also, we don't want to show the suggestion results after a real search
 						 * will be finished, what will happen if search request is still in progress.
 						 */
-						if (!this.get('searchRequestInProgress') && query === this.get('query')) {
+						if (!this.get('searchRequestInProgress') && query === this.get('state.query')) {
 							this.setSearchSuggestionItems(suggestions);
 						}
 
@@ -176,7 +181,7 @@ export default Component.extend({
 	},
 
 	runSuggestionsRequest() {
-		return this.requestSuggestionsFromAPI(this.get('query'));
+		return this.requestSuggestionsFromAPI(this.get('state.query'));
 	},
 
 	//ToDo move to in-repo addon while workign on on-site notifications
@@ -200,7 +205,7 @@ export default Component.extend({
 			return;
 		}
 
-		const query = this.get('query'),
+		const query = this.get('state.query'),
 			highlightRegexp = new RegExp(`(${this.escapeRegex(query)})`, 'ig'),
 			highlighted = wrapMeHelper.compute(['$1'], {
 				className: 'wds-global-navigation__search-suggestion-highlight'
@@ -324,7 +329,7 @@ export default Component.extend({
 
 	closeSearch() {
 		this.setProperties({
-			query: '',
+			state: {query: ''},
 			searchIsActive: false
 		});
 		this.set('suggestions', []);
@@ -361,7 +366,7 @@ export default Component.extend({
 				selectedSuggestionIndex: -1
 			});
 
-			this.getSuggestions(this.get('query'));
+			this.getSuggestions(this.get('state.query'));
 		},
 
 		onCloseSearchClick(event) {
@@ -380,7 +385,7 @@ export default Component.extend({
 		},
 
 		onFocusOut() {
-			if (!this.get('query')) {
+			if (!this.get('state.query')) {
 				this.closeSearch();
 			}
 

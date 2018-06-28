@@ -8,7 +8,7 @@
 	</div>
 	{{#dropdown.toggle class='wds-global-navigation__search-input-wrapper' click=(action 'openSearch')}}
 		{{input
-			value=query
+			value=state.query
 			class='wds-global-navigation__search-input'
 			name=model.results.param-name
 			placeholder=(i18n model.placeholder-active.key ns='design-system' sitename=model.placeholder-active.params.sitename.value)
