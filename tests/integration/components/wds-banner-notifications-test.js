@@ -34,11 +34,14 @@ module('Integration | Component | wds-banner-notifications', function (hooks) {
 			throw new Error(`.wds-banner-notification weren't created`);
 		}
 
-		assert.dom('.wds-banner-notification__icon use[*|href="#wds-icons-error-small"]').exists();
-		assert.dom('.wds-banner-notification__text').hasText(alertText);
+		const notification1 = '.wds-banner-notification:first-child';
+		assert.dom(`${notification1} .wds-banner-notification__icon use[*|href="#wds-icons-error-small"]`).exists();
+		assert.dom(`${notification1} .wds-banner-notification__text`).hasText(alertText);
 
-		assert.dom('.wds-banner-notification__icon use[*|href="#wds-icons-alert-small"]').exists();
-		assert.dom('.wds-banner-notification__text').hasText(warningText);
+		const notification2 = '.wds-banner-notification:last-child';
+		// Yes, `alert` type has `error` icon and `warning` type has `alert` icon
+		assert.dom(`${notification2} .wds-banner-notification__icon use[*|href="#wds-icons-alert-small"]`).exists();
+		assert.dom(`${notification2} .wds-banner-notification__text`).hasText(warningText);
 
 		try {
 			await waitFor('.wds-banner-notification', {
