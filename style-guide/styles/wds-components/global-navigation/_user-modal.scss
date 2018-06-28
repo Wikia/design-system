@@ -6,7 +6,7 @@
 		margin-top: 18px;
 
 		.wds-avatar {
-			@include wds-avatar(94px, $wds-fandom-color-middle-gray, $wds-color-white, $wds-fandom-color-middle-gray);
+			@include wds-avatar(94px, $wds-fandom-color-middle-gray, $wds-fandom-color-middle-gray, $wds-fandom-color-light-gray);
 		}
 	}
 
