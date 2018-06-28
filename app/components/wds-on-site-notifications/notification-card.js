@@ -6,7 +6,6 @@ import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
 import NewReplyNotificationMixin from '../../mixins/new-reply-notification';
 import PostUpvoteNotificationMixin from '../../mixins/post-upvote-notification';
 import ReplyUpvoteNotificationMixin from '../../mixins/reply-upvote-notification';
-import MarkAsReadNotificationMixin from '../../mixins/mark-as-read-notification';
 import notificationTypes from '../../utils/notification-types';
 import extend from '@wikia/ember-fandom/utils/extend';
 
@@ -14,7 +13,6 @@ export default Component.extend(
 	NewReplyNotificationMixin,
 	PostUpvoteNotificationMixin,
 	ReplyUpvoteNotificationMixin,
-	MarkAsReadNotificationMixin,
 	{
 		i18n: service(),
 		logger: service(),
@@ -98,8 +96,21 @@ export default Component.extend(
 		}),
 
 		actions: {
-			onNotificationClicked() {
-				// trackClick(this.get('model'));
+			onNotificationClicked(notification) {
+				this.track({
+					action: 'click',
+					category: 'on-site-notifications',
+					label: notification.type
+				});
+			},
+
+			markAsRead(notification) {
+				this.track({
+					action: 'click',
+					category: 'on-site-notifications',
+					label: `mark-as-read-${notification.type}`
+				});
+				this.get('notifications').markAsRead(notification);
 			}
 		},
 

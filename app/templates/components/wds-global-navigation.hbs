@@ -24,7 +24,7 @@
 				{{wds-global-navigation/anon model=model.anon}}
 			{{/if}}
 			{{#if model.user}}
-				{{wds-on-site-notifications/notifications-dropdown}}
+				{{wds-on-site-notifications/notifications-dropdown track=track}}
 			{{/if}}
 			<div class="wds-global-navigation__start-a-wiki">
 				{{wds-global-navigation/link-button
@@ -38,7 +38,14 @@
 			{{/wds-button}}
 
 			{{#if model.user}}
-				{{#wds-button click=(action 'openModal' 'user') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-user' text=true type='button'}}
+				{{#wds-button
+					click=(action 'openModal' 'user')
+					class='wds-global-navigation__modal-control wds-global-navigation__modal-control-user'
+					text=true
+					type='button'
+					data-tracking-label="open-menu"
+					data-tracking-category="on-site-notifications"
+				}}
 					{{wds-avatar src=model.user.avatar_url alt=model.user.username}}
 					{{#if unreadCount}}
 						<span class="wds-global-navigation__avatar-notifications-counter">
@@ -52,7 +59,12 @@
 				{{/wds-button}}
 			{{/if}}
 
-			{{wds-global-navigation/user-modal isOpen=isUserModalOpen user=model.user header=model.notifications.header.title.key}}
+			{{wds-global-navigation/user-modal
+				isOpen=isUserModalOpen
+				user=model.user
+				header=model.notifications.header.title.key
+				track=track
+			}}
 
 			{{#wds-button click=(action 'closeModal') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-close' text=true type='button'}}
 				{{svg 'wds-icons-cross' class='wds-icon'}}
