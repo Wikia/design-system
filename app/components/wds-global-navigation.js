@@ -32,7 +32,7 @@ export default Component.extend(NotificationsUnreadCount, {
 	},
 
 	click(event) {
-		track(event, this.element, this.track);
+		track(event, this.element, this.track, 'click', 'navigation');
 	},
 
 	actions: {
