@@ -32,8 +32,6 @@ export default Component.extend(NotificationsUnreadCount, {
 
 		assert('Required property `model` is not set', this.model);
 		assert('Required function `track` is not set', this.track);
-		assert('Required function `onSearchSuggestionChosen` is not set', this.onSearchSuggestionChosen);
-		assert('Required function `goToSearchResults` is not set', this.goToSearchResults);
 
 		this.set('wdsFetch.servicesDomain', this.get('model.services_domain'));
 	},

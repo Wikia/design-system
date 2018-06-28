@@ -8,8 +8,6 @@ export default Component.extend({
 
 		assert('Required property `model` is not set', this.model);
 		assert('Required function `onSearchToggleClicked` is not set', this.onSearchToggleClicked);
-		assert('Required function `onSearchSuggestionChosen` is not set', this.onSearchSuggestionChosen);
-		assert('Required function `goToSearchResults` is not set', this.goToSearchResults);
 		assert('Required function `openModal` is not set', this.openModal);
 	},
 
