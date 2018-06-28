@@ -4,6 +4,7 @@ import Service from '@ember/service';
 
 export default Service.extend({
 	counter: 0,
+	hideAfterMs: 10000,
 
 	init() {
 		this._super(...arguments);
@@ -16,6 +17,6 @@ export default Service.extend({
 
 		later(this, () => {
 			this.model.removeObject(notification);
-		}, 10000);
+		}, this.hideAfterMs);
 	}
 });
