@@ -4,7 +4,6 @@ import NotificationsUnreadCount from '../../mixins/notifications-unread-count';
 
 export default Component.extend(NotificationsUnreadCount, {
 	tagName: '',
-
 	notifications: service(),
 
 	didInsertElement() {
@@ -15,8 +14,13 @@ export default Component.extend(NotificationsUnreadCount, {
 
 	actions: {
 		onOpen() {
-			// TODO tracking
-			// trackOpenMenu(this.get('notifications').getUnreadCount());
+			this.track({
+				label: 'open-menu',
+				category: 'on-site-notifications',
+				action: 'click',
+				value: this.get('notifications').getUnreadCount()
+			});
+
 			this.get('notifications').loadFirstPage();
 		}
 	}

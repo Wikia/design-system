@@ -39,12 +39,14 @@ Router.map(function () {
 		this.route('avatars');
 		this.route('buttons');
 		this.route('floating-buttons');
+		this.route('dialogs');
 		this.route('toggles');
 		this.route('dropdowns');
 		this.route('lists');
 		this.route('progress-indicators');
 		this.route('tabs');
 		this.route('banner-notifications');
+		this.route('inputs');
 	});
 
 	this.route('identity', function () {

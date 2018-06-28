@@ -8,18 +8,20 @@
 	</div>
 	{{#dropdown.toggle class='wds-global-navigation__search-input-wrapper' click=(action 'openSearch')}}
 		{{input
-			value=query
+			value=state.query
 			class='wds-global-navigation__search-input'
 			name=model.results.param-name
 			placeholder=(i18n model.placeholder-active.key ns='design-system' sitename=model.placeholder-active.params.sitename.value)
 			type='search'
 			autocomplete='off'
 			input=(action 'onQueryChanged')
-			enter=(action 'enter')
 			key-down=(action 'onKeyDown')
 			focusIn=(action 'onFocusIn')
 			focusOut=(action 'onFocusOut')
 		}}
+		{{#wds-button text=true class='wds-global-navigation__search-clear' type='button' click=(action 'onClearSearchClick')}}
+			{{svg 'wds-icons-circle-plus' class='wds-icon wds-icon-small wds-global-navigation__search-close-icon'}}
+		{{/wds-button}}
 		{{#wds-button text=true class='wds-global-navigation__search-close' type='button' click=(action 'onCloseSearchClick')}}
 			{{svg 'wds-icons-cross' class='wds-icon wds-icon-tiny wds-global-navigation__search-close-icon'}}
 		{{/wds-button}}
@@ -34,12 +36,13 @@
 	{{#dropdown.content class='wds-global-navigation__search-suggestions'}}
 		{{#wds-list linked=true ellipsis=true}}
 			{{#each suggestions as |suggestion index|}}
-				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}}"
-					onmousedown={{action 'onSearchSuggestionChosen' suggestion}} onmouseenter={{action
-					'selectItem' index}}>
+				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}} wds-global-navigation__search__suggestion"
+					{{action 'selectItem' index on='mouseEnter'}}
+					{{action 'onSuggestionMouseDown' on='mouseDown'}}>
 					<a href="{{suggestion.uri}}"
 					   class="wds-global-navigation__dropdown-link"
-					   data-tracking-label="{{model.suggestions.tracking_label}}">
+					   data-tracking-label="{{model.suggestions.tracking_label}}"
+					>
 						{{{suggestion.text}}}
 					</a>
 				</li>

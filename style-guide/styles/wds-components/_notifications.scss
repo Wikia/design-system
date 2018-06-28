@@ -10,7 +10,7 @@
 	}
 
 	&__mark-all-as-read {
-		color: $wds-fandom-color-aqua;
+		color: $wds-fandom-color-link;
 		cursor: pointer;
 		font-size: $wds-typescale-size-minus-2;
 		font-weight: bold;
@@ -54,10 +54,10 @@
 }
 
 .wds-notification-card {
-	$text-color: $wds-color-dark-blue-gray;
+	$text-color: $wds-fandom-color-black;
 	$snippet-color: $wds-color-faint-gray;
-	$context-color: $wds-color-light-gray;
-	$icon-color: $wds-color-light-gray;
+	$context-color: $wds-fandom-color-dark-gray;
+	$icon-color: $wds-fandom-color-middle-gray;
 
 	padding: 12px 0 8px;
 	text-align: left;
@@ -145,7 +145,29 @@
 
 	.wds-global-navigation & {
 		.wds-avatar {
-			@include wds-avatar(30px, $wds-color-faint-gray, $wds-color-faint-gray, $wds-color-white);
+			@include wds-avatar(30px, $wds-fandom-color-middle-gray, $wds-fandom-color-middle-gray, $wds-color-white);
+		}
+	}
+}
+
+@media #{$wds-breakpoint-small-down} {
+	.wds-notifications {
+		&__mark-all-as-read-button {
+			align-items: baseline;
+			border-bottom: 1px solid $wds-color-medium-gray;
+			justify-content: space-between;
+			margin: 0 12px;
+			width: unset;
+		}
+
+		&__mark-all-as-read {
+			padding: unset;
+		}
+
+		&__header {
+			font-weight: bold;
+			font-size: $wds-typescale-size-minus-1;
+			margin-bottom: 6px;
 		}
 	}
 }

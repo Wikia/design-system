@@ -40,6 +40,8 @@ module('Integration | Component | wds-on-site-notifications/notifications-list',
 				return 'some string';
 			}
 		}));
+
+		this.set('track', function(){});
 	});
 
 	module('with loaded results', function (hooks) {
@@ -55,7 +57,7 @@ module('Integration | Component | wds-on-site-notifications/notifications-list',
 		});
 
 		test('it should render as a UL element with proper classnames', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
+			await render(hbs`{{wds-on-site-notifications/notifications-list track=track}}`);
 
 			assert.dom('ul').hasClass('wds-notifications__notification-list');
 			assert.dom('ul').hasClass('wds-list');
@@ -63,13 +65,13 @@ module('Integration | Component | wds-on-site-notifications/notifications-list',
 		});
 
 		test('it should render a proper number of notification-card components', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
+			await render(hbs`{{wds-on-site-notifications/notifications-list track=track}}`);
 
 			assert.dom('.wds-notification-card').exists({ count: 2 });
 		});
 
 		test('it should not render loading spinner', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
+			await render(hbs`{{wds-on-site-notifications/notifications-list track=track}}`);
 
 			assert.dom('.wds-spinner').doesNotExist();
 		});
@@ -88,7 +90,7 @@ module('Integration | Component | wds-on-site-notifications/notifications-list',
 		});
 
 		test('it should render as a UL element with proper classnames', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
+			await render(hbs`{{wds-on-site-notifications/notifications-list track=track}}`);
 
 			assert.dom('ul').hasClass('wds-notifications__notification-list');
 			assert.dom('ul').hasClass('wds-list');
@@ -96,7 +98,7 @@ module('Integration | Component | wds-on-site-notifications/notifications-list',
 		});
 
 		test('it should render loading spinner', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notifications-list}}`);
+			await render(hbs`{{wds-on-site-notifications/notifications-list track=track}}`);
 
 			assert.dom('.wds-spinner').exists();
 		});

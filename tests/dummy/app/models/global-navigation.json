@@ -31,7 +31,7 @@
         }
       },
       "suggestions": {
-        "url": "\/mocks/searchSuggestions.json?",
+        "url": "mocks/searchSuggestions.json?",
         "param-name": "query",
         "tracking_label": "search-suggestion"
       }
@@ -176,7 +176,7 @@
         }
       },
       "suggestions": {
-        "url": "\/\/starwars.wikia.com\/index.php?action=ajax&rs=getLinkSuggest&format=json",
+        "url": "mocks/searchSuggestions.json?",
         "param-name": "query",
         "tracking_label": "search-suggestion"
       }
@@ -266,7 +266,7 @@
       }
     ],
     "user": {
-      "avatar_url": "/design-system/images/FANDOM-Avatar.jpg",
+      "avatar_url": "images/FANDOM-Avatar.jpg",
       "username": "Ryba777",
       "tracking_label": "account",
       "items": [
@@ -370,7 +370,7 @@
         }
       },
       "suggestions": {
-        "url": "\\/mocks/searchSuggestions.json?",
+        "url": "mocks/searchSuggestions.json?",
         "param-name": "query",
         "tracking_label": "search-suggestion"
       }
@@ -451,7 +451,7 @@
         }
       },
       "suggestions": {
-        "url": "\/mocks/searchSuggestions.json?",
+        "url": "mocks/searchSuggestions.json?",
         "param-name": "query",
         "tracking_label": "search-suggestion"
       }

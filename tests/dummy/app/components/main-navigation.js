@@ -1,6 +1,5 @@
 import Component from '@ember/component';
 import {run, throttle} from '@ember/runloop';
-import $ from 'jquery';
 
 export default Component.extend({
 	classNames: 'main-navigation',
@@ -10,10 +9,10 @@ export default Component.extend({
 	offset: 0,
 
 	didInsertElement() {
-		this.set('offset', this.$().offset().top || 0);
+		this.set('offset', this.element.getBoundingClientRect().top + document.body.scrollTop || 0);
 
 		run.schedule('afterRender', () => {
-			$(window).on('scroll', () => {
+			window.addEventListener('scroll', () => {
 				throttle(this, function () {
 					this.set('isFixed', this.get('offset') < window.pageYOffset);
 				}, 100);
