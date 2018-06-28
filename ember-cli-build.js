@@ -47,7 +47,8 @@ module.exports = function(defaults) {
 				'style-guide/styles',
 				'node_modules/highlight.js/styles'
 			]
-		}
+		},
+		vendorFiles: { 'jquery.js': null }
 	});
 
 	var additionalTrees = [];

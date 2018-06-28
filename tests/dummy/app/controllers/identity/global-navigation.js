@@ -1,9 +1,9 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-	track(context) {
+	track(label) {
 		// eslint-disable-next-line no-console
-		console.info('tracking', context);
+		console.info('tracking', {label});
 	},
 
 	onSearchSuggestionChosen({title}) {

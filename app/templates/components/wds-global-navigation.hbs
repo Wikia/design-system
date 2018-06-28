@@ -13,10 +13,10 @@
 		<div class="wds-global-navigation__dropdown-controls">
 			{{wds-global-navigation/search
 				model=model.search
-				activateSearch=(action 'activateSearch')
-				deactivateSearch=(action 'deactivateSearch')
+				onSearchToggleClicked=(action 'onSearchToggleClicked')
+				onSearchCloseClicked=(action 'onSearchCloseClicked')
 				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
-				goToSearchResults=(action 'goToSearchResults')
+				goToSearchResults=(action goToSearchResults)
 			}}
 			{{#if model.user}}
 				{{wds-global-navigation/user model=model.user}}
@@ -33,9 +33,15 @@
 			</div>
 		</div>
 		<div class="wds-global-navigation__modal-controls">
-			{{#wds-button click=(action 'openModal' 'search') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
-				{{wds-icon name='magnifying-glass'}}
-			{{/wds-button}}
+			{{wds-global-navigation/search-modal
+				model=model.search
+				navigationModel=model.main_navigation
+				isOpen=isSearchModalOpen
+				openModal=(action 'openModal')
+				onSearchToggleClicked=(action 'onSearchToggleClicked')
+				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
+				goToSearchResults=(action goToSearchResults)
+			}}
 
 			{{#if model.user}}
 				{{#wds-button
