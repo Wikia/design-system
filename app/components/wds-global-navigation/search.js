@@ -2,7 +2,8 @@ import {notEmpty, empty} from '@ember/object/computed';
 import Component from '@ember/component';
 import EmberObject from '@ember/object';
 import fetch from 'fetch';
-import {run} from '@ember/runloop';
+import { assert } from '@ember/debug';
+import {run, scheduleOnce} from '@ember/runloop';
 import {inject as service} from '@ember/service';
 import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
 
@@ -17,18 +18,28 @@ export default Component.extend({
 	i18n: service(),
 
 	action: '/search',
-	query: '',
+	minimalQueryLength: 3,
 	searchRequestInProgress: false,
 	isLoadingResultsSuggestions: false,
 	searchIsActive: false,
 	selectedSuggestionIndex: -1,
 	hasSuggestions: notEmpty('suggestions'),
-	isEmptyQuery: empty('query'),
 	cachedResultsLimit: 100,
 	debounceDuration: 250,
+	shouldWaitForClickOnCloseSuggestion: false,
+	// this object is declared inline to enable sharing it's internals between all instances of search
+	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
+	state: {
+		query: ''
+	},
+	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
+	isEmptyQuery: empty('state.query'),
 
 	init() {
 		this._super(...arguments);
+
+		assert('Required property `model` is not set', this.model);
+		assert('Required function `onSearchToggleClicked` is not set', this.onSearchToggleClicked);
 
 		this.suggestions = [];
 
@@ -50,15 +61,34 @@ export default Component.extend({
 		this.set('inputField', this.element.querySelector('.wds-global-navigation__search-input'));
 	},
 
+	click(event) {
+		if (event.target.closest('.wds-global-navigation__search__suggestion')) {
+			if (this.onSearchSuggestionChosen) {
+				event.preventDefault();
+				this.onSearchSuggestionChosen(this.suggestions[this.selectedSuggestionIndex]);
+			}
+
+			this.setProperties({
+				shouldWaitForClickOnCloseSuggestion: false,
+			});
+			this.resetSearchState();
+
+		}
+	},
+
 	submit(event) {
-		event.preventDefault();
+		if (this.goToSearchResults) {
+			event.preventDefault();
+			this.goToSearchResults(this.get('state.query'));
+			return;
+		}
 
 		this.set('searchRequestInProgress', true);
-		this.goToSearchResults(this.get('query'));
+
 	},
 
 	requestSuggestionsFromAPI() {
-		const query = this.get('query');
+		const query = this.get('state.query');
 		const uri = `${this.get('model.suggestions.url')}&query=${query}`;
 
 		/**
@@ -96,7 +126,7 @@ export default Component.extend({
 						 * Also, we don't want to show the suggestion results after a real search
 						 * will be finished, what will happen if search request is still in progress.
 						 */
-						if (!this.get('searchRequestInProgress') && query === this.get('query')) {
+						if (!this.get('searchRequestInProgress') && query === this.get('state.query')) {
 							this.setSearchSuggestionItems(suggestions);
 						}
 
@@ -138,7 +168,7 @@ export default Component.extend({
 		});
 
 		// If the query string is empty or shorter than the minimal length, return to leave the view blank
-		if (!query || query.length < this.get('queryMinimalLength')) {
+		if (!query || query.length < this.get('minimalQueryLength')) {
 			this.set('isLoadingResultsSuggestions', false);
 		} else if (this.hasCachedResult(query)) {
 			this.setSearchSuggestionItems(this.getCachedResult(query));
@@ -149,7 +179,7 @@ export default Component.extend({
 	},
 
 	runSuggestionsRequest() {
-		return this.requestSuggestionsFromAPI(this.get('query'));
+		return this.requestSuggestionsFromAPI(this.get('state.query'));
 	},
 
 	//ToDo move to in-repo addon while workign on on-site notifications
@@ -173,10 +203,10 @@ export default Component.extend({
 			return;
 		}
 
-		const query = this.get('query'),
+		const query = this.get('state.query'),
 			highlightRegexp = new RegExp(`(${this.escapeRegex(query)})`, 'ig'),
 			highlighted = wrapMeHelper.compute(['$1'], {
-				className: 'wikia-search__suggestion-highlighted'
+				className: 'wds-global-navigation__search-suggestion-highlight'
 			});
 
 		suggestions.forEach(
@@ -297,37 +327,35 @@ export default Component.extend({
 
 	closeSearch() {
 		this.setProperties({
-			query: '',
+			state: {query: ''},
 			searchIsActive: false
 		});
 		this.set('suggestions', []);
-		this.deactivateSearch();
+
+		if (this.onSearchCloseClicked) {
+			this.onSearchCloseClicked();
+		}
+	},
+
+	resetSearchState() {
+		this.set('inputFocused', false);
+
+		run(() => {
+			scheduleOnce('afterRender', this, () => {
+				this.set('selectedSuggestionIndex', -1);
+			});
+		});
 	},
 
 	actions: {
-		enter() {
-			const index = this.get('selectedSuggestionIndex');
-
-			this.get('inputField').blur();
-
-			if (this.get('selectedSuggestionIndex') !== -1) {
-				this.onSearchSuggestionChosen(this.get('suggestions')[index]);
-			} else {
-				this.goToSearchResults(this.get('query'));
-			}
-
-			this.setSearchSuggestionItems();
-
-		},
-
 		onSearchSuggestionChosen(suggestion) {
 			this.onSearchSuggestionChosen(suggestion);
 		},
 
 		openSearch() {
 			this.set('searchIsActive', true);
-			this.activateSearch();
-			this.get('inputField').focus();
+			this.onSearchToggleClicked();
+			this.inputField.focus();
 		},
 
 		onQueryChanged() {
@@ -336,7 +364,7 @@ export default Component.extend({
 				selectedSuggestionIndex: -1
 			});
 
-			this.getSuggestions(this.get('query'));
+			this.getSuggestions(this.get('state.query'));
 		},
 
 		onCloseSearchClick(event) {
@@ -344,19 +372,30 @@ export default Component.extend({
 			this.closeSearch();
 		},
 
+
+		onClearSearchClick() {
+			this.closeSearch();
+			this.inputField.focus();
+		},
+
 		onFocusIn() {
 			this.set('inputFocused', true);
 		},
 
 		onFocusOut() {
-			if (!this.get('query')) {
+			if (!this.get('state.query')) {
 				this.closeSearch();
 			}
-			this.set('inputFocused', false);
 
-			run.scheduleOnce('afterRender', () => {
-				this.set('selectedSuggestionIndex', -1);
-			});
+			if (!this.shouldWaitForClickOnCloseSuggestion) {
+				this.resetSearchState();
+			}
+
+
+		},
+
+		onSuggestionMouseDown() {
+			this.set('shouldWaitForClickOnCloseSuggestion', true);
 		},
 
 		onKeyDown(value, event) {
@@ -366,15 +405,26 @@ export default Component.extend({
 			if (keyCode === 40) {
 				if (this.get('selectedSuggestionIndex') < this.get('suggestions.length') - 1) {
 					this.incrementProperty('selectedSuggestionIndex');
+					event.preventDefault();
 				}
 			// up arrow
 			} else if (keyCode === 38) {
 				if (this.get('suggestions.length') && this.get('selectedSuggestionIndex') > -1) {
 					this.decrementProperty('selectedSuggestionIndex');
+					event.preventDefault();
 				}
 			// ESC key
 			} else if (keyCode === 27) {
 				this.closeSearch();
+			} else if (keyCode === 13) {
+				const index = this.get('selectedSuggestionIndex');
+
+				if (this.get('selectedSuggestionIndex') !== -1) {
+					this.inputField.blur();
+					this.onSearchSuggestionChosen(this.get('suggestions')[index]);
+				}
+
+				this.setSearchSuggestionItems();
 			}
 		},
 

@@ -20,7 +20,7 @@ export default Component.extend({
 
 	click(event) {
 		if (this.track) {
-			track(event, this.element, this.track);
+			track(event, this.element, this.track, 'click', 'community-header');
 		}
 	},
 });

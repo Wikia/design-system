@@ -34,6 +34,17 @@ export default function() {
 		};
 	});
 
+
+	this.get('mocks/searchSuggestions.json', () => {
+		return {
+			"suggestions": [
+				"A phrase",
+				"Another phrase",
+				"Phrase number three!"
+			]
+		};
+	});
+
 	this.get('https://services.wikia.com/on-site-notifications/notifications', () => {
 		return {
 			"notifications": [
@@ -907,7 +918,7 @@ export default function() {
 				},
 				{
 					"type": "replies-notification",
-					"community": { "id": "1", "name": "Westworld Wiki" },
+					"community": { "id": "1", "name": "Westworld Wiki end" },
 					"refersTo": {
 						"uri": "http://westworld.wikia.com/d/p/3120688743317564066",
 						"createdBy": "3321936",

@@ -1,6 +1,7 @@
 {{#each notificationsList as |notification|}}
 	{{wds-on-site-notifications/notification-card
 		model=notification
+		track=track
 	}}
 {{/each}}
 {{#if isLoadingNewResults }}

@@ -80,12 +80,20 @@ export default Controller.extend({
 						location: 'route-components.avatars'
 					},
 					{
+						name: 'Inputs',
+						location: 'route-components.inputs'
+					},
+					{
 						name: 'Buttons',
 						location: 'route-components.buttons'
 					},
 					{
 						name: 'Floating Buttons',
 						location: 'route-components.floating-buttons'
+					},
+					{
+						name: 'Dialogs',
+						location: 'route-components.dialogs'
 					},
 					{
 						name: 'Toggles',

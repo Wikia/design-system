@@ -53,6 +53,8 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 				return 'some string';
 			}
 		}));
+
+		this.set('track', function() {});
 	});
 
 	module('for notification of any type', function(hooks) {
@@ -61,13 +63,13 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 
 		test('it should render as an LI with a proper classname', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('li').hasClass('wds-notification-card');
 		});
 
 		test('it should contain all the elements common for all notification types', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			//icon
 			assert.dom('.wds-notification-card__icon-wrapper svg').exists();
@@ -86,7 +88,7 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 
 		test('it should display a proper community name', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-notification-card__community').hasText(notificationDataStub.communityName);
 		});
@@ -98,13 +100,13 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 
 		test('it should render snippet', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-notification-card__snippet').exists();
 		});
 
 		test('it should not render announcement author', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.notification-entity-announcement-author').doesNotExist();
 		});
@@ -116,13 +118,13 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 
 		test('it should not render snippet', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-notification-card__snippet').doesNotExist();
 		});
 
 		test('it should not render announcement author', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.notification-entity-announcement-author').doesNotExist();
 		});
@@ -134,13 +136,13 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 
 		test('it should render wds-avatar-stack', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-avatar-stack').exists();
 		});
 
 		test('it should render specific number of avatars inside avatar stack', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-avatar-stack .wds-avatar').exists({ count: 3 });
 		});
@@ -152,7 +154,7 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 
 		test('it should not render wds-avatar-stack', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-avatar-stack').doesNotExist();
 		});
@@ -164,7 +166,7 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 
 		test('it should not render wds-avatar-stack', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-avatar-stack').doesNotExist();
 		});
@@ -178,19 +180,19 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		});
 
 		test('it should not render wds-avatar-stack', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-avatar-stack').doesNotExist();
 		});
 
 		test('it should render its title in the text container', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-notification-card__text').hasText(announcementTitle);
 		});
 
 		test('it should not render announcement author', async function (assert) {
-			await render(hbs`{{wds-on-site-notifications/notification-card model=model}}`);
+			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.notification-entity-announcement-author').hasText(notificationDataStub.latestActors[0].name);
 		});
