@@ -13,14 +13,12 @@ export default Component.extend({
 
 	actions: {
 		onOpen() {
-			if (this.track) {
-				this.track({
-					label: 'open-menu',
-					category: 'on-site-notifications',
-					action: 'click',
-					value: this.get('wdsOnSiteNotifications').getUnreadCount()
-				});
-			}
+			this.track({
+				label: 'open-menu',
+				category: 'on-site-notifications',
+				action: 'click',
+				value: this.get('wdsOnSiteNotifications').getUnreadCount()
+			});
 
 			this.get('wdsOnSiteNotifications').loadFirstPage();
 		}

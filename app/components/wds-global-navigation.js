@@ -32,9 +32,7 @@ export default Component.extend({
 	},
 
 	click(event) {
-		if (this.track) {
-			track(event, this.element, this.track, 'click', 'navigation');
-		}
+		track(event, this.element, this.track, 'click', 'navigation');
 	},
 
 	actions: {
@@ -92,5 +90,7 @@ export default Component.extend({
 
 			this.set('currentModal', null);
 		}
-	}
+	},
+
+	track() {}
 });
