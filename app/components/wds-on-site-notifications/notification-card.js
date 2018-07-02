@@ -1,22 +1,16 @@
-import {inject as service} from '@ember/service';
-import {alias} from '@ember/object/computed';
+import { inject as service } from '@ember/service';
+import { alias } from '@ember/object/computed';
 import Component from '@ember/component';
-import {computed} from '@ember/object';
+import { computed } from '@ember/object';
 import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
-import NewReplyNotificationMixin from '../../mixins/new-reply-notification';
-import PostUpvoteNotificationMixin from '../../mixins/post-upvote-notification';
-import ReplyUpvoteNotificationMixin from '../../mixins/reply-upvote-notification';
 import notificationTypes from '../../utils/notification-types';
 import extend from '@wikia/ember-fandom/utils/extend';
 
 export default Component.extend(
-	NewReplyNotificationMixin,
-	PostUpvoteNotificationMixin,
-	ReplyUpvoteNotificationMixin,
 	{
 		i18n: service(),
 		logger: service(),
-		notifications: service(),
+		wdsOnSiteNotifications: service(),
 
 		classNames: ['wds-notification-card'],
 		classNameBindings: ['isUnread:wds-is-unread'],
@@ -124,7 +118,7 @@ export default Component.extend(
 					category: 'on-site-notifications',
 					label: `mark-as-read-${notification.type}`
 				});
-				this.get('notifications').markAsRead(notification);
+				this.get('wdsOnSiteNotifications').markAsRead(notification);
 			}
 		},
 
@@ -142,6 +136,100 @@ export default Component.extend(
 
 		isAnnouncement(type) {
 			return type === notificationTypes.announcement;
+		},
+
+		getPostUpvoteMessageBody(model) {
+			const hasTitle = model.get('title');
+			const totalUniqueActors = model.get('totalUniqueActors');
+			const hasMultipleUsers = totalUniqueActors > 1;
+
+			if (hasTitle) {
+				if (hasMultipleUsers) {
+					return this.getTranslatedMessage('notifications-post-upvote-multiple-users-with-title', {
+						postTitle: this.get('postTitleMarkup'),
+						number: totalUniqueActors
+					});
+				} else {
+					return this.getTranslatedMessage('notifications-post-upvote-single-user-with-title', {
+						postTitle: this.get('postTitleMarkup'),
+					});
+				}
+			} else if (hasMultipleUsers) {
+				return this.getTranslatedMessage('notifications-post-upvote-multiple-users-no-title', {
+					number: totalUniqueActors
+				});
+			} else {
+				return this.getTranslatedMessage('notifications-post-upvote-single-user-no-title');
+			}
+		},
+
+		getReplyMessageBody(model) {
+			const hasTitle = model.get('title');
+			const totalUniqueActors = model.get('totalUniqueActors');
+			const hasTwoUsers = totalUniqueActors === 2;
+			const hasThreeOrMoreUsers = totalUniqueActors > 2;
+			const firstReplierName = model.get('latestActors.0.name');
+
+			if (hasTitle) {
+				if (hasThreeOrMoreUsers) {
+					return this.getTranslatedMessage('notifications-replied-by-multiple-users-with-title', {
+						postTitle: this.get('postTitleMarkup'),
+						mostRecentUser: firstReplierName,
+						number: totalUniqueActors - 1
+					});
+				} else if (hasTwoUsers) {
+					return this.getTranslatedMessage('notifications-replied-by-two-users-with-title', {
+						firstUser: firstReplierName,
+						secondUser: model.get('latestActors.1.name'),
+						postTitle: this.get('postTitleMarkup'),
+					});
+				} else {
+					return this.getTranslatedMessage('notifications-replied-by-with-title', {
+						user: firstReplierName,
+						postTitle: this.get('postTitleMarkup'),
+					});
+				}
+			} else if (hasThreeOrMoreUsers) {
+				return this.getTranslatedMessage('notifications-replied-by-multiple-users-no-title', {
+					username: this.get('usernameMarkup'),
+					mostRecentUser: firstReplierName,
+					number: totalUniqueActors - 1
+				});
+			} else if (hasTwoUsers) {
+				return this.getTranslatedMessage('notifications-replied-by-two-users-no-title', {
+					firstUser: firstReplierName,
+					secondUser: model.get('latestActors.1.name'),
+				});
+			} else {
+				return this.getTranslatedMessage('notifications-replied-by-no-title', {
+					user: firstReplierName,
+				});
+			}
+		},
+
+		getReplyUpvoteMessageBody(model) {
+			const hasTitle = model.get('title');
+			const totalUniqueActors = model.get('totalUniqueActors');
+			const hasMultipleUsers = totalUniqueActors > 1;
+
+			if (hasTitle) {
+				if (hasMultipleUsers) {
+					return this.getTranslatedMessage('notifications-reply-upvote-multiple-users-with-title', {
+						postTitle: this.get('postTitleMarkup'),
+						number: totalUniqueActors - 1
+					});
+				} else {
+					return this.getTranslatedMessage('notifications-reply-upvote-single-user-with-title', {
+						postTitle: this.get('postTitleMarkup'),
+					});
+				}
+			} else if (hasMultipleUsers) {
+				return this.getTranslatedMessage('notifications-reply-upvote-multiple-users-no-title', {
+					number: totalUniqueActors
+				});
+			} else {
+				return this.getTranslatedMessage('notifications-reply-upvote-single-user-no-title');
+			}
 		},
 
 		getTranslatedMessage(key, context) {

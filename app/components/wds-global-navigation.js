@@ -1,14 +1,12 @@
-import {empty, equal} from '@ember/object/computed';
-import {inject as service} from '@ember/service';
+import { empty, equal } from '@ember/object/computed';
+import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
-import NotificationsUnreadCount from '../mixins/notifications-unread-count';
+import WdsOnSiteNotificationsUnreadCount from '../mixins/wds-on-site-notifications-unread-count';
 
 import Component from '@ember/component';
 import track from '../utils/track';
 
-
-export default Component.extend(NotificationsUnreadCount, {
-	notifications: service(),
+export default Component.extend(WdsOnSiteNotificationsUnreadCount, {
 	wdsFetch: service(),
 
 	classNames: ['wds-global-navigation'],
@@ -57,19 +55,19 @@ export default Component.extend(NotificationsUnreadCount, {
 
 		onSearchQueryChanged(query) {
 			return [
-					{
-						text: `${query} One`,
-						uri: '#'
-					},
-					{
-						text: `${query} Two`,
-						uri: '#'
-					},
-					{
-						text: `${query} Three`,
-						uri: '#'
-					}
-				];
+				{
+					text: `${query} One`,
+					uri: '#'
+				},
+				{
+					text: `${query} Two`,
+					uri: '#'
+				},
+				{
+					text: `${query} Three`,
+					uri: '#'
+				}
+			];
 		},
 
 		onSearchSuggestionChosen(suggestion) {

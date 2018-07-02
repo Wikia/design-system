@@ -1,17 +1,17 @@
-import {getOwner} from '@ember/application';
-import EmberObject, {get} from '@ember/object';
-import {A} from '@ember/array';
-import {inject as service} from '@ember/service';
+import EmberObject, { get } from '@ember/object';
+import { A } from '@ember/array';
+import { inject as service } from '@ember/service';
+import { convertToTimestamp } from '@wikia/ember-fandom/utils/iso-date-time';
 
-import DiscussionContributor from '../discussion/domain/contributor';
 import notificationTypes from '../../utils/notification-types';
-import {convertToTimestamp} from '@wikia/ember-fandom/utils/iso-date-time';
 
 const defaultAvatar = 'https://static.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg' +
 	'/revision/latest/scale-to-width-down/50';
 
 export default EmberObject.extend({
 	wdsFetch: service(),
+	wikiUrls: service(),
+	wikiVariables: service(),
 
 	title: null,
 	snippet: null,
@@ -45,16 +45,19 @@ export default EmberObject.extend({
 	},
 
 	createActors(actors) {
-		return actors.reduce((array, actor) => {
+		return actors.map((actor) => {
 			if (!actor.avatarUrl) {
 				actor.avatarUrl = defaultAvatar;
 			}
 
-			const contributor = DiscussionContributor.create(getOwner(this).ownerInjection(), actor);
-			array.addObject(contributor);
+			actor.profileUrl = this.get('wikiUrls').build({
+				host: this.get('wikiVariables.host'),
+				namespace: 'User',
+				title: this.get('name')
+			});
 
-			return array;
-		}, A());
+			return actor;
+		});
 	},
 
 	getTypeFromApiData(apiData) {

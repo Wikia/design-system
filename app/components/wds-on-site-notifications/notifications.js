@@ -1,14 +1,15 @@
-import {inject as service} from '@ember/service';
-import {oneWay, or} from '@ember/object/computed';
 import Component from '@ember/component';
-import NotificationsUnreadCount from '../../mixins/notifications-unread-count';
+import { oneWay, or } from '@ember/object/computed';
+import { inject as service } from '@ember/service';
 
-export default Component.extend(NotificationsUnreadCount, {
+import WdsOnSiteNotificationsUnreadCount from '../../mixins/wds-on-site-notifications-unread-count';
+
+export default Component.extend(WdsOnSiteNotificationsUnreadCount, {
 	tagName: '',
-	notifications: service(),
+	wdsOnSiteNotifications: service(),
 
-	notificationsList: oneWay('notifications.model.data'),
-	isNotificationsListVisible: or('notificationsList.length', 'notifications.isLoading'),
+	notificationsList: oneWay('wdsOnSiteNotifications.model.data'),
+	isNotificationsListVisible: or('notificationsList.length', 'wdsOnSiteNotifications.isLoading'),
 
 	actions: {
 		markAllAsRead() {
@@ -17,7 +18,7 @@ export default Component.extend(NotificationsUnreadCount, {
 				category: 'on-site-notifications',
 				label: 'mark-all-as-read'
 			});
-			this.get('notifications').markAllAsRead();
+			this.get('wdsOnSiteNotifications').markAllAsRead();
 		}
 	}
 });

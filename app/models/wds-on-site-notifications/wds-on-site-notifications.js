@@ -1,12 +1,12 @@
 import RSVP from 'rsvp';
 
-import {getOwner} from '@ember/application';
-import {A} from '@ember/array';
-import {inject as service} from '@ember/service';
-import EmberObject, {get} from '@ember/object';
+import { getOwner } from '@ember/application';
+import { A } from '@ember/array';
+import { inject as service } from '@ember/service';
+import EmberObject, { get } from '@ember/object';
+import { convertToIsoString } from '@wikia/ember-fandom/utils/iso-date-time';
 
-import Notification from './notification';
-import {convertToIsoString} from '@wikia/ember-fandom/utils/iso-date-time';
+import Notification from './wds-on-site-notification';
 
 export default EmberObject.extend({
 	wdsFetch: service(),
@@ -25,15 +25,17 @@ export default EmberObject.extend({
 	},
 
 	loadFirstPageReturningNextPageLink() {
-		return this.get('wdsFetch').fetchFromOnSiteNotifications('notifications')
-		.then((data) => {
-			this.addNotifications(data.notifications);
-			return this.getNext(data);
-		});
+		return this.get('wdsFetch')
+			.fetchFromOnSiteNotifications('notifications')
+			.then((data) => {
+				this.addNotifications(data.notifications);
+				return this.getNext(data);
+			});
 	},
 
 	loadPageReturningNextPageLink(page) {
-		return this.get('wdsFetch').fetchFromOnSiteNotifications(page)
+		return this.get('wdsFetch')
+			.fetchFromOnSiteNotifications(page)
 			.then((data) => {
 				this.addNotifications(data.notifications);
 				return this.getNext(data);
@@ -58,16 +60,17 @@ export default EmberObject.extend({
 	markAllAsRead() {
 		const since = this.getNewestNotificationISODate();
 
-		return this.get('wdsFetch').fetchFromOnSiteNotifications(`notifications/mark-all-as-read`, {
-			body: JSON.stringify({since}),
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			method: 'POST',
-		}).then(() => {
-			this.get('data').setEach('isUnread', false);
-			this.set('unreadCount', 0);
-		});
+		return this.get('wdsFetch')
+			.fetchFromOnSiteNotifications(`notifications/mark-all-as-read`, {
+				body: JSON.stringify({ since }),
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				method: 'POST',
+			}).then(() => {
+				this.get('data').setEach('isUnread', false);
+				this.set('unreadCount', 0);
+			});
 	},
 
 	addNotifications(notifications) {
@@ -81,11 +84,6 @@ export default EmberObject.extend({
 		this.get('data').pushObjects(notificationModels);
 	},
 
-	/**
-	 * @private
-	 * @param model
-	 * @return {Promise.<T>}
-	 */
 	loadUnreadNotificationCount() {
 		return this.get('wdsFetch').fetchFromOnSiteNotifications('notifications/unread-count')
 			.then((result) => {
@@ -96,5 +94,4 @@ export default EmberObject.extend({
 					.error('Setting notifications unread count to 0 because of the API fetch error', error);
 			});
 	}
-
 });
