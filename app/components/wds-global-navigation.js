@@ -29,11 +29,12 @@ export default Component.extend(WdsOnSiteNotificationsUnreadCount, {
 		this._super(...arguments);
 
 		assert('Required property `model` is not set', this.model);
-		assert('Required function `track` is not set', this.track);
 	},
 
 	click(event) {
-		track(event, this.element, this.track, 'click', 'navigation');
+		if (this.track) {
+			track(event, this.element, this.track, 'click', 'navigation');
+		}
 	},
 
 	actions: {
