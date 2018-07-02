@@ -15,17 +15,24 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 		}));
 		this.set('activateSearch', () => {});
 		this.set('deactivateSearch', () => {});
+
+		this.set('onSearchToggleClicked', function(){});
+		this.set('onSearchCloseClicked', function(){});
+		this.set('onSearchSuggestionChosen', function(){});
+		this.set('goToSearchResults', function(){});
 	});
 
 	test('search is present in GN', async function (assert) {
-		await render(hbs`{{wds-global-navigation/search model=model.search}}`);
+		await render(hbs`{{wds-global-navigation/search model=model.search 
+				onSearchToggleClicked=onSearchToggleClicked}}`);
 
 		assert.equal(this.element.querySelectorAll('.wds-global-navigation__search').length, 1,
 			'should render component');
 	});
 
 	test('search button label is correct', async function (assert) {
-		await render(hbs`{{wds-global-navigation/search model=model.search}}`);
+		await render(hbs`{{wds-global-navigation/search model=model.search 
+				onSearchToggleClicked=onSearchToggleClicked}}`);
 
 		assert.equal(this.element.querySelectorAll('.wds-global-navigation__search-toggle-text')[0].innerText.trim(), "design-system:global-navigation-search-placeholder-inactive",
 			'should render "search" text');
@@ -47,6 +54,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 			model=model.search 
 			activateSearch=activateSearch 
 			deactivateSearch=deactivateSearch
+			onSearchToggleClicked=onSearchToggleClicked
 			}}`
 		);
 		await click('.wds-global-navigation__search-toggle-icon');
@@ -68,6 +76,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 			goToSearchResults=goToSearchResults 
 			activateSearch=activateSearch
 			deactivateSearch=deactivateSearch
+			onSearchToggleClicked=onSearchToggleClicked
 			}}`);
 
 		const searchInput = '.wds-global-navigation__search-input';
@@ -91,6 +100,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 				goToSearchResults=goToSearchResults 
 				activateSearch=activateSearch
 				deactivateSearch=deactivateSearch
+				onSearchToggleClicked=onSearchToggleClicked
 			}}`);
 
 		const searchInput = '.wds-global-navigation__search-input';
@@ -115,6 +125,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 				activateSearch=activateSearch
 				deactivateSearch=deactivateSearch
 				onSearchSuggestionChosen=onSearchSuggestionChosen
+				onSearchToggleClicked=onSearchToggleClicked
 			}}`);
 
 		const searchInput = '.wds-global-navigation__search-input';
@@ -139,6 +150,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 				activateSearch=activateSearch
 				deactivateSearch=deactivateSearch
 				onSearchSuggestionChosen=onSearchSuggestionChosen
+				onSearchToggleClicked=onSearchToggleClicked
 			}}`);
 
 		const searchInput = '.wds-global-navigation__search-input';
