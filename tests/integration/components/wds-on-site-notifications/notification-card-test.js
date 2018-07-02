@@ -31,15 +31,15 @@ const notificationDataStub = {
 
 	],
 	latestEventUri: 'http://community.wikia.com/d/p/123',
-	snippet: 'Snippet.',
+	snippet: 'My announcement',
 	uri: 'http://community.wikia.com/d/p/123',
 	totalUniqueActors: 3
 };
 
-function getModelStub(type, title) {
+function getModelStub(type, title, snippet = '') {
 	const modelStub = new EmberObject(notificationDataStub);
 
-	modelStub.setProperties({ type, title });
+	modelStub.setProperties({ type, title, snippet });
 
 	return modelStub;
 }
@@ -108,7 +108,7 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		test('it should not render announcement author', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
-			assert.dom('.notification-entity-announcement-author').doesNotExist();
+			assert.dom('.wds-notification-card__last-actor').doesNotExist();
 		});
 	});
 
@@ -126,7 +126,7 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		test('it should not render announcement author', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
-			assert.dom('.notification-entity-announcement-author').doesNotExist();
+			assert.dom('.wds-notification-card__last-actor').doesNotExist();
 		});
 	});
 
@@ -173,10 +173,10 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 	});
 
 	module('for notification of type announcement', function(hooks) {
-		const announcementTitle = 'My announcement';
+		const announcementText = 'My announcement';
 
 		hooks.beforeEach(function () {
-			this.set('model', getModelStub('announcement', announcementTitle));
+			this.set('model', getModelStub('announcement', '', announcementText));
 		});
 
 		test('it should not render wds-avatar-stack', async function (assert) {
@@ -188,13 +188,13 @@ module('Integration | Component | wds-on-site-notifications/notification-card', 
 		test('it should render its title in the text container', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
-			assert.dom('.wds-notification-card__text').hasText(announcementTitle);
+			assert.dom('.wds-notification-card__text').hasText(announcementText);
 		});
 
 		test('it should not render announcement author', async function (assert) {
 			await render(hbs`{{wds-on-site-notifications/notification-card model=model track=track}}`);
 
-			assert.dom('.notification-entity-announcement-author').hasText(notificationDataStub.latestActors[0].name);
+			assert.dom('.wds-notification-card__last-actor').hasText(notificationDataStub.latestActors[0].name);
 		});
 	});
 });

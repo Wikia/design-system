@@ -17,7 +17,7 @@ function getModelStub(length) {
 				avatarUrl: 'https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a',
 				id: 24851773,
 				name: 'Username1',
-				profileUrl: 'http://undefined/wiki/User'
+				profileUrl: 'http://community.wikia.com/wiki/User:Me'
 			}],
 			latestEventUri: 'http://community.wikia.com/d/p/123',
 			snippet: 'Snippet.',
@@ -46,7 +46,7 @@ module('Integration | Component | wds-on-site-notifications/notifications-list',
 
 	module('with loaded results', function (hooks) {
 		hooks.beforeEach(function () {
-			this.owner.register('service:notifications', Service.extend({
+			this.owner.register('service:wds-on-site-notifications', Service.extend({
 				isLoading: false,
 
 				init() {
@@ -79,7 +79,7 @@ module('Integration | Component | wds-on-site-notifications/notifications-list',
 
 	module('when loading results', function (hooks) {
 		hooks.beforeEach(function () {
-			this.owner.register('service:notifications', Service.extend({
+			this.owner.register('service:wds-on-site-notifications', Service.extend({
 				isLoading: true,
 
 				init() {
