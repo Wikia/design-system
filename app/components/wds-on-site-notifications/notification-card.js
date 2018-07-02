@@ -3,14 +3,16 @@ import { alias } from '@ember/object/computed';
 import Component from '@ember/component';
 import { computed } from '@ember/object';
 import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
-import notificationTypes from '../../utils/notification-types';
 import extend from '@wikia/ember-fandom/utils/extend';
+import notificationTypes from '../../utils/notification-types';
 
 export default Component.extend(
 	{
 		i18n: service(),
 		logger: service(),
 		wdsOnSiteNotifications: service(),
+		wikiUrls: service(),
+		wikiVariables: service(),
 
 		classNames: ['wds-notification-card'],
 		classNameBindings: ['isUnread:wds-is-unread'],
@@ -39,19 +41,12 @@ export default Component.extend(
 		}),
 
 		showSnippet: computed('model.{title,type}', function () {
-			return !this.get('model.title') && this.isAnnouncement(this.get('model.type')) !== true;
+			// Old discussions posts without title
+			return !this.get('model.title') && !this.isAnnouncement(this.get('model.type'));
 		}),
 
 		showLastActor: computed('model.type', function () {
-			return this.isAnnouncement(this.get('model.type')) === true;
-		}),
-
-		postSnippetMarkup: computed('model.snippet', function () {
-			return wrapMeHelper.compute([
-				this.get('model.snippet')
-			], {
-				tagName: 'i',
-			});
+			return this.isAnnouncement(this.get('model.type'));
 		}),
 
 		text: computed('model', function () {
@@ -65,7 +60,7 @@ export default Component.extend(
 			} else if (this.isDiscussionReplyUpvote(type)) {
 				return this.getReplyUpvoteMessageBody(model);
 			} else if (this.isAnnouncement(type)) {
-				return model.title;
+				return model.snippet;
 			} else {
 				this.get('logger').warn('No type found for a notification', model);
 			}
@@ -83,7 +78,11 @@ export default Component.extend(
 			latestActors.forEach((actor) => {
 				avatars.push({
 					src: actor.avatarUrl,
-					link: `/wiki/User:${actor.name}`
+					link: this.wikiUrls.build({
+						host: this.wikiVariables.host,
+						namespace: 'User',
+						title: actor.name
+					})
 				});
 			});
 			return avatars;

@@ -14,11 +14,11 @@
 		</p>
 		{{#if showSnippet}}
 			<p class="wds-notification-card__snippet">
-				{{{postSnippetMarkup}}}
+				{{model.snippet}}
 			</p>
 		{{/if}}
 		{{#if showLastActor}}
-			<p class="notification-entity-announcement-author">
+			<p class="wds-notification-card__last-author">
 				{{model.latestActors.0.name}}
 			</p>
 		{{/if}}
