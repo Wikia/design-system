@@ -1,7 +1,3 @@
 <span>
-	{{#if (equal item.title.type 'translatable-text')}}
-		{{i18n item.title.key ns='design-system'}}
-	{{else}}
-		{{item.title.value}}
-	{{/if}}
+	{{wds-label label=item.title}}
 </span>

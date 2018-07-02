@@ -1,0 +1,16 @@
+{{#if standalone}}
+	{{outlet}}
+{{else}}
+	<h1>Community Bar</h1>
+	<section>
+		<p>
+			Community Bar is a component displayed at top of the mobile wiki-related pages (wiki articles, discussions, announcements). It contains wiki name, discussion link (if available) and wiki-local navigation.
+		</p>
+	</section>
+	<section>
+		<h2 id="default-community-bar">Default</h2>
+		{{#component-demo name='community-bar-default' codeOnly=true componentName='wds-community-bar' standalone=true variantUrl='/identity/community-bar/standalone/default'}}
+			{{wds-community-bar model=model.anon track=track}}
+		{{/component-demo}}
+	</section>
+{{/if}}

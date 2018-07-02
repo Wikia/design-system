@@ -1,0 +1,20 @@
+<div class="wds-community-bar__navigation-back" {{action onBackButtonClicked}}>
+	{{svg 'wds-icons-menu-control-tiny' class='wds-icon wds-icon-tiny'}} {{i18n 'back'}}
+</div>
+{{#if firstLevelItem.href}}
+	<a class="wds-community-bar__navigation-header" href="{{firstLevelItem.href}}" data-tracking-label="{{firstLevelItem.tracking_label}}">
+		{{wds-label label=firstLevelItem.title}}
+	</a>
+{{/if}}
+{{#wds-list linked=true}}
+	{{#each firstLevelItem.items as |secondLevelItem index|}}
+		<li>
+			<a href="{{secondLevelItem.href}}" data-tracking-label="{{secondLevelItem.tracking_label}}" {{action onSecondLevelClicked index secondLevelItem}}>
+				{{wds-label label=secondLevelItem.title}}
+				{{#if secondLevelItem.items}}
+					{{svg 'wds-icons-menu-control-tiny' class='wds-icon wds-icon-tiny'}}
+				{{/if}}
+			</a>
+		</li>
+	{{/each}}
+{{/wds-list}}
