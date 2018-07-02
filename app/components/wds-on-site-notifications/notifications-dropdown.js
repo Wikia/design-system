@@ -1,15 +1,14 @@
 import Component from '@ember/component';
 import {inject as service} from '@ember/service';
-import NotificationsUnreadCount from '../../mixins/notifications-unread-count';
 
-export default Component.extend(NotificationsUnreadCount, {
+export default Component.extend({
 	tagName: '',
-	notifications: service(),
+	wdsOnSiteNotifications: service(),
 
 	didInsertElement() {
 		this._super(...arguments);
 
-		this.get('notifications').loadUnreadNotificationCount();
+		this.get('wdsOnSiteNotifications').loadUnreadNotificationCount();
 	},
 
 	actions: {
@@ -18,10 +17,10 @@ export default Component.extend(NotificationsUnreadCount, {
 				label: 'open-menu',
 				category: 'on-site-notifications',
 				action: 'click',
-				value: this.get('notifications').getUnreadCount()
+				value: this.get('wdsOnSiteNotifications').getUnreadCount()
 			});
 
-			this.get('notifications').loadFirstPage();
+			this.get('wdsOnSiteNotifications').loadFirstPage();
 		}
 	}
 });

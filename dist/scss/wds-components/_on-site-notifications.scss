@@ -111,6 +111,13 @@
 		}
 	}
 
+	&__last-actor {
+		color: $text-color;
+		font-weight: 200;
+		font-size: $wds-typescale-size-minus-2;
+		margin: 8px 0 0;
+	}
+
 	&__snippet {
 		color: $snippet-color;
 		font-size: $wds-typescale-size-minus-1;

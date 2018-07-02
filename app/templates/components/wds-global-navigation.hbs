@@ -51,9 +51,9 @@
 					type='button'
 				}}
 					{{wds-avatar src=model.user.avatar_url alt=model.user.username}}
-					{{#if unreadCount}}
+					{{#if wdsOnSiteNotifications.unreadCountWithLimit}}
 						<span class="wds-global-navigation__avatar-notifications-counter">
-							{{unreadCount}}
+							{{wdsOnSiteNotifications.unreadCountWithLimit}}
 						</span>
 					{{/if}}
 				{{/wds-button}}

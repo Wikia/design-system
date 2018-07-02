@@ -1,15 +1,13 @@
-import {empty, equal} from '@ember/object/computed';
-import {inject as service} from '@ember/service';
+import { empty, equal } from '@ember/object/computed';
+import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
-import NotificationsUnreadCount from '../mixins/notifications-unread-count';
 
 import Component from '@ember/component';
 import track from '../utils/track';
 
-
-export default Component.extend(NotificationsUnreadCount, {
-	notifications: service(),
-	wdsFetch: service(),
+export default Component.extend({
+	fetch: service(),
+	wdsOnSiteNotifications: service(),
 
 	classNames: ['wds-global-navigation'],
 	classNameBindings: [
@@ -31,9 +29,6 @@ export default Component.extend(NotificationsUnreadCount, {
 		this._super(...arguments);
 
 		assert('Required property `model` is not set', this.model);
-		assert('Required function `track` is not set', this.track);
-
-		this.set('wdsFetch.servicesDomain', this.get('model.services-domain'));
 	},
 
 	click(event) {
@@ -57,19 +52,19 @@ export default Component.extend(NotificationsUnreadCount, {
 
 		onSearchQueryChanged(query) {
 			return [
-					{
-						text: `${query} One`,
-						uri: '#'
-					},
-					{
-						text: `${query} Two`,
-						uri: '#'
-					},
-					{
-						text: `${query} Three`,
-						uri: '#'
-					}
-				];
+				{
+					text: `${query} One`,
+					uri: '#'
+				},
+				{
+					text: `${query} Two`,
+					uri: '#'
+				},
+				{
+					text: `${query} Three`,
+					uri: '#'
+				}
+			];
 		},
 
 		onSearchSuggestionChosen(suggestion) {
@@ -95,5 +90,9 @@ export default Component.extend(NotificationsUnreadCount, {
 
 			this.set('currentModal', null);
 		}
+	},
+
+	track(/* label */) {
+		// Override if you want to have tracking
 	}
 });

@@ -1,6 +1,6 @@
-export default function() {
+export default function () {
 
-  // These comments are here to help you get started. Feel free to delete them.
+	// These comments are here to help you get started. Feel free to delete them.
 
 	/*
 	  Config (with defaults).
@@ -34,7 +34,6 @@ export default function() {
 		};
 	});
 
-
 	this.get('mocks/searchSuggestions.json', () => {
 		return {
 			"suggestions": [
@@ -49,6 +48,38 @@ export default function() {
 		return {
 			"notifications": [
 				{
+					"type": "announcement-notification",
+					"community": { "id": "3035", "name": "Fallout Wiki" },
+					"refersTo": {
+						"uri": "https://services.wikia-dev.pl/announcements/announcements/190",
+						"createdBy": "5440645",
+						"type": "announcement",
+						"snippet": "This is an announcement"
+					},
+					"events": {
+						"total": 1,
+						"totalUniqueActors": 1,
+						"latestActors": [
+							{
+								"id": "5440645",
+								"name": "Igor Rogatty",
+								"avatarUrl": "https://vignette.wikia-dev.pl/c654bb66-d872-4ecc-aa76-4cb08b4a37c3"
+							}
+						],
+						"latestEvent": {
+							"when": "2018-07-02T11:08:39.000Z",
+							"causedBy": {
+								"id": "5440645",
+								"name": "Igor Rogatty",
+								"avatarUrl": "https://vignette.wikia-dev.pl/c654bb66-d872-4ecc-aa76-4cb08b4a37c3"
+							},
+							"uri": "http://fandom.com",
+							"type": "announcement-target"
+						}
+					},
+					"read": false
+				},
+				{
 					"type": "replies-notification",
 					"community": { "id": "1487443", "name": "Latata's Wiki" },
 					"refersTo": {
@@ -61,19 +92,21 @@ export default function() {
 					"events": {
 						"total": 3,
 						"totalUniqueActors": 3,
-						"latestActors": [{
-							"id": "26629533",
-							"name": "Nikodamn",
-							"avatarUrl": "https://static.wikia.nocookie.net/4053c0f6-fb5a-4295-9027-5cf1f06a2c85"
-						}, {
-							"id": "25126702",
-							"name": "Igor Rogatty",
-							"avatarUrl": "https://static.wikia.nocookie.net/d01a239e-b173-447e-8ed5-b84ed7a6563e"
-						}, {
-							"id": "33027931",
-							"name": "Xkxd",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg"
-						}],
+						"latestActors": [
+							{
+								"id": "26629533",
+								"name": "Nikodamn",
+								"avatarUrl": "https://static.wikia.nocookie.net/4053c0f6-fb5a-4295-9027-5cf1f06a2c85"
+							}, {
+								"id": "25126702",
+								"name": "Igor Rogatty",
+								"avatarUrl": "https://static.wikia.nocookie.net/d01a239e-b173-447e-8ed5-b84ed7a6563e"
+							}, {
+								"id": "33027931",
+								"name": "Xkxd",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-06-11T10:38:55.000Z",
 							"causedBy": {
@@ -101,15 +134,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -137,15 +172,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -173,15 +210,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -209,15 +248,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -245,15 +286,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -281,15 +324,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -317,15 +362,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -353,15 +400,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -389,15 +438,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -425,15 +476,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -461,15 +514,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -497,15 +552,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -533,15 +590,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -569,15 +628,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -605,15 +666,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -641,15 +704,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -677,15 +742,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -713,15 +780,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -749,15 +818,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -785,15 +856,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -821,15 +894,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -857,15 +932,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -893,15 +970,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {
@@ -929,15 +1008,17 @@ export default function() {
 					"events": {
 						"total": 2,
 						"totalUniqueActors": 2,
-						"latestActors": [{
-							"id": "24851773",
-							"name": "Username1",
-							"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
-						}, {
-							"id": "129646",
-							"name": "Username2",
-							"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
-						}],
+						"latestActors": [
+							{
+								"id": "24851773",
+								"name": "Username1",
+								"avatarUrl": "https://vignette.wikia.nocookie.net/eb7f3136-d079-4826-ab1c-160738494f3a"
+							}, {
+								"id": "129646",
+								"name": "Username2",
+								"avatarUrl": "https://static.wikia.nocookie.net/e597e1f9-2246-4759-9d11-6970ad64605f"
+							}
+						],
 						"latestEvent": {
 							"when": "2018-05-22T18:00:11.000Z",
 							"causedBy": {

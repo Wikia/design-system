@@ -19,8 +19,10 @@ export default Component.extend({
 	}),
 
 	click(event) {
-		if (this.track) {
-			track(event, this.element, this.track, 'click', 'community-header');
-		}
+		track(event, this.element, this.track, 'click', 'community-header');
 	},
+
+	track(/* label */) {
+		// Override if you want to have tracking
+	}
 });
