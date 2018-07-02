@@ -28,7 +28,7 @@
 		{{#wds-button
 			class='wds-global-navigation__search-submit'
 			disabled=isEmptyQuery
-			data-tracking-label=model.results.tracking_label
+			data-tracking-label=model.results.tracking-label
 		}}
 			{{wds-icon name='arrow' size='small' class='wds-global-navigation__search-submit-icon'}}
 		{{/wds-button}}
@@ -41,7 +41,7 @@
 					{{action 'onSuggestionMouseDown' on='mouseDown'}}>
 					<a href="{{suggestion.uri}}"
 					   class="wds-global-navigation__dropdown-link"
-					   data-tracking-label="{{model.suggestions.tracking_label}}"
+					   data-tracking-label="{{model.suggestions.tracking-label}}"
 					>
 						{{{suggestion.text}}}
 					</a>
