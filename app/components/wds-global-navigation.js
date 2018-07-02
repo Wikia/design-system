@@ -33,7 +33,7 @@ export default Component.extend(NotificationsUnreadCount, {
 		assert('Required property `model` is not set', this.model);
 		assert('Required function `track` is not set', this.track);
 
-		this.set('wdsFetch.servicesDomain', this.get('model.services_domain'));
+		this.set('wdsFetch.servicesDomain', this.get('model.services-domain'));
 	},
 
 	click(event) {

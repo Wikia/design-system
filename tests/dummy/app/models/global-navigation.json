@@ -36,7 +36,7 @@
         "tracking_label": "search-suggestion"
       }
     },
-    "create_wiki": {
+    "create-wiki": {
       "type": "link-button",
       "title": {
         "type": "translatable-text",
@@ -45,7 +45,7 @@
       "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
       "tracking_label": "start-a-wiki"
     },
-    "main_navigation": [
+    "main-navigation": [
       {
         "type": "link-text",
         "title": {
@@ -142,7 +142,7 @@
         "tracking_label": "account.register"
       }
     },
-    "services_domain": "https:\/\/services.wikia.com\/"
+    "services-domain": "https:\/\/services.wikia.com\/"
   },
   "logged-in-default": {
     "logo": {
@@ -181,7 +181,7 @@
         "tracking_label": "search-suggestion"
       }
     },
-    "create_wiki": {
+    "create-wiki": {
       "type": "link-button",
       "title": {
         "type": "translatable-text",
@@ -190,7 +190,7 @@
       "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
       "tracking_label": "start-a-wiki"
     },
-    "main_navigation": [
+    "main-navigation": [
       {
         "type": "link-text",
         "title": {
@@ -336,7 +336,7 @@
         "url": "\/\/starwars.wikia.com\/wiki\/User_talk:Ryba777"
       }
     },
-    "services_domain": "https:\/\/services.wikia.com\/"
+    "services-domain": "https:\/\/services.wikia.com\/"
   },
   "logged-out-wikia-org": {
     "logo": {
@@ -375,7 +375,7 @@
         "tracking_label": "search-suggestion"
       }
     },
-    "create_wiki": {
+    "create-wiki": {
       "type": "link-button",
       "title": {
         "type": "translatable-text",
@@ -384,7 +384,7 @@
       "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
       "tracking_label": "start-a-wiki"
     },
-    "main_navigation": [
+    "main-navigation": [
       {
         "type": "link-text",
         "title": {
@@ -417,7 +417,7 @@
         "tracking_label": "account.register"
       }
     },
-    "services_domain": "https:\/\/services.wikia.com\/"
+    "services-domain": "https:\/\/services.wikia.com\/"
   },
   "logged-out-with-partner-slot": {
     "logo": {
@@ -456,7 +456,7 @@
         "tracking_label": "search-suggestion"
       }
     },
-    "create_wiki": {
+    "create-wiki": {
       "type": "link-button",
       "title": {
         "type": "translatable-text",
@@ -465,7 +465,7 @@
       "href": "\/\/www.wikia.com\/Special:CreateNewWiki?uselang=de",
       "tracking_label": "start-a-wiki"
     },
-    "main_navigation": [
+    "main-navigation": [
       {
         "type": "link-text",
         "title": {
@@ -566,6 +566,6 @@
       },
       "tracking_label": "entertainweb"
     },
-    "services_domain": "https:\/\/services.wikia.com\/"
+    "services-domain": "https:\/\/services.wikia.com\/"
   }
 }

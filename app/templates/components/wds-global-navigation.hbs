@@ -1,13 +1,13 @@
 <div class="wds-global-navigation__content-container">
 	<div class="wds-global-navigation__content-bar-left">
-		<a href="{{model.logo.href}}" class="wds-global-navigation__logo" data-tracking-label="{{model.logo.tracking_label}}">
+		<a href="{{model.logo.href}}" class="wds-global-navigation__logo" data-tracking-label="{{model.logo.tracking-label}}">
 			{{! available class names: wds-is-wds-company-logo-fandom wds-is-wds-company-logo-wikia-org}}
 			{{svg
 				model.logo.image-data.name
 				class=(concat 'wds-global-navigation__logo-image wds-is-' model.logo.image-data.name)
 			}}
 		</a>
-		{{wds-global-navigation/main-navigation model=model.main_navigation}}
+		{{wds-global-navigation/main-navigation model=model.main-navigation}}
 	</div>
 	<div class="wds-global-navigation__content-bar-right">
 		<div class="wds-global-navigation__dropdown-controls">
@@ -28,14 +28,14 @@
 			{{/if}}
 			<div class="wds-global-navigation__start-a-wiki">
 				{{wds-global-navigation/link-button
-					model=model.create_wiki
+					model=model.create-wiki
 				}}
 			</div>
 		</div>
 		<div class="wds-global-navigation__modal-controls">
 			{{wds-global-navigation/search-modal
 				model=model.search
-				navigationModel=model.main_navigation
+				navigationModel=model.main-navigation
 				isOpen=isSearchModalOpen
 				openModal=(action 'openModal')
 				onSearchToggleClicked=(action 'onSearchToggleClicked')
@@ -78,7 +78,7 @@
 	{{#if model.partner_slot}}
 		<div class="wds-global-navigation__partner-slot">
 			<div class="wds-global-navigation__partner-slot-horizontal-bar"></div>
-			<a href="{{model.partner_slot.href}}" class="wds-global-navigation__partner-slot-link" data-tracking-label="{{model.partner_slot.tracking_label}}">
+			<a href="{{model.partner_slot.href}}" class="wds-global-navigation__partner-slot-link" data-tracking-label="{{model.partner_slot.tracking-label}}">
 				<img class="wds-global-navigation__partner-slot-image"
 					 width="55"
 					 height="20"
