@@ -1,7 +1,7 @@
 {{#wds-list class=firstLevelClasses linked=true}}
 	{{#each model as |firstLevelItem index|}}
 		<li>
-			<a href="{{firstLevelItem.href}}" data-tracking-label="{{firstLevelItem.tracking_label}}" {{action onFirstLevelSelected index firstLevelItem}}>
+			<a href="{{firstLevelItem.href}}" data-tracking-label="{{unless (equal firstLevelItem.href '#') firstLevelItem.tracking_label}}" onclick={{action onFirstLevelSelected index firstLevelItem}}>
 				{{wds-label label=firstLevelItem.title}}
 				{{#if firstLevelItem.items}}
 					{{svg 'wds-icons-menu-control-tiny' class='wds-icon wds-icon-tiny'}}
@@ -19,6 +19,7 @@
 			secondLevelIndexSelected=secondLevelIndexSelected
 			onSecondLevelClicked=(action onSecondLevelSelected)
 			onBackButtonClicked=(action resetSelected 'firstLevelIndexSelected')
+			linkClicked=(action linkClicked)
 		}}
 		{{#each firstLevelItem.items as |secondLevelItem secondLevelIndex|}}
 			{{#if secondLevelItem.items}}
@@ -29,6 +30,7 @@
 					secondLevelIndex=secondLevelIndex
 					secondLevelIndexSelected=secondLevelIndexSelected
 					onBackButtonClicked=(action resetSelected 'secondLevelIndexSelected')
+					linkClicked=(action linkClicked)
 				}}
 			{{/if}}
 		{{/each}}

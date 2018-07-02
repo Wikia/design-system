@@ -28,4 +28,16 @@ export default Component.extend({
 			track(event, this.element, this.track, 'click', 'community-header');
 		}
 	},
+
+	actions: {
+		linkClicked(event) {
+			const href = event.target.getAttribute('href');
+
+			if (href === '#') {
+				event.preventDefault();
+			} else {
+				this.linkClicked(href);
+			}
+		}
+	}
 });

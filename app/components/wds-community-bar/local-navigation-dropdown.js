@@ -58,16 +58,18 @@ export default Component.extend({
 			this.toggleNavigation();
 		},
 
-		onFirstLevelSelected(index, firstLevelItem) {
+		onFirstLevelSelected(index, firstLevelItem, event) {
 			if (firstLevelItem.items) {
 				this.set('firstLevelIndexSelected', index);
 			}
+			this.linkClicked(event);
 		},
 
-		onSecondLevelSelected(index, secondLevelItem) {
+		onSecondLevelSelected(index, secondLevelItem, event) {
 			if (secondLevelItem.items) {
 				this.set('secondLevelIndexSelected', index);
 			}
+			this.linkClicked(event);
 		},
 
 		resetSelected(propName) {

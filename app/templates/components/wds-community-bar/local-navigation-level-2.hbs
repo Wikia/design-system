@@ -2,14 +2,19 @@
 	{{svg 'wds-icons-menu-control-tiny' class='wds-icon wds-icon-tiny'}} {{i18n 'back'}}
 </div>
 {{#if firstLevelItem.href}}
-	<a class="wds-community-bar__navigation-header" href="{{firstLevelItem.href}}" data-tracking-label="{{firstLevelItem.tracking_label}}">
+	<a
+		class="wds-community-bar__navigation-header"
+	   	href="{{firstLevelItem.href}}"
+		data-tracking-label="{{unless (equal firstLevelItem.href '#') firstLevelItem.tracking_label}}"
+		onclick={{action linkClicked}}
+	>
 		{{wds-label label=firstLevelItem.title}}
 	</a>
 {{/if}}
 {{#wds-list linked=true}}
 	{{#each firstLevelItem.items as |secondLevelItem index|}}
 		<li>
-			<a href="{{secondLevelItem.href}}" data-tracking-label="{{secondLevelItem.tracking_label}}" {{action onSecondLevelClicked index secondLevelItem}}>
+			<a href="{{secondLevelItem.href}}" data-tracking-label="{{unless (equal secondLevelItem.href '#') secondLevelItem.tracking_label}}" onclick={{action onSecondLevelClicked index secondLevelItem}}>
 				{{wds-label label=secondLevelItem.title}}
 				{{#if secondLevelItem.items}}
 					{{svg 'wds-icons-menu-control-tiny' class='wds-icon wds-icon-tiny'}}
