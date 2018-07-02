@@ -92,5 +92,7 @@ export default Component.extend({
 		}
 	},
 
-	track() {}
+	track(/* label */) {
+		// Override if you want to have tracking
+	}
 });

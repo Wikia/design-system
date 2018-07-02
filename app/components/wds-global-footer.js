@@ -9,5 +9,7 @@ export default Component.extend({
 		track(event, this.element, this.track, 'click', 'footer');
 	},
 
-	track() {}
+	track(/* label */) {
+		// Override if you want to have tracking
+	}
 });
