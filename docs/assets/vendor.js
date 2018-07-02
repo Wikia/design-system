@@ -3596,10 +3596,10 @@ l&&(s.headers={cookie:"access_token="+l})}else s.credentials="include"
 return(0,t.default)(e,(0,r.default)(i,s)).catch(function(e){throw new n.NetworkError(e)}).then(function(t){var n=t.headers.get("content-type")
 return t.ok&&(204===t.status||n&&-1===n.indexOf("json"))?null:t.ok?t.json():a.getFetchErrorMessage(t).then(function(n){var r=new o({code:t.status}).withAdditionalData({requestUrl:e,errorResponse:n})
 throw a.get("logger").error("Fetch error",r),r})})},fetchFromMediawiki:function(e,t){var n=this.getOptionsForInternalCache(e)
-return this.fetchAndParseResponse(e,n,t)},fetchFromOnSiteNotifications:function(e){var t=this.getServiceUrl("on-site-notifications",e)
-return this.fetchAndParseResponse(t,{},n.OnSiteNotificationsFetchError)},fetchFromUserAttribute:function(e){var t=this.getServiceUrl("user-attribute",e)
-return this.fetchAndParseResponse(t,{},n.UserAttributeFetchError)},fetchFromUserPermissions:function(e){var t=this.getServiceUrl("user-permissions",e)
-return this.fetchAndParseResponse(t,{},n.UserPermissionsFetchError)},getFetchErrorMessage:function(e){var t=e.headers.get("content-type")
+return this.fetchAndParseResponse(e,n,t)},fetchFromOnSiteNotifications:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},r=this.getServiceUrl("on-site-notifications",e)
+return this.fetchAndParseResponse(r,t,n.OnSiteNotificationsFetchError)},fetchFromUserAttribute:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},r=this.getServiceUrl("user-attribute",e)
+return this.fetchAndParseResponse(r,t,n.UserAttributeFetchError)},fetchFromUserPermissions:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},r=this.getServiceUrl("user-permissions",e)
+return this.fetchAndParseResponse(r,t,n.UserPermissionsFetchError)},getFetchErrorMessage:function(e){var t=e.headers.get("content-type")
 return t&&-1!==t.indexOf("json")?e.json():e.text()},getServiceUrl:function(e,t){return("undefined"==typeof FastBoot?this.config.servicesExternalHost:this.config.servicesInternalHost)+"/"+e+t},getOptionsForInternalCache:function(e){var t={}
 if(this.get("fastboot.isFastBoot")&&this.config.internalCache){var n=FastBoot.require("url"),r=FastBoot.require("proxying-agent"),i=n.parse(e)
 t.agent=r.create("http://"+this.config.internalCache,i.host),t.follow=5}return t}})}),define("@wikia/ember-fandom/services/i18n",["exports","i18next"],function(e,t){"use strict"
