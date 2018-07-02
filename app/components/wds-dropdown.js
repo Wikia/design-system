@@ -12,6 +12,29 @@ export default Component.extend({
 	],
 	isLevel2: false,
 
+	init() {
+		this._super(...arguments);
+
+		if (this.mouseEnter) {
+			this.mouseEnter = this.mouseEnter.bind(this);
+		}
+	},
+
+	didInsertElement() {
+		this._super(...arguments);
+
+		if (this.mouseEnter) {
+			this.element.addEventListener('mouseenter', this.mouseEnter);
+		}
+	},
+
+	willDestroy() {
+		this._super(...arguments);
+
+		if (this.mouseEnter) {
+			this.element.removeEventListener('moseenter', this.mouseEnter)
+		}
+	},
 	actions: {
 		click(e) {
 			if (isTouchDevice && !this.get('isClicked')) {
