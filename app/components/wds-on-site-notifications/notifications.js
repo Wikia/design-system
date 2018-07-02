@@ -2,9 +2,7 @@ import Component from '@ember/component';
 import { oneWay, or } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
-import WdsOnSiteNotificationsUnreadCount from '../../mixins/wds-on-site-notifications-unread-count';
-
-export default Component.extend(WdsOnSiteNotificationsUnreadCount, {
+export default Component.extend({
 	tagName: '',
 	wdsOnSiteNotifications: service(),
 

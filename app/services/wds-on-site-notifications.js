@@ -1,4 +1,6 @@
 import { getOwner } from '@ember/application';
+import { computed } from '@ember/object';
+import { gt } from '@ember/object/computed';
 import Service, { inject as service } from '@ember/service';
 
 import WdsOnSiteNotificationsModel from '../models/wds-on-site-notifications/wds-on-site-notifications';
@@ -11,9 +13,12 @@ export default Service.extend({
 	currentUser: service(),
 	logger: service(),
 
-	/**
-	 * @returns {void}
-	 */
+	unreadCountWithLimit: computed('model.unreadCount', function () {
+		const count = this.get('model.unreadCount');
+		return count > 99 ?  '99+' : count;
+	}),
+	hasUnread: gt('model.unreadCount', 0),
+
 	init() {
 		this._super(...arguments);
 

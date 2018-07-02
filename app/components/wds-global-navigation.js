@@ -1,13 +1,13 @@
 import { empty, equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
-import WdsOnSiteNotificationsUnreadCount from '../mixins/wds-on-site-notifications-unread-count';
 
 import Component from '@ember/component';
 import track from '../utils/track';
 
-export default Component.extend(WdsOnSiteNotificationsUnreadCount, {
+export default Component.extend({
 	fetch: service(),
+	wdsOnSiteNotifications: service(),
 
 	classNames: ['wds-global-navigation'],
 	classNameBindings: [
