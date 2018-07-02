@@ -37,7 +37,7 @@
 		{{#wds-list linked=true ellipsis=true}}
 			{{#each suggestions as |suggestion index|}}
 				<li class="{{if (equal index selectedSuggestionIndex) 'wds-is-selected'}} wds-global-navigation__search__suggestion"
-					{{action 'selectItem' index on='mouseEnter'}}
+					onmouseenter={{action 'selectItem' index}}
 					{{action 'onSuggestionMouseDown' on='mouseDown'}}>
 					<a href="{{suggestion.uri}}"
 					   class="wds-global-navigation__dropdown-link"
