@@ -7,7 +7,7 @@ import Component from '@ember/component';
 import track from '../utils/track';
 
 export default Component.extend(WdsOnSiteNotificationsUnreadCount, {
-	wdsFetch: service(),
+	fetch: service(),
 
 	classNames: ['wds-global-navigation'],
 	classNameBindings: [
@@ -30,8 +30,6 @@ export default Component.extend(WdsOnSiteNotificationsUnreadCount, {
 
 		assert('Required property `model` is not set', this.model);
 		assert('Required function `track` is not set', this.track);
-
-		this.set('wdsFetch.servicesDomain', this.get('model.services_domain'));
 	},
 
 	click(event) {

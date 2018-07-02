@@ -9,7 +9,7 @@ const defaultAvatar = 'https://static.wikia.nocookie.net/messaging/images/1/19/A
 	'/revision/latest/scale-to-width-down/50';
 
 export default EmberObject.extend({
-	wdsFetch: service(),
+	fetch: service(),
 	wikiUrls: service(),
 	wikiVariables: service(),
 
@@ -75,14 +75,15 @@ export default EmberObject.extend({
 	},
 
 	markAsRead() {
-		return this.get('wdsFetch').fetchFromOnSiteNotifications(`/notifications/mark-as-read/by-uri`, {
-			body: JSON.stringify([this.get('uri')]),
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			method: 'POST',
-		}).then(() => {
-			this.set('isUnread', false);
-		});
+		return this.fetch
+			.fetchFromOnSiteNotifications('/notifications/mark-as-read/by-uri', {
+				body: JSON.stringify([this.get('uri')]),
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				method: 'POST',
+			}).then(() => {
+				this.set('isUnread', false);
+			});
 	},
 });
