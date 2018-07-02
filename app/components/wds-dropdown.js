@@ -28,13 +28,6 @@ export default Component.extend({
 		}
 	},
 
-	willDestroy() {
-		this._super(...arguments);
-
-		if (this.mouseEnter) {
-			this.element.removeEventListener('moseenter', this.mouseEnter)
-		}
-	},
 	actions: {
 		click(e) {
 			if (isTouchDevice && !this.get('isClicked')) {
