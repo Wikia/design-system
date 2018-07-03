@@ -99,7 +99,7 @@ export default Component.extend({
 		 * we just ignore this request because the search fn already put the cached
 		 * value into the window.
 		 */
-		if (!query || this.hasCachedResult(query) || this.requestInProgress(query) || this.get('isDestroyed')){
+		if (!query || this.hasCachedResult(query) || this.requestInProgress(query) || this.get('isDestroyed')) {
 			return;
 		}
 
@@ -385,6 +385,13 @@ export default Component.extend({
 		onFocusIn() {
 			this.set('inputFocused', true);
 		},
+
+		enter() {
+			alert(
+				'rstrs'
+			)
+		},
+
 
 		onFocusOut() {
 			if (!this.get('state.query')) {
