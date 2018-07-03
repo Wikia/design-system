@@ -7,12 +7,12 @@
         "type": "wds-svg",
         "name": "wds-company-logo-fandom-white"
       },
-      "tracking_label": "logo"
+      "tracking-label": "logo"
     },
     "search": {
       "type": "search",
       "results": {
-        "tracking_label": "search",
+        "tracking-label": "search",
         "param-name": "query",
         "url": "\/\/starwars.wikia.com\/wiki\/Special:Search"
       },
@@ -33,7 +33,7 @@
       "suggestions": {
         "url": "mocks/searchSuggestions.json?",
         "param-name": "query",
-        "tracking_label": "search-suggestion"
+        "tracking-label": "search-suggestion"
       }
     },
     "create-wiki": {
@@ -43,7 +43,7 @@
         "key": "global-navigation-create-wiki-link-start-wikia"
       },
       "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
-      "tracking_label": "start-a-wiki"
+      "tracking-label": "start-a-wiki"
     },
     "main-navigation": [
       {
@@ -53,7 +53,7 @@
           "key": "global-navigation-fandom-overview-link-vertical-games"
         },
         "href": "\/\/fandom.wikia.com\/topics\/games",
-        "tracking_label": "link.games"
+        "tracking-label": "link.games"
       },
       {
         "type": "link-text",
@@ -62,7 +62,7 @@
           "key": "global-navigation-fandom-overview-link-vertical-movies"
         },
         "href": "\/\/fandom.wikia.com\/topics\/movies",
-        "tracking_label": "link.movies"
+        "tracking-label": "link.movies"
       },
       {
         "type": "link-text",
@@ -71,7 +71,7 @@
           "key": "global-navigation-fandom-overview-link-vertical-tv"
         },
         "href": "\/\/fandom.wikia.com\/topics\/tv",
-        "tracking_label": "link.tv"
+        "tracking-label": "link.tv"
       },
       {
         "type": "link-text",
@@ -80,7 +80,7 @@
           "key": "global-navigation-fandom-overview-link-video"
         },
         "href": "\/\/fandom.wikia.com\/video",
-        "tracking_label": "link.video"
+        "tracking-label": "link.video"
       },
       {
         "type": "link-group",
@@ -88,7 +88,7 @@
           "type": "translatable-text",
           "key": "global-navigation-wikis-header"
         },
-        "tracking_label": "link.wikis",
+        "tracking-label": "link.wikis",
         "items": [
           {
             "type": "link-text",
@@ -97,7 +97,7 @@
               "key": "global-navigation-wikis-explore"
             },
             "href": "\/\/fandom.wikia.com\/explore",
-            "tracking_label": "link.explore"
+            "tracking-label": "link.explore"
           },
           {
             "type": "link-text",
@@ -106,7 +106,7 @@
               "key": "global-navigation-wikis-community-central"
             },
             "href": "\/\/community.wikia.com\/wiki\/Community_Central",
-            "tracking_label": "link.community-central"
+            "tracking-label": "link.community-central"
           },
           {
             "type": "link-button",
@@ -115,7 +115,7 @@
               "key": "global-navigation-create-wiki-link-start-wikia"
             },
             "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
-            "tracking_label": "link.start-a-wiki"
+            "tracking-label": "link.start-a-wiki"
           }
         ]
       }
@@ -129,7 +129,7 @@
         },
         "href": "https:\/\/www.wikia.com\/signin",
         "param-name": "redirect",
-        "tracking_label": "account.sign-in"
+        "tracking-label": "account.sign-in"
       },
       "register": {
         "type": "link-authentication",
@@ -139,7 +139,7 @@
         },
         "href": "https:\/\/www.wikia.com\/register",
         "param-name": "redirect",
-        "tracking_label": "account.register"
+        "tracking-label": "account.register"
       }
     },
     "services-domain": "https:\/\/services.wikia.com\/"
@@ -152,12 +152,12 @@
         "type": "wds-svg",
         "name": "wds-company-logo-fandom-white"
       },
-      "tracking_label": "logo"
+      "tracking-label": "logo"
     },
     "search": {
       "type": "search",
       "results": {
-        "tracking_label": "search",
+        "tracking-label": "search",
         "param-name": "query",
         "url": "\/\/starwars.wikia.com\/wiki\/Special:Search"
       },
@@ -178,7 +178,7 @@
       "suggestions": {
         "url": "mocks/searchSuggestions.json?",
         "param-name": "query",
-        "tracking_label": "search-suggestion"
+        "tracking-label": "search-suggestion"
       }
     },
     "create-wiki": {
@@ -188,7 +188,7 @@
         "key": "global-navigation-create-wiki-link-start-wikia"
       },
       "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
-      "tracking_label": "start-a-wiki"
+      "tracking-label": "start-a-wiki"
     },
     "main-navigation": [
       {
@@ -198,7 +198,7 @@
           "key": "global-navigation-fandom-overview-link-vertical-games"
         },
         "href": "\/\/fandom.wikia.com\/topics\/games",
-        "tracking_label": "link.games"
+        "tracking-label": "link.games"
       },
       {
         "type": "link-text",
@@ -207,7 +207,7 @@
           "key": "global-navigation-fandom-overview-link-vertical-movies"
         },
         "href": "\/\/fandom.wikia.com\/topics\/movies",
-        "tracking_label": "link.movies"
+        "tracking-label": "link.movies"
       },
       {
         "type": "link-text",
@@ -216,7 +216,7 @@
           "key": "global-navigation-fandom-overview-link-vertical-tv"
         },
         "href": "\/\/fandom.wikia.com\/topics\/tv",
-        "tracking_label": "link.tv"
+        "tracking-label": "link.tv"
       },
       {
         "type": "link-text",
@@ -225,7 +225,7 @@
           "key": "global-navigation-fandom-overview-link-video"
         },
         "href": "\/\/fandom.wikia.com\/video",
-        "tracking_label": "link.video"
+        "tracking-label": "link.video"
       },
       {
         "type": "link-group",
@@ -233,7 +233,7 @@
           "type": "translatable-text",
           "key": "global-navigation-wikis-header"
         },
-        "tracking_label": "link.wikis",
+        "tracking-label": "link.wikis",
         "items": [
           {
             "type": "link-text",
@@ -242,7 +242,7 @@
               "key": "global-navigation-wikis-explore"
             },
             "href": "\/\/fandom.wikia.com\/explore",
-            "tracking_label": "link.explore"
+            "tracking-label": "link.explore"
           },
           {
             "type": "link-text",
@@ -251,7 +251,7 @@
               "key": "global-navigation-wikis-community-central"
             },
             "href": "\/\/community.wikia.com\/wiki\/Community_Central",
-            "tracking_label": "link.community-central"
+            "tracking-label": "link.community-central"
           },
           {
             "type": "link-button",
@@ -260,7 +260,7 @@
               "key": "global-navigation-create-wiki-link-start-wikia"
             },
             "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
-            "tracking_label": "link.start-a-wiki"
+            "tracking-label": "link.start-a-wiki"
           }
         ]
       }
@@ -268,7 +268,7 @@
     "user": {
       "avatar_url": "images/FANDOM-Avatar.jpg",
       "username": "Ryba777",
-      "tracking_label": "account",
+      "tracking-label": "account",
       "items": [
         {
           "type": "link-text",
@@ -277,7 +277,7 @@
             "key": "global-navigation-user-view-profile"
           },
           "href": "\/\/starwars.wikia.com\/wiki\/User:Ryba777",
-          "tracking_label": "account.profile"
+          "tracking-label": "account.profile"
         },
         {
           "type": "link-text",
@@ -286,7 +286,7 @@
             "key": "global-navigation-user-my-talk"
           },
           "href": "\/\/starwars.wikia.com\/wiki\/User_talk:Ryba777",
-          "tracking_label": "account.talk"
+          "tracking-label": "account.talk"
         },
         {
           "type": "link-text",
@@ -295,7 +295,7 @@
             "key": "global-navigation-user-my-preferences"
           },
           "href": "\/\/starwars.wikia.com\/wiki\/Special:Preferences",
-          "tracking_label": "account.preferences"
+          "tracking-label": "account.preferences"
         },
         {
           "type": "link-text",
@@ -304,7 +304,7 @@
             "key": "global-navigation-user-help"
           },
           "href": "\/\/community.wikia.com\/wiki\/Help:Contents",
-          "tracking_label": "account.help"
+          "tracking-label": "account.help"
         },
         {
           "type": "link-logout",
@@ -314,7 +314,7 @@
             "key": "global-navigation-user-sign-out"
           },
           "param-name": "returnto",
-          "tracking_label": "account.sign-out"
+          "tracking-label": "account.sign-out"
         }
       ]
     },
@@ -329,7 +329,7 @@
           "type": "translatable-text",
           "key": "global-navigation-notifications-title"
         },
-        "tracking_label": "notifications"
+        "tracking-label": "notifications"
       },
       "module": {
         "type": "notifications",
@@ -346,12 +346,12 @@
         "type": "wds-svg",
         "name": "wds-company-logo-wikia-org-white"
       },
-      "tracking_label": "logo"
+      "tracking-label": "logo"
     },
     "search": {
       "type": "search",
       "results": {
-        "tracking_label": "search",
+        "tracking-label": "search",
         "param-name": "query",
         "url": "\/\/concf.wikia.com\/wiki\/Special:Search"
       },
@@ -372,7 +372,7 @@
       "suggestions": {
         "url": "mocks/searchSuggestions.json?",
         "param-name": "query",
-        "tracking_label": "search-suggestion"
+        "tracking-label": "search-suggestion"
       }
     },
     "create-wiki": {
@@ -382,7 +382,7 @@
         "key": "global-navigation-create-wiki-link-start-wikia"
       },
       "href": "\/\/www.wikia.com\/Special:CreateNewWiki",
-      "tracking_label": "start-a-wiki"
+      "tracking-label": "start-a-wiki"
     },
     "main-navigation": [
       {
@@ -392,7 +392,7 @@
           "key": "global-navigation-wikis-community-central"
         },
         "href": "\/\/community.wikia.com\/wiki\/Community_Central",
-        "tracking_label": "link.community-central"
+        "tracking-label": "link.community-central"
       }
     ],
     "anon": {
@@ -404,7 +404,7 @@
         },
         "href": "https:\/\/www.wikia.com\/signin",
         "param-name": "redirect",
-        "tracking_label": "account.sign-in"
+        "tracking-label": "account.sign-in"
       },
       "register": {
         "type": "link-authentication",
@@ -414,7 +414,7 @@
         },
         "href": "https:\/\/www.wikia.com\/register",
         "param-name": "redirect",
-        "tracking_label": "account.register"
+        "tracking-label": "account.register"
       }
     },
     "services-domain": "https:\/\/services.wikia.com\/"
@@ -427,12 +427,12 @@
         "type": "wds-svg",
         "name": "wds-company-logo-fandom-white"
       },
-      "tracking_label": "logo"
+      "tracking-label": "logo"
     },
     "search": {
       "type": "search",
       "results": {
-        "tracking_label": "search",
+        "tracking-label": "search",
         "param-name": "query",
         "url": "\/\/starwars.wikia.com\/wiki\/Special:Search"
       },
@@ -453,7 +453,7 @@
       "suggestions": {
         "url": "mocks/searchSuggestions.json?",
         "param-name": "query",
-        "tracking_label": "search-suggestion"
+        "tracking-label": "search-suggestion"
       }
     },
     "create-wiki": {
@@ -463,7 +463,7 @@
         "key": "global-navigation-create-wiki-link-start-wikia"
       },
       "href": "\/\/www.wikia.com\/Special:CreateNewWiki?uselang=de",
-      "tracking_label": "start-a-wiki"
+      "tracking-label": "start-a-wiki"
     },
     "main-navigation": [
       {
@@ -473,7 +473,7 @@
           "key": "global-navigation-fandom-overview-link-vertical-games"
         },
         "href": "\/\/fandom.wikia.com\/explore-de#Videospiele",
-        "tracking_label": "link.games"
+        "tracking-label": "link.games"
       },
       {
         "type": "link-text",
@@ -482,7 +482,7 @@
           "key": "global-navigation-fandom-overview-link-vertical-movies"
         },
         "href": "\/\/fandom.wikia.com\/explore-de#Filme",
-        "tracking_label": "link.movies"
+        "tracking-label": "link.movies"
       },
       {
         "type": "link-text",
@@ -491,7 +491,7 @@
           "key": "global-navigation-fandom-overview-link-vertical-tv"
         },
         "href": "\/\/fandom.wikia.com\/explore-de#TV",
-        "tracking_label": "link.tv"
+        "tracking-label": "link.tv"
       },
       {
         "type": "link-group",
@@ -499,7 +499,7 @@
           "type": "translatable-text",
           "key": "global-navigation-wikis-header"
         },
-        "tracking_label": "link.wikis",
+        "tracking-label": "link.wikis",
         "items": [
           {
             "type": "link-text",
@@ -508,7 +508,7 @@
               "key": "global-navigation-wikis-explore"
             },
             "href": "\/\/fandom.wikia.com\/explore-de",
-            "tracking_label": "link.explore"
+            "tracking-label": "link.explore"
           },
           {
             "type": "link-text",
@@ -517,7 +517,7 @@
               "key": "global-navigation-wikis-community-central"
             },
             "href": "http:\/\/de.community.wikia.com\/wiki\/Community_Deutschland",
-            "tracking_label": "link.community-central"
+            "tracking-label": "link.community-central"
           },
           {
             "type": "link-button",
@@ -526,7 +526,7 @@
               "key": "global-navigation-create-wiki-link-start-wikia"
             },
             "href": "\/\/www.wikia.com\/Special:CreateNewWiki?uselang=de",
-            "tracking_label": "link.start-a-wiki"
+            "tracking-label": "link.start-a-wiki"
           }
         ]
       }
@@ -540,7 +540,7 @@
         },
         "href": "https:\/\/www.wikia.com\/signin?uselang=de",
         "param-name": "redirect",
-        "tracking_label": "account.sign-in"
+        "tracking-label": "account.sign-in"
       },
       "register": {
         "type": "link-authentication",
@@ -550,7 +550,7 @@
         },
         "href": "https:\/\/www.wikia.com\/register?uselang=de",
         "param-name": "redirect",
-        "tracking_label": "account.register"
+        "tracking-label": "account.register"
       }
     },
     "partner_slot": {
@@ -564,7 +564,7 @@
         "type": "text",
         "value": "entertainweb"
       },
-      "tracking_label": "entertainweb"
+      "tracking-label": "entertainweb"
     },
     "services-domain": "https:\/\/services.wikia.com\/"
   }
