@@ -279,9 +279,9 @@
 			height: 30px;
 			justify-content: flex-end;
 			max-width: 100vw;
-			right: 0;
-			top: 45px;
 			width: 100vw;
+			margin-top: -10px;
+			position: relative;
 
 			&-link {
 				padding: 6px
@@ -291,7 +291,6 @@
 				border-bottom: 1px solid $wds-fandom-color-dark-gray;
 				display: block;
 				height: 2px;
-				margin-left: 12px;
 				width: 100%;
 			}
 		}
@@ -303,6 +302,10 @@
 		@media #{$wds-breakpoint-small-down} {
 			margin-right: 0;
 		}
+	}
+
+	&.wds-has-partner-slot .wds-global-navigation__content-container {
+		flex-wrap: wrap;
 	}
 
 	.wds-avatar {
