@@ -386,13 +386,6 @@ export default Component.extend({
 			this.set('inputFocused', true);
 		},
 
-		enter() {
-			alert(
-				'rstrs'
-			)
-		},
-
-
 		onFocusOut() {
 			if (!this.get('state.query')) {
 				this.closeSearch();
