@@ -416,6 +416,7 @@ export default Component.extend({
 			// ESC key
 			} else if (keyCode === 27) {
 				this.closeSearch();
+			// ENTER key
 			} else if (keyCode === 13) {
 				const index = this.get('selectedSuggestionIndex');
 
