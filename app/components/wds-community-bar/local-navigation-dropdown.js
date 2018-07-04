@@ -33,8 +33,8 @@ export default Component.extend({
 		document.removeEventListener('click', this.onDocumentClick);
 	},
 
-	onDocumentClick(event) {
-		if (!this.element.contains(event.target)) {
+	onDocumentClick({ target }) {
+		if (!this.element.contains(target)) {
 			this.toggleNavigation(false);
 		}
 	},
@@ -53,27 +53,21 @@ export default Component.extend({
 		});
 	},
 
-	actions: {
-		toggleNavigation() {
-			this.toggleNavigation();
-		},
-
-		onFirstLevelSelected(index, firstLevelItem, event) {
-			if (firstLevelItem.items) {
-				this.set('firstLevelIndexSelected', index);
-			}
-			this.linkClicked(event);
-		},
-
-		onSecondLevelSelected(index, secondLevelItem, event) {
-			if (secondLevelItem.items) {
-				this.set('secondLevelIndexSelected', index);
-			}
-			this.linkClicked(event);
-		},
-
-		resetSelected(propName) {
-			this.set(propName, null);
+	onFirstLevelSelected(index, firstLevelItem, event) {
+		if (firstLevelItem.items) {
+			this.set('firstLevelIndexSelected', index);
 		}
+		this.onLinkClicked(event);
+	},
+
+	onSecondLevelSelected(index, secondLevelItem, event) {
+		if (secondLevelItem.items) {
+			this.set('secondLevelIndexSelected', index);
+		}
+		this.onLinkClicked(event);
+	},
+
+	resetSelected(propName) {
+		this.set(propName, null);
 	}
 });

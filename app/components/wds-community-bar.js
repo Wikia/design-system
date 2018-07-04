@@ -1,27 +1,33 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
-import track from '../utils/track';
+import track from '../utils/wds-track';
 
 const discussionsTitleKey = 'community-header-discuss';
 
 export default Component.extend({
 	classNames: ['wds-community-bar'],
 
-	// filter out discussion link from navigation model
-	navigation: computed('model', function () {
-		return this.model.navigation.filter((navigationItem) => {
-			return navigationItem.title.key !== discussionsTitleKey;
-		});
-	}),
+	init() {
+		this._super(...arguments);
 
-	// discussions link is a separate item in community bar
-	discussionsLink: computed('model', function () {
-		const discussionsLink = this.model.navigation.filter((navigationItem) => {
-			return navigationItem.title.key === discussionsTitleKey;
+		const navigation = [];
+		let discussionsLink;
+
+		this.model.navigation.forEach((navigationItem) => {
+			// filter out discussion link from navigation model
+			if(navigationItem.title.key !== discussionsTitleKey) {
+				navigation.push(navigationItem);
+			} else {
+				// discussions link is a separate item in community bar
+				discussionsLink = navigationItem;
+			}
 		});
 
-		return discussionsLink[0];
-	}),
+		this.setProperties({
+			navigation,
+			discussionsLink
+		});
+	},
 
 	click(event) {
 		if (this.track) {
@@ -29,15 +35,13 @@ export default Component.extend({
 		}
 	},
 
-	actions: {
-		linkClicked(event) {
-			const href = event.target.getAttribute('href');
+	linkClicked(event) {
+		const href = event.target.getAttribute('href');
 
-			if (href === '#') {
-				event.preventDefault();
-			} else {
-				this.linkClicked(href);
-			}
+		if (!href || href === '#') {
+			event.preventDefault();
+		} else {
+			this.onLinkClicked(href);
 		}
 	}
 });

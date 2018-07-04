@@ -19,7 +19,7 @@
 			secondLevelIndexSelected=secondLevelIndexSelected
 			onSecondLevelClicked=(action onSecondLevelSelected)
 			onBackButtonClicked=(action resetSelected 'firstLevelIndexSelected')
-			linkClicked=(action linkClicked)
+			onLinkClicked=(action onLinkClicked)
 		}}
 		{{#each firstLevelItem.items as |secondLevelItem secondLevelIndex|}}
 			{{#if secondLevelItem.items}}
@@ -30,7 +30,7 @@
 					secondLevelIndex=secondLevelIndex
 					secondLevelIndexSelected=secondLevelIndexSelected
 					onBackButtonClicked=(action resetSelected 'secondLevelIndexSelected')
-					linkClicked=(action linkClicked)
+					onLinkClicked=(action onLinkClicked)
 				}}
 			{{/if}}
 		{{/each}}
