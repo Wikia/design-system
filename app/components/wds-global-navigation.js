@@ -77,6 +77,7 @@ export default Component.extend({
 
 		openModal(modalType) {
 			this.set('currentModal', modalType);
+			document.body.classList.add('wds-no-scroll');
 
 			if (modalType === 'search') {
 				this.set('searchIsActive', true);
@@ -89,6 +90,7 @@ export default Component.extend({
 			}
 
 			this.set('currentModal', null);
+			document.body.classList.remove('wds-no-scroll');
 		}
 	},
 
