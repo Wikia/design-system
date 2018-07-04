@@ -94,7 +94,7 @@ $toggle-active-margin-right: 17px;
 		}
 	}
 
-	&-suggestions {
+	&-suggestions.wds-dropdown__content {
 		background-color: $wds-fandom-color-light-gray;
 		border: 0;
 		border-radius: 0;
@@ -104,7 +104,7 @@ $toggle-active-margin-right: 17px;
 		top: calc(100% + 1px);
 		transform: none;
 
-		&.wds-dropdown__content:not(.wds-is-not-scrollable) {
+		&:not(.wds-is-not-scrollable) {
 			.wds-list {
 				&::after, &::before {
 					background-color: $wds-fandom-color-light-gray;
@@ -112,7 +112,7 @@ $toggle-active-margin-right: 17px;
 			}
 		}
 
-		&.wds-dropdown__content .wds-list.wds-is-linked > li:hover:not(.wds-is-selected) > a {
+		.wds-list.wds-is-linked > li:hover:not(.wds-is-selected) > a {
 			background-color: transparent;
 			color: $wds-color-dark-blue-gray;
 		}
