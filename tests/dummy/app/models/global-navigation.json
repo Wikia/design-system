@@ -553,7 +553,7 @@
         "tracking-label": "account.register"
       }
     },
-    "partner_slot": {
+    "partner-slot": {
       "type": "link-image",
       "href": "http:\/\/www.entertainweb.de\/",
       "image-data": {

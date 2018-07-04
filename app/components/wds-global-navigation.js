@@ -13,7 +13,7 @@ export default Component.extend({
 	classNameBindings: [
 		'searchIsActive:wds-search-is-active',
 		'searchIsAlwaysVisible:wds-search-is-always-visible',
-		'model.partner_slot:wds-has-partner-slot',
+		'model.partner-slot:wds-has-partner-slot',
 		'currentModal:wds-is-modal-opened',
 	],
 
