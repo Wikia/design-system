@@ -9,6 +9,13 @@ $toggle-active-margin-right: 17px;
 		display: flex;
 		height: 100%;
 		justify-content: flex-end;
+
+		&::after,
+		&::before,
+		&.wds-is-active::before,
+		&.wds-is-active::after {
+			display: none;
+		}
 	}
 
 	&-container {
@@ -155,13 +162,6 @@ $toggle-active-margin-right: 17px;
 
 		&-text {
 			@include wds-hide-on-breakpoint(medium-down);
-		}
-	}
-
-	&.wds-dropdown {
-		&::after,
-		&::before {
-			display: none;
 		}
 	}
 
