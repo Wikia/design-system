@@ -35,6 +35,24 @@ export default Component.extend({
 		track(event, this.element, this.track, 'click', 'navigation');
 	},
 
+	openModal(modalType) {
+		this.set('currentModal', modalType);
+		document.body.classList.add('wds-no-scroll');
+
+		if (modalType === 'search') {
+			this.set('searchIsActive', true);
+		}
+	},
+
+	closeModal() {
+		if (this.get('currentModal') === 'search') {
+			this.set('searchIsActive', false);
+		}
+
+		this.set('currentModal', null);
+		document.body.classList.remove('wds-no-scroll');
+	},
+
 	actions: {
 		onSearchToggleClicked() {
 			this.setProperties({
@@ -68,31 +86,13 @@ export default Component.extend({
 		},
 
 		onSearchSuggestionChosen(suggestion) {
-			this.send('closeModal');
+			this.closeModal();
 			this.onSearchSuggestionChosen(suggestion);
 		},
 
 		goToSearchResults(querystring) {
-			this.send('closeModal');
+			this.closeModal();
 			this.goToSearchResults(querystring)
-		},
-
-		openModal(modalType) {
-			this.set('currentModal', modalType);
-			document.body.classList.add('wds-no-scroll');
-
-			if (modalType === 'search') {
-				this.set('searchIsActive', true);
-			}
-		},
-
-		closeModal() {
-			if (this.get('currentModal') === 'search') {
-				this.set('searchIsActive', false);
-			}
-
-			this.set('currentModal', null);
-			document.body.classList.remove('wds-no-scroll');
 		}
 	},
 

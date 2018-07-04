@@ -11,7 +11,4 @@ export default Component.extend({
 		assert('Required function `openModal` is not set', this.openModal);
 	},
 
-	actions: {
-		onSearchCloseClicked() {}
-	}
 });

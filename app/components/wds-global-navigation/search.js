@@ -353,6 +353,7 @@ export default Component.extend({
 
 	actions: {
 		onSearchSuggestionChosen(suggestion) {
+			this.closeSearch();
 			this.onSearchSuggestionChosen(suggestion);
 		},
 
