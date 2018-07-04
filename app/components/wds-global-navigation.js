@@ -68,10 +68,12 @@ export default Component.extend({
 		},
 
 		onSearchSuggestionChosen(suggestion) {
+			this.send('closeModal');
 			this.onSearchSuggestionChosen(suggestion);
 		},
 
 		goToSearchResults(querystring) {
+			this.send('closeModal');
 			this.goToSearchResults(querystring)
 		},
 
