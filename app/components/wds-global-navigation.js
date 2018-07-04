@@ -3,7 +3,7 @@ import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
 
 import Component from '@ember/component';
-import track from '../utils/track';
+import track from '../utils/wds-track';
 
 export default Component.extend({
 	fetch: service(),

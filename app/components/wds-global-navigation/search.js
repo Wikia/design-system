@@ -1,11 +1,11 @@
-import {notEmpty, empty} from '@ember/object/computed';
 import Component from '@ember/component';
-import EmberObject from '@ember/object';
-import fetch from 'fetch';
 import { assert } from '@ember/debug';
-import {run, scheduleOnce} from '@ember/runloop';
-import {inject as service} from '@ember/service';
+import EmberObject from '@ember/object';
+import { empty, notEmpty } from '@ember/object/computed';
+import { run, scheduleOnce } from '@ember/runloop';
+import { inject as service } from '@ember/service';
 import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
+import fetch from 'fetch';
 
 export default Component.extend({
 	tagName: 'form',
@@ -80,6 +80,7 @@ export default Component.extend({
 		if (this.goToSearchResults) {
 			event.preventDefault();
 			this.goToSearchResults(this.get('state.query'));
+
 			return;
 		}
 
@@ -327,8 +328,9 @@ export default Component.extend({
 
 	closeSearch() {
 		this.setProperties({
-			state: {query: ''},
-			searchIsActive: false
+			state: { query: '' },
+			searchIsActive: false,
+			inputFocused: false
 		});
 		this.set('suggestions', []);
 
@@ -342,7 +344,9 @@ export default Component.extend({
 
 		run(() => {
 			scheduleOnce('afterRender', this, () => {
-				this.set('selectedSuggestionIndex', -1);
+				if (!this.get('isDestroyed') ) {
+					this.set('selectedSuggestionIndex', -1);
+				}
 			});
 		});
 	},
@@ -390,8 +394,6 @@ export default Component.extend({
 			if (!this.shouldWaitForClickOnCloseSuggestion) {
 				this.resetSearchState();
 			}
-
-
 		},
 
 		onSuggestionMouseDown() {
@@ -416,10 +418,11 @@ export default Component.extend({
 			// ESC key
 			} else if (keyCode === 27) {
 				this.closeSearch();
+			// ENTER key
 			} else if (keyCode === 13) {
 				const index = this.get('selectedSuggestionIndex');
 
-				if (this.get('selectedSuggestionIndex') !== -1) {
+				if (index !== -1) {
 					this.inputField.blur();
 					this.onSearchSuggestionChosen(this.get('suggestions')[index]);
 				}

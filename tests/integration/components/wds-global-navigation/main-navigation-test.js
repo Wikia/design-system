@@ -13,7 +13,7 @@ const modelStub = {
 				"key": "global-navigation-fandom-overview-link-vertical-games"
 			},
 			"href": "//fandom.wikia.com/topics/games",
-			"tracking_label": "link.games"
+			"tracking-label": "link.games"
 		},
 		{
 			"type": "link-text",
@@ -22,7 +22,7 @@ const modelStub = {
 				"key": "global-navigation-fandom-overview-link-vertical-movies"
 			},
 			"href": "//fandom.wikia.com/topics/movies",
-			"tracking_label": "link.movies"
+			"tracking-label": "link.movies"
 		},
 		{
 			"type": "link-text",
@@ -31,7 +31,7 @@ const modelStub = {
 				"key": "global-navigation-fandom-overview-link-vertical-tv"
 			},
 			"href": "//fandom.wikia.com/topics/tv",
-			"tracking_label": "link.tv"
+			"tracking-label": "link.tv"
 		},
 		{
 			"type": "link-text",
@@ -40,7 +40,7 @@ const modelStub = {
 				"key": "global-navigation-fandom-overview-link-video"
 			},
 			"href": "//fandom.wikia.com/video",
-			"tracking_label": "link.video"
+			"tracking-label": "link.video"
 		},
 		{
 			"type": "link-group",
@@ -48,7 +48,7 @@ const modelStub = {
 				"type": "translatable-text",
 				"key": "global-navigation-wikis-header"
 			},
-			"tracking_label": "link.wikis",
+			"tracking-label": "link.wikis",
 			"items": [
 				{
 					"type": "link-text",
@@ -57,7 +57,7 @@ const modelStub = {
 						"key": "global-navigation-wikis-explore"
 					},
 					"href": "//fandom.wikia.com/explore",
-					"tracking_label": "link.explore"
+					"tracking-label": "link.explore"
 				},
 				{
 					"type": "link-text",
@@ -66,7 +66,7 @@ const modelStub = {
 						"key": "global-navigation-wikis-community-central"
 					},
 					"href": "//community.jakubjt.wikia-dev.pl/wiki/Community_Central",
-					"tracking_label": "link.community-central"
+					"tracking-label": "link.community-central"
 				},
 				{
 					"type": "link-text",
@@ -75,7 +75,7 @@ const modelStub = {
 						"key": "global-navigation-wikis-fandom-university"
 					},
 					"href": "//community.jakubjt.wikia-dev.pl/wiki/Fandom_University",
-					"tracking_label": "link.fandom-university"
+					"tracking-label": "link.fandom-university"
 				},
 				{
 					"type": "link-button",
@@ -84,7 +84,7 @@ const modelStub = {
 						"key": "global-navigation-create-wiki-link-start-wikia"
 					},
 					"href": "//www.jakubjt.wikia-dev.pl/Special:CreateNewWiki",
-					"tracking_label": "link.start-a-wiki"
+					"tracking-label": "link.start-a-wiki"
 				}
 			]
 		}

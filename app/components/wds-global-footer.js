@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import track from '../utils/track';
+import track from '../utils/wds-track';
 
 export default Component.extend({
 	tagName: 'footer',

@@ -2,7 +2,7 @@ export default {
 	"search": {
 		"type": "search",
 		"results": {
-			"tracking_label": "search",
+			"tracking-label": "search",
 			"param-name": "query",
 			"url": "//starwars.mateuszr.wikia-dev.pl/wiki/Special:Search"
 		},
@@ -23,7 +23,7 @@ export default {
 		"suggestions": {
 			"url": "/mocks/searchSuggestions.json?",
 			"param-name": "query",
-			"tracking_label": "search-suggestion"
+			"tracking-label": "search-suggestion"
 		}
 	}
 };
