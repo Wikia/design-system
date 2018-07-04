@@ -1,12 +1,15 @@
 $toggle-active-margin-right: 17px;
 
-// .wds-dropdown class it to increase priority and override default .wds-dropdown styles
-.wds-global-navigation__search.wds-dropdown {
-	align-items: center;
-	color: $wds-fandom-color-aqua;
-	display: flex;
-	height: 100%;
-	justify-content: flex-end;
+.wds-global-navigation__search {
+
+	// .wds-dropdown class it to increase priority and override default .wds-dropdown styles
+	&.wds-dropdown {
+		align-items: center;
+		color: $wds-fandom-color-aqua;
+		display: flex;
+		height: 100%;
+		justify-content: flex-end;
+	}
 
 	&-container {
 		height: 100%;
