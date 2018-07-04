@@ -1,6 +1,6 @@
 import Component from '@ember/component';
-import {computed} from '@ember/object';
-import {htmlSafe} from '@ember/string';
+import { computed } from '@ember/object';
+import { htmlSafe } from '@ember/string';
 import track from '../utils/wds-track';
 
 export default Component.extend({

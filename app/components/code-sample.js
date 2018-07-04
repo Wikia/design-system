@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import {registerHljsLanguage} from '../utils/beautify';
+import { registerHljsLanguage } from '../utils/beautify';
 
 export default Component.extend({
 	classNameBindings: ['language'],

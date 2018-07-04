@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import {computed} from '@ember/object';
+import { computed } from '@ember/object';
 import track from '../utils/track';
 
 const discussionsTitleKey = 'community-header-discuss';

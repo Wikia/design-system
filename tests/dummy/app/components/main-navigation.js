@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import {run, throttle} from '@ember/runloop';
+import { run, throttle } from '@ember/runloop';
 
 export default Component.extend({
 	classNames: 'main-navigation',

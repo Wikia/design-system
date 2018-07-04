@@ -1,7 +1,7 @@
-import {module, test} from 'qunit';
+import { module, test } from 'qunit';
 import Service from '@ember/service';
-import {setupRenderingTest} from 'ember-qunit';
-import {render} from '@ember/test-helpers';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | wds-avatar', function (hooks) {

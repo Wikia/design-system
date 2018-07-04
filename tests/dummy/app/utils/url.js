@@ -14,7 +14,7 @@ import config from '../config/environment';
  * @param {getQueryStringOptions} options
  * @returns {string}
  */
-export function getQueryString(query = {}, {useBrackets = true, skipQuestionMark = false} = {}) {
+export function getQueryString(query = {}, { useBrackets = true, skipQuestionMark = false } = {}) {
 	const queryArray = Object.keys(query);
 	const brackets = useBrackets ? '[]' : '';
 
@@ -93,7 +93,7 @@ export function getGlobalDiscussionLogServiceUrl(path = '') {
  * @returns {string}
  */
 export function addQueryParams(url, params = {}) {
-	const paramsString = getQueryString(params, {skipQuestionMark: true});
+	const paramsString = getQueryString(params, { skipQuestionMark: true });
 
 	if (paramsString.length > 0) {
 		if (url.indexOf('?') === -1) {
