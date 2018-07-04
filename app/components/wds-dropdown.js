@@ -7,6 +7,7 @@ export default Component.extend({
 		'isClicked:wds-is-clicked',
 		'dropdownExpanded:wds-is-active',
 		'hasShadow:wds-has-shadow',
+		'noChevron:wds-no-chevron',
 		'hasDarkShadow:wds-has-dark-shadow',
 		'isLevel2:wds-dropdown-level-2:wds-dropdown'
 	],

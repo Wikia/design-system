@@ -110,8 +110,10 @@
 
 	&.wds-is-active,
 	&:hover {
-		&::before, &::after {
-			display: block;
+		&:not(.wds-no-chevron) {
+			&::before, &::after {
+				display: block;
+			}
 		}
 
 		.wds-dropdown__content {
