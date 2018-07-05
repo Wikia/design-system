@@ -56,15 +56,17 @@ export default Component.extend({
 	onFirstLevelSelected(index, firstLevelItem, event) {
 		if (firstLevelItem.items) {
 			this.set('firstLevelIndexSelected', index);
+		} else {
+			this.onLinkClicked(event);
 		}
-		this.onLinkClicked(event);
 	},
 
 	onSecondLevelSelected(index, secondLevelItem, event) {
 		if (secondLevelItem.items) {
 			this.set('secondLevelIndexSelected', index);
+		} else {
+			this.onLinkClicked(event);
 		}
-		this.onLinkClicked(event);
 	},
 
 	resetSelected(propName) {
