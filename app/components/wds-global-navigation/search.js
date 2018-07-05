@@ -27,6 +27,7 @@ export default Component.extend({
 	cachedResultsLimit: 100,
 	debounceDuration: 250,
 	shouldWaitForClickOnCloseSuggestion: false,
+	inSearchModal: false,
 	// this object is declared inline to enable sharing it's internals between all instances of search
 	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
 	state: {
@@ -59,6 +60,10 @@ export default Component.extend({
 	didInsertElement() {
 		this._super(...arguments);
 		this.set('inputField', this.element.querySelector('.wds-global-navigation__search-input'));
+
+		if (this.inSearchModal) {
+			this.inputField.focus();
+		}
 	},
 
 	click(event) {
