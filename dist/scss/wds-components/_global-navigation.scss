@@ -296,6 +296,10 @@
 		}
 	}
 
+	.wds-is-modal-opened &__partner-slot {
+		display: none;
+	}
+
 	&.wds-has-partner-slot &__content-bar-right {
 		margin-right: $partner-slot-width;
 
