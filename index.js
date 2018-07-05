@@ -6,6 +6,6 @@ module.exports = {
 	included(app) {
 		this._super.included.apply(this, arguments);
 
-		app.import('vendor/polyfills.js', {prepend: true});
+		app.import('vendor/polyfills.js', { prepend: true });
 	}
 };

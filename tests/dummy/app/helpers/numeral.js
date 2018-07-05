@@ -1,4 +1,4 @@
-import {helper as buildHelper} from '@ember/component/helper';
+import { helper as buildHelper } from '@ember/component/helper';
 import numeral from 'numeral';
 
 /**

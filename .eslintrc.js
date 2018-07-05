@@ -15,6 +15,7 @@ module.exports = {
 		browser: true
 	},
 	rules: {
+		'object-curly-spacing': [2, 'always'],
 	},
 	globals: {
 		server: true,

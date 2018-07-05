@@ -348,10 +348,10 @@
       {
         "title": {
           "type": "translatable-text",
-          "key": "community-header-forum"
+          "key": "community-header-discuss"
         },
         "icon": "reply-small",
-        "href": "#"
+        "href": "/d/f"
       }
     ]
   },

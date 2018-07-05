@@ -6,7 +6,7 @@ export default Controller.extend({
 		console.info('tracking', context);
 	},
 
-	onSearchSuggestionChosen({title}) {
+	onSearchSuggestionChosen({ title }) {
 		// eslint-disable-next-line no-console
 		console.info('Suggestion clicked', title);
 	},

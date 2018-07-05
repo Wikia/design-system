@@ -17,11 +17,7 @@
 				{{else}}
 					<li>
 						<a href="{{secondLevelItem.href}}" data-tracking-label="{{secondLevelItem.tracking_label}}">
-							{{#if (equal secondLevelItem.title.type 'translatable-text')}}
-								{{i18n secondLevelItem.title.key ns='design-system'}}
-							{{else}}
-								{{secondLevelItem.title.value}}
-							{{/if}}
+							{{wds-label label=secondLevelItem.title}}
 						</a>
 					</li>
 				{{/if}}

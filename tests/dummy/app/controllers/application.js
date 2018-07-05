@@ -143,6 +143,10 @@ export default Controller.extend({
 						location: 'identity.community-header.index'
 					},
 					{
+						name: 'Community Bar',
+						location: 'identity.community-bar.index'
+					},
+					{
 						name: 'API',
 						location: 'identity.api'
 					},
