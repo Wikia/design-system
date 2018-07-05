@@ -55,6 +55,7 @@ export default Component.extend({
 
 	onFirstLevelSelected(index, firstLevelItem, event) {
 		if (firstLevelItem.items) {
+			event.preventDefault();
 			this.set('firstLevelIndexSelected', index);
 		} else {
 			this.onLinkClicked(event);
@@ -63,6 +64,7 @@ export default Component.extend({
 
 	onSecondLevelSelected(index, secondLevelItem, event) {
 		if (secondLevelItem.items) {
+			event.preventDefault();
 			this.set('secondLevelIndexSelected', index);
 		} else {
 			this.onLinkClicked(event);
