@@ -13,7 +13,7 @@ export default Component.extend({
 	classNameBindings: [
 		'searchIsActive:wds-search-is-active',
 		'searchIsAlwaysVisible:wds-search-is-always-visible',
-		'model.partner_slot:wds-has-partner-slot',
+		'model.partner-slot:wds-has-partner-slot',
 		'currentModal:wds-is-modal-opened',
 	],
 
@@ -33,6 +33,24 @@ export default Component.extend({
 
 	click(event) {
 		track(event, this.element, this.track, 'click', 'navigation');
+	},
+
+	openModal(modalType) {
+		this.set('currentModal', modalType);
+		document.body.classList.add('wds-no-scroll');
+
+		if (modalType === 'search') {
+			this.set('searchIsActive', true);
+		}
+	},
+
+	closeModal() {
+		if (this.get('currentModal') === 'search') {
+			this.set('searchIsActive', false);
+		}
+
+		this.set('currentModal', null);
+		document.body.classList.remove('wds-no-scroll');
 	},
 
 	actions: {
@@ -68,27 +86,13 @@ export default Component.extend({
 		},
 
 		onSearchSuggestionChosen(suggestion) {
+			this.closeModal();
 			this.onSearchSuggestionChosen(suggestion);
 		},
 
 		goToSearchResults(querystring) {
+			this.closeModal();
 			this.goToSearchResults(querystring)
-		},
-
-		openModal(modalType) {
-			this.set('currentModal', modalType);
-
-			if (modalType === 'search') {
-				this.set('searchIsActive', true);
-			}
-		},
-
-		closeModal() {
-			if (this.get('currentModal') === 'search') {
-				this.set('searchIsActive', false);
-			}
-
-			this.set('currentModal', null);
 		}
 	},
 

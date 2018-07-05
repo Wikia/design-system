@@ -66,6 +66,7 @@ export default Component.extend({
 			if (this.onSearchSuggestionChosen) {
 				event.preventDefault();
 				this.onSearchSuggestionChosen(this.suggestions[this.selectedSuggestionIndex]);
+				this.closeSearch();
 			}
 
 			this.setProperties({
@@ -328,11 +329,11 @@ export default Component.extend({
 
 	closeSearch() {
 		this.setProperties({
-			state: { query: '' },
+			'state.query': '',
 			searchIsActive: false,
-			inputFocused: false
+			inputFocused: false,
+			suggestions: []
 		});
-		this.set('suggestions', []);
 
 		if (this.onSearchCloseClicked) {
 			this.onSearchCloseClicked();
@@ -352,10 +353,6 @@ export default Component.extend({
 	},
 
 	actions: {
-		onSearchSuggestionChosen(suggestion) {
-			this.onSearchSuggestionChosen(suggestion);
-		},
-
 		openSearch() {
 			this.set('searchIsActive', true);
 			this.onSearchToggleClicked();
