@@ -53,16 +53,26 @@ export default Component.extend(
 			const model = this.get('model');
 			const type = model.type;
 
+			if (this.isAnnouncement(type)) {
+				return model.snippet;
+			} else {
+				return null;
+			}
+		}),
+
+		// Make sure to escape user input
+		textWithHtml: computed('model', function () {
+			const model = this.get('model');
+			const type = model.type;
+
 			if (this.isDiscussionReply(type)) {
 				return this.getReplyMessageBody(model);
 			} else if (this.isDiscussionPostUpvote(type)) {
 				return this.getPostUpvoteMessageBody(model);
 			} else if (this.isDiscussionReplyUpvote(type)) {
 				return this.getReplyUpvoteMessageBody(model);
-			} else if (this.isAnnouncement(type)) {
-				return model.snippet;
 			} else {
-				this.get('logger').warn('No type found for a notification', model);
+				return null;
 			}
 		}),
 
