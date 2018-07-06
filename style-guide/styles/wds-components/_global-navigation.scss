@@ -447,10 +447,10 @@
 	$fandomAnimationTime: 0.4s;
 	$backgroundAnimationTime: 0.4s;
 	$backgroundAnimationDelay: 0;
-	$sitenameAnimationTime: $fandomAnimationTime;
+	$sitenameAnimationTime: 0.3s;
 	$sitenameAnimationDelay: 0.3s;
-	$separatorAnimationTime: 0.3s;
-	$separatorAnimationDelay: $sitenameAnimationDelay + $sitenameAnimationTime;
+	$separatorAnimationTime: 0.2s;
+	$separatorAnimationDelay: 0.4s;
 
 
 	&.wds-is-community-bar-in:not(.wds-is-modal-opened) {
@@ -484,7 +484,7 @@
 				animation-duration: $sitenameAnimationTime;
 				animation-name: modalControls;
 				animation-fill-mode: forwards;
-				animation-delay: $sitenameAnimationDelay + 0.2s;
+				animation-delay: $sitenameAnimationDelay;
 			}
 
 			&__community-bar-separator {
