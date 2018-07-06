@@ -497,6 +497,10 @@
 			&__modal-control-search svg {
 				fill: $wds-fandom-color-dark-gray;
 			}
+
+			&__modal-control-user {
+				visibility: hidden;
+			}
 		}
 
 		.wds-community-bar__sitename {
