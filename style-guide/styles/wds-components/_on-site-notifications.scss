@@ -44,7 +44,14 @@
 		}
 
 		> li.wds-notification-card {
+			padding-left: 0;
+			padding-right: 0;
+			margin: 0 18px;
 			white-space: normal;
+
+			&:first-child {
+				margin-top: 6px;
+			}
 		}
 	}
 
@@ -57,8 +64,8 @@
 
 .wds-notification-card {
 	$text-color: $wds-fandom-color-black;
-	$snippet-color: $wds-color-faint-gray;
-	$context-color: $wds-fandom-color-dark-gray;
+	$snippet-color: $wds-fandom-color-dark-gray;
+	$context-color: $wds-fandom-color-middle-gray;
 	$icon-color: $wds-fandom-color-middle-gray;
 
 	padding: 12px 0 8px;
@@ -132,7 +139,7 @@
 		color: $context-color;
 		display: flex;
 		font-size: $wds-typescale-size-minus-2;
-		font-weight: bold;
+		letter-spacing: .15px;
 		list-style-type: none;
 		margin: 0;
 		padding: 8px 0 0;
@@ -161,6 +168,13 @@
 
 @media #{$wds-breakpoint-small-down} {
 	.wds-notifications {
+		&__notification-list {
+			padding: {
+				left: 0;
+				right: 0;
+			}
+		}
+
 		&__mark-all-as-read-button {
 			align-items: baseline;
 			border-bottom: 1px solid $wds-color-medium-gray;
