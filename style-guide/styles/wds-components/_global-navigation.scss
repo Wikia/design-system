@@ -13,6 +13,7 @@
 	top: 0;
 	transition: background-color 2s;
 	width: 100%;
+	z-index: 1;
 
 	@media #{$wds-breakpoint-small-down} {
 		padding: 0 3px 0 12px;
@@ -427,10 +428,17 @@
 		z-index: 1;
 	}
 
+	&__community-bar-separator {
+		border-left: 1px solid $wds-fandom-color-mid-light-gray;
+		opacity: 0;
+		height: 30px;
+		margin-left: 12px;
+		width: 1px;
+	}
+
 	.wds-community-bar__sitename {
-		//color: $wds-color-black;
 		max-width: calc(100vw - 120px);
-		margin-left: 30px;
+		margin-left: 12px;
 		transform: translate(-100vw);
 		transition: transform 0.7s;
 	}
@@ -440,10 +448,14 @@
 	$backgroundAnimationTime: 0.4s;
 	$backgroundAnimationDelay: 0;
 	$sitenameAnimationTime: $fandomAnimationTime;
-	$sitenameAnimationDelay: $fandomAnimationTime + $backgroundAnimationDelay + $backgroundAnimationTime;
+	$sitenameAnimationDelay: 0.3s;
+	$separatorAnimationTime: 0.3s;
+	$separatorAnimationDelay: $sitenameAnimationDelay + $sitenameAnimationTime;
 
 
-	&.wds-is-community-bar-in {
+	&.wds-is-community-bar-in:not(.wds-is-modal-opened) {
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+
 		animation-duration: $backgroundAnimationTime;
 		animation-name: globalNavigationBackground;
 		animation-fill-mode: forwards;
@@ -468,11 +480,22 @@
 				animation-delay: $backgroundAnimationDelay;
 			}
 
-			&__modal-controls {
+			&__modal-control {
 				animation-duration: $sitenameAnimationTime;
 				animation-name: modalControls;
 				animation-fill-mode: forwards;
 				animation-delay: $sitenameAnimationDelay + 0.2s;
+			}
+
+			&__community-bar-separator {
+				animation-duration: $separatorAnimationTime;
+				animation-name: separator;
+				animation-fill-mode: forwards;
+				animation-delay: $separatorAnimationDelay;
+			}
+
+			&__modal-control-search svg {
+				fill: $wds-fandom-color-dark-gray;
 			}
 		}
 
@@ -493,7 +516,6 @@
 			animation-fill-mode: forwards;
 			animation-delay: $sitenameAnimationDelay;
 			animation-timing-function: ease-out;
-			//animation-direction: reverse;
 		}
 	}
 
@@ -528,5 +550,11 @@
 @keyframes modalControls {
 	to {
 		transform: translate(52px);
+	}
+}
+
+@keyframes separator {
+	to {
+		opacity: 1;
 	}
 }

@@ -1,6 +1,7 @@
 import { empty, equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
+import { run } from '@ember/runloop';
 
 import Component from '@ember/component';
 import track from '../utils/wds-track';
@@ -15,9 +16,11 @@ export default Component.extend({
 		'searchIsAlwaysVisible:wds-search-is-always-visible',
 		'model.partner-slot:wds-has-partner-slot',
 		'currentModal:wds-is-modal-opened',
+		'communityBarIsActive:wds-is-community-bar-in'
 	],
 
 	searchIsActive: false,
+	communityBarIsActive: false,
 
 	searchIsAlwaysVisible: empty('model.fandom_overview'),
 
@@ -25,10 +28,29 @@ export default Component.extend({
 	isUserModalOpen: equal('currentModal', 'user'),
 	currentModal: null,
 
+
+
 	init() {
 		this._super(...arguments);
 
 		assert('Required property `model` is not set', this.model);
+	},
+
+	didInsertElement() {
+		this._super(...arguments);
+
+		// TODO add throttling
+		window.addEventListener('scroll', () => {
+			if (window.pageYOffset > 55 && this.communityBarIsActive === false) {
+				run(() => {
+					this.set('communityBarIsActive', true);
+				});
+			} else if (window.pageYOffset <= 55 && this.communityBarIsActive === true) {
+				run(() => {
+					this.set('communityBarIsActive', false);
+				});
+			}
+		});
 	},
 
 	click(event) {
