@@ -10,13 +10,15 @@
 	}
 
 	&__mark-all-as-read {
+		border-bottom: solid 1px $wds-fandom-color-mid-light-gray;
 		color: $wds-fandom-color-link;
 		cursor: pointer;
 		font-size: $wds-typescale-size-minus-2;
 		font-weight: bold;
 		line-height: 14px;
-		padding: 20px $content-padding $content-padding;
+		padding: 15px $content-padding;
 		text-transform: uppercase;
+		width: 100%;
 	}
 
 	&__dropdown-content {
@@ -168,7 +170,10 @@
 		}
 
 		&__mark-all-as-read {
+			border: unset;
 			padding: unset;
+			text-align: right;
+			width: 50%;
 		}
 
 		&__header {
