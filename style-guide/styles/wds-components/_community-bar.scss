@@ -49,6 +49,7 @@
 
 	&__navigation {
 		.wds-dropdown {
+			display: block;
 			position: static;
 
 			&::before, &::after {
