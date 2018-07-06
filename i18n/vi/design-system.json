@@ -121,5 +121,6 @@
   "days-ago": "{days}d",
   "hours-ago": "{hours}h",
   "minutes-ago": "{minutes}m",
-  "now-label": "bây giờ"
+  "now-label": "bây giờ",
+  "back": "Trở lại"
 }

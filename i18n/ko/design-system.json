@@ -121,5 +121,6 @@
   "days-ago": "{days}d",
   "hours-ago": "{hours}h",
   "minutes-ago": "{minutes}m",
-  "now-label": "지금"
+  "now-label": "지금",
+  "back": "뒤로"
 }

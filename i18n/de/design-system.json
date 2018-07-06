@@ -121,5 +121,6 @@
   "days-ago": "{days} T.",
   "hours-ago": "{hours} Std.",
   "minutes-ago": "{minutes} Min.",
-  "now-label": "gerade eben"
+  "now-label": "gerade eben",
+  "back": "Zurück"
 }

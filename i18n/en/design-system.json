@@ -121,5 +121,6 @@
   "days-ago": "{days}d",
   "hours-ago": "{hours}h",
   "minutes-ago": "{minutes}m",
-  "now-label": "now"
+  "now-label": "now",
+  "back": "Back"
 }

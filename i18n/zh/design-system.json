@@ -121,5 +121,6 @@
   "days-ago": "{days}天", 
   "hours-ago": "{hours}小时", 
   "minutes-ago": "{minutes}分钟", 
-  "now-label": "现在"
+  "now-label": "现在",
+  "back": "返回"
 }
