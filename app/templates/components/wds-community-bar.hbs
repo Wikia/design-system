@@ -1,9 +1,11 @@
-<div class="wds-community-bar__sitename">
-	<a href="{{model.sitename.href}}" data-tracking-label="{{model.sitename.tracking_label}}">{{model.sitename.title.value}}</a>
+<div class="wds-community-bar__content">
+	<div class="wds-community-bar__sitename">
+		<a href="{{model.sitename.href}}" data-tracking-label="{{model.sitename.tracking_label}}">{{model.sitename.title.value}}</a>
+	</div>
+	{{#if discussionsLink}}
+		<a href="{{discussionsLink.href}}" class="wds-community-bar__discussions" data-tracking-label="{{discussionsLink.tracking_label}}">
+			{{svg 'wds-icons-reply-small' class='wds-icon wds-icon-small'}}
+		</a>
+	{{/if}}
+	{{wds-community-bar/local-navigation-dropdown model=navigation onLinkClicked=(action linkClicked)}}
 </div>
-{{#if discussionsLink}}
-	<a href="{{discussionsLink.href}}" class="wds-community-bar__discussions" data-tracking-label="{{discussionsLink.tracking_label}}">
-		{{svg 'wds-icons-reply-small' class='wds-icon wds-icon-small'}}
-	</a>
-{{/if}}
-{{wds-community-bar/local-navigation-dropdown model=navigation onLinkClicked=(action linkClicked)}}
