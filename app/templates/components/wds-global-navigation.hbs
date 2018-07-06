@@ -10,6 +10,12 @@
 		{{wds-global-navigation/main-navigation model=model.main-navigation}}
 	</div>
 	<div class="wds-global-navigation__content-bar-right">
+		<div class="wds-global-navigation__community-bar">
+			{{svg 'wds-company-logo-fandom-heart' class='wds-global-navigation__logo-heart'}}
+			<div class="wds-community-bar__sitename">
+				{{sitename}}
+			</div>
+		</div>
 		<div class="wds-global-navigation__dropdown-controls">
 			{{wds-global-navigation/search
 				model=model.search

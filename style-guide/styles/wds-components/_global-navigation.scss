@@ -11,6 +11,7 @@
 	left: 0;
 	position: fixed;
 	top: 0;
+	transition: background-color 2s;
 	width: 100%;
 
 	@media #{$wds-breakpoint-small-down} {
@@ -223,6 +224,10 @@
 		width: 126px;
 	}
 
+	&__logo {
+		transition: transform 0.4s;
+	}
+
 	&__user-menu-dropdown-caption {
 		font-size: $wds-typescale-size-minus-2;
 		padding-bottom: 10px;
@@ -401,5 +406,127 @@
 	&__link-button {
 		margin: 6px;
 		text-align: center;
+	}
+
+	&__community-bar {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		visibility: hidden;
+		top: 0;
+		height: 100%;
+	}
+
+	&__logo-heart {
+		background-color: #002a33;
+		height: 27px;
+		width: 27px;
+		padding: 1px 0px 1px 12px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.wds-community-bar__sitename {
+		//color: $wds-color-black;
+		max-width: calc(100vw - 120px);
+		margin-left: 30px;
+		transform: translate(-100vw);
+		transition: transform 0.7s;
+	}
+
+
+	$fandomAnimationTime: 0.4s;
+	$backgroundAnimationTime: 0.4s;
+	$backgroundAnimationDelay: 0;
+	$sitenameAnimationTime: $fandomAnimationTime;
+	$sitenameAnimationDelay: $fandomAnimationTime + $backgroundAnimationDelay + $backgroundAnimationTime;
+
+
+	&.wds-is-community-bar-in {
+		animation-duration: $backgroundAnimationTime;
+		animation-name: globalNavigationBackground;
+		animation-fill-mode: forwards;
+		animation-delay: $backgroundAnimationDelay;
+
+		.wds-global-navigation__logo {
+			animation-duration: $fandomAnimationTime;
+			animation-name: fandomSlideOut;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in;
+		}
+
+		.wds-global-navigation {
+			&__community-bar {
+				visibility: visible;
+			}
+
+			&__logo-heart {
+				animation-duration: $backgroundAnimationTime;
+				animation-name: globalNavigationBackground;
+				animation-fill-mode: forwards;
+				animation-delay: $backgroundAnimationDelay;
+			}
+
+			&__modal-controls {
+				animation-duration: $sitenameAnimationTime;
+				animation-name: modalControls;
+				animation-fill-mode: forwards;
+				animation-delay: $sitenameAnimationDelay + 0.2s;
+			}
+		}
+
+		.wds-community-bar__sitename {
+			animation-duration: $sitenameAnimationTime;
+			animation-name: sitename;
+			animation-fill-mode: forwards;
+			animation-delay: $sitenameAnimationDelay;
+			animation-timing-function: ease-out;
+		}
+
+	}
+
+	&.wds-is-community-bar-out {
+		.wds-community-bar__sitename {
+			animation-duration: $sitenameAnimationTime;
+			animation-name: sitenameOut;
+			animation-fill-mode: forwards;
+			animation-delay: $sitenameAnimationDelay;
+			animation-timing-function: ease-out;
+			//animation-direction: reverse;
+		}
+	}
+
+
+}
+
+@keyframes fandomSlideOut {
+	to {
+		transform: translate(-120px);
+	}
+}
+
+
+@keyframes globalNavigationBackground {
+	to {
+		background-color: #fff;
+	}
+}
+
+@keyframes sitenameOut {
+	to {
+		transform: translate(-100vw);
+	}
+}
+
+@keyframes sitename {
+	to {
+		transform: none;
+	}
+}
+
+@keyframes modalControls {
+	to {
+		transform: translate(52px);
 	}
 }

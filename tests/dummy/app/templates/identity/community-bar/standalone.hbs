@@ -1,1 +1,4 @@
-{{wds-community-bar model=model track=track onLinkClicked=linkClicked}}
+<div class="wds-navigation-wrapper">
+	{{wds-global-navigation model=model.globalNavigation sitename=model.communityBar.sitename.title.value track=(action track) onSearchSuggestionChosen=(action onSearchSuggestionChosen) goToSearchResults=(action goToSearchResults)}}
+	{{!wds-community-bar model=model.communityBar track=track onLinkClicked=linkClicked}}
+</div>
