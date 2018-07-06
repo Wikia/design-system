@@ -1,12 +1,16 @@
 .wds-community-bar {
 	$community-bar-height: 50px;
 
-	align-items: center;
-	background-color: $wds-fandom-color-light-gray;
-	display: flex;
-	height: $community-bar-height;
-	padding: 0 12px;
+	background-color: $wds-color-white;
 	position: relative;
+
+	&__content {
+		align-items: center;
+		border-bottom: 1px solid $wds-fandom-color-mid-light-gray;
+		display: flex;
+		height: $community-bar-height;
+		margin: 0 12px;
+	}
 
 	&__sitename {
 		flex: 1;
@@ -49,6 +53,7 @@
 
 			&::before, &::after {
 				left: auto;
+				transform: translateY(-1px);
 			}
 
 			&::before {
@@ -78,7 +83,13 @@
 			&__content {
 				left: 10px;
 				right: 10px;
-				transform: none;
+				transform: translateY(-1px);
+			}
+
+			&.wds-is-active {
+				.wds-dropdown__toggle {
+					color: $wds-fandom-color-aqua;
+				}
 			}
 		}
 	}
