@@ -20,10 +20,10 @@
 			focusOut=(action 'onFocusOut')
 		}}
 		{{#wds-button text=true class='wds-global-navigation__search-clear' type='button' click=(action 'onClearSearchClick')}}
-			{{svg 'wds-icons-circle-plus' class='wds-icon wds-icon-small wds-global-navigation__search-close-icon'}}
+			{{wds-icon name='circle-plus' class='wds-icon-small wds-global-navigation__search-close-icon'}}
 		{{/wds-button}}
 		{{#wds-button text=true class='wds-global-navigation__search-close' type='button' click=(action 'onCloseSearchClick')}}
-			{{svg 'wds-icons-cross' class='wds-icon wds-icon-tiny wds-global-navigation__search-close-icon'}}
+			{{wds-icon name='cross' size='tiny' class='wds-icon-tiny wds-global-navigation__search-close-icon'}}
 		{{/wds-button}}
 		{{#wds-button
 			class='wds-global-navigation__search-submit'
