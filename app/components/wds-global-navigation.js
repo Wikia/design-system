@@ -1,12 +1,15 @@
 import { empty, equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
+import { computed } from '@ember/object';
 
 import Component from '@ember/component';
 import track from '../utils/wds-track';
 
 export default Component.extend({
 	fetch: service(),
+	fastboot: service(),
+
 	wdsOnSiteNotifications: service(),
 
 	classNames: ['wds-global-navigation'],
@@ -23,12 +26,25 @@ export default Component.extend({
 
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
+
+	signinUrl: computed('model.anon.signin', 'fastboot.isFastBoot', function() {
+		return `${this.get('model.anon.signin.href')}?${this.get('model.anon.signin.param-name')}=${this.getRedirectUrl()}`
+	}),
+
 	currentModal: null,
 
 	init() {
 		this._super(...arguments);
 
 		assert('Required property `model` is not set', this.model);
+	},
+
+	getRedirectUrl() {
+		if (this.get('fastboot.isFastBoot')) {
+			return encodeURIComponent(`${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`);
+		} else {
+			return encodeURIComponent(window.location.href);
+		}
 	},
 
 	click(event) {
