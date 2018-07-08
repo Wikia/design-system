@@ -22,7 +22,7 @@
 		display: flex;
 
 		@media #{$wds-breakpoint-medium-up} {
-			width: 768px;
+			width: calc(100vw - 24px)
 		}
 
 		@media #{$wds-breakpoint-l-up} {
