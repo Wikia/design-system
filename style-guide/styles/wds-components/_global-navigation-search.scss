@@ -80,7 +80,7 @@ $toggle-active-margin-right: 17px;
 	}
 
 	&-submit {
-		@include button-theming($wds-fandom-color-aqua, $wds-color-white);
+		@include button-theming($wds-fandom-color-aqua, $wds-color-white, $wds-color-white, 'darker');
 		border-radius: 0;
 		display: none;
 		padding: 4px 10px;
@@ -95,7 +95,13 @@ $toggle-active-margin-right: 17px;
 		padding: 5px 9px;
 
 		&.wds-button.wds-is-text {
+			transition: color, $wds-button-transition-duration;
 			color: $wds-color-white;
+
+			&:hover {
+				background-color: transparent;
+				color: darken($wds-color-white, 15%);
+			}
 		}
 	}
 
