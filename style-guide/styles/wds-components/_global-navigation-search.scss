@@ -2,6 +2,7 @@ $toggle-active-margin-right: 17px;
 
 .wds-global-navigation__search {
 
+
 	// .wds-dropdown class is to increase priority and override default .wds-dropdown styles
 	&.wds-dropdown {
 		align-items: center;
@@ -9,6 +10,10 @@ $toggle-active-margin-right: 17px;
 		display: flex;
 		height: 100%;
 		justify-content: flex-end;
+	}
+
+	&-close-icon {
+		transform: rotate(45deg);
 	}
 
 	&-container {
