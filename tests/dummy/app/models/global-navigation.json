@@ -313,7 +313,7 @@
             "type": "translatable-text",
             "key": "global-navigation-user-sign-out"
           },
-          "param-name": "redirect",
+          "param-name": "returnto",
           "tracking-label": "account.sign-out"
         }
       ]
