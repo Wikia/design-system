@@ -1,6 +1,7 @@
 import { empty, equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
+import { computed } from '@ember/object';
 
 import Component from '@ember/component';
 import track from '../utils/wds-track';
@@ -12,18 +13,20 @@ export default Component.extend({
 	classNames: ['wds-global-navigation'],
 	classNameBindings: [
 		'searchIsActive:wds-search-is-active',
-		'searchIsAlwaysVisible:wds-search-is-always-visible',
 		'model.partner-slot:wds-has-partner-slot',
 		'currentModal:wds-is-modal-opened',
 	],
 
 	searchIsActive: false,
 
-	searchIsAlwaysVisible: empty('model.fandom_overview'),
-
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
 	currentModal: null,
+	signinUrl: computed('model', function() {
+		const signin = this.get('model.anon.signin');
+
+		return `${signin.href}?${signin['param-name']}=${encodeURIComponent(window.location.href)}`;
+	}),
 
 	init() {
 		this._super(...arguments);
