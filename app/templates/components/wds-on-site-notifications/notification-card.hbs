@@ -10,7 +10,11 @@
 	</div>
 	<div class="wds-notification-card__body">
 		<p class="wds-notification-card__text">
-			{{{text}}}
+			{{#if text}}
+				{{text}}
+			{{else}}
+				{{{textWithHtml}}}
+			{{/if}}
 		</p>
 		{{#if showSnippet}}
 			<p class="wds-notification-card__snippet">
