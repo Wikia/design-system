@@ -1,5 +1,6 @@
 import Component from '@ember/component';
-
+import { alias } from '@ember/object/computed'
 export default Component.extend({
-	tagName: '',
+	attributeBindings: ['id'],
+	id: alias('model.title.key'),
 });
