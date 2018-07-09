@@ -94,6 +94,8 @@
 	}
 
 	&.wds-is-modal-opened {
+		z-index: $z-9;
+
 		.wds-global-navigation__modal-control {
 			align-items: center;
 			display: flex;
