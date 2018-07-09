@@ -13,7 +13,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 1;
+	z-index: 3; // 3 to cover the community bar dropdown while scrolling
 
 	@media #{$wds-breakpoint-small-down} {
 		padding: 0 3px 0 12px;
