@@ -52,6 +52,11 @@
 		justify-content: flex-end;
 	}
 
+	&__content-bar-left {
+		position: relative;
+		z-index: 1;
+	}
+
 	&__dropdown-controls,
 	&__modal-controls {
 		align-items: center;
