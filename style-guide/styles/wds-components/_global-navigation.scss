@@ -16,7 +16,6 @@
 	z-index: 3; // 3 to cover the community bar dropdown while scrolling
 
 	@media #{$wds-breakpoint-small-down} {
-		overflow: hidden;
 		padding: 0 3px 0 12px;
 	}
 
@@ -428,11 +427,21 @@
 		}
 	}
 
+	&__content-bar-left, &__community-bar {
+		@media #{$wds-breakpoint-small-down} {
+			overflow: hidden;
+		}
+	}
+
+	&__logo-heart-link {
+		height: 100%;
+	}
+
 	&__logo-heart {
 		background-color: #002a33;
 		height: 100%;
 		width: 27px;
-		padding: 0 0 0 12px;
+		padding: 0 5px 0 12px;
 		position: relative;
 		z-index: 1;
 	}
