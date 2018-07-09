@@ -4,6 +4,7 @@
 	$search-input-padding: 3px 4px;
 	$notification-counter-size: 18px;
 	$partner-slot-width: 80px;
+	$scroll-animation-duration: .4s;
 
 	background-color: $wds-fandom-color-navy;
 	box-sizing: border-box;
@@ -11,7 +12,6 @@
 	left: 0;
 	position: fixed;
 	top: 0;
-	transition: background-color 2s;
 	width: 100%;
 	z-index: 1;
 
@@ -226,7 +226,7 @@
 	}
 
 	&__logo {
-		transition: transform 0.4s;
+		transition: transform $scroll-animation-duration;
 	}
 
 	&__user-menu-dropdown-caption {
@@ -414,22 +414,21 @@
 		align-items: center;
 		position: absolute;
 		left: 0;
-		visibility: hidden;
 		top: 0;
 		height: 100%;
 	}
 
 	&__logo-heart {
 		background-color: #002a33;
-		height: 27px;
+		height: 100%;
 		width: 27px;
-		padding: 1px 0px 1px 12px;
+		padding: 0 0 0 12px;
 		position: relative;
 		z-index: 1;
 	}
 
 	&__community-bar-separator {
-		border-left: 1px solid $wds-fandom-color-mid-light-gray;
+		border-left: 1px solid $wds-fandom-color-dark-gray;
 		opacity: 0;
 		height: 30px;
 		margin-left: 12px;
@@ -437,61 +436,31 @@
 	}
 
 	.wds-community-bar__sitename {
+		color: #fff;
 		max-width: calc(100vw - 120px);
 		margin-left: 12px;
-		transform: translate(-100vw);
-		transition: transform 0.7s;
+		transform: translateY(-55px);
+		transition: transform $scroll-animation-duration;
 	}
 
-
-	$fandomAnimationTime: 0.4s;
-	$backgroundAnimationTime: 0.4s;
-	$backgroundAnimationDelay: 0;
-	$sitenameAnimationTime: 0.3s;
-	$sitenameAnimationDelay: 0.3s;
-	$separatorAnimationTime: 0.2s;
-	$separatorAnimationDelay: 0.4s;
-
-
 	&.wds-is-community-bar-in:not(.wds-is-modal-opened) {
+		overflow: hidden;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
 
-		animation-duration: $backgroundAnimationTime;
-		animation-name: globalNavigationBackground;
-		animation-fill-mode: forwards;
-		animation-delay: $backgroundAnimationDelay;
-
 		.wds-global-navigation__logo {
-			animation-duration: $fandomAnimationTime;
-			animation-name: fandomSlideOut;
-			animation-fill-mode: forwards;
-			animation-timing-function: ease-in;
+			transform: translateY(55px);
 		}
 
 		.wds-global-navigation {
-			&__community-bar {
-				visibility: visible;
-			}
-
-			&__logo-heart {
-				animation-duration: $backgroundAnimationTime;
-				animation-name: globalNavigationBackground;
-				animation-fill-mode: forwards;
-				animation-delay: $backgroundAnimationDelay;
-			}
-
 			&__modal-control {
-				animation-duration: $sitenameAnimationTime;
-				animation-name: modalControls;
-				animation-fill-mode: forwards;
-				animation-delay: $sitenameAnimationDelay;
+				transform: translate(52px);
 			}
 
 			&__community-bar-separator {
-				animation-duration: $separatorAnimationTime;
 				animation-name: separator;
+				animation-duration: $scroll-animation-duration;
+				animation-delay: $scroll-animation-duration;
 				animation-fill-mode: forwards;
-				animation-delay: $separatorAnimationDelay;
 			}
 
 			&__modal-control-search svg {
@@ -504,56 +473,9 @@
 		}
 
 		.wds-community-bar__sitename {
-			animation-duration: $sitenameAnimationTime;
-			animation-name: sitename;
-			animation-fill-mode: forwards;
-			animation-delay: $sitenameAnimationDelay;
-			animation-timing-function: ease-out;
+			transform: translateY(0);
 		}
 
-	}
-
-	&.wds-is-community-bar-out {
-		.wds-community-bar__sitename {
-			animation-duration: $sitenameAnimationTime;
-			animation-name: sitenameOut;
-			animation-fill-mode: forwards;
-			animation-delay: $sitenameAnimationDelay;
-			animation-timing-function: ease-out;
-		}
-	}
-
-
-}
-
-@keyframes fandomSlideOut {
-	to {
-		transform: translate(-120px);
-	}
-}
-
-
-@keyframes globalNavigationBackground {
-	to {
-		background-color: #fff;
-	}
-}
-
-@keyframes sitenameOut {
-	to {
-		transform: translate(-100vw);
-	}
-}
-
-@keyframes sitename {
-	to {
-		transform: none;
-	}
-}
-
-@keyframes modalControls {
-	to {
-		transform: translate(52px);
 	}
 }
 
