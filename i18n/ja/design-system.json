@@ -1,4 +1,5 @@
 {
+  "back": "戻る", 
   "community-header-add": "投稿", 
   "community-header-add-new-image": "画像を追加", 
   "community-header-add-new-page": "新しいページをつくる", 
@@ -34,7 +35,8 @@
   "global-footer-company-overview-link-careers": "採用情報", 
   "global-footer-company-overview-link-contact": "お問い合わせ", 
   "global-footer-company-overview-link-press": "メディア掲載", 
-  "global-footer-copyright-wikia": "Copyright {date} Wikia, Inc.",
+  "global-footer-company-overview-link-wikia-org": "Wikia.org", 
+  "global-footer-copyright-wikia": "Copyright {date} Wikia, Inc.", 
   "global-footer-create-wiki-description": "新しいコミュニティを立ち上げてみましょう。", 
   "global-footer-create-wiki-link-start-wikia": "Wikiをはじめる", 
   "global-footer-fandom-app-description": "アプリをダウンロードして、いつでもどこでもお気に入りのファンダムにアクセスしよう！", 
@@ -117,6 +119,5 @@
   "wds-avatar-badges-global-discussions-moderator-tooltip": "グローバル・ディスカッション・モデレーター", 
   "wds-avatar-badges-helper-tooltip": "FANDOMヘルパー", 
   "wds-avatar-badges-staff-tooltip": "FANDOMスタッフ", 
-  "wds-avatar-badges-vstf-tooltip": "VSTF",
-  "back": "戻る"
+  "wds-avatar-badges-vstf-tooltip": "VSTF"
 }
