@@ -15,14 +15,11 @@ export default Component.extend({
 	classNames: ['wds-global-navigation'],
 	classNameBindings: [
 		'searchIsActive:wds-search-is-active',
-		'searchIsAlwaysVisible:wds-search-is-always-visible',
 		'model.partner-slot:wds-has-partner-slot',
 		'currentModal:wds-is-modal-opened',
 	],
 
 	searchIsActive: false,
-
-	searchIsAlwaysVisible: empty('model.fandom_overview'),
 
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
