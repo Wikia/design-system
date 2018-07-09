@@ -1,7 +1,8 @@
-import { empty, equal } from '@ember/object/computed';
+import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
 import { computed } from '@ember/object';
+import { addQueryParams } from '../utils/url';
 
 import Component from '@ember/component';
 import track from '../utils/wds-track';
@@ -25,7 +26,11 @@ export default Component.extend({
 	isUserModalOpen: equal('currentModal', 'user'),
 
 	signinUrl: computed('model.anon.signin', 'fastboot.isFastBoot', function() {
-		return `${this.get('model.anon.signin.href')}?${this.get('model.anon.signin.param-name')}=${this.getRedirectUrl()}`
+		const params = {};
+
+		params[this.get('model.anon.signin.param-name')] = this.getRedirectUrl();
+
+		return addQueryParams(this.get('model.anon.signin.href'), params);
 	}),
 
 	currentModal: null,
