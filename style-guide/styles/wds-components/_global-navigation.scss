@@ -121,6 +121,11 @@
 			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
 		}
 
+		&-search {
+			// force search control to be over the community bar element
+			position: relative;
+		}
+
 		&-search,
 		&-close {
 			svg {
