@@ -16,6 +16,7 @@
 	z-index: 3; // 3 to cover the community bar dropdown while scrolling
 
 	@media #{$wds-breakpoint-small-down} {
+		overflow: hidden;
 		padding: 0 3px 0 12px;
 	}
 
@@ -454,8 +455,6 @@
 
 	&.wds-is-community-bar-in:not(.wds-is-modal-opened) {
 		@media #{$wds-breakpoint-small-down} {
-			overflow: hidden;
-
 			.wds-global-navigation__logo {
 				transform: translateY(55px);
 			}
