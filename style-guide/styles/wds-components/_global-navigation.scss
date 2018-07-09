@@ -416,7 +416,10 @@
 		left: 0;
 		top: 0;
 		height: 100%;
-		visibility: hidden;
+
+		@media #{$wds-breakpoint-medium-up} {
+			display: none;
+		}
 	}
 
 	&__logo-heart {
@@ -447,17 +450,12 @@
 	&.wds-is-community-bar-in:not(.wds-is-modal-opened) {
 		@media #{$wds-breakpoint-small-down} {
 			overflow: hidden;
-			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
 
 			.wds-global-navigation__logo {
 				transform: translateY(55px);
 			}
 
 			.wds-global-navigation {
-				&__community-bar {
-					visibility: visible;
-				}
-
 				&__modal-control {
 					transform: translate(52px);
 				}
@@ -467,10 +465,6 @@
 					animation-duration: $scroll-animation-duration;
 					animation-delay: $scroll-animation-duration;
 					animation-fill-mode: forwards;
-				}
-
-				&__modal-control-search svg {
-					fill: $wds-fandom-color-dark-gray;
 				}
 
 				&__modal-control-user {

@@ -4,6 +4,7 @@
 	$search-input-padding: 3px 4px;
 	$notification-counter-size: 18px;
 	$partner-slot-width: 80px;
+	$scroll-animation-duration: .4s;
 
 	background-color: $wds-fandom-color-navy;
 	box-sizing: border-box;
@@ -12,6 +13,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 1;
 
 	@media #{$wds-breakpoint-small-down} {
 		padding: 0 3px 0 12px;
@@ -223,6 +225,10 @@
 		width: 126px;
 	}
 
+	&__logo {
+		transition: transform $scroll-animation-duration;
+	}
+
 	&__user-menu-dropdown-caption {
 		font-size: $wds-typescale-size-minus-2;
 		padding-bottom: 10px;
@@ -401,5 +407,81 @@
 	&__link-button {
 		margin: 6px;
 		text-align: center;
+	}
+
+	&__community-bar {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+
+		@media #{$wds-breakpoint-medium-up} {
+			display: none;
+		}
+	}
+
+	&__logo-heart {
+		background-color: #002a33;
+		height: 100%;
+		width: 27px;
+		padding: 0 0 0 12px;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__community-bar-separator {
+		border-left: 1px solid $wds-fandom-color-dark-gray;
+		opacity: 0;
+		height: 30px;
+		margin-left: 12px;
+		width: 1px;
+	}
+
+	.wds-community-bar__sitename {
+		color: #fff;
+		max-width: calc(100vw - 120px);
+		margin-left: 12px;
+		transform: translateY(-55px);
+		transition: transform $scroll-animation-duration;
+	}
+
+	&.wds-is-community-bar-in:not(.wds-is-modal-opened) {
+		@media #{$wds-breakpoint-small-down} {
+			overflow: hidden;
+
+			.wds-global-navigation__logo {
+				transform: translateY(55px);
+			}
+
+			.wds-global-navigation {
+				&__modal-control {
+					transform: translate(52px);
+				}
+
+				&__community-bar-separator {
+					animation-name: separator;
+					animation-duration: $scroll-animation-duration;
+					animation-delay: $scroll-animation-duration;
+					animation-fill-mode: forwards;
+				}
+
+				&__modal-control-user {
+					visibility: hidden;
+				}
+			}
+
+			.wds-community-bar__sitename {
+				transform: translateY(0);
+			}
+		}
+	}
+
+}
+
+@keyframes separator {
+	to {
+		opacity: 1;
 	}
 }
