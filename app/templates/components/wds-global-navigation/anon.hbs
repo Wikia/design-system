@@ -5,7 +5,7 @@
 	{{#dropdown.content class='wds-global-navigation__dropdown-content' dropdownRightAligned=true}}
 		{{#wds-list lines=true}}
 			<li>{{#wds-button class='wds-is-full-width'
-							  href=model.signin.href
+							  href=signinUrl
 							  rel='nofollow'
 							  data-tracking-label=model.signin.tracking-label
 				}}
@@ -15,7 +15,7 @@
 			<li>
 				<div class="wds-global-navigation__user-menu-dropdown-caption">{{i18n 'global-navigation-anon-register-description' ns='design-system'}}</div>
 				{{#wds-button class='wds-is-full-width'
-							  href=model.register.href
+							  href=registerUrl
 							  rel="nofollow"
 							  secondary=true
 							  data-tracking-label=model.register.tracking-label
