@@ -1,6 +1,7 @@
 import { empty, equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
+import { run } from '@ember/runloop';
 
 import Component from '@ember/component';
 import track from '../utils/wds-track';
@@ -15,9 +16,11 @@ export default Component.extend({
 		'searchIsAlwaysVisible:wds-search-is-always-visible',
 		'model.partner-slot:wds-has-partner-slot',
 		'currentModal:wds-is-modal-opened',
+		'communityBarIsActive:wds-is-community-bar-in'
 	],
 
 	searchIsActive: false,
+	communityBarIsActive: false,
 
 	searchIsAlwaysVisible: empty('model.fandom_overview'),
 
@@ -25,14 +28,43 @@ export default Component.extend({
 	isUserModalOpen: equal('currentModal', 'user'),
 	currentModal: null,
 
+
+
 	init() {
 		this._super(...arguments);
 
 		assert('Required property `model` is not set', this.model);
+
+		this.scrollHandler = this.scrollHandler.bind(this);
+	},
+
+	didInsertElement() {
+		this._super(...arguments);
+
+		// TODO add throttling
+		window.addEventListener('scroll', this.scrollHandler);
+	},
+
+	willDestroyElement() {
+		window.removeEventListener('scroll', this.scrollHandler);
 	},
 
 	click(event) {
 		track(event, this.element, this.track, 'click', 'navigation');
+	},
+
+	scrollHandler() {
+		const globalNavigationHeight = 55;
+
+		if (window.pageYOffset > globalNavigationHeight && this.communityBarIsActive === false) {
+			run(() => {
+				this.set('communityBarIsActive', true);
+			});
+		} else if (window.pageYOffset <= globalNavigationHeight && this.communityBarIsActive === true) {
+			run(() => {
+				this.set('communityBarIsActive', false);
+			});
+		}
 	},
 
 	openModal(modalType) {

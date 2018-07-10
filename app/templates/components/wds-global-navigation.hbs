@@ -10,6 +10,15 @@
 		{{wds-global-navigation/main-navigation model=model.main-navigation}}
 	</div>
 	<div class="wds-global-navigation__content-bar-right">
+		<div class="wds-global-navigation__community-bar">
+			<a href="{{model.logo.href}}" class="wds-global-navigation__logo-heart-link" data-tracking-label="{{model.logo.tracking-label}}">
+				{{svg 'wds-company-logo-fandom-heart' class='wds-global-navigation__logo-heart'}}
+			</a>
+			<div class="wds-global-navigation__community-bar-separator"></div>
+			<div class="wds-community-bar__sitename">
+				{{sitename}}
+			</div>
+		</div>
 		<div class="wds-global-navigation__dropdown-controls">
 			{{wds-global-navigation/search
 				model=model.search
