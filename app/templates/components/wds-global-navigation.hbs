@@ -15,8 +15,11 @@
 				{{svg 'wds-company-logo-fandom-heart' class='wds-global-navigation__logo-heart'}}
 			</a>
 			<div class="wds-global-navigation__community-bar-separator"></div>
+
 			<div class="wds-community-bar__sitename">
-				{{sitename}}
+				<a href="{{sitename.href}}" data-tracking-label="{{sitename.tracking_label}}">
+					{{sitename.title.value}}
+				</a>
 			</div>
 		</div>
 		<div class="wds-global-navigation__dropdown-controls">
