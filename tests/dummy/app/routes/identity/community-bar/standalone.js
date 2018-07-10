@@ -1,9 +1,13 @@
 import Route from '@ember/routing/route';
-import model from '../../../models/community-header';
+import communityHeaderModel from '../../../models/community-header';
+import globalNavigationModel from '../../../models/global-navigation';
 
 export default Route.extend({
 	model() {
-		return model.anon;
+		return {
+			communityBar: communityHeaderModel.anon,
+			globalNavigation: globalNavigationModel['logged-in-default']
+		};
 	},
 
 	setupController() {

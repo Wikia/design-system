@@ -3,6 +3,7 @@ import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
 import { computed } from '@ember/object';
 import { addQueryParams } from '../utils/url';
+import { run } from '@ember/runloop';
 
 import Component from '@ember/component';
 import track from '../utils/wds-track';
@@ -18,9 +19,11 @@ export default Component.extend({
 		'searchIsActive:wds-search-is-active',
 		'model.partner-slot:wds-has-partner-slot',
 		'currentModal:wds-is-modal-opened',
+		'communityBarIsActive:wds-is-community-bar-in'
 	],
 
 	searchIsActive: false,
+	communityBarIsActive: false,
 
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
@@ -43,14 +46,43 @@ export default Component.extend({
 
 	currentModal: null,
 
+
+
 	init() {
 		this._super(...arguments);
 
 		assert('Required property `model` is not set', this.model);
+
+		this.scrollHandler = this.scrollHandler.bind(this);
+	},
+
+	didInsertElement() {
+		this._super(...arguments);
+
+		// TODO add throttling
+		window.addEventListener('scroll', this.scrollHandler);
+	},
+
+	willDestroyElement() {
+		window.removeEventListener('scroll', this.scrollHandler);
 	},
 
 	click(event) {
 		track(event, this.element, this.track, 'click', 'navigation');
+	},
+
+	scrollHandler() {
+		const globalNavigationHeight = 55;
+
+		if (window.pageYOffset > globalNavigationHeight && this.communityBarIsActive === false) {
+			run(() => {
+				this.set('communityBarIsActive', true);
+			});
+		} else if (window.pageYOffset <= globalNavigationHeight && this.communityBarIsActive === true) {
+			run(() => {
+				this.set('communityBarIsActive', false);
+			});
+		}
 	},
 
 	openModal(modalType) {

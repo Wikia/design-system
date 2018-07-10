@@ -3,6 +3,8 @@ import { assert } from '@ember/debug';
 
 export default Component.extend({
 
+	tagName: '',
+
 	init() {
 		this._super(...arguments);
 
