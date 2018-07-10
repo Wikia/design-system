@@ -34,27 +34,37 @@ export default Component.extend({
 		this._super(...arguments);
 
 		assert('Required property `model` is not set', this.model);
+
+		this.scrollHandler = this.scrollHandler.bind(this);
 	},
 
 	didInsertElement() {
 		this._super(...arguments);
 
 		// TODO add throttling
-		window.addEventListener('scroll', () => {
-			if (window.pageYOffset > 55 && this.communityBarIsActive === false) {
-				run(() => {
-					this.set('communityBarIsActive', true);
-				});
-			} else if (window.pageYOffset <= 55 && this.communityBarIsActive === true) {
-				run(() => {
-					this.set('communityBarIsActive', false);
-				});
-			}
-		});
+		window.addEventListener('scroll', this.scrollHandler);
+	},
+
+	willDestroyElement() {
+		window.removeEventListener('scroll', this.scrollHandler);
 	},
 
 	click(event) {
 		track(event, this.element, this.track, 'click', 'navigation');
+	},
+
+	scrollHandler() {
+		const globalNavigationHeight = 55;
+
+		if (window.pageYOffset > globalNavigationHeight && this.communityBarIsActive === false) {
+			run(() => {
+				this.set('communityBarIsActive', true);
+			});
+		} else if (window.pageYOffset <= globalNavigationHeight && this.communityBarIsActive === true) {
+			run(() => {
+				this.set('communityBarIsActive', false);
+			});
+		}
 	},
 
 	openModal(modalType) {

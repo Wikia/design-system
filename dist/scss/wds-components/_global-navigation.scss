@@ -464,6 +464,7 @@
 
 	.wds-community-bar__sitename {
 		color: #fff;
+		// 120px is width of controls on the right side (search and profile) + margin
 		max-width: calc(100vw - 120px);
 		margin-left: 12px;
 		transform: translateY(-55px);
