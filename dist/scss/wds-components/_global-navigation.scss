@@ -464,12 +464,15 @@
 	}
 
 	.wds-community-bar__sitename {
-		color: #fff;
 		// 120px is width of controls on the right side (search and profile) + margin
 		max-width: calc(100vw - 120px);
 		margin-left: 12px;
 		transform: translateY(-$wds-global-navigation-height);
 		transition: transform $scroll-animation-duration;
+
+		a {
+			color: $wds-color-white;
+		}
 	}
 
 	&.wds-is-community-bar-in:not(.wds-is-modal-opened) {
