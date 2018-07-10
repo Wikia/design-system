@@ -25,10 +25,18 @@ export default Component.extend({
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
 
-	signinUrl: computed('model.anon.signin', 'fastboot.isFastBoot', function() {
+	redirectUrl: computed('fastboot.isFastBoot', function() {
+		if (this.get('fastboot.isFastBoot')) {
+			return `${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`;
+		} else {
+			return window.location.href;
+		}
+	}),
+
+	signinUrl: computed('model.anon.signin', 'redirectUrl', function() {
 		const params = {};
 
-		params[this.get('model.anon.signin.param-name')] = this.getRedirectUrl();
+		params[this.get('model.anon.signin.param-name')] = this.get('redirectUrl');
 
 		return addQueryParams(this.get('model.anon.signin.href'), params);
 	}),
@@ -39,14 +47,6 @@ export default Component.extend({
 		this._super(...arguments);
 
 		assert('Required property `model` is not set', this.model);
-	},
-
-	getRedirectUrl() {
-		if (this.get('fastboot.isFastBoot')) {
-			return `${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`;
-		} else {
-			return window.location.href;
-		}
 	},
 
 	click(event) {
