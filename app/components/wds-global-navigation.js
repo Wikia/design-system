@@ -29,7 +29,7 @@ export default Component.extend({
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
 
-	redirectUrl: computed('fastboot.isFastBoot', 'router.currentUrl', function() {
+	redirectUrl: computed('fastboot.isFastBoot', 'router.currentURL', function() {
 		if (this.get('fastboot.isFastBoot')) {
 			return `${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`;
 		} else {

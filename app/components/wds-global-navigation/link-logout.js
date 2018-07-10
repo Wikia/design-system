@@ -10,7 +10,7 @@ export default Component.extend({
 	attributeBindings: ['id'],
 	id: alias('model.title.key'),
 
-	redirectUrl: computed('fastboot.isFastBoot', 'router.currentUrl', function() {
+	redirectUrl: computed('fastboot.isFastBoot', 'router.currentURL', function() {
 		if (this.get('fastboot.isFastBoot')) {
 			return encodeURIComponent(`${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`);
 		} else {

@@ -25,7 +25,7 @@ export default Component.extend({
 		return addQueryParams(this.get('model.register.href'), params);
 	}),
 
-	redirectUrl: computed('fastboot.isFastBoot', 'router.currentUrl', function() {
+	redirectUrl: computed('fastboot.isFastBoot', 'router.currentURL', function() {
 		if (this.get('fastboot.isFastBoot')) {
 			return `${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`;
 		} else {
