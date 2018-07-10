@@ -1,6 +1,6 @@
 import { inject as service } from '@ember/service';
 import Component from '@ember/component';
-import { observer } from '@ember/object';
+import { observer, computed } from '@ember/object';
 
 export default Component.extend({
 	classNames: ['wds-global-navigation__modal', 'wds-user-modal'],
@@ -20,5 +20,13 @@ export default Component.extend({
 			this.get('wdsOnSiteNotifications').loadFirstPage();
 		}
 
-	})
+	}),
+
+	signOutModel: computed('user.items', function() {
+		return this.get('user.items').filter( (item) => item.type === 'link-logout')[0];
+	}),
+
+	viewProfileLink: computed('user.items', function(){
+		return this.get('user.items').filter( (item) => item['tracking-label'] === 'account.profile')[0]['href'];
+	}),
 });

@@ -1,8 +1,8 @@
 <div class="wds-user-modal__info">
-	{{wds-avatar src=user.avatar_url link=user.items.[0].href}}
+	{{wds-avatar src=user.avatar_url link=viewProfileLink}}
 	<p class="wds-user-modal__username">{{user.username}}</p>
 </div>
 <div class="wds-user-modal__notifications-wrapper">
 	{{wds-on-site-notifications/notifications header=header track=track}}
 </div>
-{{wds-global-navigation/sign-out-button model=user.items.[4]}}
+{{wds-global-navigation/sign-out-button model=signOutModel}}
