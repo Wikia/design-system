@@ -5,6 +5,7 @@ import { addQueryParams } from '../../utils/url';
 
 export default Component.extend({
 	fastboot: service(),
+	router: service(),
 
 	tagName: '',
 
@@ -24,7 +25,7 @@ export default Component.extend({
 		return addQueryParams(this.get('model.register.href'), params);
 	}),
 
-	redirectUrl: computed('fastboot.isFastBoot', function() {
+	redirectUrl: computed('fastboot.isFastBoot', 'router.currentUrl', function() {
 		if (this.get('fastboot.isFastBoot')) {
 			return `${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`;
 		} else {

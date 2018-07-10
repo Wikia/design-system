@@ -11,6 +11,7 @@ import track from '../utils/wds-track';
 export default Component.extend({
 	fetch: service(),
 	fastboot: service(),
+	router: service(),
 
 	wdsOnSiteNotifications: service(),
 
@@ -28,7 +29,7 @@ export default Component.extend({
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
 
-	redirectUrl: computed('fastboot.isFastBoot', function() {
+	redirectUrl: computed('fastboot.isFastBoot', 'router.currentUrl', function() {
 		if (this.get('fastboot.isFastBoot')) {
 			return `${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`;
 		} else {
