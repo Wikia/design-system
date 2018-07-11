@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 import { computed } from '@ember/object';
-import { addQueryParams } from '../../utils/url';
+import { addQueryParams } from '@wikia/ember-fandom/utils/url';
 
 export default Component.extend({
 	fastboot: service(),
