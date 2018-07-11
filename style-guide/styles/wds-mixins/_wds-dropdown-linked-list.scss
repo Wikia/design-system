@@ -1,4 +1,4 @@
 @mixin wds-dropdown-linked-list-item-hover {
-	background-color: fade_out($wds-color-link, 0.9);
-	color: $wds-color-link;
+	background-color: fade_out($wds-fandom-color-link, 0.9);
+	color: $wds-fandom-color-link;
 }

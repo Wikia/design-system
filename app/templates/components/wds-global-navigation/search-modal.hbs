@@ -1,0 +1,18 @@
+{{#wds-button click=(action openModal 'search') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
+	{{wds-icon name='magnifying-glass'}}
+{{/wds-button}}
+
+{{#if isOpen}}
+	<div class="wds-global-navigation__modal wds-search-modal">
+		<div class="wds-search-modal__form-and-links-wrapper">
+			{{wds-global-navigation/search
+				model=model
+				onSearchToggleClicked=(action onSearchToggleClicked)
+				onSearchSuggestionChosen=(action onSearchSuggestionChosen)
+				goToSearchResults=(action goToSearchResults)
+				inSearchModal=true
+			}}
+			{{wds-global-navigation/main-navigation model=navigationModel}}
+		</div>
+	</div>
+{{/if}}

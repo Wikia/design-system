@@ -1,51 +1,103 @@
-<div class="wds-global-navigation__content-bar">
-	{{#if model.logo.header}}
-		<a href="{{model.logo.module.main.href}}" class="wds-global-navigation__logo">
-			{{! available class names: wds-is-wds-company-logo-fandom wds-is-wds-company-logo-powered-by-wikia}}
-			{{svg model.logo.module.main.image-data.name class=(concat 'wds-global-navigation__logo-image wds-is-' model.logo.module.main.image-data.name)}}
-			{{#if model.logo.module.tagline}}
-				{{svg model.logo.module.tagline.image-data.name class=(concat 'wds-global-navigation__logo-image wds-is-' model.logo.module.tagline.image-data.name)}}
-			{{/if}}
+<div class="wds-global-navigation__content-container">
+	<div class="wds-global-navigation__content-bar-left">
+		<a href="{{model.logo.href}}" class="wds-global-navigation__logo" data-tracking-label="{{model.logo.tracking-label}}">
+			{{! available class names: wds-is-wds-company-logo-fandom wds-is-wds-company-logo-wikia-org}}
+			{{svg
+				model.logo.image-data.name
+				class=(concat 'wds-global-navigation__logo-image wds-is-' model.logo.image-data.name)
+			}}
 		</a>
-	{{/if}}
-	<div class="wds-global-navigation__links-and-search">
-		{{#each model.fandom_overview.links as |link|}}
-			{{wds-global-navigation/link-branded model=link}}
-		{{/each}}
-		{{wds-global-navigation/links
-			model=model.wikis
-			type='wikis-menu'
-		}}
+		{{wds-global-navigation/main-navigation model=model.main-navigation}}
+	</div>
+	<div class="wds-global-navigation__content-bar-right">
+		<div class="wds-global-navigation__community-bar">
+			<a href="{{model.logo.href}}" class="wds-global-navigation__logo-heart-link" data-tracking-label="{{model.logo.tracking-label}}">
+				{{svg 'wds-company-logo-fandom-heart' class='wds-global-navigation__logo-heart'}}
+			</a>
+			<div class="wds-global-navigation__community-bar-separator"></div>
 
-		{{wds-global-navigation/search
-			model=model.search.module
-			activateSearch=(action 'activateSearch')
-			deactivateSearch=(action 'deactivateSearch')
-			onQueryChanged=(action 'onSearchQueryChanged')
-		}}
+			<div class="wds-community-bar__sitename">
+				<a href="{{sitename.href}}" data-tracking-label="{{sitename.tracking_label}}">
+					{{sitename.title.value}}
+				</a>
+			</div>
+		</div>
+		<div class="wds-global-navigation__dropdown-controls">
+			{{wds-global-navigation/search
+				model=model.search
+				onSearchToggleClicked=(action 'onSearchToggleClicked')
+				onSearchCloseClicked=(action 'onSearchCloseClicked')
+				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
+				goToSearchResults=(action 'goToSearchResults')
+			}}
+			{{#if model.user}}
+				{{wds-global-navigation/user model=model.user}}
+			{{else if model.anon}}
+				{{wds-global-navigation/anon model=model.anon}}
+			{{/if}}
+			{{#if model.user}}
+				{{wds-on-site-notifications/notifications-dropdown track=track}}
+			{{/if}}
+			<div class="wds-global-navigation__start-a-wiki">
+				{{wds-global-navigation/link-button
+					model=model.create-wiki
+					data-tracking-label=model.create-wiki.tracking-label
+				}}
+			</div>
+		</div>
+		<div class="wds-global-navigation__modal-controls">
+			{{wds-global-navigation/search-modal
+				model=model.search
+				navigationModel=model.main-navigation
+				isOpen=isSearchModalOpen
+				openModal=(action openModal)
+				onSearchToggleClicked=(action 'onSearchToggleClicked')
+				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
+				goToSearchResults=(action 'goToSearchResults')
+			}}
+
+			{{#if model.user}}
+				{{#wds-button
+					click=(action openModal 'user')
+					class='wds-global-navigation__modal-control wds-global-navigation__modal-control-user'
+					text=true
+					type='button'
+				}}
+					{{wds-avatar src=model.user.avatar_url alt=model.user.username}}
+					{{#if wdsOnSiteNotifications.unreadCountWithLimit}}
+						<span class="wds-global-navigation__avatar-notifications-counter">
+							{{wdsOnSiteNotifications.unreadCountWithLimit}}
+						</span>
+					{{/if}}
+				{{/wds-button}}
+
+				{{wds-global-navigation/user-modal
+					isOpen=isUserModalOpen
+					user=model.user
+					header=model.notifications.header.title.key
+					track=track
+				}}
+			{{else if model.anon}}
+				{{#wds-button click=(action closeModal) class='wds-global-navigation__modal-control wds-global-navigation__modal-control-anon' text=true href=signinUrl}}
+					{{wds-avatar}}
+				{{/wds-button}}
+			{{/if}}
+
+			{{#wds-button click=(action closeModal) class='wds-global-navigation__modal-control wds-global-navigation__modal-control-close' text=true type='button'}}
+				{{svg 'wds-icons-cross' class='wds-icon'}}
+			{{/wds-button}}
+		</div>
 	</div>
-	{{#if model.user}}
-		{{wds-global-navigation/links
-			dropdownRightAligned=true
-			model=model.user
-			type='user-menu'
-		}}
-	{{else if model.anon}}
-		{{wds-global-navigation/account-navigation
-			model=model.anon
-		}}
+	{{#if model.partner-slot}}
+		<div class="wds-global-navigation__partner-slot">
+			<div class="wds-global-navigation__partner-slot-horizontal-bar"></div>
+			<a href="{{model.partner-slot.href}}" class="wds-global-navigation__partner-slot-link" data-tracking-label="{{model.partner_slot.tracking-label}}">
+				<img class="wds-global-navigation__partner-slot-image"
+					 width="55"
+					 height="20"
+					 src="{{model.partner-slot.image-data.url}}"
+					 alt="{{model.partner-slot.title.value}}">
+			</a>
+		</div>
 	{{/if}}
-	<div class="wds-global-navigation__start-a-wiki{{if model.user ' wds-user-is-logged-in'}}">
-		{{#wds-button secondary=true href=model.create_wiki.header.href class="wds-global-navigation__start-a-wiki-button"}}
-			<span class="wds-global-navigation__start-a-wiki-caption">{{i18n model.create_wiki.header.title.key}}</span>
-			{{wds-icon name='plus' class='wds-global-navigation__start-a-wiki-icon'}}
-		{{/wds-button}}
-	</div>
 </div>
-{{#if model.partner_slot}}
-	<div class="wds-global-navigation__partner-slot">
-		<a href="{{model.partner_slot.href}}" class="wds-global-navigation__partner-slot-link">
-			<img class="wds-global-navigation__partner-slot-image" src="{{model.partner_slot.image-data.url}}" alt="{{model.partner_slot.title.value}}">
-		</a>
-	</div>
-{{/if}}

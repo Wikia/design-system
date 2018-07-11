@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import {computed} from '@ember/object';
+import { computed } from '@ember/object';
 
 const iconMap = {
 	alert: 'error',
@@ -11,6 +11,8 @@ const iconMap = {
 export default Component.extend({
 	classNames: 'wds-banner-notification',
 	classNameBindings: ['typeClassName'],
+
+	onClose() {},
 
 	icon: computed('type', function () {
 		return iconMap[this.get('type')];

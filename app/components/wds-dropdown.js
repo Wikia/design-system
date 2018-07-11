@@ -7,10 +7,27 @@ export default Component.extend({
 		'isClicked:wds-is-clicked',
 		'dropdownExpanded:wds-is-active',
 		'hasShadow:wds-has-shadow',
+		'noChevron:wds-no-chevron',
 		'hasDarkShadow:wds-has-dark-shadow',
 		'isLevel2:wds-dropdown-level-2:wds-dropdown'
 	],
 	isLevel2: false,
+
+	init() {
+		this._super(...arguments);
+
+		if (this.mouseEnter) {
+			this.mouseEnter = this.mouseEnter.bind(this);
+		}
+	},
+
+	didInsertElement() {
+		this._super(...arguments);
+
+		if (this.mouseEnter) {
+			this.element.addEventListener('mouseenter', this.mouseEnter);
+		}
+	},
 
 	actions: {
 		click(e) {

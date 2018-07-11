@@ -17,15 +17,15 @@
 	<p>
 		To fetch the data you should send a request to the Design System API.
 		URL consists of the following parts (using
-		<a href="http://www.wikia.com/api/v1/design-system/wikis/831/en/global-footer" target="_blank">http://www.wikia.com/api/v1/design-system/wikis/831/en/global-footer</a>
+		<a href="http://starwars.wikia.com/wikia.php?controller=DesignSystemApi&method=getAllElements&product=wikis&id=147&lang=de" target="_blank">http://starwars.wikia.com/wikia.php?controller=DesignSystemApi&method=getAllElements&product=wikis&id=147&lang=de</a>
 		as an example):
 	</p>
 	<ul>
-		<li><code class="format-code">http://www.wikia.com/api/v1/design-system/</code> — root path</li>
-		<li><code class="format-code">wikis/</code> or <code class="format-code">fandoms</code> — name of the product</li>
-		<li><code class="format-code">813/</code> — id of the product instance, e.g. wiki id</li>
-		<li><code class="format-code">en/</code> — language of the UI (content language is derived from the product instance id)</li>
-		<li><code class="format-code">global-footer</code> or <code class="format-code">global-navigation</code> — optional name of the element, if left out then all elements are returned</li>
+		<li><code class="format-code">http://starwars.wikia.com/wikia.php?controller=DesignSystemApi</code> — root path. Note that for api calls not related to any of wikis, <code class="format-code">www.wikia.com</code> domain should be used</li>
+		<li><code class="format-code">method</code> query parameter - defines what data is returned, allowed values are <code class="format-code">getFooter</code>, <code class="format-code">getNavigation</code>, <code class="format-code">getAllElements</code> which return data for global-footer, global-navigation or both elements respectively. </li>
+		<li><code class="format-code">product</code> query parameter — defines for what product data should be returned, can be either <code class="format-code">wikis</code> or <code class="format-code">fandom</code></li>
+		<li><code class="format-code">id</code> query parameter — id of the product instance, e.g. wiki id</li>
+		<li><code class="format-code">lang</code> — language of the UI (content language is derived from the product instance id)</li>
 	</ul>
 	<p>
 		Source code for the API and its data models are available here:
@@ -50,58 +50,8 @@
 		To make the implementation easier you can look at the existing ones and use them as examples:
 	</p>
 	<ul>
-		<li><a href="https://github.com/Wikia/mercury/blob/dev/server/app/views/_partials/global-footer/global-footer.hbs" target="_blank">Global Footer in Mercury (Handlebars)</a></li>
-		<li><a href="https://github.com/Wikia/mercury/tree/dev/front/main/app/templates/components/design-system" target="_blank">Global Navigation in Mercury (HTMLBars, Ember)</a></li>
 		<li><a href="https://github.com/Wikia/app/tree/dev/extensions/wikia/DesignSystem/services">Oasis (MediaWiki, PHP)</a></li>
 		<li><a href="https://github.com/Wikia/upstream/tree/dev/wp-content/themes/upstream/modules/design-system" target="_blank">Upstream (Wordpress, PHP)</a></li>
-	</ul>
-
-	<p>
-		Logic for the Global Footer is straightforward and doesn't require much explanation.
-		Logic for the Global Navigation is more complex, here are highlights:
-	</p>
-	<ul>
-		<li>
-			For each section (top level property in the API response) with <code class="format-code">links</code> and <code class="format-code">header</code>
-			properties we display a dropdown where <code class="format-code">header</code> maps to the dropdown entry-point
-			and <code class="format-code">links</code> to the list of links which should be rendered as the dropdown content.
-		</li>
-		<li>
-			For each section with <code class="format-code">links</code> but without <code class="format-code">header</code>
-			properties we display links without using a dropdown.
-		</li>
-		<li>
-			Section <code class="format-code">fandom_overview</code> is returned only for the languages
-			that have hubs implemented (e.g. <a href="http://fandom.wikia.com/games" target="_blank">http://fandom.wikia.com/games</a> for English).
-		</li>
-		<li>
-			Section <code class="format-code">search</code> has a property <code class="format-code">module</code> with properties:
-			<ul>
-				<li>
-					<code class="format-code">results</code> — URL for the search results page and the name of the search query parameter.
-				</li>
-				<li>
-					<code class="format-code">placeholder-active</code> and <code class="format-code">placeholder-inactive</code>
-					 — search input placeholders which should be switched between when user focuses / blurs the input.
-				</li>
-				<li>
-					<code class="format-code">suggestions</code> (optional) — URL for the suggestions API and the name
-					of the search query parameter. If this property is not present then the search suggestions should not be initialized.
-				</li>
-			</ul>
-		</li>
-		<li>
-			API returns either <code class="format-code">user</code> or <code class="format-code">anon</code> section,
-			based on the authentication header. Both return a header for the user / anon menu dropdown and a list of links.
-		</li>
-		<li>
-			Part of the links for the user / anon menu are of <code class="format-code">link_authentication</code> type
-			which comes with an additional property — <code class="format-code">param-name</code>.
-			It can be used in the link's URL to make sure that the user is properly redirected after doing an authentication action.
-		</li>
-		<li>
-			Section <code class="format-code">notifications</code> is returned only for the logged in users. Currently it's not being used.
-		</li>
 	</ul>
 </section>
 

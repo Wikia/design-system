@@ -207,6 +207,30 @@
 </section>
 
 <section>
+	<h2 id="dropdowns-default-variant">No chevron</h2>
+	<p>Default dropdown with no chevron.</p>
+	{{#component-demo name='dropdown'}}
+		{{#wds-dropdown noChevron=true as |dropdown|}}
+			{{dropdown.toggle class='push-dropdown-down' text='Default dropdown'}}
+			{{#dropdown.content}}
+				{{#wds-list}}
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+					<li>List item 4</li>
+					<li>List item 5</li>
+					<li>List item 6</li>
+					<li>List item 7</li>
+					<li>List item 8</li>
+					<li>List item 9</li>
+					<li>List item 10</li>
+				{{/wds-list}}
+			{{/dropdown.content}}
+		{{/wds-dropdown}}
+	{{/component-demo}}
+</section>
+
+<section>
 	<h2 id="dropdowns-2-levels">2-levels dropdown</h2>
 	<p>
 		It's possible to create 2-levels menu using dropdowns.

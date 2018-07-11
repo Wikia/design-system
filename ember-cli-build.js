@@ -7,7 +7,9 @@ const SvgStore = require('broccoli-svgstore');
 module.exports = function(defaults) {
 	var app = new EmberAddon(defaults, {
 		autoprefixer: {
-			cascade: false
+			cascade: false,
+			map: false,
+			remove: false
 		},
 		fingerprint: {
 			enabled: false
@@ -47,7 +49,8 @@ module.exports = function(defaults) {
 				'style-guide/styles',
 				'node_modules/highlight.js/styles'
 			]
-		}
+		},
+		vendorFiles: { 'jquery.js': null }
 	});
 
 	var additionalTrees = [];
