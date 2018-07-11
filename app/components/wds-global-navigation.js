@@ -2,7 +2,7 @@ import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
 import { computed } from '@ember/object';
-import { addQueryParams } from '../utils/url';
+import { addQueryParams } from '@wikia/ember-fandom/utils/url';
 import { run } from '@ember/runloop';
 
 import Component from '@ember/component';
