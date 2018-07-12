@@ -47,8 +47,6 @@ export default Component.extend({
 
 	currentModal: null,
 
-
-
 	init() {
 		this._super(...arguments);
 
@@ -92,12 +90,24 @@ export default Component.extend({
 
 		if (modalType === 'search') {
 			this.set('searchIsActive', true);
+
+			this.track({
+				category:'navigation',
+				label: 'search-expanded',
+				action: 'click'
+			});
 		}
 	},
 
 	closeModal() {
 		if (this.get('currentModal') === 'search') {
 			this.set('searchIsActive', false);
+
+			this.track({
+				category:'navigation',
+				label: 'search-collapsed',
+				action: 'click'
+			});
 		}
 
 		this.set('currentModal', null);
@@ -110,12 +120,24 @@ export default Component.extend({
 				searchIsActive: true,
 				currentModal: 'search'
 			});
+
+			this.track({
+				category:'navigation',
+				label: 'search-expanded',
+				action: 'click'
+			});
 		},
 
 		onSearchCloseClicked() {
 			this.setProperties({
 				searchIsActive: false,
 				currentModal: null
+			});
+
+			this.track({
+				category:'navigation',
+				label: 'search-collapsed',
+				action: 'click'
 			});
 		},
 
@@ -144,6 +166,10 @@ export default Component.extend({
 		goToSearchResults(querystring) {
 			this.closeModal();
 			this.goToSearchResults(querystring)
+		},
+
+		track(data) {
+			this.track(data);
 		}
 	},
 
