@@ -1035,7 +1035,7 @@ export default function () {
 				},
 			],
 			"_links": {
-				"next": "notifications",
+				"next": "/notifications",
 			},
 		}
 	})
