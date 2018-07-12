@@ -10,6 +10,22 @@ export default Component.extend({
 
 	almostBottom: 200,
 
+	init() {
+		this._super(...arguments);
+
+		this.onTouchMove = this.onTouchMove.bind(this);
+	},
+
+	didInsertElement() {
+		this._super(...arguments);
+
+		this.element.addEventListener('touchmove', this.onTouchMove);
+	},
+
+	willDestroyElement() {
+		this.element.removeEventListener('touchmove', this.onTouchMove);
+	},
+
 	openCloseObserver: observer('isOpen', function () {
 		if (this.get('isOpen')) {
 			this.track({
@@ -32,7 +48,7 @@ export default Component.extend({
 		return this.get('user.items').filter( (item) => item['tracking-label'] === 'account.profile')[0]['href'];
 	}),
 
-	touchMove() {
+	onTouchMove() {
 		if (this.hasAlmostScrolledToTheBottom()) {
 			this.get('wdsOnSiteNotifications').loadNextPage();
 		}
