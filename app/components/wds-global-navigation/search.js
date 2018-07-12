@@ -74,6 +74,10 @@ export default Component.extend({
 				this.closeSearch();
 			}
 
+			if (this.track) {
+				this.track(event);
+			}
+
 			this.setProperties({
 				shouldWaitForClickOnCloseSuggestion: false,
 			});

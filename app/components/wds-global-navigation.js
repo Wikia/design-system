@@ -144,6 +144,10 @@ export default Component.extend({
 		goToSearchResults(querystring) {
 			this.closeModal();
 			this.goToSearchResults(querystring)
+		},
+
+		track(event) {
+			track(event, this.element, this.track, 'click', 'navigation');
 		}
 	},
 
