@@ -6,6 +6,10 @@
         "type": "text",
         "value": "Wookiepedia"
       },
+			"mobile_title": {
+				"type": "text",
+				"value": "Wookiepedia"
+			},
       "tracking_label": "sitename"
     },
     "wordmark": {
@@ -362,7 +366,11 @@
       "title": {
         "type": "text",
         "value": "Wookiepedia"
-      }
+      },
+			"mobile_title": {
+				"type": "text",
+				"value": "Wookiepedia"
+			}
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
@@ -717,6 +725,10 @@
         "type": "text",
         "value": "Wookiepedia"
       },
+			"mobile_title": {
+				"type": "text",
+				"value": "Wookiepedia"
+			},
       "tracking_label": "sitename"
     },
     "counter": {
@@ -1060,7 +1072,11 @@
       "title": {
         "type": "text",
         "value": "Wookiepedia"
-      }
+      },
+			"mobile_title": {
+				"type": "text",
+				"value": "Wookiepedia"
+			}
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
@@ -1428,6 +1444,10 @@
         "type": "text",
         "value": "Wookiepedia"
       },
+			"mobile_title": {
+				"type": "text",
+				"value": "Wookiepedia"
+			},
       "tracking_label": "sitename"
     },
     "wordmark": {
