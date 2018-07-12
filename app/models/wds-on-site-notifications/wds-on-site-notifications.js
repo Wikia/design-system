@@ -26,7 +26,7 @@ export default EmberObject.extend({
 
 	loadFirstPageReturningNextPageLink() {
 		return this.fetch
-			.fetchFromOnSiteNotifications('/notifications')
+			.fetchFromOnSiteNotifications('/notifications?contentType=discussion-upvote&contentType=discussion-post&contentType=announcement-target')
 			.then((data) => {
 				this.addNotifications(data.notifications);
 				return this.getNext(data);
@@ -86,7 +86,7 @@ export default EmberObject.extend({
 
 	loadUnreadNotificationCount() {
 		return this.fetch
-			.fetchFromOnSiteNotifications('/notifications/unread-count')
+			.fetchFromOnSiteNotifications('/notifications/unread-count?contentType=discussion-upvote&contentType=discussion-post&contentType=announcement-target')
 			.then((result) => {
 				this.set('unreadCount', result.unreadCount);
 			}).catch((error) => {
