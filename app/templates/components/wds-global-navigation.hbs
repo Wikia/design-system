@@ -18,7 +18,11 @@
 
 			<div class="wds-community-bar__sitename">
 				<a href="{{sitename.href}}" data-tracking-label="{{sitename.tracking_label}}">
-					{{sitename.title.value}}
+					{{#if sitename.mobile_title}}
+						{{sitename.mobile_title.value}}
+					{{else}}
+						{{sitename.title.value}}
+					{{/if}}
 				</a>
 			</div>
 		</div>
