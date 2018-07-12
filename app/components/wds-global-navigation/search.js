@@ -75,7 +75,11 @@ export default Component.extend({
 			}
 
 			if (this.track) {
-				this.track(event);
+				this.track({
+					action: 'click',
+					category: 'navigation',
+					label: 'search-open-suggestion-link'
+				});
 			}
 
 			this.setProperties({
@@ -87,6 +91,14 @@ export default Component.extend({
 	},
 
 	submit(event) {
+		if (this.track) {
+			this.track({
+				action: 'open',
+				category: 'navigation',
+				label: 'search-open-special-search'
+			});
+		}
+
 		if (this.goToSearchResults) {
 			event.preventDefault();
 			this.goToSearchResults(this.get('state.query'));
