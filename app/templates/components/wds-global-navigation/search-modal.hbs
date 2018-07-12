@@ -1,4 +1,8 @@
-{{#wds-button click=(action openModal 'search') class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search' text=true type='button'}}
+{{#wds-button
+	click=(action openModal 'search')
+	class='wds-global-navigation__modal-control wds-global-navigation__modal-control-search'
+	text=true type='button'
+}}
 	{{wds-icon name='magnifying-glass'}}
 {{/wds-button}}
 
@@ -14,5 +18,6 @@
 			}}
 			{{wds-global-navigation/main-navigation model=navigationModel}}
 		</div>
+		{{wds-global-navigation/content-recommendations}}
 	</div>
 {{/if}}

@@ -1,0 +1,37 @@
+.wds-content-recommendations {
+	&__header {
+		color: #1a1a1a;
+		font-size: 12px;
+		font-weight: bold;
+		margin: 12px;
+		text-transform: uppercase;
+	}
+
+	&__card {
+		border-bottom: 1px solid #bed1cf;
+		display: flex;
+		padding: 12px 0;
+		margin: 6px;
+
+		&-thumbnail {
+			margin: 6px;
+			height: 60px;
+			width: 60px;
+		}
+		&-info {
+			display: flex;
+			flex-direction: column;
+			margin: 6px;
+		}
+
+		&-title {
+			color: #1a1a1a;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		&-time {
+			color: #5f7a7b;
+		}
+	}
+}
