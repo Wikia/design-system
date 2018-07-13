@@ -250,7 +250,7 @@
 	&__notifications-dropdown {
 		color: $wds-fandom-color-aqua;
 		height: 100%;
-		padding-left: 12px;
+		margin-left: 12px;
 		position: relative;
 		transition: color $wds-button-transition-duration;
 		width: 44px;
@@ -351,7 +351,7 @@
 	}
 
 	&__user-menu {
-		padding-left: 12px;
+		margin-left: 12px;
 
 		.wds-avatar__image {
 			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
