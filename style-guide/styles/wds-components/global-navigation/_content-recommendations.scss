@@ -1,19 +1,28 @@
 .wds-content-recommendations {
+	background: $wds-color-white;
+
 	&__header {
-		color: #1a1a1a;
+		color: $wds-fandom-color-black;
 		font-size: 12px;
 		font-weight: bold;
-		margin: 12px;
+		line-height: normal;
+		margin: 0;
+		padding: 20px 12px 0;
 		text-transform: uppercase;
 	}
 
 	&__card {
-		border-bottom: 1px solid #bed1cf;
+		border-bottom: 1px solid $wds-fandom-color-middle-gray;
 		display: flex;
 		padding: 12px 0;
 		margin: 6px;
 
+		&:first-child {
+			margin-top: 0;
+		}
+
 		&-thumbnail {
+			border-radius: 3px;
 			margin: 6px;
 			height: 60px;
 			width: 60px;
@@ -25,13 +34,14 @@
 		}
 
 		&-title {
-			color: #1a1a1a;
+			color: $wds-fandom-color-black;
 			font-size: 14px;
 			font-weight: 500;
 		}
 
 		&-time {
-			color: #5f7a7b;
+			color: $wds-fandom-color-dark-gray;
+			font-size: 12px;
 		}
 	}
 }
