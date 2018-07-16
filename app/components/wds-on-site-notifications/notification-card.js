@@ -119,15 +119,18 @@ export default Component.extend(
 					label: model.get('type'),
 					value: model.get('isUnread') ? 1 : 0
 				});
+				this.get('wdsOnSiteNotifications').markAsRead(model);
 			},
 
-			markAsRead(notification) {
+			markAsRead() {
+				const model = this.get('model');
+
 				this.track({
 					action: 'click',
 					category: 'on-site-notifications',
-					label: `mark-as-read-${notification.type}`
+					label: `mark-as-read-${model.type}`
 				});
-				this.get('wdsOnSiteNotifications').markAsRead(notification);
+				this.get('wdsOnSiteNotifications').markAsRead(model);
 			}
 		},
 
