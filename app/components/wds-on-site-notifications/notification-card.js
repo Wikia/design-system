@@ -112,6 +112,7 @@ export default Component.extend(
 		actions: {
 			onNotificationClicked() {
 				const model = this.get('model');
+				const isUnread = model.get('isUnread');
 
 				this.track({
 					action: 'click',
@@ -119,7 +120,10 @@ export default Component.extend(
 					label: model.get('type'),
 					value: model.get('isUnread') ? 1 : 0
 				});
-				this.get('wdsOnSiteNotifications').markAsRead(model);
+
+				if (isUnread) {
+					this.get('wdsOnSiteNotifications').markAsRead(model);
+				}
 			},
 
 			markAsRead() {
