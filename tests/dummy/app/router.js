@@ -51,6 +51,7 @@ Router.map(function () {
 
 	this.route('identity', function () {
 		this.route('assets');
+		this.route('browser-theming');
 		this.route('global-footer', function () {
 			this.route('standalone', {
 				path: 'standalone/:variant_name'
