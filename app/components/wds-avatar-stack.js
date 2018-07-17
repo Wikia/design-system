@@ -11,18 +11,13 @@ export default Component.extend({
 		return this.overrideCount || this.get('avatars.length') || 0;
 	}),
 
-	overflow: computed('avatars', function () {
-		const count = this.get('count');
-		const maxStackSize = this.get('maxStackSize');
-
-		return count > maxStackSize ? count - maxStackSize : 0;
+	overflow: computed('count', 'maxStackSize', function () {
+		return this.count > this.maxStackSize ? this.count - this.maxStackSize : 0;
 	}),
 
 	displayableAvatars: computed('avatars', 'maxStackSize', function () {
-		const avatars = this.get('avatars') || [];
-		const count = this.get('count');
-		const maxStackSize = this.get('maxStackSize');
+		const avatars = this.avatars || [];
 
-		return count > maxStackSize ? avatars.slice(0, maxStackSize) : avatars;
+		return this.count > this.maxStackSize ? avatars.slice(0, this.maxStackSize) : avatars;
 	}),
 });
