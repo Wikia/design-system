@@ -1,5 +1,7 @@
 .wds-content-recommendations {
 	background: $wds-color-white;
+	flex-grow: 1;
+	overflow: auto;
 
 	&__header {
 		color: $wds-fandom-color-black;

@@ -33,17 +33,15 @@ export default Component.extend({
 	},
 
 	didInsertElement() {
-		this.searchModal = document.querySelector('.wds-search-modal');
-
-		this.searchModal.addEventListener('scroll', this.onScroll);
+		this.element.addEventListener('scroll', this.onScroll);
 	},
 
 	willDestroyElement() {
-		this.searchModal.removeEventListener('scroll', this.onScroll);
+		this.element.removeEventListener('scroll', this.onScroll);
 	},
 
 	onScroll() {
-		if (this.searchModal.scrollTop === (this.searchModal.scrollHeight - this.searchModal.offsetHeight)) {
+		if (this.element.scrollTop > (this.element.scrollHeight - this.element.offsetHeight - 100)) {
 			this.set('displayedItemsCount', this.get('displayedItemsCount') + 10);
 		}
 	},
