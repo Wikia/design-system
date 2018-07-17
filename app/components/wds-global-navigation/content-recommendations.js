@@ -29,21 +29,6 @@ export default Component.extend({
 		this._super(...arguments);
 		this.wdsLiftigniter.initLiftigniter({});
 		this.fetchLiftIgniterData();
-		this.onScroll = this.onScroll.bind(this);
-	},
-
-	didInsertElement() {
-		this.element.addEventListener('scroll', this.onScroll);
-	},
-
-	willDestroyElement() {
-		this.element.removeEventListener('scroll', this.onScroll);
-	},
-
-	onScroll() {
-		if (this.element.scrollTop > (this.element.scrollHeight - this.element.offsetHeight - 100)) {
-			this.set('displayedItemsCount', this.get('displayedItemsCount') + 10);
-		}
 	},
 
 	fetchLiftIgniterData() {
