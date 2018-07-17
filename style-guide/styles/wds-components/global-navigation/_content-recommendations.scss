@@ -23,6 +23,10 @@
 			margin-top: 0;
 		}
 
+		&:last-child {
+			border-bottom: 0;
+		}
+
 		&-thumbnail {
 			border-radius: 3px;
 			margin: 6px;

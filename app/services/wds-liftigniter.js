@@ -1,7 +1,9 @@
 import Service from '@ember/service';
-import {Promise} from 'rsvp';
+import { Promise } from 'rsvp';
 
 export default Service.extend({
+	dataPromise: null,
+
 	initLiftigniter(adsContext) {
 		const kxallsegs = localStorage.getItem('kxallsegs');
 		let context = {};
@@ -59,31 +61,35 @@ export default Service.extend({
 	},
 
 	getData(config) {
-		return new Promise((resolve, reject) => {
-			const registerOptions = {
-				max: config.max,
-				widget: config.widget,
-				callback: resolve
-			};
+		if (!this.dataPromise) {
+			this.dataPromise = new Promise((resolve, reject) => {
+				const registerOptions = {
+					max: config.max,
+					widget: config.widget,
+					callback: resolve
+				};
 
-			if (!window.liftigniter) {
-				return reject(
-					new Error('Liftigniter library not found'));
-			}
+				if (!window.liftigniter) {
+					return reject(
+						new Error('Liftigniter library not found'));
+				}
 
-			if (config.opts) {
-				registerOptions.opts = config.opts;
-			}
+				if (config.opts) {
+					registerOptions.opts = config.opts;
+				}
 
-			// currently we display only one recirc component on a
-			// page so calling 'fetch' with every invocation of this
-			// method is fine. However, if there will be more than
-			// one recirc component on a page, 'register' should be
-			// called for every of them, and the fetch only once at
-			// the end - the calls to liftigniter will be batched.
-			window.liftigniter('register', registerOptions);
-			window.liftigniter('fetch');
-		});
+				// currently we display only one recirc component on a
+				// page so calling 'fetch' with every invocation of this
+				// method is fine. However, if there will be more than
+				// one recirc component on a page, 'register' should be
+				// called for every of them, and the fetch only once at
+				// the end - the calls to liftigniter will be batched.
+				window.liftigniter('register', registerOptions);
+				window.liftigniter('fetch');
+			});
+		}
+
+		return this.dataPromise;
 	},
 
 	setupTracking(elements, widgetName, source) {
