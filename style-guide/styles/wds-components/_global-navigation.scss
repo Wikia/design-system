@@ -227,10 +227,6 @@
 		}
 	}
 
-	&__start-a-wiki-button {
-		@include button-theming($wds-fandom-color-aqua, $wds-color-white);
-	}
-
 	&__logo-image {
 		display: block;
 		height: 27px;
