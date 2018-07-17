@@ -8,6 +8,24 @@ export default Component.extend({
 
 	wdsOnSiteNotifications: service(),
 
+	almostBottom: 200,
+
+	init() {
+		this._super(...arguments);
+
+		this.onTouchMove = this.onTouchMove.bind(this);
+	},
+
+	didInsertElement() {
+		this._super(...arguments);
+
+		this.element.addEventListener('touchmove', this.onTouchMove);
+	},
+
+	willDestroyElement() {
+		this.element.removeEventListener('touchmove', this.onTouchMove);
+	},
+
 	openCloseObserver: observer('isOpen', function () {
 		if (this.get('isOpen')) {
 			this.track({
@@ -29,4 +47,21 @@ export default Component.extend({
 	viewProfileLink: computed('user.items', function(){
 		return this.get('user.items').filter( (item) => item['tracking-label'] === 'account.profile')[0]['href'];
 	}),
+
+	onTouchMove() {
+		if (this.hasAlmostScrolledToTheBottom()) {
+			this.get('wdsOnSiteNotifications').loadNextPage();
+		}
+	},
+
+	/**
+	 * Has the user scrolled almost to the bottom?
+	 * @private
+	 */
+	hasAlmostScrolledToTheBottom() {
+		const notificationsList = this.element.querySelector('.wds-notifications__notification-list');
+		const userInfo = this.element.querySelector('.wds-user-modal__info');
+
+		return notificationsList.offsetHeight - this.get('almostBottom') <= this.element.scrollTop + userInfo.offsetHeight;
+	},
 });

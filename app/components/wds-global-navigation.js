@@ -2,7 +2,7 @@ import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
 import { computed } from '@ember/object';
-import { addQueryParams } from '../utils/url';
+import { addQueryParams } from '@wikia/ember-fandom/utils/url';
 import { run } from '@ember/runloop';
 
 import Component from '@ember/component';
@@ -11,6 +11,7 @@ import track from '../utils/wds-track';
 export default Component.extend({
 	fetch: service(),
 	fastboot: service(),
+	router: service(),
 
 	wdsOnSiteNotifications: service(),
 
@@ -28,7 +29,7 @@ export default Component.extend({
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
 
-	redirectUrl: computed('fastboot.isFastBoot', function() {
+	redirectUrl: computed('fastboot.isFastBoot', 'router.currentURL', function() {
 		if (this.get('fastboot.isFastBoot')) {
 			return `${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`;
 		} else {
@@ -45,8 +46,6 @@ export default Component.extend({
 	}),
 
 	currentModal: null,
-
-
 
 	init() {
 		this._super(...arguments);
@@ -91,12 +90,24 @@ export default Component.extend({
 
 		if (modalType === 'search') {
 			this.set('searchIsActive', true);
+
+			this.track({
+				category:'navigation',
+				label: 'search-expanded',
+				action: 'click'
+			});
 		}
 	},
 
 	closeModal() {
 		if (this.get('currentModal') === 'search') {
 			this.set('searchIsActive', false);
+
+			this.track({
+				category:'navigation',
+				label: 'search-collapsed',
+				action: 'click'
+			});
 		}
 
 		this.set('currentModal', null);
@@ -109,12 +120,24 @@ export default Component.extend({
 				searchIsActive: true,
 				currentModal: 'search'
 			});
+
+			this.track({
+				category:'navigation',
+				label: 'search-expanded',
+				action: 'click'
+			});
 		},
 
 		onSearchCloseClicked() {
 			this.setProperties({
 				searchIsActive: false,
 				currentModal: null
+			});
+
+			this.track({
+				category:'navigation',
+				label: 'search-collapsed',
+				action: 'click'
 			});
 		},
 
@@ -143,6 +166,10 @@ export default Component.extend({
 		goToSearchResults(querystring) {
 			this.closeModal();
 			this.goToSearchResults(querystring)
+		},
+
+		track(data) {
+			this.track(data);
 		}
 	},
 

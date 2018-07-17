@@ -131,6 +131,10 @@ export default Controller.extend({
 						location: 'identity.assets'
 					},
 					{
+						name: 'Browser Theming',
+						location: 'identity.browser-theming'
+					},
+					{
 						name: 'Global Footer',
 						location: 'identity.global-footer.index'
 					},

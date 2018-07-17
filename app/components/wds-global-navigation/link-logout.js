@@ -5,15 +5,16 @@ import { computed } from '@ember/object';
 
 export default Component.extend({
 	fastboot: service(),
+	router: service(),
 
 	attributeBindings: ['id'],
 	id: alias('model.title.key'),
 
-	redirectUrl: computed('fastboot.isFastBoot', function() {
+	redirectUrl: computed('fastboot.isFastBoot', 'router.currentURL', function() {
 		if (this.get('fastboot.isFastBoot')) {
-			return encodeURIComponent(`${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`);
+			return `${this.get('fastboot.request.protocol')}//${this.get('fastboot.request.host')}${this.get('fastboot.request.path')}`;
 		} else {
-			return encodeURIComponent(window.location.href);
+			return window.location.href;
 		}
 	}),
 });

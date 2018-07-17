@@ -15,8 +15,15 @@
 				{{svg 'wds-company-logo-fandom-heart' class='wds-global-navigation__logo-heart'}}
 			</a>
 			<div class="wds-global-navigation__community-bar-separator"></div>
+
 			<div class="wds-community-bar__sitename">
-				{{sitename}}
+				<a href="{{sitename.href}}" data-tracking-label="{{sitename.tracking_label}}">
+					{{#if sitename.mobile_title}}
+						{{sitename.mobile_title.value}}
+					{{else}}
+						{{sitename.title.value}}
+					{{/if}}
+				</a>
 			</div>
 		</div>
 		<div class="wds-global-navigation__dropdown-controls">
@@ -26,6 +33,7 @@
 				onSearchCloseClicked=(action 'onSearchCloseClicked')
 				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
 				goToSearchResults=(action 'goToSearchResults')
+				track=(action 'track')
 			}}
 			{{#if model.user}}
 				{{wds-global-navigation/user model=model.user}}
@@ -51,6 +59,7 @@
 				onSearchToggleClicked=(action 'onSearchToggleClicked')
 				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
 				goToSearchResults=(action 'goToSearchResults')
+				track=(action 'track')
 			}}
 
 			{{#if model.user}}

@@ -15,9 +15,12 @@
 				onSearchSuggestionChosen=(action onSearchSuggestionChosen)
 				goToSearchResults=(action goToSearchResults)
 				inSearchModal=true
+				track=(action track)
 			}}
 			{{wds-global-navigation/main-navigation model=navigationModel}}
 		</div>
-		{{wds-global-navigation/content-recommendations}}
+		{{wds-global-navigation/content-recommendations
+			track=(action track)
+		}}
 	</div>
 {{/if}}

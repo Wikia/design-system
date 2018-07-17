@@ -1,6 +1,7 @@
 import Component from '@ember/component';
-import {computed} from '@ember/object';
-import {inject as service} from '@ember/service';
+import { computed } from '@ember/object';
+import { inject as service } from '@ember/service';
+import { normalizeThumbWidth } from "../../utils/thumbnail";
 
 const recircItemsCount = 50,
 	config = {
@@ -56,49 +57,32 @@ export default Component.extend({
 					return item.hasOwnProperty('thumbnail') && item.thumbnail;
 				})
 					.slice(0, recircItemsCount))
-				//     .map((item) => {
-				//         item.thumbnail = Thumbnailer.getThumbURL(item.thumbnail, {
-				//             mode: Thumbnailer.mode.scaleToWidth,
-				//             width: normalizeThumbWidth(window.innerWidth)
-				//         });
-				//
-				//         return item;
+					.map((item) => {
+						if (window.Vignette) {
+							item.thumbnail = window.Vignette.getThumbURL(item.thumbnail, {
+								mode: window.Vignette.mode.scaleToWidth,
+								width: normalizeThumbWidth(window.innerWidth)
+							});
+						}
+
+						return item;
+					});
+
+				run.scheduleOnce('afterRender', () => {
+					if (!this.isDestroyed) {
+						wdsLiftigniter.setupTracking(
+							this.element.querySelectorAll('.wds-content-recommendations__card'),
+							config.widget,
+							'LI'
+						);
+					}
+				});
 			});
 
-		// run.scheduleOnce('afterRender', () => {
-		//     if (!this.isDestroyed) {
-		//         liftigniter.setupTracking(
-		//             this.element.querySelectorAll('.recirculation-prefooter__item'),
-		//             config.widget,
-		//             'LI'
-		//         );
-		//         this.get('listRendered').resolve();
-		//     }
-		// });
-
-		// if (this.shouldShowPlista) {
-		//     this.fetchPlista()
-		//         .then(this.mapPlista)
-		//         .then((item) => {
-		//             if (item.thumbnail) {
-		//                 let newItems = this.items;
-		//
-		//                 newItems.splice(1, 0, item);
-		//                 newItems.pop();
-		//                 this.set('items', newItems);
-		//                 this.notifyPropertyChange('items');
-		//             }
-		//         })
-		//         .catch((error) => {
-		//             this.logger.info('Plista fetch failed', error);
-		//         });
-		// }
-		// });
-
-		// track({
-		//           action: trackActions.impression,
-		//           category: 'recirculation',
-		//           label: 'footer'
-		//       });
+		this.track && this.track({
+			action: 'impression',
+			category: 'recirculation',
+			label: 'footer'
+		});
 	},
 });

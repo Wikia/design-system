@@ -1,5 +1,5 @@
 {{#wds-dropdown class=navigationClasses as |dropdown|}}
-	{{#dropdown.toggle click=(action toggleNavigation) as |chevron|}}
+	{{#dropdown.toggle click=(action toggleNavigation) data-tracking-label='nav-expanded' as |chevron|}}
 	{{!fixme add new icon for navigation}}
 		{{svg 'wds-icons-menu-small' class='wds-icon wds-icon-small'}}
 		{{chevron}}

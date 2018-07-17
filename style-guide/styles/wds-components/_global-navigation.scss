@@ -250,7 +250,7 @@
 	&__notifications-dropdown {
 		color: $wds-fandom-color-aqua;
 		height: 100%;
-		padding-left: 12px;
+		margin-left: 12px;
 		position: relative;
 		transition: color $wds-button-transition-duration;
 		width: 44px;
@@ -351,7 +351,7 @@
 	}
 
 	&__user-menu {
-		padding-left: 12px;
+		margin-left: 12px;
 
 		.wds-avatar__image {
 			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
@@ -427,7 +427,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		height: 100%;
+		height: $wds-global-navigation-height;
 
 		@media #{$wds-breakpoint-medium-up} {
 			display: none;
@@ -441,7 +441,8 @@
 	}
 
 	&__logo-heart-link {
-		height: 100%;
+		align-self: flex-start;
+		height: $wds-global-navigation-height;
 	}
 
 	&__logo-heart {
@@ -463,18 +464,21 @@
 	}
 
 	.wds-community-bar__sitename {
-		color: #fff;
 		// 120px is width of controls on the right side (search and profile) + margin
 		max-width: calc(100vw - 120px);
 		margin-left: 12px;
-		transform: translateY(-55px);
+		transform: translateY(-$wds-global-navigation-height);
 		transition: transform $scroll-animation-duration;
+
+		a {
+			color: $wds-color-white;
+		}
 	}
 
 	&.wds-is-community-bar-in:not(.wds-is-modal-opened) {
 		@media #{$wds-breakpoint-small-down} {
 			.wds-global-navigation__logo {
-				transform: translateY(55px);
+				transform: translateY($wds-global-navigation-height);
 			}
 
 			.wds-global-navigation {
