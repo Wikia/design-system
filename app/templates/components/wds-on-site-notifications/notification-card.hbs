@@ -5,7 +5,7 @@
 {{/if}}
 <a class="wds-notification-card__outer-body" href="{{model.latestEventUri}}"
 	{{action 'onNotificationClicked' preventDefault=false}}>
-	<div class="wds-notification-card__icon-wrapper" {{action 'markAsRead' model}}>
+	<div class="wds-notification-card__icon-wrapper" {{action 'markAsRead'}}>
 		{{svg iconName viewBox='0 0 18 18' class='wds-icon'}}
 	</div>
 	<div class="wds-notification-card__body">
