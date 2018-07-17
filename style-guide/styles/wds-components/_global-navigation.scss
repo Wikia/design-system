@@ -189,8 +189,12 @@
 		margin-left: 30px;
 		text-decoration: none;
 
+		&:visited {
+			color: $wds-fandom-color-aqua !important;
+		}
+
 		&:hover {
-			color: $wds-color-white;
+			color: $wds-color-white !important;
 		}
 
 		.wds-dropdown__toggle-chevron {
