@@ -2,6 +2,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { normalizeThumbWidth } from "../../utils/thumbnail";
+import { run } from '@ember/runloop';
 
 const recircItemsCount = 50,
 	config = {
