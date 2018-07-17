@@ -1,6 +1,5 @@
 import Service from '@ember/service';
 import {Promise} from 'rsvp';
-// import localStorageConnector from '../utils/local-storage-connector';
 
 export default Service.extend({
 	initLiftigniter(adsContext) {
@@ -49,9 +48,14 @@ export default Service.extend({
 		});
 
 		window.liftigniter('send', 'pageview');
-		window.liftigniter('setRequestFields',
-			['rank', 'thumbnail', 'title', 'url',
-				'presented_by', 'author']);
+		window.liftigniter('setRequestFields', [
+			'rank',
+			'thumbnail',
+			'title',
+			'url',
+			'presented_by',
+			'author'
+		]);
 	},
 
 	getData(config) {
