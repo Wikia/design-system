@@ -1,6 +1,6 @@
-// (function (M) {
-// 	M.trackingQueue.push(function (isOptedIn) {
-// 		if (isOptedIn) {
+(function (M) {
+	M.trackingQueue.push(function (isOptedIn) {
+		if (isOptedIn) {
 			// THIS SCRIPT IS COPIED FROM LIFTIGNITER DOCUMENTATION
 			(function (w, d, s, p, v, e, r) {
 				if (document.location.search.indexOf('noexternals=1') === -1) {
@@ -16,6 +16,6 @@
 					r.parentNode.insertBefore(e, r);
 				}
 			})(window, document, 'script', '//cdn.petametrics.com/l9ehhrb6mtv75bp2.js', 'liftigniter');
-		// }
-// 	});
-// })(window.M);
+		}
+	});
+})(window.M);
