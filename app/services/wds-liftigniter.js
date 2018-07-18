@@ -1,11 +1,12 @@
 import Service from '@ember/service';
 import { Promise } from 'rsvp';
+import localStorageAdapter from '@wikia/ember-fandom/utils/local-storage-connector';
 
 export default Service.extend({
 	dataPromise: null,
 
 	initLiftigniter(adsContext) {
-		const kxallsegs = localStorage.getItem('kxallsegs');
+		const kxallsegs = localStorageAdapter.getItem('kxallsegs');
 		let context = {};
 
 		if (adsContext && adsContext.targeting) {
