@@ -1,10 +1,10 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
-import { normalizeThumbWidth } from "../../utils/thumbnail";
 import { run } from '@ember/runloop';
 
 const recircItemsCount = 50,
+	thumbDimension = 60,
 	config = {
 		// we load twice as many items as we want to display because we need to filter out those without thumbnail
 		max: recircItemsCount * 2,
@@ -44,8 +44,9 @@ export default Component.extend({
 					.map((item) => {
 						if (window.Vignette) {
 							item.thumbnail = window.Vignette.getThumbURL(item.thumbnail, {
-								mode: window.Vignette.mode.scaleToWidth,
-								width: normalizeThumbWidth(window.innerWidth)
+								mode: window.Vignette.mode.zoomCrop,
+								height: thumbDimension,
+								width: thumbDimension
 							});
 						}
 
