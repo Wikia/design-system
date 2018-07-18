@@ -25,6 +25,7 @@ export default Component.extend({
 		if (this.mouseEnter) {
 			this.mouseEnter = this.mouseEnter.bind(this);
 		}
+		this.mouseLeave = this.mouseLeave.bind(this);
 	},
 
 	didInsertElement() {
@@ -33,6 +34,14 @@ export default Component.extend({
 		if (this.mouseEnter) {
 			this.element.addEventListener('mouseenter', this.mouseEnter);
 		}
+
+		this.element.addEventListener('mouseleave', this.mouseLeave);
+	},
+
+	mouseLeave() {
+		if (isTouchDevice) {
+			this.set('isClicked', false);
+		}
 	},
 
 	actions: {
@@ -40,12 +49,6 @@ export default Component.extend({
 			if (isTouchDevice) {
 				this.set('isClicked', !this.get('isClicked'));
 				e.preventDefault();
-			}
-		},
-
-		mouseLeave() {
-			if (isTouchDevice) {
-				this.set('isClicked', false);
 			}
 		}
 	}
