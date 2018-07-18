@@ -109,7 +109,6 @@
 	}
 
 	&.wds-is-active,
-	&.wds-is-clicked,
 	&:not(.wds-is-touch-device):hover {
 		&:not(.wds-no-chevron) {
 			&::before, &::after {
@@ -190,7 +189,6 @@
 	}
 
 	&.wds-is-active,
-	&.wds-is-clicked,
 	&:not(.wds-is-touch-device):hover {
 		.wds-dropdown-level-2__content {
 			display: block;
