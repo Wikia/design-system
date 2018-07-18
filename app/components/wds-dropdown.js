@@ -9,9 +9,11 @@ export default Component.extend({
 		'hasShadow:wds-has-shadow',
 		'noChevron:wds-no-chevron',
 		'hasDarkShadow:wds-has-dark-shadow',
-		'isLevel2:wds-dropdown-level-2:wds-dropdown'
+		'isLevel2:wds-dropdown-level-2:wds-dropdown',
+		'isTouchDevice:wds-is-touch-device',
 	],
 	isLevel2: false,
+	isTouchDevice: isTouchDevice,
 
 	init() {
 		this._super(...arguments);
@@ -31,8 +33,8 @@ export default Component.extend({
 
 	actions: {
 		click(e) {
-			if (isTouchDevice && !this.get('isClicked')) {
-				this.set('isClicked', true);
+			if (isTouchDevice) {
+				this.set('isClicked', !this.get('isClicked'));
 				e.preventDefault();
 			}
 		},
