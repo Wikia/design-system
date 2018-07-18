@@ -1,6 +1,7 @@
 {{#if showAvatars}}
 	{{wds-avatar-stack
-			avatars=avatars
+		avatars=avatars
+		overrideCount=model.totalUniqueActors
 	}}
 {{/if}}
 <a class="wds-notification-card__outer-body" href="{{model.latestEventUri}}"
