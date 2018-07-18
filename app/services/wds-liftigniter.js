@@ -1,6 +1,6 @@
 import Service from '@ember/service';
 import { Promise } from 'rsvp';
-import localStorageAdapter from '@wikia/ember-fandom/utils/local-storage-connector';
+import localStorageAdapter from '../utils/local-storage-connector';
 
 export default Service.extend({
 	dataPromise: null,
