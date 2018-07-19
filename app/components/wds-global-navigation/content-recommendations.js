@@ -86,7 +86,7 @@ export default Component.extend({
 		this.track && this.track({
 			action: 'impression',
 			category: 'recirculation',
-			label: 'footer'
+			label: 'search'
 		});
 	},
 });
