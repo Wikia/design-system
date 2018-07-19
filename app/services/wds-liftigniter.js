@@ -79,12 +79,6 @@ export default Service.extend({
 					registerOptions.opts = config.opts;
 				}
 
-				// currently we display only one recirc component on a
-				// page so calling 'fetch' with every invocation of this
-				// method is fine. However, if there will be more than
-				// one recirc component on a page, 'register' should be
-				// called for every of them, and the fetch only once at
-				// the end - the calls to liftigniter will be batched.
 				window.liftigniter('register', registerOptions);
 				window.liftigniter('fetch');
 			});
