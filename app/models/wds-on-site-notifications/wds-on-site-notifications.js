@@ -46,12 +46,12 @@ export default EmberObject.extend({
 		return get(data, '_links.next') || null;
 	},
 
-	markAsRead(notification) {
+	markAsRead(notification, willUnloadPage) {
 		if (!notification.isUnread) {
-			return RSVP.reject();
+			return RSVP.resolve();
 		}
 
-		return notification.markAsRead()
+		return notification.markAsRead(willUnloadPage)
 			.then(() => {
 				this.decrementProperty('unreadCount');
 			});

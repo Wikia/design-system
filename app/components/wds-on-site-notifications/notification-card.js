@@ -113,21 +113,32 @@ export default Component.extend(
 			onNotificationClicked() {
 				const model = this.get('model');
 				const isUnread = model.get('isUnread');
+				const wdsOnSiteNotifications = this.get('wdsOnSiteNotifications');
 
 				this.track({
 					action: 'click',
 					category: 'on-site-notifications',
 					label: model.get('type'),
-					value: model.get('isUnread') ? 1 : 0
+					value: isUnread ? 1 : 0
 				});
 
 				if (isUnread) {
-					this.get('wdsOnSiteNotifications').markAsRead(model);
+					wdsOnSiteNotifications
+						.markAsRead(model, true)
+						.then(() => {
+							wdsOnSiteNotifications.goToDestination(model);
+						});
+				} else {
+					wdsOnSiteNotifications.goToDestination(model);
 				}
 			},
 
 			markAsRead() {
 				const model = this.get('model');
+
+				if (!model.get('isUnread')) {
+					return;
+				}
 
 				this.track({
 					action: 'click',
