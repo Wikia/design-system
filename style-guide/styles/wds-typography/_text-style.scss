@@ -1,0 +1,23 @@
+.wds-italic {
+	font-style: italic;
+}
+
+.wds-uppercase {
+	text-transform: uppercase;
+}
+
+.wds-lowercase {
+	text-transform: lowercase;
+}
+
+.wds-midlight {
+	background-image: linear-gradient(to top, $wds-fandom-color-aqua 50%, transparent 50%);
+}
+
+.wds-roman {
+	font-style: normal;
+}
+
+.wds-normal-case {
+	text-transform: none;
+}
