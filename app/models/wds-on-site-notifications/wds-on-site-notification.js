@@ -5,9 +5,6 @@ import { convertToTimestamp } from '@wikia/ember-fandom/utils/iso-date-time';
 
 import notificationTypes from '../../utils/notification-types';
 
-const defaultAvatar = 'https://static.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg' +
-	'/revision/latest/scale-to-width-down/50';
-
 export default EmberObject.extend({
 	fetch: service(),
 	wikiUrls: service(),
@@ -46,10 +43,6 @@ export default EmberObject.extend({
 
 	createActors(actors) {
 		return actors.map((actor) => {
-			if (!actor.avatarUrl) {
-				actor.avatarUrl = defaultAvatar;
-			}
-
 			actor.profileUrl = this.get('wikiUrls').build({
 				host: this.get('wikiVariables.host'),
 				namespace: 'User',
