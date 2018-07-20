@@ -1,3 +1,5 @@
+import RSVP from 'rsvp';
+
 import EmberObject, { get } from '@ember/object';
 import { A } from '@ember/array';
 import { inject as service } from '@ember/service';
@@ -7,6 +9,7 @@ import notificationTypes from '../../utils/notification-types';
 
 export default EmberObject.extend({
 	fetch: service(),
+	logger: service(),
 	wikiUrls: service(),
 	wikiVariables: service(),
 
@@ -67,16 +70,60 @@ export default EmberObject.extend({
 		}
 	},
 
-	markAsRead() {
+	markAsRead(willUnloadPage) {
+		if (willUnloadPage && window.navigator.sendBeacon) {
+			return this.markAsReadUsingSendBeacon();
+		}
+
+		return this.markAsReadUsingFetch(willUnloadPage);
+	},
+
+	markAsReadUsingSendBeacon() {
+		const body = JSON.stringify([this.get('uri')]);
+		const markAsReadUrl = this.fetch.getServiceUrl(
+			'on-site-notifications',
+			'/notifications/mark-as-read/by-uri'
+		);
+
+		try {
+			const blob = new Blob([body], {
+				type: 'application/json'
+			});
+
+			if (window.navigator.sendBeacon(markAsReadUrl, blob) === true) {
+				return RSVP.Promise.resolve()
+					.then(() => {
+						this.set('isUnread', false);
+					});
+			} else {
+				return this.markAsReadUsingFetch(true);
+			}
+		} catch (exception) {
+			// See http://crbug.com/490015#c99
+			this.get('logger').warn('Error when sending beacon', exception);
+			return this.markAsReadUsingFetch(true);
+		}
+	},
+
+	markAsReadUsingFetch(willUnloadPage) {
+		const body = JSON.stringify([this.get('uri')]);
+		const options = {
+			body,
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			method: 'POST',
+		};
+
+		if (willUnloadPage) {
+			// Keep it low as it's blocking user from navigating to the notification target
+			options.timeout = 500;
+		}
+
 		return this.fetch
-			.fetchFromOnSiteNotifications('/notifications/mark-as-read/by-uri', {
-				body: JSON.stringify([this.get('uri')]),
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				method: 'POST',
-			}).then(() => {
+			.fetchFromOnSiteNotifications('/notifications/mark-as-read/by-uri', options)
+			.then(() => {
 				this.set('isUnread', false);
 			});
-	},
+	}
 });
