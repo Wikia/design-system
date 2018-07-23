@@ -80,12 +80,16 @@ export default Service.extend({
 		this.get('model').markAllAsRead();
 	},
 
-	markAsRead(notification) {
-		this.get('model').markAsRead(notification);
+	markAsRead(notification, willUnloadPage = false) {
+		return this.get('model').markAsRead(notification, willUnloadPage);
 	},
 
 	getUnreadCount() {
 		return this.get('model.unreadCount');
-	}
+	},
 
+	goToDestination(notification) {
+		// TODO check if it's a local url and use transitionTo or delegate to app
+		window.location.href = notification.get('latestEventUri');
+	}
 });
