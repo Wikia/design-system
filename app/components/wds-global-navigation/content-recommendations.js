@@ -27,12 +27,12 @@ export default Component.extend({
 
 	init() {
 		this._super(...arguments);
-		this.wdsLiftigniter.initLiftigniter({});
-		this.fetchLiftIgniterData();
 		this.onScroll = this.onScroll.bind(this);
 	},
 
 	didInsertElement() {
+		this.wdsLiftigniter.initLiftigniter({});
+		this.fetchLiftIgniterData();
 		this.element.addEventListener('scroll', this.onScroll);
 	},
 
