@@ -1,0 +1,96 @@
+.wds-has-new-typography {
+	blockquote {
+		font-size: 16px;
+		font-style: italic;
+		font-weight: $wds-fandom-font-weight-regular;
+		line-height: 26px;
+		margin-bottom: 1rem;
+		padding: .25rem 0 .25rem 1rem;
+
+		&::before {
+			color: $wds-fandom-color-aqua;
+			content: "“";
+			display: block;
+			font-size: 150px;
+			font-style: normal;
+			line-height: 75px;
+			margin-bottom: -52px;
+			margin-top: 20px;
+		}
+
+		cite {
+			color: $wds-fandom-color-aqua;
+			display: block;
+			font-style: normal;
+			margin-top: 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	ul,
+	ol {
+		margin-left: 1.1rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 18px;
+	}
+
+	h1 {
+		font-size: 28px;
+		font-weight: $wds-fandom-font-weight-bold;
+	}
+
+	h2 {
+		font-size: 24px;
+		font-weight: $wds-fandom-font-weight-regular;
+	}
+
+	h3 {
+		font-size: 18px;
+		font-weight: $wds-fandom-font-weight-medium;
+	}
+
+	h4 {
+		font-size: 16px;
+		font-weight: $wds-fandom-font-weight-medium;
+	}
+
+	h5,
+	h6 {
+		font-size: 14px;
+		font-weight: $wds-fandom-font-weight-medium;
+	}
+
+	section,
+	p {
+		font-size: 16px;
+		font-weight: $wds-fandom-font-weight-light;
+		line-height: 28px;
+	}
+
+	section {
+		margin-bottom: 32px;
+	}
+
+	p {
+		margin: 16px 0;
+	}
+
+	a {
+		color: inherit;
+		line-height: inherit;
+		text-decoration: none;
+	}
+
+	/* TODO: should this be done in a such way? or should we go case by case and reset this style? */
+	/* what about <a><img/></a>? */
+	article a {
+		border-bottom: 3px solid $wds-fandom-color-aqua;
+	}
+}

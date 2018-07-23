@@ -19,5 +19,8 @@
 }
 
 .wds-midlight {
-	background-image: linear-gradient(to top, $wds-fandom-color-aqua 50%, transparent 50%);
+	background-image: linear-gradient(to top, rgba($wds-fandom-color-aqua, .25) 15px, transparent 15px, transparent 100%);
+	display: inline;
+	padding-left: 3px;
+	padding-right: 3px;
 }
