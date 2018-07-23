@@ -112,22 +112,40 @@ export default Component.extend(
 		actions: {
 			onNotificationClicked() {
 				const model = this.get('model');
+				const isUnread = model.get('isUnread');
+				const wdsOnSiteNotifications = this.get('wdsOnSiteNotifications');
 
 				this.track({
 					action: 'click',
 					category: 'on-site-notifications',
 					label: model.get('type'),
-					value: model.get('isUnread') ? 1 : 0
+					value: isUnread ? 1 : 0
 				});
+
+				if (isUnread) {
+					wdsOnSiteNotifications
+						.markAsRead(model, true)
+						.then(() => {
+							wdsOnSiteNotifications.goToDestination(model);
+						});
+				} else {
+					wdsOnSiteNotifications.goToDestination(model);
+				}
 			},
 
-			markAsRead(notification) {
+			markAsRead() {
+				const model = this.get('model');
+
+				if (!model.get('isUnread')) {
+					return;
+				}
+
 				this.track({
 					action: 'click',
 					category: 'on-site-notifications',
-					label: `mark-as-read-${notification.type}`
+					label: `mark-as-read-${model.type}`
 				});
-				this.get('wdsOnSiteNotifications').markAsRead(notification);
+				this.get('wdsOnSiteNotifications').markAsRead(model);
 			}
 		},
 

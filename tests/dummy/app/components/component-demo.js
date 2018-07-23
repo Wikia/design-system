@@ -52,7 +52,7 @@ export default Component.extend({
 		this.toggleView(name);
 
 		if (this.get('language') !== 'scss') {
-			const component = this.element.cloneNode(true);
+			const component = this.element.querySelector('.component-demo__rendered').cloneNode(true);
 			const emberView = component.querySelector('.ember-view');
 
 			emberView.removeAttribute('id');

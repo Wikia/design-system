@@ -90,21 +90,32 @@ export default function () {
 						"snippet": "post w mojej kategorii"
 					},
 					"events": {
-						"total": 3,
-						"totalUniqueActors": 3,
+						"total": 6,
+						"totalUniqueActors": 6,
 						"latestActors": [
 							{
-								"id": "26629533",
-								"name": "Nikodamn",
+								"id": "1",
+								"name": "User 1",
 								"avatarUrl": "https://static.wikia.nocookie.net/4053c0f6-fb5a-4295-9027-5cf1f06a2c85"
 							}, {
-								"id": "25126702",
-								"name": "Igor Rogatty",
+								"id": "2",
+								"name": "User 2",
 								"avatarUrl": "https://static.wikia.nocookie.net/d01a239e-b173-447e-8ed5-b84ed7a6563e"
 							}, {
-								"id": "33027931",
-								"name": "Xkxd",
-								"avatarUrl": "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg"
+								"id": "3",
+								"name": "User 3"
+							},
+							{
+								"id": "4",
+								"name": "User 4",
+								"avatarUrl": "https://static.wikia.nocookie.net/4053c0f6-fb5a-4295-9027-5cf1f06a2c85"
+							}, {
+								"id": "5",
+								"name": "User 5",
+								"avatarUrl": "https://static.wikia.nocookie.net/d01a239e-b173-447e-8ed5-b84ed7a6563e"
+							}, {
+								"id": "6",
+								"name": "User 6"
 							}
 						],
 						"latestEvent": {
