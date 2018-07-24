@@ -16,7 +16,7 @@
 	&__card {
 		border-bottom: 1px solid $wds-fandom-color-middle-gray;
 		display: flex;
-		padding: 12px 0;
+		padding: 6px 0;
 		margin: 6px;
 
 		&:first-child {
@@ -43,6 +43,7 @@
 			color: $wds-fandom-color-black;
 			font-size: 14px;
 			font-weight: 500;
+			line-height: 1.5;
 		}
 
 		&-time {
