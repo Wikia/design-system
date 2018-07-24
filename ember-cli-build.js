@@ -5,6 +5,7 @@ const Funnel = require('broccoli-funnel');
 const SvgStore = require('broccoli-svgstore');
 
 module.exports = function(defaults) {
+	const inlineScriptsPath = 'vendor/inline-scripts';
 	var app = new EmberAddon(defaults, {
 		autoprefixer: {
 			cascade: false,
@@ -13,6 +14,10 @@ module.exports = function(defaults) {
 		},
 		fingerprint: {
 			enabled: false
+		},
+		inlineContent: {
+			'tracking-queue-stub': `${inlineScriptsPath}/tracking-queue-stub.js`,
+			'tracking-liftigniter': `${inlineScriptsPath}/tracking-liftigniter.js`,
 		},
 		snippetPaths: ['tests/dummy/snippets'],
 		snippetSearchPaths: ['tests/dummy/app'],
