@@ -19,14 +19,9 @@
 </section>
 
 <section>
-	<h2 id='news-stories-font'>News and stories font family</h2>
-	<p> News and Stories uses Rubik as it's primary font.</p>
+	<h2 id='news-stories-font'>News and stories and Mobile Article font family</h2>
+	<p> News and Stories and uses Rubik as it's primary font.</p>
 	<code><span class="format-code">$wds-fandom-font-family</span>: Rubik, Helvetica, Arial, sans-serif;</code>
-</section>
-
-<section>
-	<h2 id="line-height">Line height</h2>
-	<code><span class="format-code">$wds-line-height</span>: 1.5em;</code>
 </section>
 
 <section>
@@ -43,15 +38,43 @@
 </section>
 
 <section>
+	<h2 id="font-weight">Font Weight</h2>
+	{{font-weight-line fontWeight=300 fontWeightName='font-weight-light'}}
+	{{font-weight-line fontWeight=400 fontWeightName='font-weight-medium'}}
+	{{font-weight-line fontWeight=500 fontWeightName='font-weight-normal'}}
+	{{font-weight-line fontWeight=700 fontWeightName='font-weight-bold'}}
+	{{font-weight-line fontWeight=900 fontWeightName='font-weight-black'}}
+</section>
+
+<section>
+	<h2 id="font-weight">Text style</h2>
+	{{text-style-line text='Normal' textStyle='font-style-normal'}}
+	{{text-style-line text='Italic' textStyle='font-style-italic'}}
+	{{text-style-line text='Uppercase' textStyle='text-transform-uppercase'}}
+	{{text-style-line text='Lowercase' textStyle='text-transform-lowercase'}}
+	{{text-style-line text='No transform' textStyle='text-transform-none'}}
+</section>
+
+
+<section>
+	<h2 id="font-weight">Midlight</h2>
+	<p>
+		There's a specific styling for page titles, that you can apply by using a class
+		<code><span class="format-code">.wds-midlight</span></code>
+	</p>
+	<div class="wds-font-size-xxl wds-font-weight-bold wds-midlight">This is a headline using midlight</div>
+</section>
+
+<section>
 	<h2 id="example">Example usage</h2>
 	{{#code-sample language='scss'}}
 body {
 	font-family: $wds-font-family;
-	line-height: $wds-line-height;
+	@include .wds-line-height-base;
 }
 
 .wds-component {
-	font-size: $wds-typescale-size-plus-1;
+	@include wds-font-size-base;
 }
 	{{/code-sample}}
 </section>
