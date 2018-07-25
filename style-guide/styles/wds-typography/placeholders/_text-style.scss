@@ -20,6 +20,7 @@
 
 %wds-midlight {
 	background-image: linear-gradient(to top, rgba($wds-fandom-color-aqua, .25) 15px, transparent 15px, transparent 100%);
+	box-decoration-break: clone;
 	display: inline;
 	padding-left: 3px;
 	padding-right: 3px;
