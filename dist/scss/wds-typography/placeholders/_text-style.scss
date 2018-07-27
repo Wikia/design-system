@@ -18,6 +18,14 @@
 	text-transform: none;
 }
 
+%wds-underline-aqua {
+	@include wds-underline($wds-fandom-color-aqua);
+}
+
+%wds-underline-navy {
+	@include wds-underline($wds-fandom-color-navy);
+}
+
 %wds-midlight-aqua {
 	@include wds-midlight($wds-fandom-color-aqua);
 }
