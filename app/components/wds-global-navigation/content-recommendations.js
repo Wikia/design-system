@@ -31,8 +31,13 @@ export default Component.extend({
 	},
 
 	didInsertElement() {
-		this.wdsLiftigniter.initLiftigniter({});
-		this.fetchLiftIgniterData();
+		M.trackingQueue.push((isOptedIn) => {
+			if (isOptedIn) {
+				this.wdsLiftigniter.initLiftigniter({});
+				this.fetchLiftIgniterData();
+			}
+		});
+
 		this.element.addEventListener('scroll', this.onScroll);
 	},
 
