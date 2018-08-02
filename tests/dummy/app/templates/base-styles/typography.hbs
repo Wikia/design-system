@@ -26,15 +26,15 @@
 
 <section>
 	<h2 id="typescale">Typescale</h2>
-	{{typescale-line fontSize=52 lineHeight=52 typescaleName='font-size-4xl' lineHeightName='line-height-4xl'}}
-	{{typescale-line fontSize=36 lineHeight=36 typescaleName='font-size-3xl' lineHeightName='line-height-3xl'}}
-	{{typescale-line fontSize=28 lineHeight=30 typescaleName='font-size-xxl' lineHeightName='line-height-xxl'}}
-	{{typescale-line fontSize=24 lineHeight=26 typescaleName='font-size-xl' lineHeightName='line-height-xl'}}
-	{{typescale-line fontSize=18 lineHeight=20 typescaleName='font-size-l' lineHeightName='line-height-l'}}
-	{{typescale-line fontSize=16 lineHeight=18 typescaleName='font-size-base' lineHeightName='line-height-base'}}
-	{{typescale-line fontSize=14 lineHeight=16 typescaleName='font-size-s' lineHeightName='line-height-s'}}
-	{{typescale-line fontSize=12 lineHeight=14 typescaleName='font-size-xs' lineHeightName='line-height-xs'}}
-	{{typescale-line fontSize=10 lineHeight=12 typescaleName='font-size-xxs' lineHeightName='line-height-xxs'}}
+	{{typescale-line fontSize=52 lineHeight=1 typescaleName='font-size-4xl' lineHeightName='leading-none'}}
+	{{typescale-line fontSize=36 lineHeight=1 typescaleName='font-size-3xl' lineHeightName='leading-none'}}
+	{{typescale-line fontSize=28 lineHeight=1.25 typescaleName='font-size-xxl' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=24 lineHeight=1.25 typescaleName='font-size-xl' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=18 lineHeight=1.25 typescaleName='font-size-l' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=16 lineHeight=1.25 typescaleName='font-size-base' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=14 lineHeight=1.25 typescaleName='font-size-s' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=12 lineHeight=1.25 typescaleName='font-size-xs' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=10 lineHeight=1.25 typescaleName='font-size-xxs' lineHeightName='leading-tight'}}
 </section>
 
 <section>
@@ -76,7 +76,7 @@
 	{{#code-sample language='scss'}}
 body {
 	font-family: $wds-font-family;
-	@extend %wds-line-height-base;
+	@extend %wds-leading-none;
 }
 
 .wds-component {

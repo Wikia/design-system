@@ -1,43 +1,15 @@
-%wds-line-height-xxs {
-	line-height: 12px;
+%wds-leading-none {
+	line-height: 1;
 }
 
-%wds-line-height-xs {
-	line-height: 14px;
+%wds-leading-tight {
+	line-height: 1.25;
 }
 
-%wds-line-height-s {
-	line-height: 16px;
+%wds-leading-normal {
+	line-height: 1.5;
 }
 
-%wds-line-height-base {
-	line-height: 18px;
-}
-
-%wds-line-height-l {
-	line-height: 20px;
-}
-
-%wds-line-height-xl {
-	line-height: 26px;
-}
-
-%wds-line-height-xxl {
-	line-height: 30px;
-}
-
-%wds-line-height-3xl {
-	line-height: 36px;
-}
-
-%wds-line-height-4xl {
-	line-height: 52px;
-}
-
-%wds-line-height-paragraph {
-	line-height: 28px;
-}
-
-%wds-line-height-desktop-headline {
-	line-height: 40px;
+%wds-leading-loose {
+	line-height: 1.75;
 }
