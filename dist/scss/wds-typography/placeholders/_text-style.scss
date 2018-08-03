@@ -27,9 +27,9 @@
 }
 
 %wds-midlight-aqua {
-	@include wds-midlight($wds-fandom-color-aqua);
+	@include wds-midlight(rgba($wds-fandom-color-aqua, .25));
 }
 
 %wds-midlight-navy {
-	@include wds-midlight($wds-fandom-color-navy);
+	@include wds-midlight(rgba($wds-fandom-color-navy, .1));
 }
