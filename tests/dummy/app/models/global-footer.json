@@ -196,6 +196,13 @@
 			}
 		},
 		"fandom_overview": {
+			"header": {
+				"type": "line-text",
+				"title": {
+					"type": "translatable-text",
+					"key": "global-footer-fandom-overview-header"
+				}
+			},
 			"links": [
 				{
 					"type": "link-branded",
@@ -534,6 +541,13 @@
 			}
 		},
 		"fandom_overview": {
+			"header": {
+				"type": "line-text",
+				"title": {
+					"type": "translatable-text",
+					"key": "global-footer-fandom-overview-header"
+				}
+			},
 			"links": [
 				{
 					"type": "link-branded",
