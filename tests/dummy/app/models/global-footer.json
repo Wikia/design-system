@@ -236,7 +236,7 @@
 					"brand": "explore-wikis",
 					"title": {
 						"type": "translatable-text",
-						"key": "Explore Wikis"
+						"key": "global-footer-fandom-overview-link-explore-wikis"
 					},
 					"href": "http:\/\/fandom.wikia.com\/explore"
 				}
@@ -554,7 +554,7 @@
 					"brand": "explore-wikis",
 					"title": {
 						"type": "translatable-text",
-						"key": "Explore Wikis"
+						"key": "global-footer-fandom-overview-link-explore-wikis"
 					},
 					"href": "http:\/\/fandom.wikia.com\/explore"
 				}
