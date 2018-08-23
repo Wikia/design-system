@@ -57,7 +57,8 @@ export default Service.extend({
 			'title',
 			'url',
 			'presented_by',
-			'author'
+			'author',
+			'site_name'
 		]);
 	},
 
