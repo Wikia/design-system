@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
-import { inject as service } from '@ember/service';
 import { run } from '@ember/runloop';
+import { inject as service } from '@ember/service';
 
 const recircItemsCount = 50,
 	thumbDimension = 60,
@@ -55,22 +55,23 @@ export default Component.extend({
 
 		wdsLiftigniter
 			.getData(config)
-			.then((data) => {
-				this.set('model', data.items.filter((item) => {
-					return item.hasOwnProperty('thumbnail') && item.thumbnail;
-				})
-					.slice(0, recircItemsCount))
-					.map((item) => {
-						if (window.Vignette) {
-							item.thumbnail = window.Vignette.getThumbURL(item.thumbnail, {
-								mode: window.Vignette.mode.zoomCrop,
-								height: thumbDimension,
-								width: thumbDimension
-							});
-						}
+			.then(({ items }) => {
+				this.set('model',
+					items
+						.filter(item => item.hasOwnProperty('thumbnail') && item.thumbnail)
+						.slice(0, recircItemsCount)
+						.map(item => {
+							if (window.Vignette) {
+								item.thumbnail = window.Vignette.getThumbURL(item.thumbnail, {
+									mode: window.Vignette.mode.zoomCrop,
+									height: thumbDimension,
+									width: thumbDimension
+								});
+							}
 
-						return item;
-					});
+							return item;
+						})
+				);
 
 				run.scheduleOnce('afterRender', () => {
 					if (!this.isDestroyed) {
