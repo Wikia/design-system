@@ -25,6 +25,8 @@ export default Component.extend({
 
 	searchIsActive: false,
 	communityBarIsActive: false,
+	previousViewportOffsetTop: null,
+	scrollPositionWhenStickedToTop: 0,
 
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
@@ -58,7 +60,6 @@ export default Component.extend({
 	didInsertElement() {
 		this._super(...arguments);
 
-		// TODO add throttling
 		window.addEventListener('scroll', this.scrollHandler);
 	},
 
@@ -72,16 +73,23 @@ export default Component.extend({
 
 	scrollHandler() {
 		const globalNavigationHeight = 55;
+		const viewportOffsetTop = this.element.getBoundingClientRect().top;
 
-		if (window.pageYOffset > globalNavigationHeight && this.communityBarIsActive === false) {
+		if (this.previousViewportOffsetTop !== 0 && viewportOffsetTop === 0) {
+			this.scrollPositionWhenStickedToTop = window.pageYOffset;
+		}
+
+		if (window.pageYOffset > this.scrollPositionWhenStickedToTop + globalNavigationHeight && this.communityBarIsActive === false) {
 			run(() => {
 				this.set('communityBarIsActive', true);
 			});
-		} else if (window.pageYOffset <= globalNavigationHeight && this.communityBarIsActive === true) {
+		} else if (window.pageYOffset <= this.scrollPositionWhenStickedToTop + globalNavigationHeight && this.communityBarIsActive === true) {
 			run(() => {
 				this.set('communityBarIsActive', false);
 			});
 		}
+
+		this.previousViewportOffsetTop = viewportOffsetTop;
 	},
 
 	openModal(modalType) {
