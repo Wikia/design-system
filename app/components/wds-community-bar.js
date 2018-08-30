@@ -40,7 +40,7 @@ export default Component.extend({
 		if (!href || href === '#') {
 			event.preventDefault();
 		} else {
-			this.onLinkClicked(href);
+			this.onLinkClicked(href, event);
 		}
 	}
 });
