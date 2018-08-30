@@ -23,8 +23,10 @@ export default Component.extend({
 		'communityBarIsActive:wds-is-community-bar-in'
 	],
 
+	communityBarElement: null,
 	searchIsActive: false,
 	communityBarIsActive: false,
+	previousViewportOffsetTop: null,
 
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
@@ -58,7 +60,7 @@ export default Component.extend({
 	didInsertElement() {
 		this._super(...arguments);
 
-		// TODO add throttling
+		this.set('communityBarElement', document.querySelector('.wds-community-bar'));
 		window.addEventListener('scroll', this.scrollHandler);
 	},
 
@@ -71,13 +73,14 @@ export default Component.extend({
 	},
 
 	scrollHandler() {
-		const globalNavigationHeight = 55;
+		const communityBarOffsetY = this.communityBarElement ? this.communityBarElement.getBoundingClientRect().top : 0;
+		const globalNavOffsetY = this.element.getBoundingClientRect().top;
 
-		if (window.pageYOffset > globalNavigationHeight && this.communityBarIsActive === false) {
+		if (communityBarOffsetY <= globalNavOffsetY && this.communityBarIsActive === false) {
 			run(() => {
 				this.set('communityBarIsActive', true);
 			});
-		} else if (window.pageYOffset <= globalNavigationHeight && this.communityBarIsActive === true) {
+		} else if (communityBarOffsetY > globalNavOffsetY && this.communityBarIsActive === true) {
 			run(() => {
 				this.set('communityBarIsActive', false);
 			});
