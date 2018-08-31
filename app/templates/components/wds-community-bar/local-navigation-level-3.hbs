@@ -12,7 +12,7 @@
 {{#wds-list linked=true}}
 	{{#each secondLevelItem.items as |thirdLevelItem|}}
 		<li>
-			<a href="{{thirdLevelItem.href}}" data-tracking-label="{{unless (equal thirdLevelItem.href '#') thirdLevelItem.tracking_label}}" onclick={{action onLinkClicked}}>
+			<a href="{{thirdLevelItem.href}}" data-tracking-label="{{unless (equal thirdLevelItem.href '#') thirdLevelItem.tracking_label}}" onclick={{action onThirdLevelClicked}}>
 				{{wds-label label=thirdLevelItem.title}}
 			</a>
 		</li>

@@ -58,6 +58,7 @@ export default Component.extend({
 			event.preventDefault();
 			this.set('firstLevelIndexSelected', index);
 		} else {
+			this.toggleNavigation(false);
 			this.onLinkClicked(event);
 		}
 	},
@@ -67,8 +68,14 @@ export default Component.extend({
 			event.preventDefault();
 			this.set('secondLevelIndexSelected', index);
 		} else {
+			this.toggleNavigation(false);
 			this.onLinkClicked(event);
 		}
+	},
+
+	onThirdLevelSelected(event) {
+		this.toggleNavigation(false);
+		this.onLinkClicked(event);
 	},
 
 	resetSelected(propName) {
