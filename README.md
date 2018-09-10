@@ -13,6 +13,8 @@ See all [contributors on GitHub](https://github.com/Wikia/design-system/graphs/c
 ## Copyright
 Code and documentation copyright 2018 Wikia, Inc.
 
+**NOTE**: code and images contained within this repo are **NOT** licensed for general use.  Please contact us at http://fandom.wikia.com/about#contact if you're interested in licensing any part of this repo.
+
 ## Installation
 
 * `git clone <repository-url>` this repository
