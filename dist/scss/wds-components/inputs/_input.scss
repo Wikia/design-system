@@ -46,7 +46,6 @@
 		font-size: $wds-typescale-size-minus-2;
 		line-height: .75rem;
 		margin-top: 6px;
-		position: absolute;
 	}
 
 	&.is-empty > &__field {
@@ -93,5 +92,9 @@
 	&.is-readonly,
 	&.is-disabled {
 		cursor: not-allowed;
+	}
+
+	&.has-hint {
+		margin-bottom: 0;
 	}
 }
