@@ -5,8 +5,8 @@
 	{{/dropdown.toggle}}
 	{{#dropdown.content scrollable=false}}
 		{{#wds-list linked=true}}
-			{{#each model.items as |thirdLevelItem|}}
-				<li><a href="{{thirdLevelItem.href}}" data-tracking-label="{{thirdLevelItem.tracking_label}}">{{thirdLevelItem.title.value}}</a></li>
+			{{#each @model.items as |thirdLevelItem|}}
+				<li><a href={{thirdLevelItem.href}} data-tracking-label={{thirdLevelItem.tracking_label}}>{{thirdLevelItem.title.value}}</a></li>
 			{{/each}}
 		{{/wds-list}}
 	{{/dropdown.content}}

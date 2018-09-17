@@ -1,7 +1,7 @@
 <div class={{if @isLevel2 "wds-dropdown-level-2__toggle:wds-dropdown__toggle"}} title={{@title}}>
   {{#if hasBlock}}
-  {{yield (component 'wds-dropdown-icon' isLevel2=isLevel2)}}
+  {{yield (component 'wds-dropdown-icon' isLevel2=@isLevel2)}}
   {{else}}
-  <span>{{text}}</span>{{wds-dropdown-icon isLevel2=isLevel2}}
+  <span>{{@text}}</span>{{wds-dropdown-icon isLevel2=@isLevel2}}
   {{/if}}
 </div>
