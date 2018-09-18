@@ -60,12 +60,13 @@ export default Component.extend(
 
 		// Make sure to escape user input
 		textWithHtml: computed('model', function () {
+			const { type } = this.model;
 
-			if (this.isDiscussionReply(this.model.type)) {
+			if (this.isDiscussionReply(type)) {
 				return this.getReplyMessageBody(this.model);
-			} else if (this.isDiscussionPostUpvote(this.model.type)) {
+			} else if (this.isDiscussionPostUpvote(type)) {
 				return this.getPostUpvoteMessageBody(this.model);
-			} else if (this.isDiscussionReplyUpvote(this.model.type)) {
+			} else if (this.isDiscussionReplyUpvote(type)) {
 				return this.getReplyUpvoteMessageBody(this.model);
 			} else {
 				return null;
@@ -95,24 +96,25 @@ export default Component.extend(
 		}),
 
 		didInsertElement() {
+			const { type, isUnread } = this.model;
 
 			this.track({
 				action: 'impression',
 				category: 'on-site-notifications',
-				label: this.model.get('type'),
-				value: this.model.get('isUnread') ? 1 : 0
+				label: type,
+				value: isUnread ? 1 : 0
 			});
 		},
 
 		actions: {
 			onNotificationClicked() {
-				const isUnread = this.model.get('isUnread');
+				const { type, isUnread } = this.model;
 				const wdsOnSiteNotifications = this.wdsOnSiteNotifications;
 
 				this.track({
 					action: 'click',
 					category: 'on-site-notifications',
-					label: this.model.get('type'),
+					label: type,
 					value: isUnread ? 1 : 0
 				});
 
