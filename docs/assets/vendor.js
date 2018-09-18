@@ -1,4 +1,4 @@
-window.EmberENV={FEATURES:{},EXTEND_PROTOTYPES:{Date:!1}}
+window.EmberENV={FEATURES:{},EXTEND_PROTOTYPES:{Date:!1},_TEMPLATE_ONLY_GLIMMER_COMPONENTS:!0}
 var loader,define,requireModule,require,requirejs,runningTests=!1
 if(function(e){"use strict"
 function t(){var e=Object.create(null)
