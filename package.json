@@ -28,6 +28,7 @@
     "test-existing": "ember test --path=\"test-dist\""
   },
   "devDependencies": {
+    "@ember/optional-features": "0.7.0",
     "@wikia/ember-fandom": "Wikia/ember-fandom#1cc39e875e9a6c637eacd5f9434b7ff0b1359b38",
     "broccoli-asset-rev": "2.7.0",
     "broccoli-funnel": "2.0.1",
