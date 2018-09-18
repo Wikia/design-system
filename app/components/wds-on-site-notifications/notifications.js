@@ -16,7 +16,7 @@ export default Component.extend({
 				category: 'on-site-notifications',
 				label: 'mark-all-as-read'
 			});
-			this.get('wdsOnSiteNotifications').markAllAsRead();
+			this.wdsOnSiteNotifications.markAllAsRead();
 		}
 	}
 });

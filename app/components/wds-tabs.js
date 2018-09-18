@@ -12,7 +12,7 @@ export default Component.extend({
 		onChange(tab) {
 			this.set('selected', tab.get('value'));
 
-			this.get('onChange')(...arguments);
+			this.onChange(...arguments);
 		}
 	}
 });

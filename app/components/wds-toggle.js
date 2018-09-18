@@ -9,12 +9,12 @@ export default Component.extend({
 	onChange() {},
 
 	didInsertElement() {
-		this.set('input', document.getElementById(this.get('id')));
+		this.set('input', document.getElementById(this.id));
 	},
 
 	actions: {
 		onChange() {
-			this.get('onChange')(this.input.checked)
+			this.onChange(this.input.checked)
 		}
 	}
 });

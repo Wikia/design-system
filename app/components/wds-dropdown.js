@@ -47,7 +47,7 @@ export default Component.extend({
 	actions: {
 		click(e) {
 			if (isTouchDevice) {
-				this.set('isClicked', !this.get('isClicked'));
+				this.set('isClicked', !this.isClicked);
 				e.preventDefault();
 			}
 		}

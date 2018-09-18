@@ -38,7 +38,7 @@ export default Component.extend({
 
 	onScroll(event) {
 		if (this.hasAlmostScrolledToTheBottom(event.target)) {
-			this.get('wdsOnSiteNotifications').loadNextPage();
+			this.wdsOnSiteNotifications.loadNextPage();
 		}
 	},
 
@@ -55,6 +55,6 @@ export default Component.extend({
 	 * @private
 	 */
 	hasAlmostScrolledToTheBottom(element) {
-		return element.scrollHeight - this.get('almostBottom') <= element.scrollTop + element.offsetHeight;
+		return element.scrollHeight - this.almostBottom <= element.scrollTop + element.offsetHeight;
 	},
 });

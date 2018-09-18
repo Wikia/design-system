@@ -20,7 +20,7 @@ export default Component.extend({
 	init() {
 		this._super(...arguments);
 
-		if (this.get('href')) {
+		if (this.href) {
 			this.set('tagName', 'a');
 		}
 	}

@@ -50,11 +50,9 @@ export default Component.extend(
 		}),
 
 		text: computed('model', function () {
-			const model = this.get('model');
-			const type = model.type;
 
-			if (this.isAnnouncement(type)) {
-				return model.snippet;
+			if (this.isAnnouncement(this.model.type)) {
+				return this.model.snippet;
 			} else {
 				return null;
 			}
@@ -62,15 +60,13 @@ export default Component.extend(
 
 		// Make sure to escape user input
 		textWithHtml: computed('model', function () {
-			const model = this.get('model');
-			const type = model.type;
 
-			if (this.isDiscussionReply(type)) {
-				return this.getReplyMessageBody(model);
-			} else if (this.isDiscussionPostUpvote(type)) {
-				return this.getPostUpvoteMessageBody(model);
-			} else if (this.isDiscussionReplyUpvote(type)) {
-				return this.getReplyUpvoteMessageBody(model);
+			if (this.isDiscussionReply(this.model.type)) {
+				return this.getReplyMessageBody(this.model);
+			} else if (this.isDiscussionPostUpvote(this.model.type)) {
+				return this.getPostUpvoteMessageBody(this.model);
+			} else if (this.isDiscussionReplyUpvote(this.model.type)) {
+				return this.getReplyUpvoteMessageBody(this.model);
 			} else {
 				return null;
 			}
@@ -99,53 +95,49 @@ export default Component.extend(
 		}),
 
 		didInsertElement() {
-			const model = this.get('model');
 
 			this.track({
 				action: 'impression',
 				category: 'on-site-notifications',
-				label: model.get('type'),
-				value: model.get('isUnread') ? 1 : 0
+				label: this.model.get('type'),
+				value: this.model.get('isUnread') ? 1 : 0
 			});
 		},
 
 		actions: {
 			onNotificationClicked() {
-				const model = this.get('model');
-				const isUnread = model.get('isUnread');
-				const wdsOnSiteNotifications = this.get('wdsOnSiteNotifications');
+				const isUnread = this.model.get('isUnread');
+				const wdsOnSiteNotifications = this.wdsOnSiteNotifications;
 
 				this.track({
 					action: 'click',
 					category: 'on-site-notifications',
-					label: model.get('type'),
+					label: this.model.get('type'),
 					value: isUnread ? 1 : 0
 				});
 
 				if (isUnread) {
 					wdsOnSiteNotifications
-						.markAsRead(model, true)
+						.markAsRead(this.model, true)
 						.then(() => {
-							wdsOnSiteNotifications.goToDestination(model);
+							wdsOnSiteNotifications.goToDestination(this.model);
 						});
 				} else {
-					wdsOnSiteNotifications.goToDestination(model);
+					wdsOnSiteNotifications.goToDestination(this.model);
 				}
 			},
 
 			markAsRead() {
-				const model = this.get('model');
-
-				if (!model.get('isUnread')) {
+				if (!this.model.get('isUnread')) {
 					return;
 				}
 
 				this.track({
 					action: 'click',
 					category: 'on-site-notifications',
-					label: `mark-as-read-${model.type}`
+					label: `mark-as-read-${this.model.type}`
 				});
-				this.get('wdsOnSiteNotifications').markAsRead(model);
+				this.wdsOnSiteNotifications.markAsRead(this.model);
 			}
 		},
 
@@ -173,12 +165,12 @@ export default Component.extend(
 			if (hasTitle) {
 				if (hasMultipleUsers) {
 					return this.getTranslatedMessage('notifications-post-upvote-multiple-users-with-title', {
-						postTitle: this.get('postTitleMarkup'),
+						postTitle: this.postTitleMarkup,
 						number: totalUniqueActors
 					});
 				} else {
 					return this.getTranslatedMessage('notifications-post-upvote-single-user-with-title', {
-						postTitle: this.get('postTitleMarkup'),
+						postTitle: this.postTitleMarkup,
 					});
 				}
 			} else if (hasMultipleUsers) {
@@ -200,7 +192,7 @@ export default Component.extend(
 			if (hasTitle) {
 				if (hasThreeOrMoreUsers) {
 					return this.getTranslatedMessage('notifications-replied-by-multiple-users-with-title', {
-						postTitle: this.get('postTitleMarkup'),
+						postTitle: this.postTitleMarkup,
 						mostRecentUser: firstReplierName,
 						number: totalUniqueActors - 1
 					});
@@ -208,17 +200,17 @@ export default Component.extend(
 					return this.getTranslatedMessage('notifications-replied-by-two-users-with-title', {
 						firstUser: firstReplierName,
 						secondUser: model.get('latestActors.1.name'),
-						postTitle: this.get('postTitleMarkup'),
+						postTitle: this.postTitleMarkup,
 					});
 				} else {
 					return this.getTranslatedMessage('notifications-replied-by-with-title', {
 						user: firstReplierName,
-						postTitle: this.get('postTitleMarkup'),
+						postTitle: this.postTitleMarkup,
 					});
 				}
 			} else if (hasThreeOrMoreUsers) {
 				return this.getTranslatedMessage('notifications-replied-by-multiple-users-no-title', {
-					username: this.get('usernameMarkup'),
+					username: this.usernameMarkup,
 					mostRecentUser: firstReplierName,
 					number: totalUniqueActors - 1
 				});
@@ -242,12 +234,12 @@ export default Component.extend(
 			if (hasTitle) {
 				if (hasMultipleUsers) {
 					return this.getTranslatedMessage('notifications-reply-upvote-multiple-users-with-title', {
-						postTitle: this.get('postTitleMarkup'),
+						postTitle: this.postTitleMarkup,
 						number: totalUniqueActors - 1
 					});
 				} else {
 					return this.getTranslatedMessage('notifications-reply-upvote-single-user-with-title', {
-						postTitle: this.get('postTitleMarkup'),
+						postTitle: this.postTitleMarkup,
 					});
 				}
 			} else if (hasMultipleUsers) {
@@ -264,7 +256,7 @@ export default Component.extend(
 				ns: 'design-system',
 			}, context);
 
-			return this.get('i18n').t(key, fullContext);
+			return this.i18n.t(key, fullContext);
 		},
 	}
 );

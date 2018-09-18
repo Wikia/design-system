@@ -26,31 +26,31 @@ export default Service.extend({
 	},
 
 	loadUnreadNotificationCount() {
-		return this.get('model')
+		return this.model
 			.loadUnreadNotificationCount()
 			.catch((err) => {
-				this.get('logger').warn(`Couldn't load notification count`, err);
+				this.logger.warn(`Couldn't load notification count`, err);
 			});
 	},
 
 	loadFirstPage() {
 		if (
-			this.get('isLoading') === true ||
-			this.get('nextPage') !== null ||
-			this.get('firstPageLoaded') === true
+			this.isLoading === true ||
+			this.nextPage !== null ||
+			this.firstPageLoaded === true
 		) {
 			return;
 		}
 
 		this.set('firstPageLoaded', true);
 		this.set('isLoading', true);
-		this.get('model')
+		this.model
 			.loadFirstPageReturningNextPageLink()
 			.then((nextPage) => {
 				this.set('nextPage', nextPage);
 			})
 			.catch((err) => {
-				this.get('logger').warn(`Couldn't load first page`, err);
+				this.logger.warn(`Couldn't load first page`, err);
 			})
 			.then(() => {
 				this.set('isLoading', false);
@@ -58,18 +58,18 @@ export default Service.extend({
 	},
 
 	loadNextPage() {
-		if (this.get('isLoading') === true || this.get('nextPage') === null) {
+		if (this.isLoading === true || this.nextPage === null) {
 			return;
 		}
 		this.set('isLoading', true);
 
-		this.get('model')
-			.loadPageReturningNextPageLink(this.get('nextPage'))
+		this.model
+			.loadPageReturningNextPageLink(this.nextPage)
 			.then((nextPage) => {
 				this.set('nextPage', nextPage);
 			})
 			.catch((err) => {
-				this.get('logger').warn(`Couldn't load more notifications`, err);
+				this.logger.warn(`Couldn't load more notifications`, err);
 			})
 			.then(() => {
 				this.set('isLoading', false);
@@ -77,11 +77,11 @@ export default Service.extend({
 	},
 
 	markAllAsRead() {
-		this.get('model').markAllAsRead();
+		this.model.markAllAsRead();
 	},
 
 	markAsRead(notification, willUnloadPage = false) {
-		return this.get('model').markAsRead(notification, willUnloadPage);
+		return this.model.markAsRead(notification, willUnloadPage);
 	},
 
 	getUnreadCount() {

@@ -12,7 +12,7 @@ export default Component.extend({
 	signinUrl: computed('model.signin', 'redirectUrl', function() {
 		const params = {};
 
-		params[this.get('model.signin.param-name')] = this.get('redirectUrl');
+		params[this.get('model.signin.param-name')] = this.redirectUrl;
 
 		return addQueryParams(this.get('model.signin.href'), params);
 	}),
@@ -20,7 +20,7 @@ export default Component.extend({
 	registerUrl: computed('model.register', 'redirectUrl', function() {
 		const params = {};
 
-		params[this.get('model.register.param-name')] = this.get('redirectUrl');
+		params[this.get('model.register.param-name')] = this.redirectUrl;
 
 		return addQueryParams(this.get('model.register.href'), params);
 	}),

@@ -1,5 +1,10 @@
 import Service from '@ember/service';
-import { click, fillIn, render, triggerKeyEvent } from '@ember/test-helpers';
+import {
+  click,
+  fillIn,
+  render,
+  triggerKeyEvent
+} from '@ember/test-helpers';
 import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { module, test } from 'qunit';

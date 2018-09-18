@@ -10,14 +10,12 @@ export default Component.extend({
 	classNameBindings: ['isSelected:wds-is-current', 'disabled:wds-is-disabled'],
 
 	isSelected: computed('selected', 'value', function () {
-		const value = this.get('value');
-
-		return value !== undefined && this.get('selected') === value;
+		return this.value !== undefined && this.selected === this.value;
 	}),
 
 	onSelect() {},
 
 	click() {
-		this.get('onSelect')(this);
+		this.onSelect(this);
 	}
 });

@@ -6,7 +6,7 @@ export default Component.extend({
 	classNameBindings: ['overlay:wds-spinner__overlay'],
 
 	spinnerClasses: computed('isBlock', function () {
-		return `wds-spinner ${this.get('isBlock') ? 'wds-spinner__block' : ''}`;
+		return `wds-spinner ${this.isBlock ? 'wds-spinner__block' : ''}`;
 	}),
 
 	isVisible: bool('active'),
@@ -18,14 +18,14 @@ export default Component.extend({
 	strokeWidth: 6,
 
 	fullRadius: computed('radius', function () {
-		return this.get('radius') + (this.get('strokeWidth') / 2);
+		return this.radius + (this.strokeWidth / 2);
 	}),
 
 	fullDiameter: computed('radius', function () {
-		return this.get('radius') * 2 + this.get('strokeWidth');
+		return this.radius * 2 + this.strokeWidth;
 	}),
 
 	strokeLength: computed('radius', function () {
-		return 2 * Math.PI * this.get('radius');
+		return 2 * Math.PI * this.radius;
 	})
 });
