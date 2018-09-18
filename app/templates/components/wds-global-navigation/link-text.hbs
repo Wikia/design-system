@@ -1,1 +1,3 @@
-{{i18n model.title.key ns='design-system'}}
+<a href={{@model.href}} data-tracking-label={{@model.tracking-label}} class={{if @standaloneLink 'wds-global-navigation__link'}}>
+  {{i18n @model.title.key ns='design-system'}}
+</a>

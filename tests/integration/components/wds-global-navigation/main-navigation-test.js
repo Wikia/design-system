@@ -106,21 +106,8 @@ module('Integration | Component | wds-global-navigation/main-navigation', functi
 	test('it renders', async function (assert) {
 		await render(hbs`{{wds-global-navigation/main-navigation model=model.main-navigation}}`);
 
-		assert.equal(this.element.querySelectorAll('.wds-global-navigation__links').length, 1,
-			'should render component');
-	});
-
-	test('it has 5 links', async function (assert) {
-		await render(hbs`{{wds-global-navigation/main-navigation model=model.main-navigation}}`);
-
-		assert.equal(this.element.querySelectorAll('.wds-global-navigation__link').length, 5,
-			'should render 5 links');
-	});
-
-	test('it should render button in dropdown', async function (assert) {
-		await render(hbs`{{wds-global-navigation/main-navigation model=model.main-navigation}}`);
-
-		assert.equal(this.element.querySelectorAll('.wds-global-navigation__link-button').length, 1,
-			'should render a button');
+		assert.dom('.wds-global-navigation__links').exists('should render component');
+		assert.dom('.wds-global-navigation__link').exists({ count: 5 }, 'should render 5 links');
+		assert.dom('.wds-global-navigation__link-button').exists('should render a button');
 	});
 });
