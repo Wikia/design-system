@@ -8,7 +8,7 @@ export default Component.extend({
 	defaultHref: '#',
 
 	stickedClassName: computed('model', 'currentIndex', function () {
-		return (this.get('model.items.length') < this.get('currentIndex') + 1) ? 'wds-is-sticked-to-parent' : '';
+		return (this.get('model.items.length') < this.currentIndex + 1) ? 'wds-is-sticked-to-parent' : '';
 	}),
 
 	href: or('model.href', 'defaultHref')

@@ -121,7 +121,7 @@ export default Component.extend({
 		 * we just ignore this request because the search fn already put the cached
 		 * value into the window.
 		 */
-		if (!query || this.hasCachedResult(query) || this.requestInProgress(query) || this.get('isDestroyed')) {
+		if (!query || this.hasCachedResult(query) || this.requestInProgress(query) || this.isDestroyed) {
 			return;
 		}
 
@@ -130,7 +130,7 @@ export default Component.extend({
 		fetch(uri)
 			.then((response) => {
 				if (response.ok) {
-					if (this.get('isDestroyed')) {
+					if (this.isDestroyed) {
 						return;
 					}
 
@@ -149,7 +149,7 @@ export default Component.extend({
 						 * Also, we don't want to show the suggestion results after a real search
 						 * will be finished, what will happen if search request is still in progress.
 						 */
-						if (!this.get('searchRequestInProgress') && query === this.get('state.query')) {
+						if (!this.searchRequestInProgress && query === this.get('state.query')) {
 							this.setSearchSuggestionItems(suggestions);
 						}
 
@@ -157,19 +157,19 @@ export default Component.extend({
 					});
 				} else if (response.status === 404) {
 					// When we get a 404, it means there were no results
-					if (query === this.get('query')) {
+					if (query === this.query) {
 						this.setSearchSuggestionItems();
 					}
 
 					this.cacheResult(query);
 				} else {
-					this.get('logger').error('Search suggestions error', response);
+					this.logger.error('Search suggestions error', response);
 				}
 			})
-			.catch((reason) => this.get('logger').error('Search suggestions error', reason))
+			.catch((reason) => this.logger.error('Search suggestions error', reason))
 			.finally(() => {
 				// We have a response, so we're no longer loading the results
-				if (query === this.get('query') && !this.get('isDestroyed')) {
+				if (query === this.query && !this.isDestroyed) {
 					this.set('isLoadingResultsSuggestions', false);
 				}
 
@@ -181,7 +181,7 @@ export default Component.extend({
 	 * Wrapper for search suggestions performing, that also checks the cache
 	 */
 	getSuggestions(query) {
-		if (this.get('isDestroyed')) {
+		if (this.isDestroyed) {
 			return;
 		}
 
@@ -191,13 +191,13 @@ export default Component.extend({
 		});
 
 		// If the query string is empty or shorter than the minimal length, return to leave the view blank
-		if (!query || query.length < this.get('minimalQueryLength')) {
+		if (!query || query.length < this.minimalQueryLength) {
 			this.set('isLoadingResultsSuggestions', false);
 		} else if (this.hasCachedResult(query)) {
 			this.setSearchSuggestionItems(this.getCachedResult(query));
 		} else {
 			this.set('isLoadingResultsSuggestions', true);
-			run.debounce(this, this.runSuggestionsRequest, this.get('debounceDuration'));
+			run.debounce(this, this.runSuggestionsRequest, this.debounceDuration);
 		}
 	},
 
@@ -222,7 +222,7 @@ export default Component.extend({
 	 * @returns {void}
 	 */
 	setSearchSuggestionItems(suggestions = []) {
-		if (this.get('isDestroyed')) {
+		if (this.isDestroyed) {
 			return;
 		}
 
@@ -263,7 +263,7 @@ export default Component.extend({
 	 * @returns {void}
 	 */
 	startedRequest(query) {
-		this.get('requestsInProgress')[query] = true;
+		this.requestsInProgress[query] = true;
 	},
 
 	/**
@@ -273,7 +273,7 @@ export default Component.extend({
 	 * @returns {boolean}
 	 */
 	requestInProgress(query) {
-		return this.get('requestsInProgress').hasOwnProperty(query);
+		return this.requestsInProgress.hasOwnProperty(query);
 	},
 
 	/**
@@ -283,7 +283,7 @@ export default Component.extend({
 	 * @returns {void}
 	 */
 	endedRequest(query) {
-		delete this.get('requestsInProgress')[query];
+		delete this.requestsInProgress[query];
 	},
 
 	/**
@@ -309,7 +309,7 @@ export default Component.extend({
 		// query string to evict
 		const toEvict = this.cachedResultsQueue.shift();
 
-		delete this.get('cachedResults')[toEvict];
+		delete this.cachedResults[toEvict];
 	},
 
 	/**
@@ -324,8 +324,8 @@ export default Component.extend({
 			this.evictCachedResult();
 		}
 
-		this.get('cachedResultsQueue').push(query);
-		this.get('cachedResults')[query] = suggestions || [];
+		this.cachedResultsQueue.push(query);
+		this.cachedResults[query] = suggestions || [];
 	},
 
 	/**
@@ -335,7 +335,7 @@ export default Component.extend({
 	 * @returns {boolean}
 	 */
 	hasCachedResult(query) {
-		return this.get('cachedResults').hasOwnProperty(query);
+		return this.cachedResults.hasOwnProperty(query);
 	},
 
 	/**
@@ -345,7 +345,7 @@ export default Component.extend({
 	 * @returns {*}
 	 */
 	getCachedResult(query) {
-		return this.get('cachedResults')[query];
+		return this.cachedResults[query];
 	},
 
 	closeSearch() {
@@ -366,7 +366,7 @@ export default Component.extend({
 
 		run(() => {
 			scheduleOnce('afterRender', this, () => {
-				if (!this.get('isDestroyed') ) {
+				if (!this.isDestroyed ) {
 					this.set('selectedSuggestionIndex', -1);
 				}
 			});
@@ -423,13 +423,13 @@ export default Component.extend({
 
 			// down arrow
 			if (keyCode === 40) {
-				if (this.get('selectedSuggestionIndex') < this.get('suggestions.length') - 1) {
+				if (this.selectedSuggestionIndex < this.get('suggestions.length') - 1) {
 					this.incrementProperty('selectedSuggestionIndex');
 					event.preventDefault();
 				}
 			// up arrow
 			} else if (keyCode === 38) {
-				if (this.get('suggestions.length') && this.get('selectedSuggestionIndex') > -1) {
+				if (this.get('suggestions.length') && this.selectedSuggestionIndex > -1) {
 					this.decrementProperty('selectedSuggestionIndex');
 					event.preventDefault();
 				}
@@ -438,11 +438,9 @@ export default Component.extend({
 				this.closeSearch();
 			// ENTER key
 			} else if (keyCode === 13) {
-				const index = this.get('selectedSuggestionIndex');
-
-				if (index !== -1) {
+				if (this.selectedSuggestionIndex !== -1) {
 					this.inputField.blur();
-					this.onSearchSuggestionChosen(this.get('suggestions')[index]);
+					this.onSearchSuggestionChosen(this.suggestions[this.selectedSuggestionIndex]);
 				}
 
 				this.setSearchSuggestionItems();

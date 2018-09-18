@@ -46,10 +46,10 @@ export default EmberObject.extend({
 
 	createActors(actors) {
 		return actors.map((actor) => {
-			actor.profileUrl = this.get('wikiUrls').build({
+			actor.profileUrl = this.wikiUrls.build({
 				host: this.get('wikiVariables.host'),
 				namespace: 'User',
-				title: this.get('name')
+				title: this.name
 			});
 
 			return actor;
@@ -79,7 +79,7 @@ export default EmberObject.extend({
 	},
 
 	markAsReadUsingSendBeacon() {
-		const body = JSON.stringify([this.get('uri')]);
+		const body = JSON.stringify([this.uri]);
 		const markAsReadUrl = this.fetch.getServiceUrl(
 			'on-site-notifications',
 			'/notifications/mark-as-read/by-uri'
@@ -100,13 +100,13 @@ export default EmberObject.extend({
 			}
 		} catch (exception) {
 			// See http://crbug.com/490015#c99
-			this.get('logger').warn('Error when sending beacon', exception);
+			this.logger.warn('Error when sending beacon', exception);
 			return this.markAsReadUsingFetch(true);
 		}
 	},
 
 	markAsReadUsingFetch(willUnloadPage) {
-		const body = JSON.stringify([this.get('uri')]);
+		const body = JSON.stringify([this.uri]);
 		const options = {
 			body,
 			headers: {

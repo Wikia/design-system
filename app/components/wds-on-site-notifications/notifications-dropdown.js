@@ -8,7 +8,7 @@ export default Component.extend({
 	didInsertElement() {
 		this._super(...arguments);
 
-		this.get('wdsOnSiteNotifications').loadUnreadNotificationCount();
+		this.wdsOnSiteNotifications.loadUnreadNotificationCount();
 	},
 
 	actions: {
@@ -17,10 +17,10 @@ export default Component.extend({
 				label: 'open-menu',
 				category: 'on-site-notifications',
 				action: 'click',
-				value: this.get('wdsOnSiteNotifications').getUnreadCount()
+				value: this.wdsOnSiteNotifications.getUnreadCount()
 			});
 
-			this.get('wdsOnSiteNotifications').loadFirstPage();
+			this.wdsOnSiteNotifications.loadFirstPage();
 		}
 	}
 });

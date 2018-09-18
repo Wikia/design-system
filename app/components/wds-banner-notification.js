@@ -15,10 +15,10 @@ export default Component.extend({
 	onClose() {},
 
 	icon: computed('type', function () {
-		return iconMap[this.get('type')];
+		return iconMap[this.type];
 	}),
 
 	typeClassName: computed('type', function () {
-		return 'wds-' + this.get('type');
+		return 'wds-' + this.type;
 	})
 });

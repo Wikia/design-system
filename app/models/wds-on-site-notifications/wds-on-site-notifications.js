@@ -81,7 +81,7 @@ export default EmberObject.extend({
 			return notification;
 		});
 
-		this.get('data').pushObjects(notificationModels);
+		this.data.pushObjects(notificationModels);
 	},
 
 	loadUnreadNotificationCount() {

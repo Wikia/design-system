@@ -27,15 +27,15 @@ export default Component.extend({
 	},
 
 	openCloseObserver: observer('isOpen', function () {
-		if (this.get('isOpen')) {
+		if (this.isOpen) {
 			this.track({
 				label: 'open-menu',
 				category: 'on-site-notifications',
 				action: 'click',
-				value: this.get('wdsOnSiteNotifications').getUnreadCount()
+				value: this.wdsOnSiteNotifications.getUnreadCount()
 			});
 
-			this.get('wdsOnSiteNotifications').loadFirstPage();
+			this.wdsOnSiteNotifications.loadFirstPage();
 		}
 
 	}),
@@ -50,7 +50,7 @@ export default Component.extend({
 
 	onTouchMove() {
 		if (this.hasAlmostScrolledToTheBottom()) {
-			this.get('wdsOnSiteNotifications').loadNextPage();
+			this.wdsOnSiteNotifications.loadNextPage();
 		}
 	},
 
@@ -62,6 +62,6 @@ export default Component.extend({
 		const notificationsList = this.element.querySelector('.wds-notifications__notification-list');
 		const userInfo = this.element.querySelector('.wds-user-modal__info');
 
-		return notificationsList.offsetHeight - this.get('almostBottom') <= this.element.scrollTop + userInfo.offsetHeight;
+		return notificationsList.offsetHeight - this.almostBottom <= this.element.scrollTop + userInfo.offsetHeight;
 	},
 });

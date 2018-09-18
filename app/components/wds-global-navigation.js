@@ -42,7 +42,7 @@ export default Component.extend({
 	signinUrl: computed('model.anon.signin', 'redirectUrl', function() {
 		const params = {};
 
-		params[this.get('model.anon.signin.param-name')] = this.get('redirectUrl');
+		params[this.get('model.anon.signin.param-name')] = this.redirectUrl;
 
 		return addQueryParams(this.get('model.anon.signin.href'), params);
 	}),
@@ -103,7 +103,7 @@ export default Component.extend({
 	},
 
 	closeModal() {
-		if (this.get('currentModal') === 'search') {
+		if (this.currentModal === 'search') {
 			this.set('searchIsActive', false);
 
 			this.track({

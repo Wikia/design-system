@@ -11,14 +11,10 @@ export default Component.extend({
 	name: null,
 
 	badgeAssetName: computed('name', function() {
-		const name = this.get('name');
-
-		return name ? `wds-avatar-badges-${name}` : null;
+		return this.name ? `wds-avatar-badges-${this.name}` : null;
 	}),
 
 	title: computed('name', function() {
-		const name = this.get('name');
-
-		return name ? this.get('i18n').t(`design-system:wds-avatar-badges-${name}-tooltip`) : '';
+		return this.name ? this.i18n.t(`design-system:wds-avatar-badges-${this.name}-tooltip`) : '';
 	}),
 });
