@@ -1,10 +1,10 @@
 {{#wds-dropdown class='wds-global-navigation__user-menu wds-global-navigation__user-logged-in' hasShadow=true as |dropdown|}}
 	{{#dropdown.toggle as |chevron|}}
-		{{wds-avatar src=model.avatar_url alt=model.username}}{{chevron}}
+		{{wds-avatar src=@model.avatar_url alt=@model.username}}{{chevron}}
 	{{/dropdown.toggle}}
 	{{#dropdown.content dropdownRightAligned=true}}
 		{{#wds-list linked=true}}
-			{{#each model.items as |item|}}
+			{{#each @model.items as |item|}}
 				<li>
 					{{!
     					Components that can be rendered here are:

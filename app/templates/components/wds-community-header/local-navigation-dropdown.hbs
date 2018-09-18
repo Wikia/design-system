@@ -1,7 +1,7 @@
 {{#wds-dropdown as |dropdown|}}
 	{{#dropdown.toggle class='wds-tabs__tab-label' as |chevron|}}
-		{{#if model.href}}
-			<a href="{{model.href}}">
+		{{#if @model.href}}
+			<a href={{@model.href}}>
 				{{wds-community-header/nav-item-with-icon item=model}}
 			</a>
 		{{else}}
@@ -11,7 +11,7 @@
 	{{/dropdown.toggle}}
 	{{#dropdown.content scrollable=false}}
 		{{#wds-list linked=true bold=true}}
-			{{#each model.items as |secondLevelItem index|}}
+			{{#each @model.items as |secondLevelItem index|}}
 				{{#if secondLevelItem.items}}
 					{{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem currentIndex=index}}
 				{{else}}
