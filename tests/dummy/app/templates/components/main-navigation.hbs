@@ -1,5 +1,5 @@
 {{#wds-list}}
-	{{#each navigation as |parentRoute|}}
+	{{#each @model as |parentRoute|}}
 		<li>
 			<input type="checkbox" id="{{parentRoute.id}}" class="main-navigation__toggle" checked={{if parentRoute.expanded 'checked'}}>
 			<label for="{{parentRoute.id}}"><strong>{{parentRoute.name}}</strong> {{wds-icon name='menu-control' size='tiny'}}</label>
