@@ -9,7 +9,11 @@
 		</a>
 	</div>
 	{{#if discussionsLink}}
-		<a href="{{discussionsLink.href}}" class="wds-community-bar__discussions" data-tracking-label="{{discussionsLink.tracking_label}}">
+		<a
+			href={{discussionsLink.href}}
+			class="wds-community-bar__discussions"
+			data-tracking-label={{discussionsLink.tracking_label}}
+		>
 			{{svg 'wds-icons-reply-small' class='wds-icon wds-icon-small'}}
 		</a>
 	{{/if}}
