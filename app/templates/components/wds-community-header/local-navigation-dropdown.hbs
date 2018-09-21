@@ -16,7 +16,10 @@
 					{{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem currentIndex=index}}
 				{{else}}
 					<li>
-						<a href="{{secondLevelItem.href}}" data-tracking-label="{{secondLevelItem.tracking_label}}">
+						<a
+							href={{secondLevelItem.href}}
+							data-tracking-label={{secondLevelItem.tracking_label}}
+						>
 							{{wds-label label=secondLevelItem.title}}
 						</a>
 					</li>
