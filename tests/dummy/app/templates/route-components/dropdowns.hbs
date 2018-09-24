@@ -1,9 +1,10 @@
 <h1>Dropdowns</h1>
 <p>
-	Dropdowns allow users to select from a list and should be clearly labeled to communicate the content inside it.
-	Content inside dropdowns should be grouped by relativity and ranked on importance and/or value to a user.
+	Dropdowns allow users to select from a list and should be clearly labeled to communicate the
+	content inside it.
+	Content inside dropdowns should be grouped by relativity and ranked on importance and/or value to
+	a user.
 </p>
-
 <section>
 	<h2 id="dropdowns-composition">Dropdown composition</h2>
 	<p>Dropdown component consists of 3 elements:</p>
@@ -19,7 +20,6 @@
 		</div>
 	{{/component-demo}}
 </section>
-
 <section>
 	<h2 id="dropdowns-interactions">Interactions</h2>
 	<p>
@@ -31,7 +31,6 @@
 		this class from all the other dropdowns.
 	</p>
 </section>
-
 <section>
 	<h2 id="dropdowns-arrow-position">Arrow vertical position</h2>
 	<p>
@@ -49,7 +48,6 @@
 		and add this padding locally.
 	</p>
 </section>
-
 <section>
 	<h2 id="dropdowns-default-variant">Default</h2>
 	<p>Default dropdown, centered.</p>
@@ -72,15 +70,14 @@
 			{{/dropdown.content}}
 		{{/wds-dropdown}}
 	{{/component-demo}}
-
 	There is possibility to render dropdown toggle as other html tag than <code class="format-code">span</code>,
 	see {{#link-to 'route-components.buttons'}}Dropdown buttons{{/link-to}}
 </section>
-
 <section>
 	<h2 id="dropdowns-not-scrollable-variant">Not scrollable variant</h2>
 	<p>
-		There are special cases where we don't want a long dropdown to be scrollable, e.g. Wiki Local Navigation.
+		There are special cases where we don't want a long dropdown to be scrollable, e.g. Wiki Local
+		Navigation.
 		To disable the scroll, add <code class="format-code">.wds-is-not-scrollable</code>
 		to <code class="format-code">.wds-dropdown__content</code> element or (in Ember Component) add
 		<code class="format-code">scrollable=false</code>
@@ -106,13 +103,13 @@
 		{{/wds-dropdown}}
 	{{/component-demo}}
 </section>
-
 <section>
 	<h2 id="dropdowns-right-aligned-variant">Left aligned variant</h2>
 	<p>
 		Dropdown aligned to the left side of the container. To align dropdown to left, you have to
 		add <code class="format-code">.wds-is-left-aligned</code> class to
-		<code class="format-code">.wds-dropdown__content</code> element or (in Ember Component) add <code class="format-code">dropdownLeftAligned=true</code>
+		<code class="format-code">.wds-dropdown__content</code> element or (in Ember Component) add <code
+		 class="format-code">dropdownLeftAligned=true</code>
 		to the dropdown.content component.
 	</p>
 	{{#component-demo name='dropdown-left'}}
@@ -128,7 +125,6 @@
 		{{/wds-dropdown}}
 	{{/component-demo}}
 </section>
-
 <section>
 	<h2 id="dropdowns-right-aligned-variant">Right aligned variant</h2>
 	<p>
@@ -151,12 +147,12 @@
 		{{/wds-dropdown}}
 	{{/component-demo}}
 </section>
-
 <section>
 	<h2 id="dropdowns-linked-list-variant">Linked list variant</h2>
 	<p>
 		Dropdowns that have <code class="format-code">.wds-list.wds-is-linked</code> (or Ember component
-		<code class="format-code">wds-list</code> with <code class="format-code">linked=true</code>) in the content.
+		<code class="format-code">wds-list</code> with <code class="format-code">linked=true</code>) in
+		the content.
 		Links have color and hover state different than when outside of a dropdown.
 	</p>
 	{{#component-demo name='dropdown-linked'}}
@@ -172,14 +168,14 @@
 		{{/wds-dropdown}}
 	{{/component-demo}}
 </section>
-
 <section>
 	<h2 id="dropdowns-with-shadow">Dropdown with shadow</h2>
 	<p>
 		Dropdowns can drop shadow. To add light shadow to dropdown, you have to
 		add <code class="format-code">.wds-has-shadow</code> class to
 		<code class="format-code">.wds-dropdown</code> element and
-		<code class="format-code">.wds-has-dark-shadow</code> to add darker shadow, or, if you use Ember components,
+		<code class="format-code">.wds-has-dark-shadow</code> to add darker shadow, or, if you use Ember
+		components,
 		add <code class="format-code">hasShadow=true</code> or <code class="format-code">hasDarkShadow=true</code>.
 	</p>
 	{{#component-demo name='dropdown-shadow'}}
@@ -205,7 +201,6 @@
 		{{/wds-dropdown}}
 	{{/component-demo}}
 </section>
-
 <section>
 	<h2 id="dropdowns-default-variant">No chevron</h2>
 	<p>Default dropdown with no chevron.</p>
@@ -229,7 +224,6 @@
 		{{/wds-dropdown}}
 	{{/component-demo}}
 </section>
-
 <section>
 	<h2 id="dropdowns-2-levels">2-levels dropdown</h2>
 	<p>
@@ -237,15 +231,13 @@
 	</p>
 	<h3>For Ember component:</h3>
 	<p>
-		Add <code
-		class="format-code">isLevel2=true</code> class to <code class="format-code">.wds-list li</code>
+		Add <code class="format-code">isLevel2=true</code> class to <code class="format-code">.wds-list li</code>
 		element.
 	</p>
 	<h3>For pure HTML:</h3>
 	<p>
-		Add <code
-		class="format-code">.wds-dropdown-level-2</code> class to <code class="format-code">wds-dropdown tagName='li'</code>
-		element	and add <code class="format-code">.wds-dropdown-level-2__content</code> element inside
+		Add <code class="format-code">.wds-dropdown-level-2</code> class to <code class="format-code">wds-dropdown tagName='li'</code>
+		element and add <code class="format-code">.wds-dropdown-level-2__content</code> element inside
 		the list element.
 	</p>
 	<p>
@@ -263,7 +255,9 @@
 			{{#dropdown.content scrollable=false}}
 				{{#wds-list linked=true bold=true}}
 					{{#wds-dropdown isLevel2=true tagName='li' as |dropdown|}}
-						{{dropdown.toggle tagName='a' href='#' text='List item 1'}}
+						<a href='#'>
+							{{dropdown.toggle text='List item 1'}}
+						</a>
 						{{#dropdown.content}}
 							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
@@ -281,7 +275,9 @@
 						<a href="#">List item 2</a>
 					</li>
 					{{#wds-dropdown isLevel2=true tagName='li' as |dropdown|}}
-						{{dropdown.toggle tagName='a' href='#' text='List item 3'}}
+						<a href='#'>
+							{{dropdown.toggle text='List item 3'}}
+						</a>
 						{{#dropdown.content}}
 							{{#wds-list linked=true}}
 								<li><a href="#2">List item 1</a></li>
@@ -301,7 +297,9 @@
 						{{/dropdown.content}}
 					{{/wds-dropdown}}
 					{{#wds-dropdown isLevel2=true tagName='li' class='wds-is-sticked-to-parent' as |dropdown|}}
-						{{dropdown.toggle tagName='a' href='#' text='List item 4'}}
+						<a href='#'>
+							{{dropdown.toggle text='List item 4'}}
+						</a>
 						{{#dropdown.content}}
 							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
@@ -310,7 +308,9 @@
 						{{/dropdown.content}}
 					{{/wds-dropdown}}
 					{{#wds-dropdown isLevel2=true tagName='li' as |dropdown|}}
-						{{dropdown.toggle tagName='a' href='#' text='Broken 2nd level'}}
+						<a href='#'>
+							{{dropdown.toggle text='Broken 2nd level'}}
+						</a>
 						{{#dropdown.content}}
 							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
@@ -323,39 +323,36 @@
 		{{/wds-dropdown}}
 	{{/component-demo}}
 </section>
-
-
 <section class="dropdowns-theming">
 	<h2 id="dropdowns-theming">Theming</h2>
-
 	<p>
-		To apply theming to dropdown, use  <code class="format-code">dropdown-theming</code> mixin.
+		To apply theming to dropdown, use <code class="format-code">dropdown-theming</code> mixin.
 		For example:
 		{{#component-demo name='dropdown-theming-sass' language='scss' codeOnly=true}}
 			.dropdowns-theming {
-				$color-page: #0E182B;
-				$color-page-border: #3e4757;
-				$color-text: #D5D4D4;
-				$color-links: #71d1ef;
-
-				@include dropdown-theming(
-					$color-page,
-					$color-text,
-					$color-links,
-					$color-page-border
-				);
+			$color-page: #0E182B;
+			$color-page-border: #3e4757;
+			$color-text: #D5D4D4;
+			$color-links: #71d1ef;
+			@include dropdown-theming(
+			$color-page,
+			$color-text,
+			$color-links,
+			$color-page-border
+			);
 			}
 		{{/component-demo}}
 		will give you following theme:
 	</p>
-
 	{{#component-demo name='dropdown-theming'}}
 		{{#wds-dropdown as |dropdown|}}
 			{{dropdown.toggle class='push-dropdown-down' text='2-levels dropdown'}}
 			{{#dropdown.content scrollable=false}}
 				{{#wds-list linked=true bold=true}}
 					{{#wds-dropdown isLevel2=true tagName='li' as |dropdown|}}
-						{{dropdown.toggle tagName='a' href='#' text='List item 1'}}
+						<a href='#'>
+							{{dropdown.toggle text='List item 1'}}
+						</a>
 						{{#dropdown.content}}
 							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
@@ -373,7 +370,9 @@
 						<a href="#">List item 2</a>
 					</li>
 					{{#wds-dropdown isLevel2=true tagName='li' as |dropdown|}}
-						{{dropdown.toggle tagName='a' href='#' text='List item 3'}}
+						<a href='#'>
+							{{dropdown.toggle text='List item 3'}}
+						</a>
 						{{#dropdown.content}}
 							{{#wds-list linked=true}}
 								<li><a href="#2">List item 1</a></li>
@@ -393,7 +392,9 @@
 						{{/dropdown.content}}
 					{{/wds-dropdown}}
 					{{#wds-dropdown isLevel2=true tagName='li' class='wds-is-sticked-to-parent' as |dropdown|}}
-						{{dropdown.toggle tagName='a' href='#' text='List item 4'}}
+						<a href='#'>
+							{{dropdown.toggle text='List item 4'}}
+						</a>
 						{{#dropdown.content}}
 							{{#wds-list linked=true}}
 								<li><a href="#">List item 1</a></li>
@@ -405,7 +406,6 @@
 			{{/dropdown.content}}
 		{{/wds-dropdown}}
 	{{/component-demo}}
-
 	{{#component-demo name='dropdown-theming-2'}}
 		{{#wds-dropdown as |dropdown|}}
 			{{dropdown.toggle class='push-dropdown-down' text='Default dropdown'}}
