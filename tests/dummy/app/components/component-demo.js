@@ -47,16 +47,16 @@ export default Component.extend({
 
 
 	didInsertElement() {
-		const name = this.get('name');
+		this.toggleView(this.name);
 
-		this.toggleView(name);
-
-		if (this.get('language') !== 'scss') {
+		if (this.language !== 'scss') {
 			const component = this.element.querySelector('.component-demo__rendered').cloneNode(true);
 			const emberView = component.querySelector('.ember-view');
 
-			emberView.removeAttribute('id');
-			emberView.classList.remove('ember-view');
+			if (emberView) {
+				emberView.removeAttribute('id');
+				emberView.classList.remove('ember-view');
+			}
 
 			this.set('renderedCode', beautify(component.outerHTML));
 		}
