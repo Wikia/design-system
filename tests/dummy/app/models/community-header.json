@@ -6,10 +6,10 @@
         "type": "text",
         "value": "Wookiepedia"
       },
-			"mobile_title": {
-				"type": "text",
-				"value": "Wookiepedia"
-			},
+      "mobile_title": {
+        "type": "text",
+        "value": "Wookiepedia"
+      },
       "tracking_label": "sitename"
     },
     "wordmark": {
@@ -39,7 +39,10 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "article-small"
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-article-small"
+        }
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
@@ -315,7 +318,10 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-tiny",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-explore-tiny"
+        },
         "items": [
           {
             "title": {
@@ -354,12 +360,14 @@
           "type": "translatable-text",
           "key": "community-header-discuss"
         },
-        "icon": "reply-small",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-reply-small"
+        },
         "href": "/d/f"
       }
     ]
   },
-
   "anon-no-background": {
     "sitename": {
       "href": "/wiki/Main_Page",
@@ -367,10 +375,10 @@
         "type": "text",
         "value": "Wookiepedia"
       },
-			"mobile_title": {
-				"type": "text",
-				"value": "Wookiepedia"
-			}
+      "mobile_title": {
+        "type": "text",
+        "value": "Wookiepedia"
+      }
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
@@ -398,7 +406,10 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "article-small"
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-article-small"
+        }
       }
     ],
     "navigation": [
@@ -673,7 +684,10 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-tiny",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-explore-tiny"
+        },
         "items": [
           {
             "title": {
@@ -712,12 +726,14 @@
           "type": "translatable-text",
           "key": "community-header-forum"
         },
-        "icon": "reply-small",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-reply-small"
+        },
         "href": "#"
       }
     ]
   },
-
   "anon-no-wordmark": {
     "sitename": {
       "href": "/wiki/Main_Page",
@@ -725,10 +741,10 @@
         "type": "text",
         "value": "Wookiepedia"
       },
-			"mobile_title": {
-				"type": "text",
-				"value": "Wookiepedia"
-			},
+      "mobile_title": {
+        "type": "text",
+        "value": "Wookiepedia"
+      },
       "tracking_label": "sitename"
     },
     "counter": {
@@ -745,7 +761,10 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "article-small"
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-article-small"
+        }
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
@@ -1021,7 +1040,10 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-tiny",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-explore-tiny"
+        },
         "items": [
           {
             "title": {
@@ -1060,12 +1082,14 @@
           "type": "translatable-text",
           "key": "community-header-forum"
         },
-        "icon": "reply-small",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-reply-small"
+        },
         "href": "#"
       }
     ]
   },
-
   "logged-in": {
     "sitename": {
       "href": "/wiki/Main_Page",
@@ -1073,10 +1097,10 @@
         "type": "text",
         "value": "Wookiepedia"
       },
-			"mobile_title": {
-				"type": "text",
-				"value": "Wookiepedia"
-			}
+      "mobile_title": {
+        "type": "text",
+        "value": "Wookiepedia"
+      }
     },
     "wordmark": {
       "href": "/wiki/Main_Page",
@@ -1108,7 +1132,10 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "article-small"
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-article-small"
+        }
       },
       {
         "href": "/wiki/Special:WikiActivity",
@@ -1116,7 +1143,10 @@
           "type": "translatable-text",
           "key": "community-header-wiki-activity"
         },
-        "icon": "activity-small"
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-activity-small"
+        }
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
@@ -1392,7 +1422,10 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-tiny",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-explore-tiny"
+        },
         "items": [
           {
             "title": {
@@ -1431,12 +1464,14 @@
           "type": "translatable-text",
           "key": "community-header-forum"
         },
-        "icon": "reply-small",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-reply-small"
+        },
         "href": "#"
       }
     ]
   },
-
   "admin": {
     "sitename": {
       "href": "/wiki/Main_Page",
@@ -1444,10 +1479,10 @@
         "type": "text",
         "value": "Wookiepedia"
       },
-			"mobile_title": {
-				"type": "text",
-				"value": "Wookiepedia"
-			},
+      "mobile_title": {
+        "type": "text",
+        "value": "Wookiepedia"
+      },
       "tracking_label": "sitename"
     },
     "wordmark": {
@@ -1477,7 +1512,10 @@
           "type": "translatable-text",
           "key": "community-header-add-new-page"
         },
-        "icon": "article-small"
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-article-small"
+        }
       },
       {
         "href": "/wiki/Special:WikiActivity",
@@ -1485,7 +1523,10 @@
           "type": "translatable-text",
           "key": "community-header-wiki-activity"
         },
-        "icon": "activity-small"
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-activity-small"
+        }
       },
       {
         "href": "/wiki/Special:AdminDashboard",
@@ -1493,7 +1534,10 @@
           "type": "translatable-text",
           "key": "community-header-admin-dashboard"
         },
-        "icon": "dashboard-small"
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-dashboard-small"
+        }
       }
     ],
     "background-image-url": "http://static.wikia.nocookie.net/c4a1302b-476b-468d-8766-2f36a6ace398",
@@ -1769,7 +1813,10 @@
           "type": "translatable-text",
           "key": "community-header-explore"
         },
-        "icon": "explore-tiny",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-explore-tiny"
+        },
         "items": [
           {
             "title": {
@@ -1808,7 +1855,10 @@
           "type": "translatable-text",
           "key": "community-header-forum"
         },
-        "icon": "reply-small",
+        "image-data": {
+          "type": "wds-svg",
+          "name": "wds-icons-reply-small"
+        },
         "href": "#"
       }
     ]
