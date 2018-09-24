@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "15.1.1",
+  "version": "15.1.2",
   "description": "Design System developed for Wikia",
   "keywords": [
     "ember-addon"
