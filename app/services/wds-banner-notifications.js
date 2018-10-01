@@ -15,8 +15,10 @@ export default Service.extend({
 		notification.id = this.incrementProperty('counter');
 		this.model.pushObject(notification);
 
-		later(this, () => {
-			this.model.removeObject(notification);
-		}, this.hideAfterMs);
+		if (!notification.disableAutoHide) {
+			later(this, () => {
+				this.model.removeObject(notification);
+			}, this.hideAfterMs);
+		}
 	}
 });
