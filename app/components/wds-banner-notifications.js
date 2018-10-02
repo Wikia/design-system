@@ -12,7 +12,12 @@ export default Component.extend({
 	actions: {
 		onClose(id) {
 			const notificationToClose = this.model.findBy('id', id);
+
 			this.model.removeObject(notificationToClose);
+
+			if (typeof notificationToClose.onClose === 'function') {
+				notificationToClose.onClose();
+			}
 		}
 	}
 });
