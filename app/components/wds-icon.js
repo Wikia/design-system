@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import {computed} from '@ember/object';
+import { computed } from '@ember/object';
 
 export default Component.extend({
 	tagName: 'svg',
@@ -20,15 +20,10 @@ export default Component.extend({
 	},
 
 	sizeClassName: computed('size', function () {
-		const size = this.get('size');
-
-		return size ? `wds-icon-${size}` : '';
+		return this.size ? `wds-icon-${this.size}` : '';
 	}),
 
 	iconName: computed('name', 'size', function () {
-		const name = this.get('name');
-		const size = this.get('size');
-
-		return `wds-icons-${name}${size ? `-${size}` : ''}`;
+		return `wds-icons-${this.name}${this.size ? `-${this.size}` : ''}`;
 	})
 });

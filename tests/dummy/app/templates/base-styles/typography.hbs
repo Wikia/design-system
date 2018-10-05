@@ -19,41 +19,69 @@
 </section>
 
 <section>
-	<h2 id='news-stories-font'>News and stories font family</h2>
-	<p> News and Stories uses Rubik as it's primary font.</p>
+	<h2 id='news-stories-font'>News and stories and Mobile Article font family</h2>
+	<p> News and Stories and uses Rubik as it's primary font.</p>
 	<code><span class="format-code">$wds-fandom-font-family</span>: Rubik, Helvetica, Arial, sans-serif;</code>
 </section>
 
 <section>
-	<h2 id="line-height">Line height</h2>
-	<code><span class="format-code">$wds-line-height</span>: 1.5em;</code>
+	<h2 id="typescale">Typescale</h2>
+	{{typescale-line fontSize=52 lineHeight=1 typescaleName='font-size-4xl' lineHeightName='leading-none'}}
+	{{typescale-line fontSize=36 lineHeight=1 typescaleName='font-size-3xl' lineHeightName='leading-none'}}
+	{{typescale-line fontSize=28 lineHeight=1.25 typescaleName='font-size-xxl' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=24 lineHeight=1.25 typescaleName='font-size-xl' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=18 lineHeight=1.25 typescaleName='font-size-l' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=16 lineHeight=1.25 typescaleName='font-size-base' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=14 lineHeight=1.25 typescaleName='font-size-s' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=12 lineHeight=1.25 typescaleName='font-size-xs' lineHeightName='leading-tight'}}
+	{{typescale-line fontSize=10 lineHeight=1.25 typescaleName='font-size-xxs' lineHeightName='leading-tight'}}
 </section>
 
 <section>
-	<h2 id="typescale">Typescale</h2>
-	{{typescale-line fontSize=54 typescaleName='typescale-size-plus-7'}}
-	{{typescale-line fontSize=48 typescaleName='typescale-size-plus-6'}}
-	{{typescale-line fontSize=40 typescaleName='typescale-size-plus-5'}}
-	{{typescale-line fontSize=36 typescaleName='typescale-size-plus-4'}}
-	{{typescale-line fontSize=28 typescaleName='typescale-size-plus-3'}}
-	{{typescale-line fontSize=24 typescaleName='typescale-size-plus-2'}}
-	{{typescale-line fontSize=18 typescaleName='typescale-size-plus-1'}}
-	{{typescale-line fontSize=16 typescaleName='typescale-size-base'}}
-	{{typescale-line fontSize=14 typescaleName='typescale-size-minus-1'}}
-	{{typescale-line fontSize=12 typescaleName='typescale-size-minus-2'}}
-	{{typescale-line fontSize=10 typescaleName='typescale-size-minus-3'}}
+	<h2 id="font-weight">Font Weight</h2>
+	{{font-weight-line fontWeight=300 fontWeightName='font-weight-light'}}
+	{{font-weight-line fontWeight=400 fontWeightName='font-weight-medium'}}
+	{{font-weight-line fontWeight=500 fontWeightName='font-weight-normal'}}
+	{{font-weight-line fontWeight=700 fontWeightName='font-weight-bold'}}
+	{{font-weight-line fontWeight=900 fontWeightName='font-weight-black'}}
+</section>
+
+<section>
+	<h2 id="font-weight">Text style</h2>
+	{{text-style-line text='Normal' textStyle='font-style-normal'}}
+	{{text-style-line text='Italic' textStyle='font-style-italic'}}
+	{{text-style-line text='Uppercase' textStyle='text-transform-uppercase'}}
+	{{text-style-line text='Lowercase' textStyle='text-transform-lowercase'}}
+	{{text-style-line text='capitalize' textStyle='text-transform-capitalize'}}
+	{{text-style-line text='No transform' textStyle='text-transform-none'}}
+</section>
+
+
+<section>
+	<h2 id="font-weight">Midlight</h2>
+	<p>
+		There's a specific styling for page titles, that you can apply by using a class
+		<code><span class="format-code">.wds-midlight-aqua</span> or <span class="format-code">.wds-midlight-navy</span></code>
+	</p>
+	<p>
+		<div class="wds-font-size-xxl wds-font-weight-bold wds-midlight-aqua">This is a headline using midlight-aqua</div>
+	</p>
+	<p>
+		<div class="wds-font-size-xxl wds-font-weight-bold wds-midlight-navy">This is a headline using midlight-navy</div>
+	</p>
 </section>
 
 <section>
 	<h2 id="example">Example usage</h2>
+	<p>All the styles are available not only as atomic classes, but also as placeholders, so that you can merge them into your other style rules.</p>
 	{{#code-sample language='scss'}}
 body {
 	font-family: $wds-font-family;
-	line-height: $wds-line-height;
+	@extend %wds-leading-none;
 }
 
 .wds-component {
-	font-size: $wds-typescale-size-plus-1;
+	@extend %wds-font-size-base;
 }
 	{{/code-sample}}
 </section>

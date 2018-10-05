@@ -9,7 +9,7 @@
 
 	{{#component-demo name='banner-notifications'}}
 		<div class="wds-banner-notification__container">
-			{{#wds-banner-notification type='alert'}}
+			{{#wds-banner-notification type='alert' onClose=(action 'onClose')}}
 				This is an error message.
 			{{/wds-banner-notification}}
 		</div>
@@ -19,6 +19,7 @@
 		<h3>HBS Properties</h3>
 		<ul>
 			<li><strong>type</strong> (string): type of notification (alert | warning | success | sessage)</li>
+			<li><strong>onClose</strong> (Ember action): optional action to call when user clicks the close button</li>
 		</ul>
 	</div>
 </section>
@@ -33,7 +34,7 @@
 
 	{{#component-demo name='banner-notifications-warning'}}
 		<div class="wds-banner-notification__container">
-			{{#wds-banner-notification type='warning'}}
+			{{#wds-banner-notification type='warning' onClose=(action 'onClose')}}
 				This is a warning message.
 			{{/wds-banner-notification}}
 		</div>
@@ -51,7 +52,7 @@
 
 	{{#component-demo name='banner-notifications-success'}}
 		<div class="wds-banner-notification__container">
-			{{#wds-banner-notification type='success'}}
+			{{#wds-banner-notification type='success' onClose=(action 'onClose')}}
 				This is a confirmation message.
 			{{/wds-banner-notification}}
 		</div>
@@ -68,7 +69,7 @@
 
 	{{#component-demo name='banner-notifications-message'}}
 		<div class="wds-banner-notification__container">
-			{{#wds-banner-notification type='message'}}
+			{{#wds-banner-notification type='message' onClose=(action 'onClose')}}
 				This is a general notification message.
 			{{/wds-banner-notification}}
 		</div>

@@ -1,0 +1,15 @@
+<div class="wds-community-header__counter">
+	<span class="wds-community-header__counter-value">{{numeral model.counter.value}}</span>
+	<span class="wds-community-header__counter-label">{{i18n model.counter.title.key ns='design-system'}}</span>
+</div>
+<div class="wds-community-header__wiki-buttons wds-button-group">
+	{{#each model.wiki-buttons as |button|}}
+		{{#wds-button secondary=true href=button.href
+					  title=(if button.title (i18n button.title.key ns='design-system') null)}}
+			{{wds-icon name=button.image-data.name size='small'}}
+			{{#if button.title}}
+				<span>{{i18n button.title.key ns='design-system'}}</span>
+			{{/if}}
+		{{/wds-button}}
+	{{/each}}
+</div>

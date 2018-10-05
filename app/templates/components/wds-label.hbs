@@ -1,0 +1,5 @@
+{{#if (equal @label.type 'translatable-text')}}
+	{{i18n @label.key ns='design-system'}}
+{{else}}
+	{{@label.value}}
+{{/if}}

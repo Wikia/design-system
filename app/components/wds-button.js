@@ -4,7 +4,9 @@ export default Component.extend({
 	attributeBindings: [
 		'disabled',
 		'href',
-		'title'
+		'title',
+		'data-tracking-label',
+		'type',
 	],
 	classNames: 'wds-button',
 	classNameBindings: [
@@ -18,7 +20,7 @@ export default Component.extend({
 	init() {
 		this._super(...arguments);
 
-		if (this.get('href')) {
+		if (this.href) {
 			this.set('tagName', 'a');
 		}
 	}

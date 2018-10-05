@@ -51,5 +51,9 @@ module.exports = function (environment) {
 		ENV.rootURL = '/design-system';
 	}
 
+	ENV['ember-cli-mirage'] = {
+		directory: 'tests/dummy/mirage'
+	};
+
 	return ENV;
 };

@@ -30,9 +30,7 @@
 		z-index: $content-z-index;
 
 		&.wds-is-right-aligned {
-			left: auto;
-			right: 0;
-			transform: none;
+			@include is-right-aligned;
 		}
 
 		&.wds-is-left-aligned {
@@ -77,7 +75,7 @@
 					}
 
 					&:hover, &.wds-is-selected {
-						> a {
+						> a:not(.wds-button) {
 							@include wds-dropdown-linked-list-item-hover;
 						}
 					}
@@ -111,9 +109,11 @@
 	}
 
 	&.wds-is-active,
-	&:hover {
-		&::before, &::after {
-			display: block;
+	&:not(.wds-is-touch-device):hover {
+		&:not(.wds-no-chevron) {
+			&::before, &::after {
+				display: block;
+			}
 		}
 
 		.wds-dropdown__content {
@@ -188,8 +188,8 @@
 		}
 	}
 
-	&:hover,
-	&.wds-is-active {
+	&.wds-is-active,
+	&:not(.wds-is-touch-device):hover {
 		.wds-dropdown-level-2__content {
 			display: block;
 		}

@@ -4,12 +4,12 @@ import beautify from '../utils/beautify';
 
 /**
  * This components supports 3 different ways to render a component demo
- * 
+ *
  * Showcase template, rendered HTML and rendered component
  * {{#component-demo name='unique-name'}}
  * 	some code to demo
  * {{/component-demo}}
- * 
+ *
  * Showcase template and rendered HTML but don't show rendered component
  * {{#component-demo name='unique-name-2' codeOnly=true}}
  *  other code to demo
@@ -21,8 +21,8 @@ import beautify from '../utils/beautify';
  * 	end: /{{\/component-demo}}/,
  * This allows us to do easy component demos
  * but it does not support multiline regexps, make sure whole component-demo invocation is on one line
- * 
- * Showcase rendered HTML only 
+ *
+ * Showcase rendered HTML only
  * {{#component-demo codeOnly=true}}
  *  other code to demo
  * {{/component-demo}}
@@ -44,19 +44,21 @@ export default Component.extend({
 	showHTML: false,
 	showHBS: true,
 	language: 'htmlbars',
-	
+
 
 	didInsertElement() {
-		const name = this.get('name');
+		this.toggleView(this.name);
 
-		this.toggleView(name);
+		if (this.language !== 'scss') {
+			const component = this.element.querySelector('.component-demo__rendered').cloneNode(true);
+			const emberView = component.querySelector('.ember-view');
 
-		if (this.get('language') !== 'scss') {
-			const $component = this.$('.component-demo__rendered').clone();
+			if (emberView) {
+				emberView.removeAttribute('id');
+				emberView.classList.remove('ember-view');
+			}
 
-			$component.find('.ember-view').removeAttr('id').removeClass('ember-view');
-	
-			this.set('renderedCode', beautify($component.html()));
+			this.set('renderedCode', beautify(component.outerHTML));
 		}
 	},
 
@@ -75,7 +77,7 @@ export default Component.extend({
 		},
 		onTabChange(tab) {
 			const isHBS = tab.element.innerText.includes('HBS');
-			
+
 			this.toggleView(isHBS);
 		}
 	},

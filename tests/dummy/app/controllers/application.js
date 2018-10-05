@@ -80,12 +80,20 @@ export default Controller.extend({
 						location: 'route-components.avatars'
 					},
 					{
+						name: 'Inputs',
+						location: 'route-components.inputs'
+					},
+					{
 						name: 'Buttons',
 						location: 'route-components.buttons'
 					},
 					{
 						name: 'Floating Buttons',
 						location: 'route-components.floating-buttons'
+					},
+					{
+						name: 'Dialogs',
+						location: 'route-components.dialogs'
 					},
 					{
 						name: 'Toggles',
@@ -123,6 +131,10 @@ export default Controller.extend({
 						location: 'identity.assets'
 					},
 					{
+						name: 'Browser Theming',
+						location: 'identity.browser-theming'
+					},
+					{
 						name: 'Global Footer',
 						location: 'identity.global-footer.index'
 					},
@@ -133,6 +145,10 @@ export default Controller.extend({
 					{
 						name: 'Community Header',
 						location: 'identity.community-header.index'
+					},
+					{
+						name: 'Community Bar',
+						location: 'identity.community-bar.index'
 					},
 					{
 						name: 'API',

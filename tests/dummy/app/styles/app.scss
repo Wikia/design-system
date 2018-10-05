@@ -26,6 +26,7 @@ p {
 
 a {
 	color: $wds-color-link;
+	text-decoration: none;
 }
 
 img {
@@ -46,6 +47,9 @@ pre {
 
 ////////////////////////////////////// END of Selectors section //////////////////////////////////////
 ////////////////////////////////////// Application Classes section //////////////////////////////////////
+.rubik {
+	font-family: $wds-fandom-font-family;
+}
 
 .main-container {
 	margin: 0 auto;

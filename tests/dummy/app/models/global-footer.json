@@ -2,7 +2,9 @@
 	"with-hubs": {
 		"header": {
 			"type": "link-image",
-			"image": "wds-company-logo-fandom-white",
+			"image-data": {
+				"name": "wds-company-logo-fandom-white"
+			},
 			"href": "http:\/\/fandom.wikia.com",
 			"title": {
 				"type": "text",
@@ -49,14 +51,6 @@
 						"key": "Contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/contact"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Wikia.org"
-					},
-					"href": "http:\/\/wikia.org"
 				}
 			]
 		},
@@ -99,7 +93,7 @@
 		"create_wiki": {
 			"description": {
 				"type": "translatable-text",
-				"key": "Can\'t find a community you love? Create your own and start something epic."
+				"key": "Can't find a community you love? Create your own and start something epic."
 			},
 			"links": [
 				{
@@ -127,7 +121,9 @@
 			"links": [
 				{
 					"type": "link-image",
-					"image": "wds-company-store-appstore",
+					"image-data": {
+						"name": "wds-company-store-appstore"
+					},
 					"title": {
 						"type": "translatable-text",
 						"key": "global-footer-community-apps-link-app-store"
@@ -136,7 +132,9 @@
 				},
 				{
 					"type": "link-image",
-					"image": "wds-company-store-googleplay",
+					"image-data": {
+						"name": "wds-company-store-googleplay"
+					},
 					"title": {
 						"type": "translatable-text",
 						"key": "global-footer-community-apps-link-google-play"
@@ -198,6 +196,13 @@
 			}
 		},
 		"fandom_overview": {
+			"header": {
+				"type": "line-text",
+				"title": {
+					"type": "translatable-text",
+					"key": "global-footer-fandom-overview-header"
+				}
+			},
 			"links": [
 				{
 					"type": "link-branded",
@@ -231,7 +236,7 @@
 					"brand": "explore-wikis",
 					"title": {
 						"type": "translatable-text",
-						"key": "Explore Wikis"
+						"key": "global-footer-fandom-overview-link-explore-wikis"
 					},
 					"href": "http:\/\/fandom.wikia.com\/explore"
 				}
@@ -249,47 +254,72 @@
 				{
 					"type": "link-image",
 					"image": "wds-icons-facebook",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-facebook"
+					},
 					"title": {
 						"type": "translatable-text",
-						"key": "Facebook"
+						"key": "global-footer-follow-us-link-facebook"
 					},
-					"href": "https:\/\/www.facebook.com\/getfandom"
+					"href": "https://www.facebook.com/getfandom",
+					"tracking_label": "follow-us.facebook"
 				},
 				{
 					"type": "link-image",
 					"image": "wds-icons-twitter",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-twitter"
+					},
 					"title": {
 						"type": "translatable-text",
-						"key": "Twitter"
+						"key": "global-footer-follow-us-link-twitter"
 					},
-					"href": "https:\/\/twitter.com\/getfandom"
-				},
-				{
-					"type": "link-image",
-					"image": "wds-icons-reddit",
-					"title": {
-						"type": "translatable-text",
-						"key": "Reddit"
-					},
-					"href": "https:\/\/www.reddit.com\/r\/wikia"
+					"href": "https://twitter.com/getfandom",
+					"tracking_label": "follow-us.twitter"
 				},
 				{
 					"type": "link-image",
 					"image": "wds-icons-youtube",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-youtube"
+					},
 					"title": {
 						"type": "translatable-text",
-						"key": "Youtube"
+						"key": "global-footer-follow-us-link-youtube"
 					},
-					"href": "https:\/\/www.youtube.com\/channel\/UC988qTQImTjO7lUdPfYabgQ"
+					"href": "https://www.youtube.com/channel/UC988qTQImTjO7lUdPfYabgQ",
+					"tracking_label": "follow-us.youtube"
 				},
 				{
 					"type": "link-image",
 					"image": "wds-icons-instagram",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-instagram"
+					},
 					"title": {
 						"type": "translatable-text",
-						"key": "Instagram"
+						"key": "global-footer-follow-us-link-instagram"
 					},
-					"href": "https:\/\/www.instagram.com\/getfandom\/"
+					"href": "https://www.instagram.com/getfandom/",
+					"tracking_label": "follow-us.instagram"
+				},
+				{
+					"type": "link-image",
+					"image": "wds-icons-linkedin",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-linkedin"
+					},
+					"title": {
+						"type": "translatable-text",
+						"key": "global-footer-follow-us-link-linkedin"
+					},
+					"href": "https://www.linkedin.com/company/157252",
+					"tracking_label": "follow-us.linkedin"
 				}
 			]
 		},
@@ -348,7 +378,9 @@
 	"without-hubs": {
 		"header": {
 			"type": "link-image",
-			"image": "wds-company-logo-fandom-white",
+			"image-data": {
+				"name": "wds-company-logo-fandom-white"
+			},
 			"href": "http:\/\/fandom.wikia.com",
 			"title": {
 				"type": "text",
@@ -395,14 +427,6 @@
 						"key": "Contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/contact"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Wikia.org"
-					},
-					"href": "http:\/\/wikia.org"
 				}
 			]
 		},
@@ -445,7 +469,7 @@
 		"create_wiki": {
 			"description": {
 				"type": "translatable-text",
-				"key": "Can\'t find a community you love? Create your own and start something epic."
+				"key": "Can't find a community you love? Create your own and start something epic."
 			},
 			"links": [
 				{
@@ -544,13 +568,20 @@
 			}
 		},
 		"fandom_overview": {
+			"header": {
+				"type": "line-text",
+				"title": {
+					"type": "translatable-text",
+					"key": "global-footer-fandom-overview-header"
+				}
+			},
 			"links": [
 				{
 					"type": "link-branded",
 					"brand": "explore-wikis",
 					"title": {
 						"type": "translatable-text",
-						"key": "Explore Wikis"
+						"key": "global-footer-fandom-overview-link-explore-wikis"
 					},
 					"href": "http:\/\/fandom.wikia.com\/explore"
 				}
@@ -568,47 +599,72 @@
 				{
 					"type": "link-image",
 					"image": "wds-icons-facebook",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-facebook"
+					},
 					"title": {
 						"type": "translatable-text",
-						"key": "Facebook"
+						"key": "global-footer-follow-us-link-facebook"
 					},
-					"href": "https:\/\/www.facebook.com\/getfandom"
+					"href": "https://www.facebook.com/getfandom",
+					"tracking_label": "follow-us.facebook"
 				},
 				{
 					"type": "link-image",
 					"image": "wds-icons-twitter",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-twitter"
+					},
 					"title": {
 						"type": "translatable-text",
-						"key": "Twitter"
+						"key": "global-footer-follow-us-link-twitter"
 					},
-					"href": "https:\/\/twitter.com\/getfandom"
-				},
-				{
-					"type": "link-image",
-					"image": "wds-icons-reddit",
-					"title": {
-						"type": "translatable-text",
-						"key": "Reddit"
-					},
-					"href": "https:\/\/www.reddit.com\/r\/wikia"
+					"href": "https://twitter.com/getfandom",
+					"tracking_label": "follow-us.twitter"
 				},
 				{
 					"type": "link-image",
 					"image": "wds-icons-youtube",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-youtube"
+					},
 					"title": {
 						"type": "translatable-text",
-						"key": "Youtube"
+						"key": "global-footer-follow-us-link-youtube"
 					},
-					"href": "https:\/\/www.youtube.com\/channel\/UC988qTQImTjO7lUdPfYabgQ"
+					"href": "https://www.youtube.com/channel/UC988qTQImTjO7lUdPfYabgQ",
+					"tracking_label": "follow-us.youtube"
 				},
 				{
 					"type": "link-image",
 					"image": "wds-icons-instagram",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-instagram"
+					},
 					"title": {
 						"type": "translatable-text",
-						"key": "Instagram"
+						"key": "global-footer-follow-us-link-instagram"
 					},
-					"href": "https:\/\/www.instagram.com\/getfandom\/"
+					"href": "https://www.instagram.com/getfandom/",
+					"tracking_label": "follow-us.instagram"
+				},
+				{
+					"type": "link-image",
+					"image": "wds-icons-linkedin",
+					"image-data": {
+						"type": "wds-svg",
+						"name": "wds-icons-linkedin"
+					},
+					"title": {
+						"type": "translatable-text",
+						"key": "global-footer-follow-us-link-linkedin"
+					},
+					"href": "https://www.linkedin.com/company/157252",
+					"tracking_label": "follow-us.linkedin"
 				}
 			]
 		},

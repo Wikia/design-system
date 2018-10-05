@@ -39,16 +39,19 @@ Router.map(function () {
 		this.route('avatars');
 		this.route('buttons');
 		this.route('floating-buttons');
+		this.route('dialogs');
 		this.route('toggles');
 		this.route('dropdowns');
 		this.route('lists');
 		this.route('progress-indicators');
 		this.route('tabs');
 		this.route('banner-notifications');
+		this.route('inputs');
 	});
 
 	this.route('identity', function () {
 		this.route('assets');
+		this.route('browser-theming');
 		this.route('global-footer', function () {
 			this.route('standalone', {
 				path: 'standalone/:variant_name'
@@ -60,6 +63,11 @@ Router.map(function () {
 			});
 		});
 		this.route('community-header', function () {
+			this.route('standalone', {
+				path: 'standalone/:variant_name'
+			})
+		});
+		this.route('community-bar', function () {
 			this.route('standalone', {
 				path: 'standalone/:variant_name'
 			})
