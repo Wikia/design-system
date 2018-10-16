@@ -60,12 +60,14 @@
 		align-self: center;
 		pointer-events: none;
 
-		&:first-child:not(:only-child) {
-			margin-right: 6px;
-		}
+		&:not(:only-child) {
+			&:first-child {
+				margin-right: 6px;
+			}
 
-		&:last-child:not(:only-child) {
-			margin-left: 6px;
+			&:last-child {
+				margin-left: 6px;
+			}
 		}
 	}
 
