@@ -66,30 +66,6 @@ export default Component.extend({
 		}
 	},
 
-	click(event) {
-		if (event.target.closest('.wds-global-navigation__search__suggestion')) {
-			if (this.onSearchSuggestionChosen) {
-				event.preventDefault();
-				this.onSearchSuggestionChosen(this.suggestions[this.selectedSuggestionIndex]);
-				this.closeSearch();
-			}
-
-			if (this.track) {
-				this.track({
-					action: 'click',
-					category: 'navigation',
-					label: 'search-open-suggestion-link'
-				});
-			}
-
-			this.setProperties({
-				shouldWaitForClickOnCloseSuggestion: false,
-			});
-			this.resetSearchState();
-
-		}
-	},
-
 	submit(event) {
 		if (this.track) {
 			this.track({
@@ -101,7 +77,7 @@ export default Component.extend({
 
 		if (this.goToSearchResults) {
 			event.preventDefault();
-			this.goToSearchResults(this.get('state.query'));
+			this.goToSearchResults(this.state.query);
 
 			return;
 		}
@@ -111,7 +87,7 @@ export default Component.extend({
 	},
 
 	requestSuggestionsFromAPI() {
-		const query = this.get('state.query');
+		const { query } = this.state;
 		const uri = `${this.get('model.suggestions.url')}&query=${query}`;
 
 		/**
@@ -149,7 +125,7 @@ export default Component.extend({
 						 * Also, we don't want to show the suggestion results after a real search
 						 * will be finished, what will happen if search request is still in progress.
 						 */
-						if (!this.searchRequestInProgress && query === this.get('state.query')) {
+						if (!this.searchRequestInProgress && query === this.state.query) {
 							this.setSearchSuggestionItems(suggestions);
 						}
 
@@ -202,7 +178,7 @@ export default Component.extend({
 	},
 
 	runSuggestionsRequest() {
-		return this.requestSuggestionsFromAPI(this.get('state.query'));
+		return this.requestSuggestionsFromAPI(this.state.query);
 	},
 
 	//ToDo move to in-repo addon while workign on on-site notifications
@@ -226,7 +202,7 @@ export default Component.extend({
 			return;
 		}
 
-		const query = this.get('state.query'),
+		const { query } = this.state,
 			highlightRegexp = new RegExp(`(${this.escapeRegex(query)})`, 'ig'),
 			highlighted = wrapMeHelper.compute(['$1'], {
 				className: 'wds-global-navigation__search-suggestion-highlight'
@@ -386,7 +362,7 @@ export default Component.extend({
 				selectedSuggestionIndex: -1
 			});
 
-			this.getSuggestions(this.get('state.query'));
+			this.getSuggestions(this.state.query);
 		},
 
 		onCloseSearchClick(event) {
@@ -405,7 +381,7 @@ export default Component.extend({
 		},
 
 		onFocusOut() {
-			if (!this.get('state.query')) {
+			if (!this.state.query) {
 				this.closeSearch();
 			}
 
@@ -414,22 +390,17 @@ export default Component.extend({
 			}
 		},
 
-		onSuggestionMouseDown() {
-			this.set('shouldWaitForClickOnCloseSuggestion', true);
-		},
-
-		onKeyDown(value, event) {
-			const keyCode = event.keyCode;
-
+		onKeyDown(event) {
+			const { keyCode } = event;
 			// down arrow
 			if (keyCode === 40) {
-				if (this.selectedSuggestionIndex < this.get('suggestions.length') - 1) {
+				if (this.selectedSuggestionIndex < this.suggestions.length - 1) {
 					this.incrementProperty('selectedSuggestionIndex');
 					event.preventDefault();
 				}
 			// up arrow
 			} else if (keyCode === 38) {
-				if (this.get('suggestions.length') && this.selectedSuggestionIndex > -1) {
+				if (this.suggestions.length && this.selectedSuggestionIndex > -1) {
 					this.decrementProperty('selectedSuggestionIndex');
 					event.preventDefault();
 				}
@@ -439,16 +410,37 @@ export default Component.extend({
 			// ENTER key
 			} else if (keyCode === 13) {
 				if (this.selectedSuggestionIndex !== -1) {
+					this.onSearchSuggestionChosen(
+						this.suggestions[this.selectedSuggestionIndex]
+					);
 					this.inputField.blur();
-					this.onSearchSuggestionChosen(this.suggestions[this.selectedSuggestionIndex]);
 				}
 
-				this.setSearchSuggestionItems();
+				this.resetSearchState();
+				this.closeSearch();
 			}
 		},
 
 		selectItem(index) {
 			this.set('selectedSuggestionIndex', index);
+		},
+
+		onSearchSuggestionClick(index) {
+			if (this.onSearchSuggestionChosen) {
+				event.preventDefault();
+				this.onSearchSuggestionChosen(this.suggestions[index]);
+				this.closeSearch();
+			}
+
+			if (this.track) {
+				this.track({
+					action: 'click',
+					category: 'navigation',
+					label: 'search-open-suggestion-link'
+				});
+			}
+
+			this.resetSearchState();
 		}
 	}
 });
