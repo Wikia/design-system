@@ -26,7 +26,6 @@ export default Component.extend({
 	hasSuggestions: notEmpty('suggestions'),
 	cachedResultsLimit: 100,
 	debounceDuration: 250,
-	shouldWaitForClickOnCloseSuggestion: false,
 	inSearchModal: false,
 	// this object is declared inline to enable sharing it's internals between all instances of search
 	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
@@ -64,26 +63,6 @@ export default Component.extend({
 		if (this.inSearchModal) {
 			this.inputField.focus();
 		}
-	},
-
-	submit(event) {
-		if (this.track) {
-			this.track({
-				action: 'open',
-				category: 'navigation',
-				label: 'search-open-special-search'
-			});
-		}
-
-		if (this.goToSearchResults) {
-			event.preventDefault();
-			this.goToSearchResults(this.state.query);
-
-			return;
-		}
-
-		this.set('searchRequestInProgress', true);
-
 	},
 
 	requestSuggestionsFromAPI() {
@@ -325,12 +304,7 @@ export default Component.extend({
 	},
 
 	closeSearch() {
-		this.setProperties({
-			'state.query': '',
-			searchIsActive: false,
-			inputFocused: false,
-			suggestions: []
-		});
+		this.resetSearchState();
 
 		if (this.onSearchCloseClicked) {
 			this.onSearchCloseClicked();
@@ -338,7 +312,12 @@ export default Component.extend({
 	},
 
 	resetSearchState() {
-		this.set('inputFocused', false);
+		this.setProperties({
+			'state.query': '',
+			searchIsActive: false,
+			inputFocused: false,
+			suggestions: []
+		});
 
 		run(() => {
 			scheduleOnce('afterRender', this, () => {
@@ -349,8 +328,40 @@ export default Component.extend({
 		});
 	},
 
+	keyDown({ keyCode }) {
+		// down arrow
+		if (keyCode === 40) {
+			if (this.selectedSuggestionIndex < this.suggestions.length - 1) {
+				this.incrementProperty('selectedSuggestionIndex');
+			}
+
+			return false;
+		// up arrow
+		} else if (keyCode === 38) {
+			if (this.suggestions.length && this.selectedSuggestionIndex > -1) {
+				this.decrementProperty('selectedSuggestionIndex');
+			}
+
+			return false;
+		// ESC key
+		} else if (keyCode === 27) {
+			this.closeSearch();
+		// ENTER key
+		} else if (keyCode === 13) {
+			if (this.selectedSuggestionIndex !== -1) {
+				this.onSearchSuggestionChosen(
+					this.suggestions[this.selectedSuggestionIndex]
+				);
+				this.inputField.blur();
+
+				this.closeSearch();
+			}
+		}
+	},
+
 	actions: {
 		openSearch() {
+			this.resetSearchState();
 			this.set('searchIsActive', true);
 			this.onSearchToggleClicked();
 			this.inputField.focus();
@@ -384,50 +395,10 @@ export default Component.extend({
 			if (!this.state.query) {
 				this.closeSearch();
 			}
-
-			if (!this.shouldWaitForClickOnCloseSuggestion) {
-				this.resetSearchState();
-			}
-		},
-
-		onKeyDown(event) {
-			const { keyCode } = event;
-			// down arrow
-			if (keyCode === 40) {
-				if (this.selectedSuggestionIndex < this.suggestions.length - 1) {
-					this.incrementProperty('selectedSuggestionIndex');
-					event.preventDefault();
-				}
-			// up arrow
-			} else if (keyCode === 38) {
-				if (this.suggestions.length && this.selectedSuggestionIndex > -1) {
-					this.decrementProperty('selectedSuggestionIndex');
-					event.preventDefault();
-				}
-			// ESC key
-			} else if (keyCode === 27) {
-				this.closeSearch();
-			// ENTER key
-			} else if (keyCode === 13) {
-				if (this.selectedSuggestionIndex !== -1) {
-					this.onSearchSuggestionChosen(
-						this.suggestions[this.selectedSuggestionIndex]
-					);
-					this.inputField.blur();
-				}
-
-				this.resetSearchState();
-				this.closeSearch();
-			}
-		},
-
-		selectItem(index) {
-			this.set('selectedSuggestionIndex', index);
 		},
 
 		onSearchSuggestionClick(index) {
 			if (this.onSearchSuggestionChosen) {
-				event.preventDefault();
 				this.onSearchSuggestionChosen(this.suggestions[index]);
 				this.closeSearch();
 			}
@@ -441,6 +412,27 @@ export default Component.extend({
 			}
 
 			this.resetSearchState();
+
+			return !this.onSearchSuggestionChosen;
+		},
+
+		submit(event) {
+			if (this.track) {
+				this.track({
+					action: 'open',
+					category: 'navigation',
+					label: 'search-open-special-search'
+				});
+			}
+
+			if (this.goToSearchResults) {
+				event.preventDefault();
+				this.goToSearchResults(this.state.query);
+			} else {
+				this.set('searchRequestInProgress', true);
+			}
+
+			this.closeSearch();
 		}
 	}
 });
