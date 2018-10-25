@@ -36,4 +36,30 @@ module('Integration | Component | wds-avatar', function (hooks) {
 
 		assert.equal(this.element.querySelectorAll('.wds-avatar__badge').length, 1, 'should render badge');
 	});
+
+    test(`it renders proper badge if sysop value is provided`, async function (assert) {
+        this.owner.register('service:i18n', Service.extend({
+            t() {
+                return 'some string';
+            }
+        }));
+
+        await render(hbs`{{wds-avatar badge="sysop"}}`);
+
+        const svgPath = this.element.querySelector('.wds-avatar__badge use').getAttribute('xlink:href');
+        assert.ok(svgPath.endsWith('admin'), 'should render badge');
+    });
+
+    test(`it renders proper badge if threadmoderator value is provided`, async function (assert) {
+        this.owner.register('service:i18n', Service.extend({
+            t() {
+                return 'some string';
+            }
+        }));
+
+        await render(hbs`{{wds-avatar badge="threadmoderator"}}`);
+
+        const svgPath = this.element.querySelector('.wds-avatar__badge use').getAttribute('xlink:href');
+        assert.ok(svgPath.endsWith('discussion-moderator'), 'should render badge');
+    });
 });
