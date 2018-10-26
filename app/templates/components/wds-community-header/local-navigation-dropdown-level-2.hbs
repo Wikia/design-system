@@ -1,10 +1,8 @@
 {{#wds-dropdown isLevel2=true tagName='li' class=stickedClassName as |dropdown|}}
-	<a href={{href}}>
-		{{#dropdown.toggle data-tracking-label=model.tracking_label as |chevron|}}
-			{{wds-community-header/nav-item item=model}}
-			{{chevron}}
-		{{/dropdown.toggle}}
-	</a>
+	{{#dropdown.toggle href=href data-tracking-label=model.tracking_label as |chevron|}}
+		{{wds-community-header/nav-item item=model}}
+		{{chevron}}
+	{{/dropdown.toggle}}
 	{{#dropdown.content scrollable=false}}
 		{{#wds-list linked=true}}
 			{{#each model.items as |thirdLevelItem|}}
