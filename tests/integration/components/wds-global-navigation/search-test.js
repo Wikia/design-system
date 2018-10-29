@@ -94,7 +94,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 
 	// 	await click('.wds-global-navigation__search-toggle-icon');
 	// 	await fillIn(searchInputSelector, 'query');
-	// 	await triggerKeyEvent(searchInputSelector, 'keypress', 'Enter');
+	// 	await triggerKeyEvent('.wds-global-navigation__search-container', 'keydown', 13);
 	// });
 
 	test('search suggestion can be chosen by keyboard', async function (assert) {

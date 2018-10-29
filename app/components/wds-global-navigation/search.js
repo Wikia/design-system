@@ -26,7 +26,6 @@ export default Component.extend({
 	hasSuggestions: notEmpty('suggestions'),
 	cachedResultsLimit: 100,
 	debounceDuration: 250,
-	shouldWaitForClickOnCloseSuggestion: false,
 	inSearchModal: false,
 	// this object is declared inline to enable sharing it's internals between all instances of search
 	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
@@ -66,52 +65,8 @@ export default Component.extend({
 		}
 	},
 
-	click(event) {
-		if (event.target.closest('.wds-global-navigation__search__suggestion')) {
-			if (this.onSearchSuggestionChosen) {
-				event.preventDefault();
-				this.onSearchSuggestionChosen(this.suggestions[this.selectedSuggestionIndex]);
-				this.closeSearch();
-			}
-
-			if (this.track) {
-				this.track({
-					action: 'click',
-					category: 'navigation',
-					label: 'search-open-suggestion-link'
-				});
-			}
-
-			this.setProperties({
-				shouldWaitForClickOnCloseSuggestion: false,
-			});
-			this.resetSearchState();
-
-		}
-	},
-
-	submit(event) {
-		if (this.track) {
-			this.track({
-				action: 'open',
-				category: 'navigation',
-				label: 'search-open-special-search'
-			});
-		}
-
-		if (this.goToSearchResults) {
-			event.preventDefault();
-			this.goToSearchResults(this.get('state.query'));
-
-			return;
-		}
-
-		this.set('searchRequestInProgress', true);
-
-	},
-
 	requestSuggestionsFromAPI() {
-		const query = this.get('state.query');
+		const { query } = this.state;
 		const uri = `${this.get('model.suggestions.url')}&query=${query}`;
 
 		/**
@@ -149,7 +104,7 @@ export default Component.extend({
 						 * Also, we don't want to show the suggestion results after a real search
 						 * will be finished, what will happen if search request is still in progress.
 						 */
-						if (!this.searchRequestInProgress && query === this.get('state.query')) {
+						if (!this.searchRequestInProgress && query === this.state.query) {
 							this.setSearchSuggestionItems(suggestions);
 						}
 
@@ -202,7 +157,7 @@ export default Component.extend({
 	},
 
 	runSuggestionsRequest() {
-		return this.requestSuggestionsFromAPI(this.get('state.query'));
+		return this.requestSuggestionsFromAPI(this.state.query);
 	},
 
 	//ToDo move to in-repo addon while workign on on-site notifications
@@ -226,7 +181,7 @@ export default Component.extend({
 			return;
 		}
 
-		const query = this.get('state.query'),
+		const { query } = this.state,
 			highlightRegexp = new RegExp(`(${this.escapeRegex(query)})`, 'ig'),
 			highlighted = wrapMeHelper.compute(['$1'], {
 				className: 'wds-global-navigation__search-suggestion-highlight'
@@ -349,12 +304,7 @@ export default Component.extend({
 	},
 
 	closeSearch() {
-		this.setProperties({
-			'state.query': '',
-			searchIsActive: false,
-			inputFocused: false,
-			suggestions: []
-		});
+		this.resetSearchState();
 
 		if (this.onSearchCloseClicked) {
 			this.onSearchCloseClicked();
@@ -362,7 +312,12 @@ export default Component.extend({
 	},
 
 	resetSearchState() {
-		this.set('inputFocused', false);
+		this.setProperties({
+			'state.query': '',
+			searchIsActive: false,
+			inputFocused: false,
+			suggestions: []
+		});
 
 		run(() => {
 			scheduleOnce('afterRender', this, () => {
@@ -373,8 +328,40 @@ export default Component.extend({
 		});
 	},
 
+	keyDown({ keyCode }) {
+		// down arrow
+		if (keyCode === 40) {
+			if (this.selectedSuggestionIndex < this.suggestions.length - 1) {
+				this.incrementProperty('selectedSuggestionIndex');
+			}
+
+			return false;
+		// up arrow
+		} else if (keyCode === 38) {
+			if (this.suggestions.length && this.selectedSuggestionIndex > -1) {
+				this.decrementProperty('selectedSuggestionIndex');
+			}
+
+			return false;
+		// ESC key
+		} else if (keyCode === 27) {
+			this.closeSearch();
+		// ENTER key
+		} else if (keyCode === 13) {
+			if (this.selectedSuggestionIndex !== -1) {
+				this.onSearchSuggestionChosen(
+					this.suggestions[this.selectedSuggestionIndex]
+				);
+				this.inputField.blur();
+
+				this.closeSearch();
+			}
+		}
+	},
+
 	actions: {
 		openSearch() {
+			this.resetSearchState();
 			this.set('searchIsActive', true);
 			this.onSearchToggleClicked();
 			this.inputField.focus();
@@ -386,7 +373,7 @@ export default Component.extend({
 				selectedSuggestionIndex: -1
 			});
 
-			this.getSuggestions(this.get('state.query'));
+			this.getSuggestions(this.state.query);
 		},
 
 		onCloseSearchClick(event) {
@@ -405,50 +392,47 @@ export default Component.extend({
 		},
 
 		onFocusOut() {
-			if (!this.get('state.query')) {
+			if (!this.state.query) {
+				this.closeSearch();
+			}
+		},
+
+		onSearchSuggestionClick(index) {
+			if (this.onSearchSuggestionChosen) {
+				this.onSearchSuggestionChosen(this.suggestions[index]);
 				this.closeSearch();
 			}
 
-			if (!this.shouldWaitForClickOnCloseSuggestion) {
-				this.resetSearchState();
+			if (this.track) {
+				this.track({
+					action: 'click',
+					category: 'navigation',
+					label: 'search-open-suggestion-link'
+				});
 			}
+
+			this.resetSearchState();
+
+			return !this.onSearchSuggestionChosen;
 		},
 
-		onSuggestionMouseDown() {
-			this.set('shouldWaitForClickOnCloseSuggestion', true);
-		},
-
-		onKeyDown(value, event) {
-			const keyCode = event.keyCode;
-
-			// down arrow
-			if (keyCode === 40) {
-				if (this.selectedSuggestionIndex < this.get('suggestions.length') - 1) {
-					this.incrementProperty('selectedSuggestionIndex');
-					event.preventDefault();
-				}
-			// up arrow
-			} else if (keyCode === 38) {
-				if (this.get('suggestions.length') && this.selectedSuggestionIndex > -1) {
-					this.decrementProperty('selectedSuggestionIndex');
-					event.preventDefault();
-				}
-			// ESC key
-			} else if (keyCode === 27) {
-				this.closeSearch();
-			// ENTER key
-			} else if (keyCode === 13) {
-				if (this.selectedSuggestionIndex !== -1) {
-					this.inputField.blur();
-					this.onSearchSuggestionChosen(this.suggestions[this.selectedSuggestionIndex]);
-				}
-
-				this.setSearchSuggestionItems();
+		submit(event) {
+			if (this.track) {
+				this.track({
+					action: 'open',
+					category: 'navigation',
+					label: 'search-open-special-search'
+				});
 			}
-		},
 
-		selectItem(index) {
-			this.set('selectedSuggestionIndex', index);
+			if (this.goToSearchResults) {
+				event.preventDefault();
+				this.goToSearchResults(this.state.query);
+			} else {
+				this.set('searchRequestInProgress', true);
+			}
+
+			this.closeSearch();
 		}
 	}
 });

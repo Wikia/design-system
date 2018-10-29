@@ -73,15 +73,15 @@
 
 <section>
 	<h2 id="example">Example usage</h2>
-	<p>All the styles are available not only as atomic classes, but also as placeholders, so that you can merge them into your other style rules.</p>
+	<p>All the styles are available not only as atomic classes, but also as SCSS variables (see wds-variables/typography), so that you can merge them into your other style rules.</p>
 	{{#code-sample language='scss'}}
 body {
 	font-family: $wds-font-family;
-	@extend %wds-leading-none;
+	line-height: $wds-line-height-none;
 }
 
 .wds-component {
-	@extend %wds-font-size-base;
+	font-size: $wds-font-size-base;
 }
 	{{/code-sample}}
 </section>

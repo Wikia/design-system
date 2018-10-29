@@ -14,7 +14,9 @@ export default Component.extend({
 		run.schedule('afterRender', () => {
 			window.addEventListener('scroll', () => {
 				throttle(this, function () {
-					this.set('isFixed', this.get('offset') < window.pageYOffset);
+					if(!this.isDestroyed) {
+						this.set('isFixed', this.offset < window.pageYOffset);
+					}
 				}, 100);
 			});
 		});
