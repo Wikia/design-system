@@ -1,12 +1,27 @@
-<div
-	class="{{@class}} {{if @isLevel2 'wds-dropdown-level-2__toggle' 'wds-dropdown__toggle'}}"
-	title={{@title}}
-	data-tracking-label={{@data-tracking-label}}
-	onclick={{action @click}}
->
-	{{#if hasBlock}}
-		{{yield (component 'wds-dropdown-icon' isLevel2=@isLevel2)}}
-	{{else}}
-		<span>{{@text}}</span>{{wds-dropdown-icon isLevel2=@isLevel2}}
-	{{/if}}
-</div>
+{{#if @href}}
+  <a
+    class="{{@class}} {{if @isLevel2 'wds-dropdown-level-2__toggle' 'wds-dropdown__toggle'}}"
+    title={{@title}}
+    data-tracking-label={{@data-tracking-label}}
+    onclick={{action @click}}
+  >
+    {{#if hasBlock}}
+      {{yield (component 'wds-dropdown-icon' isLevel2=@isLevel2)}}
+    {{else}}
+      <span>{{@text}}</span>{{wds-dropdown-icon isLevel2=@isLevel2}}
+    {{/if}}
+  </a>
+{{else}}
+  <div
+    class="{{@class}} {{if @isLevel2 'wds-dropdown-level-2__toggle' 'wds-dropdown__toggle'}}"
+    title={{@title}}
+    data-tracking-label={{@data-tracking-label}}
+    onclick={{action @click}}
+  >
+    {{#if hasBlock}}
+      {{yield (component 'wds-dropdown-icon' isLevel2=@isLevel2)}}
+    {{else}}
+      <span>{{@text}}</span>{{wds-dropdown-icon isLevel2=@isLevel2}}
+    {{/if}}
+  </div>
+{{/if}}
