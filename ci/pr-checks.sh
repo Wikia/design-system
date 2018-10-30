@@ -5,7 +5,7 @@ set -x
 set -o pipefail
 mkdir jenkins || rm -rf jenkins/* && true
 echo "githubToken=Authorization: token $GITHUB_TOKEN" > jenkins/params
-echo "githubUrl=https://api.github.com/repos/Wikia/ember-fandom/statuses/$GIT_COMMIT" >> jenkins/params
+echo "githubUrl=https://api.github.com/repos/Wikia/design-system/statuses/$GIT_COMMIT" >> jenkins/params
 
 # $1 - context
 # $2 - state
@@ -16,7 +16,7 @@ curl -s \
 	-X POST  \
 	-H "Authorization: token $GITHUB_TOKEN" \
 	-d "{ \"state\": \"$2\", \"description\": \"$3\", \"context\": \"$1\", \"target_url\": \"$4\" }" \
-	https://api.github.com/repos/Wikia/ember-fandom/statuses/$GIT_COMMIT
+	https://api.github.com/repos/Wikia/design-system/statuses/$GIT_COMMIT
 }
 
 # $1 - state name
