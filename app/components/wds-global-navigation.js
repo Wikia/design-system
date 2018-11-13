@@ -77,7 +77,7 @@ export default Component.extend({
 	},
 
 	scrollHandler() {
-		const communityBarOffsetY = this.communityBarElement ? this.communityBarElement.getBoundingClientRect().top : 0;
+		const communityBarOffsetY = this.communityBarElement.getBoundingClientRect().top;
 		const globalNavOffsetY = this.element.getBoundingClientRect().top;
 
 		if (communityBarOffsetY <= globalNavOffsetY && this.communityBarIsActive === false) {
