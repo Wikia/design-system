@@ -26,18 +26,25 @@ module.exports = {
 		// node files
 		{
 			files: [
-				'index.js',
+				'.eslintrc.js',
+				'.template-lintrc.js',
 				'ember-cli-build.js',
+				'index.js',
 				'testem.js',
+				'blueprints/*/index.js',
 				'config/**/*.js',
-				'lib/*/index.js',
 				'tests/dummy/config/**/*.js'
 			],
 			excludedFiles: [
-				'app/**',
 				'addon/**',
+				'addon-test-support/**',
+				'app/**',
 				'tests/dummy/app/**'
 			],
+			parserOptions: {
+				sourceType: 'script',
+				ecmaVersion: 2015
+			},
 			env: {
 				browser: false,
 				node: true
@@ -48,4 +55,4 @@ module.exports = {
 			})
 		}
 	]
-};
+}
