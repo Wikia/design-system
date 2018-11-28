@@ -1,7 +1,11 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
+/dist/
 /tmp/
+/docs/
+/docs-dev/
+/test-dist/
 
 # dependencies
 /bower_components/
