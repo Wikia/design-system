@@ -10,13 +10,15 @@ export default Component.extend({
 	init() {
 		this._super(...arguments);
 
-		/** 
+		/**
 		 * Some icon names are coming from DS API where icon name is returned as
 		 * e.g. name-tiny
 		 * Let's remove it from name so we can still use
 		 * {{wds-icon name=nameFromDesignSystemAPI size='tiny'}} and make sure it still works
 		 */
-		this.name = this.name.replace(/(-tiny|-small)$/, '');
+		this.name = this.name
+			.replace(/(-tiny|-small)$/, '')
+			.replace('wds-icons-', '');
 	},
 
 	sizeClassName: computed('size', function () {
