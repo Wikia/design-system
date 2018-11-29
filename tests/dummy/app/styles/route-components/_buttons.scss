@@ -3,11 +3,21 @@
 }
 
 .button-theming .primary-only.wds-button {
-	@include button-theming($wds-color-dark-blue, $wds-color-white);
+	--color-primary-text: #{$wds-color-white};
+
+	--color-primary:#{$wds-color-dark-blue};
+	--color-primary-active: #{lighten($wds-color-dark-blue, 20%)};
 }
 
 .button-theming .different-secondary.wds-button {
-	@include button-theming($wds-color-slate-gray, $wds-color-white, $wds-color-link);
+	--color-primary-text: #{$wds-color-white};
+
+	--color-primary:#{$wds-color-slate-gray};
+	--color-primary-active: #{lighten($wds-color-slate-gray, 20%)};
+
+	--color-secondary: #{$wds-color-link};
+	--color-secondary-active: #{lighten($wds-color-link, 20%)};
+
 }
 
 /* Button group sections */
@@ -17,7 +27,8 @@
 		padding: 7px;
 	}
 
-	.white-theme .wds-button {
-		@include button-theming(white, blue);
+	.white-theme {
+		--color-secondary: white;
+		--color-secondary-active: #{darken(white, 20%)};
 	}
 }

@@ -16,45 +16,56 @@
 	}
 
 	color: $color-primary-text;
+	color: var(--color-primary-text, $color-primary-text);
 	background: none;
 
 	&:not(.wds-is-text):not(.wds-is-secondary) {
 		background-color: $color-primary;
+		background-color: var(--color-primary, $color-primary);
 
 		&:focus:not(:disabled),
 		&:hover:not(:disabled),
 		&:active,
 		&.wds-is-active {
 			background-color: $color-primary-active;
+			background-color: var(--color-primary-active, $color-primary-active);
 			border-color: $color-primary-active;
+			border-color: var(--color-primary-active, $color-primary-active);
 		}
 	}
 
 	&:not(.wds-is-text) {
 		border-color: $color-primary;
+		border-color: var(--color-primary, $color-primary);
 	}
 
 	&.wds-is-secondary {
 		border-color: $color-secondary;
+		border-color: var(--color-secondary, $color-secondary);
 		color: $color-secondary;
+		color: var(--color-secondary, $color-secondary);
 
 		&:focus:not(:disabled),
 		&:hover:not(:disabled),
 		&:active,
 		&.wds-is-active {
 			border-color: $color-secondary-active;
+			border-color: var(--color-secondary-active, $color-secondary-active);
 			color: $color-secondary-active;
+			color: var(--color-secondary-active, $color-secondary-active);
 		}
 	}
 
 	&.wds-is-text {
 		color: $color-secondary;
+		color: var(--color-secondary, $color-secondary);
 
 		&:focus:not(:disabled),
 		&:hover:not(:disabled),
 		&:active,
 		&.wds-is-active {
 			color: $color-secondary-active;
+			color: var(--color-secondary-active, $color-secondary-active);
 		}
 	}
 }

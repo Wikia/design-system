@@ -94,13 +94,13 @@
 
 	&::after {
 		border: 8px solid transparent;
-		border-bottom-color: $wds-color-white;
+		//border-bottom-color: $wds-color-white;
 		margin-left: -8px;
 	}
 
 	&::before {
 		border: 9px solid transparent;
-		border-bottom-color: $wds-color-faint-gray;
+		//border-bottom-color: $wds-color-faint-gray;
 		margin-left: -9px;
 	}
 
@@ -144,6 +144,8 @@
 			border: 0;
 		}
 	}
+
+	@include dropdown-theming($wds-color-white, $wds-color-black, $wds-color-link, $wds-color-faint-gray);
 }
 
 .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 {

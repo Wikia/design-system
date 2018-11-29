@@ -12,8 +12,11 @@
 
 	.wds-dropdown__content {
 		background-color: $dropdown-background-color;
+		background-color: var(--dropdown-background-color, $dropdown-background-color);
 		border-color: $color-page-border;
+		border-color: var(--color-page-border, $color-page-border);
 		color: $color-text;
+		color: var(--color-text, $color-text);
 
 		&:not(.wds-is-not-scrollable) {
 			.wds-list {
@@ -24,28 +27,36 @@
 		.wds-list.wds-is-linked li {
 			> a {
 				color: $color-text;
+				color: var(--color-text, $color-text);
 			}
 
 			&:hover {
 				> a {
 					background-color: rgba($color-links, .1);
+					background-color: var(--color-links, #{rgba($color-links, .1)});
 					color: $color-links;
+					color: var(--color-links, $color-links);
 				}
 			}
 		}
 
 		.wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content {
 			background-color: $dropdown-background-color;
+			background-color: var(--dropdown-background-color, $dropdown-background-color);
 			border-color: $color-page-border;
+			border-color: var(--color-page-border, $color-page-border);
 			color: $color-text;
+			color: var(--color-text, $color-text);
 		}
 	}
 
-	.wds-dropdown::after {
+	&::after {
 		border-bottom-color: $dropdown-background-color;
+		border-bottom-color: var(--dropdown-background-color, $dropdown-background-color);
 	}
 
-	.wds-dropdown::before {
+	&::before {
 		border-bottom-color: $color-page-border;
+		border-bottom-color: var(--color-page-border, $color-page-border);
 	}
 }
