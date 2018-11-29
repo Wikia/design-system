@@ -3,8 +3,8 @@
 </div>
 <a
 	class="wds-community-bar__navigation-header"
-	href="{{secondLevelItem.href}}"
-	data-tracking-label="{{unless (equal secondLevelItem.href "#") secondLevelItem.tracking_label}}"
+	href={{secondLevelItem.href}}
+	data-tracking-label={{unless (equal secondLevelItem.href "#") secondLevelItem.tracking_label}}
 	onclick={{action onLinkClicked}}
 >
 	{{wds-label label=secondLevelItem.title}}
@@ -12,7 +12,7 @@
 {{#wds-list linked=true}}
 	{{#each secondLevelItem.items as |thirdLevelItem|}}
 		<li>
-			<a href="{{thirdLevelItem.href}}" data-tracking-label="{{unless (equal thirdLevelItem.href "#") thirdLevelItem.tracking_label}}" onclick={{action onThirdLevelClicked}}>
+			<a href={{thirdLevelItem.href}} data-tracking-label={{unless (equal thirdLevelItem.href "#") thirdLevelItem.tracking_label}} onclick={{action onThirdLevelClicked}}>
 				{{wds-label label=thirdLevelItem.title}}
 			</a>
 		</li>

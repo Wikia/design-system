@@ -1,6 +1,6 @@
 <div class="wds-global-navigation__content-container">
 	<div class="wds-global-navigation__content-bar-left">
-		<a href="{{model.logo.href}}" class="wds-global-navigation__logo" data-tracking-label="{{model.logo.tracking-label}}">
+		<a href={{model.logo.href}} class="wds-global-navigation__logo" data-tracking-label={{model.logo.tracking-label}}>
 			{{! available class names: wds-is-wds-company-logo-fandom wds-is-wds-company-logo-wikia-org}}
 			{{svg
 				model.logo.image-data.name
@@ -11,13 +11,13 @@
 	</div>
 	<div class="wds-global-navigation__content-bar-right">
 		<div class="wds-global-navigation__community-bar">
-			<a href="{{model.logo.href}}" class="wds-global-navigation__logo-heart-link" data-tracking-label="{{model.logo.tracking-label}}">
+			<a href={{model.logo.href}} class="wds-global-navigation__logo-heart-link" data-tracking-label={{model.logo.tracking-label}}>
 				{{svg "wds-company-logo-fandom-heart" class="wds-global-navigation__logo-heart"}}
 			</a>
 			<div class="wds-global-navigation__community-bar-separator"></div>
 
 			<div class="wds-community-bar__sitename">
-				<a href="{{sitename.href}}" data-tracking-label="{{sitename.tracking_label}}">
+				<a href={{sitename.href}} data-tracking-label={{sitename.tracking_label}}>
 					{{#if sitename.mobile_title}}
 						{{sitename.mobile_title.value}}
 					{{else}}
@@ -98,12 +98,12 @@
 	{{#if model.partner-slot}}
 		<div class="wds-global-navigation__partner-slot">
 			<div class="wds-global-navigation__partner-slot-horizontal-bar"></div>
-			<a href="{{model.partner-slot.href}}" class="wds-global-navigation__partner-slot-link" data-tracking-label="{{model.partner_slot.tracking-label}}">
+			<a href={{model.partner-slot.href}} class="wds-global-navigation__partner-slot-link" data-tracking-label={{model.partner_slot.tracking-label}}>
 				<img class="wds-global-navigation__partner-slot-image"
 					 width="55"
 					 height="20"
-					 src="{{model.partner-slot.image-data.url}}"
-					 alt="{{model.partner-slot.title.value}}">
+					 src={{model.partner-slot.image-data.url}}
+					 alt={{model.partner-slot.title.value}}>
 			</a>
 		</div>
 	{{/if}}

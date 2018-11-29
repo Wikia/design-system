@@ -11,7 +11,6 @@ module.exports = {
 	'no-inline-styles': false,
 	'img-alt-attributes': false,
 	'table-groups': false,
-	'no-unnecessary-concat': false,
 	'self-closing-void-elements': false,
 	'no-invalid-interactive': false,
 	'no-triple-curlies': false,
