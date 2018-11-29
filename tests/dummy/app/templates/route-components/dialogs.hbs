@@ -7,9 +7,9 @@
 	<ul>
 		<li><strong>title</strong> (string): Title of a dialog</li>
 		<li><strong>onOk</strong> (action): action fired when OK is clicked</li>
-		<li><strong>onCancel</strong> (action): action fired when Cancel is clicked or click happens outside dialog. This action recieves a parameter specifying if 'curtain' or 'button' was clicked to cancel the dialog.</li>
-		<li><strong>okText</strong> (string): text to display as an OK option - defaults to 'OK'</li>
-		<li><strong>cancelText</strong> (string): text to display as an Cancel option - defaults to 'Cancel'</li>
+		<li><strong>onCancel</strong> (action): action fired when Cancel is clicked or click happens outside dialog. This action recieves a parameter specifying if "curtain" or "button" was clicked to cancel the dialog.</li>
+		<li><strong>okText</strong> (string): text to display as an OK option - defaults to "OK"</li>
+		<li><strong>cancelText</strong> (string): text to display as an Cancel option - defaults to "Cancel"</li>
 	</ul>
 </div>
 
@@ -19,20 +19,20 @@
 
 {{#if showDialog}}
 	{{#wds-dialog
-		title='Title'
-		onOK=(action 'onOK' 'showDialog')
-		onCancel=(action 'onCancel' 'showDialog')
+		title="Title"
+		onOK=(action "onOK" "showDialog")
+		onCancel=(action "onCancel" "showDialog")
 	}}
 		Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
 	{{/wds-dialog}}
 {{/if}}
 
-{{#component-demo name='dialog' codeOnly=true}}
+{{#component-demo name="dialog" codeOnly=true}}
 	{{#if true}}
 		{{#wds-dialog
-			title='Title'
-			onOK=(action 'onOK')
-			onCancel=(action 'onCancel')
+			title="Title"
+			onOK=(action "onOK")
+			onCancel=(action "onCancel")
 		}}
 			Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
 		{{/wds-dialog}}
@@ -45,18 +45,18 @@
 
 {{#if showDialogNoTitle}}
 	{{#wds-dialog
-		onOK=(action 'onOK' 'showDialogNoTitle')
-		onCancel=(action 'onCancel' 'showDialogNoTitle')
+		onOK=(action "onOK" "showDialogNoTitle")
+		onCancel=(action "onCancel" "showDialogNoTitle")
 	}}
 		Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
 	{{/wds-dialog}}
 {{/if}}
 
-{{#component-demo name='dialog' codeOnly=true}}
+{{#component-demo name="dialog" codeOnly=true}}
 	{{#if true}}
 		{{#wds-dialog
-			onOK=(action 'onOK')
-			onCancel=(action 'onCancel')
+			onOK=(action "onOK")
+			onCancel=(action "onCancel")
 		}}
 			Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
 		{{/wds-dialog}}
@@ -69,24 +69,24 @@
 
 {{#if showDialogCustomActionText}}
 	{{#wds-dialog
-		title='Title'
-		onOK=(action 'onOK' 'showDialogCustomActionText')
-		onCancel=(action 'onCancel' 'showDialogCustomActionText')
-		okText='Yes'
-		cancelText='No'
+		title="Title"
+		onOK=(action "onOK" "showDialogCustomActionText")
+		onCancel=(action "onCancel" "showDialogCustomActionText")
+		okText="Yes"
+		cancelText="No"
 	}}
 		Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
 	{{/wds-dialog}}
 {{/if}}
 
-{{#component-demo name='dialog' codeOnly=true}}
+{{#component-demo name="dialog" codeOnly=true}}
 	{{#if true}}
 		{{#wds-dialog
-			title='Title'
-			onOK=(action 'onOK')
-			onCancel=(action 'onCancel')
-			okText='Yes'
-			cancelText='No'
+			title="Title"
+			onOK=(action "onOK")
+			onCancel=(action "onCancel")
+			okText="Yes"
+			cancelText="No"
 		}}
 			Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
 		{{/wds-dialog}}

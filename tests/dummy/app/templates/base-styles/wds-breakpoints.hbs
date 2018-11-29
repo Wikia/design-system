@@ -6,19 +6,19 @@
 
 <p>
 	Support for multiple breakpoints is vital for proper display of content across various browser sizes.
-	While historically our main audience has come through on desktop, mobile viewing of Fandom's content has surpassed
+	While historically our main audience has come through on desktop, mobile viewing of Fandom"s content has surpassed
 	desktop traffic. Breakpoints allow for the proper display of content and advertising across devices.
 	Design and engineering should create with responsiveness in mind, planning for multiple breakpoints.
 </p>
 <p class="alert-info">
-	{{wds-icon name='alert' class='wds-icon-small'}}
-	If you want to see documentation on outdated breakpoints check {{#link-to 'base-styles.breakpoints'}}here{{/link-to}}.
+	{{wds-icon name="alert" class="wds-icon-small"}}
+	If you want to see documentation on outdated breakpoints check {{#link-to "base-styles.breakpoints"}}here{{/link-to}}.
 </p>
 
 <section>
 	<h2 id="values">Breakpoint values</h2>
 	<p>
-		Fandom Design System uses <b>Mobile-first</b> approach. Fandom's layout has 18px margin on both sides - also defined by <code class="format-code">$wds-content-well-margins</code> variable.<br/>
+		Fandom Design System uses <b>Mobile-first</b> approach. Fandom"s layout has 18px margin on both sides - also defined by <code class="format-code">$wds-content-well-margins</code> variable.<br/>
 		To set breakpoints pick one of variables from table below and use it in <code>@media</code> query in scss file.
 	</p>
 	<table class="variables-table">
@@ -158,7 +158,7 @@
 		</tr>
 	</table>
 	<h3>Example usage:</h3>
-	{{#code-sample language='scss'}}
+	{{#code-sample language="scss"}}
 .example {
 	width: 300px;
 
@@ -172,7 +172,7 @@
 <section>
 	<h2 id="mixins">Useful mixns</h2>
 	<p>
-		It's recommended to use the following mixins to make implementation easier.
+		It"s recommended to use the following mixins to make implementation easier.
 	</p>
 	<h3>Content well mixin</h3>
 	<p>
@@ -180,11 +180,11 @@
 	</p>
 	<h3>Hide on breakpoints mixin</h3>
 	<p>
-		If there's a need to hide particular element on some of the breakpoints the <code class="format-code">wds-hide-on-breakpoint(<em>breakpoint</em>)</code> mixin should be used.<br/>
+		If there"s a need to hide particular element on some of the breakpoints the <code class="format-code">wds-hide-on-breakpoint(<em>breakpoint</em>)</code> mixin should be used.<br/>
 		The breakpoint (or list of breakpoints) is passed in the param.
 	</p>
 	<h3>Examples:</h3>
-	{{#code-sample language='scss'}}
+	{{#code-sample language="scss"}}
 .content {
 	@include wds-content-well;
 

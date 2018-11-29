@@ -1,11 +1,11 @@
 <h1>API</h1>
 <p>
 	API that returns content for Global Navigation and Footer was introduced to keep consistency across different platforms.
-	It's recommended for every integration to use this API to make sure that content is the same and future changes are going to be reflected on every platform.
+	It"s recommended for every integration to use this API to make sure that content is the same and future changes are going to be reflected on every platform.
 </p>
 <p>To render the Global Navigation and the Global Footer you need to:</p>
 <ul>
-	<li>{{#link-to 'overview.quick-start'}}Install Design System{{/link-to}}</li>
+	<li>{{#link-to "overview.quick-start"}}Install Design System{{/link-to}}</li>
 	<li>Install localization messages</li>
 	<li>Fetch the data from the Design System API</li>
 	<li>Render HTML based on the data</li>
@@ -45,8 +45,8 @@
 <section>
 	<h2 id="render-html">Render HTML based on the data</h2>
 	<p>
-		See all the variants of the final markup on {{#link-to 'identity.global-navigation'}}Global Navigation{{/link-to}}
-		and {{#link-to 'identity.global-footer'}}Global Footer{{/link-to}} pages.
+		See all the variants of the final markup on {{#link-to "identity.global-navigation"}}Global Navigation{{/link-to}}
+		and {{#link-to "identity.global-footer"}}Global Footer{{/link-to}} pages.
 		To make the implementation easier you can look at the existing ones and use them as examples:
 	</p>
 	<ul>
@@ -62,7 +62,7 @@
 	</p>
 	<p>
 		Example in JS:
-		{{#code-sample language='js'}}
+		{{#code-sample language="js"}}
 this.headers = {
 	Cookie: `access_token=${this.request.state.access_token}`
 };
@@ -76,7 +76,7 @@ this.headers = {
 		The Design System API returns i18n keys which then need to be matched to the translated strings in particular language.
 		You should use <a href="https://github.com/Wikia/design-system-i18n" target="_blank">https://github.com/Wikia/design-system-i18n</a>
 		as the source of messages. When there is a need for parameter in a message, we use the format
-		<code class="format-code">__placeholder__</code>. It's ready for use with the i18next library but might need
+		<code class="format-code">__placeholder__</code>. It"s ready for use with the i18next library but might need
 		a conversion for other libraries. See how we
 		<a href="https://github.com/Wikia/app/blob/dev/extensions/wikia/DesignSystem/i18n/build.js" target="_blank">convert them for MediaWiki</a>.
 	</p>
@@ -115,8 +115,8 @@ this.headers = {
 <section>
 	<h2 id="interactions">Interactions</h2>
 	<p>
-		Design System doesn't provide JavaScript for handling interactions, so you need to implement them yourself.
+		Design System doesn"t provide JavaScript for handling interactions, so you need to implement them yourself.
 		There are no interactions for the Global Footer. You can find the list of interactions for the Global Navigation
-		on the {{#link-to 'identity.global-navigation'}}component's page{{/link-to}}.
+		on the {{#link-to "identity.global-navigation"}}component"s page{{/link-to}}.
 	</p>
 </section>

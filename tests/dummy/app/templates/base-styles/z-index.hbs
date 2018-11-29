@@ -3,7 +3,7 @@
 	When elements overlap, z-order determines which one covers the other. An element with a larger z-index generally covers an element with a lower one.
 </p>
 <p>
-	Try not to implement z-index that doesn't use this scale, if you have a use-case that
+	Try not to implement z-index that doesn"t use this scale, if you have a use-case that
 	for some reason falls out of this scale, ask for guidance before implementing one-offs.
 </p>
 
@@ -65,12 +65,12 @@
 <section>
 	<h2 id="example">Example usage</h2>
 	<h3>Define meaningful variables for your components in one place</h3>
-	{{#code-sample language='scss'}}
+	{{#code-sample language="scss"}}
 $z-external-video-player: $z-1;
 $z-sticky-editor: $z-7;
 	{{/code-sample}}
 	<h3>Then use those variables throught your CSS</h3>
-{{#code-sample language='scss'}}
+{{#code-sample language="scss"}}
 .inline-editor-floating-container {
 	z-index: $z-discussion-sticky-editor;
 }

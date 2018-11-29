@@ -1,10 +1,10 @@
 {{#wds-list class=firstLevelClasses linked=true}}
 	{{#each model as |firstLevelItem index|}}
 		<li>
-			<a href="{{firstLevelItem.href}}" data-tracking-label="{{unless (equal firstLevelItem.href '#') firstLevelItem.tracking_label}}" onclick={{action onFirstLevelSelected index firstLevelItem}}>
+			<a href="{{firstLevelItem.href}}" data-tracking-label="{{unless (equal firstLevelItem.href "#") firstLevelItem.tracking_label}}" onclick={{action onFirstLevelSelected index firstLevelItem}}>
 				{{wds-label label=firstLevelItem.title}}
 				{{#if firstLevelItem.items}}
-					{{svg 'wds-icons-menu-control-tiny' class='wds-icon wds-icon-tiny'}}
+					{{svg "wds-icons-menu-control-tiny" class="wds-icon wds-icon-tiny"}}
 				{{/if}}
 			</a>
 		</li>
@@ -18,7 +18,7 @@
 			firstLevelIndexSelected=firstLevelIndexSelected
 			secondLevelIndexSelected=secondLevelIndexSelected
 			onSecondLevelClicked=(action onSecondLevelSelected)
-			onBackButtonClicked=(action resetSelected 'firstLevelIndexSelected')
+			onBackButtonClicked=(action resetSelected "firstLevelIndexSelected")
 			onLinkClicked=(action onLinkClicked)
 		}}
 		{{#each firstLevelItem.items as |secondLevelItem secondLevelIndex|}}
@@ -30,7 +30,7 @@
 					secondLevelIndex=secondLevelIndex
 					secondLevelIndexSelected=secondLevelIndexSelected
 					onThirdLevelClicked=(action onThirdLevelSelected)
-					onBackButtonClicked=(action resetSelected 'secondLevelIndexSelected')
+					onBackButtonClicked=(action resetSelected "secondLevelIndexSelected")
 					onLinkClicked=(action onLinkClicked)
 				}}
 			{{/if}}

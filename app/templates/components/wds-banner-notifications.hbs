@@ -1,7 +1,7 @@
 {{#each model as |notification|}}
 	{{#wds-banner-notification
 		type=notification.type
-		onClose=(action 'onClose' notification.id)
+		onClose=(action "onClose" notification.id)
 	}}
 		{{#if notification.text}}
 			{{notification.text}}

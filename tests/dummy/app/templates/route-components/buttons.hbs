@@ -13,7 +13,7 @@
 	There are two more base variants: Secondary and Text.
 </p>
 <p>
-	Passing additional <code>disabled</code> attribute will change button's styling and functionality.
+	Passing additional <code>disabled</code> attribute will change button"s styling and functionality.
 	This Boolean attribute indicates that the user cannot interact with the button.
 	Other <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Attributes">
 	valid HTML attributes</a> may be passed as well.
@@ -25,10 +25,10 @@
 <section>
 	<h2 id="primary">Primary buttons</h2>
 	<p>Default version for general use.</p>
-	{{#component-demo name='buttons'}}
+	{{#component-demo name="buttons"}}
 		{{#wds-button}}Primary button{{/wds-button}}
 		{{#wds-button}}
-			{{wds-icon name='fandom-heart' size='small'}}
+			{{wds-icon name="fandom-heart" size="small"}}
 			<span>Primary button</span>
 		{{/wds-button}}
 		{{#wds-button disabled=true}}Primary disabled{{/wds-button}}
@@ -56,12 +56,12 @@
 
 <section>
 	<h2 id="secondary">Secondary buttons</h2>
-	<p>Adding class <code class="format-code">.wds-is-secondary</code> changes the button's looks. It is used to create
-		a button that draws less user's attention.</p>
-	{{#component-demo name='buttons-secondary'}}
+	<p>Adding class <code class="format-code">.wds-is-secondary</code> changes the button"s looks. It is used to create
+		a button that draws less user"s attention.</p>
+	{{#component-demo name="buttons-secondary"}}
 		{{#wds-button secondary=true}}Secondary button{{/wds-button}}
 		{{#wds-button secondary=true}}
-			{{wds-icon name='fandom-heart' size='small'}}
+			{{wds-icon name="fandom-heart" size="small"}}
 			<span>Secondary button</span>
 		{{/wds-button}}
 		{{#wds-button secondary=true disabled=true}}Secondary disabled{{/wds-button}}
@@ -75,7 +75,7 @@
 		*For dropdown properties see dropdown reference page.
 	</p>
 
-	{{#component-demo name='dropdown-buttons'}}
+	{{#component-demo name="dropdown-buttons"}}
 		{{#wds-dropdown as |dropdown|}}
 			{{#dropdown.toggle as |chevron|}}
 				{{#wds-button}}<span>Dropdown</span> {{chevron}}{{/wds-button}}
@@ -99,7 +99,7 @@
 		{{#wds-dropdown as |dropdown|}}
 			{{#dropdown.toggle as |chevron|}}
 				{{#wds-button}}
-					{{wds-icon name='fandom-heart' size='small'}}
+					{{wds-icon name="fandom-heart" size="small"}}
 					<span>Dropdown</span>
 					{{chevron}}
 				{{/wds-button}}
@@ -132,10 +132,10 @@
 	<h2 id="text">Text buttons</h2>
 	<p>These buttons are denoted with <code class="format-code">.wds-is-text</code> class. They are the least obtrusive.
 		Nevertheless, their paddings remain untouched, which provides the same clickable area.</p>
-	{{#component-demo name='text-buttons'}}
+	{{#component-demo name="text-buttons"}}
 		{{#wds-button text=true}}Text button{{/wds-button}}
 		{{#wds-button text=true}}
-			{{wds-icon name='fandom-heart' size='small'}}
+			{{wds-icon name="fandom-heart" size="small"}}
 			<span>Text button</span>
 		{{/wds-button}}
 		{{#wds-button text=true disabled=true}}Text disabled{{/wds-button}}
@@ -147,19 +147,19 @@
 	<p>For a fixed size square button use <code class="format-code">.wds-is-square</code> class. This button will be
 		45px x 45px with content centered inside. This type of button is mostly used for icons, example: social icons.
 	</p>
-	{{#component-demo name='button-square'}}
-		{{#wds-button square=true class='wds-is-facebook-color'}}{{wds-icon name='facebook'}}{{/wds-button}}
-		{{#wds-button square=true class='wds-is-nk-color'}}{{wds-icon name='nk'}}{{/wds-button}}
+	{{#component-demo name="button-square"}}
+		{{#wds-button square=true class="wds-is-facebook-color"}}{{wds-icon name="facebook"}}{{/wds-button}}
+		{{#wds-button square=true class="wds-is-nk-color"}}{{wds-icon name="nk"}}{{/wds-button}}
 	{{/component-demo}}
 </section>
 
 <section>
 	<h2 id="other:multiline">Other usages: multiline button</h2>
 	<p>Button labels can wrap to multiple lines.</p>
-	{{#component-demo name='multiline-button'}}
-		{{#wds-button class='fixed-width-140px'}}Multiline button label with 3rd line{{/wds-button}}
-		{{#wds-button class='fixed-width-140px'}}
-			{{wds-icon name='fandom-heart' size='small'}}
+	{{#component-demo name="multiline-button"}}
+		{{#wds-button class="fixed-width-140px"}}Multiline button label with 3rd line{{/wds-button}}
+		{{#wds-button class="fixed-width-140px"}}
+			{{wds-icon name="fandom-heart" size="small"}}
 			<span>Multiline button label</span>
 		{{/wds-button}}
 	{{/component-demo}}
@@ -171,13 +171,13 @@
 		anchor tag <code>&lt;a&gt;</code> styled as a button. It is achieved by adding a <code class="format-code">.wds-button</code>
 		class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.
 	</p>
-	{{#component-demo name='link-buttons'}}
-		{{#wds-button href='#'}}Link button{{/wds-button}}
-		{{#wds-button href='#'}}
-			{{wds-icon name='fandom-heart' size='small'}}
+	{{#component-demo name="link-buttons"}}
+		{{#wds-button href="#"}}Link button{{/wds-button}}
+		{{#wds-button href="#"}}
+			{{wds-icon name="fandom-heart" size="small"}}
 			<span>Link button</span>
 		{{/wds-button}}
-		{{#wds-button href='#' secondary=true}}Secondary link button{{/wds-button}}
+		{{#wds-button href="#" secondary=true}}Secondary link button{{/wds-button}}
 	{{/component-demo}}
 </section>
 
@@ -187,22 +187,22 @@
 		Theming can be applied to buttons by <code class="format-code">button-theming</code> mixin.
 		For basic usage, mixin takes two parameters: primary-background-color and prmary-text-color:
 	</p>
-	{{#component-demo name='button-theming-scss' language='scss' codeOnly=true}}
+	{{#component-demo name="button-theming-scss" language="scss" codeOnly=true}}
 		.wds-button {
 			@include button-theming($wds-color-dark-blue, $wds-color-white);
 		}
 	{{/component-demo}}
 
-	{{#component-demo name='buttons-theming'}}
-		{{#wds-button class='primary-only'}}Primary{{/wds-button}}
-		{{#wds-button class='primary-only'}}
-			{{wds-icon name='fandom-heart' size='small'}}
+	{{#component-demo name="buttons-theming"}}
+		{{#wds-button class="primary-only"}}Primary{{/wds-button}}
+		{{#wds-button class="primary-only"}}
+			{{wds-icon name="fandom-heart" size="small"}}
 			<span>Primary button</span>
 		{{/wds-button}}
 
 		{{#wds-dropdown as |dropdown|}}
 			{{#dropdown.toggle as |chevron|}}
-				{{#wds-button class='primary-only'}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
+				{{#wds-button class="primary-only"}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
 				{{#wds-list}}
@@ -212,27 +212,27 @@
 				{{/wds-list}}
 			{{/dropdown.content}}
 		{{/wds-dropdown}}
-		{{#wds-button secondary=true class='primary-only'}}Secondary{{/wds-button}}
-		{{#wds-button text=true class='primary-only'}}Text{{/wds-button}}
+		{{#wds-button secondary=true class="primary-only"}}Secondary{{/wds-button}}
+		{{#wds-button text=true class="primary-only"}}Text{{/wds-button}}
 	{{/component-demo}}
 
 	<p>It is also possible to apply different color for secondary and text buttons than to primary ones:</p>
-	{{#code-sample language='sass'}}
+	{{#code-sample language="sass"}}
 		.wds-button {
 			@include button-theming($wds-color-slate-gray, $wds-color-white, $wds-color-link);
 		}
 	{{/code-sample}}
 
-	{{#component-demo name='buttons-theming-2'}}
-		{{#wds-button class='different-secondary'}}Primary{{/wds-button}}
-		{{#wds-button class='different-secondary'}}
-			{{wds-icon name='fandom-heart' size='small'}}
+	{{#component-demo name="buttons-theming-2"}}
+		{{#wds-button class="different-secondary"}}Primary{{/wds-button}}
+		{{#wds-button class="different-secondary"}}
+			{{wds-icon name="fandom-heart" size="small"}}
 			<span>Primary button</span>
 		{{/wds-button}}
 
 		{{#wds-dropdown as |dropdown|}}
 			{{#dropdown.toggle as |chevron|}}
-				{{#wds-button class='different-secondary'}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
+				{{#wds-button class="different-secondary"}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
 			{{/dropdown.toggle}}
 			{{#dropdown.content}}
 				{{#wds-list}}
@@ -242,8 +242,8 @@
 				{{/wds-list}}
 			{{/dropdown.content}}
 		{{/wds-dropdown}}
-		{{#wds-button secondary=true class='different-secondary'}}Secondary{{/wds-button}}
-		{{#wds-button text=true class='different-secondary'}}Text{{/wds-button}}
+		{{#wds-button secondary=true class="different-secondary"}}Secondary{{/wds-button}}
+		{{#wds-button text=true class="different-secondary"}}Text{{/wds-button}}
 	{{/component-demo}}
 </section>
 
@@ -252,7 +252,7 @@
 	<p>Group a series of buttons together on a single line with the button group.</p>
 	<p>Button group comes with no default styling of its own. Colors, sizes and animations are driven by buttons.</p>
 	<p>Wrap a series of buttons with <code>.wds-button</code> in <code>.wds-button-group</code>.</p>
-	{{#component-demo name='button-group-mix'}}
+	{{#component-demo name="button-group-mix"}}
 		<div class="wds-button-group">
 			{{#wds-button}}1{{/wds-button}}
 			{{#wds-button}}2{{/wds-button}}
@@ -262,7 +262,7 @@
 		</div>
 	{{/component-demo}}
 	<p>Mixing primary, secondary and different sizes of buttons is not supported. All buttons have to be of the same type.</p>
-	{{#component-demo name='button-group-mix'}}
+	{{#component-demo name="button-group-mix"}}
 		<div class="wds-button-group">
 			{{#wds-button secondary=true}}6{{/wds-button}}
 			{{#wds-button secondary=true}}7{{/wds-button}}
@@ -276,17 +276,17 @@
 <section class="button-group-icons-section">
 	<h2 id="group:icons">Button group with icons</h2>
 
-	{{#component-demo name='button-group-with-icons'}}
+	{{#component-demo name="button-group-with-icons"}}
 		<div class="wds-button-group white-theme">
 			{{#wds-button secondary=true}}
-				{{wds-icon name='activity' size='small'}}
+				{{wds-icon name="activity" size="small"}}
 				<span>Activity</span>
 			{{/wds-button}}
 			{{#wds-button secondary=true}}
-				{{wds-icon name='house' size='small'}}
+				{{wds-icon name="house" size="small"}}
 			{{/wds-button}}
 			{{#wds-button secondary=true}}
-				{{wds-icon name='map' size='small'}}
+				{{wds-icon name="map" size="small"}}
 			{{/wds-button}}
 		</div>
 	{{/component-demo}}
@@ -296,10 +296,10 @@
 <section class="button-group-dropdown-section">
 	<h2 id="group:dropdowns">Button group with dropdown button</h2>
 	<p>It is also possible to include dropdown button within button-group</p>
-	{{#component-demo name='button-group-icons-in-dropdowns'}}
+	{{#component-demo name="button-group-icons-in-dropdowns"}}
 		<div class="wds-button-group">
 			{{#wds-button}}
-				{{wds-icon name='pencil' size='small'}}
+				{{wds-icon name="pencil" size="small"}}
 				<span>Edit</span>
 			{{/wds-button}}
 			{{#wds-dropdown as |dropdown|}}

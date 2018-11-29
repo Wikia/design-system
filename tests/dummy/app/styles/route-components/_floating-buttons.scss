@@ -1,0 +1,15 @@
+.fake-image {
+	background-image: url('/images/fandom-background.svg');
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 160px;
+	position: relative;
+	width: 320px;
+}
+
+.action-on-top-of-fake-image {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
