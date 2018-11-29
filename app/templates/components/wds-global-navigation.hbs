@@ -4,7 +4,7 @@
 			{{! available class names: wds-is-wds-company-logo-fandom wds-is-wds-company-logo-wikia-org}}
 			{{svg
 				model.logo.image-data.name
-				class=(concat 'wds-global-navigation__logo-image wds-is-' model.logo.image-data.name)
+				class=(concat "wds-global-navigation__logo-image wds-is-" model.logo.image-data.name)
 			}}
 		</a>
 		{{wds-global-navigation/main-navigation model=model.main-navigation}}
@@ -12,7 +12,7 @@
 	<div class="wds-global-navigation__content-bar-right">
 		<div class="wds-global-navigation__community-bar">
 			<a href="{{model.logo.href}}" class="wds-global-navigation__logo-heart-link" data-tracking-label="{{model.logo.tracking-label}}">
-				{{svg 'wds-company-logo-fandom-heart' class='wds-global-navigation__logo-heart'}}
+				{{svg "wds-company-logo-fandom-heart" class="wds-global-navigation__logo-heart"}}
 			</a>
 			<div class="wds-global-navigation__community-bar-separator"></div>
 
@@ -29,11 +29,11 @@
 		<div class="wds-global-navigation__dropdown-controls">
 			{{wds-global-navigation/search
 				model=model.search
-				onSearchToggleClicked=(action 'onSearchToggleClicked')
-				onSearchCloseClicked=(action 'onSearchCloseClicked')
-				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
-				goToSearchResults=(action 'goToSearchResults')
-				track=(action 'track')
+				onSearchToggleClicked=(action "onSearchToggleClicked")
+				onSearchCloseClicked=(action "onSearchCloseClicked")
+				onSearchSuggestionChosen=(action "onSearchSuggestionChosen")
+				goToSearchResults=(action "goToSearchResults")
+				track=(action "track")
 			}}
 			{{#if model.user}}
 				{{wds-global-navigation/user model=model.user}}
@@ -57,18 +57,18 @@
 				isOpen=isSearchModalOpen
 				canShowContentRecommendations=canShowContentRecommendations
 				openModal=(action openModal)
-				onSearchToggleClicked=(action 'onSearchToggleClicked')
-				onSearchSuggestionChosen=(action 'onSearchSuggestionChosen')
-				goToSearchResults=(action 'goToSearchResults')
-				track=(action 'track')
+				onSearchToggleClicked=(action "onSearchToggleClicked")
+				onSearchSuggestionChosen=(action "onSearchSuggestionChosen")
+				goToSearchResults=(action "goToSearchResults")
+				track=(action "track")
 			}}
 
 			{{#if model.user}}
 				{{#wds-button
-					click=(action openModal 'user')
-					class='wds-global-navigation__modal-control wds-global-navigation__modal-control-user'
+					click=(action openModal "user")
+					class="wds-global-navigation__modal-control wds-global-navigation__modal-control-user"
 					text=true
-					type='button'
+					type="button"
 				}}
 					{{wds-avatar src=model.user.avatar_url alt=model.user.username}}
 					{{#if wdsOnSiteNotifications.unreadCountWithLimit}}
@@ -85,13 +85,13 @@
 					track=track
 				}}
 			{{else if model.anon}}
-				{{#wds-button click=(action closeModal) class='wds-global-navigation__modal-control wds-global-navigation__modal-control-anon' text=true href=signinUrl}}
+				{{#wds-button click=(action closeModal) class="wds-global-navigation__modal-control wds-global-navigation__modal-control-anon" text=true href=signinUrl}}
 					{{wds-avatar}}
 				{{/wds-button}}
 			{{/if}}
 
-			{{#wds-button click=(action closeModal) class='wds-global-navigation__modal-control wds-global-navigation__modal-control-close' text=true type='button'}}
-				{{svg 'wds-icons-cross' class='wds-icon'}}
+			{{#wds-button click=(action closeModal) class="wds-global-navigation__modal-control wds-global-navigation__modal-control-close" text=true type="button"}}
+				{{svg "wds-icons-cross" class="wds-icon"}}
 			{{/wds-button}}
 		</div>
 	</div>
