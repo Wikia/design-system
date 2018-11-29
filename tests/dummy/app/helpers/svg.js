@@ -3,7 +3,7 @@ import { htmlSafe } from '@ember/string'
 /**
  * Helper to generate SVGs in the form:
  * {{svg name viewBox classes}}
- * <svg viewBox="{{viewBox}}" class="{{classes}}">
+ * <svg viewBox={{viewBox}} class={{classes}}>
  *    <use xlink:href="#{{name}}"></use>
  * </svg>
  *

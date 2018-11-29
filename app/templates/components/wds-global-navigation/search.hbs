@@ -62,9 +62,9 @@
 					 {{action "onSearchSuggestionClick" index}}
 					>
 						<a
-						 href="{{suggestion.uri}}"
+						 href={{suggestion.uri}}
 						 class="wds-global-navigation__dropdown-link"
-						 data-tracking-label="{{model.suggestions.tracking-label}}"
+						 data-tracking-label={{model.suggestions.tracking-label}}
 						>
 							{{{suggestion.text}}}
 						</a>
