@@ -12,9 +12,6 @@
 		repeat: no-repeat;
 		size: 100% 9px;
 	}
-	outline: red;
-	background-image: radial-gradient(farthest-side at 50% 0, var(--color-shadow, $color-shadow), transparent),
-	radial-gradient(farthest-side at 50% 100%, var(--color-shadow, $color-shadow), transparent);
 	max-height: $max-height;
 	overflow-y: auto;
 	position: relative;
@@ -23,7 +20,6 @@
 	&::after,
 	&::before {
 		background-color: $color-background;
-		background-color: var(--color-background, $color-background);
 		content: '';
 		display: block;
 		height: 30px;
@@ -33,6 +29,7 @@
 	}
 
 	&::after {
+		background-color: $color-background;
 		margin: -29px 0 0;
 	}
 }
