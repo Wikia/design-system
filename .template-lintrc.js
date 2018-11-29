@@ -13,7 +13,6 @@ module.exports = {
 	'self-closing-void-elements': false,
 	'no-invalid-interactive': false,
 	'no-triple-curlies': false,
-	'no-attrs-in-components': false,
 	'simple-unless': false
   }
 };
