@@ -1,39 +1,39 @@
 <h1>Inputs</h1>
 <p>
-	Currently Design System supports textarea fields only.
+  Currently Design System supports textarea fields only.
 </p>
 
 <section>
-	<h2>Textarea</h2>
-	{{#component-demo name="textarea"}}
-		{{wds-textarea value=initialValue placeholder="Placeholder" hint="Example hint" maxlength=1000}}
-	{{/component-demo}}
+  <h2>Textarea</h2>
+  {{#component-demo name="textarea"}}
+    {{wds-textarea value=initialValue placeholder="Placeholder" hint="Example hint" maxlength=1000}}
+  {{/component-demo}}
 </section>
 
 <section>
-	<h2>Textarea with length hint</h2>
-	{{#component-demo name="textarea-with-length-hint"}}
-		{{wds-textarea value=initialValue placeholder="Placeholder" hasLengthHint=true hint="Example hint" maxlength=1000}}
-	{{/component-demo}}
+  <h2>Textarea with length hint</h2>
+  {{#component-demo name="textarea-with-length-hint"}}
+    {{wds-textarea value=initialValue placeholder="Placeholder" hasLengthHint=true hint="Example hint" maxlength=1000}}
+  {{/component-demo}}
 </section>
 
 <section>
-	<h2>Textarea with event handlers</h2>
-	{{#component-demo name="textarea-with-event-handlers"}}
-		{{wds-textarea value=initialValue placeholder="Placeholder" hint="Example hint" input=(action "input") focus-in=(action "focusIn") focus-out=(action "focusOut")}}
-	{{/component-demo}}
+  <h2>Textarea with event handlers</h2>
+  {{#component-demo name="textarea-with-event-handlers"}}
+    {{wds-textarea value=initialValue placeholder="Placeholder" hint="Example hint" input=(action "input") focus-in=(action "focusIn") focus-out=(action "focusOut")}}
+  {{/component-demo}}
 </section>
 
 <section>
-	<h2>Textarea error state</h2>
-	{{#component-demo name="textarea-error-state"}}
-		{{wds-textarea value=initialValue placeholder="Placeholder" hint="Example hint" hasError=true}}
-	{{/component-demo}}
+  <h2>Textarea error state</h2>
+  {{#component-demo name="textarea-error-state"}}
+    {{wds-textarea value=initialValue placeholder="Placeholder" hint="Example hint" hasError=true}}
+  {{/component-demo}}
 </section>
 
 <section>
-	<h2>Disabled textarea</h2>
-	{{#component-demo name="textarea-disabled"}}
-		{{wds-textarea value=initialValue placeholder="Placeholder" hint="Example hint" disabled=true}}
-	{{/component-demo}}
+  <h2>Disabled textarea</h2>
+  {{#component-demo name="textarea-disabled"}}
+    {{wds-textarea value=initialValue placeholder="Placeholder" hint="Example hint" disabled=true}}
+  {{/component-demo}}
 </section>

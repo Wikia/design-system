@@ -1,19 +1,19 @@
 {{#wds-dropdown class=navigationClasses as |dropdown|}}
-	{{#dropdown.toggle click=(action toggleNavigation) data-tracking-label="nav-expanded" as |chevron|}}
-	{{!fixme add new icon for navigation}}
-		{{svg "wds-icons-menu-small" class="wds-icon wds-icon-small"}}
-		{{chevron}}
-	{{/dropdown.toggle}}
-	{{#dropdown.content dropdownRightAligned=true dropdownLeftAligned=true}}
-		{{wds-community-bar/local-navigation
-			model=model
-			firstLevelIndexSelected=firstLevelIndexSelected
-			secondLevelIndexSelected=secondLevelIndexSelected
-			onFirstLevelSelected=(action onFirstLevelSelected)
-			onSecondLevelSelected=(action onSecondLevelSelected)
-			onThirdLevelSelected=(action onThirdLevelSelected)
-			resetSelected=(action resetSelected)
-			onLinkClicked=(action onLinkClicked)
-		}}
-	{{/dropdown.content}}
+  {{#dropdown.toggle click=(action toggleNavigation) data-tracking-label="nav-expanded" as |chevron|}}
+    {{!fixme add new icon for navigation}}
+    {{svg "wds-icons-menu-small" class="wds-icon wds-icon-small"}}
+    {{chevron}}
+  {{/dropdown.toggle}}
+  {{#dropdown.content dropdownRightAligned=true dropdownLeftAligned=true}}
+    {{wds-community-bar/local-navigation
+      model=model
+      firstLevelIndexSelected=firstLevelIndexSelected
+      secondLevelIndexSelected=secondLevelIndexSelected
+      onFirstLevelSelected=(action onFirstLevelSelected)
+      onSecondLevelSelected=(action onSecondLevelSelected)
+      onThirdLevelSelected=(action onThirdLevelSelected)
+      resetSelected=(action resetSelected)
+      onLinkClicked=(action onLinkClicked)
+    }}
+  {{/dropdown.content}}
 {{/wds-dropdown}}

@@ -1,54 +1,54 @@
 <h1>Floating Buttons</h1>
 <p>
-	Floating Buttons are buttons that are supposed to go over some element (like an image)
-	and provide additional actions for the user.
-	Floating Button supports <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements.
-	To use it simply add <code class="format-code">.wds-floating-button</code> class.
+  Floating Buttons are buttons that are supposed to go over some element (like an image)
+  and provide additional actions for the user.
+  Floating Button supports <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements.
+  To use it simply add <code class="format-code">.wds-floating-button</code> class.
 </p>
 <p>
-	Multiple Floating Buttons should be placed inside <code class="format-code">.wds-floating-button-group</code>.
-	The <code class="format-code">.wds-floating-button-group</code> can be either horizontal or vertical. By
-	default the orientation is horizontal and can be switched by using addtional class - <code class="format-code">.wds-is-vertical</code>.
+  Multiple Floating Buttons should be placed inside <code class="format-code">.wds-floating-button-group</code>.
+  The <code class="format-code">.wds-floating-button-group</code> can be either horizontal or vertical. By
+  default the orientation is horizontal and can be switched by using addtional class - <code class="format-code">.wds-is-vertical</code>.
 </p>
 
 <section>
-	<h2 id="action-button">Single Floating Button</h2>
-	{{#component-demo}}
-		<div class="fake-image">
-			<a
-				class="wds-floating-button action-on-top-of-fake-image"
-				href="http://fandom.wikia.com"
-			>
-				{{wds-icon name="fandom-heart" size="small"}}
-			</a>
-		</div>
-	{{/component-demo}}
+  <h2 id="action-button">Single Floating Button</h2>
+  {{#component-demo name="single-floating-button" language="html"}}
+    <div class="fake-image">
+      <a
+        class="wds-floating-button action-on-top-of-fake-image"
+        href="http://fandom.wikia.com"
+      >
+        {{wds-icon name="fandom-heart" size="small"}}
+      </a>
+    </div>
+  {{/component-demo}}
 </section>
 
 <section>
-	<h2 id="action-button">Floating Button Group</h2>
-	{{#component-demo}}
-		<div class="fake-image">
-			<div class="wds-floating-button-group action-on-top-of-fake-image">
-				<button class="wds-floating-button">
-					{{wds-icon name="cross"}}
-				</button>
-				<button class="wds-floating-button">
-					{{wds-icon name="trash" size="small"}}
-				</button>
-			</div>
-		</div>
-	{{/component-demo}}
-	{{#component-demo}}
-		<div class="fake-image">
-			<div class="wds-floating-button-group wds-is-vertical action-on-top-of-fake-image">
-				<button class="wds-floating-button">
-					{{wds-icon name="cross"}}
-				</button>
-				<button class="wds-floating-button">
-					{{wds-icon name="trash" size="small"}}
-				</button>
-			</div>
-		</div>
-	{{/component-demo}}
+  <h2 id="action-button">Floating Button Group</h2>
+  {{#component-demo name="floating-button-group" language="html"}}
+    <div class="fake-image">
+      <div class="wds-floating-button-group action-on-top-of-fake-image">
+        <button class="wds-floating-button">
+          {{wds-icon name="cross"}}
+        </button>
+        <button class="wds-floating-button">
+          {{wds-icon name="trash" size="small"}}
+        </button>
+      </div>
+    </div>
+  {{/component-demo}}
+  {{#component-demo name="floating-button-group-2" language="html"}}
+    <div class="fake-image">
+      <div class="wds-floating-button-group wds-is-vertical action-on-top-of-fake-image">
+        <button class="wds-floating-button">
+          {{wds-icon name="cross"}}
+        </button>
+        <button class="wds-floating-button">
+          {{wds-icon name="trash" size="small"}}
+        </button>
+      </div>
+    </div>
+  {{/component-demo}}
 </section>
