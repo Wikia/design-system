@@ -17,10 +17,10 @@
 	<h2>How to develop</h2>
 	<p>If you want to contribute to DS follow the steps:</p>
 	<ul>
-		<li>Clone <a href="https://github.com/Wikia/design-system" target="_blank">Design System</a> repository</li>
+		<li>Clone <a href="https://github.com/Wikia/design-system" target="_blank" rel="noopener">Design System</a> repository</li>
 		<li>Install dependencies with <code class="format-code">npm run setup</code></li>
 		<li>Run <code class="format-code">npm run dev</code> to build the Reference Page and start file watchers</li>
-		<li>Open <a href="http://localhost:4200" target="_blank">http://localhost:4200</a> to see the Reference Page</li>
+		<li>Open <a href="http://localhost:4200" target="_blank" rel="noopener">http://localhost:4200</a> to see the Reference Page</li>
 		<li>Modify the Design System or Reference Page source files as you see fit, Ember CLI will rebuild the RP app and reload the page</li>
 		<li>Run <code class="format-code">npm run build</code> to update dist directory and commit your changes.</li>
 		<li>If you want to release your change see the "How to release new version" section below</li>
@@ -31,8 +31,8 @@
 <section>
 	<h2>Versioning</h2>
 	<p>
-		We follow <a href="http://semver.org/" target="_blank">SemVer</a> with a
-		<a href="https://medium.com/javascript-scene/software-versions-are-broken-3d2dc0da0783#70a1" target="_blank">slight modification</a>
+		We follow <a href="http://semver.org/" target="_blank" rel="noopener">SemVer</a> with a
+		<a href="https://medium.com/javascript-scene/software-versions-are-broken-3d2dc0da0783#70a1" target="_blank" rel="noopener">slight modification</a>
 		where the version roles are based on the scheme: <strong>Breaking.Feature.Fix</strong>. Paraphrasing the linked article:
 	</p>
 	<p>We don"t decide what the version will be. The API changes decide. Version numbers are for computers, not people.</p>
@@ -55,7 +55,7 @@
 				<li><code class="format-code">npm run release-fix</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">1.0.1</code></li>
 			</ul>
 			It will checkout the latest master,
-			use <a href="https://docs.npmjs.com/cli/version" target="_blank">npm version</a>
+			use <a href="https://docs.npmjs.com/cli/version" target="_blank" rel="noopener">npm version</a>
 			to bump the version and push the updated <code class="format-code">package.json</code> and the new tag.
 		</li>
 		<li>
@@ -116,7 +116,7 @@ ember deploy dev-developerName
 		</li>
 		<li>
 			<code class="format-code">docs-dev</code> — development version of Reference Page.
-			It"s built when using npm run dev and is accessible on <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>.
+			It"s built when using npm run dev and is accessible on <a href="http://localhost:4200" target="_blank" rel="noopener">http://localhost:4200</a>.
 		</li>
 		<li><code class="format-code">lib</code> — Ember"s in-repo addons</li>
 		<li><code class="format-code">style-guide</code> — source files for Design System. This is what gets compiled to dist.</li>
@@ -131,29 +131,29 @@ ember deploy dev-developerName
 	<ul>
 		<li>
 			<code class="format-code">app/components</code> — Definitions of RP-only components, see
-			<a href="http://emberjs.com/api/classes/Ember.Component.html" target="_blank">Ember.Component</a>
-			and <a href="https://guides.emberjs.com/v2.8.0/components/defining-a-component/" target="_blank">Defining a component</a>
+			<a href="http://emberjs.com/api/classes/Ember.Component.html" target="_blank" rel="noopener">Ember.Component</a>
+			and <a href="https://guides.emberjs.com/v2.8.0/components/defining-a-component/" target="_blank" rel="noopener">Defining a component</a>
 			for more details. You need to use these only if you want to expand RP features.
 			Templates live in templates/components directory and it"s possible that a template will be enough for your needs
 			and you won"t need the JS file. A component template is enough to render it.
 		</li>
 		<li>
 			<code class="format-code">app/controllers</code> — Definitions of RP controllers, see
-			<a href="http://emberjs.com/api/classes/Ember.Controller.html" target="_blank">Ember.Controller</a>
-			and <a href="https://guides.emberjs.com/v2.8.0/controllers/" target="_blank">Controllers</a>
+			<a href="http://emberjs.com/api/classes/Ember.Controller.html" target="_blank" rel="noopener">Ember.Controller</a>
+			and <a href="https://guides.emberjs.com/v2.8.0/controllers/" target="_blank" rel="noopener">Controllers</a>
 			for more details. Each route has a matching controller. Even if you don"t create a file for it,
 			Ember will create controller in the memory. Templates live in <code class="format-code">templates/</code>
 			directory and it"s possible that a template will be enough for your needs and you won"t need the JS file.
 		</li>
 		<li>
 			<code class="format-code">app/helpers</code> — Helpers which are accessible in the templates, see
-			<a href="http://emberjs.com/api/classes/Ember.Helper.html" target="_blank">Ember.Helper</a> and
-			<a href="https://guides.emberjs.com/v2.8.0/templates/writing-helpers/" target="_blank">Writing helpers</a> for more details.
+			<a href="http://emberjs.com/api/classes/Ember.Helper.html" target="_blank" rel="noopener">Ember.Helper</a> and
+			<a href="https://guides.emberjs.com/v2.8.0/templates/writing-helpers/" target="_blank" rel="noopener">Writing helpers</a> for more details.
 			Useful for logic that doesn"t fit in a component.
 		</li>
 		<li>
 			<code class="format-code">app/initializers</code> — Ember runs initializers before the app is started. See
-			<a href="https://guides.emberjs.com/v2.8.0/applications/initializers/" target="_blank">Initializers</a> for more details.
+			<a href="https://guides.emberjs.com/v2.8.0/applications/initializers/" target="_blank" rel="noopener">Initializers</a> for more details.
 		</li>
 		<li>
 			<code class="format-code">app/models</code> — We use them to mock the data that is normally
@@ -161,14 +161,14 @@ ember deploy dev-developerName
 		</li>
 		<li>
 			<code class="format-code">app/routes</code> — Handlers for routes specified in router.js, see
-			<a href="http://emberjs.com/api/classes/Ember.Route.html" target="_blank">Ember.Route</a> and
-			<a href="https://guides.emberjs.com/v2.8.0/routing/" target="_blank">Routing</a> for more details. You need to
+			<a href="http://emberjs.com/api/classes/Ember.Route.html" target="_blank" rel="noopener">Ember.Route</a> and
+			<a href="https://guides.emberjs.com/v2.8.0/routing/" target="_blank" rel="noopener">Routing</a> for more details. You need to
 			create a handler only if you have a custom logic for the route, like loading a model.
 		</li>
 		<li><code class="format-code">app/styles</code> — RP-specific styles. Don"t put the DS styles in here.</li>
 		<li>
 			<code class="format-code">app/templates</code> — See
-			<a href="https://guides.emberjs.com/v2.8.0/templates/handlebars-basics/" target="_blank">Handlebars basics</a> for details.
+			<a href="https://guides.emberjs.com/v2.8.0/templates/handlebars-basics/" target="_blank" rel="noopener">Handlebars basics</a> for details.
 		</li>
 		<li><code class="format-code">app/templates/base-styles</code> — templates for controllers with their routes matching <code class="format-code">base-styles/*</code></li>
 		<li><code class="format-code">app/templates/components</code> — templates for components that live in <code class="format-code">components/</code> directory</li>
@@ -178,7 +178,7 @@ ember deploy dev-developerName
 		<li><code class="format-code">app/templates/application.hbs</code> — the main template that is always used as the top one</li>
 		<li>
 			<code class="format-code">app/router.js</code> — Routes definitions, see
-			<a href="https://guides.emberjs.com/v2.8.0/routing/defining-your-routes/" target="_blank">Defining your routes</a> for more details.
+			<a href="https://guides.emberjs.com/v2.8.0/routing/defining-your-routes/" target="_blank" rel="noopener">Defining your routes</a> for more details.
 		</li>
 		<li><code class="format-code">config</code> — environment configuration.</li>
 		<li><code class="format-code">public</code> — contents of this directory are copied to Reference Page assets during the build.</li>

@@ -6,7 +6,6 @@ module.exports = {
   rules: {
 	'attribute-indentation': false,
 	'block-indentation': false,
-	'link-rel-noopener': false,
 	'no-inline-styles': false,
 	'img-alt-attributes': false,
 	'table-groups': false,
