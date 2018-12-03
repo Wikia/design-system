@@ -49,7 +49,7 @@ export default Component.extend({
 	didInsertElement() {
 		this.toggleView(this.name);
 
-		if (this.language !== 'scss') {
+		if (!['html', 'scss', 'js'].includes(this.language)) {
 			const component = this.element.querySelector('.component-demo__rendered').cloneNode(true);
 			const emberView = component.querySelector('.ember-view');
 

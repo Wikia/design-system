@@ -1,42 +1,42 @@
 {{#wds-list class=firstLevelClasses linked=true}}
-	{{#each model as |firstLevelItem index|}}
-		<li>
-			<a
-				href={{firstLevelItem.href}}
-				data-tracking-label={{unless (equal firstLevelItem.href "#") firstLevelItem.tracking_label}} onclick={{action onFirstLevelSelected index firstLevelItem}}
-			>
-				{{wds-label label=firstLevelItem.title}}
-				{{#if firstLevelItem.items}}
-					{{svg "wds-icons-menu-control-tiny" class="wds-icon wds-icon-tiny"}}
-				{{/if}}
-			</a>
-		</li>
-	{{/each}}
+  {{#each model as |firstLevelItem index|}}
+    <li>
+      <a
+        href={{firstLevelItem.href}}
+        data-tracking-label={{unless (equal firstLevelItem.href "#") firstLevelItem.tracking_label}} onclick={{action onFirstLevelSelected index firstLevelItem}}
+      >
+        {{wds-label label=firstLevelItem.title}}
+        {{#if firstLevelItem.items}}
+          {{svg "wds-icons-menu-control-tiny" class="wds-icon wds-icon-tiny"}}
+        {{/if}}
+      </a>
+    </li>
+  {{/each}}
 {{/wds-list}}
 {{#each model as |firstLevelItem firstLevelIndex|}}
-	{{#if firstLevelItem.items}}
-		{{wds-community-bar/local-navigation-level-2
-			firstLevelItem=firstLevelItem
-			firstLevelIndex=firstLevelIndex
-			firstLevelIndexSelected=firstLevelIndexSelected
-			secondLevelIndexSelected=secondLevelIndexSelected
-			onSecondLevelClicked=(action onSecondLevelSelected)
-			onBackButtonClicked=(action resetSelected "firstLevelIndexSelected")
-			onLinkClicked=(action onLinkClicked)
-		}}
-		{{#each firstLevelItem.items as |secondLevelItem secondLevelIndex|}}
-			{{#if secondLevelItem.items}}
-				{{wds-community-bar/local-navigation-level-3
-					secondLevelItem=secondLevelItem
-					firstLevelIndex=firstLevelIndex
-					firstLevelIndexSelected=firstLevelIndexSelected
-					secondLevelIndex=secondLevelIndex
-					secondLevelIndexSelected=secondLevelIndexSelected
-					onThirdLevelClicked=(action onThirdLevelSelected)
-					onBackButtonClicked=(action resetSelected "secondLevelIndexSelected")
-					onLinkClicked=(action onLinkClicked)
-				}}
-			{{/if}}
-		{{/each}}
-	{{/if}}
+  {{#if firstLevelItem.items}}
+    {{wds-community-bar/local-navigation-level-2
+      firstLevelItem=firstLevelItem
+      firstLevelIndex=firstLevelIndex
+      firstLevelIndexSelected=firstLevelIndexSelected
+      secondLevelIndexSelected=secondLevelIndexSelected
+      onSecondLevelClicked=(action onSecondLevelSelected)
+      onBackButtonClicked=(action resetSelected "firstLevelIndexSelected")
+      onLinkClicked=(action onLinkClicked)
+    }}
+    {{#each firstLevelItem.items as |secondLevelItem secondLevelIndex|}}
+      {{#if secondLevelItem.items}}
+        {{wds-community-bar/local-navigation-level-3
+          secondLevelItem=secondLevelItem
+          firstLevelIndex=firstLevelIndex
+          firstLevelIndexSelected=firstLevelIndexSelected
+          secondLevelIndex=secondLevelIndex
+          secondLevelIndexSelected=secondLevelIndexSelected
+          onThirdLevelClicked=(action onThirdLevelSelected)
+          onBackButtonClicked=(action resetSelected "secondLevelIndexSelected")
+          onLinkClicked=(action onLinkClicked)
+        }}
+      {{/if}}
+    {{/each}}
+  {{/if}}
 {{/each}}

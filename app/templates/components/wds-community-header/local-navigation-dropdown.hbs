@@ -1,30 +1,30 @@
 {{#wds-dropdown as |dropdown|}}
-	{{#dropdown.toggle class="wds-tabs__tab-label" as |chevron|}}
-		{{#if @model.href}}
-			<a href={{@model.href}}>
-				{{wds-community-header/nav-item-with-icon item=@model}}
-			</a>
-		{{else}}
-			{{wds-community-header/nav-item-with-icon item=@model}}
-		{{/if}}
-		{{chevron}}
-	{{/dropdown.toggle}}
-	{{#dropdown.content scrollable=false}}
-		{{#wds-list linked=true bold=true}}
-			{{#each @model.items as |secondLevelItem index|}}
-				{{#if secondLevelItem.items}}
-					{{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem currentIndex=index}}
-				{{else}}
-					<li>
-						<a
-							href={{secondLevelItem.href}}
-							data-tracking-label={{secondLevelItem.tracking_label}}
-						>
-							{{wds-label label=secondLevelItem.title}}
-						</a>
-					</li>
-				{{/if}}
-			{{/each}}
-		{{/wds-list}}
-	{{/dropdown.content}}
+  {{#dropdown.toggle class="wds-tabs__tab-label" as |chevron|}}
+    {{#if @model.href}}
+      <a href={{@model.href}}>
+        {{wds-community-header/nav-item-with-icon item=@model}}
+      </a>
+    {{else}}
+      {{wds-community-header/nav-item-with-icon item=@model}}
+    {{/if}}
+    {{chevron}}
+  {{/dropdown.toggle}}
+  {{#dropdown.content scrollable=false}}
+    {{#wds-list linked=true bold=true}}
+      {{#each @model.items as |secondLevelItem index|}}
+        {{#if secondLevelItem.items}}
+          {{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem currentIndex=index}}
+        {{else}}
+          <li>
+            <a
+              href={{secondLevelItem.href}}
+              data-tracking-label={{secondLevelItem.tracking_label}}
+            >
+              {{wds-label label=secondLevelItem.title}}
+            </a>
+          </li>
+        {{/if}}
+      {{/each}}
+    {{/wds-list}}
+  {{/dropdown.content}}
 {{/wds-dropdown}}

@@ -1,28 +1,31 @@
 {{#wds-dropdown class="wds-global-navigation__user-menu wds-global-navigation__user-anon" hasShadow=true as |dropdown|}}
-	{{#dropdown.toggle as |chevron|}}
-		{{wds-avatar}}{{chevron}}
-	{{/dropdown.toggle}}
-	{{#dropdown.content class="wds-global-navigation__dropdown-content" dropdownRightAligned=true}}
-		{{#wds-list lines=true}}
-			<li>{{#wds-button class="wds-is-full-width"
-							  href=signinUrl
-							  rel="nofollow"
-							  data-tracking-label=model.signin.tracking-label
-				}}
-					{{i18n model.signin.title.key ns="design-system"}}
-				{{/wds-button}}
-			</li>
-			<li>
-				<div class="wds-global-navigation__user-menu-dropdown-caption">{{i18n "global-navigation-anon-register-description" ns="design-system"}}</div>
-				{{#wds-button class="wds-is-full-width"
-							  href=registerUrl
-							  rel="nofollow"
-							  secondary=true
-							  data-tracking-label=model.register.tracking-label
-				}}
-					{{i18n model.register.title.key ns="design-system"}}
-				{{/wds-button}}
-			</li>
-		{{/wds-list}}
-	{{/dropdown.content}}
+  {{#dropdown.toggle as |chevron|}}
+    {{wds-avatar}}{{chevron}}
+  {{/dropdown.toggle}}
+  {{#dropdown.content class="wds-global-navigation__dropdown-content" dropdownRightAligned=true}}
+    {{#wds-list lines=true}}
+      <li>
+        {{#wds-button
+          class="wds-is-full-width"
+          href=signinUrl
+          rel="nofollow"
+          data-tracking-label=model.signin.tracking-label
+        }}
+          {{i18n model.signin.title.key ns="design-system"}}
+        {{/wds-button}}
+      </li>
+      <li>
+        <div class="wds-global-navigation__user-menu-dropdown-caption">{{i18n "global-navigation-anon-register-description" ns="design-system"}}</div>
+        {{#wds-button
+          class="wds-is-full-width"
+          href=registerUrl
+          rel="nofollow"
+          secondary=true
+          data-tracking-label=model.register.tracking-label
+        }}
+          {{i18n model.register.title.key ns="design-system"}}
+        {{/wds-button}}
+      </li>
+    {{/wds-list}}
+  {{/dropdown.content}}
 {{/wds-dropdown}}

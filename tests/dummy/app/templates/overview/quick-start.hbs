@@ -2,26 +2,26 @@
 <p>All steps you need to make to start using Design System on your site.</p>
 
 <section>
-	<h2>1. Install with NPM</h2>
-	<p>As a first step, you need to install Design System libraries using Bower.</p>
-	<pre>npm install Wikia/design-system --save</pre>
+  <h2>1. Install with NPM</h2>
+  <p>As a first step, you need to install Design System libraries using Bower.</p>
+  <pre>npm install Wikia/design-system --save</pre>
 </section>
 
 <section>
-	<h2>2. Link to Design System css file</h2>
-	<p>In your html file link to styles.css file.</p>
-{{#code-sample language="html"}}
-&lt;head&gt;
-	...
-	&lt;link rel="stylesheet" type="text/css" href="node_modules/design-system/dist/css/styles.css"&gt;
-&lt;/head&gt;
-{{/code-sample}}
+  <h2>2. Link to Design System css file</h2>
+  <p>In your html file link to styles.css file.</p>
+  {{#component-demo name="quick-start" language="html" codeOnly=true}}
+    <head>
+      ...
+      <link rel="stylesheet" type="text/css" href="node_modules/design-system/dist/css/styles.css">
+    </head>
+  {{/component-demo}}
 </section>
 
 <section>
-	<h2>3. Start using Design System goodies!</h2>
-	<p>Now you can start using DS classes in your application. To check if everything works, just add an example button and check if it is displayed correctly on your site.</p>
-	{{#component-demo name="quick-start-component" codeOnly=true}}
-		{{wds-icon name="alert" size="small"}}
-	{{/component-demo}}
+  <h2>3. Start using Design System goodies!</h2>
+  <p>Now you can start using DS classes in your application. To check if everything works, just add an example button and check if it is displayed correctly on your site.</p>
+  {{#component-demo name="quick-start-component" codeOnly=true}}
+    {{wds-icon name="alert" size="small"}}
+  {{/component-demo}}
 </section>
