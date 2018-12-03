@@ -5,6 +5,6 @@ import { htmlSafe } from '@ember/string';
 export default Component.extend({
 	classNames: 'color-box',
 	safeStyle: computed('hex', function () {
-		return htmlSafe(`background-color: ${this.get('hex')}`);
+		return htmlSafe(`background-color: ${this.hex}`);
 	})
 });
