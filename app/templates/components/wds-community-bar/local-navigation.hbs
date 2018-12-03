@@ -3,7 +3,8 @@
     <li>
       <a
         href={{firstLevelItem.href}}
-        data-tracking-label={{unless (equal firstLevelItem.href "#") firstLevelItem.tracking_label}} onclick={{action onFirstLevelSelected index firstLevelItem}}
+        data-tracking-label={{unless (equal firstLevelItem.href "#") firstLevelItem.tracking_label}}
+        onclick={{action onFirstLevelSelected index firstLevelItem}}
       >
         {{wds-label label=firstLevelItem.title}}
         {{#if firstLevelItem.items}}

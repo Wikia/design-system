@@ -17,7 +17,13 @@
   <p>
     To fetch the data you should send a request to the Design System API.
     URL consists of the following parts (using
-    <a href="http://starwars.wikia.com/wikia.php?controller=DesignSystemApi&method=getAllElements&product=wikis&id=147&lang=de" target="_blank" rel="noopener">http://starwars.wikia.com/wikia.php?controller=DesignSystemApi&method=getAllElements&product=wikis&id=147&lang=de</a>
+    <a
+      href="http://starwars.wikia.com/wikia.php?controller=DesignSystemApi&method=getAllElements&product=wikis&id=147&lang=de"
+      target="_blank"
+      rel="noopener"
+    >
+      http://starwars.wikia.com/wikia.php?controller=DesignSystemApi&method=getAllElements&product=wikis&id=147&lang=de
+    </a>
     as an example):
   </p>
   <ul>
@@ -29,16 +35,29 @@
   </ul>
   <p>
     Source code for the API and its data models are available here:
-    <a href="https://github.com/Wikia/app/blob/dev/includes/wikia/api/DesignSystemApiController.class.php" target="_blank" rel="noopener">https://github.com/Wikia/app/blob/dev/includes/wikia/api/DesignSystemApiController.class.php</a>
+    <a
+      href="https://github.com/Wikia/app/blob/dev/includes/wikia/api/DesignSystemApiController.class.php"
+      target="_blank"
+      rel="noopener"
+    >
+      https://github.com/Wikia/app/blob/dev/includes/wikia/api/DesignSystemApiController.class.php
+    </a>
   </p>
 </section>
 
 <section>
   <h2 id="schema">API output schema</h2>
   <p>
-    We use JSON schema to describe how the API output looks like and use it to run the API tests.
+    We use JSON schema to describe how the API output looks like and use it to
+    run the API tests.
     You can see both the tests and schema at
-    <a href="https://github.com/Wikia/api-tests/tree/master/apitests/DesignSystem" target="_blank" rel="noopener">https://github.com/Wikia/api-tests/tree/master/apitests/DesignSystem</a>
+    <a
+      href="https://github.com/Wikia/api-tests/tree/master/apitests/DesignSystem"
+      target="_blank"
+      rel="noopener"
+    >
+      https://github.com/Wikia/api-tests/tree/master/apitests/DesignSystem
+    </a>
   </p>
 </section>
 
@@ -50,15 +69,34 @@
     To make the implementation easier you can look at the existing ones and use them as examples:
   </p>
   <ul>
-    <li><a href="https://github.com/Wikia/app/tree/dev/extensions/wikia/DesignSystem/services">Oasis (MediaWiki, PHP)</a></li>
-    <li><a href="https://github.com/Wikia/upstream/tree/dev/wp-content/themes/upstream/modules/design-system" target="_blank" rel="noopener">Upstream (Wordpress, PHP)</a></li>
+    <li>
+      <a
+        href="https://github.com/Wikia/app/tree/dev/extensions/wikia/DesignSystem/services"
+      >
+        Oasis (MediaWiki, PHP)
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/Wikia/upstream/tree/dev/wp-content/themes/upstream/modules/design-system"
+        target="_blank"
+        rel="noopener"
+      >
+        Upstream (Wordpress, PHP)
+      </a>
+    </li>
   </ul>
 </section>
 
 <section>
   <h2 id="authentication">Authentication</h2>
   <p>
-    API returns different content for logged in and anon users. In order to authenticate a request to API you have to add <code class="format-code">access_token</code> cookie in request headers. Correct <code class="format-code">access_token</code> value can be obtained in <a href="https://services.wikia.com/central-swagger-ui/?url=https://services.wikia.com/auth/swagger.json#!/token/login">Auth service</a> after providing correct credentials.
+    API returns different content for logged in and anon users. In order to authenticate a request to API you have to add <code class="format-code">access_token</code> cookie in request headers. Correct <code class="format-code">access_token</code> value can be obtained in
+    <a
+      href="https://services.wikia.com/central-swagger-ui/?url=https://services.wikia.com/auth/swagger.json#!/token/login"
+    >
+      Auth service
+    </a> after providing correct credentials.
   </p>
   <p>
     Example in JS:
@@ -74,17 +112,37 @@
   <h2 id="localization">Localization</h2>
   <p>
     The Design System API returns i18n keys which then need to be matched to the translated strings in particular language.
-    You should use <a href="https://github.com/Wikia/design-system-i18n" target="_blank" rel="noopener">https://github.com/Wikia/design-system-i18n</a>
-    as the source of messages. When there is a need for parameter in a message, we use the format
-    <code class="format-code">__placeholder__</code>. It"s ready for use with the i18next library but might need
+    You should use
+    <a
+      href="https://github.com/Wikia/design-system-i18n"
+      target="_blank"
+      rel="noopener"
+    >
+      https://github.com/Wikia/design-system-i18n
+    </a>
+    as the source of messages. When there is a need for parameter in a message, we
+    use the format
+    <code class="format-code">__placeholder__</code>. It"s ready for use with the
+    i18next library but might need
     a conversion for other libraries. See how we
-    <a href="https://github.com/Wikia/app/blob/dev/extensions/wikia/DesignSystem/i18n/build.js" target="_blank" rel="noopener">convert them for MediaWiki</a>.
+    <a
+      href="https://github.com/Wikia/app/blob/dev/extensions/wikia/DesignSystem/i18n/build.js"
+      target="_blank"
+      rel="noopener"
+    >
+      convert them for MediaWiki
+    </a>.
   </p>
   <p>
-    Text returned from the API can come in a few different formats defined by the schema.
+    Text returned from the API can come in a few different formats defined by the
+    schema.
     Clients should check the type property and render the text accordingly.
     You can see an example of implementation for this in
-    <a href="https://github.com/Wikia/app/blob/dev/extensions/wikia/DesignSystem/DesignSystemHelper.class.php">DesignSystemHelper::renderText()</a>.
+    <a
+      href="https://github.com/Wikia/app/blob/dev/extensions/wikia/DesignSystem/DesignSystemHelper.class.php"
+    >
+      DesignSystemHelper::renderText()
+    </a>.
     The types are:
   </p>
   <ul>

@@ -23,7 +23,7 @@ module.exports = function(defaults) {
 		snippetSearchPaths: ['tests/dummy/app'],
 		snippetRegexes: {
 			begin: /{{#component-demo[^}]+name="(\S+)"/,
-			end: /{{\/component-demo}}/,
+			end: /\{\{\/component-demo\}\}/,
 		},
 		includeFileExtensionInSnippetNames: false,
 		includeHighlightStyle: false,

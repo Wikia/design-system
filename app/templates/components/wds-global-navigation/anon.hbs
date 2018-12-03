@@ -1,8 +1,13 @@
-{{#wds-dropdown class="wds-global-navigation__user-menu wds-global-navigation__user-anon" hasShadow=true as |dropdown|}}
-  {{#dropdown.toggle as |chevron|}}
-    {{wds-avatar}}{{chevron}}
-  {{/dropdown.toggle}}
-  {{#dropdown.content class="wds-global-navigation__dropdown-content" dropdownRightAligned=true}}
+{{#wds-dropdown
+  class="wds-global-navigation__user-menu wds-global-navigation__user-anon"
+  hasShadow=true
+as |dropdown|
+}}
+  {{#dropdown.toggle as |chevron|}}{{wds-avatar}}{{chevron}}{{/dropdown.toggle}}
+  {{#dropdown.content
+    class="wds-global-navigation__dropdown-content"
+    dropdownRightAligned=true
+  }}
     {{#wds-list lines=true}}
       <li>
         {{#wds-button
@@ -15,7 +20,12 @@
         {{/wds-button}}
       </li>
       <li>
-        <div class="wds-global-navigation__user-menu-dropdown-caption">{{i18n "global-navigation-anon-register-description" ns="design-system"}}</div>
+        <div class="wds-global-navigation__user-menu-dropdown-caption">
+          {{i18n
+            "global-navigation-anon-register-description"
+            ns="design-system"
+          }}
+        </div>
         {{#wds-button
           class="wds-is-full-width"
           href=registerUrl
