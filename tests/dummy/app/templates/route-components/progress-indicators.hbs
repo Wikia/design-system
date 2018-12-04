@@ -17,9 +17,9 @@
   <p>
     size = full diameter = radius * 2 + strokeWidth
   </p>
-  {{#component-demo name="progress-indicator-intro" codeOnly=true}}
+  <Demo @name="progress-indicator-intro" @codeOnly={{true}}>
     <Spinner @active={{true}} @radius={{38}} @strokeWidth={{2}} @isBlock={{true}} />
-  {{/component-demo}}
+  </Demo>
   <div>
     In addition to <code>wds-spinner</code> and <code>wds-spinner__stroke</code>, other classes can be used,
     to modify spinner"s appearance:
@@ -39,7 +39,7 @@
     Until interactions are implemented in Design System that code will need to be duplicated over applications.
     You can see the reference code in <code>wds-spinner</code> Ember component.
   </p>
-  {{#component-demo name="progress-indicator"}}
+  <Demo @name="progress-indicator">
     <Spinner
       @active={{true}}
       @isBlock={{true}}
@@ -47,7 +47,7 @@
       @radius={{20}}
       @strokeWidth={{5}}
     />
-  {{/component-demo}}
+  </Demo>
 
   <p>
     To modify its size you can specify <code>radius</code> and to modify how thick it is you can specify

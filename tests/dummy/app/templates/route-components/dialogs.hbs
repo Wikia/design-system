@@ -15,82 +15,82 @@
 
 <h2>Default</h2>
 
-{{#button click=(action (mut showDialog) true)}}Open Dialog{{/wds-button}}
+<Button click={{action (mut showDialog) true}}>Open Dialog</Button>
 
 {{#if showDialog}}
-  {{#dialog
-    title="Title"
-    onOK=(action "onOK" "showDialog")
-    onCancel=(action "onCancel" "showDialog")
-  }}
+  <Dialog
+    @title="Title"
+    @onOk={{action "onOK" "showDialog"}}
+    @onCancel={{action "onCancel" "showDialog"}}
+  >
     Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
-  {{/wds-dialog}}
+  </Dialog>
 {{/if}}
 
-{{#component-demo name="dialog" codeOnly=true}}
+<Demo @name="dialog" @codeOnly={{true}}>
   {{#if true}}
-    {{#dialog
-      title="Title"
-      onOK=(action "onOK")
-      onCancel=(action "onCancel")
-    }}
+    <Dialog
+      @title="Title"
+      @onOk={{action "onOK"}}
+      @onCancel={{action "onCancel"}}
+    >
       Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
-    {{/wds-dialog}}
+    </Dialog>
   {{/if}}
-{{/component-demo}}
+</Demo>
 
 <h2>Usecase with no title</h2>
 
-{{#button click=(action (mut showDialogNoTitle) true)}}Open Dialog - no title{{/wds-button}}
+<Button click={{action (mut showDialogNoTitle) true}}>Open Dialog - no title</Button>
 
 {{#if showDialogNoTitle}}
-  {{#dialog
-    onOK=(action "onOK" "showDialogNoTitle")
-    onCancel=(action "onCancel" "showDialogNoTitle")
-  }}
+  <Dialog
+    @onOk={{action "onOK" "showDialogNoTitle"}}
+    @onCancel={{action "onCancel" "showDialogNoTitle"}}
+  >
     Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
-  {{/wds-dialog}}
+  </Dialog>
 {{/if}}
 
-{{#component-demo name="dialog" codeOnly=true}}
+<Demo @name="dialog" @codeOnly={{true}}>
   {{#if true}}
-    {{#dialog
-      onOK=(action "onOK")
-      onCancel=(action "onCancel")
-    }}
+    <Dialog
+      @onOk={{action "onOK"}}
+      @onCancel={{action "onCancel"}}
+    >
       Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
-    {{/wds-dialog}}
+    </Dialog>
   {{/if}}
-{{/component-demo}}
+</Demo>
 
 <h2>Usecase with custom action texts</h2>
 
-{{#button click=(action (mut showDialogCustomActionText) true)}}Open Dialog - custom action texts{{/wds-button}}
+<Button click={{action (mut showDialogCustomActionText) true}}>Open Dialog - custom action texts</Button>
 
 {{#if showDialogCustomActionText}}
-  {{#dialog
-    title="Title"
-    onOK=(action "onOK" "showDialogCustomActionText")
-    onCancel=(action "onCancel" "showDialogCustomActionText")
-    okText="Yes"
-    cancelText="No"
-  }}
+  <Dialog
+    @title="Title"
+    @onOk={{action "onOK" "showDialogCustomActionText"}}
+    @onCancel={{action "onCancel" "showDialogCustomActionText"}}
+    @okText="Yes"
+    @cancelText="No"
+  >
     Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
-  {{/wds-dialog}}
+  </Dialog>
 {{/if}}
 
-{{#component-demo name="dialog" codeOnly=true}}
+<Demo @name="dialog" @codeOnly={{true}}>
   {{#if true}}
-    {{#dialog
-      title="Title"
-      onOK=(action "onOK")
-      onCancel=(action "onCancel")
-      okText="Yes"
-      cancelText="No"
-    }}
+    <Dialog
+      @title="Title"
+      @onOk={{action "onOK"}}
+      @onCancel={{action "onCancel"}}
+      @okText="Yes"
+      @cancelText="No"
+    >
       Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
-    {{/wds-dialog}}
+    </Dialog>
   {{/if}}
-{{/component-demo}}
+</Demo>
 
 

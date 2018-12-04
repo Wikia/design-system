@@ -1,30 +1,30 @@
-{{#if standaloneDevice}}
+{{#if this.standaloneDevice}}
   <div class="component-demo__fullscreen">
-    <div class="component-demo__close" {{action "closeFullscreen"}}><Icon name="cross"}}</div>
+    <div class="component-demo__close" {{action "closeFullscreen"}}><Icon @name="cross" /></div>
     <div class="component-demo__standalone-wrapper">
       <iframe
-        class="component-demo__standalone is-{{standaloneDevice}}"
-        src={{variantUrl}}
+        class="component-demo__standalone is-{{this.standaloneDevice}}"
+        src={{@variantUrl}}
       >
       </iframe>
     </div>
   </div>
 {{/if}}
-<div class="component-demo__rendered{{if codeOnly " is-hidden"}}">{{yield}}</div>
-{{#if standalone}}
+<div class="component-demo__rendered{{if @codeOnly " is-hidden"}}">{{yield}}</div>
+{{#if @standalone}}
   <div class="component-demo__devices">
     <div class="component-demo__device">
-      <img src="/images/{{componentName}}-mobile.png">
+      <img src="/images/{{@componentName}}-mobile.png">
       <p>Breakpoint: S</p>
       <button class="wds-button" {{action "showFullscreen" "mobile"}}>View mobile version</button>
     </div>
     <div class="component-demo__device">
-      <img src="/images/{{componentName}}-tablet.png">
+      <img src="/images/{{@componentName}}-tablet.png">
       <p>Breakpoints: M, L</p>
       <button class="wds-button" {{action "showFullscreen" "tablet"}}>View tablet version</button>
     </div>
     <div class="component-demo__device">
-      <img src="/images/{{componentName}}-desktop.png">
+      <img src="/images/{{@componentName}}-desktop.png">
       <p>Breakpoints: XL, XXL</p>
       <button class="wds-button" {{action "showFullscreen" "desktop"}}>View desktop version</button>
     </div>
@@ -32,24 +32,24 @@
 {{/if}}
 
 {{#if (and renderedCode name)}}
-  {{#tabs onChange=(action "onTabChange") as |tabs|}}
-    {{#tabs.tab value=0}}
+  <Tabs @onChange={{action "onTabChange"}} as |tabs|>
+    <tabs.tab value={{0}}>
       <div class="wds-tabs__tab-label">
         HBS
       </div>
-    {{/tabs.tab}}
-    {{#tabs.tab value=1}}
+    </tabs.tab>
+    <tabs.tab value={{1}}>
       <div class="wds-tabs__tab-label">
         HTML
       </div>
-    {{/tabs.tab}}
-  {{/wds-tabs}}
+    </tabs.tab>
+  </Tabs>
 {{/if}}
 
 {{#if (and renderedCode showHTML)}}
-  {{#code-sample language=language}}{{renderedCode}}{{/code-sample}}
+  {{#code-sample language=@language}}{{renderedCode}}{{/code-sample}}
 {{/if}}
 
-{{#if (and name showHBS)}}
-  {{code-snippet name=name language=language}}
+{{#if (and @name showHBS)}}
+  {{code-snippet name=@name language=@language}}
 {{/if}}

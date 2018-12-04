@@ -21,7 +21,7 @@
     element that lives inside the content well and name the areas.
   </p>
   <h3>Example:</h3>
-  {{#component-demo name="grid-layout" language="html" codeOnly=true}}
+  <Demo @name="grid-layout" @language="html" @codeOnly={{true}}>
     <div class="layout__wrapper">
       <div class="layout">
         <div class="layout__main">
@@ -32,8 +32,8 @@
         </div>
       </div>
     </div>
-  {{/component-demo}}
-  {{#component-demo name="grid-scss" language="scss" codeOnly=true}}
+  </Demo>
+  <Demo @name="grid-scss" @language="scss" @codeOnly={{true}}>
     .layout {
       @include wds-grid-mixin;
       grid-template-areas: "main main main main main main main main main right
@@ -48,7 +48,7 @@
         grid-area: right;
       }
     }
-  {{/component-demo}}
+  </Demo>
 </section>
 <section>
   <h2 id="usage-with-breakpoints">Usage with breakpoints</h2>
@@ -62,7 +62,7 @@
     See longer example below.
   </p>
   <h3>Example:</h3>
-  {{#component-demo name="grid-breakpoints" language="html" codeOnly=true}}
+  <Demo @name="grid-breakpoints" @language="html" @codeOnly={{true}}>
     <div class="layout__wrapper">
       <div class="layout">
         <div class="layout__main">
@@ -75,8 +75,8 @@
         </div>
       </div>
     </div>
-  {{/component-demo}}
-  {{#component-demo name="grid-breakpoints-scss" language="scss" codeOnly=true}}
+  </Demo>
+  <Demo @name="grid-breakpoints-scss" @language="scss" @codeOnly={{true}}>
     .layout {
       @include wds-grid-mixin;
       grid-template-areas: "main main main main main main main main main main
@@ -108,7 +108,7 @@
         @include wds-hide-on-breakpoint(small)
       }
     }
-  {{/component-demo}}
+  </Demo>
 </section>
 <section>
   <h2 id="variables">Variabes</h2>

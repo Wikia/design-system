@@ -7,8 +7,8 @@
         class="main-navigation__toggle"
         checked={{if parentRoute.expanded "checked"}}
       >
-      <label for={{parentRoute.id}}><strong>{{parentRoute.name}}</strong> <Icon name="menu-control" size="tiny"}}</label>
-      {{#list linked=true}}
+      <label for={{parentRoute.id}}><strong>{{parentRoute.name}}</strong> <Icon @name="menu-control" @size="tiny" /></label>
+      <List @linked={{true}}>
         {{#each parentRoute.items as |route|}}
           <li>{{#link-to route.location}}{{route.name}}{{/link-to}}</li>
         {{/each}}

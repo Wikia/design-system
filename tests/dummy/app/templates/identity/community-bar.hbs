@@ -10,8 +10,8 @@
   <section>
     <h2 id="default-community-bar">Default</h2>
     {{! template-lint-configure-tree attribute-indentation false }}
-    {{#component-demo name="community-bar-default" codeOnly=true componentName="wds-community-bar" standalone=true variantUrl="/identity/community-bar/standalone/default"}}
+    <Demo @name="community-bar-default" @codeOnly={{true}} @componentName="wds-community-bar" @standalone={{true}} @variantUrl="/identity/community-bar/standalone/default">
       {{community-bar model=model track=track}}
-    {{/component-demo}}
+    </Demo>
   </section>
 {{/if}}

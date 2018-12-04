@@ -15,7 +15,7 @@
     <p>
       Theming can be applied by using
       <code class="format-code">community-header-theming</code> mixin. For example:
-      {{#component-demo name="community-header" codeOnly=true language="scss"}}
+      <Demo @name="community-header" @codeOnly={{true}} language="scss">
         .wds-community-header {
           $header-background-color: #2193d7;
           $color-page: #0E182B;
@@ -31,67 +31,67 @@
             $color-page-border
           );
         }
-      {{/component-demo}}
+      </Demo>
     </p>
   </section>
   <section>
     <h2 id="anon">Logged out with wordmark</h2>
     {{! template-lint-configure-tree attribute-indentation false }}
-    {{#component-demo name="community-header-logged-out" codeOnly=true componentName="wds-community-header" standalone=true variantUrl="/identity/community-header/standalone/anon"}}
-      {{#community-header
-        model=model.anon
-        track=track
-      }}
-        {{community-header-wiki-content model=model.anon}}
-      {{/wds-community-header}}
-    {{/component-demo}}
+    <Demo @name="community-header-logged-out" @codeOnly={{true}} @componentName="wds-community-header" @standalone={{true}} @variantUrl="/identity/community-header/standalone/anon">
+      <CommunityHeader
+        @model={{model.anon}}
+        @track={{track}}
+      >
+        <CommunityHeaderWikiContent @model={{model.anon}} />
+      </CommunityHeader>
+    </Demo>
   </section>
   <section>
     <h2 id="anon-no-wordmark">Logged out without wordmark</h2>
     {{! template-lint-configure-tree attribute-indentation false }}
-    {{#component-demo name="community-header-logged-out-no-wordmark" codeOnly=true componentName="wds-community-header" standalone=true variantUrl="/identity/community-header/standalone/anon-no-wordmark"}}
-      {{#community-header
-        model=model.anon-no-wordmark
-        track=track
-      }}
-        {{community-header-wiki-content model=model.anon-no-wordmark}}
-      {{/wds-community-header}}
-    {{/component-demo}}
+    <Demo @name="community-header-logged-out-no-wordmark" @codeOnly={{true}} @componentName="wds-community-header" @standalone={{true}} @variantUrl="/identity/community-header/standalone/anon-no-wordmark">
+      <CommunityHeader
+        @model={{model.anon-no-wordmark}}
+        @track={{track}}
+      >
+        <CommunityHeaderWikiContent @model={{model.anon-no-wordmark}} />
+      </CommunityHeader>
+    </Demo>
   </section>
   <section>
     <h2 id="anon-no-background">Logged out without background image</h2>
     {{! template-lint-configure-tree attribute-indentation false }}
-    {{#component-demo name="community-header-background" codeOnly=true componentName="wds-community-header" standalone=true variantUrl="/identity/community-header/standalone/anon-no-background"}}
-      {{#community-header
-        model=model.anon-no-background
-        track=track
-      }}
-        {{community-header-wiki-content model=model.anon-no-background}}
-      {{/wds-community-header}}
-    {{/component-demo}}
+    <Demo @name="community-header-background" @codeOnly={{true}} @componentName="wds-community-header" @standalone={{true}} @variantUrl="/identity/community-header/standalone/anon-no-background">
+      <CommunityHeader
+        @model={{model.anon-no-background}}
+        @track={{track}}
+      >
+        <CommunityHeaderWikiContent @model={{model.anon-no-background}} />
+      </CommunityHeader>
+    </Demo>
   </section>
   <section>
     <h2 id="logged-in">Logged in</h2>
     {{! template-lint-configure-tree attribute-indentation false }}
-    {{#component-demo name="community-header-logged-in" codeOnly=true componentName="wds-community-header" standalone=true variantUrl="/identity/community-header/standalone/logged-in"}}
-      {{#community-header
-        model=model.logged-in
-        track=track
-      }}
-        {{community-header-wiki-content model=model.logged-in}}
-      {{/wds-community-header}}
-    {{/component-demo}}
+    <Demo @name="community-header-logged-in" @codeOnly={{true}} @componentName="wds-community-header" @standalone={{true}} @variantUrl="/identity/community-header/standalone/logged-in">
+      <CommunityHeader
+        @model={{model.logged-in}}
+        @track={{track}}
+      >
+        <CommunityHeaderWikiContent @model={{model.logged-in}} />
+      </CommunityHeader>
+    </Demo>
   </section>
   <section>
     <h2 id="admin">Admin</h2>
     {{! template-lint-configure-tree attribute-indentation false }}
-    {{#component-demo name="community-header-admin" codeOnly=true componentName="wds-community-header" standalone=true variantUrl="/identity/community-header/standalone/admin"}}
-      {{#community-header
-        model=model.admin
-        track=track
-      }}
-        {{community-header-wiki-content model=model.admin}}
-      {{/wds-community-header}}
-    {{/component-demo}}
+    <Demo @name="community-header-admin" @codeOnly={{true}} @componentName="wds-community-header" @standalone={{true}} @variantUrl="/identity/community-header/standalone/admin">
+      <CommunityHeader
+        @model={{model.admin}}
+        @track={{track}}
+      >
+        <CommunityHeaderWikiContent @model={{model.admin}} />
+      </CommunityHeader>
+    </Demo>
   </section>
 {{/if}}

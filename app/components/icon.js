@@ -14,7 +14,7 @@ export default Component.extend({
 		 * Some icon names are coming from DS API where icon name is returned as
 		 * e.g. name-tiny
 		 * Let's remove it from name so we can still use
-		 * {{wds-icon name=nameFromDesignSystemAPI size='tiny'}} and make sure it still works
+		 * <Icon @name={{nameFromDesignSystemAPI}} @size="tiny" /> and make sure it still works
 		 */
 		this.name = this.name
 			.replace(/(-tiny|-small)$/, '')

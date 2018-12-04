@@ -29,14 +29,14 @@
 <section>
   <h2 id="primary">Primary buttons</h2>
   <p>Default version for general use.</p>
-  {{#component-demo name="buttons"}}
+  <Demo @name="buttons">
     <Button>Primary button</Button>
     <Button>
       <Icon @name="fandom-heart" @size="small" />
       <span>Primary button</span>
     </Button>
     <Button disabled>Primary disabled</Button>
-  {{/component-demo}}
+  </Demo>
 
   <h2>Parameters</h2>
   <div>
@@ -64,14 +64,14 @@
     Adding class <code class="format-code">.wds-is-secondary</code> changes the button"s looks.
     It is used to create a button that draws less user"s attention.
   </p>
-  {{#component-demo name="buttons-secondary"}}
+  <Demo @name="buttons-secondary">
     <Button @secondary={{true}}>Secondary button</Button>
     <Button @secondary={{true}}>
       <Icon @name="fandom-heart" @size="small" />
       <span>Secondary button</span>
     </Button>
     <Button @secondary={{true}} disabled>Secondary disabled</Button>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
@@ -81,7 +81,7 @@
     *For dropdown properties see dropdown reference page.
   </p>
 
-  {{#component-demo name="dropdown-buttons"}}
+  <Demo @name="dropdown-buttons">
     <Dropdown as |dropdown|>
       <dropdown.toggle as |Chevron|>
         <Button><span>Dropdown</span> <Chevron /></Button>
@@ -105,7 +105,7 @@
     <Dropdown as |dropdown|>
       <dropdown.toggle as |Chevron|>
         <Button>
-          <Icon name="fandom-heart" size="small"}}
+          <Icon @name="fandom-heart" @size="small" />
           <span>Dropdown</span>
           <Chevron />
         </Button>
@@ -121,7 +121,7 @@
 
     <Dropdown as |dropdown|>
       <dropdown.toggle as |Chevron|>
-        <Button secondary=true}}<span>Dropdown</span><Chevron /></Button>
+        <Button @secondary={{true}}><span>Dropdown</span><Chevron /></Button>
       </dropdown.toggle>
       <dropdown.content>
         <List>
@@ -131,7 +131,7 @@
         </List>
       </dropdown.content>
     </Dropdown>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
@@ -141,14 +141,14 @@
     They are the least obtrusive.
     Nevertheless, their paddings remain untouched, which provides the same clickable area.
   </p>
-  {{#component-demo name="text-buttons"}}
-    <Button text=true}}Text button</Button>
-    <Button text=true}}
-      <Icon name="fandom-heart" size="small"}}
+  <Demo @name="text-buttons">
+    <Button text={{true}}>Text button</Button>
+    <Button text={{true}}>
+      <Icon @name="fandom-heart" @size="small" />
       <span>Text button</span>
     </Button>
-    <Button text=true disabled=true}}Text disabled</Button>
-  {{/component-demo}}
+    <Button text={{true}} disabled>Text disabled</Button>
+  </Demo>
 </section>
 
 <section>
@@ -158,22 +158,22 @@
     This button will be 45px x 45px with content centered inside.
     This type of button is mostly used for icons, example: social icons.
   </p>
-  {{#component-demo name="button-square"}}
-    <Button @square={{true}} class="wds-is-facebook-color"><Icon name="facebook /></Button>
-    <Button @square={{true}} class="wds-is-nk-color"}}<Icon name="nk" /></Button>
-  {{/component-demo}}
+  <Demo @name="button-square">
+    <Button @square={{true}} class="wds-is-facebook-color"><Icon name="facebook" /></Button>
+    <Button @square={{true}} class="wds-is-nk-color"><Icon @name="nk" /></Button>
+  </Demo>
 </section>
 
 <section>
   <h2 id="other:multiline">Other usages: multiline button</h2>
   <p>Button labels can wrap to multiple lines.</p>
-  {{#component-demo name="multiline-button"}}
-    <Button class="fixed-width-140px"}}Multiline button label with 3rd line</Button>
-    <Button class="fixed-width-140px"}}
-      <Icon name="fandom-heart" size="small"}}
+  <Demo @name="multiline-button">
+    <Button class="fixed-width-140px">Multiline button label with 3rd line</Button>
+    <Button class="fixed-width-140px">
+      <Icon @name="fandom-heart" @size="small" />
       <span>Multiline button label</span>
     </Button>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
@@ -184,14 +184,14 @@
     It is achieved by adding a <code class="format-code">.wds-button</code>
     class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.
   </p>
-  {{#component-demo name="link-buttons"}}
-    <Button href="#"}}Link button</Button>
-    <Button href="#"}}
-      <Icon name="fandom-heart" size="small"}}
+  <Demo @name="link-buttons">
+    <Button href="#">Link button</Button>
+    <Button href="#">
+      <Icon @name="fandom-heart" @size="small" />
       <span>Link button</span>
     </Button>
-    <Button href="#" secondary=true}}Secondary link button</Button>
-  {{/component-demo}}
+    <Button href="#" @secondary={{true}}>Secondary link button</Button>
+  </Demo>
 </section>
 
 <section class="button-theming">
@@ -200,22 +200,22 @@
     Theming can be applied to buttons by <code class="format-code">button-theming</code> mixin.
     For basic usage, mixin takes two parameters: primary-background-color and prmary-text-color:
   </p>
-  {{#component-demo name="button-theming-scss" language="scss" codeOnly=true}}
+  <Demo @name="button-theming-scss" @language="scss" @codeOnly={{true}}>
     .wds-button {
       @include button-theming($wds-color-dark-blue, $wds-color-white);
     }
-  {{/component-demo}}
+  </Demo>
 
-  {{#component-demo name="buttons-theming"}}
-    <Button class="primary-only"}}Primary</Button>
-    <Button class="primary-only"}}
-      <Icon name="fandom-heart" size="small"}}
+  <Demo @name="buttons-theming">
+    <Button class="primary-only">Primary</Button>
+    <Button class="primary-only">
+      <Icon @name="fandom-heart" @size="small" />
       <span>Primary button</span>
     </Button>
 
     <Dropdown as |dropdown|>
       <dropdown.toggle as |Chevron|>
-        <Button class="primary-only"}}<span>Dropdown</span><Chevron /></Button>
+        <Button class="primary-only"><span>Dropdown</span><Chevron /></Button>
       </dropdown.toggle>
       <dropdown.content>
         <List>
@@ -225,27 +225,27 @@
         </List>
       </dropdown.content>
     </Dropdown>
-    <Button secondary=true class="primary-only"}}Secondary</Button>
-    <Button text=true class="primary-only"}}Text</Button>
-  {{/component-demo}}
+    <Button @secondary={{true}} class="primary-only">Secondary</Button>
+    <Button text={{true}} class="primary-only">Text</Button>
+  </Demo>
 
   <p>It is also possible to apply different color for secondary and text buttons than to primary ones:</p>
-  {{#component-demo name="buttons-theming" language="sass"}}
+  <Demo @name="buttons-theming" language="sass">
     .wds-button {
       @include button-theming($wds-color-slate-gray, $wds-color-white, $wds-color-link);
     }
-  {{/component-demo}}
+  </Demo>
 
-  {{#component-demo name="buttons-theming-2"}}
-    <Button class="different-secondary"}}Primary</Button>
-    <Button class="different-secondary"}}
-      <Icon name="fandom-heart" size="small"}}
+  <Demo @name="buttons-theming-2">
+    <Button class="different-secondary">Primary</Button>
+    <Button class="different-secondary">
+      <Icon @name="fandom-heart" @size="small" />
       <span>Primary button</span>
     </Button>
 
     <Dropdown as |dropdown|>
       <dropdown.toggle as |Chevron|>
-        <Button class="different-secondary"}}<span>Dropdown</span><Chevron /></Button>
+        <Button class="different-secondary"><span>Dropdown</span><Chevron /></Button>
       </dropdown.toggle>
       <dropdown.content>
         <List>
@@ -255,9 +255,9 @@
         </List>
       </dropdown.content>
     </Dropdown>
-    <Button secondary=true class="different-secondary"}}Secondary</Button>
-    <Button text=true class="different-secondary"}}Text</Button>
-  {{/component-demo}}
+    <Button @secondary={{true}} class="different-secondary">Secondary</Button>
+    <Button @text={{true}} class="different-secondary">Text</Button>
+  </Demo>
 </section>
 
 <section>
@@ -265,54 +265,54 @@
   <p>Group a series of buttons together on a single line with the button group.</p>
   <p>Button group comes with no default styling of its own. Colors, sizes and animations are driven by buttons.</p>
   <p>Wrap a series of buttons with <code>.wds-button</code> in <code>.wds-button-group</code>.</p>
-  {{#component-demo name="button-group-mix"}}
+  <Demo @name="button-group-mix">
     <div class="wds-button-group">
       <Button>1</Button>
       <Button>2</Button>
-      <Button @disabled={{true}}>3</Button>
+      <Button disabled>3</Button>
       <Button>4</Button>
       <Button>5</Button>
     </div>
-  {{/component-demo}}
+  </Demo>
   <p>Mixing primary, secondary and different sizes of buttons is not supported. All buttons have to be of the same type.</p>
-  {{#component-demo name="button-group-mix"}}
+  <Demo @name="button-group-mix">
     <div class="wds-button-group">
-      <Button secondary=true}}6</Button>
-      <Button secondary=true}}7</Button>
-      <Button disabled=true secondary=true}}8</Button>
-      <Button secondary=true}}9</Button>
-      <Button secondary=true}}10</Button>
+      <Button @secondary={{true}}>6</Button>
+      <Button @secondary={{true}}>7</Button>
+      <Button disabled @secondary={{true}}>8</Button>
+      <Button @secondary={{true}}>9</Button>
+      <Button @secondary={{true}}>10</Button>
     </div>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section class="button-group-icons-section">
   <h2 id="group:icons">Button group with icons</h2>
 
-  {{#component-demo name="button-group-with-icons"}}
+  <Demo @name="button-group-with-icons">
     <div class="wds-button-group white-theme">
-      <Button secondary=true}}
-        <Icon name="activity" size="small"}}
+      <Button @secondary={{true}}>
+        <Icon @name="activity" @size="small" />
         <span>Activity</span>
       </Button>
-      <Button secondary=true}}
-        <Icon name="house" size="small"}}
+      <Button @secondary={{true}}>
+        <Icon @name="house" @size="small" />
       </Button>
-      <Button secondary=true}}
-        <Icon name="map" size="small"}}
+      <Button @secondary={{true}}>
+        <Icon @name="map" @size="small" />
       </Button>
     </div>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 
 <section class="button-group-dropdown-section">
   <h2 id="group:dropdowns">Button group with dropdown button</h2>
   <p>It is also possible to include dropdown button within button-group</p>
-  {{#component-demo name="button-group-icons-in-dropdowns"}}
+  <Demo @name="button-group-icons-in-dropdowns">
     <div class="wds-button-group">
       <Button>
-        <Icon name="pencil" size="small"}}
+        <Icon @name="pencil" @size="small" />
         <span>Edit</span>
       </Button>
       <Dropdown as |dropdown|>
@@ -328,5 +328,5 @@
         </dropdown.content>
       </Dropdown>
     </div>
-  {{/component-demo}}
+  </Demo>
 </section>

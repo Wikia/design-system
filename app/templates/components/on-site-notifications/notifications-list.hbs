@@ -6,13 +6,13 @@
 {{/each}}
 {{#if isLoadingNewResults}}
   <li>
-    {{spinner
-      active=true
-      isBlock=true
-      isThemed=false
-      overlay=false
-      radius=13
-      strokeWidth=2
-    }}
+    <Spinner
+      @active={{true}}
+      @isBlock={{true}}
+      @isThemed={{false}}
+      @overlay={{false}}
+      @radius={{13}}
+      @strokeWidth={{2}}
+    />
   </li>
 {{/if}}

@@ -8,13 +8,13 @@
   <h2 id="list">List</h2>
   <p>To display a regular list, add <code class="format-code">.wds-list</code> class in your <code>&lt;ul&gt;</code> tag.</p>
 
-  {{#component-demo name="list"}}
+  <Demo @name="list">
     <List>
       <li>List element 1</li>
       <li>List element 2</li>
       <li>List element 3</li>
     </List>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
@@ -45,13 +45,13 @@
     This modificator makes padding broader and font size bigger in each element.
   </p>
 
-  {{#component-demo name="list-big"}}
+  <Demo @name="list-big">
     <List @big={{true}}>
       <li>List element 1</li>
       <li>List element 2</li>
       <li>List element 3</li>
     </List>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
@@ -62,13 +62,13 @@
     This modificator sets <code class="format-code">font-weight</code> to bold.
   </p>
 
-  {{#component-demo name="list-bold"}}
+  <Demo @name="list-bold">
     <List @bold={{true}}>
       <li>List element 1</li>
       <li>List element 2</li>
       <li>List element 3</li>
     </List>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
@@ -78,13 +78,13 @@
     adds subtle separator between each element of your list.
   </p>
 
-  {{#component-demo name="list-lines"}}
+  <Demo @name="list-lines">
     <List @lines={{true}}>
       <li>List element 1</li>
       <li>List element 2</li>
       <li>List element 3</li>
     </List>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
@@ -97,11 +97,11 @@
     wrapping each elements content.
   </p>
 
-  {{#component-demo name="list-linked"}}
+  <Demo @name="list-linked">
     <List @linked={{true}}>
       <li><a href="http://wikia.com">Linked element 1</a></li>
       <li><a href="http://wikia.com">Linked element 2</a></li>
       <li><a href="http://wikia.com">Linked element 3</a></li>
     </List>
-  {{/component-demo}}
+  </Demo>
 </section>

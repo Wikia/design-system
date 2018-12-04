@@ -8,35 +8,35 @@
 <section>
   <h2 id="text-only">Simple toggle</h2>
 
-  {{#component-demo name="toggle-a"}}
+  <Demo @name="toggle-a">
     <Toggle @id="toggleA" />
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
   <h2 id="text-only">Toggle with a label</h2>
 
-  {{#component-demo name="toggle-b"}}
+  <Demo @name="toggle-b">
     <Toggle @id="toggleB">
       Slide me if you wish
     </Toggle>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
   <h2 id="text-only">Disabled toggle</h2>
 
-  {{#component-demo name="toggle-disabled"}}
+  <Demo @name="toggle-disabled">
     <Toggle @id="toggleDisabled" @disabled={{true}}>
       Yep I"m disabled
     </Toggle>
-  {{/component-demo}}
+  </Demo>
 
   <h2 id="text-only">Disabled and checked toggle</h2>
 
-  {{#component-demo name="toggle-disabled-b"}}
+  <Demo @name="toggle-disabled-b">
     <Toggle id="toggleDisabledB" disabled={{true}} checked={{true}}>
       Yep I"m disabled
     </Toggle>
-  {{/component-demo}}
+  </Demo>
 </section>

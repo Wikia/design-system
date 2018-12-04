@@ -1,8 +1,8 @@
 <div class="asset-box__asset">
   {{svg
-    (concat "wds-" group "-" name)
-    height=height
-    width=width
+    (concat "wds-" @group "-" @name)
+    height=this.height
+    width=this.width
   }}
 </div>
-<div class="asset-box__name">{{name}}</div>
+<div class="asset-box__name">{{@name}}</div>

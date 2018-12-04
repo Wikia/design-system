@@ -18,7 +18,7 @@
   <p>The markup for the sprite:</p>
 
   {{! template-lint-configure-tree no-inline-styles false }}
-  {{#component-demo codeOnly=true}}
+  <Demo codeOnly={{true}}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,16 +26,16 @@
     >
       <symbol id="wds-company-logo-fandom">…</symbol>
     </svg>
-  {{/component-demo}}
+  </Demo>
 
   <p class="alert-info">
-    <Icon name="alert" size="small"}}
+    <Icon @name="alert" @size="small" />
     Note the inline style which is required to hide the sprite while keeping gradients and masks working properly.
   </p>
 
   <p>The markup to use a symbol:</p>
 
-  {{#component-demo codeOnly=true}}
+  <Demo codeOnly={{true}}>
     <svg>
       <use
         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -43,7 +43,7 @@
       >
       </use>
     </svg>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>

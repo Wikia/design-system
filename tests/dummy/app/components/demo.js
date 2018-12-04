@@ -6,26 +6,26 @@ import beautify from '../utils/beautify';
  * This components supports 3 different ways to render a component demo
  *
  * Showcase template, rendered HTML and rendered component
- * {{#component-demo name='unique-name'}}
+ * <Demo @name='unique-name'>
  * 	some code to demo
- * {{/component-demo}}
+ * </Demo>
  *
  * Showcase template and rendered HTML but don't show rendered component
- * {{#component-demo name='unique-name-2' codeOnly=true}}
+ * <Demo @name='unique-name-2' @codeOnly={{true}}>
  *  other code to demo
- * {{/component-demo}}
+ * </Demo>
  * under the hood it uses ember-code-snippet addont to get a snippet of code
  * it uses clever way of searching through code for special markers
  * that we have configured to be
- * 	begin: /{{#component-demo[^}]+name='(\S+)'/,
- * 	end: /{{\/component-demo}}/,
+ * 	begin: /<Demo[^}]+@name='(\S+)'/,
+ * 	end: /<\/Demo>/,
  * This allows us to do easy component demos
  * but it does not support multiline regexps, make sure whole component-demo invocation is on one line
  *
  * Showcase rendered HTML only
- * {{#component-demo codeOnly=true}}
+ * <Demo @codeOnly={{true}}>
  *  other code to demo
- * {{/component-demo}}
+ * </Demo>
  */
 export default Component.extend({
 	classNames: ['component-demo'],

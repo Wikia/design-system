@@ -3,7 +3,7 @@
 {{else}}
   <div class="main-container">
     <header class="main-header">Fandom Design System</header>
-    {{main-navigation navigation=navigation}}
+    <MainNavigation @navigation={{this.navigation}} />
     <article class="main-content">
       {{outlet}}
     </article>

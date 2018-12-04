@@ -1,8 +1,8 @@
 {{#if showAvatars}}
-  {{avatar-stack
-    avatars=avatars
-    overrideCount=model.totalUniqueActors
-  }}
+  <AvatarStack
+    @avatars={{avatars}}
+    @overrideCount={{model.totalUniqueActors}}
+  />
 {{/if}}
 <a
   class="wds-notification-card__outer-body"
