@@ -1,11 +1,23 @@
-{{#wds-dropdown dropdownExpanded=hasSuggestions noChevron=true class="wds-global-navigation__search" as |dropdown|}}
+{{#wds-dropdown
+  dropdownExpanded=hasSuggestions
+  noChevron=true
+  class="wds-global-navigation__search"
+as |dropdown|
+}}
   <div
-   class="wds-global-navigation__search-toggle"
-   role="searchbox"
-   {{action "openSearch"}}
+    class="wds-global-navigation__search-toggle"
+    role="searchbox"
+    {{action "openSearch"}}
   >
-    {{wds-icon name="magnifying-glass" size="small" class="wds-global-navigation__search-toggle-icon"}}
-    {{wds-icon name="magnifying-glass" class="wds-global-navigation__search-toggle-icon"}}
+    {{wds-icon
+      name="magnifying-glass"
+      size="small"
+      class="wds-global-navigation__search-toggle-icon"
+    }}
+    {{wds-icon
+      name="magnifying-glass"
+      class="wds-global-navigation__search-toggle-icon"
+    }}
     <span class="wds-global-navigation__search-toggle-text">
       {{i18n "global-navigation-search-placeholder-inactive" ns="design-system"}}
     </span>
@@ -15,7 +27,11 @@
       value=state.query
       class="wds-global-navigation__search-input"
       name=model.results.param-name
-      placeholder=(i18n model.placeholder-active.key ns="design-system" sitename=model.placeholder-active.params.sitename.value)
+      placeholder=(i18n
+        model.placeholder-active.key
+        ns="design-system"
+        sitename=model.placeholder-active.params.sitename.value
+      )
       type="search"
       autocomplete="off"
       input=(action "onQueryChanged")
@@ -28,7 +44,10 @@
       type="button"
       click=(action "onClearSearchClick")
     }}
-      {{wds-icon name="circle-plus" class="wds-icon-small wds-global-navigation__search-clear-icon"}}
+      {{wds-icon
+        name="circle-plus"
+        class="wds-icon-small wds-global-navigation__search-clear-icon"
+      }}
     {{/wds-button}}
     {{#wds-button
       text=true
@@ -49,7 +68,11 @@
       data-tracking-label=model.results.tracking-label
       click=(action "submit")
     }}
-      {{wds-icon name="arrow" size="small" class="wds-global-navigation__search-submit-icon"}}
+      {{wds-icon
+        name="arrow"
+        size="small"
+        class="wds-global-navigation__search-submit-icon"
+      }}
     {{/wds-button}}
   {{/dropdown.toggle}}
   {{#if suggestions}}
@@ -57,14 +80,14 @@
       {{#wds-list linked=true ellipsis=true}}
         {{#each suggestions as |suggestion index|}}
           <li
-           class="{{if (equal index selectedSuggestionIndex) "wds-is-selected"}} wds-global-navigation__search__suggestion"
-           onmouseenter={{action (mut selectedSuggestionIndex) index}}
-           {{action "onSearchSuggestionClick" index}}
+            class="{{if (equal index selectedSuggestionIndex) "wds-is-selected"}} wds-global-navigation__search__suggestion"
+            onmouseenter={{action (mut selectedSuggestionIndex) index}}
+            {{action "onSearchSuggestionClick" index}}
           >
             <a
-             href={{suggestion.uri}}
-             class="wds-global-navigation__dropdown-link"
-             data-tracking-label={{model.suggestions.tracking-label}}
+              href={{suggestion.uri}}
+              class="wds-global-navigation__dropdown-link"
+              data-tracking-label={{model.suggestions.tracking-label}}
             >
               {{{suggestion.text}}}
             </a>

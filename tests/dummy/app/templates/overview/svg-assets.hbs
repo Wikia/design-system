@@ -19,7 +19,11 @@
 
   {{! template-lint-configure-tree no-inline-styles false }}
   {{#component-demo codeOnly=true}}
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 0px; width: 0px; position: absolute; overflow: hidden;">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      style="height: 0px; width: 0px; position: absolute; overflow: hidden;"
+    >
       <symbol id="wds-company-logo-fandom">…</symbol>
     </svg>
   {{/component-demo}}
@@ -33,7 +37,11 @@
 
   {{#component-demo codeOnly=true}}
     <svg>
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-company-logo-fandom"></use>
+      <use
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="#wds-company-logo-fandom"
+      >
+      </use>
     </svg>
   {{/component-demo}}
 </section>
@@ -78,15 +86,43 @@
 <section>
   <h2>Examples:</h2>
   <ul>
-    <li>Inject SVG sprite in Fandom (Upstream project): <a href="https://github.com/Wikia/upstream/blob/adfa4a506de8c975005ce541ecb294e35be70370/wp-content/themes/upstream/header.php#L69-L78">example</a></li>
-    <li>Inject SVG sprite in Mercury (lazy load it): <a href="https://github.com/Wikia/mercury/blob/e89a2651562015e6140df918419a7d74c09e1727/front/main/app/index.html#L97-L98">example</a></li>
+    <li>
+      Inject SVG sprite in Fandom (Upstream project):
+      <a
+        href="https://github.com/Wikia/upstream/blob/adfa4a506de8c975005ce541ecb294e35be70370/wp-content/themes/upstream/header.php#L69-L78"
+      >
+        example
+      </a>
+    </li>
+    <li>
+      Inject SVG sprite in Mercury (lazy load it):
+      <a
+        href="https://github.com/Wikia/mercury/blob/e89a2651562015e6140df918419a7d74c09e1727/front/main/app/index.html#L97-L98"
+      >
+        example
+      </a>
+    </li>
   </ul>
 </section>
 
 <section>
   <h2>Useful functions:</h2>
   <ul>
-    <li>Inline SVG in Oasis: <a href="https://github.com/Wikia/app/blob/6c4bea07081fe9eefcbedfead2dbb7aefd748030/extensions/wikia/DesignSystem/DesignSystemHelper.class.php#L32">DesignSystemHelper::getSvg($svgName)</a></li>
-    <li>Lazy load assets in Mercury: <a href="https://github.com/Wikia/mercury/blob/74c900b81777ec20c90e8f78c723c45669909bfb/front/common/baseline/load-dom-resource.js#L22">M.loadDOMResource(src);</a></li>
+    <li>
+      Inline SVG in Oasis:
+      <a
+        href="https://github.com/Wikia/app/blob/6c4bea07081fe9eefcbedfead2dbb7aefd748030/extensions/wikia/DesignSystem/DesignSystemHelper.class.php#L32"
+      >
+        DesignSystemHelper::getSvg($svgName)
+      </a>
+    </li>
+    <li>
+      Lazy load assets in Mercury:
+      <a
+        href="https://github.com/Wikia/mercury/blob/74c900b81777ec20c90e8f78c723c45669909bfb/front/common/baseline/load-dom-resource.js#L22"
+      >
+        M.loadDOMResource(src);
+      </a>
+    </li>
   </ul>
 </section>

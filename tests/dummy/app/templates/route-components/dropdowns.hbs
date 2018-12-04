@@ -70,7 +70,8 @@
       {{/dropdown.content}}
     {{/wds-dropdown}}
   {{/component-demo}}
-  There is possibility to render dropdown toggle as other html tag than <code class="format-code">span</code>,
+  There is possibility to render dropdown toggle as other html tag than
+  <code class="format-code">span</code>,
   see {{#link-to "route-components.buttons"}}Dropdown buttons{{/link-to}}
 </section>
 <section>
@@ -296,7 +297,12 @@
               {{/wds-list}}
             {{/dropdown.content}}
           {{/wds-dropdown}}
-          {{#wds-dropdown isLevel2=true tagName="li" class="wds-is-sticked-to-parent" as |dropdown|}}
+          {{#wds-dropdown
+            isLevel2=true
+            tagName="li"
+            class="wds-is-sticked-to-parent"
+          as |dropdown|
+          }}
             <a href="#">
               {{dropdown.toggle text="List item 4"}}
             </a>
@@ -391,7 +397,12 @@
               {{/wds-list}}
             {{/dropdown.content}}
           {{/wds-dropdown}}
-          {{#wds-dropdown isLevel2=true tagName="li" class="wds-is-sticked-to-parent" as |dropdown|}}
+          {{#wds-dropdown
+            isLevel2=true
+            tagName="li"
+            class="wds-is-sticked-to-parent"
+          as |dropdown|
+          }}
             <a href="#">
               {{dropdown.toggle text="List item 4"}}
             </a>

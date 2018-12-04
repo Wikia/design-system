@@ -1,7 +1,15 @@
-{{#wds-dropdown isLevel2=true tagName="li" class=stickedClassName as |dropdown|}}
-  {{#dropdown.toggle href=href data-tracking-label=model.tracking_label as |chevron|}}
-    {{wds-community-header/nav-item item=model}}
-    {{chevron}}
+{{#wds-dropdown
+  isLevel2=true
+  tagName="li"
+  class=stickedClassName
+as |dropdown|
+}}
+  {{#dropdown.toggle
+    href=href
+    data-tracking-label=model.tracking_label
+  as |chevron|
+  }}
+    {{wds-community-header/nav-item item=model}}{{chevron}}
   {{/dropdown.toggle}}
   {{#dropdown.content scrollable=false}}
     {{#wds-list linked=true}}

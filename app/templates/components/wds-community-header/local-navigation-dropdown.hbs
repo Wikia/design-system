@@ -13,7 +13,10 @@
     {{#wds-list linked=true bold=true}}
       {{#each @model.items as |secondLevelItem index|}}
         {{#if secondLevelItem.items}}
-          {{wds-community-header/local-navigation-dropdown-level-2 model=secondLevelItem currentIndex=index}}
+          {{wds-community-header/local-navigation-dropdown-level-2
+            model=secondLevelItem
+            currentIndex=index
+          }}
         {{else}}
           <li>
             <a

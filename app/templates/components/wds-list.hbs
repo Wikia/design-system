@@ -1,9 +1,5 @@
-<ul class="wds-list {{@class}}
-    {{if @big "wds-has-big-items"}}
-    {{if @bold "wds-has-bolded-items"}}
-    {{if @lines "wds-has-lines-between"}}
-    {{if @linked "wds-is-linked"}}
-    {{if @ellipsis "wds-has-ellipsis"}}
-">
+<ul
+  class="wds-list {{@class}} {{if @big "wds-has-big-items"}} {{if @bold "wds-has-bolded-items"}} {{if @lines "wds-has-lines-between"}} {{if @linked "wds-is-linked"}} {{if @ellipsis "wds-has-ellipsis"}}"
+>
   {{yield}}
 </ul>
