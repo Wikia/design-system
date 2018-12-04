@@ -7,20 +7,20 @@
   <h2 id="avatar-circle">Circle avatar</h2>
 
   <Demo @name="avatar">
-    {{avatar
-      src=(concat rootURL "images/FANDOM-Avatar.jpg")
-      alt="user name"
-      badge="admin"
-    }}
-    {{avatar
-      src=(concat rootURL "images/FANDOM-Avatar.jpg")
-      alt="user name"
-      link="http://fandom.wikia.com"
-    }}
-    {{avatar
-      src=""
-      alt=" user name"
-    }}
+    <Avatar
+      @src={{concat rootURL "images/FANDOM-Avatar.jpg"}}
+      @alt="user name"
+      @badge="admin"
+    />
+    <Avatar
+      @src={{concat rootURL "images/FANDOM-Avatar.jpg"}}
+      @alt="user name"
+      @link="http://fandom.wikia.com"
+    />
+    <Avatar
+      @src=""
+      @alt=" user name"
+    />
   </Demo>
 
   <h2>Parameters</h2>
@@ -49,80 +49,80 @@
   <div class="assets-wrapper">
     <div id="avatar-24" class="asset_box wds-avatar-style-demo">
       <div class="asset-box__asset">
-        {{avatar
-          alt="user name"
-          badge="admin"
-        }}
+        <Avatar
+          @alt="user name"
+          @badge="admin"
+        />
       </div>
       <div class="asset-box__name">24px</div>
     </div>
 
     <div id="avatar-30" class="wds-avatar-style-demo">
       <div class="asset-box__asset">
-        {{avatar
-          alt="user name"
-          badge="admin"
-        }}
+        <Avatar
+          @alt="user name"
+          @badge="admin"
+        />
       </div>
       <div class="asset-box__name">30px</div>
     </div>
 
     <div id="avatar-36" class="wds-avatar-style-demo">
       <div class="asset-box__asset">
-        {{avatar
-          alt="user name"
-          badge="admin"
-        }}
+        <Avatar
+          @alt="user name"
+          @badge="admin"
+        />
       </div>
       <div class="asset-box__name">36px</div>
     </div>
 
     <div id="avatar-42" class="wds-avatar-style-demo">
       <div class="asset-box__asset">
-        {{avatar
-          alt="user name"
-          badge="admin"
-        }}
+        <Avatar
+          @alt="user name"
+          @badge="admin"
+        />
       </div>
       <div class="asset-box__name">42px</div>
     </div>
 
     <div id="avatar-48" class="wds-avatar-style-demo">
       <div class="asset-box__asset">
-        {{avatar
-          alt="user name"
-          badge="admin"
-        }}
+        <Avatar
+          @alt="user name"
+          @badge="admin"
+        />
       </div>
       <div class="asset-box__name">48px</div>
     </div>
 
     <div id="avatar-60" class="wds-avatar-style-demo">
       <div class="asset-box__asset">
-        {{avatar
-          alt="user name"
-          badge="admin"
-        }}
+        <Avatar
+          @alt="user name"
+          @badge="admin"
+        />
       </div>
       <div class="asset-box__name">60px</div>
     </div>
 
     <div id="avatar-100" class="wds-avatar-style-demo">
       <div class="asset-box__asset">
-        {{avatar
-          alt="user name"
-          badge="admin"
-        }}
+        <Avatar
+          @alt="user name"
+          @badge="admin"
+        />
       </div>
       <div class="asset-box__name">100px</div>
     </div>
 
     <div id="avatar-150" class="wds-avatar-style-demo">
       <div class="asset-box__asset">
-        {{avatar
-          alt="user name"
-          badge="admin"
-        }}
+        <Avatar
+          @alt="user name"
+          @badge="admin"
+        />
       </div>
       <div class="asset-box__name">150px</div>
     </div>
@@ -132,41 +132,41 @@
 <section>
   <h2>Badges</h2>
   <Demo @name="avatar-with-badge">
-    {{avatar
-      src=(concat rootURL "images/FANDOM-Avatar.jpg")
-      alt="user name"
-      badge="admin"
-    }}
-    {{avatar
-      src=(concat rootURL "images/FANDOM-Avatar.jpg")
-      alt="user name"
-      badge="content-moderator"
-    }}
-    {{avatar
-      src=(concat rootURL "images/FANDOM-Avatar.jpg")
-      alt="user name"
-      badge="discussion-moderator"
-    }}
-    {{avatar
-      src=(concat rootURL "images/FANDOM-Avatar.jpg")
-      alt="user name"
-      badge="global-discussions-moderator"
-    }}
-    {{avatar
-      src=(concat rootURL "images/FANDOM-Avatar.jpg")
-      alt="user name"
-      badge="helper"
-    }}
-    {{avatar
-      src=(concat rootURL "images/FANDOM-Avatar.jpg")
-      alt="user name"
-      badge="staff"
-    }}
-    {{avatar
-      src=(concat rootURL "images/FANDOM-Avatar.jpg")
-      alt="user name"
-      badge="vstf"
-    }}
+    <Avatar
+      @src={{concat rootURL "images/FANDOM-Avatar.jpg"}}
+      @alt="user name"
+      @badge="admin"
+    />
+    <Avatar
+      @src={{concat rootURL "images/FANDOM-Avatar.jpg"}}
+      @alt="user name"
+      @badge="content-moderator"
+    />
+    <Avatar
+      @src={{concat rootURL "images/FANDOM-Avatar.jpg"}}
+      @alt="user name"
+      @badge="discussion-moderator"
+    />
+    <Avatar
+      @src={{concat rootURL "images/FANDOM-Avatar.jpg"}}
+      @alt="user name"
+      @badge="global-discussions-moderator"
+    />
+    <Avatar
+      @src={{concat rootURL "images/FANDOM-Avatar.jpg"}}
+      @alt="user name"
+      @badge="helper"
+    />
+    <Avatar
+      @src={{concat rootURL "images/FANDOM-Avatar.jpg"}}
+      @alt="user name"
+      @badge="staff"
+    />
+    <Avatar
+      @src={{concat rootURL "images/FANDOM-Avatar.jpg"}}
+      @alt="user name"
+      @badge="vstf"
+    />
   </Demo>
 </section>
 
@@ -177,7 +177,7 @@
   </p>
 
   <Demo @name="avatar-stack">
-    {{avatar-stack avatars=avatars}}
+    <AvatarStack @avatars={{avatars}} />
   </Demo>
 
   <h2>Parameters</h2>

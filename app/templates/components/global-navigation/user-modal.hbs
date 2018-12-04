@@ -1,9 +1,9 @@
 <div class="wds-user-modal__info">
-  {{avatar
-    src=user.avatar_url
-    link=viewProfileLink
+  <Avatar
+    @src=user.avatar_url
+    @link=viewProfileLink
     data-tracking-label="open-user-profile"
-  }}
+  />
   <p class="wds-user-modal__username">
     {{user.username}}
   </p>

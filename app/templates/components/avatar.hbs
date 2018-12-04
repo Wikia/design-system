@@ -1,13 +1,13 @@
-<div class="wds-avatar" data-tracking-label={{@data-tracking-label}}>
+<div class="wds-avatar" ...attributes>
   {{#if @link}}
     <a href={{@link}}>
-      {{avatar/avatar-image src=@src alt=@alt}}
+      <AvatarImage @src={{@src}} @alt={{@alt}} />
     </a>
   {{else}}
-    {{avatar/avatar-image src=@src alt=@alt}}
+    <AvatarImage @src={{@src}} @alt={{@alt}} />
   {{/if}}
 
   {{#if @badge}}
-    {{avatar/avatar-badge name=@badge}}
+    <AvatarBadge @name={{@badge}} />
   {{/if}}
 </div>

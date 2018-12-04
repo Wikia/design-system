@@ -14,7 +14,7 @@ module('Integration | Component | wds-banner-notifications', function (hooks) {
 	});
 
 	test('it shows notifications and hides them after timeout', async function (assert) {
-		await render(hbs`{{wds-banner-notifications}}`);
+		await render(hbs`<BannerNotifications />`);
 
 		assert.dom('.wds-banner-notification__container').exists();
 

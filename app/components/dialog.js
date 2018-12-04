@@ -6,9 +6,6 @@ export default Component.extend({
 	cancelText: 'Cancel',
 	okText: 'OK',
 
-	onCancel() {},
-	onOK() {},
-
 	actions: {
 		/**
 		 * This action is here just to prevent {{action onCancel 'curtain'}} being triggered

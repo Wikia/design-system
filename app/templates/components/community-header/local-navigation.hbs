@@ -1,7 +1,7 @@
 <nav class="wds-community-header__local-navigation">
   <Tabs as |tabs|>
     {{#each @model as |firstLevelItem|}}
-      <tabs.tab data-tracking-label={{firstLevelItem.tracking_label}}>
+      <tabs.tab @data-tracking-label={{firstLevelItem.tracking_label}}>
         {{#if firstLevelItem.items}}
           {{community-header/local-navigation-dropdown model=firstLevelItem}}
         {{else}}

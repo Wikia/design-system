@@ -33,12 +33,12 @@
 
 {{#if (and renderedCode name)}}
   <Tabs @onChange={{action "onTabChange"}} as |tabs|>
-    <tabs.tab value={{0}}>
+    <tabs.tab @value={{0}}>
       <div class="wds-tabs__tab-label">
         HBS
       </div>
     </tabs.tab>
-    <tabs.tab value={{1}}>
+    <tabs.tab @value={{1}}>
       <div class="wds-tabs__tab-label">
         HTML
       </div>

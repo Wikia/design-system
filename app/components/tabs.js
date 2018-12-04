@@ -5,12 +5,12 @@ export default Component.extend({
 	classNames: 'wds-tabs',
 
 	selected: 0,
-	
+
 	onChange() {},
 
 	actions: {
 		onChange(tab) {
-			this.set('selected', tab.get('value'));
+			this.set('selected', tab.value);
 
 			this.onChange(...arguments);
 		}

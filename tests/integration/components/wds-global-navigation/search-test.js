@@ -23,14 +23,14 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 	});
 
 	test('search is present in GN', async function (assert) {
-		await render(hbs`{{wds-global-navigation/search model=model.search
+		await render(hbs`{{global-navigation/search model=model.search
 				onSearchToggleClicked=onSearchToggleClicked}}`);
 
 		assert.dom('.wds-global-navigation__search').exists('should render component');
 	});
 
 	test('search button label is correct', async function (assert) {
-		await render(hbs`{{wds-global-navigation/search model=model.search
+		await render(hbs`{{global-navigation/search model=model.search
 				onSearchToggleClicked=onSearchToggleClicked}}`);
 
 		assert.dom('.wds-global-navigation__search-toggle-text')
@@ -40,7 +40,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 
 	test('search activating and deactivating works', async function (assert) {
 		await render(hbs`
-		{{wds-global-navigation/search
+		{{global-navigation/search
 			model=model.search
 			onSearchToggleClicked=onSearchToggleClicked
 		}}`);
@@ -62,7 +62,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 		});
 
 		await render(hbs`
-		{{wds-global-navigation/search
+		{{global-navigation/search
 			model=model.search
 			goToSearchResults=goToSearchResults
 			onSearchToggleClicked=onSearchToggleClicked
@@ -84,7 +84,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 	// 	});
 
 	// 	await render(hbs`
-	// 	{{wds-global-navigation/search
+	// 	{{global-navigation/search
 	// 		model=model.search
 	// 		goToSearchResults=goToSearchResults
 	// 		onSearchToggleClicked=onSearchToggleClicked
@@ -105,7 +105,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 		});
 
 		await render(hbs`
-		{{wds-global-navigation/search
+		{{global-navigation/search
 			model=model.search
 			goToSearchResults=goToSearchResults
 			onSearchSuggestionChosen=onSearchSuggestionChosen
@@ -128,7 +128,7 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 		});
 
 		await render(hbs`
-		{{wds-global-navigation/search
+		{{global-navigation/search
 			model=model.search
 			onSearchSuggestionChosen=onSearchSuggestionChosen
 			onSearchToggleClicked=onSearchToggleClicked

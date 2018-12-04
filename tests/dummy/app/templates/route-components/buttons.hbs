@@ -142,12 +142,12 @@
     Nevertheless, their paddings remain untouched, which provides the same clickable area.
   </p>
   <Demo @name="text-buttons">
-    <Button text={{true}}>Text button</Button>
-    <Button text={{true}}>
+    <Button @text={{true}}>Text button</Button>
+    <Button @text={{true}}>
       <Icon @name="fandom-heart" @size="small" />
       <span>Text button</span>
     </Button>
-    <Button text={{true}} disabled>Text disabled</Button>
+    <Button @text={{true}} disabled>Text disabled</Button>
   </Demo>
 </section>
 
@@ -159,7 +159,7 @@
     This type of button is mostly used for icons, example: social icons.
   </p>
   <Demo @name="button-square">
-    <Button @square={{true}} class="wds-is-facebook-color"><Icon name="facebook" /></Button>
+    <Button @square={{true}} class="wds-is-facebook-color"><Icon @name="facebook" /></Button>
     <Button @square={{true}} class="wds-is-nk-color"><Icon @name="nk" /></Button>
   </Demo>
 </section>

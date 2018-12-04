@@ -15,12 +15,12 @@
 
 <h2>Default</h2>
 
-<Button click={{action (mut showDialog) true}}>Open Dialog</Button>
+<Button @click={{action (mut showDialog) true}}>Open Dialog</Button>
 
 {{#if showDialog}}
   <Dialog
     @title="Title"
-    @onOk={{action "onOK" "showDialog"}}
+    @onOk={{action "onOk" "showDialog"}}
     @onCancel={{action "onCancel" "showDialog"}}
   >
     Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
@@ -28,49 +28,45 @@
 {{/if}}
 
 <Demo @name="dialog" @codeOnly={{true}}>
-  {{#if true}}
-    <Dialog
-      @title="Title"
-      @onOk={{action "onOK"}}
-      @onCancel={{action "onCancel"}}
-    >
-      Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
-    </Dialog>
-  {{/if}}
+  <Dialog
+    @title="Title"
+    @onOk={{action "onOk"}}
+    @onCancel={{action "onCancel"}}
+  >
+    Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
+  </Dialog>
 </Demo>
 
 <h2>Usecase with no title</h2>
 
-<Button click={{action (mut showDialogNoTitle) true}}>Open Dialog - no title</Button>
+<Button @click={{action (mut showDialogNoTitle) true}}>Open Dialog - no title</Button>
 
 {{#if showDialogNoTitle}}
   <Dialog
-    @onOk={{action "onOK" "showDialogNoTitle"}}
+    @onOk={{action "onOk" "showDialogNoTitle"}}
     @onCancel={{action "onCancel" "showDialogNoTitle"}}
   >
     Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
   </Dialog>
 {{/if}}
 
-<Demo @name="dialog" @codeOnly={{true}}>
-  {{#if true}}
-    <Dialog
-      @onOk={{action "onOK"}}
-      @onCancel={{action "onCancel"}}
-    >
-      Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
-    </Dialog>
-  {{/if}}
+<Demo @name="dialog-2" @codeOnly={{true}}>
+  <Dialog
+    @onOk={{action "onOk"}}
+    @onCancel={{action "onCancel"}}
+  >
+    Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
+  </Dialog>
 </Demo>
 
 <h2>Usecase with custom action texts</h2>
 
-<Button click={{action (mut showDialogCustomActionText) true}}>Open Dialog - custom action texts</Button>
+<Button @click={{action (mut showDialogCustomActionText) true}}>Open Dialog - custom action texts</Button>
 
 {{#if showDialogCustomActionText}}
   <Dialog
     @title="Title"
-    @onOk={{action "onOK" "showDialogCustomActionText"}}
+    @onOk={{action "onOk" "showDialogCustomActionText"}}
     @onCancel={{action "onCancel" "showDialogCustomActionText"}}
     @okText="Yes"
     @cancelText="No"
@@ -79,18 +75,16 @@
   </Dialog>
 {{/if}}
 
-<Demo @name="dialog" @codeOnly={{true}}>
-  {{#if true}}
-    <Dialog
-      @title="Title"
-      @onOk={{action "onOK"}}
-      @onCancel={{action "onCancel"}}
-      @okText="Yes"
-      @cancelText="No"
-    >
-      Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
-    </Dialog>
-  {{/if}}
+<Demo @name="dialog-3" @codeOnly={{true}}>
+  <Dialog
+    @title="Title"
+    @onOk={{action "onOk"}}
+    @onCancel={{action "onCancel"}}
+    @okText="Yes"
+    @cancelText="No"
+  >
+    Oops, something went wrong! The action you were trying to complete encountered an error and could not be processed. Please try again.
+  </Dialog>
 </Demo>
 
 

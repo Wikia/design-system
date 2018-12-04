@@ -12,8 +12,6 @@ export default Component.extend({
 	classNames: 'wds-banner-notification',
 	classNameBindings: ['typeClassName'],
 
-	onClose() {},
-
 	icon: computed('type', function () {
 		return iconMap[this.type];
 	}),

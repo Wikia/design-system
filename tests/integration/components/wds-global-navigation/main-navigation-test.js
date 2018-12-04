@@ -104,7 +104,7 @@ module('Integration | Component | wds-global-navigation/main-navigation', functi
 	});
 
 	test('it renders', async function (assert) {
-		await render(hbs`{{wds-global-navigation/main-navigation model=model.main-navigation}}`);
+		await render(hbs`{{global-navigation/main-navigation model=model.main-navigation}}`);
 
 		assert.dom('.wds-global-navigation__links').exists('should render component');
 		assert.dom('.wds-global-navigation__link').exists({ count: 5 }, 'should render 5 links');

@@ -6,62 +6,62 @@
 <section>
   <h2>Textarea</h2>
   <Demo @name="textarea">
-    {{textarea
-      value=initialValue
-      placeholder="Placeholder"
-      hint="Example hint"
-      maxlength=1000
-    }}
+    <Textarea
+      @value={{initialValue}}
+      @placeholder="Placeholder"
+      @hint="Example hint"
+      @maxlength={{1000}}
+    />
   </Demo>
 </section>
 
 <section>
   <h2>Textarea with length hint</h2>
   <Demo @name="textarea-with-length-hint">
-    {{textarea
-      value=initialValue
-      placeholder="Placeholder"
-      hasLengthHint=true
-      hint="Example hint"
-      maxlength=1000
-    }}
+    <Textarea
+      @value={{initialValue}}
+      @placeholder="Placeholder"
+      @hasLengthHint={{true}}
+      @hint="Example hint"
+      @maxlength={{1000}}
+    />
   </Demo>
 </section>
 
 <section>
   <h2>Textarea with event handlers</h2>
   <Demo @name="textarea-with-event-handlers">
-    {{textarea
-      value=initialValue
-      placeholder="Placeholder"
-      hint="Example hint"
-      input=(action "input")
-      focus-in=(action "focusIn")
-      focus-out=(action "focusOut")
-    }}
+    <Textarea
+      @value={{initialValue}}
+      @placeholder="Placeholder"
+      @hint="Example hint"
+      @input={{action "input"}}
+      @focus-in={{action "focusIn"}}
+      @focus-out={{action "focusOut"}}
+    />
   </Demo>
 </section>
 
 <section>
   <h2>Textarea error state</h2>
   <Demo @name="textarea-error-state">
-    {{textarea
-      value=initialValue
-      placeholder="Placeholder"
-      hint="Example hint"
-      hasError=true
-    }}
+    <Textarea
+      @value={{initialValue}}
+      @placeholder="Placeholder"
+      @hint="Example hint"
+      @hasError={{true}}
+    />
   </Demo>
 </section>
 
 <section>
   <h2>Disabled textarea</h2>
   <Demo @name="textarea-disabled">
-    {{textarea
-      value=initialValue
-      placeholder="Placeholder"
-      hint="Example hint"
-      disabled=true
-    }}
+    <Textarea
+      @value={{initialValue}}
+      @placeholder="Placeholder"
+      @hint="Example hint"
+      @disabled={{true}}
+    />
   </Demo>
 </section>
