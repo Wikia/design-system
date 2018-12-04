@@ -5,15 +5,14 @@ import { computed } from '@ember/object';
 export default Component.extend({
 	classNameBindings: ['overlay:wds-spinner__overlay'],
 
-	spinnerClasses: computed('isBlock', function () {
-		return `wds-spinner ${this.isBlock ? 'wds-spinner__block' : ''}`;
+	spinnerClasses: computed('block', function () {
+		return `wds-spinner ${this.block ? 'wds-spinner__block' : ''}`;
 	}),
 
 	isVisible: bool('active'),
 	active: false,
 	overlay: true,
-	isBlock: false,
-	isThemed: true,
+	block: false,
 	radius: 30,
 	strokeWidth: 6,
 
