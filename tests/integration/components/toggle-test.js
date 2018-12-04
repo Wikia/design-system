@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | wds-toggle', function(hooks) {
+module('Integration | Component | toggle', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
@@ -12,7 +12,7 @@ module('Integration | Component | wds-toggle', function(hooks) {
 
     await render(hbs`<Toggle />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.dom('.wds-toggle__label').hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | wds-toggle', function(hooks) {
       </Toggle>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('.wds-toggle__label').hasText('template block text');
   });
 });

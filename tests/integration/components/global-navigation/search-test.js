@@ -10,7 +10,7 @@ import hbs from 'htmlbars-inline-precompile';
 import { module, test } from 'qunit';
 import modelStub from '../../../mocks/search-model';
 
-module('Integration | Component | wds-global-navigation/search', function (hooks) {
+module('Integration | Component | global-navigation/search', function (hooks) {
 	setupRenderingTest(hooks);
 
 	hooks.beforeEach(function () {
@@ -23,15 +23,19 @@ module('Integration | Component | wds-global-navigation/search', function (hooks
 	});
 
 	test('search is present in GN', async function (assert) {
-		await render(hbs`{{global-navigation/search model=model.search
-				onSearchToggleClicked=onSearchToggleClicked}}`);
+		await render(hbs`{{global-navigation/search
+			model=model.search
+			onSearchToggleClicked=onSearchToggleClicked}}
+		`);
 
 		assert.dom('.wds-global-navigation__search').exists('should render component');
 	});
 
 	test('search button label is correct', async function (assert) {
-		await render(hbs`{{global-navigation/search model=model.search
-				onSearchToggleClicked=onSearchToggleClicked}}`);
+		await render(hbs`{{global-navigation/search
+			model=model.search
+			onSearchToggleClicked=onSearchToggleClicked
+		}}`);
 
 		assert.dom('.wds-global-navigation__search-toggle-text')
 		.hasText("design-system:global-navigation-search-placeholder-inactive",

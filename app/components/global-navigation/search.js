@@ -376,11 +376,9 @@ export default Component.extend({
 			this.getSuggestions(this.state.query);
 		},
 
-		onCloseSearchClick(event) {
-			event.stopPropagation();
+		onCloseSearchClick() {
 			this.closeSearch();
 		},
-
 
 		onClearSearchClick() {
 			this.closeSearch();
@@ -416,7 +414,7 @@ export default Component.extend({
 			return !this.onSearchSuggestionChosen;
 		},
 
-		submit(event) {
+		submit() {
 			if (this.track) {
 				this.track({
 					action: 'open',
@@ -426,8 +424,8 @@ export default Component.extend({
 			}
 
 			if (this.goToSearchResults) {
-				event.preventDefault();
 				this.goToSearchResults(this.state.query);
+				return false;
 			} else {
 				this.set('searchRequestInProgress', true);
 			}

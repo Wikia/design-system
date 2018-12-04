@@ -3,14 +3,14 @@ import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { module, test } from 'qunit';
 
-module('Integration | Component | wds-dialog', function(hooks) {
+module('Integration | Component | dialog', function(hooks) {
 	setupRenderingTest(hooks);
 
 	test('it renders and fires actions', async function(assert) {
 	let okClicked = false;
 	let cancelClicked = false;
 
-	this.set('onOK', function () {
+	this.set('onOk', function () {
 		okClicked = true;
 	});
 
@@ -18,20 +18,19 @@ module('Integration | Component | wds-dialog', function(hooks) {
 		cancelClicked = true;
 	});
 
-		await render(hbs`
-			<Dialog @title='test' @onOK={{action onOK}} @onCancel={{action onCancel}}>
-				template block text
-			</Dialog>
+	await render(hbs`
+		<Dialog @title='test' @onOk={{action onOk}} @onCancel={{action onCancel}}>
+			template block text
+		</Dialog>
 	`);
 
-	assert.equal(this.element.querySelector('.wds-dialog__title').textContent.trim(), 'test');
-	assert.equal(this.element.querySelector('.wds-dialog__content').textContent.trim(), 'template block text');
-
+	assert.dom('.wds-dialog__title').hasText('test');
+	assert.dom('.wds-dialog__content').hasText('template block text');
 
 	await click('.wds-button:nth-child(1)');
 	await click('.wds-button:nth-child(2)');
 
-	assert.ok(okClicked, 'onOK should be fired')
+	assert.ok(okClicked, 'onOk should be fired')
 	assert.ok(cancelClicked, 'onCancel should be fired')
 	});
 
@@ -42,7 +41,7 @@ module('Integration | Component | wds-dialog', function(hooks) {
 			</Dialog>
 		`);
 
-		assert.equal(this.element.querySelector('.wds-button:nth-child(1)').textContent.trim(), 'testCancel');
-		assert.equal(this.element.querySelector('.wds-button:nth-child(2)').textContent.trim(), 'testOK');
+		assert.dom('.wds-button:nth-child(1)').hasText('testCancel');
+		assert.dom('.wds-button:nth-child(2)').hasText('testOK');
 	});
 });

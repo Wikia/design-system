@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render, waitFor } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | wds-banner-notifications', function (hooks) {
+module('Integration | Component | banner-notifications', function (hooks) {
 	let service;
 
 	setupRenderingTest(hooks);

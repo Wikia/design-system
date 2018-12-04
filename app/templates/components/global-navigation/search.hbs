@@ -39,9 +39,8 @@
     }}
     <Button
       @text={{true}}
-      class="wds-global-navigation__search-clear"
-      @type="button"
       @onClick={{action "onClearSearchClick"}}
+      class="wds-global-navigation__search-clear"
     >
       <Icon
         @name="circle-plus"
@@ -50,22 +49,21 @@
     </Button>
     <Button
       @text={{true}}
-      class="wds-global-navigation__search-close"
-      @type="button"
       @onClick={{action "onCloseSearchClick"}}
+      class="wds-global-navigation__search-close"
     >
       <Icon
         @name="plus"
         @size="tiny"
-        class="wds-icon-tiny wds-global-navigation__search-close-icon"
+        class="wds-global-navigation__search-close-icon"
       />
     </Button>
     <Button
-      @type="submit"
-      class="wds-global-navigation__search-submit"
       @disabled={{isEmptyQuery}}
-      data-tracking-label={{model.results.tracking-label}}
       @onClick={{action "submit"}}
+      type="submit"
+      class="wds-global-navigation__search-submit"
+      data-tracking-label={{model.results.tracking-label}}
     >
       <Icon
         @name="arrow"
