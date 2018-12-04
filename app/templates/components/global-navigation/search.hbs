@@ -41,7 +41,7 @@
       @text={{true}}
       class="wds-global-navigation__search-clear"
       @type="button"
-      @click={{action "onClearSearchClick"}}
+      @onClick={{action "onClearSearchClick"}}
     >
       <Icon
         @name="circle-plus"
@@ -52,7 +52,7 @@
       @text={{true}}
       class="wds-global-navigation__search-close"
       @type="button"
-      @click={{action "onCloseSearchClick"}}
+      @onClick={{action "onCloseSearchClick"}}
     >
       <Icon
         @name="plus"
@@ -65,7 +65,7 @@
       class="wds-global-navigation__search-submit"
       @disabled={{isEmptyQuery}}
       data-tracking-label={{model.results.tracking-label}}
-      @click={{action "submit"}}
+      @onClick={{action "submit"}}
     >
       <Icon
         @name="arrow"

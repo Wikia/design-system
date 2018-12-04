@@ -45,7 +45,7 @@ export default Component.extend({
 	},
 
 	actions: {
-		click(e) {
+		onClick(e) {
 			if (isTouchDevice) {
 				this.set('isClicked', !this.isClicked);
 				e.preventDefault();

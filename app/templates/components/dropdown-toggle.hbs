@@ -2,7 +2,7 @@
   <a
     class={{if @isLevel2 "wds-dropdown-level-2__toggle" "wds-dropdown__toggle"}}
     href={{@href}}
-    onclick={{action @click}}
+    onclick={{action @onClick}}
     ...attributes
   >
     {{#if hasBlock}}
@@ -14,7 +14,7 @@
 {{else}}
   <div
     class={{if @isLevel2 "wds-dropdown-level-2__toggle" "wds-dropdown__toggle"}}
-    onclick={{action @click}}
+    onclick={{action @onClick}}
     ...attributes
   >
     {{#if hasBlock}}

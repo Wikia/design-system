@@ -15,7 +15,7 @@
 
 <h2>Default</h2>
 
-<Button @click={{action (mut showDialog) true}}>Open Dialog</Button>
+<Button @onClick={{action (mut showDialog) true}}>Open Dialog</Button>
 
 {{#if showDialog}}
   <Dialog
@@ -39,7 +39,7 @@
 
 <h2>Usecase with no title</h2>
 
-<Button @click={{action (mut showDialogNoTitle) true}}>Open Dialog - no title</Button>
+<Button @onClick={{action (mut showDialogNoTitle) true}}>Open Dialog - no title</Button>
 
 {{#if showDialogNoTitle}}
   <Dialog
@@ -61,7 +61,7 @@
 
 <h2>Usecase with custom action texts</h2>
 
-<Button @click={{action (mut showDialogCustomActionText) true}}>Open Dialog - custom action texts</Button>
+<Button @onClick={{action (mut showDialogCustomActionText) true}}>Open Dialog - custom action texts</Button>
 
 {{#if showDialogCustomActionText}}
   <Dialog

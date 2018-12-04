@@ -11,14 +11,14 @@
     <div class="wds-dialog__actions">
       <Button
         class="wds-dialog__actions-button"
-        @click={{action (optional @onCancel) "button"}}
+        @onClick={{action (optional @onCancel) "button"}}
         @text={{true}}
       >
         {{cancelText}}
       </Button>
       <Button
         class="wds-dialog__actions-button"
-        @click={{action (optional @onOk)}}
+        @onClick={{action (optional @onOk)}}
         @text={{true}}
       >
         {{okText}}

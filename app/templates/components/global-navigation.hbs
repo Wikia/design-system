@@ -79,7 +79,7 @@
       }}
       {{#if model.user}}
         <Button
-          @click={{action openModal "user"}}
+          @onClick={{action openModal "user"}}
           class="wds-global-navigation__modal-control wds-global-navigation__modal-control-user"
           @text={{true}}
           @type="button"
@@ -99,7 +99,7 @@
         }}
       {{else if model.anon}}
         <Button
-          @click={{action closeModal}}
+          @onClick={{action closeModal}}
           class="wds-global-navigation__modal-control wds-global-navigation__modal-control-anon"
           @text={{true}}
           href={{signinUrl}}
@@ -108,7 +108,7 @@
         </Button>
       {{/if}}
       <Button
-        @click={{action closeModal}}
+        @onClick={{action closeModal}}
         class="wds-global-navigation__modal-control wds-global-navigation__modal-control-close"
         @text={{true}}
         @type="button"

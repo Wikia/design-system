@@ -1,8 +1,8 @@
 <a
-  class="wds-button{{if @secondary " wds-is-secondary"}}{{if @text " wds-is-text"}}{{if @square " wds-is-square"}}"
+  class="wds-button{{if @secondary " wds-is-secondary"}}{{if @text " wds-is-text"}}{{if @square " wds-is-square"}}{{if @disabled " wds-is-disabled"}}"
   href="#"
   ...attributes
-  {{action (optional @click)}}
+  {{action (optional @onClick)}}
 >
   {{yield}}
 </a>
