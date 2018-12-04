@@ -18,7 +18,7 @@
     size = full diameter = radius * 2 + strokeWidth
   </p>
   {{#component-demo name="progress-indicator-intro" codeOnly=true}}
-    {{wds-spinner active=true radius=38 strokeWidth=2 isBlock=true}}
+    <Spinner @active={{true}} @radius={{38}} @strokeWidth={{2}} @isBlock={{true}} />
   {{/component-demo}}
   <div>
     In addition to <code>wds-spinner</code> and <code>wds-spinner__stroke</code>, other classes can be used,
@@ -40,13 +40,13 @@
     You can see the reference code in <code>wds-spinner</code> Ember component.
   </p>
   {{#component-demo name="progress-indicator"}}
-    {{wds-spinner
-      active=true
-      isBlock=true
-      overlay=false
-      radius=20
-      strokeWidth=5
-    }}
+    <Spinner
+      @active={{true}}
+      @isBlock={{true}}
+      @overlay={{false}}
+      @radius={{20}}
+      @strokeWidth={{5}}
+    />
   {{/component-demo}}
 
   <p>

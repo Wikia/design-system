@@ -1,0 +1,18 @@
+<nav class="wds-community-header__local-navigation">
+  <Tabs as |tabs|>
+    {{#each @model as |firstLevelItem|}}
+      <tabs.tab data-tracking-label={{firstLevelItem.tracking_label}}>
+        {{#if firstLevelItem.items}}
+          {{community-header/local-navigation-dropdown model=firstLevelItem}}
+        {{else}}
+          <div class="wds-tabs__tab-label">
+            <a href={{firstLevelItem.href}}>
+              {{community-header/nav-item-with-icon item=firstLevelItem}}
+            </a>
+          </div>
+        {{/if}}
+      </tabs.tab>
+    {{/each}}
+  </Tabs>
+</nav>
+

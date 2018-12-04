@@ -44,7 +44,7 @@
   <p>
     However, if you wish to use other elements as dropdown toggle,
     you need to add custom <code class="format-code">padding-bottom</code> parameter
-    to push the arrow down. In the examples below, we use text with chevron as toggle
+    to push the arrow down. In the examples below, we use text with Chevron as toggle
     and add this padding locally.
   </p>
 </section>
@@ -52,10 +52,10 @@
   <h2 id="dropdowns-default-variant">Default</h2>
   <p>Default dropdown, centered.</p>
   {{#component-demo name="dropdown"}}
-    {{#wds-dropdown as |dropdown|}}
+    <Dropdown as |dropdown|>
       {{dropdown.toggle class="push-dropdown-down" text="Default dropdown"}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
@@ -66,9 +66,9 @@
           <li>List item 8</li>
           <li>List item 9</li>
           <li>List item 10</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
   There is possibility to render dropdown toggle as other html tag than
   <code class="format-code">span</code>,
@@ -85,10 +85,10 @@
     to the <code class="format-code">dropdown.content</code> component.
   </p>
   {{#component-demo name="dropdown-scrollable"}}
-    {{#wds-dropdown as |dropdown|}}
+    <Dropdown as |dropdown|>
       {{dropdown.toggle class="push-dropdown-down" text="Not scrollable dropdown"}}
       {{#dropdown.content scrollable=false}}
-        {{#wds-list}}
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
@@ -99,9 +99,9 @@
           <li>List item 8</li>
           <li>List item 9</li>
           <li>List item 10</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
 </section>
 <section>
@@ -114,16 +114,16 @@
     to the dropdown.content component.
   </p>
   {{#component-demo name="dropdown-left"}}
-    {{#wds-dropdown as |dropdown|}}
+    <Dropdown as |dropdown|>
       {{dropdown.toggle class="push-dropdown-down" text="Left aligned dropdown"}}
       {{#dropdown.content dropdownLeftAligned=true}}
-        {{#wds-list}}
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
 </section>
 <section>
@@ -136,16 +136,16 @@
     to the dropdown.content component.
   </p>
   {{#component-demo name="dropdown-right"}}
-    {{#wds-dropdown as |dropdown|}}
+    <Dropdown as |dropdown|>
       {{dropdown.toggle class="push-dropdown-down" text="Right aligned dropdown"}}
       {{#dropdown.content dropdownRightAligned=true}}
-        {{#wds-list}}
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
 </section>
 <section>
@@ -157,16 +157,16 @@
     Links have color and hover state different than when outside of a dropdown.
   </p>
   {{#component-demo name="dropdown-linked"}}
-    {{#wds-dropdown as |dropdown|}}
+    <Dropdown as |dropdown|>
       {{dropdown.toggle class="push-dropdown-down" text="Dropdown with linked list"}}
       {{#dropdown.content scrollable=false}}
-        {{#wds-list linked=true}}
+        {{#list linked=true}}
           <li><a href="http://fandom.wikia.com">List item 1</a></li>
           <li><a href="http://fandom.wikia.com">List item 2</a></li>
           <li><a href="http://fandom.wikia.com">List item 3</a></li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
 </section>
 <section>
@@ -180,36 +180,36 @@
     add <code class="format-code">hasShadow=true</code> or <code class="format-code">hasDarkShadow=true</code>.
   </p>
   {{#component-demo name="dropdown-shadow"}}
-    {{#wds-dropdown class="dropdown-margin-right" hasShadow=true as |dropdown|}}
+    {{#dropdown class="dropdown-margin-right" hasShadow=true as |dropdown|}}
       {{dropdown.toggle class="push-dropdown-down" text="Dropdown with shadow"}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
-    {{#wds-dropdown hasDarkShadow=true as |dropdown|}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
+    {{#dropdown hasDarkShadow=true as |dropdown|}}
       {{dropdown.toggle class="push-dropdown-down" text="Dropdown with shadow"}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
 </section>
 <section>
-  <h2 id="dropdowns-default-variant">No chevron</h2>
-  <p>Default dropdown with no chevron.</p>
+  <h2 id="dropdowns-default-variant">No Chevron</h2>
+  <p>Default dropdown with no Chevron.</p>
   {{#component-demo name="dropdown"}}
-    {{#wds-dropdown noChevron=true as |dropdown|}}
+    {{#dropdown noChevron=true as |dropdown|}}
       {{dropdown.toggle class="push-dropdown-down" text="Default dropdown"}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
@@ -220,9 +220,9 @@
           <li>List item 8</li>
           <li>List item 9</li>
           <li>List item 10</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
 </section>
 <section>
@@ -251,16 +251,16 @@
     2-levels dropdowns do not support shadows and scrollable lists.
   </p>
   {{#component-demo name="dropdown-level-2"}}
-    {{#wds-dropdown as |dropdown|}}
+    <Dropdown as |dropdown|>
       {{dropdown.toggle class="push-dropdown-down" text="2-levels dropdown"}}
       {{#dropdown.content scrollable=false}}
-        {{#wds-list linked=true bold=true}}
-          {{#wds-dropdown isLevel2=true tagName="li" as |dropdown|}}
+        {{#list linked=true bold=true}}
+          {{#dropdown isLevel2=true tagName="li" as |dropdown|}}
             <a href="#">
               {{dropdown.toggle text="List item 1"}}
             </a>
-            {{#dropdown.content}}
-              {{#wds-list linked=true}}
+            <dropdown.content>
+              {{#list linked=true}}
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
                 <li><a href="#">List item 3</a></li>
@@ -269,18 +269,18 @@
                 <li><a href="#">List item 6</a></li>
                 <li><a href="#">List item 7</a></li>
                 <li><a href="#">List item 8</a></li>
-              {{/wds-list}}
-            {{/dropdown.content}}
-          {{/wds-dropdown}}
+              </List>
+            </dropdown.content>
+          </Dropdown>
           <li>
             <a href="#">List item 2</a>
           </li>
-          {{#wds-dropdown isLevel2=true tagName="li" as |dropdown|}}
+          {{#dropdown isLevel2=true tagName="li" as |dropdown|}}
             <a href="#">
               {{dropdown.toggle text="List item 3"}}
             </a>
-            {{#dropdown.content}}
-              {{#wds-list linked=true}}
+            <dropdown.content>
+              {{#list linked=true}}
                 <li><a href="#2">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
                 <li><a href="#">List item 3</a></li>
@@ -294,10 +294,10 @@
                 <li><a href="#">List item 11</a></li>
                 <li><a href="#">List item 12</a></li>
                 <li><a href="#">List item 13</a></li>
-              {{/wds-list}}
-            {{/dropdown.content}}
-          {{/wds-dropdown}}
-          {{#wds-dropdown
+              </List>
+            </dropdown.content>
+          </Dropdown>
+          {{#dropdown
             isLevel2=true
             tagName="li"
             class="wds-is-sticked-to-parent"
@@ -306,27 +306,27 @@
             <a href="#">
               {{dropdown.toggle text="List item 4"}}
             </a>
-            {{#dropdown.content}}
-              {{#wds-list linked=true}}
+            <dropdown.content>
+              {{#list linked=true}}
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
-              {{/wds-list}}
-            {{/dropdown.content}}
-          {{/wds-dropdown}}
-          {{#wds-dropdown isLevel2=true tagName="li" as |dropdown|}}
+              </List>
+            </dropdown.content>
+          </Dropdown>
+          {{#dropdown isLevel2=true tagName="li" as |dropdown|}}
             <a href="#">
               {{dropdown.toggle text="Broken 2nd level"}}
             </a>
-            {{#dropdown.content}}
-              {{#wds-list linked=true}}
+            <dropdown.content>
+              {{#list linked=true}}
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
-              {{/wds-list}}
-            {{/dropdown.content}}
-          {{/wds-dropdown}}
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+              </List>
+            </dropdown.content>
+          </Dropdown>
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
 </section>
 <section class="dropdowns-theming">
@@ -351,16 +351,16 @@
     will give you following theme:
   </p>
   {{#component-demo name="dropdown-theming"}}
-    {{#wds-dropdown as |dropdown|}}
+    <Dropdown as |dropdown|>
       {{dropdown.toggle class="push-dropdown-down" text="2-levels dropdown"}}
       {{#dropdown.content scrollable=false}}
-        {{#wds-list linked=true bold=true}}
-          {{#wds-dropdown isLevel2=true tagName="li" as |dropdown|}}
+        {{#list linked=true bold=true}}
+          {{#dropdown isLevel2=true tagName="li" as |dropdown|}}
             <a href="#">
               {{dropdown.toggle text="List item 1"}}
             </a>
-            {{#dropdown.content}}
-              {{#wds-list linked=true}}
+            <dropdown.content>
+              {{#list linked=true}}
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
                 <li><a href="#">List item 3</a></li>
@@ -369,18 +369,18 @@
                 <li><a href="#">List item 6</a></li>
                 <li><a href="#">List item 7</a></li>
                 <li><a href="#">List item 8</a></li>
-              {{/wds-list}}
-            {{/dropdown.content}}
-          {{/wds-dropdown}}
+              </List>
+            </dropdown.content>
+          </Dropdown>
           <li>
             <a href="#">List item 2</a>
           </li>
-          {{#wds-dropdown isLevel2=true tagName="li" as |dropdown|}}
+          {{#dropdown isLevel2=true tagName="li" as |dropdown|}}
             <a href="#">
               {{dropdown.toggle text="List item 3"}}
             </a>
-            {{#dropdown.content}}
-              {{#wds-list linked=true}}
+            <dropdown.content>
+              {{#list linked=true}}
                 <li><a href="#2">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
                 <li><a href="#">List item 3</a></li>
@@ -394,10 +394,10 @@
                 <li><a href="#">List item 11</a></li>
                 <li><a href="#">List item 12</a></li>
                 <li><a href="#">List item 13</a></li>
-              {{/wds-list}}
-            {{/dropdown.content}}
-          {{/wds-dropdown}}
-          {{#wds-dropdown
+              </List>
+            </dropdown.content>
+          </Dropdown>
+          {{#dropdown
             isLevel2=true
             tagName="li"
             class="wds-is-sticked-to-parent"
@@ -406,22 +406,22 @@
             <a href="#">
               {{dropdown.toggle text="List item 4"}}
             </a>
-            {{#dropdown.content}}
-              {{#wds-list linked=true}}
+            <dropdown.content>
+              {{#list linked=true}}
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
-              {{/wds-list}}
-            {{/dropdown.content}}
-          {{/wds-dropdown}}
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+              </List>
+            </dropdown.content>
+          </Dropdown>
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
   {{#component-demo name="dropdown-theming-2"}}
-    {{#wds-dropdown as |dropdown|}}
+    <Dropdown as |dropdown|>
       {{dropdown.toggle class="push-dropdown-down" text="Default dropdown"}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
@@ -432,8 +432,8 @@
           <li>List item 8</li>
           <li>List item 9</li>
           <li>List item 10</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
 </section>

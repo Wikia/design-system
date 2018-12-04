@@ -1,0 +1,17 @@
+<div class="wds-user-modal__info">
+  {{avatar
+    src=user.avatar_url
+    link=viewProfileLink
+    data-tracking-label="open-user-profile"
+  }}
+  <p class="wds-user-modal__username">
+    {{user.username}}
+  </p>
+</div>
+<div class="wds-user-modal__notifications-wrapper">
+  {{on-site-notifications/notifications header=header track=track}}
+</div>
+{{global-navigation/link-logout
+  model=signOutModel
+  class="wds-user-modal__sign-out-container"
+}}

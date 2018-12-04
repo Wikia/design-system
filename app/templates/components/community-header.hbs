@@ -1,0 +1,29 @@
+{{#if model.wordmark.image-data.url}}
+  <div class="wds-community-header__wordmark">
+    <a
+      accesskey="z"
+      href={{model.wordmark.href}}
+      data-tracking-label={{model.wordmark.tracking_label}}
+    >
+      <img
+        src={{model.wordmark.image-data.url}}
+        width={{model.wordmark.image-data.width}}
+        height={{model.wordmark.image-data.height}}
+        alt={{model.wordmark.title.value}}
+      >
+
+    </a>
+  </div>
+{{/if}}
+<div class="wds-community-header__top-container">
+  <div class="wds-community-header__sitename">
+    <a
+      href={{model.sitename.href}}
+      data-tracking-label={{model.sitename.tracking_label}}
+    >
+      {{model.sitename.title.value}}
+    </a>
+  </div>
+  {{yield}}
+</div>
+{{community-header/local-navigation model=model.navigation}}

@@ -12,19 +12,19 @@
   </p>
 
   {{#component-demo name="tabs"}}
-    {{#wds-tabs as |tabs|}}
-      {{#tabs.tab value=0}}
+    <Tabs as |tabs|>
+      <tabs.tab @value=0>
         <div class="wds-tabs__tab-label">
           <span>Text tab</span>
         </div>
-      {{/tabs.tab}}
+      </tabs.tab>
 
-      {{#tabs.tab value=1}}
+      <tabs.tab @value=1>
         <div class="wds-tabs__tab-label">
           <a href="#">A really long tab that don"t break into lines and is a link</a>
         </div>
-      {{/tabs.tab}}
-    {{/wds-tabs}}
+      </tabs.tab>
+    </Tabs>
   {{/component-demo}}
 </section>
 
@@ -36,21 +36,21 @@
   </p>
 
   {{#component-demo name="tabs-with-text-and-icon"}}
-    {{#wds-tabs as |tabs|}}
-      {{#tabs.tab value=0}}
+    <Tabs as |tabs|>
+      <tabs.tab @value=0>
         <div class="wds-tabs__tab-label">
-          {{wds-icon name="gear-small" class="wds-icon-tiny"}}
+          <Icon @name="gear-small" class="wds-icon-tiny" />
           <span>Icon tab</span>
         </div>
-      {{/tabs.tab}}
+      </tabs.tab>
 
-      {{#tabs.tab value=1}}
+      <tabs.tab @value=1>
         <div class="wds-tabs__tab-label">
-          {{wds-icon name="gear-small" class="wds-icon-tiny"}}
+          <Icon @name="gear-small" class="wds-icon-tiny" />
           <span>Very long icon tab that don"t break into lines</span>
         </div>
-      {{/tabs.tab}}
-    {{/wds-tabs}}
+      </tabs.tab>
+    </Tabs>
   {{/component-demo}}
 </section>
 
@@ -59,23 +59,23 @@
   <p>To mark specific tab as opened (there should be only one opened tab at once) add <code class="format-code">.wds-is-current</code> class to your tab"s <code>&lt;li&gt;</code> tag.</p>
   <p>
     In Ember component you can have tabs marked as active automatically by passing a unique <code class="format-code">value</code> to tabs.tab components.
-    A tab with value=0 will be marked as selected. If you want to change which tab is selected on initial render - pass <code class="format-code">selected=value</code> to \{{wds-tabs}} component.
+    A tab with value=0 will be marked as selected. If you want to change which tab is selected on initial render - pass <code class="format-code">selected=value</code> to \{{tabs}} component.
     If you don"t need tabs to be marked as active - don"t pass value to tabs.tab components.
   </p>
   {{#component-demo name="tabs-active"}}
-    {{#wds-tabs selected=1 as |tabs|}}
-      {{#tabs.tab value=0}}
+    <Tabs selected=1 as |tabs|>
+      <tabs.tab @value=0>
         <div class="wds-tabs__tab-label">
           <span>Opened tab</span>
         </div>
-      {{/tabs.tab}}
+      </tabs.tab>
 
-      {{#tabs.tab value=1}}
+      <tabs.tab @value=1>
         <div class="wds-tabs__tab-label">
           <span>Regular tab</span>
         </div>
-      {{/tabs.tab}}
-    {{/wds-tabs}}
+      </tabs.tab>
+    </Tabs>
   {{/component-demo}}
 </section>
 
@@ -84,14 +84,14 @@
   <p>To disable some tab and make it completely non-interactive add <code class="format-code">.wds-is-disabled</code> class to your tab"s <code>&lt;li&gt;</code> tag.</p>
 
   {{#component-demo name="tabs-disabled"}}
-    {{#wds-tabs as |tabs|}}
-      {{#tabs.tab value=0 disabled=true}}
+    <Tabs as |tabs|>
+      <tabs.tab @value=0 @disabled=true>
         <div class="wds-tabs__tab-label">
-          {{wds-icon name="gear-small" class="wds-icon-tiny"}}
+          <Icon @name="gear-small" class="wds-icon-tiny" />
           <span>Disabled tab</span>
         </div>
-      {{/tabs.tab}}
-    {{/wds-tabs}}
+      </tabs.tab>
+    </Tabs>
   {{/component-demo}}
 </section>
 
@@ -103,55 +103,55 @@
   </p>
 
   {{#component-demo name="tabs-with-dropdown"}}
-    {{#wds-tabs as |tabs|}}
-      {{#tabs.tab}}
-        {{#wds-dropdown as |dropdown|}}
-          {{#dropdown.toggle class="wds-tabs__tab-label" as |chevron|}}
-            <span>Tab with dropdown</span>{{chevron}}
-          {{/dropdown.toggle}}
-          {{#dropdown.content}}
-            {{#wds-list}}
+    <Tabs as |tabs|>
+      <tabs.tab>
+        <Dropdown as |dropdown|>
+          <dropdown.toggle class="wds-tabs__tab-label" as |Chevron|>
+            <span>Tab with dropdown</span><Chevron />
+          </dropdown.toggle>
+          <dropdown.content>
+            <List>
               <li>List item 1</li>
               <li>List item 2</li>
               <li>List item 3</li>
-            {{/wds-list}}
-          {{/dropdown.content}}
-        {{/wds-dropdown}}
-      {{/tabs.tab}}
+            </List>
+          </dropdown.content>
+        </Dropdown>
+      </tabs.tab>
 
-      {{#tabs.tab}}
-        {{#wds-dropdown as |dropdown|}}
-          {{#dropdown.toggle class="wds-tabs__tab-label" as |chevron|}}
-            <a href="#">Tab with link dropdown</a>{{chevron}}
-          {{/dropdown.toggle}}
-          {{#dropdown.content}}
-            {{#wds-list}}
+      <tabs.tab>
+        <Dropdown as |dropdown|>
+          <dropdown.toggle class="wds-tabs__tab-label" as |Chevron|>
+            <a href="#">Tab with link dropdown</a><Chevron />
+          </dropdown.toggle>
+          <dropdown.content>
+            <List>
               <li>List item 1</li>
               <li>List item 2</li>
               <li>List item 3</li>
-            {{/wds-list}}
-          {{/dropdown.content}}
-        {{/wds-dropdown}}
-      {{/tabs.tab}}
+            </List>
+          </dropdown.content>
+        </Dropdown>
+      </tabs.tab>
 
-      {{#tabs.tab}}
-        {{#wds-dropdown as |dropdown|}}
-          {{#dropdown.toggle class="wds-tabs__tab-label" as |chevron|}}
+      <tabs.tab>
+        <Dropdown as |dropdown|>
+          <dropdown.toggle class="wds-tabs__tab-label" as |Chevron|>
             <a href="#">
-              {{wds-icon name="gear-small" class="wds-icon-tiny"}}
+              <Icon @name="gear-small" class="wds-icon-tiny" />
               <span>Tab with link dropdown with icon</span>
             </a>
-            {{chevron}}
-          {{/dropdown.toggle}}
-          {{#dropdown.content}}
-            {{#wds-list}}
+            <Chevron />
+          </dropdown.toggle>
+          <dropdown.content>
+            <List>
               <li>List item 1</li>
               <li>List item 2</li>
               <li>List item 3</li>
-            {{/wds-list}}
-          {{/dropdown.content}}
-        {{/wds-dropdown}}
-      {{/tabs.tab}}
-    {{/wds-tabs}}
+            </List>
+          </dropdown.content>
+        </Dropdown>
+      </tabs.tab>
+    </Tabs>
   {{/component-demo}}
 </section>

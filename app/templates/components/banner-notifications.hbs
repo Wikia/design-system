@@ -1,0 +1,12 @@
+{{#each model as |notification|}}
+  <BannerNotification
+    @type={{notification.type}}
+    @onClose={{action "onClose" notification.id}}
+  >
+    {{#if notification.text}}
+      {{notification.text}}
+    {{else if notification.alreadySafeHtml}}
+      {{{notification.alreadySafeHtml}}}
+    {{/if}}
+  </BannerNotification>
+{{/each}}

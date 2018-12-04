@@ -1,6 +1,6 @@
 {{#if standaloneDevice}}
   <div class="component-demo__fullscreen">
-    <div class="component-demo__close" {{action "closeFullscreen"}}>{{wds-icon name="cross"}}</div>
+    <div class="component-demo__close" {{action "closeFullscreen"}}><Icon name="cross"}}</div>
     <div class="component-demo__standalone-wrapper">
       <iframe
         class="component-demo__standalone is-{{standaloneDevice}}"
@@ -32,7 +32,7 @@
 {{/if}}
 
 {{#if (and renderedCode name)}}
-  {{#wds-tabs onChange=(action "onTabChange") as |tabs|}}
+  {{#tabs onChange=(action "onTabChange") as |tabs|}}
     {{#tabs.tab value=0}}
       <div class="wds-tabs__tab-label">
         HBS

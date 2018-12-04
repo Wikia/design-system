@@ -30,12 +30,12 @@
   <h2 id="primary">Primary buttons</h2>
   <p>Default version for general use.</p>
   {{#component-demo name="buttons"}}
-    {{#wds-button}}Primary button{{/wds-button}}
-    {{#wds-button}}
-      {{wds-icon name="fandom-heart" size="small"}}
+    <Button>Primary button</Button>
+    <Button>
+      <Icon @name="fandom-heart" @size="small" />
       <span>Primary button</span>
-    {{/wds-button}}
-    {{#wds-button disabled=true}}Primary disabled{{/wds-button}}
+    </Button>
+    <Button disabled>Primary disabled</Button>
   {{/component-demo}}
 
   <h2>Parameters</h2>
@@ -65,12 +65,12 @@
     It is used to create a button that draws less user"s attention.
   </p>
   {{#component-demo name="buttons-secondary"}}
-    {{#wds-button secondary=true}}Secondary button{{/wds-button}}
-    {{#wds-button secondary=true}}
-      {{wds-icon name="fandom-heart" size="small"}}
+    <Button @secondary={{true}}>Secondary button</Button>
+    <Button @secondary={{true}}>
+      <Icon @name="fandom-heart" @size="small" />
       <span>Secondary button</span>
-    {{/wds-button}}
-    {{#wds-button secondary=true disabled=true}}Secondary disabled{{/wds-button}}
+    </Button>
+    <Button @secondary={{true}} disabled>Secondary disabled</Button>
   {{/component-demo}}
 </section>
 
@@ -82,12 +82,12 @@
   </p>
 
   {{#component-demo name="dropdown-buttons"}}
-    {{#wds-dropdown as |dropdown|}}
-      {{#dropdown.toggle as |chevron|}}
-        {{#wds-button}}<span>Dropdown</span> {{chevron}}{{/wds-button}}
-      {{/dropdown.toggle}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+    <Dropdown as |dropdown|>
+      <dropdown.toggle as |Chevron|>
+        <Button><span>Dropdown</span> <Chevron /></Button>
+      </dropdown.toggle>
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
@@ -98,39 +98,39 @@
           <li>List item 8</li>
           <li>List item 9</li>
           <li>List item 10</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
 
-    {{#wds-dropdown as |dropdown|}}
-      {{#dropdown.toggle as |chevron|}}
-        {{#wds-button}}
-          {{wds-icon name="fandom-heart" size="small"}}
+    <Dropdown as |dropdown|>
+      <dropdown.toggle as |Chevron|>
+        <Button>
+          <Icon name="fandom-heart" size="small"}}
           <span>Dropdown</span>
-          {{chevron}}
-        {{/wds-button}}
-      {{/dropdown.toggle}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+          <Chevron />
+        </Button>
+      </dropdown.toggle>
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
 
-    {{#wds-dropdown as |dropdown|}}
-      {{#dropdown.toggle as |chevron|}}
-        {{#wds-button secondary=true}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
-      {{/dropdown.toggle}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+    <Dropdown as |dropdown|>
+      <dropdown.toggle as |Chevron|>
+        <Button secondary=true}}<span>Dropdown</span><Chevron /></Button>
+      </dropdown.toggle>
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
   {{/component-demo}}
 </section>
 
@@ -142,12 +142,12 @@
     Nevertheless, their paddings remain untouched, which provides the same clickable area.
   </p>
   {{#component-demo name="text-buttons"}}
-    {{#wds-button text=true}}Text button{{/wds-button}}
-    {{#wds-button text=true}}
-      {{wds-icon name="fandom-heart" size="small"}}
+    <Button text=true}}Text button</Button>
+    <Button text=true}}
+      <Icon name="fandom-heart" size="small"}}
       <span>Text button</span>
-    {{/wds-button}}
-    {{#wds-button text=true disabled=true}}Text disabled{{/wds-button}}
+    </Button>
+    <Button text=true disabled=true}}Text disabled</Button>
   {{/component-demo}}
 </section>
 
@@ -159,8 +159,8 @@
     This type of button is mostly used for icons, example: social icons.
   </p>
   {{#component-demo name="button-square"}}
-    {{#wds-button square=true class="wds-is-facebook-color"}}{{wds-icon name="facebook"}}{{/wds-button}}
-    {{#wds-button square=true class="wds-is-nk-color"}}{{wds-icon name="nk"}}{{/wds-button}}
+    <Button @square={{true}} class="wds-is-facebook-color"><Icon name="facebook /></Button>
+    <Button @square={{true}} class="wds-is-nk-color"}}<Icon name="nk" /></Button>
   {{/component-demo}}
 </section>
 
@@ -168,11 +168,11 @@
   <h2 id="other:multiline">Other usages: multiline button</h2>
   <p>Button labels can wrap to multiple lines.</p>
   {{#component-demo name="multiline-button"}}
-    {{#wds-button class="fixed-width-140px"}}Multiline button label with 3rd line{{/wds-button}}
-    {{#wds-button class="fixed-width-140px"}}
-      {{wds-icon name="fandom-heart" size="small"}}
+    <Button class="fixed-width-140px"}}Multiline button label with 3rd line</Button>
+    <Button class="fixed-width-140px"}}
+      <Icon name="fandom-heart" size="small"}}
       <span>Multiline button label</span>
-    {{/wds-button}}
+    </Button>
   {{/component-demo}}
 </section>
 
@@ -185,12 +185,12 @@
     class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.
   </p>
   {{#component-demo name="link-buttons"}}
-    {{#wds-button href="#"}}Link button{{/wds-button}}
-    {{#wds-button href="#"}}
-      {{wds-icon name="fandom-heart" size="small"}}
+    <Button href="#"}}Link button</Button>
+    <Button href="#"}}
+      <Icon name="fandom-heart" size="small"}}
       <span>Link button</span>
-    {{/wds-button}}
-    {{#wds-button href="#" secondary=true}}Secondary link button{{/wds-button}}
+    </Button>
+    <Button href="#" secondary=true}}Secondary link button</Button>
   {{/component-demo}}
 </section>
 
@@ -207,26 +207,26 @@
   {{/component-demo}}
 
   {{#component-demo name="buttons-theming"}}
-    {{#wds-button class="primary-only"}}Primary{{/wds-button}}
-    {{#wds-button class="primary-only"}}
-      {{wds-icon name="fandom-heart" size="small"}}
+    <Button class="primary-only"}}Primary</Button>
+    <Button class="primary-only"}}
+      <Icon name="fandom-heart" size="small"}}
       <span>Primary button</span>
-    {{/wds-button}}
+    </Button>
 
-    {{#wds-dropdown as |dropdown|}}
-      {{#dropdown.toggle as |chevron|}}
-        {{#wds-button class="primary-only"}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
-      {{/dropdown.toggle}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+    <Dropdown as |dropdown|>
+      <dropdown.toggle as |Chevron|>
+        <Button class="primary-only"}}<span>Dropdown</span><Chevron /></Button>
+      </dropdown.toggle>
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
-    {{#wds-button secondary=true class="primary-only"}}Secondary{{/wds-button}}
-    {{#wds-button text=true class="primary-only"}}Text{{/wds-button}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
+    <Button secondary=true class="primary-only"}}Secondary</Button>
+    <Button text=true class="primary-only"}}Text</Button>
   {{/component-demo}}
 
   <p>It is also possible to apply different color for secondary and text buttons than to primary ones:</p>
@@ -237,26 +237,26 @@
   {{/component-demo}}
 
   {{#component-demo name="buttons-theming-2"}}
-    {{#wds-button class="different-secondary"}}Primary{{/wds-button}}
-    {{#wds-button class="different-secondary"}}
-      {{wds-icon name="fandom-heart" size="small"}}
+    <Button class="different-secondary"}}Primary</Button>
+    <Button class="different-secondary"}}
+      <Icon name="fandom-heart" size="small"}}
       <span>Primary button</span>
-    {{/wds-button}}
+    </Button>
 
-    {{#wds-dropdown as |dropdown|}}
-      {{#dropdown.toggle as |chevron|}}
-        {{#wds-button class="different-secondary"}}<span>Dropdown</span>{{chevron}}{{/wds-button}}
-      {{/dropdown.toggle}}
-      {{#dropdown.content}}
-        {{#wds-list}}
+    <Dropdown as |dropdown|>
+      <dropdown.toggle as |Chevron|>
+        <Button class="different-secondary"}}<span>Dropdown</span><Chevron /></Button>
+      </dropdown.toggle>
+      <dropdown.content>
+        <List>
           <li>List item 1</li>
           <li>List item 2</li>
           <li>List item 3</li>
-        {{/wds-list}}
-      {{/dropdown.content}}
-    {{/wds-dropdown}}
-    {{#wds-button secondary=true class="different-secondary"}}Secondary{{/wds-button}}
-    {{#wds-button text=true class="different-secondary"}}Text{{/wds-button}}
+        </List>
+      </dropdown.content>
+    </Dropdown>
+    <Button secondary=true class="different-secondary"}}Secondary</Button>
+    <Button text=true class="different-secondary"}}Text</Button>
   {{/component-demo}}
 </section>
 
@@ -267,21 +267,21 @@
   <p>Wrap a series of buttons with <code>.wds-button</code> in <code>.wds-button-group</code>.</p>
   {{#component-demo name="button-group-mix"}}
     <div class="wds-button-group">
-      {{#wds-button}}1{{/wds-button}}
-      {{#wds-button}}2{{/wds-button}}
-      {{#wds-button disabled=true}}3{{/wds-button}}
-      {{#wds-button}}4{{/wds-button}}
-      {{#wds-button}}5{{/wds-button}}
+      <Button>1</Button>
+      <Button>2</Button>
+      <Button @disabled={{true}}>3</Button>
+      <Button>4</Button>
+      <Button>5</Button>
     </div>
   {{/component-demo}}
   <p>Mixing primary, secondary and different sizes of buttons is not supported. All buttons have to be of the same type.</p>
   {{#component-demo name="button-group-mix"}}
     <div class="wds-button-group">
-      {{#wds-button secondary=true}}6{{/wds-button}}
-      {{#wds-button secondary=true}}7{{/wds-button}}
-      {{#wds-button disabled=true secondary=true}}8{{/wds-button}}
-      {{#wds-button secondary=true}}9{{/wds-button}}
-      {{#wds-button secondary=true}}10{{/wds-button}}
+      <Button secondary=true}}6</Button>
+      <Button secondary=true}}7</Button>
+      <Button disabled=true secondary=true}}8</Button>
+      <Button secondary=true}}9</Button>
+      <Button secondary=true}}10</Button>
     </div>
   {{/component-demo}}
 </section>
@@ -291,16 +291,16 @@
 
   {{#component-demo name="button-group-with-icons"}}
     <div class="wds-button-group white-theme">
-      {{#wds-button secondary=true}}
-        {{wds-icon name="activity" size="small"}}
+      <Button secondary=true}}
+        <Icon name="activity" size="small"}}
         <span>Activity</span>
-      {{/wds-button}}
-      {{#wds-button secondary=true}}
-        {{wds-icon name="house" size="small"}}
-      {{/wds-button}}
-      {{#wds-button secondary=true}}
-        {{wds-icon name="map" size="small"}}
-      {{/wds-button}}
+      </Button>
+      <Button secondary=true}}
+        <Icon name="house" size="small"}}
+      </Button>
+      <Button secondary=true}}
+        <Icon name="map" size="small"}}
+      </Button>
     </div>
   {{/component-demo}}
 </section>
@@ -311,22 +311,22 @@
   <p>It is also possible to include dropdown button within button-group</p>
   {{#component-demo name="button-group-icons-in-dropdowns"}}
     <div class="wds-button-group">
-      {{#wds-button}}
-        {{wds-icon name="pencil" size="small"}}
+      <Button>
+        <Icon name="pencil" size="small"}}
         <span>Edit</span>
-      {{/wds-button}}
-      {{#wds-dropdown as |dropdown|}}
-        {{#dropdown.toggle as |chevron|}}
-          {{#wds-button}}{{chevron}}{{/wds-button}}
-        {{/dropdown.toggle}}
-        {{#dropdown.content}}
-          {{#wds-list}}
+      </Button>
+      <Dropdown as |dropdown|>
+        <dropdown.toggle as |Chevron|>
+          <Button><Chevron /></Button>
+        </dropdown.toggle>
+        <dropdown.content>
+          <List>
             <li>List item 1</li>
             <li>List item 2</li>
             <li>List item 3</li>
-          {{/wds-list}}
-        {{/dropdown.content}}
-      {{/wds-dropdown}}
+          </List>
+        </dropdown.content>
+      </Dropdown>
     </div>
   {{/component-demo}}
 </section>

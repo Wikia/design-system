@@ -1,0 +1,22 @@
+<Dropdown class={{navigationClasses}} as |dropdown|>
+  <dropdown.toggle
+    @click={{action toggleNavigation}}
+    data-tracking-label="nav-expanded" as |Chevron|
+  >
+    {{!fixme add new icon for navigation}}
+    {{svg "wds-icons-menu-small" class="wds-icon wds-icon-small"}}
+    <Chevron />
+  </dropdown.toggle>
+  <dropdown.content @dropdownRightAligned={{true}} @dropdownLeftAligned={{true}}>
+    {{community-bar/local-navigation
+      model=model
+      firstLevelIndexSelected=firstLevelIndexSelected
+      secondLevelIndexSelected=secondLevelIndexSelected
+      onFirstLevelSelected=(action onFirstLevelSelected)
+      onSecondLevelSelected=(action onSecondLevelSelected)
+      onThirdLevelSelected=(action onThirdLevelSelected)
+      resetSelected=(action resetSelected)
+      onLinkClicked=(action onLinkClicked)
+    }}
+  </dropdown.content>
+</Dropdown>

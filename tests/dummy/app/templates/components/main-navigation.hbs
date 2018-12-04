@@ -1,4 +1,4 @@
-{{#wds-list}}
+<List>
   {{#each navigation as |parentRoute|}}
     <li>
       <input
@@ -7,12 +7,12 @@
         class="main-navigation__toggle"
         checked={{if parentRoute.expanded "checked"}}
       >
-      <label for={{parentRoute.id}}><strong>{{parentRoute.name}}</strong> {{wds-icon name="menu-control" size="tiny"}}</label>
-      {{#wds-list linked=true}}
+      <label for={{parentRoute.id}}><strong>{{parentRoute.name}}</strong> <Icon name="menu-control" size="tiny"}}</label>
+      {{#list linked=true}}
         {{#each parentRoute.items as |route|}}
           <li>{{#link-to route.location}}{{route.name}}{{/link-to}}</li>
         {{/each}}
-      {{/wds-list}}
+      </List>
     </li>
   {{/each}}
-{{/wds-list}}
+</List>

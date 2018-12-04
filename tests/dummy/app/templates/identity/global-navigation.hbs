@@ -121,7 +121,7 @@
 
     {{! template-lint-configure-tree attribute-indentation false }}
     {{#component-demo name="global-nav" codeOnly=true componentName="wds-global-navigation" standalone=true variantUrl="/identity/global-navigation/standalone/logged-out-default"}}
-      {{wds-global-navigation
+      {{global-navigation
         model=model.logged-out-default
         track=(action track)
         onSearchSuggestionChosen=(action onSearchSuggestionChosen)
@@ -136,7 +136,7 @@
 
     {{! template-lint-configure-tree attribute-indentation false }}
     {{#component-demo name="global-nav-logged-in-with-hubs" codeOnly=true componentName="wds-global-navigation" standalone=true variantUrl="/identity/global-navigation/standalone/logged-in-default"}}
-      {{wds-global-navigation
+      {{global-navigation
         model=model.logged-in-default
         track=(action track)
         onSearchSuggestionChosen=(action onSearchSuggestionChosen)
@@ -151,7 +151,7 @@
 
     {{! template-lint-configure-tree attribute-indentation false }}
     {{#component-demo name="global-nav-partner-logo" codeOnly=true componentName="wds-global-navigation" standalone=true variantUrl="/identity/global-navigation/standalone/logged-out-with-partner-slot"}}
-      {{wds-global-navigation
+      {{global-navigation
         model=model.logged-out-with-partner-slot
         track=(action track)
         onSearchSuggestionChosen=(action onSearchSuggestionChosen)

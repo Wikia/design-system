@@ -1,0 +1,12 @@
+<div class="wds-banner-notification__icon">
+  <Icon name=icon size="small"}}
+</div>
+<span class="wds-banner-notification__text">
+  {{yield}}
+</span>
+<Icon
+  @name="cross"
+  @size="tiny"
+  class="wds-banner-notification__close"
+  click={{action onClose}}
+/>
