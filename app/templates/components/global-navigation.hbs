@@ -82,7 +82,6 @@
           @onClick={{action openModal "user"}}
           class="wds-global-navigation__modal-control wds-global-navigation__modal-control-user"
           @text={{true}}
-          @type="button"
         >
           <Avatar @src={{model.user.avatar_url}} @alt={{model.user.username}} />
           {{#if wdsOnSiteNotifications.unreadCountWithLimit}}
@@ -99,9 +98,10 @@
         }}
       {{else if model.anon}}
         <Button
+          @tag="a"
           @onClick={{action closeModal}}
-          class="wds-global-navigation__modal-control wds-global-navigation__modal-control-anon"
           @text={{true}}
+          class="wds-global-navigation__modal-control wds-global-navigation__modal-control-anon"
           href={{signinUrl}}
         >
           <Avatar />
@@ -111,7 +111,6 @@
         @onClick={{action closeModal}}
         class="wds-global-navigation__modal-control wds-global-navigation__modal-control-close"
         @text={{true}}
-        @type="button"
       >
         {{svg "wds-icons-cross" class="wds-icon"}}
       </Button>

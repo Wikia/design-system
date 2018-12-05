@@ -46,6 +46,7 @@
       <li><strong>@secondary</strong> (bool): whether button should be secondary or not</li>
       <li><strong>@text</strong> (bool): whether button should be of type text or not</li>
       <li><strong>@square</strong> (bool): whether button should be square or not</li>
+      <li><strong>@href</strong> (string): if passed, button will be rendered as an anchor</li>
       <li><strong>class</strong> (string): additional class names</li>
     </ul>
   </div>
@@ -185,12 +186,12 @@
     class just like for the <code>&lt;button&gt;</code> element. Optionally add any other desired button classes.
   </p>
   <Demo @name="link-buttons">
-    <Button href="#">Link button</Button>
-    <Button href="#">
+    <Button @href="#">Link button</Button>
+    <Button @href="#">
       <Icon @name="fandom-heart" @size="small" />
       <span>Link button</span>
     </Button>
-    <Button href="#" @secondary={{true}}>Secondary link button</Button>
+    <Button @secondary={{true}} @href="#">Secondary link button</Button>
   </Demo>
 </section>
 
@@ -226,7 +227,7 @@
       </dropdown.content>
     </Dropdown>
     <Button @secondary={{true}} class="primary-only">Secondary</Button>
-    <Button text={{true}} class="primary-only">Text</Button>
+    <Button @text={{true}} class="primary-only">Text</Button>
   </Demo>
 
   <p>It is also possible to apply different color for secondary and text buttons than to primary ones:</p>

@@ -1,7 +1,7 @@
 <Button
-  class="wds-global-navigation__link-button"
-  href={{@model.href}}
   @secondary={{true}}
+  @href={{@model.href}}
+  class="wds-global-navigation__link-button"
   data-tracking-label={{@model.tracking-label}}
 >
   {{i18n @model.title.key ns="design-system"}}

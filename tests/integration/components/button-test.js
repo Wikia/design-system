@@ -39,12 +39,13 @@ module('Integration | Component | button', function(hooks) {
 
 	test('renders passed href', async function(assert) {
 		await render(hbs`
-		<Button href='http://fandom.com'>
+		<Button @href='http://fandom.com'>
 			template block text
 		</Button>
 	`);
 
 		assert.dom('.wds-button').hasAttribute('href', 'http://fandom.com');
+		assert.dom('a.wds-button').exists();
 	});
 
 	test('supports any attribute', async function(assert) {

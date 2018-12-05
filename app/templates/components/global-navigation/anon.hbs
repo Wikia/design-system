@@ -10,8 +10,8 @@
     <List @lines={{true}}>
       <li>
         <Button
+          @href={{signinUrl}}
           class="wds-is-full-width"
-          href={{signinUrl}}
           rel="nofollow"
           data-tracking-label={{model.signin.tracking-label}}
         >
@@ -26,10 +26,11 @@
           }}
         </div>
         <Button
+          @tag="a"
+          @secondary={{true}}
           class="wds-is-full-width"
           href={{registerUrl}}
           rel="nofollow"
-          @secondary={{true}}
           data-tracking-label={{model.register.tracking-label}}
         >
           {{i18n model.register.title.key ns="design-system"}}
