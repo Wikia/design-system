@@ -35,17 +35,17 @@
       <Icon @name="fandom-heart" @size="small" />
       <span>Primary button</span>
     </Button>
-    <Button disabled>Primary disabled</Button>
+    <Button @disabled={{true}}>Primary disabled</Button>
   </Demo>
 
   <h2>Parameters</h2>
   <div>
     <h3>HBS Properties</h3>
     <ul>
-      <li><strong>disabled</strong> (bool): whether button should be disabled or not</li>
-      <li><strong>secondary</strong> (bool): whether button should be secondary or not</li>
-      <li><strong>text</strong> (bool): whether button should be of type text or not</li>
-      <li><strong>square</strong> (bool): whether button should be square or not</li>
+      <li><strong>@disabled</strong> (bool): whether button should be disabled or not</li>
+      <li><strong>@secondary</strong> (bool): whether button should be secondary or not</li>
+      <li><strong>@text</strong> (bool): whether button should be of type text or not</li>
+      <li><strong>@square</strong> (bool): whether button should be square or not</li>
       <li><strong>class</strong> (string): additional class names</li>
     </ul>
   </div>
@@ -70,7 +70,7 @@
       <Icon @name="fandom-heart" @size="small" />
       <span>Secondary button</span>
     </Button>
-    <Button @secondary={{true}} disabled>Secondary disabled</Button>
+    <Button @secondary={{true}} @disabled={{true}}>Secondary disabled</Button>
   </Demo>
 </section>
 
@@ -147,7 +147,7 @@
       <Icon @name="fandom-heart" @size="small" />
       <span>Text button</span>
     </Button>
-    <Button @text={{true}} disabled>Text disabled</Button>
+    <Button @text={{true}} @disabled={{true}}>Text disabled</Button>
   </Demo>
 </section>
 
