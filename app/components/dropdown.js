@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import { or } from '@ember/object/computed';
 
 const isTouchDevice = ('ontouchstart' in window);
-//todo support for tagName?
+
 export default Component.extend({
 	classNameBindings: [
 		'isActive:wds-is-active',
