@@ -3,27 +3,51 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | avatar-stack', function (hooks) {
+function generateAvatars(number) {
+	return new Array(number).fill({
+		src: '/images/FANDOM-Avatar.jpg',
+		alt: 'user name',
+	});
+}
+
+module('Integration | Component | avatar-stack', function(hooks) {
 	setupRenderingTest(hooks);
 
-	test('it renders', async function (assert) {
-		this.set('avatars3', new Array(3).fill({ src: '/images/FANDOM-Avatar.jpg', alt: 'user name' }));
+	test('it renders', async function(assert) {
+		this.set('avatars3', generateAvatars(3));
 		await render(hbs`<AvatarStack @avatars={{avatars3}} />`);
 
-		assert.equal(this.element.querySelectorAll('.wds-avatar').length, 3, 'should render 3 avatars');
-		assert.equal(this.element.querySelectorAll('.wds-avatar-stack__overflow').length, 0, 'should render only 3 avatars');
+		assert
+			.dom('.wds-avatar')
+			.exists({ count: 3 }, 'should render 3 avatars');
+		assert
+			.dom('.wds-avatar-stack__overflow')
+			.exists({ count: 0 }, 'should render only 3 avatars');
 
-		this.set('avatars5', new Array(5).fill({ src: '/images/FANDOM-Avatar.jpg', alt: 'user name' }));
+		this.set('avatars5', generateAvatars(5));
 		await render(hbs`<AvatarStack @avatars={{avatars5}} />`);
 
-		assert.equal(this.element.querySelectorAll('.wds-avatar').length, 5, 'should render 5 avatars');
-		assert.equal(this.element.querySelectorAll('.wds-avatar-stack__overflow').length, 0, 'should render only 5 avatars');
+		assert
+			.dom('.wds-avatar')
+			.exists({ count: 5 }, 'should render 5 avatars');
+		assert
+			.dom('.wds-avatar-stack__overflow')
+			.exists({ count: 0 }, 'should render only 5 avatars');
+	});
 
-		this.set('avatars9', new Array(9).fill({ src: '/images/FANDOM-Avatar.jpg', alt: 'user name' }));
+	test('renders overflow when more avatars passed', async function(assert) {
+		this.set('avatars9', generateAvatars(9));
+
 		await render(hbs`<AvatarStack @avatars={{avatars9}} />`);
 
-		assert.equal(this.element.querySelectorAll('.wds-avatar').length, 5, 'should render 5 avatars with overflow');
-		assert.equal(this.element.querySelectorAll('.wds-avatar-stack__overflow').length, 1, 'should render overflow');
-		assert.equal(this.element.querySelector('.wds-avatar-stack__overflow').textContent.trim(), '+4', 'wrong value of overflow');
+		assert
+			.dom('.wds-avatar')
+			.exists({ count: 5 }, 'should render 5 avatars with overflow');
+		assert
+			.dom('.wds-avatar-stack__overflow')
+			.exists({ count: 1 }, 'should render overflow');
+		assert
+			.dom('.wds-avatar-stack__overflow')
+			.hasText('+4', 'wrong value of overflow');
 	});
 });

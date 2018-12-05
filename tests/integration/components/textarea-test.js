@@ -22,9 +22,13 @@ module('Integration | Component | Textarea', function (hooks) {
 
 	test('it shows length hint', async function (assert) {
 		this.set('textareaValue', '');
-		await render(hbs`<Textarea @value={{textareaValue}} @hasLengthHint={{true}} @maxlength={{100}} />`);
+		await render(hbs`
+			<Textarea
+				@value={{textareaValue}}
+				@hasLengthHint={{true}}
+				@maxlength={{100}}
+			/>`);
 
-		assert.dom('.wds-textarea__length-hint').exists();
 		assert.dom('.wds-textarea__length-hint').hasText('100');
 		assert.dom('.wds-textarea').hasClass('wds-has-length-hint');
 
@@ -38,7 +42,6 @@ module('Integration | Component | Textarea', function (hooks) {
 
 		await render(hbs`<Textarea @hint={{exampleHint}} />`);
 
-		assert.dom('.wds-textarea__hint').exists();
 		assert.dom('.wds-textarea__hint').hasText(exampleHint);
 	});
 
