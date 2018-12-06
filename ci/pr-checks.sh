@@ -57,7 +57,7 @@ setupNpm
 
 ### Build - building application
 updateGit "Build" pending "building application"
-npm run build-test 2>&1 | tee jenkins/build.log || error=true
+COVERAGE=true npm run build-test 2>&1 | tee jenkins/build.log || error=true
 vim -e -s -c ':set bomb' -c ':wq' jenkins/build.log
 
 if [ -z $error ]
@@ -72,7 +72,7 @@ fi
 
 ### Tests - running
 updateGit "Tests" pending running
-TEST_PORT=$EXECUTOR_NUMBER npm run test-existing 2>&1 | tee jenkins/tests.log || { error1=true && failJob=true; }
+TEST_PORT=$EXECUTOR_NUMBER COVERAGE=true npm run test-existing 2>&1 | tee jenkins/tests.log || { error1=true && failJob=true; }
 vim -e -s -c ':set bomb' -c ':wq' jenkins/tests.log
 
 if [ -z $error1 ]
