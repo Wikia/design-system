@@ -12,8 +12,8 @@ node('qa-executors') {
     }
     stage('Build and Test') {
         timeout(time: 10, unit: 'MINUTES') {
-           sh 'chmod +x ci/pr-checks.sh'
-           sh 'ci/pr-checks.sh'
+           sh 'npm install --no-save'
+           sh 'COVERAGE=true ember test'
         }
     }
 
