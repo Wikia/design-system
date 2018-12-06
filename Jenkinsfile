@@ -1,9 +1,13 @@
 pipeline {
-  agent {'qa-executors'}
+  agent {
+    label 'qa-executors'
+  }
 
   stages {
     stage('Checkout SCM') {
-      checkout scm
+      steps {
+        checkout scm
+      }
     }
     stage('npm ci') {
       options {
@@ -18,10 +22,10 @@ pipeline {
         COVERAGE = true
       }
       options {
-          timeout(time: 2, unit: 'MINUTES')
+        timeout(time: 2, unit: 'MINUTES')
       }
       steps {
-          sh 'ember test'
+        sh 'ember test'
       }
     }
   }
