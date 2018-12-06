@@ -16,3 +16,7 @@ indent_size = 2
 [*.hbs]
 indent_style = space
 indent_size = 2
+
+[Jenkinsfile]
+indent_style = space
+indent_size = 2
