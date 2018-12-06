@@ -11,8 +11,8 @@ node('qa-executors') {
     env.GIT_COMMIT = readFile('GIT_BRANCH').trim()
   }
   stage('Build and Test') {
-    timeout(time: 10, unit: 'MINUTES') {
-      sh 'npm install --no-save'
+    timeout(time: 5, unit: 'MINUTES') {
+      sh 'npm ci'
       sh 'COVERAGE=true ember test'
     }
   }
