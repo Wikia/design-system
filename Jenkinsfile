@@ -4,11 +4,6 @@ pipeline {
   }
 
   stages {
-    stage('Checkout SCM') {
-      steps {
-        checkout scm
-      }
-    }
     stage('npm ci') {
       options {
         timeout(time: 2, unit: 'MINUTES')
