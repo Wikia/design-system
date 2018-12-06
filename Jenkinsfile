@@ -28,8 +28,7 @@ pipeline {
 
   post {
     success {
-      cobertura
-        autoUpdateHealth: false,
+      cobertura autoUpdateHealth: false,
         autoUpdateStability: false,
         coberturaReportFile: '**/coverage/cobertura-coverage.xml',
         conditionalCoverageTargets: '70, 0, 0',
@@ -40,7 +39,6 @@ pipeline {
         methodCoverageTargets: '80, 0, 0',
         onlyStable: false,
         zoomCoverageChart: false
-      }
     }
   }
 }
