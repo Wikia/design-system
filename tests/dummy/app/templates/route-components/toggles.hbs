@@ -8,35 +8,35 @@
 <section>
   <h2 id="text-only">Simple toggle</h2>
 
-  {{#component-demo name="toggle-a"}}
-    {{wds-toggle id="toggleA"}}
-  {{/component-demo}}
+  <Demo @name="toggle-a">
+    <Toggle @id="toggleA" />
+  </Demo>
 </section>
 
 <section>
   <h2 id="text-only">Toggle with a label</h2>
 
-  {{#component-demo name="toggle-b"}}
-    {{#wds-toggle id="toggleB"}}
+  <Demo @name="toggle-b">
+    <Toggle @id="toggleB">
       Slide me if you wish
-    {{/wds-toggle}}
-  {{/component-demo}}
+    </Toggle>
+  </Demo>
 </section>
 
 <section>
   <h2 id="text-only">Disabled toggle</h2>
 
-  {{#component-demo name="toggle-disabled"}}
-    {{#wds-toggle id="toggleDisabled" disabled=true}}
+  <Demo @name="toggle-disabled">
+    <Toggle @id="toggleDisabled" disabled={{true}}>
       Yep I"m disabled
-    {{/wds-toggle}}
-  {{/component-demo}}
+    </Toggle>
+  </Demo>
 
   <h2 id="text-only">Disabled and checked toggle</h2>
 
-  {{#component-demo name="toggle-disabled-b"}}
-    {{#wds-toggle id="toggleDisabledB" disabled=true checked=true}}
+  <Demo @name="toggle-disabled-b">
+    <Toggle id="toggleDisabledB" disabled={{true}} checked={{true}}>
       Yep I"m disabled
-    {{/wds-toggle}}
-  {{/component-demo}}
+    </Toggle>
+  </Demo>
 </section>

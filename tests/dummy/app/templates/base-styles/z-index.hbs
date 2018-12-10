@@ -67,12 +67,12 @@
 <section>
   <h2 id="example">Example usage</h2>
   <h3>Define meaningful variables for your components in one place</h3>
-  {{#component-demo name="z-index-vars" language="scss" codeOnly=true}}
+  <Demo @name="z-index-vars" @language="scss" @codeOnly={{true}}>
     $z-external-video-player: $z-1;
     $z-sticky-editor: $z-7;
-  {{/component-demo}}
+  </Demo>
   <h3>Then use those variables throught your CSS</h3>
-  {{#component-demo name="z-index-usage" language="scss" codeOnly=true}}
+  <Demo @name="z-index-usage" @language="scss" @codeOnly={{true}}>
     .inline-editor-floating-container {
       z-index: $z-discussion-sticky-editor;
     }
@@ -81,5 +81,5 @@
       to be overridden
       z-index: $z-external-video-player !important;
     }
-  {{/component-demo}}
+  </Demo>
 </section>

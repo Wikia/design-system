@@ -1,0 +1,33 @@
+<Dropdown as |dropdown|>
+  <dropdown.toggle class="wds-tabs__tab-label" as |Chevron|>
+    {{#if @model.href}}
+      <a href={{@model.href}}>
+        {{community-header/nav-item-with-icon item=@model}}
+      </a>
+    {{else}}
+      {{community-header/nav-item-with-icon item=@model}}
+    {{/if}}
+    <Chevron />
+  </dropdown.toggle>
+  <dropdown.content @scrollable={{false}}>
+    <List @linked={{true}} @bold={{true}}>
+      {{#each @model.items as |secondLevelItem index|}}
+        {{#if secondLevelItem.items}}
+          {{community-header/local-navigation-dropdown-level-2
+            model=secondLevelItem
+            currentIndex=index
+          }}
+        {{else}}
+          <li>
+            <a
+              href={{secondLevelItem.href}}
+              data-tracking-label={{secondLevelItem.tracking_label}}
+            >
+              <Label @label={{secondLevelItem.title}} />
+            </a>
+          </li>
+        {{/if}}
+      {{/each}}
+    </List>
+  </dropdown.content>
+</Dropdown>

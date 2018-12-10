@@ -7,19 +7,19 @@
     <code class="format-code">wds-icons-error-small</code>
   </p>
 
-  {{#component-demo name="banner-notifications"}}
+  <Demo @name="banner-notifications">
     <div class="wds-banner-notification__container">
-      {{#wds-banner-notification type="alert" onClose=(action "onClose")}}
+      <BannerNotification @type="alert" @onClose={{action "onClose"}}>
         This is an error message.
-      {{/wds-banner-notification}}
+      </BannerNotification>
     </div>
-  {{/component-demo}}
+  </Demo>
   <h2>Parameters</h2>
   <div>
     <h3>HBS Properties</h3>
     <ul>
-      <li><strong>type</strong> (string): type of notification (alert | warning | success | sessage)</li>
-      <li><strong>onClose</strong> (Ember action): optional action to call when user clicks the close button</li>
+      <li><strong>@type</strong> (string): type of notification (alert | warning | success | sessage)</li>
+      <li><strong>@onClose</strong> (function): optional action to call when user clicks the close button</li>
     </ul>
   </div>
 </section>
@@ -32,13 +32,13 @@
     <code class="format-code">wds-icons-alert-small</code>
   </p>
 
-  {{#component-demo name="banner-notifications-warning"}}
+  <Demo @name="banner-notifications-warning">
     <div class="wds-banner-notification__container">
-      {{#wds-banner-notification type="warning" onClose=(action "onClose")}}
+      <BannerNotification @type="warning" @onClose={{action "onClose"}}>
         This is a warning message.
-      {{/wds-banner-notification}}
+      </BannerNotification>
     </div>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
@@ -50,13 +50,13 @@
   </p>
 
 
-  {{#component-demo name="banner-notifications-success"}}
+  <Demo @name="banner-notifications-success">
     <div class="wds-banner-notification__container">
-      {{#wds-banner-notification type="success" onClose=(action "onClose")}}
+      <BannerNotification @type="success" @onClose={{action "onClose"}}>
         This is a confirmation message.
-      {{/wds-banner-notification}}
+      </BannerNotification>
     </div>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>
@@ -67,34 +67,34 @@
     <code class="format-code">wds-icons-flag-small</code>
   </p>
 
-  {{#component-demo name="banner-notifications-message"}}
+  <Demo @name="banner-notifications-message">
     <div class="wds-banner-notification__container">
-      {{#wds-banner-notification type="message" onClose=(action "onClose")}}
+      <BannerNotification @type="message" @onClose={{action "onClose"}}>
         This is a general notification message.
-      {{/wds-banner-notification}}
+      </BannerNotification>
     </div>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 
 <section>
   <h2>Stacked</h2>
 
-  {{#component-demo name="banner-notifications-stacked"}}
+  <Demo @name="banner-notifications-stacked">
     <div class="wds-banner-notification__container">
-      {{#wds-banner-notification type="message"}}
+      <BannerNotification @type="message">
         Stacked notification 1.
-      {{/wds-banner-notification}}
-      {{#wds-banner-notification type="success"}}
+      </BannerNotification>
+      <BannerNotification @type="success">
         Stacked notification 2 with very long content. Lorem ipsum dolor sit amet,
         consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et
         malesuada fames ac ante ipsum primis in faucibus.
-      {{/wds-banner-notification}}
-      {{#wds-banner-notification type="warning"}}
+      </BannerNotification>
+      <BannerNotification @type="warning">
         Stacked notification 3.
-      {{/wds-banner-notification}}
+      </BannerNotification>
     </div>
-  {{/component-demo}}
+  </Demo>
 </section>
 
 <section>

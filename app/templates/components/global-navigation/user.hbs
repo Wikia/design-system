@@ -1,0 +1,22 @@
+<Dropdown
+  class="wds-global-navigation__user-menu wds-global-navigation__user-logged-in"
+  @hasShadow={{true}} as |dropdown|
+>
+  <dropdown.toggle as |Chevron|>
+    <Avatar @src={{@model.avatar_url}} alt={{@model.username}} /><Chevron />
+  </dropdown.toggle>
+  <dropdown.content @dropdownRightAligned={{true}}>
+    <List @linked={{true}}>
+      {{#each @model.items as |item|}}
+        <li>
+          {{!
+              Components that can be rendered here are:
+              - link-text
+              - link-logout
+          }}
+          {{component (concat "global-navigation/" item.type)  model=item}}
+        </li>
+      {{/each}}
+    </List>
+  </dropdown.content>
+</Dropdown>

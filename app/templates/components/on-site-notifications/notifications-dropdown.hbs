@@ -1,0 +1,21 @@
+<Dropdown
+  class="wds-global-navigation__notifications-dropdown"
+  @mouseEnter={{action "onOpen"}}
+  @hasShadow={{true}} as |dropdown|
+>
+  <dropdown.toggle class="wds-global-navigation__dropdown-toggle" as |Chevron|>
+    {{#if wdsOnSiteNotifications.unreadCountWithLimit}}
+      <span class="wds-global-navigation__notifications-counter">
+        {{wdsOnSiteNotifications.unreadCountWithLimit}}
+      </span>
+    {{/if}}
+    {{svg "wds-icons-bell" class="wds-icon wds-icon-small icon-bell"}}
+    <Chevron />
+  </dropdown.toggle>
+  <dropdown.content
+    class="wds-notifications__dropdown-content"
+    @dropdownRightAligned={{true}}
+  >
+    {{on-site-notifications/notifications track=track}}
+  </dropdown.content>
+</Dropdown>

@@ -1,0 +1,27 @@
+<div class="wds-community-bar__content">
+  <div class="wds-community-bar__sitename">
+    <a
+      href={{model.sitename.href}}
+      data-tracking-label={{model.sitename.tracking_label}}
+    >
+      {{#if model.sitename.mobile_title}}
+        {{model.sitename.mobile_title.value}}
+      {{else}}
+        {{model.sitename.title.value}}
+      {{/if}}
+    </a>
+  </div>
+  {{#if discussionsLink}}
+    <a
+      href={{discussionsLink.href}}
+      class="wds-community-bar__discussions"
+      data-tracking-label={{discussionsLink.tracking_label}}
+    >
+      <Icon @name="reply-small" @size="small" />
+    </a>
+  {{/if}}
+  {{community-bar/local-navigation-dropdown
+    model=navigation
+    onLinkClicked=(action linkClicked)
+  }}
+</div>

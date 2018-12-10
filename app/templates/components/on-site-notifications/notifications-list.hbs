@@ -1,0 +1,17 @@
+{{#each notificationsList as |notification|}}
+  {{on-site-notifications/notification-card
+    model=notification
+    track=track
+  }}
+{{/each}}
+{{#if isLoadingNewResults}}
+  <li>
+    <Spinner
+      @active={{true}}
+      @block={{true}}
+      @overlay={{false}}
+      @radius={{13}}
+      @strokeWidth={{2}}
+    />
+  </li>
+{{/if}}

@@ -100,11 +100,11 @@
   </p>
   <p>
     Example in JS:
-    {{#component-demo name="api-headers" language="js" codeOnly=true}}
+    <Demo @name="api-headers" @language="js" @codeOnly={{true}}>
       this.headers = {
         Cookie: `access_token=${this.request.state.access_token}`
       };
-    {{/component-demo}}
+    </Demo>
   </p>
 </section>
 

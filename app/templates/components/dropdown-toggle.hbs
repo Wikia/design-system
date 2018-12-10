@@ -1,0 +1,26 @@
+{{#if @href}}
+  <a
+    class={{if @isLevel2 "wds-dropdown-level-2__toggle" "wds-dropdown__toggle"}}
+    href={{@href}}
+    onclick={{action @onClick}}
+    ...attributes
+  >
+    {{#if hasBlock}}
+      {{yield (component "dropdown-icon" isLevel2=@isLevel2)}}
+    {{else}}
+      <span>{{@text}}</span><DropdownIcon @isLevel2={{@isLevel2}} />
+    {{/if}}
+  </a>
+{{else}}
+  <div
+    class={{if @isLevel2 "wds-dropdown-level-2__toggle" "wds-dropdown__toggle"}}
+    onclick={{action @onClick}}
+    ...attributes
+  >
+    {{#if hasBlock}}
+      {{yield (component "dropdown-icon" isLevel2=@isLevel2)}}
+    {{else}}
+      <span>{{@text}}</span><DropdownIcon @isLevel2={{@isLevel2}} />
+    {{/if}}
+  </div>
+{{/if}}

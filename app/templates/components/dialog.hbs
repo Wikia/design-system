@@ -1,0 +1,32 @@
+<div class="wds-dialog__curtain" {{action (optional onCancel) "curtain"}}>
+  <div
+    class="wds-dialog__wrapper"
+    ...attributes
+    {{action "cancelBubble" bubbles=false}}
+  >
+    {{#if @title}}
+      <div class="wds-dialog__title">
+        {{@title}}
+      </div>
+    {{/if}}
+    <div class="wds-dialog__content">
+      {{yield}}
+    </div>
+    <div class="wds-dialog__actions">
+      <Button
+        class="wds-dialog__actions-button"
+        @onClick={{action (optional @onCancel) "button"}}
+        @text={{true}}
+      >
+        {{cancelText}}
+      </Button>
+      <Button
+        class="wds-dialog__actions-button"
+        @onClick={{action (optional @onOk)}}
+        @text={{true}}
+      >
+        {{okText}}
+      </Button>
+    </div>
+  </div>
+</div>

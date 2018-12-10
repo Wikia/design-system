@@ -3,7 +3,7 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
 	actions: {
-		onOK(dialogToggleName) {
+		onOk(dialogToggleName) {
 			console.log('onOK')
 			this.set(dialogToggleName, false);
 		},

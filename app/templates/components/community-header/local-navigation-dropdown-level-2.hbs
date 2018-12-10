@@ -1,0 +1,26 @@
+<Dropdown
+  @isLevel2={{true}}
+  @tagName="li"
+  class={{stickedClassName}} as |dropdown|
+>
+  <dropdown.toggle
+    href={{href}}
+    data-tracking-label={{model.tracking_label}} as |Chevron|
+  >
+    {{community-header/nav-item item=model}}<Chevron />
+  </dropdown.toggle>
+  <dropdown.content @scrollable={{false}}>
+    <List @linked={{true}}>
+      {{#each model.items as |thirdLevelItem|}}
+        <li>
+          <a
+            href={{thirdLevelItem.href}}
+            data-tracking-label={{thirdLevelItem.tracking_label}}
+          >
+            {{thirdLevelItem.title.value}}
+          </a>
+        </li>
+      {{/each}}
+    </List>
+  </dropdown.content>
+</Dropdown>

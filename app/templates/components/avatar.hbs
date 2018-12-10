@@ -1,0 +1,13 @@
+<div class="wds-avatar" ...attributes>
+  {{#if @link}}
+    <a href={{@link}}>
+      <AvatarImage @src={{@src}} @alt={{@alt}} />
+    </a>
+  {{else}}
+    <AvatarImage @src={{@src}} @alt={{@alt}} />
+  {{/if}}
+
+  {{#if @badge}}
+    <AvatarBadge @name={{@badge}} />
+  {{/if}}
+</div>

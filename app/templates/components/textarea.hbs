@@ -1,0 +1,22 @@
+<div class="wds-textarea__field-wrapper">
+  {{textarea
+    autoresize=true
+    class="wds-textarea__field"
+    placeholder=@placeholder
+    maxlength=@maxlength
+    disabled=@disabled
+    rows=1
+    value=@value
+    input=@input
+    focus-out=@focus-out
+    focus-in=@focus-in
+  }}
+  {{#if hasLengthHint}}
+    <span class="wds-textarea__length-hint">{{lengthHint}}</span>
+  {{/if}}
+</div>
+{{#if hint}}
+  <span class="wds-textarea__hint">
+    {{hint}}
+  </span>
+{{/if}}

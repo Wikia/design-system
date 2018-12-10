@@ -1,0 +1,19 @@
+{{#if @href}}
+  <a
+    class="wds-button{{if @secondary " wds-is-secondary"}}{{if @text " wds-is-text"}}{{if @square " wds-is-square"}}{{if @disabled " wds-is-disabled"}}"
+    href={{@href}}
+    ...attributes
+    {{action (optional @onClick)}}
+  >
+    {{yield}}
+  </a>
+{{else}}
+  <button
+    class="wds-button{{if @secondary " wds-is-secondary"}}{{if @text " wds-is-text"}}{{if @square " wds-is-square"}}{{if @disabled " wds-is-disabled"}}"
+    ...attributes
+    {{action (optional @onClick)}}
+  >
+    {{yield}}
+  </button>
+{{/if}}
+
