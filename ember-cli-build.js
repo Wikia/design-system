@@ -69,7 +69,6 @@ module.exports = function(defaults) {
 		}));
 	}
 
-
 	additionalTrees.push(SvgStore('style-guide/assets', {
 		outputFile: '/svg/sprite.svg',
 		svgstoreOpts: {
@@ -83,6 +82,11 @@ module.exports = function(defaults) {
 				'xmlns:xlink': 'http://www.w3.org/1999/xlink'
 			}
 		}
+	}));
+
+	additionalTrees.push(new Funnel('i18n', {
+		include: ['**/*.json'],
+		destDir: 'assets/i18n'
 	}));
 
 	// Use `app.import` to add additional libraries to the generated
