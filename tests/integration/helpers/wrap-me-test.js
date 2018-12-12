@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import wrapMeHelper from 'discussions/helpers/wrap-me';
+import wrapMeHelper from 'dummy/helpers/wrap-me';
 
 module('Unit | Helper | wrap-me', () => {
 	test('wrap-me helper is exported', assert => {
