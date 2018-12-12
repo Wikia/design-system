@@ -27,6 +27,6 @@ export default Helper.extend({
 			}
 		});
 
-		return this.get('i18n').t(`${namespace}:${value}`, i18nParams);
+		return this.i18n.t(`${namespace}:${value}`, i18nParams);
 	}
 });
