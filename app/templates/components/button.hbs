@@ -10,6 +10,7 @@
 {{else}}
   <button
     class="wds-button{{if @secondary " wds-is-secondary"}}{{if @text " wds-is-text"}}{{if @square " wds-is-square"}}{{if @disabled " wds-is-disabled"}}"
+    disabled={{@disabled}}
     ...attributes
     {{action (optional @onClick)}}
   >
