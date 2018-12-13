@@ -355,6 +355,9 @@ export default Component.extend({
 				this.inputField.blur();
 
 				this.closeSearch();
+			} else if (this.goToSearchResults) {
+				this.goToSearchResults(this.state.query);
+				return false;
 			}
 		}
 	},

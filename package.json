@@ -26,7 +26,8 @@
     "svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/svg",
     "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets",
     "regenerate-lock": "npm cache clean --force && rm -rf node_modules package-lock.json && npm run setup",
-    "test-existing": "ember test --path=\"test-dist\""
+    "test-existing": "ember test --path=\"test-dist\"",
+		"test": "ember test"
   },
   "devDependencies": {
     "@ember/optional-features": "0.7.0",

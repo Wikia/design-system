@@ -79,27 +79,26 @@ module('Integration | Component | global-navigation/search', function (hooks) {
 		await click('.wds-global-navigation__search-submit');
 	});
 
-	// TODO: this test fails, however functionality works
-	// test('search input results are shown after click on Enter', async function (assert) {
-	// 	assert.expect(1);
+	test('search input results are shown after click on Enter', async function (assert) {
+		assert.expect(1);
 
-	// 	this.set('goToSearchResults', function (query) {
-	// 		assert.equal(query, 'query', 'goToSearchResult should be called with query on Enter');
-	// 	});
+		this.set('goToSearchResults', function (query) {
+			assert.equal(query, 'query', 'goToSearchResult should be called with query on Enter');
+		});
 
-	// 	await render(hbs`
-	// 	{{global-navigation/search
-	// 		model=model.search
-	// 		goToSearchResults=goToSearchResults
-	// 		onSearchToggleClicked=onSearchToggleClicked
-	// 	}}`);
+		await render(hbs`
+		{{global-navigation/search
+			model=model.search
+			goToSearchResults=goToSearchResults
+			onSearchToggleClicked=onSearchToggleClicked
+		}}`);
 
-	// 	const searchInputSelector = '.wds-global-navigation__search-input';
+		const searchInputSelector = '.wds-global-navigation__search-input';
 
-	// 	await click('.wds-global-navigation__search-toggle-icon');
-	// 	await fillIn(searchInputSelector, 'query');
-	// 	await triggerKeyEvent('.wds-global-navigation__search-container', 'keydown', 13);
-	// });
+		await click('.wds-global-navigation__search-toggle-icon');
+		await fillIn(searchInputSelector, 'query');
+		await triggerKeyEvent('.wds-global-navigation__search-container', 'keydown', 13);
+	});
 
 	test('search suggestion can be chosen by keyboard', async function (assert) {
 		assert.expect(1);
