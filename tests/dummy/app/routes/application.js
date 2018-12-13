@@ -12,8 +12,8 @@ export default Route.extend({
 	afterModel(model, transition) {
 		this._super(...arguments);
 
-		this.get('i18n').initialize(transition.queryParams.uselang || 'en');
 		this.set('targetName', transition.targetName);
+		return this.i18n.initialize(transition.queryParams.uselang || 'en');
 	},
 
 	setupController(controller) {
