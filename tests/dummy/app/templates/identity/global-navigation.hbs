@@ -121,13 +121,13 @@
 
     {{! template-lint-configure-tree attribute-indentation false }}
     <Demo @name="global-nav" @codeOnly={{true}} @componentName="wds-global-navigation" @standalone={{true}} @variantUrl="/identity/global-navigation/standalone/logged-out-default">
-      {{global-navigation
-        model=model.logged-out-default
-        track=(action track)
-        onSearchSuggestionChosen=(action onSearchSuggestionChosen)
-        goToSearchResults=(action goToSearchResults)
-        canShowContentRecommendations=true
-      }}
+      <GlobalNavigation
+        @model={{model.logged-out-default}}
+        @track={{action track}}
+        @onSearchSuggestionChosen={{action onSearchSuggestionChosen}}
+        @goToSearchResults={{action goToSearchResults}}
+        @canShowContentRecommendations={{true}}
+      />
     </Demo>
   </section>
 

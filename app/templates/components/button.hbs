@@ -3,7 +3,7 @@
     class="wds-button{{if @secondary " wds-is-secondary"}}{{if @text " wds-is-text"}}{{if @square " wds-is-square"}}{{if @disabled " wds-is-disabled"}}"
     href={{@href}}
     ...attributes
-    {{action (optional @onClick)}}
+    {{action (optional @onClick) preventDefault=false}}
   >
     {{yield}}
   </a>

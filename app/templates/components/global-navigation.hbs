@@ -80,8 +80,8 @@
       {{#if model.user}}
         <Button
           @onClick={{action openModal "user"}}
-          class="wds-global-navigation__modal-control wds-global-navigation__modal-control-user"
           @text={{true}}
+          class="wds-global-navigation__modal-control wds-global-navigation__modal-control-user"
         >
           <Avatar @src={{model.user.avatar_url}} @alt={{model.user.username}} />
           {{#if wdsOnSiteNotifications.unreadCountWithLimit}}
@@ -98,19 +98,18 @@
         }}
       {{else if model.anon}}
         <Button
-          @tag="a"
           @onClick={{action closeModal}}
           @text={{true}}
-          class="wds-global-navigation__modal-control wds-global-navigation__modal-control-anon"
           @href={{signinUrl}}
+          class="wds-global-navigation__modal-control wds-global-navigation__modal-control-anon"
         >
           <Avatar />
         </Button>
       {{/if}}
       <Button
         @onClick={{action closeModal}}
-        class="wds-global-navigation__modal-control wds-global-navigation__modal-control-close"
         @text={{true}}
+        class="wds-global-navigation__modal-control wds-global-navigation__modal-control-close"
       >
         {{svg "wds-icons-cross" class="wds-icon"}}
       </Button>
