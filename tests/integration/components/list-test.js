@@ -56,4 +56,14 @@ module('Integration | Component | list', function(hooks) {
 
 		assert.dom('.wds-list').hasClass('wds-has-ellipsis');
 	});
+
+	test('allows setting custom classes', async function (assert) {
+		await render(hbs`
+			<List class="my-custom-class">
+				<li>Test</li>
+			</List>
+		`);
+
+		assert.dom('.my-custom-class').exists()
+	});
 });
