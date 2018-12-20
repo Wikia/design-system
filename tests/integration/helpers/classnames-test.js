@@ -7,20 +7,20 @@ module('Integration | Helper | classes', function(hooks) {
 	setupRenderingTest(hooks);
 
 	test('works for simple case', async function(assert) {
-		await render(hbs`{{classes 'test'}}`);
+		await render(hbs`{{classnames 'test'}}`);
 
 		assert.equal(this.element.textContent.trim(), 'test');
 	});
 
 	test('can concatenate multiple values', async function(assert) {
-		await render(hbs`{{classes 'test' 'test1' 'test2'}}`);
+		await render(hbs`{{classnames 'test' 'test1' 'test2'}}`);
 
 		assert.equal(this.element.textContent.trim(), 'test test1 test2');
 	});
 
 	test('works with if/unless helpers', async function(assert) {
 		await render(
-			hbs`{{classes (if true 'test') (unless true 'test1') (if false 'test2') (unless false 'test3')}}`,
+			hbs`{{classnames (if true 'test') (unless true 'test1') (if false 'test2') (unless false 'test3')}}`,
 		);
 
 		assert.equal(this.element.textContent.trim(), 'test test3');
@@ -28,7 +28,7 @@ module('Integration | Helper | classes', function(hooks) {
 
 	test('can be broken into multiple lines', async function(assert) {
 		await render(
-			hbs`{{classes
+			hbs`{{classnames
 				'test'
 				'test1'
 				'test2'
