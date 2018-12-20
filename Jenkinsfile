@@ -39,5 +39,10 @@ pipeline {
         onlyStable: false,
         zoomCoverageChart: false
     }
+    cleanup {
+        dir('node_modules') {
+          deleteDir()
+      }
+    }
   }
 }
