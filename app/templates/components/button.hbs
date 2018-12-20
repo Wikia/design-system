@@ -1,20 +1,30 @@
-{{#if @href}}
-  <a
-    class="wds-button{{if @secondary " wds-is-secondary"}}{{if @text " wds-is-text"}}{{if @square " wds-is-square"}}{{if @disabled " wds-is-disabled"}}"
-    href={{@href}}
-    ...attributes
-    {{action (optional @onClick) preventDefault=false}}
-  >
-    {{yield}}
-  </a>
-{{else}}
-  <button
-    class="wds-button{{if @secondary " wds-is-secondary"}}{{if @text " wds-is-text"}}{{if @square " wds-is-square"}}{{if @disabled " wds-is-disabled"}}"
-    disabled={{@disabled}}
-    ...attributes
-    {{action (optional @onClick)}}
-  >
-    {{yield}}
-  </button>
-{{/if}}
-
+{{#let
+  (classnames
+    "wds-button"
+    (if @secondary "wds-is-secondary")
+    (if @text "wds-is-text")
+    (if @square "wds-is-square")
+    (if @disabled "wds-is-disabled")
+  )
+as |buttonClasses|
+}}
+  {{#if @href}}
+    <a
+      class={{buttonClasses}}
+      href={{@href}}
+      ...attributes
+      {{action (optional @onClick) preventDefault=false}}
+    >
+      {{yield}}
+    </a>
+  {{else}}
+    <button
+      class={{buttonClasses}}
+      disabled={{@disabled}}
+      ...attributes
+      {{action (optional @onClick)}}
+    >
+      {{yield}}
+    </button>
+  {{/if}}
+{{/let}}

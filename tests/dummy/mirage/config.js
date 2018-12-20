@@ -35,7 +35,7 @@ export default function () {
 		};
 	});
 
-	this.get('mocks/searchSuggestions.json', () => {
+	this.get('/mocks/searchSuggestions.json', () => {
 		return {
 			"suggestions": [
 				"A phrase",
