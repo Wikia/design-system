@@ -4,100 +4,116 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
+import { create } from 'ember-cli-page-object';
+import AvatarObject from '../../pages/components/avatar';
+
+const Avatar = create(AvatarObject);
+
 module('Integration | Component | avatar', function(hooks) {
 	setupRenderingTest(hooks);
 
 	test('it renders default state', async function(assert) {
-		await render(hbs`<Avatar />`);
+		await render(hbs`<Avatar @alt='test-alt' />`);
 
-		assert
-			.dom('svg.wds-avatar__image')
-			.exists('should render default avatar svg');
-		assert
-			.dom('.wds-avatar__inner-border')
-			.exists();
+		assert.ok(
+			Avatar.default.avatar.isPresent,
+			'Default Avatar is rendered',
+		);
+		assert.ok(
+			Avatar.default.border.isPresent,
+			'Default border is rendered',
+		);
+		assert.equal(
+			Avatar.default.border.title,
+			'test-alt',
+			'Border has a title attribute',
+		);
+		assert.equal(
+			Avatar.default.border.alt,
+			'test-alt',
+			'Border has an alt attribute',
+		);
+		assert.notOk(Avatar.image.isPresent, 'Image is not rendered');
+		assert.notOk(
+			Avatar.link.isPresent,
+			'No link is rendered if @href not passed',
+		);
 	});
 
 	test('it renders provided image', async function(assert) {
 		await render(hbs`
 		<Avatar
-			@src="/images/FANDOM-Avatar.jpg"
-			@alt="test-alt"
+			@src='/images/FANDOM-Avatar.jpg'
+			@alt='test-alt'
 		/>`);
 
-		assert
-			.dom('img[src="/images/FANDOM-Avatar.jpg"]')
-			.exists('should render provided avatar image');
-		assert
-			.dom('.wds-avatar__image')
-			.hasAttribute('alt', 'test-alt');
-		assert
-			.dom('.wds-avatar__image')
-			.hasAttribute('title', 'test-alt');
+		assert.equal(
+			Avatar.image.src,
+			'/images/FANDOM-Avatar.jpg',
+			'Image is rendered',
+		);
+		assert.equal(Avatar.image.alt, 'test-alt', 'Alt attribute is rendered');
+		assert.equal(
+			Avatar.image.title,
+			'test-alt',
+			'Alt attribute is rendered',
+		);
 	});
 
 	test('it renders as link to provided url', async function(assert) {
-		await render(hbs`<Avatar @link="http://example.com" />`);
+		await render(hbs`<Avatar @link='http://example.com' />`);
 
-		assert.dom('a[href="http://example.com"]').exists('should render link');
+		assert.equal(
+			Avatar.link.href,
+			'http://example.com',
+			'Link is rendered',
+		);
 	});
 
 	test('it renders badge if provided', async function(assert) {
 		this.owner.register(
 			'service:i18n',
 			Service.extend({
-				t() {
-					return 'some string';
+				t(msg) {
+					return msg;
 				},
 			}),
 		);
 
-		await render(hbs`<Avatar @badge="admin" />`);
-
-		assert.dom('.wds-avatar__badge').exists('should render badge');
-	});
-
-	test(`it renders proper badge if sysop value is provided`, async function(assert) {
-		this.owner.register(
-			'service:i18n',
-			Service.extend({
-				t() {
-					return 'some string';
-				},
-			}),
+		await render(hbs`<Avatar @badge='admin' />`);
+		assert.equal(
+			Avatar.badge.name,
+			'#wds-avatar-badges-admin',
+			'Admin badge is rendered',
+		);
+		assert.equal(
+			Avatar.badge.title,
+			'design-system:wds-avatar-badges-admin-tooltip',
+			'Title',
 		);
 
-		await render(hbs`<Avatar @badge="sysop" />`);
-
-		assert
-			.dom('.wds-avatar__badge use')
-			.hasAttribute('xlink:href', '#wds-avatar-badges-admin');
-	});
-
-	test(`it renders proper badge if threadmoderator value is provided`, async function(assert) {
-		this.owner.register(
-			'service:i18n',
-			Service.extend({
-				t() {
-					return 'some string';
-				},
-			}),
+		await render(hbs`<Avatar @badge='sysop' />`);
+		assert.equal(
+			Avatar.badge.name,
+			'#wds-avatar-badges-admin',
+			'Admin badge is rendered for sysop',
+		);
+		assert.equal(
+			Avatar.badge.title,
+			'design-system:wds-avatar-badges-admin-tooltip',
+			'Title',
 		);
 
-		await render(hbs`<Avatar @badge="threadmoderator" />`);
-
-		assert
-			.dom('.wds-avatar__badge use')
-			.hasAttribute(
-				'xlink:href',
-				'#wds-avatar-badges-discussion-moderator',
-			);
-
-		assert
-			.dom('.wds-avatar__badge')
-			.hasAttribute(
-				'title',
-				'some string',
-			);
+		await render(hbs`<Avatar @badge='threadmoderator' />`);
+		assert.equal(
+			Avatar.badge.name,
+			'#wds-avatar-badges-discussion-moderator',
+			'Discussion moderator badge is rendered',
+		);
+		assert.equal(
+			Avatar.badge.title,
+			'design-system:wds-avatar-badges-discussion-moderator-tooltip',
+			'Title',
+		);
 	});
 });
