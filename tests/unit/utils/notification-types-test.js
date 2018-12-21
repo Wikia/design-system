@@ -1,9 +1,11 @@
 import notificationTypes from 'dummy/utils/notification-types';
-import { module, skip } from 'qunit';
+import { module, test } from 'qunit';
 
 module('Unit | Utility | notification-types', function() {
-	skip('it works', function(assert) {
-		let result = notificationTypes();
-		assert.ok(result);
+	test('defines notification types', function(assert) {
+		assert.equal(notificationTypes.discussionUpvotePost, 'discussion-upvote-post');
+		assert.equal(notificationTypes.discussionUpvoteReply, 'discussion-upvote-reply');
+		assert.equal(notificationTypes.discussionReply, 'discussion-reply');
+		assert.equal(notificationTypes.announcement, 'announcement');
 	});
 });
