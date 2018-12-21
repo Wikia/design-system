@@ -1,6 +1,6 @@
 import { inject as service } from '@ember/service';
 import Component from '@ember/component';
-import { observer, computed } from '@ember/object';
+import { computed } from '@ember/object';
 
 export default Component.extend({
 	classNames: ['wds-global-navigation__modal', 'wds-user-modal'],
