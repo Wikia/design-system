@@ -4,6 +4,7 @@ import {
 	clickable,
 	attribute,
 	is,
+	triggerable
 } from 'ember-cli-page-object';
 import attr from '../helpers/attr';
 
@@ -15,6 +16,9 @@ export default {
 	noChevron: hasClass('wds-no-chevron'),
 	hasDarkShadow: hasClass('wds-has-dark-shadow'),
 	isTouchDevice: hasClass('wds-is-touch-device'),
+
+	open: triggerable('mouseenter'),
+	close: triggerable('mouseleave'),
 
 	toggle: {
 		scope: '.wds-dropdown__toggle',

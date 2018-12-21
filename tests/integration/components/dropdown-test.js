@@ -194,6 +194,40 @@ module('Integration | Component | dropdown', function(hooks) {
 		assert.notOk(Dropdown.isActive);
 	});
 
+	test('triggers mouseenter/leave', async function(assert) {
+		assert.expect(2);
+
+		this.setProperties({
+			onMouseEnter() {
+				assert.ok(true);
+			},
+			onMouseLeave() {
+				assert.ok(true);
+			},
+		});
+		await render(hbs`
+			<Dropdown @mouseEnter={{onMouseEnter}} @mouseLeave={{onMouseLeave}} as |d|>
+				<d.toggle @text='test' />
+			</Dropdown>
+		`);
+
+		await Dropdown.open();
+		await Dropdown.close();
+	});
+
+	test('triggers mouseLeave when isTouchDevice', async function(assert) {
+		assert.expect(2);
+
+		await render(hbs`
+			<Dropdown @isClicked={{true}} @isTouchDevice={{true}} as |d|>
+				<d.toggle @text='test' />
+			</Dropdown>
+		`);
+		assert.ok(Dropdown.isActive);
+		await Dropdown.close();
+		assert.notOk(Dropdown.isActive);
+	});
+
 	test('can be set to active state', async function(assert) {
 		await render(hbs`
 			<Dropdown @isActive={{true}}>
