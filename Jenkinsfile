@@ -27,12 +27,12 @@ pipeline {
 
   post {
     success {
-      cobertura autoUpdateHealth: false,
-        autoUpdateStability: false,
+      cobertura autoUpdateHealth: true,
+        autoUpdateStability: true,
         coberturaReportFile: '**/coverage/cobertura-coverage.xml',
         conditionalCoverageTargets: '70, 0, 0',
-        failUnhealthy: false,
-        failUnstable: false,
+        failUnhealthy: true,
+        failUnstable: true,
         lineCoverageTargets: '80, 0, 0',
         maxNumberOfBuilds: 0,
         methodCoverageTargets: '80, 0, 0',
