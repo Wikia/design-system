@@ -9,13 +9,13 @@ module('Unit | Utility | local-storage-connector', function() {
 
 	test('clear works', assert => {
 		localStorageAdapter.setItem('foo', 'bar');
-		localStorageAdapter.removeItem('foo');
-		assert.strictEqual(localStorageAdapter.getItem('foo') || false, false);
+		localStorageAdapter.clear();
+		assert.strictEqual(localStorageAdapter.getItem('foo'), null);
 	});
 
 	test('removeItem works', assert => {
 		localStorageAdapter.setItem('foo', 'bar');
 		localStorageAdapter.removeItem('foo');
-		assert.strictEqual(localStorageAdapter.getItem('foo') || false, false);
+		assert.strictEqual(localStorageAdapter.getItem('foo'), null);
 	});
 });
