@@ -228,6 +228,17 @@ module('Integration | Component | dropdown', function(hooks) {
 		assert.notOk(Dropdown.isActive);
 	});
 
+	test('triggers mouseLeave', async function(assert) {
+		await render(hbs`
+			<Dropdown as |d|>
+				<d.toggle @text='test' />
+			</Dropdown>
+		`);
+
+		await Dropdown.close();
+		assert.notOk(Dropdown.isActive);
+	});
+
 	test('can be set to active state', async function(assert) {
 		await render(hbs`
 			<Dropdown @isActive={{true}}>
