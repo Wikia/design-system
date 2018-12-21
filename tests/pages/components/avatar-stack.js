@@ -1,13 +1,11 @@
 import { collection } from 'ember-cli-page-object';
-import { findElement } from 'ember-cli-page-object/extend';
+import attr from '../helpers/attr';
 import avatar from './avatar';
 
 export default {
 	scope: 'div.wds-avatar-stack',
 
-	attr(attribute) {
-		return findElement(this).attr(attribute);
-	},
+	attr,
 
 	avatars: collection(avatar.scope, {
 		item: avatar,

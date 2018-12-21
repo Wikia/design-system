@@ -39,14 +39,14 @@ export default Component.extend({
 	},
 
 	mouseLeave() {
-		if (isTouchDevice) {
+		if (this.isTouchDevice) {
 			this.set('isClicked', false);
 		}
 	},
 
 	actions: {
 		onClick(e) {
-			if (isTouchDevice) {
+			if (this.isTouchDevice) {
 				this.set('isClicked', !this.isClicked);
 				e.preventDefault();
 			}
