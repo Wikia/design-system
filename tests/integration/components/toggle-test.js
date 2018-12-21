@@ -4,53 +4,53 @@ import { render, click } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | toggle', function(hooks) {
-  setupRenderingTest(hooks);
+	setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+	test('it renders', async function(assert) {
+		await render(hbs`<Toggle @id="my-id"/>`);
 
+		assert.dom('.wds-toggle__input').hasAttribute('id', 'my-id');
+		assert.dom('.wds-toggle__input').hasAttribute('type', 'checkbox');
+		assert.dom('.wds-toggle__label').hasText('');
+		assert.dom('.wds-toggle__label').hasAttribute('for', 'my-id');
 
+		await render(hbs`
+			<Toggle>
+				template block text
+			</Toggle>
+		`);
 
-    await render(hbs`<Toggle @id="my-id"/>`);
+		assert.dom('.wds-toggle__label').hasText('template block text');
+	});
 
-    assert.dom('.wds-toggle__input').hasAttribute('id', 'my-id');
-    assert.dom('.wds-toggle__input').hasAttribute('type', 'checkbox');
-	assert.dom('.wds-toggle__label').hasText('');
-	assert.dom('.wds-toggle__label').hasAttribute('for', 'my-id');
+	test('support any attribute', async function(assert) {
+		await render(hbs`<Toggle data-test="test"/>`);
 
-    // Template block usage:
-    await render(hbs`
-      <Toggle>
-        template block text
-      </Toggle>
-    `);
+		assert.dom('.wds-toggle__input').hasAttribute('data-test', 'test');
+	});
 
-    assert.dom('.wds-toggle__label').hasText('template block text');
-  });
+	test('responds to click', async function(assert) {
+		this.set('onChange', function() {
+			assert.ok(true);
+		});
+		await render(hbs`<Toggle @id="test-id"/>`);
+		await click('.wds-toggle__label');
 
-  test('support any attribute', async function(assert) {
-    await render(hbs`<Toggle data-test="test"/>`);
+		assert.dom('.wds-toggle__input').isChecked();
 
-    assert.dom('.wds-toggle__input').hasAttribute('data-test', 'test');
-  });
+		await render(hbs`<Toggle @id="test-id" @onChange={{onChange}}/>`);
+		await click('.wds-toggle__label');
 
-  test('responds to click', async function(assert) {
-	this.set('onChange', function () {
-		assert.ok(true)
-	})
-	await render(hbs`<Toggle @id="test-id" @onChange={{onChange}}/>`);
+		assert.dom('.wds-toggle__input').isChecked();
 
-	await click('.wds-toggle__label');
+		await click('.wds-toggle__label');
 
-	assert.dom('.wds-toggle__input').isChecked();
+		assert.dom('.wds-toggle__input').isNotChecked();
+	});
 
-	await click('.wds-toggle__label');
+	test('supports passing initial value', async function(assert) {
+		await render(hbs`<Toggle checked={{false}}/>`);
 
-	assert.dom('.wds-toggle__input').isNotChecked();
-  });
-
-  test('supports passing initial value', async function(assert) {
-	await render(hbs`<Toggle checked={{false}}/>`);
-
-	assert.dom('.wds-toggle__input').isNotChecked();
-  });
+		assert.dom('.wds-toggle__input').isNotChecked();
+	});
 });
