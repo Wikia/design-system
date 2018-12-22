@@ -1,4 +1,3 @@
-import { A } from '@ember/array';
 import { later } from '@ember/runloop';
 import Service from '@ember/service';
 
@@ -8,7 +7,7 @@ export default Service.extend({
 
 	init() {
 		this._super(...arguments);
-		this.model = A([]);
+		this.model = [];
 	},
 
 	addNotification(notification) {
