@@ -29,9 +29,9 @@ module('Integration | Component | toggle', function(hooks) {
 		assert.dom('.wds-toggle__input').hasAttribute('data-test', 'test');
 	});
 
-	test('responds to click', async function(assert) {
-		this.set('onChange', function() {
-			assert.ok(true);
+	test('responds to click and passes value to an action', async function(assert) {
+		this.set('onChange', function(checked) {
+			assert.ok(checked);
 		});
 		await render(hbs`<Toggle @id="test-id"/>`);
 		await click('.wds-toggle__label');
@@ -42,6 +42,10 @@ module('Integration | Component | toggle', function(hooks) {
 		await click('.wds-toggle__label');
 
 		assert.dom('.wds-toggle__input').isChecked();
+
+		this.set('onChange', function(checked) {
+			assert.notOk(checked);
+		});
 
 		await click('.wds-toggle__label');
 

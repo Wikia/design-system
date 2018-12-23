@@ -1,8 +1,8 @@
 <input
   type="checkbox"
-  id={{id}}
+  id={{@id}}
   class="wds-toggle__input"
-  onChange={{action "onChange"}}
+  onChange={{action (optional @onChange) value="target.checked"}}
   ...attributes
 >
-<label for={{id}} class="wds-toggle__label">{{yield}}</label>
+<label for={{@id}} class="wds-toggle__label">{{yield}}</label>
