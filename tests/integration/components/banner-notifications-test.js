@@ -35,9 +35,17 @@ module('Integration | Component | banner-notifications', function(hooks) {
 
 		await waitUntil(() => BannerNotifications.notifications);
 
-		assert.equal(BannerNotifications.notifications.length, 2, '2 notifications are present');
+		assert.equal(
+			BannerNotifications.notifications.length,
+			2,
+			'2 notifications are present',
+		);
 
-		assert.equal(BannerNotifications.notifications[0].text, alertText, 'Alert text is renered');
+		assert.equal(
+			BannerNotifications.notifications[0].text,
+			alertText,
+			'Alert text is renered',
+		);
 
 		assert.ok(
 			BannerNotifications.notifications[0].icon.isAlert,
@@ -58,15 +66,40 @@ module('Integration | Component | banner-notifications', function(hooks) {
 	test('closes notifiction on click', async function(assert) {
 		await render(hbs`<BannerNotifications />`);
 
-		service.addNotification({ type: 'alert', text: 'text', disableAutoHide: true });
+		service.addNotification({
+			type: 'alert',
+			text: 'text',
+			disableAutoHide: true,
+		});
 
 		await waitUntil(() => BannerNotifications.notifications);
 
-		assert.ok(BannerNotifications.notifications[0].isPresent, 'a notifications is renered');
+		assert.ok(
+			BannerNotifications.notifications[0].isPresent,
+			'a notifications is renered',
+		);
 
 		await BannerNotifications.notifications[0].close();
 
-		assert.notOk(BannerNotifications.notifications[0].isPresent, 'a notifications is removed');
+		assert.notOk(
+			BannerNotifications.notifications[0].isPresent,
+			'a notifications is removed',
+		);
+	});
 
+	test('triggers onClose', async function(assert) {
+		await render(hbs`<BannerNotifications />`);
+
+		service.addNotification({
+			type: 'alert',
+			text: 'text',
+			onClose() {
+				assert.ok(true);
+			},
+		});
+
+		await waitUntil(() => BannerNotifications.notifications);
+
+		await BannerNotifications.notifications[0].close();
 	});
 });

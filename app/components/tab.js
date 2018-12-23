@@ -13,8 +13,6 @@ export default Component.extend({
 		return this.value !== undefined && this.selected === this.value;
 	}),
 
-	onSelect() {},
-
 	click() {
 		this.onSelect(this);
 	}
