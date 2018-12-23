@@ -1,7 +1,6 @@
 import RSVP from 'rsvp';
 
 import { getOwner } from '@ember/application';
-import { A } from '@ember/array';
 import { inject as service } from '@ember/service';
 import EmberObject, { get } from '@ember/object';
 import { convertToIsoString } from '@wikia/ember-fandom/utils/iso-date-time';
@@ -17,11 +16,11 @@ export default EmberObject.extend({
 
 	init() {
 		this._super(...arguments);
-		this.set('data', A());
+		this.data = [];
 	},
 
 	getNewestNotificationISODate() {
-		return convertToIsoString(this.get('data.0.timestamp'));
+		return convertToIsoString(this.data[0].timestamp);
 	},
 
 	loadFirstPageReturningNextPageLink() {

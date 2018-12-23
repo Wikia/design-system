@@ -56,6 +56,54 @@ module('Integration | Component | avatar-stack', function(hooks) {
 		);
 	});
 
+	test('overrideCount works', async function(assert) {
+		this.set('avatars30', generateAvatars(30));
+
+		await render(hbs`<AvatarStack @avatars={{avatars30}} @overrideCount={{10}} />`);
+
+		assert.equal(
+			AvatarStack.avatars.length,
+			5,
+			'should render 5 avatars with overflow',
+		);
+
+		assert.ok(AvatarStack.overflow.isPresent, 'should render overflow');
+		assert.equal(
+			AvatarStack.overflow.text,
+			'+5',
+			'should render +5 in overflo',
+		);
+
+	});
+
+	test('maxStackSize works', async function(assert) {
+		this.set('avatars30', generateAvatars(30));
+
+		await render(hbs`<AvatarStack @avatars={{avatars30}} @maxStackSize={{2}} />`);
+
+		assert.equal(
+			AvatarStack.avatars.length,
+			2,
+			'should render 2 avatars with overflow',
+		);
+
+		assert.ok(AvatarStack.overflow.isPresent, 'should  render overflow');
+		assert.equal(
+			AvatarStack.overflow.text,
+			'+28',
+			'should render +28 in overflo',
+		);
+	});
+
+	test('hideOverflow works', async function(assert) {
+		this.set('avatars30', generateAvatars(30));
+
+		await render(hbs`<AvatarStack @avatars={{avatars30}} @hideOverflow={{true}} />`);
+
+		assert.notOk(AvatarStack.overflow.isPresent, 'should not render overflow');
+
+	});
+
 	test('supports any attribute passed', async function(assert) {
 		this.set('avatars1', generateAvatars(1));
 
