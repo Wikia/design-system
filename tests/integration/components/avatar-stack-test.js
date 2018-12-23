@@ -91,7 +91,7 @@ module('Integration | Component | avatar-stack', function(hooks) {
 		assert.equal(
 			AvatarStack.overflow.text,
 			'+28',
-			'should render +28 in overflo',
+			'should render +28 in overflow',
 		);
 	});
 
