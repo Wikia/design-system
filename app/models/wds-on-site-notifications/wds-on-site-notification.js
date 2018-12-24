@@ -48,7 +48,7 @@ export default EmberObject.extend({
 			actor.profileUrl = this.wikiUrls.build({
 				host: this.get('wikiVariables.host'),
 				namespace: 'User',
-				title: this.name
+				title: actor.name
 			});
 
 			return actor;
