@@ -1,4 +1,4 @@
-import { module, test, skip } from 'qunit';
+import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 import OnSiteNotification from 'dummy/models/wds-on-site-notifications/wds-on-site-notification';
 
