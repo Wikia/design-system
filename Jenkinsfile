@@ -21,25 +21,23 @@ pipeline {
       }
       steps {
         sh 'ember test'
-      }
+        cobertura autoUpdateHealth: true,
+          autoUpdateStability: true,
+          coberturaReportFile: '**/coverage/cobertura-coverage.xml',
+          fileCoverageTargets: '100, 63, 63',
+          lineCoverageTargets: '100, 46, 46',
+          conditionalCoverageTargets: '100, 37, 37',
+          methodCoverageTargets: '100, 46, 46',
+          failUnhealthy: true,
+          failUnstable: true,
+          maxNumberOfBuilds: 0,
+          onlyStable: false,
+          zoomCoverageChart: false
+        }
     }
   }
 
   post {
-    success {
-      cobertura autoUpdateHealth: true,
-        autoUpdateStability: true,
-        coberturaReportFile: '**/coverage/cobertura-coverage.xml',
-        fileCoverageTargets: '100, 63, 63',
-        lineCoverageTargets: '100, 46, 46',
-        conditionalCoverageTargets: '100, 37, 37',
-        methodCoverageTargets: '100, 46, 46',
-        failUnhealthy: true,
-        failUnstable: true,
-        maxNumberOfBuilds: 0,
-        onlyStable: false,
-        zoomCoverageChart: false
-    }
     cleanup {
       dir('node_modules') {
           deleteDir()
