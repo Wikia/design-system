@@ -30,10 +30,10 @@ pipeline {
       cobertura autoUpdateHealth: true,
         autoUpdateStability: true,
         coberturaReportFile: '**/coverage/cobertura-coverage.xml',
-        fileCoverageTargets: '70, 0, 0',
-        lineCoverageTargets: '45, 0, 0',
-        conditionalCoverageTargets: '35, 0, 0',
-        methodCoverageTargets: '45, 0, 0',
+        fileCoverageTargets: '63, 63, 63',
+        lineCoverageTargets: '46, 46, 46',
+        conditionalCoverageTargets: '37, 37, 37',
+        methodCoverageTargets: '46, 46, 46',
         failUnhealthy: true,
         failUnstable: true,
         maxNumberOfBuilds: 0,
@@ -41,7 +41,7 @@ pipeline {
         zoomCoverageChart: false
     }
     cleanup {
-        dir('node_modules') {
+      dir('node_modules') {
           deleteDir()
       }
     }

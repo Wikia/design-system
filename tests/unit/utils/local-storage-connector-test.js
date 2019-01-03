@@ -1,5 +1,6 @@
 import localStorage, { localStorageAdapter } from 'dummy/utils/local-storage-connector';
 import { module, test } from 'qunit';
+/* global require */
 
 module('Unit | Utility | local-storage-connector', function() {
 	test('getItem/setItem works on localStorage', assert => {
@@ -25,5 +26,19 @@ module('Unit | Utility | local-storage-connector', function() {
 		localStorageAdapter.setItem('foo', 'bar');
 		localStorageAdapter.removeItem('foo');
 		assert.strictEqual(localStorageAdapter.getItem('foo'), undefined);
+	});
+
+	test('localStorageAdapter returned if window.localStorage is not avaialable', assert => {
+		require.unsee('dummy/utils/local-storage-connector');
+
+		const origLocalStorageSet = window.localStorage.setItem;
+
+		window.localStorage.setItem = false;
+
+		const localStorageModule = require('dummy/utils/local-storage-connector')
+
+		assert.equal(localStorageModule.default, localStorageModule.localStorageAdapter);
+
+		window.localStorage.setItem = origLocalStorageSet;
 	});
 });

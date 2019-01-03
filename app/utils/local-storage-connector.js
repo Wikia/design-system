@@ -65,7 +65,6 @@ try {
 	localStorage.removeItem(test);
 	localStorageAvailable = true;
 } catch (e) {
-	/* istanbul ignore next */
 	localStorageAvailable = false;
 }
 
@@ -74,4 +73,4 @@ try {
  *
  * @returns {LocalStorage}
  */
-export default localStorageAvailable ? window.localStorage : /* istanbul ignore next */ localStorageAdapter;
+export default localStorageAvailable ? window.localStorage : localStorageAdapter;
