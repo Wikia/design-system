@@ -37,7 +37,7 @@ const notificationDataStub = {
 };
 
 function getModelStub(type, title, snippet = '') {
-	const modelStub = new EmberObject(notificationDataStub);
+	const modelStub = EmberObject.create(notificationDataStub);
 
 	modelStub.setProperties({ type, title, snippet });
 

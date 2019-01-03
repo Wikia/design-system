@@ -14,7 +14,7 @@ export default Service.extend({
 	logger: service(),
 
 	unreadCountWithLimit: computed('model.unreadCount', function () {
-		const count = this.get('model.unreadCount');
+		const count = this.model.unreadCount;
 		return count > 99 ?  '99+' : count;
 	}),
 	hasUnread: gt('model.unreadCount', 0),
@@ -85,11 +85,11 @@ export default Service.extend({
 	},
 
 	getUnreadCount() {
-		return this.get('model.unreadCount');
+		return this.model.unreadCount;
 	},
 
 	goToDestination(notification) {
 		// TODO check if it's a local url and use transitionTo or delegate to app
-		window.location.href = notification.get('latestEventUri');
+		window.location.href = notification.latestEventUri;
 	}
 });

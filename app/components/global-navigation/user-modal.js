@@ -1,6 +1,6 @@
 import { inject as service } from '@ember/service';
 import Component from '@ember/component';
-import { observer, computed } from '@ember/object';
+import { computed } from '@ember/object';
 
 export default Component.extend({
 	classNames: ['wds-global-navigation__modal', 'wds-user-modal'],
@@ -23,10 +23,14 @@ export default Component.extend({
 	},
 
 	willDestroyElement() {
+		this._super(...arguments);
+
 		this.element.removeEventListener('touchmove', this.onTouchMove);
 	},
 
-	openCloseObserver: observer('isOpen', function () {
+	didReceiveAttrs() {
+		this._super(...arguments);
+
 		if (this.isOpen) {
 			this.track({
 				label: 'open-menu',
@@ -37,8 +41,7 @@ export default Component.extend({
 
 			this.wdsOnSiteNotifications.loadFirstPage();
 		}
-
-	}),
+	},
 
 	signOutModel: computed('user.items', function() {
 		return this.get('user.items').filter( (item) => item.type === 'link-logout')[0];

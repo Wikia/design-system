@@ -1,7 +1,6 @@
 import RSVP from 'rsvp';
 
 import EmberObject, { get } from '@ember/object';
-import { A } from '@ember/array';
 import { inject as service } from '@ember/service';
 import { convertToTimestamp } from '@wikia/ember-fandom/utils/iso-date-time';
 
@@ -25,7 +24,7 @@ export default EmberObject.extend({
 
 	init() {
 		this._super(...arguments);
-		this.set('latestActors', A());
+		this.latestActors = [];
 	},
 
 	setNormalizedData(notificationData) {
@@ -49,7 +48,7 @@ export default EmberObject.extend({
 			actor.profileUrl = this.wikiUrls.build({
 				host: this.get('wikiVariables.host'),
 				namespace: 'User',
-				title: this.name
+				title: actor.name
 			});
 
 			return actor;

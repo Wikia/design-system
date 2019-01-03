@@ -9,7 +9,7 @@ function getModelStub(length) {
 	const data = [];
 
 	for (let i = 0; i < Number(length); i++) {
-		data.push(new EmberObject({
+		data.push(EmberObject.create({
 			communityId: 123,
 			communityName: "My Test Wiki",
 			timestamp: 1528793961358,
@@ -28,7 +28,7 @@ function getModelStub(length) {
 		}));
 	}
 
-	return new EmberObject({ data });
+	return EmberObject.create({ data });
 }
 
 module('Integration | Component | on-site-notifications/notifications-list', function (hooks) {

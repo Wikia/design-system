@@ -27,20 +27,21 @@ pipeline {
 
   post {
     success {
-      cobertura autoUpdateHealth: false,
-        autoUpdateStability: false,
+      cobertura autoUpdateHealth: true,
+        autoUpdateStability: true,
         coberturaReportFile: '**/coverage/cobertura-coverage.xml',
-        conditionalCoverageTargets: '70, 0, 0',
-        failUnhealthy: false,
-        failUnstable: false,
-        lineCoverageTargets: '80, 0, 0',
+        fileCoverageTargets: '63, 63, 63',
+        lineCoverageTargets: '46, 46, 46',
+        conditionalCoverageTargets: '37, 37, 37',
+        methodCoverageTargets: '46, 46, 46',
+        failUnhealthy: true,
+        failUnstable: true,
         maxNumberOfBuilds: 0,
-        methodCoverageTargets: '80, 0, 0',
         onlyStable: false,
         zoomCoverageChart: false
     }
     cleanup {
-        dir('node_modules') {
+      dir('node_modules') {
           deleteDir()
       }
     }
