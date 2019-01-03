@@ -21,8 +21,7 @@ pipeline {
       }
       steps {
         sh 'ember test'
-        cobertura
-          coberturaReportFile: '**/coverage/cobertura-coverage.xml',
+        cobertura coberturaReportFile: '**/coverage/cobertura-coverage.xml',
           fileCoverageTargets: '100, 63, 63',
           lineCoverageTargets: '100, 46, 46',
           conditionalCoverageTargets: '100, 37, 37',
