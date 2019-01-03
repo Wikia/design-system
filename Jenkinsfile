@@ -21,8 +21,7 @@ pipeline {
       }
       steps {
         sh 'ember test'
-        cobertura autoUpdateHealth: true,
-          autoUpdateStability: true,
+        cobertura
           coberturaReportFile: '**/coverage/cobertura-coverage.xml',
           fileCoverageTargets: '100, 63, 63',
           lineCoverageTargets: '100, 46, 46',
