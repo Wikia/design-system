@@ -22,10 +22,10 @@ pipeline {
       steps {
         sh 'ember test'
         cobertura coberturaReportFile: '**/coverage/cobertura-coverage.xml',
-          fileCoverageTargets: '100, 63, 63',
-          lineCoverageTargets: '100, 46, 46',
-          conditionalCoverageTargets: '100, 37, 37',
-          methodCoverageTargets: '100, 46, 46',
+          fileCoverageTargets: '100, 100, 100',
+          lineCoverageTargets: '100, 100, 100',
+          conditionalCoverageTargets: '100, 100, 100',
+          methodCoverageTargets: '100, 100, 100',
           failUnhealthy: true,
           failUnstable: true,
           maxNumberOfBuilds: 0,
@@ -38,7 +38,7 @@ pipeline {
   post {
     cleanup {
       dir('node_modules') {
-          deleteDir()
+        deleteDir()
       }
     }
   }
