@@ -262,7 +262,7 @@
 						"type": "translatable-text",
 						"key": "global-footer-follow-us-link-facebook"
 					},
-					"href": "https://www.facebook.com/getfandom",
+					"href": "#",
 					"tracking_label": "follow-us.facebook"
 				},
 				{
