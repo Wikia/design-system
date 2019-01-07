@@ -24,6 +24,7 @@
       onSecondLevelClicked=(action onSecondLevelSelected)
       onBackButtonClicked=(action resetSelected "firstLevelIndexSelected")
       onLinkClicked=(action onLinkClicked)
+      onSubLevelTitleClicked=(action onSubLevelTitleClicked)
     }}
     {{#each firstLevelItem.items as |secondLevelItem secondLevelIndex|}}
       {{#if secondLevelItem.items}}
@@ -36,6 +37,7 @@
           onThirdLevelClicked=(action onThirdLevelSelected)
           onBackButtonClicked=(action resetSelected "secondLevelIndexSelected")
           onLinkClicked=(action onLinkClicked)
+          onSubLevelTitleClicked=(action onSubLevelTitleClicked)
         }}
       {{/if}}
     {{/each}}

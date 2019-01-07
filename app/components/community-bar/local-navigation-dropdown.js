@@ -78,6 +78,11 @@ export default Component.extend({
 		this.onLinkClicked(event);
 	},
 
+	onSubLevelTitleClicked(event) {
+		this.toggleNavigation(false);
+		this.onLinkClicked(event);
+	},
+
 	resetSelected(propName) {
 		this.set(propName, null);
 	}
