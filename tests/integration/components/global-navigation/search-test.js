@@ -148,6 +148,8 @@ module('Integration | Component | global-navigation/search', function(hooks) {
 
 		await click('.wds-global-navigation__search-toggle-icon');
 		await fillIn(searchInputSelector, 'query');
+		// suggestions are filled in async - we have to wait for them
+		await waitFor('.wds-list li:first-of-type');
 		await triggerKeyEvent(searchInputSelector, 'keydown', 'ArrowDown');
 		await triggerKeyEvent(searchInputSelector, 'keydown', 'Enter');
 	});
