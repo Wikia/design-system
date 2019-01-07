@@ -63,7 +63,10 @@ module('Integration | Component | global-navigation/search', function(hooks) {
 		const searchContainerSelector =
 			'.wds-global-navigation__search-container';
 
-		await click('.wds-global-navigation__search-toggle-icon');
+		await click('.wds-global-navigation__search-toggle');
+		// class wds-search-is-focused is added when input is focused not when click happens
+		// we have to wait for it explicitly as there is a race condition in this test
+		await waitFor('.wds-search-is-focused', { timeout: 3000 });
 		assert.dom(searchContainerSelector).hasClass('wds-search-is-focused');
 
 		await click('.wds-global-navigation__search-close');
@@ -167,6 +170,7 @@ module('Integration | Component | global-navigation/search', function(hooks) {
 
 		await click('.wds-global-navigation__search-toggle-icon');
 		await fillIn(searchInputSelector, 'query');
+		// suggestions are filled in async - we have to wait for them
 		await waitFor('.wds-list li:first-of-type');
 		await click('.wds-list li:first-of-type');
 	});
