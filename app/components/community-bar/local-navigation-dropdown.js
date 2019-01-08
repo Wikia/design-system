@@ -73,12 +73,7 @@ export default Component.extend({
 		}
 	},
 
-	onThirdLevelSelected(event) {
-		this.toggleNavigation(false);
-		this.onLinkClicked(event);
-	},
-
-	onSubLevelTitleClicked(event) {
+	onNavigationItemLinkClicked(event) {
 		this.toggleNavigation(false);
 		this.onLinkClicked(event);
 	},

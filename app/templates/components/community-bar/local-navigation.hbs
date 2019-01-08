@@ -21,10 +21,10 @@
       firstLevelIndex=firstLevelIndex
       firstLevelIndexSelected=firstLevelIndexSelected
       secondLevelIndexSelected=secondLevelIndexSelected
+      onNavigationItemLinkClicked=(action onNavigationItemLinkClicked)
       onSecondLevelClicked=(action onSecondLevelSelected)
       onBackButtonClicked=(action resetSelected "firstLevelIndexSelected")
       onLinkClicked=(action onLinkClicked)
-      onSubLevelTitleClicked=(action onSubLevelTitleClicked)
     }}
     {{#each firstLevelItem.items as |secondLevelItem secondLevelIndex|}}
       {{#if secondLevelItem.items}}
@@ -34,10 +34,9 @@
           firstLevelIndexSelected=firstLevelIndexSelected
           secondLevelIndex=secondLevelIndex
           secondLevelIndexSelected=secondLevelIndexSelected
-          onThirdLevelClicked=(action onThirdLevelSelected)
+          onNavigationItemLinkClicked=(action onNavigationItemLinkClicked)
           onBackButtonClicked=(action resetSelected "secondLevelIndexSelected")
           onLinkClicked=(action onLinkClicked)
-          onSubLevelTitleClicked=(action onSubLevelTitleClicked)
         }}
       {{/if}}
     {{/each}}
