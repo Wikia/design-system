@@ -124,6 +124,7 @@
       <GlobalNavigation
         @model={{model.logged-out-default}}
         @track={{action track}}
+        @onModalOpen={{action onModalOpen}}
         @onSearchSuggestionChosen={{action onSearchSuggestionChosen}}
         @goToSearchResults={{action goToSearchResults}}
         @canShowContentRecommendations={{true}}
@@ -139,6 +140,7 @@
       <GlobalNavigation
         @model={{model.logged-in-default}}
         @track={{action track}}
+        @onModalOpen={{action onModalOpen}}
         @onSearchSuggestionChosen={{action onSearchSuggestionChosen}}
         @goToSearchResults={{action goToSearchResults}}
         @canShowContentRecommendations={{true}}
@@ -154,6 +156,7 @@
       <GlobalNavigation
         @model={{model.logged-out-with-partner-slot}}
         @track={{action track}}
+        @onModalOpen={{action onModalOpen}}
         @onSearchSuggestionChosen={{action onSearchSuggestionChosen}}
         @goToSearchResults={{action goToSearchResults}}
         @canShowContentRecommendations={{true}}
