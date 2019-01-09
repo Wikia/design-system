@@ -21,6 +21,7 @@
       firstLevelIndex=firstLevelIndex
       firstLevelIndexSelected=firstLevelIndexSelected
       secondLevelIndexSelected=secondLevelIndexSelected
+      onNavigationItemLinkClicked=(action onNavigationItemLinkClicked)
       onSecondLevelClicked=(action onSecondLevelSelected)
       onBackButtonClicked=(action resetSelected "firstLevelIndexSelected")
       onLinkClicked=(action onLinkClicked)
@@ -33,7 +34,7 @@
           firstLevelIndexSelected=firstLevelIndexSelected
           secondLevelIndex=secondLevelIndex
           secondLevelIndexSelected=secondLevelIndexSelected
-          onThirdLevelClicked=(action onThirdLevelSelected)
+          onNavigationItemLinkClicked=(action onNavigationItemLinkClicked)
           onBackButtonClicked=(action resetSelected "secondLevelIndexSelected")
           onLinkClicked=(action onLinkClicked)
         }}

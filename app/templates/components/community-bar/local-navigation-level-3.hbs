@@ -9,7 +9,7 @@
     (equal secondLevelItem.href "#")
     secondLevelItem.tracking_label
   }}
-  onclick={{action onLinkClicked}}
+  onclick={{action onNavigationItemLinkClicked}}
 >
   <Label @label={{secondLevelItem.title}} />
 </a>
@@ -22,7 +22,7 @@
           (equal thirdLevelItem.href "#")
           thirdLevelItem.tracking_label
         }}
-        onclick={{action onThirdLevelClicked}}
+        onclick={{action onNavigationItemLinkClicked}}
       >
         <Label @label={{thirdLevelItem.title}} />
       </a>
