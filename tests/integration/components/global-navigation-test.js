@@ -25,7 +25,7 @@ module('Integration | Component | global-navigation', function (hooks) {
 
 		assert.dom('.wds-global-navigation').exists();
 		assert.dom('.wds-global-navigation__logo').exists();
-		assert.dom('.wds-global-navigation__link').exists({count: 5});
+		assert.dom('.wds-global-navigation__link').exists({ count: 5 });
 		assert
 			.dom('.wds-global-navigation__search')
 			.hasText(
@@ -33,14 +33,14 @@ module('Integration | Component | global-navigation', function (hooks) {
 			);
 	});
 
-	test('search input results are shown after click on submit button', async function (assert) {
+	test('onModalOpen is triggered once search is opened', async function (assert) {
 		this.set('onModalOpen', function (modalType) {
-			assert.equal(modalType, 'search', 'onModalOpen should be called once search is toggled');
+			assert.equal(modalType, 'search', 'onModalOpen should be called once search is opened');
 		});
 
 		await render(hbs`
 		{{global-navigation/search
-			model=model.search
+			model={{model}}
 			onModalOpen=onModalOpen
 			onSearchToggleClicked=onSearchToggleClicked
 		}}`);
