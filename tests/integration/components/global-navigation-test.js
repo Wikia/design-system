@@ -32,19 +32,4 @@ module('Integration | Component | global-navigation', function (hooks) {
 				'design-system:global-navigation-search-placeholder-inactive',
 			);
 	});
-
-	test('onModalOpen is triggered once search is opened', async function (assert) {
-		this.set('onModalOpen', function (modalType) {
-			assert.equal(modalType, 'search', 'onModalOpen should be called once search is opened');
-		});
-
-		await render(hbs`
-		{{global-navigation/search
-			model={{model}}
-			onModalOpen=onModalOpen
-			onSearchToggleClicked=onSearchToggleClicked
-		}}`);
-
-		await click('.wds-global-navigation__search-toggle-icon');
-	});
 });
