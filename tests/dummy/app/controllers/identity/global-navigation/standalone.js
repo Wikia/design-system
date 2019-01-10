@@ -6,6 +6,11 @@ export default Controller.extend({
 		console.info('tracking', context);
 	},
 
+	onModalOpen(modalType) {
+		// eslint-disable-next-line no-console
+		console.info('Modal opened', modalType);
+	},
+
 	onSearchSuggestionChosen({ title }) {
 		// eslint-disable-next-line no-console
 		console.info('Suggestion clicked', title);

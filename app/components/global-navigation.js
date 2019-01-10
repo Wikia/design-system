@@ -94,6 +94,9 @@ export default Component.extend({
 	openModal(modalType) {
 		this.set('currentModal', modalType);
 		document.body.classList.add('wds-no-scroll');
+		if (this.onModalOpen) {
+			this.onModalOpen(modalType);
+		}
 
 		if (modalType === 'search') {
 			this.set('searchIsActive', true);
