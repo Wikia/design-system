@@ -7,7 +7,7 @@
     class="wds-community-bar__navigation-header"
     href={{firstLevelItem.href}}
     data-tracking-label={{unless (equal firstLevelItem.href "#") firstLevelItem.tracking_label}}
-    onclick={{action onLinkClicked}}
+    onclick={{action onNavigationItemLinkClicked}}
   >
     <Label @label={{firstLevelItem.title}} />
   </a>
