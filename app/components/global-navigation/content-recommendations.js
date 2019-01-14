@@ -2,6 +2,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { run } from '@ember/runloop';
 import { inject as service } from '@ember/service';
+import fetch from 'fetch';
 
 const recircItemsCount = 50;
 const thumbDimension = 60;
@@ -32,7 +33,7 @@ export default Component.extend({
 
 	didInsertElement() {
 		this.wdsLiftigniter.initLiftigniter({});
-		this.fetchLiftIgniterData();
+		this.fetchData();
 		this.element.addEventListener('scroll', this.onScroll);
 	},
 
@@ -48,6 +49,21 @@ export default Component.extend({
 		if (this.displayedItemsCount >= this.get('model.length')) {
 			this.element.removeEventListener('scroll', this.onScroll);
 		}
+	},
+
+	fetchData() {
+		fetch(`${this.url}&limit=${recircItemsCount}`)
+			.then(response => {
+				if (response.ok) {
+					return response.json();
+				}
+			})
+			.then(items => {
+				this.set('model',
+					items
+						.filter(item => item.thumbnail)
+				);
+			});
 	},
 
 	fetchLiftIgniterData() {
