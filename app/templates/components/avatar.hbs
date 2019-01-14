@@ -1,4 +1,4 @@
-<div class="wds-avatar" ...attributes>
+<div class="wds-avatar{{unless @src ' is-default'}}" title={{@alt}} ...attributes>
   {{#if @link}}
     <a href={{@link}}>
       <AvatarImage @src={{@src}} @alt={{@alt}} />
