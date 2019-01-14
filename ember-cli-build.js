@@ -17,7 +17,6 @@ module.exports = function(defaults) {
 		},
 		inlineContent: {
 			'tracking-queue-stub': `${inlineScriptsPath}/tracking-queue-stub.js`,
-			'tracking-liftigniter': `${inlineScriptsPath}/tracking-liftigniter.js`,
 		},
 		snippetPaths: ['tests/dummy/snippets'],
 		snippetSearchPaths: ['tests/dummy/app'],
