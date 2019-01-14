@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@ember/optional-features": "0.7.0",
-    "@wikia/ember-fandom": "Wikia/ember-fandom#1cc39e875e9a6c637eacd5f9434b7ff0b1359b38",
+    "@wikia/ember-fandom": "Wikia/ember-fandom#a0984b92456da9052c13bd3caf5e67dc3c74e3b0",
     "broccoli-asset-rev": "3.0.0",
     "broccoli-funnel": "2.0.1",
     "broccoli-svgstore": "0.4.2",

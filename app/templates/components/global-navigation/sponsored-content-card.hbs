@@ -1,0 +1,16 @@
+<img
+  src={{model.thumbnailUrl}}
+  alt={{model.title}}
+  class="wds-content-recommendations__card-thumbnail"
+>
+
+<div class="wds-content-recommendations__card-info">
+  <span class="wds-content-recommendations__card-title">
+    {{model.title}}
+  </span>
+  {{#if model.attribution}}
+  	<span class="wds-content-recommendations__card-time">
+		{{model.attributionLabel}} {{model.attribution}}
+  	</span>
+  {{/if}}
+</div>
