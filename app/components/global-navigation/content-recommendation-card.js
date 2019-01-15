@@ -8,18 +8,33 @@ export default Component.extend({
 	href: readOnly('model.url'),
 
 	click(event) {
-		let label;
+		const eventsToTrack = [
+			{
+				action: 'click',
+				label: 'search'
+			},
+			{
+				action: 'select',
+				label: this.model.url
+			}
+		];
+
+		const clickedItemSpecificEvent = {
+			action: 'click'
+		};
 
 		if (event.target.classList.contains('wds-content-recommendations__card-thumbnail')) {
-			label = 'search-trending-thumbnail';
+			clickedItemSpecificEvent.label = 'search-trending-thumbnail';
 		} else {
-			label = 'search-trending-card';
+			clickedItemSpecificEvent.label = 'search-trending-card';
 		}
 
-		this.track && this.track({
-			label,
-			action: 'click',
-			category: 'recirculation'
+		this.track && eventsToTrack.forEach(({ action, label }) => {
+			this.track({
+				action,
+				label,
+				category: 'recirculation'
+			});
 		});
 	}
 });
