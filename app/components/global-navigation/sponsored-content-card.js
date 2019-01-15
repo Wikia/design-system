@@ -6,4 +6,39 @@ export default Component.extend({
 	classNames: ['wds-content-recommendations__card'],
 	attributeBindings: ['href'],
 	href: readOnly('model.url'),
+
+	click(event) {
+		const eventsToTrack = [
+			{
+				action: 'click',
+				label: 'search'
+			},
+			{
+				action: 'click',
+				label: 'sponsored-item'
+			},
+			{
+				action: 'select',
+				label: this.model.url
+			}
+		];
+
+		const clickedItemSpecificEvent = {
+			action: 'click'
+		};
+
+		if (event.target.classList.contains('wds-content-recommendations__card-thumbnail')) {
+			clickedItemSpecificEvent.label = 'search-trending-thumbnail';
+		} else {
+			clickedItemSpecificEvent.label = 'search-trending-card';
+		}
+
+		this.track && eventsToTrack.forEach(({ action, label }) => {
+			this.track({
+				action,
+				label,
+				category: 'recirculation'
+			});
+		});
+	}
 });
