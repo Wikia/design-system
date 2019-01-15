@@ -14,6 +14,10 @@ export default Component.extend({
 				label: 'search'
 			},
 			{
+				action: 'click',
+				label: 'sponsored-item'
+			},
+			{
 				action: 'select',
 				label: this.model.url
 			}
