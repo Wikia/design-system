@@ -63,9 +63,25 @@ module.exports = function(defaults) {
 	if (app.env === 'production') {
 		// We build separate SVG files just for the /dist
 		// Don't waste resources during development
+		additionalTrees.push(new Funnel('style-guide/assets/icons', {
+			include: ['**/*.svg'],
+			destDir: 'svg',
+			getDestinationPath: function (relativePath) {
+				const [folder, nameWithExt] = relativePath.split('/');
+				const [name, ext] = nameWithExt.split('.');
+				const BASE_SIZE_DIR_NAME = 'base';
+
+				if (folder === BASE_SIZE_DIR_NAME) {
+					return nameWithExt;
+				} else {
+					return `${name}-${folder}.${ext}`;
+				}
+			}
+		}));
+
 		additionalTrees.push(new Funnel('style-guide/assets', {
 			include: ['*.svg'],
-			destDir: 'svg'
+			destDir: 'svg',
 		}));
 	}
 

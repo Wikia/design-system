@@ -23,6 +23,6 @@ export default Component.extend({
 	}),
 
 	iconName: computed('name', 'size', function () {
-		return `wds-icons-${this.name}${this.size ? `-${this.size}` : ''}`;
+		return `xd-icons-${this.name}${this.size ? `-${this.size}` : ''}`;
 	})
 });
