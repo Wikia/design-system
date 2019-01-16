@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>indent right</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M13,8 L3.414,8 L6.707,4.707 C7.098,4.316 7.098,3.684 6.707,3.293 C6.316,2.902 5.684,2.902 5.293,3.293 L0.293,8.293 C0.196,8.389 0.124,8.5 0.075,8.619 C0.027,8.735 0,8.863 0,8.997 L0,9.003 C0,9.137 0.027,9.265 0.075,9.381 C0.124,9.5 0.196,9.611 0.293,9.707 L5.293,14.707 C5.488,14.902 5.744,15 6,15 C6.256,15 6.512,14.902 6.707,14.707 C7.098,14.316 7.098,13.684 6.707,13.293 L3.414,10 L13,10 C13.553,10 14,9.553 14,9 C14,8.447 13.553,8 13,8 M17,1 C16.447,1 16,1.447 16,2 L16,16 C16,16.553 16.447,17 17,17 C17.553,17 18,16.553 18,16 L18,2 C18,1.447 17.553,1 17,1" id="path-1"></path>
+    </defs>
+    <g id="indent-right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/18px/Indent-Right" fill="#000000" transform="translate(9.000000, 9.000000) rotate(-180.000000) translate(-9.000000, -9.000000) " xlink:href="#path-1"></use>
+    </g>
+</svg>

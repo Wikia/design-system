@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,14 L16,14 L16,3 L8,3 L8,14 L12,14 Z M12,23 C11.447,23 11,22.553 11,22 L11,16 L4,16 C3.447,16 3,15.553 3,15 C3,14.447 3.447,14 4,14 L6,14 L6,3 L4,3 C3.447,3 3,2.553 3,2 C3,1.447 3.447,1 4,1 L20,1 C20.553,1 21,1.447 21,2 C21,2.553 20.553,3 20,3 L18,3 L18,14 L20,14 C20.553,14 21,14.447 21,15 C21,15.553 20.553,16 20,16 L13,16 L13,22 C13,22.553 12.553,23 12,23 Z" id="path-1"></path>
+    </defs>
+    <g id="pin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/24px/Pin" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

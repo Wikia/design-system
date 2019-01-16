@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>bold</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6,10 L10,10 C12.206,10 14,8.205 14,6 C14,3.795 12.206,2 10,2 L6,2 L6,10 Z M6,22 L13,22 C15.757,22 18,19.757 18,17 C18,14.243 15.757,12 13,12 L6,12 L6,22 Z M13,24 L5,24 C4.448,24 4,23.553 4,23 L4,1 C4,0.447 4.448,0 5,0 L10,0 C13.309,0 16,2.691 16,6 C16,7.599 15.371,9.054 14.348,10.131 C17.565,10.76 20,13.602 20,17 C20,20.859 16.86,24 13,24 Z" id="path-1"></path>
+    </defs>
+    <g id="bold" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/24px/Bold" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>dropdown1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.00025,19.00025 C11.74425,19.00025 11.48825,18.90225 11.29325,18.70725 L0.29325,7.70725 C-0.09775,7.31625 -0.09775,6.68425 0.29325,6.29325 C0.68425,5.90225 1.31625,5.90225 1.70725,6.29325 L12.00025,16.58625 L22.29325,6.29325 C22.68425,5.90225 23.31625,5.90225 23.70725,6.29325 C24.09825,6.68425 24.09825,7.31625 23.70725,7.70725 L12.70725,18.70725 C12.51225,18.90225 12.25625,19.00025 12.00025,19.00025" id="path-1"></path>
+    </defs>
+    <g id="dropdown1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="dropdown" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

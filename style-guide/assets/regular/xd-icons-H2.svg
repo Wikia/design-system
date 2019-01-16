@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>H2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9,2 C8.448,2 8,2.447 8,3 L8,11 L2,11 L2,3 C2,2.447 1.552,2 1,2 C0.448,2 0,2.447 0,3 L0,21 C0,21.553 0.448,22 1,22 C1.552,22 2,21.553 2,21 L2,13 L8,13 L8,21 C8,21.553 8.448,22 9,22 C9.552,22 10,21.553 10,21 L10,3 C10,2.447 9.552,2 9,2 M23,20 L16.066,20 C16.397,17.606 17.923,16.271 19.659,14.752 C21.693,12.973 24,10.953 24,7 C24,4.243 21.757,2 19,2 C16.243,2 14,4.243 14,7 C14,7.553 14.448,8 15,8 C15.552,8 16,7.553 16,7 C16,5.346 17.346,4 19,4 C20.654,4 22,5.346 22,7 C22,10.047 20.305,11.529 18.341,13.248 C16.307,15.027 14,17.047 14,21 C14,21.553 14.448,22 15,22 L23,22 C23.552,22 24,21.553 24,21 C24,20.447 23.552,20 23,20" id="path-1"></path>
+    </defs>
+    <g id="H2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/24px/H2" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

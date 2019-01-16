@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>home</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,15.00025 L14,15.00025 L14,8.41425 L9,3.41425 L4,8.41425 L4,15.00025 L6,15.00025 L6,12.00025 C6,10.34625 7.346,9.00025 9,9.00025 C10.654,9.00025 12,10.34625 12,12.00025 L12,15.00025 Z M15,17.00025 L11,17.00025 C10.448,17.00025 10,16.55325 10,16.00025 L10,12.00025 C10,11.44925 9.551,11.00025 9,11.00025 C8.449,11.00025 8,11.44925 8,12.00025 L8,16.00025 C8,16.55325 7.552,17.00025 7,17.00025 L3,17.00025 C2.448,17.00025 2,16.55325 2,16.00025 L2,8.00025 C2,7.73425 2.105,7.48025 2.293,7.29325 L8.293,1.29325 C8.684,0.90225 9.316,0.90225 9.707,1.29325 L15.707,7.29325 C15.895,7.48025 16,7.73425 16,8.00025 L16,16.00025 C16,16.55325 15.552,17.00025 15,17.00025 Z" id="path-1"></path>
+    </defs>
+    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/18px/Home" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

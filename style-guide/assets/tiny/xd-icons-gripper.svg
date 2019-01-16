@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>gripper</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="gripper" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3,0 C3.553,0 4,0.448 4,1 L4,11 C4,11.552 3.553,12 3,12 C2.447,12 2,11.552 2,11 L2,1 C2,0.448 2.447,0 3,0 Z M9,0 C9.553,0 10,0.448 10,1 L10,11 C10,11.552 9.553,12 9,12 C8.447,12 8,11.552 8,11 L8,1 C8,0.448 8.447,0 9,0 Z" id="Fill-1" fill="#000000" transform="translate(6.000000, 6.000000) rotate(-270.000000) translate(-6.000000, -6.000000) "></path>
+    </g>
+</svg>

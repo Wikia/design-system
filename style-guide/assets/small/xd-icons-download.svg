@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>download</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M16,12 C15.447,12 15,12.447 15,13 L15,15 L3,15 L3,13 C3,12.447 2.553,12 2,12 C1.447,12 1,12.447 1,13 L1,16 C1,16.553 1.447,17 2,17 L16,17 C16.553,17 17,16.553 17,16 L17,13 C17,12.447 16.553,12 16,12 M8.293,12.707 C8.39,12.803 8.5,12.876 8.619,12.925 C8.735,12.973 8.863,13 8.997,13 L9,13 L9.003,13 C9.137,13 9.265,12.973 9.381,12.925 C9.5,12.876 9.61,12.803 9.707,12.707 L14.707,7.707 C15.098,7.316 15.098,6.684 14.707,6.293 C14.316,5.902 13.684,5.902 13.293,6.293 L10,9.586 L10,2 C10,1.447 9.553,1 9,1 C8.447,1 8,1.447 8,2 L8,9.586 L4.707,6.293 C4.316,5.902 3.684,5.902 3.293,6.293 C2.902,6.684 2.902,7.316 3.293,7.707 L8.293,12.707 Z" id="path-1"></path>
+    </defs>
+    <g id="download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/18px/Download" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

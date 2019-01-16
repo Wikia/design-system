@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>check box</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.293,15.707 C9.488,15.902 9.744,16 10,16 C10.256,16 10.512,15.902 10.707,15.707 L17.707,8.707 C18.098,8.316 18.098,7.684 17.707,7.293 C17.316,6.902 16.684,6.902 16.293,7.293 L10,13.586 L7.707,11.293 C7.316,10.902 6.684,10.902 6.293,11.293 C5.902,11.684 5.902,12.316 6.293,12.707 L9.293,15.707 Z M3,21 L21,21 L21,3 L3,3 L3,21 Z M22,1 L2,1 C1.448,1 1,1.447 1,2 L1,22 C1,22.553 1.448,23 2,23 L22,23 C22.552,23 23,22.553 23,22 L23,2 C23,1.447 22.552,1 22,1 Z" id="path-1"></path>
+    </defs>
+    <g id="check-box" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/24px/Check-box" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

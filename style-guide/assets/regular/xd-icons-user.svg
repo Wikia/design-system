@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>user</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,3 C10.346,3 9,4.346 9,6 C9,7.654 10.346,9 12,9 C13.654,9 15,7.654 15,6 C15,4.346 13.654,3 12,3 M12,11 C9.243,11 7,8.757 7,6 C7,3.243 9.243,1 12,1 C14.757,1 17,3.243 17,6 C17,8.757 14.757,11 12,11 M20,23 C19.447,23 19,22.552 19,22 C19,18.14 15.859,15 12,15 C8.141,15 5,18.14 5,22 C5,22.552 4.553,23 4,23 C3.447,23 3,22.552 3,22 C3,17.038 7.037,13 12,13 C16.963,13 21,17.038 21,22 C21,22.552 20.553,23 20,23" id="path-1"></path>
+    </defs>
+    <g id="user" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/24px/User" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>
