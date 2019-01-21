@@ -1,18 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>icons/18px/external link</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M16.9248,1.619 C16.9728,1.735 16.9998,1.863 16.9998,1.997 L16.9998,2 L16.9998,7 C16.9998,7.553 16.5518,8 15.9998,8 C15.4478,8 14.9998,7.553 14.9998,7 L14.9998,4.414 L8.7068,10.707 C8.5118,10.902 8.2558,11 7.9998,11 C7.7438,11 7.4878,10.902 7.2928,10.707 C6.9028,10.316 6.9028,9.683 7.2928,9.293 L13.5858,3 L10.9998,3 C10.4478,3 9.9998,2.553 9.9998,2 C9.9998,1.447 10.4478,1 10.9998,1 L15.9998,1 L16.0028,1 C16.1368,1 16.2648,1.027 16.3808,1.075 C16.4998,1.124 16.6108,1.197 16.7068,1.293 C16.8028,1.389 16.8758,1.5 16.9248,1.619 Z M13,9.9999 C13.552,9.9999 14,10.4469 14,10.9999 L14,15.9999 C14,16.5529 13.552,16.9999 13,16.9999 L2,16.9999 C1.448,16.9999 1,16.5529 1,15.9999 L1,4.9999 C1,4.4469 1.448,3.9999 2,3.9999 L7,3.9999 C7.552,3.9999 8,4.4469 8,4.9999 C8,5.5529 7.552,5.9999 7,5.9999 L3,5.9999 L3,14.9999 L12,14.9999 L12,10.9999 C12,10.4469 12.448,9.9999 13,9.9999 Z" id="path-1"></path>
-    </defs>
-    <g id="icons/18px/external-link" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <mask id="mask-2" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-        <use id="Fill-6" fill="#999999" xlink:href="#path-1"></use>
-        <g id="color/UI/black" mask="url(#mask-2)" fill="#000000">
-            <rect id="Rectangle-13-Copy-49" x="0" y="0" width="18" height="18"></rect>
-        </g>
+<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M16.925 1.619a.988.988 0 0 1 .075.378V7a1 1 0 1 1-2 0V4.414l-6.293 6.293a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L13.586 3H11a1 1 0 1 1 0-2h5.003a.988.988 0 0 1 .704.293.998.998 0 0 1 .218.326zM13 9.999a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2H3v9h9v-4a1 1 0 0 1 1-1z"/>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="mask-2" fill="#fff">
+      <use xlink:href="#path-1"/>
+    </mask>
+    <use fill="#999" xlink:href="#path-1"/>
+    <g mask="url(#mask-2)" fill="#000">
+      <path d="M0 0h18v18H0z"/>
     </g>
+  </g>
 </svg>

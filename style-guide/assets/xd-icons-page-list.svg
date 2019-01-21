@@ -1,15 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>page list</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M3,21 L8,21 L8,16 L3,16 L3,21 Z M9,14 L2,14 C1.447,14 1,14.447 1,15 L1,22 C1,22.553 1.447,23 2,23 L9,23 C9.553,23 10,22.553 10,22 L10,15 C10,14.447 9.553,14 9,14 Z M15,3 L22,3 C22.553,3 23,2.553 23,2 C23,1.447 22.553,1 22,1 L15,1 C14.447,1 14,1.447 14,2 C14,2.553 14.447,3 15,3 M22,14 L15,14 C14.447,14 14,14.447 14,15 C14,15.553 14.447,16 15,16 L22,16 C22.553,16 23,15.553 23,15 C23,14.447 22.553,14 22,14 M22,8 L15,8 C14.447,8 14,8.447 14,9 C14,9.553 14.447,10 15,10 L22,10 C22.553,10 23,9.553 23,9 C23,8.447 22.553,8 22,8 M22,21 L15,21 C14.447,21 14,21.447 14,22 C14,22.553 14.447,23 15,23 L22,23 C22.553,23 23,22.553 23,22 C23,21.447 22.553,21 22,21 M3,8 L8,8 L8,3 L3,3 L3,8 Z M9,1 L2,1 C1.447,1 1,1.447 1,2 L1,9 C1,9.553 1.447,10 2,10 L9,10 C9.553,10 10,9.553 10,9 L10,2 C10,1.447 9.553,1 9,1 Z" id="path-1"></path>
-    </defs>
-    <g id="page-list" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <mask id="mask-2" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-        <use id="icons/24px/Page-List" fill="#000000" xlink:href="#path-1"></use>
-    </g>
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M3 21h5v-5H3v5zm6-7H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1zm6-11h7a1 1 0 1 0 0-2h-7a1 1 0 1 0 0 2m7 11h-7a1 1 0 1 0 0 2h7a1 1 0 1 0 0-2m0-6h-7a1 1 0 1 0 0 2h7a1 1 0 1 0 0-2m0 13h-7a1 1 0 1 0 0 2h7a1 1 0 1 0 0-2M3 8h5V3H3v5zm6-7H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
 </svg>

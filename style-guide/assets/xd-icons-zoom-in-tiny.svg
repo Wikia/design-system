@@ -1,10 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>zoom in</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="zoom-in" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M4,9 C4.553,9 5,9.448 5,10 C5,10.552 4.553,11 4,11 L2,11 C1.447,11 1,10.552 1,10 L1,8 C1,7.448 1.447,7 2,7 C2.553,7 3,7.448 3,8 L3,9 L4,9 Z M4,1 C4.553,1 5,1.448 5,2 C5,2.552 4.553,3 4,3 L3,3 L3,4 C3,4.552 2.553,5 2,5 C1.447,5 1,4.552 1,4 L1,2 C1,1.448 1.447,1 2,1 L4,1 Z M10,7 C10.553,7 11,7.448 11,8 L11,10 C11,10.552 10.553,11 10,11 L8,11 C7.447,11 7,10.552 7,10 C7,9.448 7.447,9 8,9 L9,9 L9,8 C9,7.448 9.447,7 10,7 Z M10,1 C10.553,1 11,1.448 11,2 L11,4 C11,4.552 10.553,5 10,5 C9.447,5 9,4.552 9,4 L9,3 L8,3 C7.447,3 7,2.552 7,2 C7,1.448 7.447,1 8,1 L10,1 Z" id="Fill-1" fill="#000000"></path>
-    </g>
+<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 9a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1V8a1 1 0 1 1 2 0v1h1zm0-8a1 1 0 1 1 0 2H3v1a1 1 0 1 1-2 0V2a1 1 0 0 1 1-1h2zm6 6a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 1 1 0-2h1V8a1 1 0 0 1 1-1zm0-6a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3H8a1 1 0 1 1 0-2h2z" fill="#000" fill-rule="evenodd"/>
 </svg>

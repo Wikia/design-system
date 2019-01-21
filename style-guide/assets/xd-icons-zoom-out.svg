@@ -1,15 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>zoom out</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M17,9 L22,9 C22.553,9 23,8.553 23,8 C23,7.447 22.553,7 22,7 L18,7 L18,3 C18,2.447 17.553,2 17,2 C16.447,2 16,2.447 16,3 L16,8 C16,8.553 16.447,9 17,9 M7,15 L2,15 C1.447,15 1,15.447 1,16 C1,16.553 1.447,17 2,17 L6,17 L6,21 C6,21.553 6.447,22 7,22 C7.553,22 8,21.553 8,21 L8,16 C8,15.447 7.553,15 7,15 M7,2 C6.447,2 6,2.447 6,3 L6,7 L2,7 C1.447,7 1,7.447 1,8 C1,8.553 1.447,9 2,9 L7,9 C7.553,9 8,8.553 8,8 L8,3 C8,2.447 7.553,2 7,2 M22,15 L17,15 C16.447,15 16,15.447 16,16 L16,21 C16,21.553 16.447,22 17,22 C17.553,22 18,21.553 18,21 L18,17 L22,17 C22.553,17 23,16.553 23,16 C23,15.447 22.553,15 22,15" id="path-1"></path>
-    </defs>
-    <g id="zoom-out" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <mask id="mask-2" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-        <use id="icons/24px/Zoom-Out" fill="#000000" xlink:href="#path-1"></use>
-    </g>
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M17 9h5a1 1 0 1 0 0-2h-4V3a1 1 0 1 0-2 0v5a1 1 0 0 0 1 1M7 15H2a1 1 0 1 0 0 2h4v4a1 1 0 1 0 2 0v-5a1 1 0 0 0-1-1M7 2a1 1 0 0 0-1 1v4H2a1 1 0 1 0 0 2h5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1m15 13h-5a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0v-4h4a1 1 0 1 0 0-2"/>
 </svg>
