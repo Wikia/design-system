@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>reload</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,24 C5.935,24 1,19.065 1,13 C1,6.935 5.935,2 12,2 C15.052,2 17.943,3.281 20,5.453 L20,2 C20,1.447 20.447,1 21,1 C21.553,1 22,1.447 22,2 L22,8 C22,8.553 21.553,9 21,9 L15,9 C14.447,9 14,8.553 14,8 C14,7.447 14.447,7 15,7 L18.707,7 C17.017,5.117 14.578,4 12,4 C7.037,4 3,8.037 3,13 C3,17.963 7.037,22 12,22 C16.647,22 20.497,18.518 20.956,13.901 C21.01,13.352 21.508,12.95 22.05,13.005 C22.6,13.06 23.001,13.549 22.946,14.099 C22.386,19.744 17.68,24 12,24" id="path-1"></path>
+    </defs>
+    <g id="reload" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/24px/Loading" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

@@ -1,3 +1,10 @@
-<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-  <path d="M16 8a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2h14zm-7 6a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2h7zM2 4a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2H2z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>left align</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="left-align" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,8 C16.553,8 17,8.447 17,9 C17,9.553 16.553,10 16,10 L2,10 C1.447,10 1,9.553 1,9 C1,8.447 1.447,8 2,8 L16,8 Z M9,14 C9.553,14 10,14.447 10,15 C10,15.553 9.553,16 9,16 L2,16 C1.447,16 1,15.553 1,15 C1,14.447 1.447,14 2,14 L9,14 Z M2,4 C1.447,4 1,3.553 1,3 C1,2.447 1.447,2 2,2 L16,2 C16.553,2 17,2.447 17,3 C17,3.553 16.553,4 16,4 L2,4 Z" id="Fill-3" fill="#000000"></path>
+    </g>
 </svg>

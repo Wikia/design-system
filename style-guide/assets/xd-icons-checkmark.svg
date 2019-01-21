@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8.00025,20.00025 C7.74425,20.00025 7.48825,19.90225 7.29325,19.70725 L0.29325,12.70725 C-0.09775,12.31625 -0.09775,11.68425 0.29325,11.29325 C0.68425,10.90225 1.31625,10.90225 1.70725,11.29325 L8.00025,17.58625 L22.29325,3.29325 C22.68425,2.90225 23.31625,2.90225 23.70725,3.29325 C24.09825,3.68425 24.09825,4.31625 23.70725,4.70725 L8.70725,19.70725 C8.51225,19.90225 8.25625,20.00025 8.00025,20.00025" id="path-1"></path>
+    </defs>
+    <g id="check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/24px/Tick" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

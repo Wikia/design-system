@@ -1,3 +1,15 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 1a1 1 0 0 0-1 1v20a1 1 0 1 0 2 0V2a1 1 0 0 0-1-1m8 0a1 1 0 0 0-1 1v20a1 1 0 1 0 2 0V2a1 1 0 0 0-1-1"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>pause</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8,1 C7.447,1 7,1.447 7,2 L7,22 C7,22.553 7.447,23 8,23 C8.553,23 9,22.553 9,22 L9,2 C9,1.447 8.553,1 8,1 M16,1 C15.447,1 15,1.447 15,2 L15,22 C15,22.553 15.447,23 16,23 C16.553,23 17,22.553 17,22 L17,2 C17,1.447 16.553,1 16,1" id="path-1"></path>
+    </defs>
+    <g id="pause" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/24px/Pause" fill="#000000" xlink:href="#path-1"></use>
+    </g>
 </svg>

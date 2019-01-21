@@ -1,3 +1,10 @@
-<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-  <path d="M16 2a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V4h-2a1 1 0 1 1 0-2h3zM5 2a1 1 0 1 1 0 2H3v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1h3zm0 12a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1v-3a1 1 0 1 1 2 0v2h2zm11-3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h2v-2a1 1 0 0 1 1-1z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>zoom in</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="zoom-in" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,2 C16.553,2 17,2.447 17,3 L17,6 C17,6.553 16.553,7 16,7 C15.447,7 15,6.553 15,6 L15,4 L13,4 C12.447,4 12,3.553 12,3 C12,2.447 12.447,2 13,2 L16,2 Z M5,2 C5.553,2 6,2.447 6,3 C6,3.553 5.553,4 5,4 L3,4 L3,6 C3,6.553 2.553,7 2,7 C1.447,7 1,6.553 1,6 L1,3 C1,2.447 1.447,2 2,2 L5,2 Z M5,14 C5.553,14 6,14.447 6,15 C6,15.553 5.553,16 5,16 L2,16 C1.447,16 1,15.553 1,15 L1,12 C1,11.447 1.447,11 2,11 C2.553,11 3,11.447 3,12 L3,14 L5,14 Z M16,11 C16.553,11 17,11.447 17,12 L17,15 C17,15.553 16.553,16 16,16 L13,16 C12.447,16 12,15.553 12,15 C12,14.447 12.447,14 13,14 L15,14 L15,12 C15,11.447 15.447,11 16,11 Z" id="Fill-5" fill="#000000"></path>
+    </g>
 </svg>

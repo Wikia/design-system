@@ -1,3 +1,15 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3 4h18a1 1 0 1 0 0-2H3a1 1 0 1 0 0 2m10 16H3a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2m8-9H3a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>left align</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3,4 L21,4 C21.553,4 22,3.553 22,3 C22,2.447 21.553,2 21,2 L3,2 C2.447,2 2,2.447 2,3 C2,3.553 2.447,4 3,4 M13,20 L3,20 C2.447,20 2,20.447 2,21 C2,21.553 2.447,22 3,22 L13,22 C13.553,22 14,21.553 14,21 C14,20.447 13.553,20 13,20 M21,11 L3,11 C2.447,11 2,11.447 2,12 C2,12.553 2.447,13 3,13 L21,13 C21.553,13 22,12.553 22,12 C22,11.447 21.553,11 21,11" id="path-1"></path>
+    </defs>
+    <g id="left-align" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icons/24px/Formatting" fill="#000000" xlink:href="#path-1"></use>
+    </g>
 </svg>

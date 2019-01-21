@@ -1,3 +1,10 @@
-<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-  <path d="M6 5c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2m3 6a1 1 0 0 1-1-1c0-1.103-.897-2-2-2s-2 .897-2 2a1 1 0 1 1-2 0c0-2.206 1.794-4 4-4s4 1.794 4 4a1 1 0 0 1-1 1"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>user</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="user" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6,5 C4.897,5 4,4.103 4,3 C4,1.897 4.897,1 6,1 C7.103,1 8,1.897 8,3 C8,4.103 7.103,5 6,5 M9,11 C8.447,11 8,10.553 8,10 C8,8.897 7.103,8 6,8 C4.897,8 4,8.897 4,10 C4,10.553 3.553,11 3,11 C2.447,11 2,10.553 2,10 C2,7.794 3.794,6 6,6 C8.206,6 10,7.794 10,10 C10,10.553 9.553,11 9,11" id="Fill-1" fill="#000000"></path>
+    </g>
 </svg>
