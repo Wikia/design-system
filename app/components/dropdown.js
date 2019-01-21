@@ -61,11 +61,7 @@ export default Component.extend({
 		if (this.canFlip && !this.isLevel2 && this.contentElement) {
 			const contentElementBoundingRect = this.contentElement.getBoundingClientRect();
 
-			if (contentElementBoundingRect.bottom > getViewportSize().height) {
-				this.set('isFlipped', true);
-			} else {
-				this.set('isFlipped', false);
-			}
+			this.set('isFlipped', contentElementBoundingRect.bottom > getViewportSize().height);
 		}
 
 		if (this.mouseEnter) {
