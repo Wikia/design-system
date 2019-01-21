@@ -19,7 +19,10 @@
       {{global-navigation/main-navigation model=navigationModel}}
     </div>
     {{#if canShowContentRecommendations}}
-      {{global-navigation/content-recommendations track=(action track)}}
+      {{global-navigation/content-recommendations
+        track=(action track)
+        url=contentRecommendationsUrl
+      }}
     {{/if}}
   </div>
 {{/if}}
