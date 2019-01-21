@@ -2,5 +2,5 @@
   <defs>
     <path d="M3 21h18V3H3v18zM22 1H2a1 1 0 0 0-1 1v20a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" id="check-box-empty-path"/>
   </defs>
-  <use fill="#000" xlink:href="#check-box-empty-path" fill-rule="evenodd"/>
+  <use xlink:href="#check-box-empty-path" fill-rule="evenodd"/>
 </svg>
