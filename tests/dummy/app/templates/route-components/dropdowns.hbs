@@ -51,7 +51,10 @@
   <p>Default dropdown, centered.</p>
   <Demo @name="dropdown">
     <Dropdown as |dropdown|>
-      <dropdown.toggle class="push-dropdown-down" @text="Default dropdown" />
+      <dropdown.toggle
+        class="push-dropdown-down"
+        @text="Default dropdown"
+      />
       <dropdown.content>
         <List>
           <li>List item 1</li>
@@ -77,7 +80,10 @@
   <p>Default dropdown that flips (drops up) when it's near the bottom of the viewport.</p>
   <Demo @name="dropdown">
     <Dropdown @canFlip={{true}} as |dropdown|>
-      <dropdown.toggle class="push-dropdown-down" @text="Dropdown which can drop-up" />
+      <dropdown.toggle
+        class="push-dropdown-down"
+        @text="Dropdown which can drop-up"
+      />
       <dropdown.content>
         <List>
           <li>List item 1</li>
