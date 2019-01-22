@@ -4,7 +4,7 @@ import { computed } from '@ember/object';
 const iconMap = {
 	alert: 'error',
 	warning: 'alert',
-	success: 'checkmark-circle',
+	success: 'checkmark',
 	message: 'flag'
 };
 

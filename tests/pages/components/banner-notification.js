@@ -20,7 +20,7 @@ export default {
 
 		isAlert: is('[*|href="#wds-icons-error-small"]'),
 		isWarning: is('[*|href="#wds-icons-alert-small"]'),
-		isSuccess: is('[*|href="#wds-icons-checkmark-circle-small"]'),
+		isSuccess: is('[*|href="#wds-icons-checkmark-small"]'),
 		isMessage: is('[*|href="#wds-icons-flag-small"]'),
 	},
 

@@ -41,7 +41,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       }
     ],
@@ -320,7 +320,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
@@ -408,7 +408,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       }
     ],
@@ -686,7 +686,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
@@ -763,7 +763,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       }
     ],
@@ -1042,7 +1042,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
@@ -1134,7 +1134,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       },
       {
@@ -1424,7 +1424,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
@@ -1514,7 +1514,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       },
       {
@@ -1815,7 +1815,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
