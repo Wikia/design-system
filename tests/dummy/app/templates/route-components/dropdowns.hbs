@@ -51,7 +51,39 @@
   <p>Default dropdown, centered.</p>
   <Demo @name="dropdown">
     <Dropdown as |dropdown|>
-      <dropdown.toggle class="push-dropdown-down" @text="Default dropdown" />
+      <dropdown.toggle
+        class="push-dropdown-down"
+        @text="Default dropdown"
+      />
+      <dropdown.content>
+        <List>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+          <li>List item 4</li>
+          <li>List item 5</li>
+          <li>List item 6</li>
+          <li>List item 7</li>
+          <li>List item 8</li>
+          <li>List item 9</li>
+          <li>List item 10</li>
+        </List>
+      </dropdown.content>
+    </Dropdown>
+  </Demo>
+  There is possibility to render dropdown toggle as other html tag than
+  <code class="format-code">span</code>,
+  see {{#link-to "route-components.buttons"}}Dropdown buttons{{/link-to}}
+</section>
+<section>
+  <h2 id="dropdowns-default-variant">Default which can flip (reversible dropdown)</h2>
+  <p>Default dropdown that flips (drops up) when it's near the bottom of the viewport.</p>
+  <Demo @name="dropdown">
+    <Dropdown @canFlip={{true}} as |dropdown|>
+      <dropdown.toggle
+        class="push-dropdown-down"
+        @text="Dropdown which can drop-up"
+      />
       <dropdown.content>
         <List>
           <li>List item 1</li>
