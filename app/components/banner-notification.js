@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 
 const iconMap = {
-	alert: 'error',
+	alert: 'alert',
 	warning: 'alert',
 	success: 'checkmark',
 	message: 'flag'
