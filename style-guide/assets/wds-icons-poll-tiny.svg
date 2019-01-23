@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="0 0 12 12">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12 12">
   <defs>
-    <path id="poll-a" d="M2,7 C2.552,7 3,7.448 3,8 L3,11 C3,11.552 2.552,12 2,12 C1.448,12 1,11.552 1,11 L1,8 C1,7.448 1.448,7 2,7 Z M10,4 C10.552,4 11,4.448 11,5 L11,11 C11,11.552 10.552,12 10,12 C9.448,12 9,11.552 9,11 L9,5 C9,4.448 9.448,4 10,4 Z M6,0 C6.552,0 7,0.448 7,1 L7,11 C7,11.552 6.552,12 6,12 C5.448,12 5,11.552 5,11 L5,1 C5,0.448 5.448,0 6,0 Z"/>
+    <path id="poll-a" d="M2 7a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1zm8-3a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V5a1 1 0 0 1 1-1zM6 0a1 1 0 0 1 1 1v10a1 1 0 0 1-2 0V1a1 1 0 0 1 1-1z"/>
   </defs>
   <use fill-rule="evenodd" xlink:href="#poll-a"/>
 </svg>

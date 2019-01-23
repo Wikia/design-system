@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
   <defs>
-    <path id="check-box-empty-a" d="M3,21 L21,21 L21,3 L3,3 L3,21 Z M22,1 L2,1 C1.448,1 1,1.447 1,2 L1,22 C1,22.553 1.448,23 2,23 L22,23 C22.552,23 23,22.553 23,22 L23,2 C23,1.447 22.552,1 22,1 Z"/>
+    <path id="check-box-empty-a" d="M3 21h18V3H3v18zM22 1H2a1 1 0 0 0-1 1v20a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
   </defs>
   <use fill-rule="evenodd" xlink:href="#check-box-empty-a"/>
 </svg>

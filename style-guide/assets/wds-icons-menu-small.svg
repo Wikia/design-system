@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 18">
   <defs>
-    <path id="menu-a" d="M2,4 L3,4 L15,4 L16,4 C16.553,4 17,3.553 17,3 C17,2.447 16.553,2 16,2 L15,2 L3,2 L2,2 C1.447,2 1,2.447 1,3 C1,3.553 1.447,4 2,4 M16,8 L15,8 L3,8 L2,8 C1.447,8 1,8.447 1,9 C1,9.553 1.447,10 2,10 L3,10 L15,10 L16,10 C16.553,10 17,9.553 17,9 C17,8.447 16.553,8 16,8 M16,14 L2,14 C1.447,14 1,14.447 1,15 C1,15.553 1.447,16 2,16 L16,16 C16.553,16 17,15.553 17,15 C17,14.447 16.553,14 16,14"/>
+    <path id="menu-a" d="M2 4h14a1 1 0 1 0 0-2H2a1 1 0 1 0 0 2m14 4H2a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2m0 6H2a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2"/>
   </defs>
   <use fill-rule="evenodd" xlink:href="#menu-a"/>
 </svg>

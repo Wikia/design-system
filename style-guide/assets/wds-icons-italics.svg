@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
   <defs>
-    <path id="italics-a" d="M22,0 L16.583,0 L16.538,0 L10,0 C9.448,0 9,0.447 9,1 C9,1.553 9.448,2 10,2 L15.063,2 L6.772,22 L2,22 C1.448,22 1,22.447 1,23 C1,23.553 1.448,24 2,24 L7.417,24 L7.439,24 L7.462,24 L14,24 C14.552,24 15,23.553 15,23 C15,22.447 14.552,22 14,22 L8.937,22 L17.228,2 L22,2 C22.552,2 23,1.553 23,1 C23,0.447 22.552,0 22,0"/>
+    <path id="italics-a" d="M22 0H10a1 1 0 1 0 0 2h5.063L6.772 22H2a1 1 0 1 0 0 2h12a1 1 0 1 0 0-2H8.937l8.291-20H22a1 1 0 1 0 0-2"/>
   </defs>
   <use fill-rule="evenodd" xlink:href="#italics-a"/>
 </svg>

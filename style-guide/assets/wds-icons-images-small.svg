@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 18">
   <defs>
-    <path id="images-a" d="M11,15 L10.414,15 L3,7.586 L3,7 L11,7 L11,15 Z M3,15 L3,10.414 L7.586,15 L3,15 Z M12,5 C12.553,5 13,5.447 13,6 L13,16 C13,16.553 12.553,17 12,17 L2,17 C1.447,17 1,16.553 1,16 L1,6 C1,5.447 1.447,5 2,5 L12,5 Z M16,1 C16.553,1 17,1.447 17,2 L17,12 C17,12.553 16.553,13 16,13 C15.447,13 15,12.553 15,12 L15,3 L6,3 C5.447,3 5,2.553 5,2 C5,1.447 5.447,1 6,1 L16,1 Z"/>
+    <path id="images-a" d="M11 15h-.586L3 7.586V7h8v8zm-8 0v-4.586L7.586 15H3zm9-10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h10zm4-4a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V3H6a1 1 0 1 1 0-2h10z"/>
   </defs>
   <use fill-rule="evenodd" xlink:href="#images-a"/>
 </svg>

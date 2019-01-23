@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
   <defs>
-    <path id="add-a" d="M22,11 L13,11 L13,2 C13,1.447 12.552,1 12,1 C11.448,1 11,1.447 11,2 L11,11 L2,11 C1.448,11 1,11.447 1,12 C1,12.553 1.448,13 2,13 L11,13 L11,22 C11,22.553 11.448,23 12,23 C12.552,23 13,22.553 13,22 L13,13 L22,13 C22.552,13 23,12.553 23,12 C23,11.447 22.552,11 22,11"/>
+    <path id="add-a" d="M22 11h-9V2a1 1 0 1 0-2 0v9H2a1 1 0 1 0 0 2h9v9a1 1 0 1 0 2 0v-9h9a1 1 0 1 0 0-2"/>
   </defs>
   <use fill-rule="evenodd" xlink:href="#add-a"/>
 </svg>
