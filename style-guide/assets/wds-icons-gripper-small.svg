@@ -1,3 +1,6 @@
-<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-  <path d="M16 11a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2h14zM2 7a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2H2z" fill-rule="evenodd"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <path id="gripper-a" d="M16,11 C16.553,11 17,11.447 17,12 C17,12.553 16.553,13 16,13 L2,13 C1.447,13 1,12.553 1,12 C1,11.447 1.447,11 2,11 L16,11 Z M2,7 C1.447,7 1,6.553 1,6 C1,5.447 1.447,5 2,5 L16,5 C16.553,5 17,5.447 17,6 C17,6.553 16.553,7 16,7 L2,7 Z"/>
+  </defs>
+  <use fill-rule="evenodd" xlink:href="#gripper-a"/>
 </svg>

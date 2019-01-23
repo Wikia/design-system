@@ -1,3 +1,6 @@
-<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-  <path d="M3 15h12V3H3v12zm13 2H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1z" fill-rule="evenodd"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <path id="check-box-empty-a" d="M3,15 L15,15 L15,3 L3,3 L3,15 Z M16,17 L2,17 C1.448,17 1,16.553 1,16 L1,2 C1,1.447 1.448,1 2,1 L16,1 C16.552,1 17,1.447 17,2 L17,16 C17,16.553 16.552,17 16,17 Z"/>
+  </defs>
+  <use fill-rule="evenodd" xlink:href="#check-box-empty-a"/>
 </svg>

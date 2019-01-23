@@ -1,3 +1,6 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path d="M8 1a1 1 0 0 0-1 1v20a1 1 0 1 0 2 0V2a1 1 0 0 0-1-1m8 0a1 1 0 0 0-1 1v20a1 1 0 1 0 2 0V2a1 1 0 0 0-1-1"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <path id="pause-a" d="M8,1 C7.447,1 7,1.447 7,2 L7,22 C7,22.553 7.447,23 8,23 C8.553,23 9,22.553 9,22 L9,2 C9,1.447 8.553,1 8,1 M16,1 C15.447,1 15,1.447 15,2 L15,22 C15,22.553 15.447,23 16,23 C16.553,23 17,22.553 17,22 L17,2 C17,1.447 16.553,1 16,1"/>
+  </defs>
+  <use fill-rule="evenodd" xlink:href="#pause-a"/>
 </svg>
