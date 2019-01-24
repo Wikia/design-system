@@ -362,7 +362,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-small"
         },
         "href": "/d/f"
       }
@@ -728,7 +728,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-small"
         },
         "href": "#"
       }
@@ -1084,7 +1084,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-small"
         },
         "href": "#"
       }
@@ -1466,7 +1466,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-small"
         },
         "href": "#"
       }
@@ -1857,7 +1857,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-small"
         },
         "href": "#"
       }

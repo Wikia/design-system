@@ -26,7 +26,7 @@ export default Component.extend(
 			if (this.isDiscussionReply(type)) {
 				return 'wds-icons-reply-small';
 			} else if (this.isAnnouncement(type)) {
-				return 'wds-icons-megaphone';
+				return 'wds-icons-flag';
 			} else {
 				return 'wds-icons-upvote-small';
 			}
