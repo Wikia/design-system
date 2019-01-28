@@ -149,12 +149,6 @@
   
     <path id="controls-a" d="M2 5h8v1a1 1 0 1 0 2 0V2a1 1 0 1 0-2 0v1H2a1 1 0 1 0 0 2m14 0h6a1 1 0 1 0 0-2h-6a1 1 0 1 0 0 2m6 4a1 1 0 0 0-1 1v1H2a1 1 0 1 0 0 2h19v1a1 1 0 1 0 2 0v-4a1 1 0 0 0-1-1m-11 8a1 1 0 0 0-1 1v1H2a1 1 0 1 0 0 2h8v1a1 1 0 1 0 2 0v-4a1 1 0 0 0-1-1m11 2h-6a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2"/>
   
-    <path id="documents-small" d="M3 16h8V6H3v10zm9-12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10zm4-4a1 1 0 0 1 1 1v12a1 1 0 1 1-2 0V2H6a1 1 0 1 1 0-2h10z"/>
-  
-    <path id="documents-tiny" d="M3 10h3V5H3v5zm4-7a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5zm3-3a1 1 0 0 1 1 1v7a1 1 0 1 1-2 0V2H5a1 1 0 1 1 0-2h5z"/>
-  
-    <path id="documents-a" d="M4 22h12V7H4v15zM17 5H3a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm5-5H8a1 1 0 1 0 0 2h13v16a1 1 0 1 0 2 0V1a1 1 0 0 0-1-1"/>
-  
     <path id="download-small" d="M16 12a1 1 0 0 0-1 1v2H3v-2a1 1 0 1 0-2 0v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1m-7.707.707a1.009 1.009 0 0 0 .704.293h.006a.988.988 0 0 0 .704-.293l5-5a.999.999 0 1 0-1.414-1.414L10 9.586V2a1 1 0 1 0-2 0v7.586L4.707 6.293a.999.999 0 1 0-1.414 1.414l5 5z"/>
   
     <path id="download-tiny" d="M5.293 7.707l-3-3a.999.999 0 1 1 1.414-1.414L5 4.586V1a1 1 0 1 1 2 0v3.586l1.293-1.293a.999.999 0 1 1 1.414 1.414l-3 3A.993.993 0 0 1 6.003 8h-.006a.988.988 0 0 1-.704-.293zM11 7.75a1 1 0 0 1 1 1V11a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8.75a1 1 0 1 1 2 0V10h8V8.75a1 1 0 0 1 1-1z"/>
@@ -316,6 +310,12 @@
     <path id="page-list-tiny" d="M4 7a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3zm0-7a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h3zm4 2a1 1 0 1 1 0-2h3a1 1 0 1 1 0 2H8zm3 3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3zm0 5a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3z"/>
   
     <path id="page-list-a" d="M3 21h5v-5H3v5zm6-7H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1zm6-11h7a1 1 0 1 0 0-2h-7a1 1 0 1 0 0 2m7 11h-7a1 1 0 1 0 0 2h7a1 1 0 1 0 0-2m0-6h-7a1 1 0 1 0 0 2h7a1 1 0 1 0 0-2m0 13h-7a1 1 0 1 0 0 2h7a1 1 0 1 0 0-2M3 8h5V3H3v5zm6-7H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+  
+    <path id="pages-small" d="M3 16h8V6H3v10zm9-12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10zm4-4a1 1 0 0 1 1 1v12a1 1 0 1 1-2 0V2H6a1 1 0 1 1 0-2h10z"/>
+  
+    <path id="pages-tiny" d="M3 10h3V5H3v5zm4-7a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5zm3-3a1 1 0 0 1 1 1v7a1 1 0 1 1-2 0V2H5a1 1 0 1 1 0-2h5z"/>
+  
+    <path id="pages-a" d="M4 22h12V7H4v15zM17 5H3a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm5-5H8a1 1 0 1 0 0 2h13v16a1 1 0 1 0 2 0V1a1 1 0 0 0-1-1"/>
   
     <path id="paragraph-small" d="M12 16V3H8C6.667 3 6.667 1 8 1h8c1.333 0 1.333 2 0 2h-2v13c0 1.333-2 1.333-2 0zm-5 0V8c0-1.333 2-1.333 2 0v8c0 1.333-2 1.333-2 0zM7 3H5a2 2 0 1 0 0 4h2V3zM5 1h3a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H5a4 4 0 1 1 0-8z"/>
   
@@ -780,15 +780,6 @@
   <path fill-rule="evenodd" d="M6 10c-1.479 0-2.758-.816-3.451-2.013h4.89c.021.003.04.013.061.013.024 0 .047-.01.071-.013h1.88C8.758 9.184 7.479 10 6 10m0-8c2.206 0 4 1.794 4 4 0 .352-.06.687-.146 1.013H7.736L5 3.919a.497.497 0 0 0-.706-.043.499.499 0 0 0-.044.705l2.151 2.432H2.146A3.947 3.947 0 0 1 2 6c0-2.206 1.794-4 4-4m0-2C2.691 0 0 2.691 0 6s2.691 6 6 6 6-2.691 6-6-2.691-6-6-6"/>
 </symbol><symbol id="wds-icons-dashboard" viewBox="0 0 24 24">
   <path fill-rule="evenodd" d="M12 21.818c-3.844 0-7.172-2.227-8.782-5.454h17.564c-1.61 3.227-4.938 5.454-8.782 5.454m0-19.636c5.413 0 9.818 4.405 9.818 9.818 0 .75-.093 1.478-.253 2.182h-6.779L9.652 5.967a1.092 1.092 0 0 0-1.85 1.157l4.412 7.058h-9.78A9.794 9.794 0 0 1 2.183 12c0-5.413 4.405-9.818 9.818-9.818M12 0C5.384 0 0 5.384 0 12s5.384 12 12 12 12-5.384 12-12S18.616 0 12 0"/>
-</symbol><symbol id="wds-icons-documents-small" viewBox="0 0 18 18">
-  
-  <use fill-rule="evenodd" xlink:href="#documents-small"/>
-</symbol><symbol id="wds-icons-documents-tiny" viewBox="0 0 12 12">
-  
-  <use fill-rule="evenodd" xlink:href="#documents-tiny"/>
-</symbol><symbol id="wds-icons-documents" viewBox="0 0 24 24">
-  
-  <use fill-rule="evenodd" xlink:href="#documents-a"/>
 </symbol><symbol id="wds-icons-download-small" viewBox="0 0 18 18">
   
   <use fill-rule="evenodd" xlink:href="#download-small"/>
@@ -1106,11 +1097,14 @@
 </symbol><symbol id="wds-icons-page" viewBox="0 0 24 24">
   <path d="M13 16v4.586L17.586 16H13zm-8 6h6v-7a1 1 0 0 1 1-1h7V2H5v20zm7 2H4a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v13.992c0 .043-.002.086-.007.128.001.001-.001.001-.001.001v.008a1.19 1.19 0 0 1-.023.119l-.001.002-.001.006-.001.002v.001a1 1 0 0 1-.254.444l-.002.002h-.001l-.002.002-8 8a.007.007 0 0 1-.003.003l-.003.003H12.7a.995.995 0 0 1-.435.252h-.004a.885.885 0 0 1-.136.027h-.004c-.001 0 .006.002-.004.001l-.003.001A1.088 1.088 0 0 1 12 24z"/>
 </symbol><symbol id="wds-icons-pages-small" viewBox="0 0 18 18">
-  <path d="M3 16h8V6H3v10zm9-12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10zm4-4a1 1 0 0 1 1 1v12a1 1 0 1 1-2 0V2H6a1 1 0 1 1 0-2h10z" fill-rule="evenodd"/>
+  
+  <use fill-rule="evenodd" xlink:href="#pages-small"/>
 </symbol><symbol id="wds-icons-pages-tiny" viewBox="0 0 12 12">
-  <path d="M3 10h3V5H3v5zm4-7a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5zm3-3a1 1 0 0 1 1 1v7a1 1 0 1 1-2 0V2H5a1 1 0 1 1 0-2h5z" fill-rule="evenodd"/>
+  
+  <use fill-rule="evenodd" xlink:href="#pages-tiny"/>
 </symbol><symbol id="wds-icons-pages" viewBox="0 0 24 24">
-  <path d="M4 22h12V7H4v15zM17 5H3a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm5-5H8a1 1 0 1 0 0 2h13v16a1 1 0 1 0 2 0V1a1 1 0 0 0-1-1"/>
+  
+  <use fill-rule="evenodd" xlink:href="#pages-a"/>
 </symbol><symbol id="wds-icons-paragraph-small" viewBox="0 0 18 18">
   
   <use xlink:href="#paragraph-small"/>
