@@ -28,7 +28,7 @@ plugins:
   - moveElemsAttrsToGroup
   - moveGroupAttrsToElems: true
   - collapseGroups
-  - convertPathData: true
+  - convertPathData: false
   - convertTransform
   - removeEmptyAttrs
   - removeEmptyContainers
