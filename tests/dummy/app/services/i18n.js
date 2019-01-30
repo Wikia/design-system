@@ -1,12 +1,14 @@
 import Service from '@ember/service';
 import i18n from 'npm:i18next';
 import fetch from 'fetch';
+import ENV from '../config/environment';
 
 export default Service.extend({
 	i18nextInstance: null,
+	rootURL: ENV.rootURL,
 
 	initialize(language) {
-		return fetch(`/assets/i18n/${language}/design-system.json`)
+		return fetch(`${this.rootURL}/assets/i18n/${language}/design-system.json`)
 			.then(data => data.json())
 			.then(translations => {
 				const i18nextInstance = i18n.createInstance().init({
