@@ -148,7 +148,8 @@
 		font-weight: bold;
 
 		@media #{$wds-breakpoint-medium-up} {
-			display: flex
+			display: flex;
+			height: 100%;
 		}
 
 		@media #{$wds-breakpoint-large-down} {
