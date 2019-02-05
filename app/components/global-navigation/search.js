@@ -92,7 +92,8 @@ export default Component.extend({
 					return response.json().then((data) => {
 						const suggestions = data.suggestions.map((suggestion) => {
 							return EmberObject.create({
-								title: suggestion
+								title: suggestion,
+								articleId: data.ids && data.ids[suggestion]
 							});
 						});
 
