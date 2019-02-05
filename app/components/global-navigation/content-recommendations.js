@@ -1,11 +1,22 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 import { computed } from '@ember/object';
-import { reads } from '@ember/object/computed';
 import fetch from 'fetch';
 
 const recircItemsCount = 50;
 const thumbDimension = 60;
+
+function createThumbnail(item, propName) {
+	if (item && window.Vignette) {
+		item[propName] = window.Vignette.getThumbURL(item[propName], {
+			mode: window.Vignette.mode.zoomCrop,
+			height: thumbDimension,
+			width: thumbDimension
+		});
+	}
+
+	return item;
+}
 
 export default Component.extend({
 	sponsoredContent: service(),
@@ -13,7 +24,9 @@ export default Component.extend({
 	classNames: ['wds-content-recommendations'],
 	tagName: 'div',
 	displayedItemsCount: 10,
-	sponsoredItem: reads('sponsoredContent.item'),
+	sponsoredItem: computed('sponsoredContent.item', function () {
+		return createThumbnail(this.sponsoredContent.item, 'thumbnailUrl');
+	}),
 	displayedItems: computed('model', 'displayedItemsCount', 'sponsoredItem', function () {
 		return this.model ? this.model.slice(0, this.displayedItemsCount) : [];
 	}),
@@ -54,17 +67,7 @@ export default Component.extend({
 				this.set('model',
 					items
 						.filter(item => item.thumbnail)
-						.map(item => {
-							if (window.Vignette) {
-								item.thumbnail = window.Vignette.getThumbURL(item.thumbnail, {
-									mode: window.Vignette.mode.zoomCrop,
-									height: thumbDimension,
-									width: thumbDimension
-								});
-							}
-
-							return item;
-						})
+						.map(item => createThumbnail(item, 'thumbnail'))
 				);
 
 				this.track && this.track({
