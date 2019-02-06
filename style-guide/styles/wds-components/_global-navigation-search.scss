@@ -184,6 +184,10 @@ $toggle-active-margin-right: 17px;
 		&__search {
 			flex: 1 1 auto;
 
+			&-dropdown {
+				flex: 1 1 auto;
+			}
+
 			&-container {
 				margin-left: 34px;
 			}
