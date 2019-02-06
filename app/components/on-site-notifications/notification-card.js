@@ -24,7 +24,7 @@ export default Component.extend(
 			const type = this.get('model.type');
 
 			if (this.isDiscussionReply(type)) {
-				return 'wds-icons-reply-small';
+				return 'wds-icons-comment-small';
 			} else if (this.isAnnouncement(type)) {
 				return 'wds-icons-flag';
 			} else {
