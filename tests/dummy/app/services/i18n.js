@@ -8,7 +8,7 @@ export default Service.extend({
 	rootURL: ENV.rootURL,
 
 	initialize(language) {
-		return fetch(`${this.rootURL}/assets/i18n/${language}/design-system.json`)
+		return fetch(`${this.rootURL}assets/i18n/${language}/design-system.json`)
 			.then(data => data.json())
 			.then(translations => {
 				const i18nextInstance = i18n.createInstance().init({
