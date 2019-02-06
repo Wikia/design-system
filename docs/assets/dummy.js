@@ -267,7 +267,7 @@ try{var e=window.Cookies.get("Geo")
 this.set("data",JSON.parse(e)||{})}catch(e){this.set("data",{})}}})
 e.default=t}),define("dummy/services/i18n",["exports","npm:i18next","fetch","dummy/config/environment"],function(e,t,n,a){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var o=Ember.Service.extend({i18nextInstance:null,rootURL:a.default.rootURL,initialize:function(e){var a=this
-return(0,n.default)("".concat(this.rootURL,"/assets/i18n/").concat(e,"/design-system.json")).then(function(e){return e.json()}).then(function(n){var o,i,s,l=t.default.createInstance().init({fallbackLng:"en",lng:e,lowerCaseLng:!0,defaultNS:"main",interpolation:{escapeValue:!1,prefix:"{",suffix:"}"},resources:(o={},i=e,s={"design-system":n},i in o?Object.defineProperty(o,i,{value:s,enumerable:!0,configurable:!0,writable:!0}):o[i]=s,o)})
+return(0,n.default)("".concat(this.rootURL,"assets/i18n/").concat(e,"/design-system.json")).then(function(e){return e.json()}).then(function(n){var o,i,s,l=t.default.createInstance().init({fallbackLng:"en",lng:e,lowerCaseLng:!0,defaultNS:"main",interpolation:{escapeValue:!1,prefix:"{",suffix:"}"},resources:(o={},i=e,s={"design-system":n},i in o?Object.defineProperty(o,i,{value:s,enumerable:!0,configurable:!0,writable:!0}):o[i]=s,o)})
 a.set("i18nextInstance",l)})},t:function(){var e
 return(e=this.i18nextInstance).t.apply(e,arguments)}})
 e.default=o}),define("dummy/services/logger",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
