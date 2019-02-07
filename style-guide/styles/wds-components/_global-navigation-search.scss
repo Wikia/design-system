@@ -7,10 +7,6 @@ $toggle-active-margin-right: 17px;
 	height: 100%;
 	justify-content: flex-end;
 
-	&-close-icon {
-		transform: rotate(45deg);
-	}
-
 	&-container {
 		height: 100%;
 		flex: 1;
@@ -84,10 +80,6 @@ $toggle-active-margin-right: 17px;
 		border-radius: 0;
 		display: none;
 		padding: 4px 10px;
-
-		&-icon {
-			transform: rotate(180deg);
-		}
 	}
 
 	&-close {

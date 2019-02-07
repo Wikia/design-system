@@ -54,7 +54,7 @@
         class="wds-global-navigation__search-close"
       >
         <Icon
-          @name="plus"
+          @name="close"
           @size="tiny"
           class="wds-global-navigation__search-close-icon"
         />
@@ -66,11 +66,7 @@
         class="wds-global-navigation__search-submit"
         data-tracking-label={{model.results.tracking-label}}
       >
-        <Icon
-          @name="arrow"
-          @size="small"
-          class="wds-global-navigation__search-submit-icon"
-        />
+        <Icon @name="arrow" @size="small" />
       </Button>
     </dropdown.toggle>
     {{#if suggestions}}
