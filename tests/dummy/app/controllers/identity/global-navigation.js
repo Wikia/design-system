@@ -16,6 +16,11 @@ export default Controller.extend({
 		console.info('Suggestion clicked', title);
 	},
 
+	onSearchSuggestionsImpression(suggestions, searchId) {
+		// eslint-disable-next-line no-console
+		console.info('Suggestions impression', suggestions, 'with searchId', searchId);
+	},
+
 	goToSearchResults(query) {
 		// eslint-disable-next-line no-console
 		console.info('goToSearchResults triggered', query);

@@ -6,6 +6,7 @@ import { run, scheduleOnce } from '@ember/runloop';
 import { inject as service } from '@ember/service';
 import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
 import fetch from 'fetch';
+import { v4 as uuid } from 'ember-uuid';
 
 export default Component.extend({
 	tagName: 'form',
@@ -34,6 +35,7 @@ export default Component.extend({
 	},
 	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
 	isEmptyQuery: empty('state.query'),
+	searchId: null,
 
 	init() {
 		this._super(...arguments);
@@ -93,7 +95,8 @@ export default Component.extend({
 						const suggestions = data.suggestions.map((suggestion) => {
 							return EmberObject.create({
 								title: suggestion,
-								articleId: data.ids && data.ids[suggestion]
+								articleId: data.ids && data.ids[suggestion],
+								query: data.query,
 							});
 						});
 
@@ -178,6 +181,8 @@ export default Component.extend({
 	 * @returns {void}
 	 */
 	setSearchSuggestionItems(suggestions = []) {
+		this.searchId = uuid();
+
 		if (this.isDestroyed) {
 			return;
 		}
@@ -199,6 +204,11 @@ export default Component.extend({
 					text: suggestion.title.replace(highlightRegexp, highlighted)
 				});
 			}
+		);
+
+		suggestions.length && this.onSearchSuggestionsImpression && this.onSearchSuggestionsImpression(
+			suggestions,
+			this.searchId
 		);
 
 		this.setProperties({
@@ -401,7 +411,7 @@ export default Component.extend({
 
 		onSearchSuggestionClick(index) {
 			if (this.onSearchSuggestionChosen) {
-				this.onSearchSuggestionChosen(this.suggestions[index]);
+				this.onSearchSuggestionChosen(this.suggestions[index], this.suggestions, this.searchId);
 				this.closeSearch();
 			}
 

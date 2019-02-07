@@ -173,6 +173,11 @@ export default Component.extend({
 			this.onSearchSuggestionChosen(suggestion);
 		},
 
+		onSearchSuggestionsImpression(suggestions, searchId) {
+			// eslint-disable-next-line no-console
+			console.info('Suggestions impression', suggestions, 'with searchId', searchId);
+		},
+
 		goToSearchResults(querystring) {
 			this.closeModal();
 			this.goToSearchResults(querystring)
