@@ -16,9 +16,9 @@ export default Controller.extend({
 		console.info('Suggestion clicked', title);
 	},
 
-	onSearchSuggestionsImpression(suggestions, searchId) {
+	onSearchSuggestionsImpression(suggestions, suggestionId) {
 		// eslint-disable-next-line no-console
-		console.info('Suggestions impression', suggestions, 'with searchId', searchId);
+		console.info('Suggestions impression', suggestions, 'with suggestionId', suggestionId);
 	},
 
 	goToSearchResults(query) {

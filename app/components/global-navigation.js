@@ -168,13 +168,13 @@ export default Component.extend({
 			];
 		},
 
-		onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, searchId) {
+		onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, suggestionId) {
 			this.closeModal();
-			this.onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, searchId);
+			this.onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, suggestionId);
 		},
 
-		onSearchSuggestionsImpression(suggestions, searchId) {
-			this.onSearchSuggestionsImpression(suggestions, searchId);
+		onSearchSuggestionsImpression(suggestions, suggestionId) {
+			this.onSearchSuggestionsImpression(suggestions, suggestionId);
 		},
 
 		goToSearchResults(querystring) {

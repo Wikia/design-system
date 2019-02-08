@@ -35,7 +35,7 @@ export default Component.extend({
 	},
 	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
 	isEmptyQuery: empty('state.query'),
-	searchId: null,
+	suggestionId: null,
 
 	init() {
 		this._super(...arguments);
@@ -181,7 +181,7 @@ export default Component.extend({
 	 * @returns {void}
 	 */
 	setSearchSuggestionItems(suggestions = []) {
-		this.searchId = uuid();
+		this.suggestionId = uuid();
 
 		if (this.isDestroyed) {
 			return;
@@ -208,7 +208,7 @@ export default Component.extend({
 
 		suggestions.length && this.onSearchSuggestionsImpression && this.onSearchSuggestionsImpression(
 			suggestions,
-			this.searchId
+			this.suggestionId
 		);
 
 		this.setProperties({
@@ -411,7 +411,7 @@ export default Component.extend({
 
 		onSearchSuggestionClick(index) {
 			if (this.onSearchSuggestionChosen) {
-				this.onSearchSuggestionChosen(this.suggestions[index], this.suggestions, this.searchId);
+				this.onSearchSuggestionChosen(this.suggestions[index], this.suggestions, this.suggestionId);
 				this.closeSearch();
 			}
 
