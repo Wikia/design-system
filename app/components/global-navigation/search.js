@@ -323,12 +323,14 @@ export default Component.extend({
 	},
 
 	resetSearchState() {
-		this.setProperties({
-			'state.query': '',
-			searchIsActive: false,
-			inputFocused: false,
-			suggestions: []
-		});
+		if (!this.isDestroyed ) {
+			this.setProperties({
+				'state.query': '',
+				searchIsActive: false,
+				inputFocused: false,
+				suggestions: []
+			});
+		}
 
 		run(() => {
 			scheduleOnce('afterRender', this, () => {
@@ -361,7 +363,9 @@ export default Component.extend({
 		} else if (keyCode === 13) {
 			if (this.selectedSuggestionIndex !== -1) {
 				this.onSearchSuggestionChosen(
-					this.suggestions[this.selectedSuggestionIndex]
+					this.suggestions[this.selectedSuggestionIndex],
+					this.suggestions,
+					this.suggestionId
 				);
 				this.inputField.blur();
 
