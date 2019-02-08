@@ -168,14 +168,13 @@ export default Component.extend({
 			];
 		},
 
-		onSearchSuggestionChosen(suggestion) {
+		onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, searchId) {
 			this.closeModal();
-			this.onSearchSuggestionChosen(suggestion);
+			this.onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, searchId);
 		},
 
 		onSearchSuggestionsImpression(suggestions, searchId) {
-			// eslint-disable-next-line no-console
-			console.info('Suggestions impression', suggestions, 'with searchId', searchId);
+			this.onSearchSuggestionsImpression(suggestions, searchId);
 		},
 
 		goToSearchResults(querystring) {
