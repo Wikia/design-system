@@ -43,7 +43,7 @@
       class="wds-global-navigation__search-clear"
     >
       <Icon
-        @name="circle-plus"
+        @name="add"
         class="wds-icon-small wds-global-navigation__search-clear-icon"
       />
     </Button>
@@ -52,10 +52,7 @@
       @onClick={{action "onCloseSearchClick"}}
       class="wds-global-navigation__search-close"
     >
-      <Icon
-        @name="plus"
-        @size="tiny"
-        class="wds-global-navigation__search-close-icon"
+      <Icon @name="close" @size="tiny"
       />
     </Button>
     <Button

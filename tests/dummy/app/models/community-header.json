@@ -41,7 +41,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       }
     ],
@@ -320,7 +320,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
@@ -362,7 +362,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-tiny"
         },
         "href": "/d/f"
       }
@@ -408,7 +408,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       }
     ],
@@ -686,7 +686,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
@@ -728,7 +728,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-tiny"
         },
         "href": "#"
       }
@@ -763,7 +763,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       }
     ],
@@ -1042,7 +1042,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
@@ -1084,7 +1084,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-tiny"
         },
         "href": "#"
       }
@@ -1134,7 +1134,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       },
       {
@@ -1424,7 +1424,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
@@ -1466,7 +1466,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-tiny"
         },
         "href": "#"
       }
@@ -1514,7 +1514,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-article-small"
+          "name": "wds-icons-page-small"
         }
       },
       {
@@ -1815,7 +1815,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-explore-tiny"
+          "name": "wds-icons-book-tiny"
         },
         "items": [
           {
@@ -1857,7 +1857,7 @@
         },
         "image-data": {
           "type": "wds-svg",
-          "name": "wds-icons-reply-small"
+          "name": "wds-icons-comment-tiny"
         },
         "href": "#"
       }
