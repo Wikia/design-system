@@ -1,27 +1,27 @@
 <div class="wds-global-navigation__search">
-  <div
-    class="wds-global-navigation__search-toggle"
-    role="searchbox"
-    {{action "openSearch"}}
-  >
-    <Icon
-      @name="magnifying-glass"
-      @size="small"
-      class="wds-global-navigation__search-toggle-icon"
-    />
-    <Icon
-      @name="magnifying-glass"
-      class="wds-global-navigation__search-toggle-icon"
-    />
-    <span class="wds-global-navigation__search-toggle-text">
-      {{i18n "global-navigation-search-placeholder-inactive" ns="design-system"}}
-    </span>
-  </div>
   <Dropdown
     @dropdownExpanded={{hasSuggestions}}
     @noChevron={{true}}
     class="wds-global-navigation__search-dropdown" as |dropdown|
   >
+    <div
+        class="wds-global-navigation__search-toggle"
+        role="searchbox"
+        {{action "openSearch"}}
+      >
+          <Icon 
+                  @name="magnifying-glass"
+                  @size="small"
+                  class="wds-global-navigation__search-toggle-icon"
+          />
+          <Icon
+                  @name="magnifying-glass"
+                  class="wds-global-navigation__search-toggle-icon"
+          />
+          <span class="wds-global-navigation__search-toggle-text">
+              {{i18n "global-navigation-search-placeholder-inactive" ns="design-system"}}
+          </span>
+  </div>
     <dropdown.toggle class="wds-global-navigation__search-input-wrapper">
       {{input
         value=state.query

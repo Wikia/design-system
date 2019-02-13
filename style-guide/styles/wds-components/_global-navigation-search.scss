@@ -75,6 +75,10 @@ $toggle-active-margin-right: 17px;
 		}
 	}
 
+	&-dropdown {
+		display: inline-flex;
+	}
+
 	&-submit {
 		@include button-theming($wds-fandom-color-aqua, $wds-color-white, $wds-color-white, 'darker');
 		border-radius: 0;
