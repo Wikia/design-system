@@ -18,9 +18,9 @@ export default {
 	icon: {
 		scope: '.wds-banner-notification__icon use',
 
-		isAlert: is('[*|href="#wds-icons-error-small"]'),
+		isAlert: is('[*|href="#wds-icons-alert-small"]'),
 		isWarning: is('[*|href="#wds-icons-alert-small"]'),
-		isSuccess: is('[*|href="#wds-icons-checkmark-circle-small"]'),
+		isSuccess: is('[*|href="#wds-icons-checkmark-small"]'),
 		isMessage: is('[*|href="#wds-icons-flag-small"]'),
 	},
 

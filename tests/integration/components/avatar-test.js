@@ -19,26 +19,22 @@ module('Integration | Component | avatar', function(hooks) {
 			Avatar.default.avatar.isPresent,
 			'Default Avatar is rendered',
 		);
-		assert.ok(
-			Avatar.default.border.isPresent,
-			'Default border is rendered',
-		);
-		assert.equal(
-			Avatar.default.border.title,
-			'test-alt',
-			'Border has a title attribute',
-		);
-		assert.equal(
-			Avatar.default.border.alt,
-			'test-alt',
-			'Border has an alt attribute',
-		);
 		assert.notOk(Avatar.image.isPresent, 'Image is not rendered');
 		assert.notOk(
 			Avatar.link.isPresent,
 			'No link is rendered if @href not passed',
 		);
 	});
+
+    test('it renders avatar\'s title', async function(assert) {
+        await render(hbs`<Avatar @alt='test-alt' />`);
+
+        assert.equal(
+            Avatar.title,
+            'test-alt',
+            'Title attribute is rendered',
+        );
+    });
 
 	test('it renders provided image', async function(assert) {
 		await render(hbs`
@@ -53,11 +49,6 @@ module('Integration | Component | avatar', function(hooks) {
 			'Image is rendered',
 		);
 		assert.equal(Avatar.image.alt, 'test-alt', 'Alt attribute is rendered');
-		assert.equal(
-			Avatar.image.title,
-			'test-alt',
-			'Alt attribute is rendered',
-		);
 	});
 
 	test('it renders as link to provided url', async function(assert) {
