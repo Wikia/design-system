@@ -65,9 +65,9 @@ export default Component.extend({
 			})
 			.then(items => {
 				this.set('model',
-					items
-						.filter(item => item.thumbnail)
-						.map(item => createThumbnail(item, 'thumbnail'))
+					items ? items.filter(item => item.thumbnail)
+							.map(item => createThumbnail(item, 'thumbnail'))
+						: []
 				);
 
 				this.track && this.track({
