@@ -6,6 +6,7 @@ import { run, scheduleOnce } from '@ember/runloop';
 import { inject as service } from '@ember/service';
 import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
 import fetch from 'fetch';
+import { v4 as uuid } from 'ember-uuid';
 
 export default Component.extend({
 	tagName: 'form',
@@ -34,6 +35,7 @@ export default Component.extend({
 	},
 	/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
 	isEmptyQuery: empty('state.query'),
+	suggestionId: null,
 
 	init() {
 		this._super(...arguments);
@@ -92,7 +94,9 @@ export default Component.extend({
 					return response.json().then((data) => {
 						const suggestions = data.suggestions.map((suggestion) => {
 							return EmberObject.create({
-								title: suggestion
+								title: suggestion,
+								articleId: data.ids && data.ids[suggestion],
+								query: data.query,
 							});
 						});
 
@@ -177,6 +181,8 @@ export default Component.extend({
 	 * @returns {void}
 	 */
 	setSearchSuggestionItems(suggestions = []) {
+		this.suggestionId = uuid();
+
 		if (this.isDestroyed) {
 			return;
 		}
@@ -198,6 +204,11 @@ export default Component.extend({
 					text: suggestion.title.replace(highlightRegexp, highlighted)
 				});
 			}
+		);
+
+		suggestions.length && this.onSearchSuggestionsImpression && this.onSearchSuggestionsImpression(
+			suggestions,
+			this.suggestionId
 		);
 
 		this.setProperties({
@@ -312,12 +323,14 @@ export default Component.extend({
 	},
 
 	resetSearchState() {
-		this.setProperties({
-			'state.query': '',
-			searchIsActive: false,
-			inputFocused: false,
-			suggestions: []
-		});
+		if (!this.isDestroyed ) {
+			this.setProperties({
+				'state.query': '',
+				searchIsActive: false,
+				inputFocused: false,
+				suggestions: []
+			});
+		}
 
 		run(() => {
 			scheduleOnce('afterRender', this, () => {
@@ -350,7 +363,9 @@ export default Component.extend({
 		} else if (keyCode === 13) {
 			if (this.selectedSuggestionIndex !== -1) {
 				this.onSearchSuggestionChosen(
-					this.suggestions[this.selectedSuggestionIndex]
+					this.suggestions[this.selectedSuggestionIndex],
+					this.suggestions,
+					this.suggestionId
 				);
 				this.inputField.blur();
 
@@ -400,7 +415,7 @@ export default Component.extend({
 
 		onSearchSuggestionClick(index) {
 			if (this.onSearchSuggestionChosen) {
-				this.onSearchSuggestionChosen(this.suggestions[index]);
+				this.onSearchSuggestionChosen(this.suggestions[index], this.suggestions, this.suggestionId);
 				this.closeSearch();
 			}
 

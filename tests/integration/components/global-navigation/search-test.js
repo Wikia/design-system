@@ -20,6 +20,7 @@ module('Integration | Component | global-navigation/search', function (hooks) {
 		}));
 
 		this.set('onSearchToggleClicked', () => { });
+		this.set('onSearchSuggestionsImpression', () => { });
 	});
 
 	test('search is present in GN', async function (assert) {
@@ -112,6 +113,7 @@ module('Integration | Component | global-navigation/search', function (hooks) {
 			model=model.search
 			goToSearchResults=goToSearchResults
 			onSearchSuggestionChosen=onSearchSuggestionChosen
+			onSearchSuggestionsImpression=onSearchSuggestionsImpression
 			onSearchToggleClicked=onSearchToggleClicked
 		}}`);
 
@@ -134,6 +136,7 @@ module('Integration | Component | global-navigation/search', function (hooks) {
 		{{global-navigation/search
 			model=model.search
 			onSearchSuggestionChosen=onSearchSuggestionChosen
+			onSearchSuggestionsImpression=onSearchSuggestionsImpression
 			onSearchToggleClicked=onSearchToggleClicked
 		}}`);
 

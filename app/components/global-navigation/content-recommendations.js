@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-import { computed } from '@ember/object';
+import { computed, set } from '@ember/object';
 import fetch from 'fetch';
 
 const recircItemsCount = 50;
@@ -8,11 +8,11 @@ const thumbDimension = 60;
 
 function createThumbnail(item, propName) {
 	if (item && window.Vignette) {
-		item[propName] = window.Vignette.getThumbURL(item[propName], {
+		set(item, propName, window.Vignette.getThumbURL(item[propName], {
 			mode: window.Vignette.mode.zoomCrop,
 			height: thumbDimension,
 			width: thumbDimension
-		});
+		}));
 	}
 
 	return item;
@@ -65,9 +65,9 @@ export default Component.extend({
 			})
 			.then(items => {
 				this.set('model',
-					items
-						.filter(item => item.thumbnail)
-						.map(item => createThumbnail(item, 'thumbnail'))
+					items ? items.filter(item => item.thumbnail)
+							.map(item => createThumbnail(item, 'thumbnail'))
+						: []
 				);
 
 				this.track && this.track({
