@@ -151,23 +151,6 @@ export default Component.extend({
 			});
 		},
 
-		onSearchQueryChanged(query) {
-			return [
-				{
-					text: `${query} One`,
-					uri: '#'
-				},
-				{
-					text: `${query} Two`,
-					uri: '#'
-				},
-				{
-					text: `${query} Three`,
-					uri: '#'
-				}
-			];
-		},
-
 		onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, suggestionId) {
 			this.closeModal();
 			this.onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, suggestionId);
@@ -187,7 +170,7 @@ export default Component.extend({
 		}
 	},
 
-	track(/* label */) {
+	track(/* trackingObj */) {
 		// Override if you want to have tracking
 	}
 });
