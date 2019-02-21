@@ -476,6 +476,10 @@
 				&__modal-control-user {
 					visibility: hidden;
 				}
+
+				&__content-bar-left {
+					z-index: 0;
+				}
 			}
 
 			.wds-community-bar__sitename {
