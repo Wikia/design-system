@@ -54,6 +54,9 @@ $toggle-active-margin-right: 17px;
 		padding: 0;
 		width: 0;
 
+		@media #{$wds-breakpoint-small-down} {
+			padding: 0;
+		}
 
 		&::-webkit-search-decoration,
 		&::-webkit-search-cancel-button {
@@ -138,14 +141,15 @@ $toggle-active-margin-right: 17px;
 		}
 	}
 
-	&-suggestions-list {
-		padding: 7px 0;
+	@media #{$wds-breakpoint-small-down} {
+		&-suggestions-list {
+			padding: 7px 0;
+		}
 	}
 
 	&-suggestion-highlight {
 		font-weight: bold;
 	}
-
 
 	&-toggle {
 		align-items: center;
