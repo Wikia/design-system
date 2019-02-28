@@ -109,6 +109,7 @@ $toggle-active-margin-right: 17px;
 		border-radius: 0;
 		box-shadow: 0 8px 12px 0 rgba(0, 0, 0, .3);
 		left: $toggle-active-margin-right + 18px;
+		padding: 0;
 		right: 0;
 		top: calc(100% + 1px);
 		transform: none;
@@ -135,6 +136,10 @@ $toggle-active-margin-right: 17px;
 				display: none;
 			}
 		}
+	}
+
+	&-suggestions-list {
+		padding: 7px 0;
 	}
 
 	&-suggestion-highlight {

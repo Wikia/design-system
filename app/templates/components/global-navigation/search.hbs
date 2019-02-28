@@ -71,7 +71,7 @@
     </dropdown.toggle>
     {{#if suggestions}}
       <dropdown.content @class="wds-global-navigation__search-suggestions">
-        <List @linked={{true}} @ellipsis={{true}}>
+        <List class="wds-global-navigation__search-suggestions-list" @linked={{true}} @ellipsis={{true}}>
           {{#each suggestions as |suggestion index|}}
             <li
               class="{{if (equal index selectedSuggestionIndex) "wds-is-selected"}} wds-global-navigation__search__suggestion"
