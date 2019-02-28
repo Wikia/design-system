@@ -139,11 +139,11 @@ $toggle-active-margin-right: 17px;
 				display: none;
 			}
 		}
-	}
 
-	@media #{$wds-breakpoint-small-down} {
-		&-suggestions-list {
-			padding: 7px 0;
+		@media #{$wds-breakpoint-small-down} {
+			.wds-list {
+				padding: 7px 0;
+			}
 		}
 	}
 
