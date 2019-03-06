@@ -70,7 +70,7 @@
       </Button>
     </dropdown.toggle>
     {{#if suggestions}}
-      <dropdown.content @class="wds-global-navigation__search-suggestions">
+      <dropdown.content @class="wds-global-navigation__search-suggestions wds-is-not-scrollable">
         <List @linked={{true}} @ellipsis={{true}}>
           {{#each suggestions as |suggestion index|}}
             <li
