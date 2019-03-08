@@ -1,8 +1,4 @@
-<Dropdown
-  @dropdownExpanded={{hasSuggestions}}
-  @noChevron={{true}}
-  class="wds-global-navigation__search" as |dropdown|
->
+<div class="wds-global-navigation__search">
   <div
     class="wds-global-navigation__search-toggle"
     role="searchbox"
@@ -21,73 +17,78 @@
       {{i18n "global-navigation-search-placeholder-inactive" ns="design-system"}}
     </span>
   </div>
-  <dropdown.toggle class="wds-global-navigation__search-input-wrapper">
-    {{input
-      value=state.query
-      class="wds-global-navigation__search-input"
-      name=model.results.param-name
-      placeholder=(i18n
-        model.placeholder-active.key
-        ns="design-system"
-        sitename=model.placeholder-active.params.sitename.value
-      )
-      type="search"
-      autocomplete="off"
-      input=(action "onQueryChanged")
-      focusIn=(action "onFocusIn")
-      focusOut=(action "onFocusOut")
-    }}
-    <Button
-      @text={{true}}
-      @onClick={{action "onClearSearchClick"}}
-      class="wds-global-navigation__search-clear"
-    >
-      <Icon
-        @name="add"
-        class="wds-icon-small wds-global-navigation__search-clear-icon"
-      />
-    </Button>
-    <Button
-      @text={{true}}
-      @onClick={{action "onCloseSearchClick"}}
-      class="wds-global-navigation__search-close"
-    >
-      <Icon @name="close" @size="tiny"
-      />
-    </Button>
-    <Button
-      @disabled={{isEmptyQuery}}
-      @onClick={{action "submit"}}
-      type="submit"
-      class="wds-global-navigation__search-submit"
-      data-tracking-label={{model.results.tracking-label}}
-    >
-      <Icon
-        @name="arrow"
-        @size="small"
-        class="wds-global-navigation__search-submit-icon"
-      />
-    </Button>
-  </dropdown.toggle>
-  {{#if suggestions}}
-    <dropdown.content @class="wds-global-navigation__search-suggestions">
-      <List @linked={{true}} @ellipsis={{true}}>
-        {{#each suggestions as |suggestion index|}}
-          <li
-            class="{{if (equal index selectedSuggestionIndex) "wds-is-selected"}} wds-global-navigation__search__suggestion"
-            onmouseenter={{action (mut selectedSuggestionIndex) index}}
-            {{action "onSearchSuggestionClick" index}}
-          >
-            <a
-              href={{suggestion.uri}}
-              class="wds-global-navigation__dropdown-link"
-              data-tracking-label={{model.suggestions.tracking-label}}
+  <Dropdown
+    @dropdownExpanded={{hasSuggestions}}
+    @noChevron={{true}}
+    class="wds-global-navigation__search-dropdown" as |dropdown|
+  >
+    <dropdown.toggle class="wds-global-navigation__search-input-wrapper">
+      {{input
+        value=state.query
+        class="wds-global-navigation__search-input"
+        name=model.results.param-name
+        placeholder=(i18n
+          model.placeholder-active.key
+          ns="design-system"
+          sitename=model.placeholder-active.params.sitename.value
+        )
+        type="search"
+        autocomplete="off"
+        input=(action "onQueryChanged")
+        focusIn=(action "onFocusIn")
+        focusOut=(action "onFocusOut")
+      }}
+      <Button
+        @text={{true}}
+        @onClick={{action "onClearSearchClick"}}
+        class="wds-global-navigation__search-clear"
+      >
+        <Icon
+          @name="add"
+          class="wds-icon-small wds-global-navigation__search-clear-icon"
+        />
+      </Button>
+      <Button
+        @text={{true}}
+        @onClick={{action "onCloseSearchClick"}}
+        class="wds-global-navigation__search-close"
+      >
+        <Icon
+          @name="close"
+          @size="tiny"
+          class="wds-global-navigation__search-close-icon"
+        />
+      </Button>
+      <Button
+        @disabled={{isEmptyQuery}}
+        @onClick={{action "submit"}}
+        type="submit"
+        class="wds-global-navigation__search-submit"
+        data-tracking-label={{model.results.tracking-label}}
+      >
+        <Icon @name="arrow" @size="small" class="wds-global-navigation__search-submit-icon" />
+      </Button>
+    </dropdown.toggle>
+    {{#if suggestions}}
+      <dropdown.content @class="wds-global-navigation__search-suggestions wds-is-not-scrollable">
+        <List @linked={{true}} @ellipsis={{true}}>
+          {{#each suggestions as |suggestion index|}}
+            <li
+              class="{{if (equal index selectedSuggestionIndex) "wds-is-selected"}} wds-global-navigation__search__suggestion"
+              onmouseenter={{action (mut selectedSuggestionIndex) index}}
+              {{action "onSearchSuggestionClick" index}}
             >
-              {{{suggestion.text}}}
-            </a>
-          </li>
-        {{/each}}
-      </List>
-    </dropdown.content>
-  {{/if}}
-</Dropdown>
+              <a
+                href={{suggestion.uri}}
+                class="wds-global-navigation__dropdown-link"
+                data-tracking-label={{model.suggestions.tracking-label}}
+              >
+                {{{suggestion.text}}}
+              </a>
+            </li>
+          {{/each}}
+        </List>
+      </dropdown.content>
+    {{/if}}
+  </Dropdown>
+</div>

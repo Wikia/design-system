@@ -78,7 +78,7 @@
 <section>
   <h2 id="dropdowns-default-variant">Default which can flip (reversible dropdown)</h2>
   <p>Default dropdown that flips (drops up) when it's near the bottom of the viewport.</p>
-  <Demo @name="dropdown">
+  <Demo @name="dropdown-flip">
     <Dropdown @canFlip={{true}} as |dropdown|>
       <dropdown.toggle
         class="push-dropdown-down"
@@ -353,6 +353,55 @@
               </List>
             </dropdown.content>
           </Dropdown>
+        </List>
+      </dropdown.content>
+    </Dropdown>
+  </Demo>
+</section>
+<section>
+  <h2>Clickable dropdown</h2>
+  <p>
+    Use <code class="format-code">isClickable</code> property to make dropdown clickable
+  </p>
+  <Demo @name="dropdown-clickable">
+    <Dropdown @isClickable={{true}} as |dropdown|>
+      <dropdown.toggle
+        class="push-dropdown-down"
+        @text="Clickable dropdown"
+      />
+      <dropdown.content>
+        <List>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+          <li>List item 4</li>
+          <li>List item 5</li>
+          <li>List item 6</li>
+          <li>List item 7</li>
+          <li>List item 8</li>
+          <li>List item 9</li>
+          <li>List item 10</li>
+        </List>
+      </dropdown.content>
+    </Dropdown>
+  </Demo>
+</section>
+<section>
+  <h2>Not hoverable dropdown</h2>
+  <p>
+    Set <code class="format-code">isHoverable</code> property to false to make dropdown not
+    hoverable.
+    Then it need to be opened manually with <code class="format-code">wds-is-active</code> class.
+  </p>
+  <Demo @name="dropdown-not-hoverable">
+    <Dropdown @isHoverable={{false}} as |dropdown|>
+      <dropdown.toggle
+        class="push-dropdown-down"
+        @text="Not hoverable dropdown"
+      />
+      <dropdown.content>
+        <List>
+          <li>List item 1</li>
         </List>
       </dropdown.content>
     </Dropdown>

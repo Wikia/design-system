@@ -151,30 +151,18 @@ export default Component.extend({
 			});
 		},
 
-		onSearchQueryChanged(query) {
-			return [
-				{
-					text: `${query} One`,
-					uri: '#'
-				},
-				{
-					text: `${query} Two`,
-					uri: '#'
-				},
-				{
-					text: `${query} Three`,
-					uri: '#'
-				}
-			];
-		},
-
 		onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, suggestionId) {
 			this.closeModal();
-			this.onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, suggestionId);
+
+			if (this.onSearchSuggestionChosen) {
+				this.onSearchSuggestionChosen(clickedSuggestion, displayedSuggestions, suggestionId);
+			}
 		},
 
 		onSearchSuggestionsImpression(suggestions, suggestionId) {
-			this.onSearchSuggestionsImpression(suggestions, suggestionId);
+			if (this.onSearchSuggestionsImpression) {
+				this.onSearchSuggestionsImpression(suggestions, suggestionId);
+			}
 		},
 
 		goToSearchResults(querystring) {
@@ -187,7 +175,7 @@ export default Component.extend({
 		}
 	},
 
-	track(/* label */) {
+	track(/* trackingObj */) {
 		// Override if you want to have tracking
 	}
 });

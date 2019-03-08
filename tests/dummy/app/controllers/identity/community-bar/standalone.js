@@ -19,5 +19,15 @@ export default Controller.extend({
 	goToSearchResults(query) {
 		// eslint-disable-next-line no-console
 		console.info('goToSearchResults triggered', query);
-	}
+	},
+
+	onModalOpen(modalType) {
+		// eslint-disable-next-line no-console
+		console.info('Modal opened', modalType);
+	},
+
+	onSearchSuggestionsImpression(suggestions, suggestionId) {
+		// eslint-disable-next-line no-console
+		console.info('Suggestions impression', suggestions, 'with suggestionId', suggestionId);
+	},
 });
