@@ -1,4 +1,4 @@
-import { equal } from '@ember/object/computed';
+import { equal, oneWay } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
 import { computed } from '@ember/object';
@@ -20,7 +20,8 @@ export default Component.extend({
 		'searchIsActive:wds-search-is-active',
 		'model.partner-slot:wds-has-partner-slot',
 		'currentModal:wds-is-modal-opened',
-		'communityBarIsActive:wds-is-community-bar-in'
+		'communityBarIsActive:wds-is-community-bar-in',
+		'isWikiaOrg:wds-is-wikia-org',
 	],
 
 	communityBarElement: null,
@@ -30,6 +31,8 @@ export default Component.extend({
 
 	isSearchModalOpen: equal('currentModal', 'search'),
 	isUserModalOpen: equal('currentModal', 'user'),
+
+	isWikiaOrg: oneWay('model.is-wikia-org'),
 
 	redirectUrl: computed('fastboot.isFastBoot', 'router.currentURL', function() {
 		if (this.get('fastboot.isFastBoot')) {
