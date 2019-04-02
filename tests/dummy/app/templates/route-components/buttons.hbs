@@ -60,7 +60,7 @@
 </section>
 
 <section>
-  <h2 id="secondary">Secondary buttons</h2>
+  <h2 id="secondary">Secondary buttons (on light backgrounds)</h2>
   <p>
     Adding class <code class="format-code">.wds-is-secondary</code> changes the button"s looks.
     It is used to create a button that draws less user"s attention.
@@ -73,6 +73,24 @@
     </Button>
     <Button @secondary={{true}} @disabled={{true}}>Secondary disabled</Button>
   </Demo>
+</section>
+
+<section>
+  <h2 id="secondary-dark-background">Secondary buttons (on dark backgrounds)</h2>
+  <p>
+    Adding class <code class="format-code">.wds-is-light</code> changes the default seacondary button's colors to lighter.
+    It is used on dark backgrounds.
+  </p>
+  <div class="">
+    <Demo @name="buttons-secondary-light" class="dark-background">
+      <Button @secondary={{true}} @light={{true}}>Secondary button</Button>
+      <Button @secondary={{true}} @light={{true}}>
+        <Icon @name="fandom" @size="small" />
+        <span>Secondary button</span>
+      </Button>
+      <Button @secondary={{true}} @light={{true}} @disabled={{true}}>Secondary disabled</Button>
+    </Demo>
+  </div>
 </section>
 
 <section>
@@ -136,7 +154,7 @@
 </section>
 
 <section>
-  <h2 id="text">Text buttons</h2>
+  <h2 id="text">Text buttons (on light backgrounds)</h2>
   <p>
     These buttons are denoted with <code class="format-code">.wds-is-text</code> class.
     They are the least obtrusive.
@@ -149,6 +167,22 @@
       <span>Text button</span>
     </Button>
     <Button @text={{true}} @disabled={{true}}>Text disabled</Button>
+  </Demo>
+</section>
+
+<section>
+  <h2 id="secondary-dark-background">Text buttons (on dark backgrounds)</h2>
+  <p>
+    Adding class <code class="format-code">.wds-is-light</code> changes the default text button's colors to lighter.
+    It is used on dark backgrounds.
+  </p>
+  <Demo @name="text-buttons" class="dark-background">
+    <Button @text={{true}} @light={{true}}>Text button</Button>
+    <Button @text={{true}} @light={{true}}>
+      <Icon @name="fandom" @size="small" />
+      <span>Text button</span>
+    </Button>
+    <Button @text={{true}} @light={{true}} @disabled={{true}}>Text disabled</Button>
   </Demo>
 </section>
 
