@@ -1,0 +1,22 @@
+{{#if @model.header}}
+  <h2 class="wds-global-footer-wikia-org__header">
+    <a href={{@model.header.href}} title={{@model.header.title.value}}>
+      {{svg
+        @model.header.image-data.name
+        class="wds-global-footer__header-logo"
+      }}
+    </a>
+  </h2>
+{{/if}}
+<ul class="wds-global-footer-wikia-org__links">
+  <li class="wds-global-footer-wikia-org__link">
+    {{i18n 'global-footer-site-overview-link-wikia-inc' ns="design-system" year=year}}
+  </li>
+  {{#each @model.site_overview.links as |link|}}
+    <li class="wds-global-footer-wikia-org__link">
+      <a href="{{link.href}}" data-tracking-label="{{link.tracking_label}}">
+        {{i18n link.title.key ns="design-system"}}
+      </a>
+    </li>
+  {{/each}}
+</ul>

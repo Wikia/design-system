@@ -1,9 +1,8 @@
 import Component from '@ember/component';
-import track from '../utils/wds-track';
+import { oneWay } from '@ember/object/computed';
 
 export default Component.extend({
-	tagName: 'footer',
-	classNames: 'wds-global-footer',
+	isWikiaOrg: oneWay('model.is-wikia-org'),
 
 	click(event) {
 		track(event, this.element, this.track, 'click', 'footer');
