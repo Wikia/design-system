@@ -1,57 +1,59 @@
-{{#if @model.header}}
-  <h2 class="wds-global-footer__header">
-    <a href={{@model.header.href}} title={{@model.header.title.value}}>
-      {{svg
-        @model.header.image-data.name
-        class="wds-global-footer__header-logo"
+<footer class="wds-global-footer">
+  {{#if @model.header}}
+    <h2 class="wds-global-footer__header">
+      <a href={{@model.header.href}} title={{@model.header.title.value}}>
+        {{svg
+          @model.header.image-data.name
+          class="wds-global-footer__header-logo"
+        }}
+      </a>
+    </h2>
+  {{/if}}
+  <div class="wds-global-footer__main">
+    <div class="wds-global-footer__fandom-sections">
+      {{global-footer/section
+        model=@model.fandom_overview
+        name="fandom-overview"
+        parentName="fandom"
       }}
-    </a>
-  </h2>
-{{/if}}
-<div class="wds-global-footer__main">
-  <div class="wds-global-footer__fandom-sections">
-    {{global-footer/section
-      model=@model.fandom_overview
-      name="fandom-overview"
-      parentName="fandom"
-    }}
-    {{global-footer/section
-      model=@model.follow_us
-      name="follow-us"
-      parentName="fandom"
-    }}
+      {{global-footer/section
+        model=@model.follow_us
+        name="follow-us"
+        parentName="fandom"
+      }}
+    </div>
+    <div class="wds-global-footer__wikia-sections">
+      {{global-footer/section
+        model=@model.company_overview
+        name="company-overview"
+        parentName="wikia"
+      }}
+      {{global-footer/section
+        model=@model.site_overview
+        name="site-overview"
+        parentName="wikia"
+      }}
+      {{global-footer/section
+        model=@model.community
+        name="community"
+        parentName="wikia"
+      }}
+      {{global-footer/section
+        model=@model.create_wiki
+        name="create-wiki"
+        parentName="wikia"
+      }}
+      {{global-footer/section
+        model=@model.community_apps
+        name="community-apps"
+        parentName="wikia"
+      }}
+      {{global-footer/section
+        model=@model.advertise
+        name="advertise"
+        parentName="wikia"
+      }}
+    </div>
   </div>
-  <div class="wds-global-footer__wikia-sections">
-    {{global-footer/section
-      model=@model.company_overview
-      name="company-overview"
-      parentName="wikia"
-    }}
-    {{global-footer/section
-      model=@model.site_overview
-      name="site-overview"
-      parentName="wikia"
-    }}
-    {{global-footer/section
-      model=@model.community
-      name="community"
-      parentName="wikia"
-    }}
-    {{global-footer/section
-      model=@model.create_wiki
-      name="create-wiki"
-      parentName="wikia"
-    }}
-    {{global-footer/section
-      model=@model.community_apps
-      name="community-apps"
-      parentName="wikia"
-    }}
-    {{global-footer/section
-      model=@model.advertise
-      name="advertise"
-      parentName="wikia"
-    }}
-  </div>
-</div>
-{{global-footer/bottom-bar model=@model}}
+  {{global-footer/bottom-bar model=@model}}
+</footer>

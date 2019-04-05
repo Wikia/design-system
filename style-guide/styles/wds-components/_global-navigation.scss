@@ -530,6 +530,26 @@
 			}
 		}
 
+		.wds-notifications__mark-all-as-read,
+		.wds-user-modal__sign-out-container .wds-sign-out__button {
+			color: $wds-color-light-blue;
+		}
+
+		.wds-dropdown {
+			.wds-dropdown__toggle-chevron {
+				fill: $wds-color-slate-gray;
+			}
+		}
+
+		.wds-is-unread .wds-notification-card__icon-wrapper .wds-icon {
+			fill: $wds-color-light-blue;
+		}
+
+		.wds-global-navigation__notifications-counter {
+			background-color: $wds-color-light-blue;
+			color: $wds-color-white;
+		}
+
 		> * {
 			// This is applied to all GN children to make up for a 6px top border
 			margin: -3px 0 -3px;
