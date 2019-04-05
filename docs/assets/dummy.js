@@ -64,7 +64,7 @@ this.set("isFlipped",e.bottom>(0,t.default)().height)}this.mouseEnter&&this.mous
 e.default=a}),define("dummy/components/font-weight-line",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Ember.Component.extend({tagName:""})
 e.default=t}),define("dummy/components/global-footer-wikia-org",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-var t=Ember.Component.extend({tagName:"footer",classNames:"wds-global-footer-wikia-org",year:(new Date).getFullYear()})
+var t=Ember.Component.extend({tagName:"footer",classNames:"wds-global-footer-wikia-org",year:Ember.computed(function(){return(new Date).getFullYear()})})
 e.default=t}),define("dummy/components/global-footer",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Ember.Component.extend({isWikiaOrg:Ember.computed.oneWay("model.is-wikia-org"),click:function(e){track(e,this.element,this.track,"click","footer")},track:function(){}})
 e.default=t}),define("dummy/components/global-navigation",["exports","@wikia/ember-fandom/utils/url","dummy/utils/wds-track"],function(e,t,n){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
