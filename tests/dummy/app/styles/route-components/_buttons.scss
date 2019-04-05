@@ -21,3 +21,8 @@
 		@include button-theming(white, blue);
 	}
 }
+
+.dark-background .component-demo__rendered {
+	background: $wds-fandom-color-black;
+	padding: 20px;
+}
