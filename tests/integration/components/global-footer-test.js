@@ -24,7 +24,6 @@ module('Integration | Component | global-footer', function(hooks) {
 		);
 	});
 
-
 	test('it renders', async function(assert) {
 		this.set('model', model['with-hubs']);
 		await render(hbs`
