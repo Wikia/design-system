@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label {
+    node {
       label 'qa-executors'
       customWorkspace "/var/lib/jenkins/workspace/design-system-pr-${BRANCH_NAME}"
     }
