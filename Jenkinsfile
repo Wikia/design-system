@@ -1,6 +1,7 @@
 pipeline {
   agent {
     label 'qa-executors'
+    customWorkspace "/var/lib/jenkins/workspace/${BRANCH_NAME}"
   }
 
   stages {
