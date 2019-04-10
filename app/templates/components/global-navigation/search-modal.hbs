@@ -17,13 +17,17 @@
         inSearchModal=true
         track=(action track)
       }}
-      {{global-navigation/main-navigation model=navigationModel}}
+      {{#unless isWikiaOrg}}
+        {{global-navigation/main-navigation model=navigationModel}}
+      {{/unless}}
     </div>
-    {{#if canShowContentRecommendations}}
-      {{global-navigation/content-recommendations
-        track=(action track)
-        url=contentRecommendationsUrl
-      }}
-    {{/if}}
+    {{#unless isWikiaOrg}}
+      {{#if canShowContentRecommendations}}
+        {{global-navigation/content-recommendations
+          track=(action track)
+          url=contentRecommendationsUrl
+        }}
+      {{/if}}
+    {{/unless}}
   </div>
 {{/if}}
