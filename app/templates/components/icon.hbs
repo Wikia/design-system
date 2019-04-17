@@ -1,7 +1,7 @@
 <svg
   class={{classnames "wds-icon" this.sizeClassName (if @chevron "wds-menu-chevron")}}
   ...attributes
-  {{action (optional @onClick)}}
+  {{action (optional @onClick) preventDefault=(if @onClick true false)}}
 >
   <use xlink:href="#{{this.iconName}}"></use>
 </svg>
