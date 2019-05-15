@@ -14,3 +14,10 @@
   	</span>
   {{/if}}
 </div>
+
+{{#if model.pixelContent}}
+  <TrackingPixel
+    @pixelContent={{model.pixelContent}}
+    @pixelType={{model.pixelType}}
+  />
+{{/if}}
