@@ -33,8 +33,8 @@ export default Component.extend({
 	}),
 	// eslint-disable-next-line ember/no-observers
 	sponsoredItemObserver: observer('sponsoredItem', 'componentDisplayed', function () {
-		if (this.sponsoredItem && this.componentDisplayed) {
-			this.track && this.track({
+		if (this.sponsoredItem && this.componentDisplayed && this.track) {
+			this.track({
 				action: 'impression',
 				category: 'recirculation',
 				label: this.sponsoredItem.url,
