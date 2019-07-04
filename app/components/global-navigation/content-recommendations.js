@@ -24,14 +24,15 @@ export default Component.extend({
 	classNames: ['wds-content-recommendations'],
 	tagName: 'div',
 	displayedItemsCount: 10,
+	componentDisplayed: false,
 	sponsoredItem: computed('sponsoredContent.item', function () {
 		return createThumbnail(this.sponsoredContent.item, 'thumbnailUrl');
 	}),
 	displayedItems: computed('model', 'displayedItemsCount', 'sponsoredItem', function () {
 		return this.model ? this.model.slice(0, this.displayedItemsCount) : [];
 	}),
-	sponsoredItemObserver: observer('sponsoredItem', function () {
-		if (this.sponsoredItem) {
+	sponsoredItemObserver: observer('sponsoredItem', 'componentDisplayed', function () {
+		if (this.sponsoredItem && this.componentDisplayed) {
 			this.track && this.track({
 				action: 'impression',
 				category: 'recirculation',
@@ -48,6 +49,7 @@ export default Component.extend({
 	didInsertElement() {
 		this.fetchData();
 		this.sponsoredContent.fetchData();
+		this.set('componentDisplayed', true);
 		this.element.addEventListener('scroll', this.onScroll);
 	},
 
