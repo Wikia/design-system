@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-import { computed, set } from '@ember/object';
+import { computed, set, observer } from '@ember/object';
 import fetch from 'fetch';
 
 const recircItemsCount = 50;
@@ -29,6 +29,15 @@ export default Component.extend({
 	}),
 	displayedItems: computed('model', 'displayedItemsCount', 'sponsoredItem', function () {
 		return this.model ? this.model.slice(0, this.displayedItemsCount) : [];
+	}),
+	sponsoredItemObserver: observer('sponsoredItem', function () {
+		if (this.sponsoredItem) {
+			this.track && this.track({
+				action: 'impression',
+				category: 'recirculation',
+				label: this.sponsoredItem.url,
+			});
+		}
 	}),
 
 	init() {
