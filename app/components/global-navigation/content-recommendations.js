@@ -31,6 +31,7 @@ export default Component.extend({
 	displayedItems: computed('model', 'displayedItemsCount', 'sponsoredItem', function () {
 		return this.model ? this.model.slice(0, this.displayedItemsCount) : [];
 	}),
+	// eslint-disable-next-line ember/no-observers
 	sponsoredItemObserver: observer('sponsoredItem', 'componentDisplayed', function () {
 		if (this.sponsoredItem && this.componentDisplayed) {
 			this.track && this.track({
