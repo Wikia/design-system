@@ -37,7 +37,7 @@ export default Component.extend({
 			this.track({
 				action: 'impression',
 				category: 'recirculation',
-				label: this.sponsoredItem.url,
+				label: 'search::' + this.sponsoredItem.url,
 			});
 		}
 	}),

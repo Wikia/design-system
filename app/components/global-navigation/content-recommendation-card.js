@@ -15,7 +15,7 @@ export default Component.extend({
 			},
 			{
 				action: 'select',
-				label: this.model.url
+				label: 'search::' + this.model.url
 			}
 		];
 
