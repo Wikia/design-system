@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-import { computed, set } from '@ember/object';
+import { computed, set, observer } from '@ember/object';
 import fetch from 'fetch';
 
 const recircItemsCount = 50;
@@ -24,11 +24,22 @@ export default Component.extend({
 	classNames: ['wds-content-recommendations'],
 	tagName: 'div',
 	displayedItemsCount: 10,
+	componentDisplayed: false,
 	sponsoredItem: computed('sponsoredContent.item', function () {
 		return createThumbnail(this.sponsoredContent.item, 'thumbnailUrl');
 	}),
 	displayedItems: computed('model', 'displayedItemsCount', 'sponsoredItem', function () {
 		return this.model ? this.model.slice(0, this.displayedItemsCount) : [];
+	}),
+	// eslint-disable-next-line ember/no-observers
+	sponsoredItemObserver: observer('sponsoredItem', 'componentDisplayed', function () {
+		if (this.sponsoredItem && this.componentDisplayed && this.track) {
+			this.track({
+				action: 'impression',
+				category: 'recirculation',
+				label: 'search::' + this.sponsoredItem.url,
+			});
+		}
 	}),
 
 	init() {
@@ -39,6 +50,7 @@ export default Component.extend({
 	didInsertElement() {
 		this.fetchData();
 		this.sponsoredContent.fetchData();
+		this.set('componentDisplayed', true);
 		this.element.addEventListener('scroll', this.onScroll);
 	},
 
