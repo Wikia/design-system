@@ -23,7 +23,7 @@ export default Component.extend(
 		iconName: computed('model.type', function () {
 			const type = this.get('model.type');
 
-			if (this.isDiscussionReply(type)) {
+			if (this.isCommentNotifictionType(type)) {
 				return 'wds-icons-comment-small';
 			} else if (this.isAnnouncement(type)) {
 				return 'wds-icons-flag-small';
@@ -68,6 +68,10 @@ export default Component.extend(
 				return this.getPostUpvoteMessageBody(this.model);
 			} else if (this.isDiscussionReplyUpvote(type)) {
 				return this.getReplyUpvoteMessageBody(this.model);
+			} else if (this.isPostAtMention(type)) {
+				return this.getPostAtMentionMessageBody(this.model);
+			} else if (this.isThreadAtMention(type)) {
+				return this.getThreadAtMentionMessageBody(this.model);
 			} else {
 				return null;
 			}
@@ -143,6 +147,10 @@ export default Component.extend(
 			}
 		},
 
+		isCommentNotifictionType(type) {
+			return this.isDiscussionReply(type) || this.isPostAtMention(type) || this.isThreadAtMention(type);
+		},
+
 		isDiscussionReply(type) {
 			return type === notificationTypes.discussionReply;
 		},
@@ -157,6 +165,14 @@ export default Component.extend(
 
 		isAnnouncement(type) {
 			return type === notificationTypes.announcement;
+		},
+
+		isPostAtMention(type) {
+			return type === notificationTypes.postAtMention;
+		},
+
+		isThreadAtMention(type) {
+			return type === notificationTypes.threadAtMention;
 		},
 
 		getPostUpvoteMessageBody(model) {
@@ -251,6 +267,20 @@ export default Component.extend(
 			} else {
 				return this.getTranslatedMessage('notifications-reply-upvote-single-user-no-title');
 			}
+		},
+
+		getPostAtMentionMessageBody(model) {
+			return this.getTranslatedMessage('notifications-reply-at-mention', {
+				postTitle: this.postTitleMarkup,
+				mentioner: model.get('latestActors.0.name')
+			});
+		},
+
+		getThreadAtMentionMessageBody(model) {
+			return this.getTranslatedMessage('notifications-post-at-mention', {
+				postTitle: this.postTitleMarkup,
+				mentioner: model.get('latestActors.0.name')
+			});
 		},
 
 		getTranslatedMessage(key, context) {

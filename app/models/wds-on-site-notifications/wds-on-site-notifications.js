@@ -19,13 +19,25 @@ export default EmberObject.extend({
 		this.data = [];
 	},
 
+	getContentTypesQueryParams() {
+		const supportedContentTypes = [
+			'discussion-upvote',
+			'discussion-post',
+			'announcement-target',
+			'post-at-mention',
+			'thread-at-mention'
+		];
+
+		return `contentType=${supportedContentTypes.join('&contentType=')}`;
+	},
+
 	getNewestNotificationISODate() {
 		return convertToIsoString(this.data[0].timestamp);
 	},
 
 	loadFirstPageReturningNextPageLink() {
 		return this.fetch
-			.fetchFromOnSiteNotifications('/notifications?contentType=discussion-upvote&contentType=discussion-post&contentType=announcement-target')
+			.fetchFromOnSiteNotifications(`/notifications?${this.getContentTypesQueryParams()}`)
 			.then((data) => {
 				this.addNotifications(data.notifications);
 				return this.getNext(data);
@@ -85,7 +97,7 @@ export default EmberObject.extend({
 
 	loadUnreadNotificationCount() {
 		return this.fetch
-			.fetchFromOnSiteNotifications('/notifications/unread-count?contentType=discussion-upvote&contentType=discussion-post&contentType=announcement-target')
+			.fetchFromOnSiteNotifications(`/notifications/unread-count?${this.getContentTypesQueryParams()}`)
 			.then((result) => {
 				this.set('unreadCount', result.unreadCount);
 			}).catch((error) => {

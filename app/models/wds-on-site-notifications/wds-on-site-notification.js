@@ -66,6 +66,10 @@ export default EmberObject.extend({
 			return notificationTypes.discussionReply;
 		} else if (apiData.type === 'announcement-notification') {
 			return notificationTypes.announcement;
+		} else if (apiData.type === 'post-at-mention-notification') {
+			return notificationTypes.postAtMention;
+		} else if (apiData.type === 'thread-at-mention-notification') {
+			return notificationTypes.threadAtMention;
 		}
 	},
 
