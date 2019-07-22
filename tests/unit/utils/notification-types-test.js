@@ -6,6 +6,7 @@ module('Unit | Utility | notification-types', function() {
 		assert.equal(notificationTypes.discussionUpvotePost, 'discussion-upvote-post');
 		assert.equal(notificationTypes.discussionUpvoteReply, 'discussion-upvote-reply');
 		assert.equal(notificationTypes.discussionReply, 'discussion-reply');
-		assert.equal(notificationTypes.announcement, 'announcement');
+		assert.equal(notificationTypes.postAtMention, 'post-at-mention');
+		assert.equal(notificationTypes.threadAtMention, 'thread-at-mention');
 	});
 });

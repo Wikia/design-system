@@ -36,6 +36,42 @@ const notificationDataStub = {
 	totalUniqueActors: 3
 };
 
+const atMentionDataStub = {
+	type: "post-at-mention-notification",
+	community: {
+		id: "1657673",
+		name: "Jamestest community"
+	},
+	refersTo: {
+		uri: "http://jamestest.fandom.com/d/p/3100000000000000052",
+		createdBy: "24291106",
+		type: "discussion-thread",
+		title: "Best post",
+		snippet: "Different text from the old text"
+	},
+	events: {
+		total: 2,
+		totalUniqueActors: 1,
+		latestActors: [
+			{
+				id: "24291106",
+				name: "JamesDevPoz"
+			}
+		],
+		latestEvent: {
+			when: "2019-07-09T12:26:28.000Z",
+			causedBy: {
+				id: "24291106",
+				name: "JamesDevPoz"
+			},
+			uri: "http://jamestest.fandom.com/d/p/3100000000000000052/r/3100000000000000198",
+			type: "post-at-mention",
+			snippet: "This reply has an at mention"
+		}
+	},
+	read: true
+};
+
 function getModelStub(type, title, snippet = '') {
 	const modelStub = EmberObject.create(notificationDataStub);
 
@@ -195,6 +231,42 @@ module('Integration | Component | on-site-notifications/notification-card', func
 			await render(hbs`{{on-site-notifications/notification-card model=model track=track}}`);
 
 			assert.dom('.wds-notification-card__last-actor').hasText(notificationDataStub.latestActors[0].name);
+		});
+	});
+
+	module('for notification of type post-at-mention', function(hooks) {
+		hooks.beforeEach(function () {
+			this.set('model', getModelStub('post-at-mention', 'Post At Mention Title', atMentionDataStub));
+		});
+
+		test('it should not render wds-avatar-stack', async function (assert) {
+			await render(hbs`{{on-site-notifications/notification-card model=model track=track}}`);
+
+			assert.dom('.wds-avatar-stack').doesNotExist();
+		});
+
+		test('it should use the comment icon', async function (assert) {
+			await render(hbs`{{on-site-notifications/notification-card model=model track=track}}`);
+
+			assert.dom('.wds-notification-card__icon-wrapper > svg > use[*|href="#wds-icons-comment-small"]').exists();
+		});
+	});
+
+	module('for notification of type thread-at-mention', function(hooks) {
+		hooks.beforeEach(function () {
+			this.set('model', getModelStub('thread-at-mention', 'Post At Mention Title', atMentionDataStub));
+		});
+
+		test('it should not render wds-avatar-stack', async function (assert) {
+			await render(hbs`{{on-site-notifications/notification-card model=model track=track}}`);
+
+			assert.dom('.wds-avatar-stack').doesNotExist();
+		});
+
+		test('it should use the comment icon', async function (assert) {
+			await render(hbs`{{on-site-notifications/notification-card model=model track=track}}`);
+
+			assert.dom('.wds-notification-card__icon-wrapper > svg > use[*|href="#wds-icons-comment-small"]').exists();
 		});
 	});
 });
