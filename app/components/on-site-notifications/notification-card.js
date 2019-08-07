@@ -28,7 +28,7 @@ export default Component.extend(
 			} else if (this.isAnnouncement(type)) {
 				return 'wds-icons-flag-small';
 			} else {
-				return 'wds-icons-upvote-small';
+				return 'wds-icons-heart-small';
 			}
 		}),
 
