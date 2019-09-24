@@ -17,7 +17,7 @@ Localization messages for Design System components
 See https://wikia-inc.atlassian.net/wiki/display/INT/i18n+tools for information on getting the design system i18n files to and from crowdin.
 
 ## Copyright
-Code and documentation copyright 2018 Wikia, Inc.
+Code and documentation copyright 2018 Fandom, Inc.
 
 **NOTE**: code and images contained within this repo are **NOT** licensed for general use.  Please contact us at http://fandom.wikia.com/about#contact if you're interested in licensing any part of this repo.
 
