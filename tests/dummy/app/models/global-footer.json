@@ -8,7 +8,7 @@
 			"href": "http:\/\/fandom.wikia.com",
 			"title": {
 				"type": "text",
-				"value": "Fandom powered by Wikia"
+				"value": "Fandom"
 			}
 		},
 		"company_overview": {
@@ -16,7 +16,7 @@
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Overview"
+					"key": "global-footer-company-overview-header"
 				}
 			},
 			"links": [
@@ -24,7 +24,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "About"
+						"key": "global-footer-company-overview-link-about"
 					},
 					"href": "http:\/\/www.wikia.com\/about"
 				},
@@ -32,7 +32,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Careers"
+						"key": "global-footer-company-overview-link-careers"
 					},
 					"href": "https:\/\/careers.wikia.com"
 				},
@@ -40,7 +40,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Press"
+						"key": "global-footer-company-overview-link-press"
 					},
 					"href": "http:\/\/fandom.wikia.com\/press"
 				},
@@ -48,19 +48,15 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Contact"
+						"key": "global-footer-company-overview-link-contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/contact"
-				}
-			]
-		},
-		"site_overview": {
-			"links": [
+				},
 				{
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Terms of Use"
+						"key": "global-footer-site-overview-link-terms-of-use"
 					},
 					"href": "http:\/\/www.wikia.com\/Terms_of_use"
 				},
@@ -68,7 +64,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Privacy Policy"
+						"key": "global-footer-site-overview-link-privacy-policy"
 					},
 					"href": "http:\/\/www.wikia.com\/Privacy_Policy"
 				},
@@ -76,7 +72,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Global Sitemap"
+						"key": "global-footer-site-overview-link-global-sitemap"
 					},
 					"href": "http:\/\/www.wikia.com\/Sitemap"
 				},
@@ -84,49 +80,34 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Local Sitemap"
+						"key": "global-footer-site-overview-link-local-sitemap"
 					},
 					"href": "\/wiki\/Local_Sitemap"
 				}
 			]
 		},
-		"create_wiki": {
-			"description": {
-				"type": "translatable-text",
-				"key": "Can't find a community you love? Create your own and start something epic."
-			},
-			"links": [
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Start a wiki"
-					},
-					"href": "http:\/\/www.wikia.com\/Special:CreateNewWiki"
-				}
-			]
-		},
-		"community_apps": {
+		"fandom_apps": {
 			"header": {
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Community Apps"
+					"key": "global-footer-community-apps-header"
 				}
 			},
 			"description": {
 				"type": "translatable-text",
-				"key": "Take your favorite fandoms with you and never miss a beat."
+				"key": "global-footer-community-apps-description"
+			},
+			"links_image": {
+				"image-data": {
+					"name": "wds-company-store-logo-fandom"
+				}
 			},
 			"links": [
 				{
 					"type": "link-image",
 					"image-data": {
 						"name": "wds-company-store-appstore"
-					},
-					"title": {
-						"type": "translatable-text",
-						"key": "global-footer-community-apps-link-app-store"
 					},
 					"href": "https:\/\/itunes.apple.com\/developer\/wikia-inc.\/id422467077"
 				},
@@ -135,11 +116,30 @@
 					"image-data": {
 						"name": "wds-company-store-googleplay"
 					},
-					"title": {
-						"type": "translatable-text",
-						"key": "global-footer-community-apps-link-google-play"
-					},
 					"href": "https:\/\/play.google.com\/store\/apps\/developer?id=Wikia,+Inc."
+				}
+			]
+		},
+		"ddb_apps": {
+			"links_image": {
+				"image-data": {
+					"name": "wds-company-store-logo-ddb"
+				}
+			},
+			"links": [
+				{
+					"type": "link-image",
+					"image-data": {
+						"name": "wds-company-store-appstore"
+					},
+					"href": "https:\/\/apps.apple.com\/us\/app\/d-d-beyond\/id1263629972"
+				},
+				{
+					"type": "link-image",
+					"image-data": {
+						"name": "wds-company-store-googleplay"
+					},
+					"href": "https:\/\/play.google.com\/store\/apps\/details?id=com.curse.dndbeyond&hl=en"
 				}
 			]
 		},
@@ -148,7 +148,7 @@
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Advertise"
+					"key": "global-footer-advertise-header"
 				}
 			},
 			"links": [
@@ -156,7 +156,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Media Kit"
+						"key": "global-footer-advertise-link-media-kit"
 					},
 					"href": "http:\/\/fandom.wikia.com\/mediakit"
 				},
@@ -164,7 +164,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Contact"
+						"key": "global-footer-advertise-link-contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/mediakit#contact"
 				}
@@ -205,40 +205,44 @@
 			},
 			"links": [
 				{
-					"type": "link-branded",
-					"brand": "games",
+					"type": "link-text",
 					"title": {
-						"type": "translatable-text",
-						"key": "Games"
+						"type": "text",
+						"key": "Fandom"
 					},
-					"href": "http:\/\/fandom.wikia.com\/games"
+					"href": "https:\/\/www.fandom.com\/"
 				},
 				{
-					"type": "link-branded",
-					"brand": "movies",
+					"type": "link-text",
 					"title": {
-						"type": "translatable-text",
-						"key": "Movies"
+						"type": "text",
+						"key": "Gamepedia"
 					},
-					"href": "http:\/\/fandom.wikia.com\/movies"
+					"href": "https:\/\/www.gamepedia.com\/"
 				},
 				{
-					"type": "link-branded",
-					"brand": "tv",
+					"type": "link-text",
 					"title": {
-						"type": "translatable-text",
-						"key": "TV"
+						"type": "text",
+						"key": "D&D Beyond"
 					},
-					"href": "http:\/\/fandom.wikia.com\/tv"
+					"href": "https:\/\/www.dndbeyond.com\/"
 				},
 				{
-					"type": "link-branded",
-					"brand": "explore-wikis",
+					"type": "link-text",
 					"title": {
-						"type": "translatable-text",
-						"key": "global-footer-fandom-overview-link-explore-wikis"
+						"type": "text",
+						"key": "Muthead"
 					},
-					"href": "http:\/\/fandom.wikia.com\/explore"
+					"href": "https:\/\/www.muthead.com\/"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "text",
+						"key": "Futhead"
+					},
+					"href": "https:\/\/www.futhead.com\/"
 				}
 			]
 		},
@@ -247,7 +251,7 @@
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Follow Us"
+					"key": "global-footer-follow-us-header"
 				}
 			},
 			"links": [
@@ -328,7 +332,7 @@
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Community"
+					"key": "global-footer-community-header"
 				}
 			},
 			"links": [
@@ -336,7 +340,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Community Central"
+						"key": "global-footer-community-link-community-central"
 					},
 					"href": "http:\/\/community.wikia.com\/wiki\/Community_Central"
 				},
@@ -344,7 +348,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Support"
+						"key": "global-footer-community-link-support"
 					},
 					"href": "http:\/\/community.wikia.com\/wiki\/Special:Contact"
 				},
@@ -352,23 +356,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Fan Contributor Program"
-					},
-					"href": "http:\/\/fandom.wikia.com\/fan-contributor"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "WAM Score"
-					},
-					"href": "http:\/\/www.wikia.com\/WAM"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Help"
+						"key": "global-footer-community-link-help"
 					},
 					"href": "http:\/\/community.wikia.com\/wiki\/Help:Contents"
 				}
@@ -384,7 +372,7 @@
 			"href": "http:\/\/fandom.wikia.com",
 			"title": {
 				"type": "text",
-				"value": "Fandom powered by Wikia"
+				"value": "Fandom"
 			}
 		},
 		"company_overview": {
@@ -392,7 +380,7 @@
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Overview"
+					"key": "global-footer-company-overview-header"
 				}
 			},
 			"links": [
@@ -400,7 +388,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "About"
+						"key": "global-footer-company-overview-link-about"
 					},
 					"href": "http:\/\/www.wikia.com\/about"
 				},
@@ -408,7 +396,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Careers"
+						"key": "global-footer-company-overview-link-careers"
 					},
 					"href": "https:\/\/careers.wikia.com"
 				},
@@ -416,7 +404,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Press"
+						"key": "global-footer-company-overview-link-press"
 					},
 					"href": "http:\/\/fandom.wikia.com\/press"
 				},
@@ -424,19 +412,15 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Contact"
+						"key": "global-footer-company-overview-link-contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/contact"
-				}
-			]
-		},
-		"site_overview": {
-			"links": [
+				},
 				{
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Terms of Use"
+						"key": "global-footer-site-overview-link-terms-of-use"
 					},
 					"href": "http:\/\/www.wikia.com\/Terms_of_use"
 				},
@@ -444,7 +428,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Privacy Policy"
+						"key": "global-footer-site-overview-link-privacy-policy"
 					},
 					"href": "http:\/\/www.wikia.com\/Privacy_Policy"
 				},
@@ -452,7 +436,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Global Sitemap"
+						"key": "global-footer-site-overview-link-global-sitemap"
 					},
 					"href": "http:\/\/www.wikia.com\/Sitemap"
 				},
@@ -460,58 +444,66 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Local Sitemap"
+						"key": "global-footer-site-overview-link-local-sitemap"
 					},
 					"href": "\/wiki\/Local_Sitemap"
 				}
 			]
 		},
-		"create_wiki": {
-			"description": {
-				"type": "translatable-text",
-				"key": "Can't find a community you love? Create your own and start something epic."
-			},
-			"links": [
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Start a wiki"
-					},
-					"href": "http:\/\/www.wikia.com\/Special:CreateNewWiki"
-				}
-			]
-		},
-		"community_apps": {
+		"fandom_apps": {
 			"header": {
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Community Apps"
+					"key": "global-footer-community-apps-header"
 				}
 			},
 			"description": {
 				"type": "translatable-text",
-				"key": "Take your favorite fandoms with you and never miss a beat."
+				"key": "global-footer-community-apps-description"
+			},
+			"links_image": {
+				"image-data": {
+					"name": "wds-company-store-logo-fandom"
+				}
 			},
 			"links": [
 				{
 					"type": "link-image",
-					"image": "wds-company-store-appstore",
-					"title": {
-						"type": "translatable-text",
-						"key": "global-footer-community-apps-link-app-store"
+					"image-data": {
+						"name": "wds-company-store-appstore"
 					},
 					"href": "https:\/\/itunes.apple.com\/developer\/wikia-inc.\/id422467077"
 				},
 				{
 					"type": "link-image",
-					"image": "wds-company-store-googleplay",
-					"title": {
-						"type": "translatable-text",
-						"key": "global-footer-community-apps-link-google-play"
+					"image-data": {
+						"name": "wds-company-store-googleplay"
 					},
 					"href": "https:\/\/play.google.com\/store\/apps\/developer?id=Wikia,+Inc."
+				}
+			]
+		},
+		"ddb_apps": {
+			"links_image": {
+				"image-data": {
+					"name": "wds-company-store-logo-ddb"
+				}
+			},
+			"links": [
+				{
+					"type": "link-image",
+					"image-data": {
+						"name": "wds-company-store-appstore"
+					},
+					"href": "https:\/\/apps.apple.com\/us\/app\/d-d-beyond\/id1263629972"
+				},
+				{
+					"type": "link-image",
+					"image-data": {
+						"name": "wds-company-store-googleplay"
+					},
+					"href": "https:\/\/play.google.com\/store\/apps\/details?id=com.curse.dndbeyond&hl=en"
 				}
 			]
 		},
@@ -520,7 +512,7 @@
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Advertise"
+					"key": "global-footer-advertise-header"
 				}
 			},
 			"links": [
@@ -528,7 +520,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Media Kit"
+						"key": "global-footer-advertise-link-media-kit"
 					},
 					"href": "http:\/\/fandom.wikia.com\/mediakit"
 				},
@@ -536,7 +528,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Contact"
+						"key": "global-footer-advertise-link-contact"
 					},
 					"href": "http:\/\/fandom.wikia.com\/mediakit#contact"
 				}
@@ -577,13 +569,44 @@
 			},
 			"links": [
 				{
-					"type": "link-branded",
-					"brand": "explore-wikis",
+					"type": "link-text",
 					"title": {
-						"type": "translatable-text",
-						"key": "global-footer-fandom-overview-link-explore-wikis"
+						"type": "text",
+						"key": "Fandom"
 					},
-					"href": "http:\/\/fandom.wikia.com\/explore"
+					"href": "https:\/\/www.fandom.com\/"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "text",
+						"key": "Gamepedia"
+					},
+					"href": "https:\/\/www.gamepedia.com\/"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "text",
+						"key": "D&D Beyond"
+					},
+					"href": "https:\/\/www.dndbeyond.com\/"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "text",
+						"key": "Muthead"
+					},
+					"href": "https:\/\/www.muthead.com\/"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "text",
+						"key": "Futhead"
+					},
+					"href": "https:\/\/www.futhead.com\/"
 				}
 			]
 		},
@@ -592,7 +615,7 @@
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Follow Us"
+					"key": "global-footer-follow-us-header"
 				}
 			},
 			"links": [
@@ -673,7 +696,7 @@
 				"type": "line-text",
 				"title": {
 					"type": "translatable-text",
-					"key": "Community"
+					"key": "global-footer-community-header"
 				}
 			},
 			"links": [
@@ -681,7 +704,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Community Central"
+						"key": "global-footer-community-link-community-central"
 					},
 					"href": "http:\/\/community.wikia.com\/wiki\/Community_Central"
 				},
@@ -689,7 +712,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Support"
+						"key": "global-footer-community-link-support"
 					},
 					"href": "http:\/\/community.wikia.com\/wiki\/Special:Contact"
 				},
@@ -697,23 +720,7 @@
 					"type": "link-text",
 					"title": {
 						"type": "translatable-text",
-						"key": "Fan Contributor Program"
-					},
-					"href": "http:\/\/fandom.wikia.com\/fan-contributor"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "WAM Score"
-					},
-					"href": "http:\/\/www.wikia.com\/WAM"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "translatable-text",
-						"key": "Help"
+						"key": "global-footer-community-link-help"
 					},
 					"href": "http:\/\/community.wikia.com\/wiki\/Help:Contents"
 				}

@@ -7,6 +7,10 @@
     <span class="wds-global-footer__section-description">{{i18n @model.description.key ns="design-system"}}</span>
   {{/if}}
 
+  {{#if @model.links_image}}
+    {{global-footer/image model=link}}
+  {{/if}}
+
   <ul class="wds-global-footer__links-list">
     {{#each @model.links as |link|}}
       <li class="wds-global-footer__links-list-item">
