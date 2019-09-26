@@ -10,54 +10,21 @@
     </h2>
   {{/if}}
   <div class="wds-global-footer__main">
-    <div class="wds-global-footer__fandom-sections">
-      {{global-footer/section
-        model=@model.fandom_overview
-        name="fandom-overview"
-        parentName="fandom"
-      }}
-      {{global-footer/section
-        model=@model.follow_us
-        name="follow-us"
-        parentName="fandom"
-      }}
+    <div class="wds-global-footer__column">
+      {{global-footer/section model=@model.fandom_overview name="fandom-overview" }}
+      {{global-footer/section model=@model.follow_us name="follow-us" }}
     </div>
-    <div class="wds-global-footer__wikia-sections">
-      {{global-footer/section
-        model=@model.company_overview
-        name="company-overview"
-        parentName="wikia"
-      }}
-      {{global-footer/section
-        model=@model.site_overview
-        name="site-overview"
-        parentName="wikia"
-      }}
-      {{global-footer/section
-        model=@model.community
-        name="community"
-        parentName="wikia"
-      }}
-      {{global-footer/section
-        model=@model.create_wiki
-        name="create-wiki"
-        parentName="wikia"
-      }}
-      {{global-footer/section
-        model=@model.fandom_apps
-        name="fandom-apps"
-        parentName="wikia"
-      }}
-      {{global-footer/section
-        model=@model.ddb_apps
-        name="ddb-apps"
-        parentName="wikia"
-      }}
-      {{global-footer/section
-        model=@model.advertise
-        name="advertise"
-        parentName="wikia"
-      }}
+    <div class="wds-global-footer__column">
+      {{global-footer/section model=@model.company_overview name="company-overview" }}
+    </div>
+    <div class="wds-global-footer__column">
+      {{global-footer/section model=@model.community name="community" }}
+      {{global-footer/section model=@model.advertise name="advertise" }}
+    </div>
+    <div class="wds-global-footer__column">
+      {{global-footer/section model=@model.fandom_apps name="fandom-apps" }}
+      {{global-footer/section model=@model.fandom_stores name="fandom-stores" }}
+      {{global-footer/section model=@model.ddb_stores name="ddb-stores" }}
     </div>
   </div>
   {{global-footer/bottom-bar model=@model}}

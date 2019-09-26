@@ -97,11 +97,11 @@
 			"description": {
 				"type": "translatable-text",
 				"key": "global-footer-community-apps-description"
-			},
-			"links_image": {
-				"image-data": {
-					"name": "wds-company-store-logo-fandom"
-				}
+			}
+		},
+		"fandom_stores": {
+			"image": {
+					"image-name": "wds-company-store-logo-fandom"
 			},
 			"links": [
 				{
@@ -120,11 +120,9 @@
 				}
 			]
 		},
-		"ddb_apps": {
-			"links_image": {
-				"image-data": {
-					"name": "wds-company-store-logo-ddb"
-				},
+		"ddb_stores": {
+			"image": {
+				"image-name": "wds-company-store-logo-ddb",
 				"caption": "D&D Beyond"
 			},
 			"links": [
@@ -462,11 +460,11 @@
 			"description": {
 				"type": "translatable-text",
 				"key": "global-footer-community-apps-description"
-			},
-			"links_image": {
-				"image-data": {
-					"name": "wds-company-store-logo-fandom"
-				}
+			}
+		},
+		"fandom_stores": {
+			"image": {
+				"image-name": "wds-company-store-logo-fandom"
 			},
 			"links": [
 				{
@@ -485,11 +483,9 @@
 				}
 			]
 		},
-		"ddb_apps": {
-			"links_image": {
-				"image-data": {
-					"name": "wds-company-store-logo-ddb"
-				},
+		"ddb_stores": {
+			"image": {
+				"image-name": "wds-company-store-logo-ddb",
 				"caption": "D&D Beyond"
 			},
 			"links": [

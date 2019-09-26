@@ -6,58 +6,50 @@
 			margin: 0 20px;
 		}
 
-		// left (Fandom) and right (Wikia) sections
-		&__fandom-section,
-		&__wikia-section {
+		&__section {
 			margin: 0;
 			width: 100%;
 		}
 
-		&__fandom-section {
-			&.wds-is-fandom-overview {
-				.wds-global-footer__links-list-item {
-					margin-bottom: 0;
-				}
-			}
-
-			&.wds-is-follow-us {
-				.wds-global-footer__links-list-item {
-					margin-bottom: 0;
-				}
-
-				.wds-global-footer__link {
-					height: 42px;
-					margin-right: 10px;
-					width: 42px;
-				}
+		&.wds-is-fandom-overview {
+			.wds-global-footer__links-list-item {
+				margin-bottom: 0;
 			}
 		}
 
-		&__wikia-section {
-			margin-bottom: 20px;
-
-			&.wds-is-company-overview {
-				width: 50%;
+		&.wds-is-follow-us {
+			.wds-global-footer__links-list-item {
+				margin-bottom: 0;
 			}
 
-			&.wds-is-site-overview {
-				padding-top: $section-vertical-padding + $section-header-height + $section-header-margin-bottom;
-				width: 50%;
+			.wds-global-footer__link {
+				height: 42px;
+				margin-right: 10px;
+				width: 42px;
+			}
+		}
+
+		&.wds-is-company-overview {
+			width: 50%;
+		}
+
+		&.wds-is-site-overview {
+			padding-top: $section-vertical-padding + $section-header-height + $section-header-margin-bottom;
+			width: 50%;
+		}
+
+		&.wds-is-create-wiki {
+			display: none;
+		}
+
+		&.wds-is-fandom-apps, &.wds-is-ddb-apps {
+			.wds-global-footer__links-list {
+				margin-bottom: 0;
+				margin-top: 5px;
 			}
 
-			&.wds-is-create-wiki {
-				display: none;
-			}
-
-			&.wds-is-fandom-apps, &.wds-is-ddb-apps {
-				.wds-global-footer__links-list {
-					margin-bottom: 0;
-					margin-top: 5px;
-				}
-
-				.wds-global-footer__link {
-					margin-right: 25px;
-				}
+			.wds-global-footer__link {
+				margin-right: 25px;
 			}
 		}
 
