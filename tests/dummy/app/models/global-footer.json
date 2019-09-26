@@ -295,7 +295,7 @@
 						"type": "translatable-text",
 						"key": "global-footer-follow-us-link-youtube"
 					},
-					"href": "https://www.youtube.com/channel/UC988qTQImTjO7lUdPfYabgQ",
+					"href": "https://www.youtube.com/fandomentertainment",
 					"tracking_label": "follow-us.youtube"
 				},
 				{
@@ -660,7 +660,7 @@
 						"type": "translatable-text",
 						"key": "global-footer-follow-us-link-youtube"
 					},
-					"href": "https://www.youtube.com/channel/UC988qTQImTjO7lUdPfYabgQ",
+					"href": "https://www.youtube.com/fandomentertainment",
 					"tracking_label": "follow-us.youtube"
 				},
 				{
