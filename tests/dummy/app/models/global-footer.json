@@ -124,7 +124,8 @@
 			"links_image": {
 				"image-data": {
 					"name": "wds-company-store-logo-ddb"
-				}
+				},
+				"caption": "D&D Beyond"
 			},
 			"links": [
 				{
@@ -488,7 +489,8 @@
 			"links_image": {
 				"image-data": {
 					"name": "wds-company-store-logo-ddb"
-				}
+				},
+				"caption": "D&D Beyond"
 			},
 			"links": [
 				{
