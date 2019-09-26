@@ -105,7 +105,7 @@ $desktop-width: 1024px;
 				}
 			}
 
-			&.wds-is-fandom-apps {
+			&.wds-is-fandom-apps, &.wds-is-ddb-apps {
 				margin-right: 0;
 				min-height: $desktop-row-top-height;
 				order: 3;

@@ -185,7 +185,7 @@ $footer-line-height: 1.3em;
 	}
 
 	&__wikia-section {
-		&.wds-is-fandom-apps {
+		&.wds-is-fandom-apps, &.wds-is-ddb-apps {
 			.wds-global-footer__links-list {
 				display: flex;
 			}

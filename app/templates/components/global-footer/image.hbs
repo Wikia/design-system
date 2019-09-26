@@ -1,4 +1,6 @@
-<figure>
-  {{svg @model.image-data.name class="wds-global-footer__links-image wds-icon"}}
-  <figcaption></figcaption>
+<figure class="wds-global-footer__links-image">
+  {{svg @model.image-data.name class="wds-icon"}}
+  {{#if @model.caption}}
+    <figcaption>{{i18n @model.caption ns="design-system"}}</figcaption>
+  {{/if}}
 </figure>
