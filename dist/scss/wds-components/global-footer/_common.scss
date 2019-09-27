@@ -1,11 +1,8 @@
-@import 'variables';
-
-$footer-line-height: 1.3em;
-
 .wds-global-footer {
 	background-color: $wds-fandom-color-navy;
 	box-sizing: border-box;
 	color: $wds-color-white;
+	line-height: $wds-line-height-tight;
 	margin-top: 30px;
 	word-wrap: break-word;
 
@@ -14,7 +11,6 @@ $footer-line-height: 1.3em;
 		box-sizing: inherit;
 	}
 
-	// we should have class that removes defaults from UL
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -31,13 +27,12 @@ $footer-line-height: 1.3em;
 		display: flex;
 		justify-content: center;
 		margin: 0;
-		padding: 30px 0 25px;
+		padding: 30px 0;
 	}
 
 	&__bottom-bar {
 		background: rgba($wds-color-night-sky, .5);
 		font-size: $wds-font-size-xs;
-		line-height: $footer-line-height;
 		min-height: 50px;
 		padding: 0 20px;
 		text-align: center;
@@ -69,41 +64,19 @@ $footer-line-height: 1.3em;
 		}
 	}
 
-	// @todo To be moved to a separate component during XW-1618
-	&__button-link {
-		display: inline-block;
-		font-weight: $wds-font-weight-bold;
-		letter-spacing: .3px;
-		line-height: $footer-line-height;
-		min-height: 45px;
-		padding: 14px 18px;
-		text-decoration: none;
-		text-transform: uppercase;
-	}
-
 	&__header-logo {
 		height: 35px;
 		width: 164px;
 	}
 
-	// main content
 	&__main {
-		display: flex;
-		flex: {
-			direction: column;
-			wrap: wrap;
-		}
+		padding: 0 20px;
+		max-width: 500px;
+		width: 100%;
 	}
 
-	&__fandom-sections,
-	&__wikia-sections {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	&__fandom-section,
-	&__wikia-section {
-		margin-right: 55px;
+	&__section + .wds-global-footer__section {
+		margin-top: 40px;
 	}
 
 	&__link {
@@ -114,7 +87,6 @@ $footer-line-height: 1.3em;
 			color: $wds-fandom-color-aqua;
 			font-size: $wds-font-size-s;
 			font-weight: $wds-font-weight-normal;
-			line-height: $footer-line-height;
 			text-decoration: none;
 			transition: color $wds-button-transition-duration;
 		}
@@ -126,32 +98,14 @@ $footer-line-height: 1.3em;
 	}
 
 	&__links-list-item {
-		margin-bottom: 8px;
+		margin-bottom: 20px;
 	}
 
-	&__fandom-section {
-		&.wds-is-fandom-overview {
-			border: 0;
-			padding: 0;
-
+	&__section {
+		&.wds-is-fandom-overview, &.wds-is-company-overview, &.wds-is-community {
 			.wds-global-footer__links-list {
-				margin-bottom: 38px;
-			}
-
-			.wds-global-footer__link {
-				align-items: center;
-				display: flex;
-				font-size: $wds-font-size-xxl;
-				font-weight: $wds-font-weight-bold;
-				justify-content: space-between;
-				margin: 0;
-				padding: 0 0 5px;
-				text-decoration: none;
-				text-transform: uppercase;
-
-				div {
-					border-bottom: 2px solid $wds-color-white;
-				}
+				column-count: 2;
+				column-gap: 26px;
 			}
 		}
 
@@ -159,7 +113,6 @@ $footer-line-height: 1.3em;
 			.wds-global-footer__links-list {
 				display: flex;
 				flex-wrap: nowrap;
-				margin-bottom: 38px;
 			}
 
 			.wds-global-footer__link {
@@ -173,40 +126,72 @@ $footer-line-height: 1.3em;
 				width: $social-icon-size;
 			}
 
-			.wds-global-footer__image {
-				color: $wds-color-slate-gray;
-				transition: color $wds-button-transition-duration;
+			.wds-global-footer__link-image {
+				color: $wds-color-white;
+				opacity: 0.3;
+				transition: opacity $wds-button-transition-duration;
 
 				&:hover {
-					color: $wds-color-white;
+					opacity: 1;
 				}
 			}
 		}
-	}
 
-	&__wikia-section {
-		&.wds-is-community-apps {
+		&.wds-is-fandom-stores {
+			margin-bottom: 8px;
+			margin-top: 3px;
+			position: relative;
+
+			&::after {
+				border-bottom: 1px solid $wds-fandom-color-dark-gray;
+				display: block;
+				content: '';
+				position: absolute;
+				left: 10px;
+				width: 240px;
+				bottom: 0;
+				height: 1px;
+			}
+		}
+
+		&.wds-is-ddb-stores {
+			margin-top: 8px;
+		}
+
+		&.wds-is-fandom-stores, &.wds-is-ddb-stores {
+			display: flex;
+
+			.wds-global-footer__image {
+				height: 100px;
+				margin: 0 11px 0 0;
+				padding: 10px;
+				width: 100px;
+
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.wds-global-footer__image-caption {
+				font-size: $wds-font-size-xs;
+				line-height: $wds-line-height-none;
+				text-align: center;
+			}
+
 			.wds-global-footer__links-list {
 				display: flex;
+				flex-direction: column;
+				padding: 10px 0;
 			}
 
 			.wds-global-footer__link {
 				display: block;
-				line-height: $footer-line-height;
-				margin-top: 6px;
-				width: 119px;
 			}
 
-			.wds-global-footer__image {
+			.wds-global-footer__link-image {
 				height: 35px;
 				width: 119px;
-			}
-		}
-
-		&.wds-is-community {
-			.wds-global-footer__links-list {
-				column-count: 2;
-				margin-bottom: 38px;
 			}
 		}
 	}
@@ -217,7 +202,7 @@ $footer-line-height: 1.3em;
 		font-weight: $wds-font-weight-bold;
 		line-height: $wds-line-height-none;
 		margin-bottom: 8px;
-		min-height: $section-header-height;
+		min-height: 14px;
 		padding: 0;
 		text-transform: uppercase;
 	}
@@ -225,8 +210,31 @@ $footer-line-height: 1.3em;
 	&__section-description {
 		color: $wds-color-white;
 		font-size: $wds-font-size-s;
-		line-height: $footer-line-height;
 		margin: 0;
 		padding: 0;
+	}
+}
+
+@media #{$wds-breakpoint-l-up} {
+	.wds-global-footer {
+		&__main {
+			display: grid;
+			grid-column-gap: 55px;
+			grid-template-columns: repeat(4, 1fr);
+			margin: 0 auto;
+			max-width: $wds-breakpoint-l;
+		}
+
+		&__section {
+			&.wds-is-fandom-overview, &.wds-is-company-overview, &.wds-is-community {
+				.wds-global-footer__links-list {
+					column-count: initial;
+				}
+			}
+		}
+
+		&__links-list-item {
+			margin-bottom: 9px;
+		}
 	}
 }
