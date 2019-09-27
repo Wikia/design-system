@@ -36,16 +36,16 @@ module('Integration | Component | global-footer', function(hooks) {
 			'design-system:global-footer-fandom-overview-header',
 		);
 		assert.equal(GlobalFooter.main.fandom_overview.header, 'design-system:global-footer-fandom-overview-header');
-		assert.equal(GlobalFooter.main.fandom_overview.links.length, 4);
+		assert.equal(GlobalFooter.main.fandom_overview.links.length, 5);
 
 		assert.equal(GlobalFooter.main.follow.header, 'design-system:Follow Us');
 		assert.equal(GlobalFooter.main.follow.links.length, 5);
 
 		assert.equal(GlobalFooter.main.company_overview.header, 'design-system:Overview');
-		assert.equal(GlobalFooter.main.company_overview.links.length, 4);
+		assert.equal(GlobalFooter.main.company_overview.links.length, 8);
 
 		assert.equal(GlobalFooter.main.community.header, 'design-system:Overview');
-		assert.equal(GlobalFooter.main.community.links.length, 4);
+		assert.equal(GlobalFooter.main.community.links.length, 3);
 
 		assert.equal(GlobalFooter.main.fandom_apps.description, 'design-system:Take your favorite fandoms with you and never miss a beat.');
 
