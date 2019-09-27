@@ -32,7 +32,7 @@ module('Integration | Component | global-footer', function(hooks) {
 
 		assert.ok(GlobalFooter.header.logo.isPresent);
 		assert.equal(
-			GlobalFooter.main.fandom.overview.header,
+			GlobalFooter.main.fandom_overview.header,
 			'design-system:global-footer-fandom-overview-header',
 		);
 		assert.equal(GlobalFooter.main.fandom_overview.header, 'design-system:global-footer-fandom-overview-header');
@@ -74,13 +74,13 @@ module('Integration | Component | global-footer', function(hooks) {
 			<GlobalFooter @model={{model}} @track={{track}}/>
 		`);
 
-		await GlobalFooter.main.fandom.follow.links[0].click();
+		await GlobalFooter.main.follow.links[0].click();
 
 		//Does nothing when no track is passed
 		await render(hbs`
 			<GlobalFooter @model={{model}}/>
 		`);
 
-		await GlobalFooter.main.fandom.follow.links[0].click();
+		await GlobalFooter.main.follow.links[0].click();
 	});
 });
