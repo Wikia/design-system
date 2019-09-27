@@ -104,7 +104,7 @@ export default {
 		},
 
 		advertise: {
-			scope: 'section.wds-global-footer__wikia-section.wds-is-advertise',
+			scope: 'section.wds-global-footer__section.wds-is-advertise',
 
 			header: text('.wds-global-footer__section-header'),
 
