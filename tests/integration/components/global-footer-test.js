@@ -35,36 +35,26 @@ module('Integration | Component | global-footer', function(hooks) {
 			GlobalFooter.main.fandom.overview.header,
 			'design-system:global-footer-fandom-overview-header',
 		);
-		assert.equal(GlobalFooter.main.fandom.overview.header, 'design-system:global-footer-fandom-overview-header');
-		assert.equal(GlobalFooter.main.fandom.overview.links.length, 4);
+		assert.equal(GlobalFooter.main.fandom_overview.header, 'design-system:global-footer-fandom-overview-header');
+		assert.equal(GlobalFooter.main.fandom_overview.links.length, 4);
 
-		assert.equal(GlobalFooter.main.fandom.follow.header, 'design-system:Follow Us');
-		assert.equal(GlobalFooter.main.fandom.follow.links.length, 5);
+		assert.equal(GlobalFooter.main.follow.header, 'design-system:Follow Us');
+		assert.equal(GlobalFooter.main.follow.links.length, 5);
 
-		assert.equal(GlobalFooter.main.wikia.overview.header, 'design-system:Overview');
-		assert.equal(GlobalFooter.main.wikia.overview.links.length, 4);
+		assert.equal(GlobalFooter.main.company_overview.header, 'design-system:Overview');
+		assert.equal(GlobalFooter.main.company_overview.links.length, 4);
 
-		assert.equal(GlobalFooter.main.wikia.community.header, 'design-system:Overview');
-		assert.equal(GlobalFooter.main.wikia.community.links.length, 4);
+		assert.equal(GlobalFooter.main.community.header, 'design-system:Overview');
+		assert.equal(GlobalFooter.main.community.links.length, 4);
 
-		assert.equal(
-			GlobalFooter.main.wikia.createWiki.button.text,
-			'design-system:Start a wiki',
-		);
-		assert.equal(
-			GlobalFooter.main.wikia.createWiki.button.href,
-			'http://www.wikia.com/Special:CreateNewWiki',
-		);
-		assert.equal(
-			GlobalFooter.main.wikia.createWiki.description,
-			'design-system:Can\'t find a community you love? Create your own and start something epic.',
-		);
+		assert.equal(GlobalFooter.main.fandom_apps.description, 'design-system:Take your favorite fandoms with you and never miss a beat.');
 
-		assert.equal(GlobalFooter.main.wikia.apps.description, 'design-system:Take your favorite fandoms with you and never miss a beat.');
-		assert.equal(GlobalFooter.main.wikia.apps.links.length, 2);
+		assert.equal(GlobalFooter.main.fandom_stores.links.length, 2);
 
-		assert.equal(GlobalFooter.main.wikia.advertise.header, 'design-system:Advertise');
-		assert.equal(GlobalFooter.main.wikia.advertise.links.length, 2);
+		assert.equal(GlobalFooter.main.ddb_stores.links.length, 2);
+
+		assert.equal(GlobalFooter.main.advertise.header, 'design-system:Advertise');
+		assert.equal(GlobalFooter.main.advertise.links.length, 2);
 
 		assert.equal(
 			GlobalFooter.footer.text,
