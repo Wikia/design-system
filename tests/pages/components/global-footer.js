@@ -1,4 +1,4 @@
-import { text, collection, attribute, clickable } from 'ember-cli-page-object';
+import { text, collection, clickable } from 'ember-cli-page-object';
 
 export default {
 	scope: 'footer.wds-global-footer',
