@@ -38,13 +38,13 @@ module('Integration | Component | global-footer', function(hooks) {
 		assert.equal(GlobalFooter.main.fandom_overview.header, 'design-system:global-footer-fandom-overview-header');
 		assert.equal(GlobalFooter.main.fandom_overview.links.length, 5);
 
-		assert.equal(GlobalFooter.main.follow.header, 'design-system:Follow Us');
+		assert.equal(GlobalFooter.main.follow.header, 'design-system:global-footer-follow-us-header');
 		assert.equal(GlobalFooter.main.follow.links.length, 5);
 
-		assert.equal(GlobalFooter.main.company_overview.header, 'design-system:Overview');
+		assert.equal(GlobalFooter.main.company_overview.header, 'design-system:global-footer-company-overview-header');
 		assert.equal(GlobalFooter.main.company_overview.links.length, 8);
 
-		assert.equal(GlobalFooter.main.community.header, 'design-system:Overview');
+		assert.equal(GlobalFooter.main.community.header, 'design-system:global-footer-community-header');
 		assert.equal(GlobalFooter.main.community.links.length, 3);
 
 		assert.equal(GlobalFooter.main.fandom_apps.description, 'design-system:Take your favorite fandoms with you and never miss a beat.');
@@ -53,7 +53,7 @@ module('Integration | Component | global-footer', function(hooks) {
 
 		assert.equal(GlobalFooter.main.ddb_stores.links.length, 2);
 
-		assert.equal(GlobalFooter.main.advertise.header, 'design-system:Advertise');
+		assert.equal(GlobalFooter.main.advertise.header, 'design-system:global-footer-advertise-header');
 		assert.equal(GlobalFooter.main.advertise.links.length, 2);
 
 		assert.equal(
