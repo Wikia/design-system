@@ -2,6 +2,7 @@
 	background-color: $wds-fandom-color-navy;
 	box-sizing: border-box;
 	color: $wds-color-white;
+	line-height: $wds-line-height-tight;
 	margin-top: 30px;
 	word-wrap: break-word;
 
@@ -32,7 +33,6 @@
 	&__bottom-bar {
 		background: rgba($wds-color-night-sky, .5);
 		font-size: $wds-font-size-xs;
-		line-height: $wds-line-height-tight;
 		min-height: 50px;
 		padding: 0 20px;
 		text-align: center;
@@ -69,13 +69,10 @@
 		width: 164px;
 	}
 
-	// main content
 	&__main {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-column-gap: 55px;
-		width: 1280px;
-		margin: 0 auto;
+		padding: 0 20px;
+		max-width: 500px;
+		width: 100%;
 	}
 
 	&__section + .wds-global-footer__section {
@@ -90,7 +87,6 @@
 			color: $wds-fandom-color-aqua;
 			font-size: $wds-font-size-s;
 			font-weight: $wds-font-weight-normal;
-			line-height: 2;
 			text-decoration: none;
 			transition: color $wds-button-transition-duration;
 		}
@@ -101,7 +97,18 @@
 		}
 	}
 
+	&__links-list-item {
+		margin-bottom: 20px;
+	}
+
 	&__section {
+		&.wds-is-fandom-overview, &.wds-is-company-overview, &.wds-is-community {
+			.wds-global-footer__links-list {
+				column-count: 2;
+				column-gap: 26px;
+			}
+		}
+
 		&.wds-is-follow-us {
 			.wds-global-footer__links-list {
 				display: flex;
@@ -203,8 +210,31 @@
 	&__section-description {
 		color: $wds-color-white;
 		font-size: $wds-font-size-s;
-		line-height: $wds-line-height-tight;
 		margin: 0;
 		padding: 0;
+	}
+}
+
+@media #{$wds-breakpoint-l-up} {
+	.wds-global-footer {
+		&__main {
+			display: grid;
+			grid-column-gap: 55px;
+			grid-template-columns: repeat(4, 1fr);
+			margin: 0 auto;
+			max-width: $wds-breakpoint-l;
+		}
+
+		&__section {
+			&.wds-is-fandom-overview, &.wds-is-company-overview, &.wds-is-community {
+				.wds-global-footer__links-list {
+					column-count: initial;
+				}
+			}
+		}
+
+		&__links-list-item {
+			margin-bottom: 9px;
+		}
 	}
 }
