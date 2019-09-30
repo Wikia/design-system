@@ -101,7 +101,7 @@
 		},
 		"fandom_stores": {
 			"image": {
-					"image-name": "wds-company-store-logo-fandom"
+					"name": "wds-company-store-logo-fandom"
 			},
 			"links": [
 				{
@@ -122,7 +122,7 @@
 		},
 		"ddb_stores": {
 			"image": {
-				"image-name": "wds-company-store-logo-ddb",
+				"name": "wds-company-store-logo-ddb",
 				"caption": "D&D Beyond"
 			},
 			"links": [
@@ -464,7 +464,7 @@
 		},
 		"fandom_stores": {
 			"image": {
-				"image-name": "wds-company-store-logo-fandom"
+				"name": "wds-company-store-logo-fandom"
 			},
 			"links": [
 				{
@@ -485,7 +485,7 @@
 		},
 		"ddb_stores": {
 			"image": {
-				"image-name": "wds-company-store-logo-ddb",
+				"name": "wds-company-store-logo-ddb",
 				"caption": "D&D Beyond"
 			},
 			"links": [
