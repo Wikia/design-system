@@ -70,7 +70,7 @@
 	}
 
 	&__main {
-		padding: 0 20px;
+		padding: 0 20px 8px;
 		max-width: 500px;
 		width: 100%;
 	}
@@ -230,6 +230,7 @@
 			grid-template-columns: repeat(4, 1fr);
 			margin: 0 auto;
 			max-width: $wds-breakpoint-l;
+			padding-bottom: 28px;
 		}
 
 		&__section {
