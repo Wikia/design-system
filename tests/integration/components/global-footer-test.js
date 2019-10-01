@@ -27,7 +27,7 @@ module('Integration | Component | global-footer', function(hooks) {
 	test('it renders', async function(assert) {
 		this.set('model', model);
 		await render(hbs`
-			<GlobalFooter @model={{model}}/>
+			<GlobalFooter @model={{model.fandom}}/>
 		`);
 
 		assert.ok(GlobalFooter.header.logo.isPresent);
@@ -71,14 +71,14 @@ module('Integration | Component | global-footer', function(hooks) {
 		});
 
 		await render(hbs`
-			<GlobalFooter @model={{model}} @track={{track}}/>
+			<GlobalFooter @model={{model.fandom}} @track={{track}}/>
 		`);
 
 		await GlobalFooter.main.follow.links[0].click();
 
 		//Does nothing when no track is passed
 		await render(hbs`
-			<GlobalFooter @model={{model}}/>
+			<GlobalFooter @model={{model.fandom}}/>
 		`);
 
 		await GlobalFooter.main.follow.links[0].click();
