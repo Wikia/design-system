@@ -25,7 +25,7 @@ module('Integration | Component | global-footer', function(hooks) {
 	});
 
 	test('it renders', async function(assert) {
-		this.set('model', model['with-hubs']);
+		this.set('model', model);
 		await render(hbs`
 			<GlobalFooter @model={{model}}/>
 		`);
@@ -64,7 +64,7 @@ module('Integration | Component | global-footer', function(hooks) {
 
 	test('triggers track function', async function(assert) {
 		this.setProperties({
-			model: model['with-hubs'],
+			model: model,
 			track() {
 				assert.ok(true);
 			},
