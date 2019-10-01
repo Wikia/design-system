@@ -41,8 +41,8 @@ module('Integration | Component | global-footer', function(hooks) {
 		assert.equal(GlobalFooter.main.follow.header, 'design-system:global-footer-follow-us-header');
 		assert.equal(GlobalFooter.main.follow.links.length, 5);
 
-		assert.equal(GlobalFooter.main.company_overview.header, 'design-system:global-footer-company-overview-header');
-		assert.equal(GlobalFooter.main.company_overview.links.length, 8);
+		assert.equal(GlobalFooter.main.site_overview.header, 'design-system:global-footer-company-overview-header');
+		assert.equal(GlobalFooter.main.site_overview.links.length, 8);
 
 		assert.equal(GlobalFooter.main.community.header, 'design-system:global-footer-community-header');
 		assert.equal(GlobalFooter.main.community.links.length, 3);

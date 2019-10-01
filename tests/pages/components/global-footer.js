@@ -44,8 +44,8 @@ export default {
 			),
 		},
 
-		company_overview: {
-			scope: 'section.wds-global-footer__section.wds-is-company-overview',
+		site_overview: {
+			scope: 'section.wds-global-footer__section.wds-is-site-overview',
 
 			header: text('.wds-global-footer__section-header'),
 
