@@ -1,5 +1,5 @@
 {
-	"default": {
+	"fandom": {
 		"header": {
 			"type": "link-image",
 			"image-data": {
@@ -345,6 +345,55 @@
 						"key": "global-footer-community-link-community-central"
 					},
 					"href": "http:\/\/community.wikia.com\/wiki\/Community_Central"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "translatable-text",
+						"key": "global-footer-community-link-support"
+					},
+					"href": "http:\/\/community.wikia.com\/wiki\/Special:Contact"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "translatable-text",
+						"key": "global-footer-community-link-help"
+					},
+					"href": "http:\/\/community.wikia.com\/wiki\/Help:Contents"
+				}
+			]
+		}
+	},
+	"wikia_org": {
+		"is-wikia-org": true,
+		"logo": {
+			"name": "wds-company-logo-wikia-org"
+		},
+		"site_overview": {
+			"header": {
+				"type": "line-text",
+				"title": {
+					"type": "translatable-text",
+					"key": "global-footer-company-overview-header"
+				}
+			},
+			"links": [
+				{
+					"type": "link-text",
+					"title": {
+						"type": "translatable-text",
+						"key": "global-footer-site-overview-link-terms-of-use"
+					},
+					"href": "http:\/\/www.wikia.com\/Terms_of_use"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "translatable-text",
+						"key": "global-footer-site-overview-link-privacy-policy"
+					},
+					"href": "http:\/\/www.wikia.com\/Privacy_Policy"
 				},
 				{
 					"type": "link-text",

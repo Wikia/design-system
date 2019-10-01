@@ -15,13 +15,24 @@
   </section>
 
   <section>
-    <h2 id="versions">Global Footer versions</h2>
+    <h2 id="fandom">Fandom Global Footer</h2>
 
     {{! template-lint-configure attribute-indentation false }}
-    <Demo @name="global-footer" @codeOnly={{true}} @componentName="wds-global-footer" @standalone={{true}} @variantUrl="/identity/global-footer/standalone/default">
+    <Demo @name="global-footer" @codeOnly={{true}} @componentName="wds-global-footer" @standalone={{true}} @variantUrl="/identity/global-footer/standalone/fandom">
       <GlobalFooter
-        @model={{model}}
+        @model={{model.fandom}}
       />
     </Demo>
+  </section>
+
+  <section>
+      <h2 id="wikia-org">Wikia.org Global Footer</h2>
+
+    {{! template-lint-configure attribute-indentation false }}
+      <Demo @name="global-footer" @codeOnly={{true}} @componentName="wds-global-footer" @standalone={{true}} @variantUrl="/identity/global-footer/standalone/wikia_org">
+          <GlobalFooter
+                  @model={{model.wikia_org}}
+          />
+      </Demo>
   </section>
 {{/if}}
