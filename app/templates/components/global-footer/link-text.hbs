@@ -3,5 +3,9 @@
   class="wds-global-footer__link"
   data-tracking-label={{@model.tracking_label}}
 >
-  {{i18n @model.title.key ns="design-system"}}
+  {{#if (equal @model.title.type "translatable-text") }}
+    {{i18n @model.title.key ns="design-system"}}
+  {{else}}
+    {{@model.title.value}}
+  {{/if}}
 </a>

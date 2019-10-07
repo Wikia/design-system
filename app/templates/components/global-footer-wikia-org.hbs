@@ -1,11 +1,6 @@
-{{#if @model.header}}
+{{#if @model.logo}}
   <h2 class="wds-global-footer-wikia-org__header">
-    <a href={{@model.header.href}} title={{@model.header.title.value}}>
-      {{svg
-        @model.header.image-data.name
-        class="wds-global-footer__header-logo"
-      }}
-    </a>
+      {{svg @model.logo.name class="wds-global-footer__header-logo" }}
   </h2>
 {{/if}}
 <ul class="wds-global-footer-wikia-org__links">

@@ -1,0 +1,12 @@
+<figure class="wds-global-footer__image">
+  {{svg @model.name class="wds-icon"}}
+  {{#if @model.caption}}
+    <figcaption class="wds-global-footer__image-caption">
+      {{#if (equal @model.caption.type "translatable-text") }}
+        {{i18n @model.caption.key ns="design-system"}}
+      {{else}}
+        {{@model.caption.value}}
+      {{/if}}
+    </figcaption>
+  {{/if}}
+</figure>

@@ -25,46 +25,36 @@ module('Integration | Component | global-footer', function(hooks) {
 	});
 
 	test('it renders', async function(assert) {
-		this.set('model', model['with-hubs']);
+		this.set('model', model);
 		await render(hbs`
-			<GlobalFooter @model={{model}}/>
+			<GlobalFooter @model={{model.fandom}}/>
 		`);
 
 		assert.ok(GlobalFooter.header.logo.isPresent);
 		assert.equal(
-			GlobalFooter.main.fandom.overview.header,
+			GlobalFooter.main.fandom_overview.header,
 			'design-system:global-footer-fandom-overview-header',
 		);
-		assert.equal(GlobalFooter.main.fandom.overview.header, 'design-system:global-footer-fandom-overview-header');
-		assert.equal(GlobalFooter.main.fandom.overview.links.length, 4);
+		assert.equal(GlobalFooter.main.fandom_overview.header, 'design-system:global-footer-fandom-overview-header');
+		assert.equal(GlobalFooter.main.fandom_overview.links.length, 5);
 
-		assert.equal(GlobalFooter.main.fandom.follow.header, 'design-system:Follow Us');
-		assert.equal(GlobalFooter.main.fandom.follow.links.length, 5);
+		assert.equal(GlobalFooter.main.follow.header, 'design-system:global-footer-follow-us-header');
+		assert.equal(GlobalFooter.main.follow.links.length, 5);
 
-		assert.equal(GlobalFooter.main.wikia.overview.header, 'design-system:Overview');
-		assert.equal(GlobalFooter.main.wikia.overview.links.length, 4);
+		assert.equal(GlobalFooter.main.site_overview.header, 'design-system:global-footer-company-overview-header');
+		assert.equal(GlobalFooter.main.site_overview.links.length, 8);
 
-		assert.equal(GlobalFooter.main.wikia.community.header, 'design-system:Overview');
-		assert.equal(GlobalFooter.main.wikia.community.links.length, 4);
+		assert.equal(GlobalFooter.main.community.header, 'design-system:global-footer-community-header');
+		assert.equal(GlobalFooter.main.community.links.length, 3);
 
-		assert.equal(
-			GlobalFooter.main.wikia.createWiki.button.text,
-			'design-system:Start a wiki',
-		);
-		assert.equal(
-			GlobalFooter.main.wikia.createWiki.button.href,
-			'http://www.wikia.com/Special:CreateNewWiki',
-		);
-		assert.equal(
-			GlobalFooter.main.wikia.createWiki.description,
-			'design-system:Can\'t find a community you love? Create your own and start something epic.',
-		);
+		assert.equal(GlobalFooter.main.fandom_apps.description, 'design-system:global-footer-community-apps-description');
 
-		assert.equal(GlobalFooter.main.wikia.apps.description, 'design-system:Take your favorite fandoms with you and never miss a beat.');
-		assert.equal(GlobalFooter.main.wikia.apps.links.length, 2);
+		assert.equal(GlobalFooter.main.fandom_stores.links.length, 2);
 
-		assert.equal(GlobalFooter.main.wikia.advertise.header, 'design-system:Advertise');
-		assert.equal(GlobalFooter.main.wikia.advertise.links.length, 2);
+		assert.equal(GlobalFooter.main.ddb_stores.links.length, 2);
+
+		assert.equal(GlobalFooter.main.advertise.header, 'design-system:global-footer-advertise-header');
+		assert.equal(GlobalFooter.main.advertise.links.length, 2);
 
 		assert.equal(
 			GlobalFooter.footer.text,
@@ -74,23 +64,23 @@ module('Integration | Component | global-footer', function(hooks) {
 
 	test('triggers track function', async function(assert) {
 		this.setProperties({
-			model: model['with-hubs'],
+			model: model,
 			track() {
 				assert.ok(true);
 			},
 		});
 
 		await render(hbs`
-			<GlobalFooter @model={{model}} @track={{track}}/>
+			<GlobalFooter @model={{model.fandom}} @track={{track}}/>
 		`);
 
-		await GlobalFooter.main.fandom.follow.links[0].click();
+		await GlobalFooter.main.follow.links[0].click();
 
 		//Does nothing when no track is passed
 		await render(hbs`
-			<GlobalFooter @model={{model}}/>
+			<GlobalFooter @model={{model.fandom}}/>
 		`);
 
-		await GlobalFooter.main.fandom.follow.links[0].click();
+		await GlobalFooter.main.follow.links[0].click();
 	});
 });

@@ -1,4 +1,4 @@
-import { text, collection, attribute, clickable } from 'ember-cli-page-object';
+import { text, collection, clickable } from 'ember-cli-page-object';
 
 export default {
 	scope: 'footer.wds-global-footer',
@@ -16,117 +16,107 @@ export default {
 	main: {
 		scope: '.wds-global-footer__main',
 
-		fandom: {
-			scope: '.wds-global-footer__fandom-sections',
+		fandom_overview: {
+			scope: 'section.wds-global-footer__section.wds-is-fandom-overview',
 
-			overview: {
-				scope:
-					'section.wds-global-footer__fandom-section.wds-is-fandom-overview',
+			header: text('.wds-global-footer__section-header'),
 
-				header: text('.wds-global-footer__section-header'),
-
-				links: collection(
-					'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
-					{
-						link: { scope: 'a' },
-						text: text('div'),
-					},
-				),
-			},
-
-			follow: {
-				scope:
-					'section.wds-global-footer__fandom-section.wds-is-follow-us',
-
-				header: text('.wds-global-footer__section-header'),
-
-				links: collection(
-					'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
-					{
-						click: clickable('.wds-global-footer__link'),
-						text: text('div'),
-					},
-				),
-			},
-		},
-
-		wikia: {
-			scope: '.wds-global-footer__wikia-sections',
-
-			overview: {
-				scope:
-					'section.wds-global-footer__wikia-section.wds-is-company-overview',
-
-				header: text('.wds-global-footer__section-header'),
-
-				links: collection(
-					'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
-					{
-						link: { scope: 'a' },
-						text: text('div'),
-					},
-				),
-			},
-
-			community: {
-				scope:
-					'section.wds-global-footer__wikia-section.wds-is-company-overview',
-
-				header: text('.wds-global-footer__section-header'),
-
-				links: collection(
-					'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
-					{
-						link: { scope: 'a' },
-						text: text('div'),
-					},
-				),
-			},
-
-			createWiki: {
-				scope:
-					'section.wds-global-footer__wikia-section.wds-is-create-wiki',
-
-				description: text('.wds-global-footer__section-description'),
-
-				button: {
-					scope: '.wds-global-footer__link',
-
-					href: attribute('href'),
+			links: collection(
+				'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
+				{
+					link: { scope: 'a' },
+					text: text('div'),
 				},
-			},
-
-			apps: {
-				scope:
-					'section.wds-global-footer__wikia-section.wds-is-community-apps',
-
-				header: text('.wds-global-footer__section-header'),
-				description: text('.wds-global-footer__section-description'),
-
-				links: collection(
-					'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
-					{
-						link: { scope: 'a' },
-						text: text('div'),
-					},
-				),
-			},
-
-			advertise: {
-				scope:
-					'section.wds-global-footer__wikia-section.wds-is-advertise',
-
-				header: text('.wds-global-footer__section-header'),
-
-				links: collection(
-					'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
-					{
-						link: { scope: 'a' },
-						text: text('div'),
-					},
-				),
-			},
+			),
 		},
+
+		follow: {
+			scope: 'section.wds-global-footer__section.wds-is-follow-us',
+
+			header: text('.wds-global-footer__section-header'),
+
+			links: collection(
+				'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
+				{
+					click: clickable('.wds-global-footer__link'),
+					text: text('div'),
+				},
+			),
+		},
+
+		site_overview: {
+			scope: 'section.wds-global-footer__section.wds-is-site-overview',
+
+			header: text('.wds-global-footer__section-header'),
+
+			links: collection(
+				'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
+				{
+					link: { scope: 'a' },
+					text: text('div'),
+				},
+			),
+		},
+
+		community: {
+			scope: 'section.wds-global-footer__section.wds-is-community',
+
+			header: text('.wds-global-footer__section-header'),
+
+			links: collection(
+				'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
+				{
+					link: { scope: 'a' },
+					text: text('div'),
+				},
+			),
+		},
+
+		fandom_apps: {
+			scope: 'section.wds-global-footer__section.wds-is-fandom-apps',
+
+			header: text('.wds-global-footer__section-header'),
+			description: text('.wds-global-footer__section-description'),
+		},
+
+		fandom_stores: {
+			scope: 'section.wds-global-footer__section.wds-is-fandom-stores',
+
+			links: collection(
+				'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
+				{
+					link: { scope: 'a' },
+					text: text('div'),
+				},
+			),
+		},
+
+		ddb_stores: {
+			scope: 'section.wds-global-footer__section.wds-is-ddb-stores',
+
+			links: collection(
+				'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
+				{
+					link: { scope: 'a' },
+					text: text('div'),
+				},
+			),
+		},
+
+		advertise: {
+			scope: 'section.wds-global-footer__section.wds-is-advertise',
+
+			header: text('.wds-global-footer__section-header'),
+
+			links: collection(
+				'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
+				{
+					link: { scope: 'a' },
+					text: text('div'),
+				},
+			),
+		},
+
 	},
 
 	footer: {
