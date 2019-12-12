@@ -17,6 +17,7 @@
 /npm-debug.log*
 /testem.log
 /yarn-error.log
+/.npm_cache
 
 # ember-try
 /.node_modules.ember-try/
