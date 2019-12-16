@@ -45,7 +45,7 @@ module('Integration | Component | global-footer', function(hooks) {
 		assert.equal(GlobalFooter.main.site_overview.links.length, 8);
 
 		assert.equal(GlobalFooter.main.community.header, 'design-system:global-footer-community-header');
-		assert.equal(GlobalFooter.main.community.links.length, 3);
+		assert.equal(GlobalFooter.main.community.links.length, 4);
 
 		assert.equal(GlobalFooter.main.fandom_apps.description, 'design-system:global-footer-community-apps-description');
 

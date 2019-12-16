@@ -3836,7 +3836,7 @@ try{var r="testLocalStorage"
 localStorage.setItem(r,r),localStorage.removeItem(r),n=!0}catch(e){n=!1}e.default=n?window.localStorage:t}),define("@wikia/ember-fandom/utils/offset",["exports"],function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e){var t=e.getBoundingClientRect()
 return{top:t.top+(window.pageYOffset||document.documentElement.scrollTop),left:t.left+(window.pageXOffset||document.documentElement.scrollLeft)}}}),define("@wikia/ember-fandom/utils/string",["exports"],function(e){"use strict"
-Object.defineProperty(e,"__esModule",{value:!0}),e.normalizeToUnderscore=function(){return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:"").replace(/\s/g,"_").replace(/_+/g,"_")},e.escapeRegex=function(e){return e.replace(/[-\/\\^$*+?.()|[\]{}]/g,"\\$&")}}),define("@wikia/ember-fandom/utils/url",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.normalizeToUnderscore=function(){return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:"").replace(/\s/g,"_").replace(/_+/g,"_")},e.escapeRegex=function(e){return e.replace(/[-/\\^$*+?.()|[\]{}]/g,"\\$&")}}),define("@wikia/ember-fandom/utils/url",["exports"],function(e){"use strict"
 function t(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=t.useBrackets,r=void 0===n||n,i=t.skipQuestionMark,o=void 0!==i&&i,a=Object.keys(e),s=r?"[]":"",u=""
 a.length>0&&(u=""+(o?"":"?")+a.map(function(t){return e[t]instanceof Array?e[t].length?e[t].map(function(e){return""+encodeURIComponent(t)+s+"="+encodeURIComponent(e)}).join("&"):void 0:encodeURIComponent(t)+"="+encodeURIComponent(e[t])}).join("&"))
 return u}Object.defineProperty(e,"__esModule",{value:!0}),e.getQueryString=t,e.addQueryParams=function(e){var n=t(arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},{skipQuestionMark:!0})
@@ -4363,7 +4363,7 @@ if(a&&(a=this.chooseModuleName(a,e)),a&&this._moduleRegistry.has(a)&&(r=a),t||th
 if(e!==n&&this._moduleRegistry.has(e)&&this._moduleRegistry.has(n))throw new TypeError("Ambiguous module names: '"+e+"' and '"+n+"'")
 if(this._moduleRegistry.has(e))return e
 if(this._moduleRegistry.has(n))return n
-var r=e.replace(/\/-([^\/]*)$/,"/_$1")
+var r=e.replace(/\/-([^/]*)$/,"/_$1")
 return this._moduleRegistry.has(r)?r:void 0},lookupDescription:function(e){var t=this.parseName(e)
 return this.findModuleName(t,!0)},_logLookup:function(e,t,n){if(Ember.ENV.LOG_MODULE_RESOLVER||t.root.LOG_RESOLVER){var r=void 0,i=e?"[✓]":"[ ]"
 r=t.fullName.length>60?".":new Array(60-t.fullName.length).join("."),n||(n=this.lookupDescription(t)),console&&console.info&&console.info(i,t.fullName,r,n)}},knownForType:function(e){for(var t=this._moduleRegistry.moduleNames(),r=(0,n.default)(),i=0,o=t.length;i<o;i++){var a=t[i],s=this.translateToContainerFullname(e,a)

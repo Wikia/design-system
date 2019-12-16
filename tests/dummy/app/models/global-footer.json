@@ -361,6 +361,14 @@
 						"key": "global-footer-community-link-help"
 					},
 					"href": "http:\/\/community.wikia.com\/wiki\/Help:Contents"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "translatable-text",
+						"key": "global-footer-community-usp-do-not-sell"
+					},
+					"href": "http:\/\/.fandom.com\/do-not-sell-my-info"
 				}
 			]
 		}
@@ -394,6 +402,14 @@
 						"key": "global-footer-site-overview-link-privacy-policy"
 					},
 					"href": "http:\/\/www.wikia.com\/Privacy_Policy"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "translatable-text",
+						"key": "global-footer-community-usp-do-not-sell"
+					},
+					"href": "http:\/\/www.fandom.com\/do-not-sell-my-info"
 				},
 				{
 					"type": "link-text",
