@@ -1,0 +1,10 @@
+@import 'brightness';
+
+/**
+* this function is needed for compatibility with `less` luma function (used in ooui-js)
+*/
+@function luma($color) {
+	$brightness: brightness($color);
+
+	@return $brightness / 255 * 100%;
+}
