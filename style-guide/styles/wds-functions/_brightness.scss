@@ -1,12 +1,30 @@
-@import 'sqrt';
+@import 'pow';
 
 /**
-* Implementation taken from http://alienryderflex.com/hsp.html
+* Implementation taken from https://css-tricks.com/snippets/sass/luminance-color-function/
 */
 @function brightness($color) {
-	@return floor(sqrt(
-			.299 * (red($color) * red($color))
-		+ .587 * (green($color) * green($color))
-		+ .114 * (blue($color) * blue($color))
-	));
+	$colors: (
+		'red': red($color),
+		'green': green($color),
+		'blue': blue($color)
+	);
+
+	@each $name, $value in $colors {
+		$adjusted: 0;
+		$value: $value / 255;
+
+		@if $value < 0.03928 {
+			$value: $value / 12.92;
+		} @else {
+			$value: ($value + .055) / 1.055;
+			$value: pow($value, 2.4);
+		}
+
+		$colors: map-merge($colors, ($name: $value));
+	}
+
+	$brightness: (map-get($colors, 'red') * .2126) + (map-get($colors, 'green') * .7152) + (map-get($colors, 'blue') * .0722);
+
+	@return $brightness * 255;
 }
