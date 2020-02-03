@@ -330,6 +330,10 @@
 			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
 		}
 
+		.wds-button {
+			color: $wds-fandom-color-black;
+		}
+
 		&:hover {
 			.wds-avatar__image {
 				border-color: $wds-color-white;
