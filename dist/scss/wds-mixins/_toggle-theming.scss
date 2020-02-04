@@ -1,5 +1,5 @@
 @mixin toggle-theming($off-color, $on-color, $background-color) {
-	&__label {
+	.wds-toggle__label {
 		&::before {
 			background-color: mix($background-color, $off-color, 50%);
 		}
