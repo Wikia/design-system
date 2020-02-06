@@ -8,16 +8,16 @@
 	}
 
 
-	.wds-dialog__curtain {
+	&__curtain {
 		background-color: $overlay-color;
 	}
 
-	.wds-dialog__wrapper {
+	&__wrapper {
 		background: $background-color;
 		color: $text-color;
 	}
 
-	.wds-dialog__actions {
+	&__actions {
 		border-top-color: $border-color;
 	}
 }
