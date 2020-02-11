@@ -174,7 +174,9 @@
 			color: $wds-fandom-color-aqua !important;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus,
+		&:active {
 			color: $wds-color-white !important;
 		}
 
