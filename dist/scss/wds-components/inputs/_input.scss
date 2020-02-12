@@ -63,6 +63,14 @@
 		color: $wds-color-blue-gray;
 	}
 
+	.is-empty > &__field ~ &__label {
+		overflow: hidden;
+		height: 1rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		right: 0;
+	}
+
 	&.is-focused > &__field {
 		border-color: $wds-color-dark-blue-gray;
 	}
@@ -98,3 +106,5 @@
 		margin-bottom: 0;
 	}
 }
+
+
