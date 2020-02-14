@@ -55,17 +55,20 @@
 
 	&.is-empty > &__field ~ &__label {
 		font-size: $wds-typescale-size-base;
-		height: 1rem;
 		line-height: 1rem;
-		overflow: hidden;
-		right: 0;
-		text-overflow: ellipsis;
 		top: 0;
-		white-space: nowrap;
 	}
 
 	&.is-empty > &__hint {
 		color: $wds-color-blue-gray;
+	}
+
+	.is-empty > &__field ~ &__label {
+		overflow: hidden;
+		height: 1rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		right: 0;
 	}
 
 	&.is-focused > &__field {
