@@ -3846,7 +3846,7 @@ Object.defineProperty(e,"__esModule",{value:!0})
 var t=null
 if("undefined"!=typeof FastBoot){var n=FastBoot.require("process").env.INTERNAL_CACHE_HOST||null
 t=FastBoot.require("proxying-agent").create({proxy:"http://"+n,keepAlive:!0},"http://example.com")}e.default=t}),define("@wikia/ember-fandom/utils/string",["exports"],function(e){"use strict"
-Object.defineProperty(e,"__esModule",{value:!0}),e.normalizeToUnderscore=function(){return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:"").replace(/\s/g,"_").replace(/_+/g,"_")},e.escapeRegex=function(e){return e.replace(/[-/\\^$*+?.()|[\]{}]/g,"\\$&")}}),define("@wikia/ember-fandom/utils/url",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.normalizeToUnderscore=function(){return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:"").replace(/\s/g,"_").replace(/_+/g,"_")},e.escapeRegex=function(e){return e.replace(/[-\/\\^$*+?.()|[\]{}]/g,"\\$&")}}),define("@wikia/ember-fandom/utils/url",["exports"],function(e){"use strict"
 function t(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=t.useBrackets,r=void 0===n||n,i=t.skipQuestionMark,o=void 0!==i&&i,s=Object.keys(e),a=r?"[]":"",u=""
 s.length>0&&(u=""+(o?"":"?")+s.map(function(t){return e[t]instanceof Array?e[t].length?e[t].map(function(e){return""+encodeURIComponent(t)+a+"="+encodeURIComponent(e)}).join("&"):void 0:encodeURIComponent(t)+"="+encodeURIComponent(e[t])}).join("&"))
 return u}Object.defineProperty(e,"__esModule",{value:!0}),e.getQueryString=t,e.addQueryParams=function(e){var n=t(arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},{skipQuestionMark:!0})
@@ -4102,7 +4102,7 @@ if(s&&(s=this.chooseModuleName(s,e)),s&&this._moduleRegistry.has(s)&&(r=s),t||th
 if(e!==n&&this._moduleRegistry.has(e)&&this._moduleRegistry.has(n))throw new TypeError("Ambiguous module names: '"+e+"' and '"+n+"'")
 if(this._moduleRegistry.has(e))return e
 if(this._moduleRegistry.has(n))return n
-var r=e.replace(/\/-([^/]*)$/,"/_$1")
+var r=e.replace(/\/-([^\/]*)$/,"/_$1")
 return this._moduleRegistry.has(r)?r:void 0},lookupDescription:function(e){var t=this.parseName(e)
 return this.findModuleName(t,!0)},_logLookup:function(e,t,n){if(Ember.ENV.LOG_MODULE_RESOLVER||t.root.LOG_RESOLVER){var r=void 0,i=e?"[✓]":"[ ]"
 r=t.fullName.length>60?".":new Array(60-t.fullName.length).join("."),n||(n=this.lookupDescription(t)),console&&console.info&&console.info(i,t.fullName,r,n)}},knownForType:function(e){for(var t=this._moduleRegistry.moduleNames(),r=(0,n.default)(),i=0,o=t.length;i<o;i++){var s=t[i],a=this.translateToContainerFullname(e,s)
@@ -4465,4 +4465,4 @@ a.push=t,a=a.slice()
 for(var l=0;l<a.length;l++)t(a[l])
 var c=u
 return o.push([3,2]),n()}([function(e,t){window._eai_r=require,window._eai_d=define},,,function(e,t,n){n(0),e.exports=n(4)},function(e,t,n){var r,i,o
-"undefined"!=typeof document&&(n.p=(r=document.querySelectorAll("script"))[r.length-1].src.replace(/\/[^/]*$/,"/")),e.exports=(i=_eai_d,o=_eai_r,window.emberAutoImportDynamic=function(e){return o("_eai_dyn_"+e)},i("i18next",[],function(){return n(10)}),void i("uuid",[],function(){return n(5)}))}])
+"undefined"!=typeof document&&(n.p=(r=document.querySelectorAll("script"))[r.length-1].src.replace(/\/[^\/]*$/,"/")),e.exports=(i=_eai_d,o=_eai_r,window.emberAutoImportDynamic=function(e){return o("_eai_dyn_"+e)},i("i18next",[],function(){return n(10)}),void i("uuid",[],function(){return n(5)}))}])
