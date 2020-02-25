@@ -57,6 +57,7 @@
   "global-footer-full-site-link": "Полная версия", 
   "global-footer-international-header-subtitle": "Твой ФЭНДОМ", 
   "global-footer-licensing-and-vertical-description": "{sitename} — это ФЭНДОМ на портале {vertical}.", 
+  "global-footer-licensing-and-vertical-description-param-vertical-anime": "Аниме",
   "global-footer-licensing-and-vertical-description-param-vertical-books": "Книги", 
   "global-footer-licensing-and-vertical-description-param-vertical-comics": "Комиксы", 
   "global-footer-licensing-and-vertical-description-param-vertical-games": "Видеоигры", 

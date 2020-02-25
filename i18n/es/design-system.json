@@ -57,6 +57,7 @@
   "global-footer-full-site-link": "Ver sitio completo", 
   "global-footer-international-header-subtitle": "El hogar del FANDOM", 
   "global-footer-licensing-and-vertical-description": "{sitename} es una comunidad FANDOM de {vertical}.", 
+  "global-footer-licensing-and-vertical-description-param-vertical-anime": "Anime", 
   "global-footer-licensing-and-vertical-description-param-vertical-books": "Libros", 
   "global-footer-licensing-and-vertical-description-param-vertical-comics": "Cómics", 
   "global-footer-licensing-and-vertical-description-param-vertical-games": "Juegos", 

@@ -57,6 +57,7 @@
   "global-footer-full-site-link": "PC版で表示", 
   "global-footer-international-header-subtitle": "The Home of FANDOM", 
   "global-footer-licensing-and-vertical-description": "{sitename}は{vertical}ジャンルのFandomコミュニティです。", 
+  "global-footer-licensing-and-vertical-description-param-vertical-anime": "アニメ",
   "global-footer-licensing-and-vertical-description-param-vertical-books": "書籍", 
   "global-footer-licensing-and-vertical-description-param-vertical-comics": "マンガ", 
   "global-footer-licensing-and-vertical-description-param-vertical-games": "ゲーム", 
