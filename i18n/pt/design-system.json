@@ -131,6 +131,7 @@
   "notifications-wall-post": "{firstUser} deixou uma<b>nova mensagem </b> no mural de {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>respondeu</b> à mensagem de {secondUser}<br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} e {number} outros usuários <b>responderam no mural de </b>{secondUser}<br><br> {postTitle}", 
+  "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message <br><br> {postTitle}", 
   "now-label": "agora", 
   "wds-avatar-badges-admin-tooltip": "Administrador da comunidade", 
   "wds-avatar-badges-content-moderator-tooltip": "Moderador de conteúdo", 

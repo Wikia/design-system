@@ -131,6 +131,7 @@
   "notifications-wall-post": "{firstUser} оставил(а) <b>новое сообщение</b> на стене {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>ответил(а)</b> на сообщение {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} и еще {number} других участника(ов) <b>ответили</b> на сообщение на стене {secondUser} <br><br> {postTitle}", 
+  "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message <br><br> {postTitle}", 
   "now-label": "сейчас", 
   "wds-avatar-badges-admin-tooltip": "Администратор сообщества", 
   "wds-avatar-badges-content-moderator-tooltip": "Модератор контента", 

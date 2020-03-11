@@ -131,6 +131,7 @@
   "notifications-wall-post": "{firstUser} hat auf der Nachrichtenseite von {secondUser} eine <b>neue Nachricht</b> hinterlassen <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} hat auf die Nachricht von {secondUser} <b>geantwortet</b> <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} und {number} andere Benutzer haben auf eine Nachricht auf der Nachrichtenseite von {secondUser} <b>geantwortet</b> <br><br> {postTitle}", 
+  "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message <br><br> {postTitle}", 
   "now-label": "gerade eben", 
   "wds-avatar-badges-admin-tooltip": "Admin", 
   "wds-avatar-badges-content-moderator-tooltip": "Inhalts-Moderator", 

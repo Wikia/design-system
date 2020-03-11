@@ -131,6 +131,7 @@
   "notifications-wall-post": "{firstUser} left a <b>new message</b> on {secondUser}'s wall <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>replied</b> to {secondUser}'s message <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} and {number} other users <b>replied</b> to {secondUser}'s wall <br><br> {postTitle}", 
+  "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message <br><br> {postTitle}", 
   "now-label": "nu", 
   "wds-avatar-badges-admin-tooltip": "Lokale beheerder", 
   "wds-avatar-badges-content-moderator-tooltip": "Inhoudmoderator", 

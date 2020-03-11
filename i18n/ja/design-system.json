@@ -131,6 +131,7 @@
   "notifications-wall-post": "{firstUser}さんが{secondUser}さんのウォールに<b>新しいメッセージ</b>を投稿しました<br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser}さんが{secondUser}さんのメッセージに<b>返信</b>しました<br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser}さんと他{number}人が{secondUser}さんのウォールに<b>返信</b>しました<br><br> {postTitle}", 
+  "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message <br><br> {postTitle}", 
   "now-label": "たった今", 
   "wds-avatar-badges-admin-tooltip": "コミュニティ・アドミン", 
   "wds-avatar-badges-content-moderator-tooltip": "コンテンツ・モデレーター", 

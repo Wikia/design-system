@@ -131,6 +131,7 @@
   "notifications-wall-post": "{firstUser} zostawił <b>nową wiadomość</b> na tablicy {secondUser}<br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>odpowiedział</b> na wiadomość {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} i {number} innych użytkowników <b>odpowiedziało</b> na wiadomość na tablicy {secondUser} <br><br> {postTitle}", 
+  "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message <br><br> {postTitle}", 
   "now-label": "teraz", 
   "wds-avatar-badges-admin-tooltip": "Administrator społeczności", 
   "wds-avatar-badges-content-moderator-tooltip": "Moderator treści", 

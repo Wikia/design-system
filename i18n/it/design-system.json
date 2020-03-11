@@ -131,6 +131,7 @@
   "notifications-wall-post": "{firstUser} ha lasciato un <b>nuovo messaggio</b> nella bacheca di {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>ha risposto</b> al messaggio di {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} e {number} altri utenti <b>hanno risposto</b> nella bacheca di {secondUser} <br><br> {postTitle}", 
+  "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message <br><br> {postTitle}", 
   "now-label": "adesso", 
   "wds-avatar-badges-admin-tooltip": "Amministratore della wiki", 
   "wds-avatar-badges-content-moderator-tooltip": "Moderatore di contenuti", 
