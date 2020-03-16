@@ -129,6 +129,7 @@
   "notifications-reply-upvote-single-user-no-title": "1 gebruiker <b>stemde</b> voor je reactie", 
   "notifications-reply-upvote-single-user-with-title": "1 gebruiker <b>stemde</b> voor je reactie op {postTitle}", 
   "notifications-wall-post": "{firstUser} left a <b>new message</b> on {secondUser}'s wall <br><br> {postTitle}", 
+  "notifications-wall-post-removed": "<b>Message removed</b> from {user}'s wall <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>replied</b> to {secondUser}'s message <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} and {number} other users <b>replied</b> to {secondUser}'s wall <br><br> {postTitle}", 
   "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message <br><br> {postTitle}", 
