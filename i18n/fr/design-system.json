@@ -126,7 +126,7 @@
   "notifications-wall-post": "{firstUser} a laissé un <b>nouveau message</b> sur le mur de {secondUser} <br><br> {postTitle}", 
   "notifications-wall-post-removed": "<b>Message supprimé</b> du mur de {user} <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>a répondu</b> au message de {secondUser} <br><br> {postTitle}", 
-  "notifications-wall-reply-multiple-users": "{firstUser} et {number} autres utilisateurs <b>ont répondu</b> au mur de {secondUser} <br><br> {postTitle}", 
+  "notifications-wall-reply-multiple-users": "{firstUser} et {number} autres utilisateurs <b>ont répondu</b> sur le mur de {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply-own-message": "{user} <b>a répondu</b> à votre message <br><br> {postTitle}", 
   "now-label": "maintenant", 
   "wds-avatar-badges-admin-tooltip": "Administrateur de la communauté", 
