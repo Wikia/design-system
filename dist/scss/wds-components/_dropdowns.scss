@@ -18,16 +18,18 @@
 		background-color: $wds-color-white;
 		border: $wds-dropdown-border-width solid $wds-color-faint-gray;
 		border-radius: $wds-dropdown-border-radius;
-		display: none;
-		left: 50%;
+		display: inline-block;
+		left: -500px;
 		// it's for long dropdowns toggles, to make sure dropdown content is always below the nodge
 		min-width: 70%;
 		// we assume that there will be regular size .wds-list inside the dropdown content
 		padding: $wds-dropdown-padding - $wds-list-item-vertical-padding 0;
 		position: absolute;
-		top: 100%;
+		top: -500px;
 		transform: translateX(-50%);
 		z-index: $content-z-index;
+		visibility: hidden;
+		transition: all 0s;
 
 		&.wds-is-right-aligned {
 			@include is-right-aligned;
@@ -85,15 +87,16 @@
 	}
 
 	&::before, &::after {
-		bottom: -$wds-dropdown-border-width;
+		bottom: -500px;
 		content: '';
-		display: none;
+		display: block;
 		height: 0;
-		left: 50%;
+		left: -500px;
 		pointer-events: none;
 		position: absolute;
 		width: 0;
 		z-index: $content-z-index + 1;
+		visibility: hidden;
 	}
 
 	&::after {
@@ -112,12 +115,18 @@
 	&:not(.wds-is-touch-device):not(.wds-is-not-hoverable):hover {
 		&:not(.wds-no-chevron) {
 			&::before, &::after {
-				display: block;
+				bottom: -$wds-dropdown-border-width;
+				left: 50%;
+				visibility: visible;
+				transition-delay: 0.1s;
 			}
 		}
 
 		.wds-dropdown__content {
-			display: inline-block;
+			visibility: visible;
+			transition-delay: 0.1s;
+			top: 100%;
+			left: 50%;
 		}
 
 		.wds-dropdown__toggle-chevron {
@@ -126,7 +135,7 @@
 
 		&.wds-has-shadow, &.wds-has-dark-shadow {
 			&::before {
-				display: none;
+				visibility: hidden;
 			}
 		}
 	}
