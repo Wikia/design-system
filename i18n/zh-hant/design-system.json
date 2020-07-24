@@ -98,7 +98,7 @@
   "global-navigation-wikis-fandom-university": "FANDOM課堂", 
   "global-navigation-wikis-header": "Wiki", 
   "hours-ago": "{hours}小時前", 
-  "license-description": "除非特別說明，社區內容使用{license}授權許可。", 
+  "license-description": "除非特別說明，社區內容使用{license} 授權許可。", 
   "minutes-ago": "{minutes}分鐘前", 
   "notifications-mark-all-as-read": "標記全部為已讀", 
   "notifications-no-notifications-message": "沒有通知。", 
@@ -134,6 +134,7 @@
   "wds-avatar-badges-discussion-moderator-tooltip": "話題版主", 
   "wds-avatar-badges-global-discussions-moderator-tooltip": "全域話題版主", 
   "wds-avatar-badges-helper-tooltip": "FANDOM助手", 
+  "wds-avatar-badges-soap-tooltip": "SOAP", 
   "wds-avatar-badges-staff-tooltip": "FANDOM工作人員", 
   "wds-avatar-badges-vstf-tooltip": "反破壞小組"
 }

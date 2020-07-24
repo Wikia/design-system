@@ -98,7 +98,7 @@
   "global-navigation-wikis-fandom-university": "Fandomユニバーシティ", 
   "global-navigation-wikis-header": "Wiki", 
   "hours-ago": "{hours}時間前", 
-  "license-description": "特に記載のない限り、コミュニティのコンテンツは{license}ライセンスの下で利用可能です。", 
+  "license-description": "特に記載のない限り、コミュニティのコンテンツは{license} ライセンスの下で利用可能です。", 
   "minutes-ago": "{minutes}分前", 
   "notifications-mark-all-as-read": "すべての通知を確認済みにする", 
   "notifications-no-notifications-message": "新しい通知はありません。", 
@@ -134,6 +134,7 @@
   "wds-avatar-badges-discussion-moderator-tooltip": "ディスカッション・モデレーター", 
   "wds-avatar-badges-global-discussions-moderator-tooltip": "グローバル・ディスカッション・モデレーター", 
   "wds-avatar-badges-helper-tooltip": "Fandomヘルパー", 
+  "wds-avatar-badges-soap-tooltip": "SOAP", 
   "wds-avatar-badges-staff-tooltip": "Fandomスタッフ", 
   "wds-avatar-badges-vstf-tooltip": "VSTF"
 }

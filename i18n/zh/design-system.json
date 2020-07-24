@@ -98,7 +98,7 @@
   "global-navigation-wikis-fandom-university": "FANDOM课堂", 
   "global-navigation-wikis-header": "Wiki", 
   "hours-ago": "{hours}小时", 
-  "license-description": "除了特别提示，社区内容遵循{license}授权许可。", 
+  "license-description": "除了特别提示，社区内容遵循{license} 授权许可。", 
   "minutes-ago": "{minutes}分钟", 
   "notifications-mark-all-as-read": "全部标记为已读", 
   "notifications-no-notifications-message": "没有提醒。", 
@@ -134,6 +134,7 @@
   "wds-avatar-badges-discussion-moderator-tooltip": "话题版主", 
   "wds-avatar-badges-global-discussions-moderator-tooltip": "全网话题版主", 
   "wds-avatar-badges-helper-tooltip": "FANDOM助手", 
+  "wds-avatar-badges-soap-tooltip": "SOAP", 
   "wds-avatar-badges-staff-tooltip": "FANDOM职员", 
   "wds-avatar-badges-vstf-tooltip": "反破坏小组"
 }

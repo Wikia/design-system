@@ -98,7 +98,7 @@
   "global-navigation-wikis-fandom-university": "Université FANDOM", 
   "global-navigation-wikis-header": "Wikis", 
   "hours-ago": "{hours}h", 
-  "license-description": "Sauf mention contraire, le contenu de la communauté est disponible sous licence {license}.", 
+  "license-description": "Sauf mention contraire, le contenu de la communauté est disponible sous licence {license} .", 
   "minutes-ago": "{minutes}min", 
   "notifications-mark-all-as-read": "Tout marquer comme lu", 
   "notifications-no-notifications-message": "Aucune notification reçue.", 
@@ -134,6 +134,7 @@
   "wds-avatar-badges-discussion-moderator-tooltip": "Modérateur de discussions", 
   "wds-avatar-badges-global-discussions-moderator-tooltip": "Modérateur global de discussions", 
   "wds-avatar-badges-helper-tooltip": "Assistant de FANDOM", 
+  "wds-avatar-badges-soap-tooltip": "SOAP", 
   "wds-avatar-badges-staff-tooltip": "Staff de FANDOM", 
   "wds-avatar-badges-vstf-tooltip": "VSTF"
 }
