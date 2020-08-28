@@ -1,5 +1,5 @@
 .wds-tabs {
-	@include tabs-theming($wds-color-black, $wds-fandom-color-link);
+	@include tabs-theming($wds-fandom-color-black, $wds-fandom-color-link);
 
 	align-items: flex-end;
 	display: flex;
