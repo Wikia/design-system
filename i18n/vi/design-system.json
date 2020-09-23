@@ -79,6 +79,7 @@
   "global-navigation-messages-title": "Tin nhắn", 
   "global-navigation-notifications-title": "Thông báo", 
   "global-navigation-search-cancel": "Hủy bỏ", 
+  "global-navigation-search-placeholder-all-wikis": "Search all Wikis...", 
   "global-navigation-search-placeholder-fandom": "Tìm kiếm đa nội dung và các wiki...", 
   "global-navigation-search-placeholder-in-wiki": "Tìm kiếm {sitename}...", 
   "global-navigation-search-placeholder-inactive": "Tìm kiếm", 
