@@ -79,6 +79,7 @@
   "global-navigation-messages-title": "메시지", 
   "global-navigation-notifications-title": "알림", 
   "global-navigation-search-cancel": "취소", 
+  "global-navigation-search-placeholder-all-wikis": "Search all Wikis...", 
   "global-navigation-search-placeholder-fandom": "팬덤 포스트 및 팬덤 위키 검색하기", 
   "global-navigation-search-placeholder-in-wiki": "{sitename}에서 검색하기", 
   "global-navigation-search-placeholder-inactive": "검색", 
