@@ -124,6 +124,7 @@
   "notifications-reply-upvote-multiple-users-with-title": "{number} użytkowników <b>zagłosowało</b> na twoją odpowiedź w {postTitle}", 
   "notifications-reply-upvote-single-user-no-title": "Jeden użytkownik <b>zagłosował</b> na twoją odpowiedź", 
   "notifications-reply-upvote-single-user-with-title": "Jeden użytkownik <b>zagłosował</b> na twoją odpowiedź w {postTitle}", 
+  "notifications-talk-page-message": "{user} zostawił(a) <b>nową wiadomość</b> na twojej stronie dyskusji",
   "notifications-wall-post": "{firstUser} zostawił <b>nową wiadomość</b> na tablicy {secondUser}<br><br> {postTitle}", 
   "notifications-wall-post-removed": "<b>Wiadomość usunięto</b> z tablicy {user} <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>odpowiedział(a)</b> na wiadomość {secondUser} <br><br> {postTitle}", 

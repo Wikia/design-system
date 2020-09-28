@@ -124,6 +124,7 @@
   "notifications-reply-upvote-multiple-users-with-title": "{number} Benutzer haben deiner Antwort auf {postTitle} <b>zugestimmt</b>", 
   "notifications-reply-upvote-single-user-no-title": "1 Benutzer hat deiner Antwort <b>zugestimmt</b>", 
   "notifications-reply-upvote-single-user-with-title": "Ein Benutzer hat deiner Antwort auf {postTitle} <b>zugestimmt</b>", 
+  "notifications-talk-page-message": "{user} hat auf deiner Diskussionsseite eine <b>neue Nachricht</b> hinterlassen",
   "notifications-wall-post": "{firstUser} hat auf der Nachrichtenseite von {secondUser} eine <b>neue Nachricht</b> hinterlassen <br><br> {postTitle}", 
   "notifications-wall-post-removed": "<b>Nachricht</b> {postTitle} wurde von {user}s Nachrichtenseite <b>entfernt</b> <br><br> ", 
   "notifications-wall-reply": "{firstUser} hat auf die Nachricht von {secondUser} <b>geantwortet</b> <br><br> {postTitle}", 

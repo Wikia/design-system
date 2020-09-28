@@ -124,6 +124,7 @@
   "notifications-reply-upvote-multiple-users-with-title": "{number} — столько участников <b>оценили</b> ваш ответ в обсуждении {postTitle}", 
   "notifications-reply-upvote-single-user-no-title": "1 участник <b>оценил</b> ваш ответ", 
   "notifications-reply-upvote-single-user-with-title": "1 участник <b>оценил</b> ваш ответ в обсуждении {postTitle}", 
+  "notifications-talk-page-message": "{user} оставил(а) <b>новое сообщение</b> на вашей странице обсуждения",
   "notifications-wall-post": "{firstUser} оставил(а) <b>новое сообщение</b> на стене {secondUser} <br><br> {postTitle}", 
   "notifications-wall-post-removed": "<b>Сообщение удалено</b> со стены {user} <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>ответил(а)</b> на сообщение {secondUser} <br><br> {postTitle}", 

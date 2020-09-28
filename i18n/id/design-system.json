@@ -124,6 +124,7 @@
   "notifications-reply-upvote-multiple-users-with-title": "{number} pengguna <b>menyukai</b>balasan anda di {postTitle}", 
   "notifications-reply-upvote-single-user-no-title": "1 pengguna <b>menyukai</b> balasan anda", 
   "notifications-reply-upvote-single-user-with-title": "1 pengguna <b>menyukai</b> balasan anda di {postTitle}", 
+  "notifications-talk-page-message": "{user} left a <b>new message</b> on your talk page",
   "notifications-wall-post": "{firstUser} left a <b>new message</b> on {secondUser}'s wall <br><br> {postTitle}", 
   "notifications-wall-post-removed": "<b>Message removed</b> from {user}'s wall <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>replied</b> to {secondUser}'s message <br><br> {postTitle}", 
