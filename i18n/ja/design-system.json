@@ -79,6 +79,7 @@
   "global-navigation-messages-title": "メッセージ", 
   "global-navigation-notifications-title": "通知", 
   "global-navigation-search-cancel": "キャンセル", 
+  "global-navigation-search-placeholder-all-wikis": "すべてのWikiから検索...", 
   "global-navigation-search-placeholder-fandom": "FandomストーリーとWikiを検索...", 
   "global-navigation-search-placeholder-in-wiki": "{sitename}内を検索...", 
   "global-navigation-search-placeholder-inactive": "検索", 

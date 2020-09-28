@@ -79,6 +79,7 @@
   "global-navigation-messages-title": "Wiadomości", 
   "global-navigation-notifications-title": "Powiadomienia", 
   "global-navigation-search-cancel": "Anuluj", 
+  "global-navigation-search-placeholder-all-wikis": "Szukaj na wszystkich wiki…", 
   "global-navigation-search-placeholder-fandom": "Szukaj wieści i wiki...", 
   "global-navigation-search-placeholder-in-wiki": "Szukaj na {sitename}...", 
   "global-navigation-search-placeholder-inactive": "Szukaj", 
