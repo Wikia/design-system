@@ -79,6 +79,7 @@
   "global-navigation-messages-title": "Berichten", 
   "global-navigation-notifications-title": "Meldingen", 
   "global-navigation-search-cancel": "Annuleer", 
+  "global-navigation-search-placeholder-all-wikis": "Search all Wikis...", 
   "global-navigation-search-placeholder-fandom": "Zoek in artikelen en Wiki's...", 
   "global-navigation-search-placeholder-in-wiki": "Zoek in {sitename}...", 
   "global-navigation-search-placeholder-inactive": "Zoek", 

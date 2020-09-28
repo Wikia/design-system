@@ -79,6 +79,7 @@
   "global-navigation-messages-title": "Viestit", 
   "global-navigation-notifications-title": "Ilmoitukset", 
   "global-navigation-search-cancel": "Peruuta", 
+  "global-navigation-search-placeholder-all-wikis": "Search all Wikis...", 
   "global-navigation-search-placeholder-fandom": "Hae tarinoita ja wikejä...", 
   "global-navigation-search-placeholder-in-wiki": "Hae {sitename}stä...", 
   "global-navigation-search-placeholder-inactive": "Hae", 
