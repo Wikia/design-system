@@ -123,6 +123,7 @@
   "notifications-reply-upvote-multiple-users-with-title": "{number} utilisateurs <b>ont voté pour</b> votre réponse à {postTitle}.", 
   "notifications-reply-upvote-single-user-no-title": "1 utilisateur <b>a voté pour</b> votre réponse.", 
   "notifications-reply-upvote-single-user-with-title": "1 utilisateur <b>a voté pour</b> votre réponse à {postTitle}.", 
+  "notifications-talk-page-message": "{user} a laissé un <b>nouveau message</b> sur votre page de discussion",
   "notifications-wall-post": "{firstUser} a laissé un <b>nouveau message</b> sur le mur de {secondUser} <br><br> {postTitle}", 
   "notifications-wall-post-removed": "<b>Message supprimé</b> du mur de {user} <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>a répondu</b> au message de {secondUser} <br><br> {postTitle}", 

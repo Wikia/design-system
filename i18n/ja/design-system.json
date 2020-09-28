@@ -123,6 +123,7 @@
   "notifications-reply-upvote-multiple-users-with-title": "{number}人のユーザーが、{postTitle}のあなたの返信に<b>「イイね！」</b>しました", 
   "notifications-reply-upvote-single-user-no-title": "1人のユーザーが、あなたの返信に<b>「イイね！」</b>しました", 
   "notifications-reply-upvote-single-user-with-title": "1人のユーザーが、{postTitle}のあなたの返信に<b>「イイね！」</b>しました", 
+  "notifications-talk-page-message": "{user}さんがあなたのトークページに<b>新しいメッセージ</b>を投稿しました",
   "notifications-wall-post": "{firstUser}さんが{secondUser}さんのメッセージウォールに<b>新しいメッセージ</b>を投稿しました<br><br> {postTitle}", 
   "notifications-wall-post-removed": "{user}さんのメッセージウォールから<b>メッセージが削除</b>されました<br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser}さんが{secondUser}さんのメッセージに<b>返信</b>しました<br><br> {postTitle}", 

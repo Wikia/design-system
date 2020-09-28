@@ -123,6 +123,7 @@
   "notifications-reply-upvote-multiple-users-with-title": "{number}个用户<b>赞了</b>你对{postTitle}的回复", 
   "notifications-reply-upvote-single-user-no-title": "1个用户<b>赞了</b>你的回复", 
   "notifications-reply-upvote-single-user-with-title": "1个用户<b>赞了</b>你对{postTitle}的回复", 
+  "notifications-talk-page-message": "{user}在您的讨论页留下了一则<b>新留言</b>",
   "notifications-wall-post": "{firstUser}在{secondUser}的留言墙上留下了<b>新信息</b> <br><br> {postTitle}", 
   "notifications-wall-post-removed": "{user}留言墙上的<b>信息被移除</b><br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser}<b>回复了</b>{secondUser}的信息<br><br> {postTitle}", 
