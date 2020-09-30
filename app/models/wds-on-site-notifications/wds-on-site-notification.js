@@ -21,6 +21,7 @@ export default EmberObject.extend({
 	totalUniqueActors: 1,
 	latestActors: null,
 	uri: null,
+	refersToAuthorId: null,
 
 	init() {
 		this._super(...arguments);
@@ -32,6 +33,7 @@ export default EmberObject.extend({
 			title: get(notificationData, 'refersTo.title'),
 			snippet: get(notificationData, 'refersTo.snippet'),
 			uri: get(notificationData, 'refersTo.uri'),
+			refersToAuthorId: get(notificationData, 'refersTo.createdBy'),
 			latestEventUri: get(notificationData, 'events.latestEvent.uri'),
 			timestamp: convertToTimestamp(get(notificationData, 'events.latestEvent.when')),
 			communityName: get(notificationData, 'community.name'),
@@ -39,7 +41,7 @@ export default EmberObject.extend({
 			isUnread: notificationData.read === false,
 			totalUniqueActors: get(notificationData, 'events.totalUniqueActors'),
 			latestActors: this.createActors(get(notificationData, 'events.latestActors')),
-			type: this.getTypeFromApiData(notificationData)
+			type: this.getTypeFromApiData(notificationData),
 		});
 	},
 
@@ -56,20 +58,25 @@ export default EmberObject.extend({
 	},
 
 	getTypeFromApiData(apiData) {
-		if (apiData.type === 'upvote-notification') {
-			if (apiData.refersTo.type === 'discussion-post') {
-				return notificationTypes.discussionUpvoteReply;
-			} else {
-				return notificationTypes.discussionUpvotePost;
-			}
-		} else if (apiData.type === 'replies-notification') {
-			return notificationTypes.discussionReply;
-		} else if (apiData.type === 'announcement-notification') {
-			return notificationTypes.announcement;
-		} else if (apiData.type === 'post-at-mention-notification') {
-			return notificationTypes.postAtMention;
-		} else if (apiData.type === 'thread-at-mention-notification') {
-			return notificationTypes.threadAtMention;
+		switch (apiData.type) {
+			case 'upvote-notification':
+				return apiData.refersTo.type === 'discussion-post'
+					? notificationTypes.discussionUpvoteReply
+					: notificationTypes.discussionUpvotePost;
+			case 'replies-notification':
+				return notificationTypes.discussionReply;
+			case 'announcement-notification':
+				return notificationTypes.announcement;
+			case 'post-at-mention-notification':
+				return notificationTypes.postAtMention;
+			case 'thread-at-mention-notification':
+				return notificationTypes.threadAtMention;
+			case 'article-comment-reply-notification':
+				return notificationTypes.articleCommentReply;
+			case 'article-comment-at-mention-notification':
+				return notificationTypes.articleCommentAtMention;
+			case 'article-comment-reply-at-mention-notification':
+				return notificationTypes.articleCommentReplyAtMention;
 		}
 	},
 

@@ -25,11 +25,21 @@ export default Component.extend(
 
 			if (this.isCommentNotifictionType(type)) {
 				return 'wds-icons-comment-small';
-			} else if (this.isAnnouncement(type)) {
-				return 'wds-icons-flag-small';
-			} else {
-				return 'wds-icons-heart-small';
 			}
+
+			if (this.isAnnouncement(type)) {
+				return 'wds-icons-flag-small';
+			}
+
+			if (this.isArticleCommentReply(type)) {
+				return 'wds-icons-reply-small';
+			}
+
+			if (this.isArticleCommentAtMention(type) || this.isArticleCommentReplyAtMention(type)) {
+				return 'wds-icons-mention-small';
+			}
+
+			return 'wds-icons-heart-small';
 		}),
 
 		postTitleMarkup: computed('model.title', function () {
@@ -64,17 +74,37 @@ export default Component.extend(
 
 			if (this.isDiscussionReply(type)) {
 				return this.getReplyMessageBody(this.model);
-			} else if (this.isDiscussionPostUpvote(type)) {
-				return this.getPostUpvoteMessageBody(this.model);
-			} else if (this.isDiscussionReplyUpvote(type)) {
-				return this.getReplyUpvoteMessageBody(this.model);
-			} else if (this.isPostAtMention(type)) {
-				return this.getPostAtMentionMessageBody(this.model);
-			} else if (this.isThreadAtMention(type)) {
-				return this.getThreadAtMentionMessageBody(this.model);
-			} else {
-				return null;
 			}
+
+			if (this.isDiscussionPostUpvote(type)) {
+				return this.getPostUpvoteMessageBody(this.model);
+			}
+
+			if (this.isDiscussionReplyUpvote(type)) {
+				return this.getReplyUpvoteMessageBody(this.model);
+			}
+
+			if (this.isPostAtMention(type)) {
+				return this.getPostAtMentionMessageBody(this.model);
+			}
+
+			if (this.isThreadAtMention(type)) {
+				return this.getThreadAtMentionMessageBody(this.model);
+			}
+
+			if (this.isArticleCommentReply(type)) {
+				return this.getArticleCommentReplyMessageBody(this.model);
+			}
+
+			if (this.isArticleCommentAtMention(type)) {
+				return this.getArticleCommentAtMentionMessageBody(this.model);
+			}
+
+			if (this.isArticleCommentReplyAtMention(type)) {
+				return this.getArticleCommentReplyAtMentionMessageBody(this.model);
+			}
+
+			return null;
 		}),
 
 		showAvatars: computed('model.{totalUniqueActors,type}', function () {
@@ -173,6 +203,18 @@ export default Component.extend(
 
 		isThreadAtMention(type) {
 			return type === notificationTypes.threadAtMention;
+		},
+
+		isArticleCommentReply(type) {
+			return type === notificationTypes.articleCommentReply;
+		},
+
+		isArticleCommentAtMention(type) {
+			return type === notificationTypes.articleCommentAtMention;
+		},
+
+		isArticleCommentReplyAtMention(type) {
+			return type === notificationTypes.articleCommentReplyAtMention;
 		},
 
 		getPostUpvoteMessageBody(model) {
@@ -280,6 +322,32 @@ export default Component.extend(
 			return this.getTranslatedMessage('notifications-post-at-mention', {
 				postTitle: this.postTitleMarkup,
 				mentioner: model.get('latestActors.0.name')
+			});
+		},
+
+		getArticleCommentReplyMessageBody(model) {
+			const currentUserId = this.wdsOnSiteNotifications.currentUser.userId;
+			const messageKey = model.get('refersToAuthorId') === currentUserId
+				? 'notifications-article-comment-reply-own-comment'
+				: 'notifications-article-comment-reply-followed-comment';
+
+			return this.getTranslatedMessage(messageKey, {
+				user: model.get('latestActors.0.name'),
+				articleTitle: model.get('title')
+			});
+		},
+
+		getArticleCommentAtMentionMessageBody(model) {
+			return this.getTranslatedMessage('notifications-article-comment-comment-mention', {
+				user: model.get('latestActors.0.name'),
+				articleTitle: model.get('title')
+			});
+		},
+
+		getArticleCommentReplyAtMentionMessageBody(model) {
+			return this.getTranslatedMessage('notifications-article-comment-reply-mention', {
+				user: model.get('latestActors.0.name'),
+				articleTitle: model.get('title')
 			});
 		},
 

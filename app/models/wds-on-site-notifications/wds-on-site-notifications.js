@@ -25,7 +25,10 @@ export default EmberObject.extend({
 			'discussion-post',
 			'announcement-target',
 			'post-at-mention',
-			'thread-at-mention'
+			'thread-at-mention',
+			'article-comment-reply',
+			'article-comment-at-mention',
+			'article-comment-reply-at-mention',
 		];
 
 		return `contentType=${supportedContentTypes.join('&contentType=')}`;
