@@ -23,12 +23,20 @@ export default Component.extend(
 		iconName: computed('model.type', function () {
 			const type = this.get('model.type');
 
-			if (this.isCommentNotifictionType(type)) {
-				return 'wds-icons-comment-small';
-			} else if (this.isAnnouncement(type)) {
-				return 'wds-icons-flag-small';
-			} else {
-				return 'wds-icons-heart-small';
+			switch (type) {
+				case notificationTypes.discussionReply:
+				case notificationTypes.postAtMention:
+				case notificationTypes.threadAtMention:
+					return 'wds-icons-comment-small';
+				case notificationTypes.announcement:
+					return 'wds-icons-flag-small';
+				case notificationTypes.articleCommentReply:
+					return 'wds-icons-reply-small';
+				case notificationTypes.articleCommentAtMention:
+				case notificationTypes.articleCommentReplyAtMention:
+					return 'wds-icons-mention-small';
+				default:
+					return 'wds-icons-heart-small';
 			}
 		}),
 
@@ -42,44 +50,50 @@ export default Component.extend(
 
 		showSnippet: computed('model.{title,type}', function () {
 			// Old discussions posts without title
-			return !this.get('model.title') && !this.isAnnouncement(this.get('model.type'));
+			return !this.get('model.title') && this.get('model.type') !== notificationTypes.announcement;
 		}),
 
 		showLastActor: computed('model.type', function () {
-			return this.isAnnouncement(this.get('model.type'));
+			return this.get('model.type') === notificationTypes.announcement;
 		}),
 
 		text: computed('model', function () {
-
-			if (this.isAnnouncement(this.model.type)) {
+			if (this.model.type === notificationTypes.announcement) {
 				return this.model.snippet;
-			} else {
-				return null;
 			}
+
+			return null;
 		}),
 
 		// Make sure to escape user input
 		textWithHtml: computed('model', function () {
 			const { type } = this.model;
 
-			if (this.isDiscussionReply(type)) {
-				return this.getReplyMessageBody(this.model);
-			} else if (this.isDiscussionPostUpvote(type)) {
-				return this.getPostUpvoteMessageBody(this.model);
-			} else if (this.isDiscussionReplyUpvote(type)) {
-				return this.getReplyUpvoteMessageBody(this.model);
-			} else if (this.isPostAtMention(type)) {
-				return this.getPostAtMentionMessageBody(this.model);
-			} else if (this.isThreadAtMention(type)) {
-				return this.getThreadAtMentionMessageBody(this.model);
-			} else {
-				return null;
+			switch (type) {
+				case notificationTypes.discussionReply:
+					return this.getReplyMessageBody(this.model);
+				case notificationTypes.discussionUpvotePost:
+					return this.getPostUpvoteMessageBody(this.model);
+				case notificationTypes.discussionUpvoteReply:
+					return this.getReplyUpvoteMessageBody(this.model);
+				case notificationTypes.postAtMention:
+					return this.getPostAtMentionMessageBody(this.model);
+				case notificationTypes.threadAtMention:
+					return this.getThreadAtMentionMessageBody(this.model);
+				case notificationTypes.articleCommentReply:
+					return this.getArticleCommentReplyMessageBody(this.model);
+				case notificationTypes.articleCommentAtMention:
+					return this.getArticleCommentAtMentionMessageBody(this.model);
+				case notificationTypes.articleCommentReplyAtMention:
+					return this.getArticleCommentReplyAtMentionMessageBody(this.model);
+				default:
+					return null;
 			}
 		}),
 
 		showAvatars: computed('model.{totalUniqueActors,type}', function () {
 			return this.get('model.totalUniqueActors') > 2 &&
-				this.isDiscussionReply(this.get('model.type'));
+				this.get('model.type') === notificationTypes.discussionReply;
 		}),
 
 		avatars: computed('model', function () {
@@ -145,34 +159,6 @@ export default Component.extend(
 				});
 				this.wdsOnSiteNotifications.markAsRead(this.model);
 			}
-		},
-
-		isCommentNotifictionType(type) {
-			return this.isDiscussionReply(type) || this.isPostAtMention(type) || this.isThreadAtMention(type);
-		},
-
-		isDiscussionReply(type) {
-			return type === notificationTypes.discussionReply;
-		},
-
-		isDiscussionReplyUpvote(type) {
-			return type === notificationTypes.discussionUpvoteReply;
-		},
-
-		isDiscussionPostUpvote(type) {
-			return type === notificationTypes.discussionUpvotePost;
-		},
-
-		isAnnouncement(type) {
-			return type === notificationTypes.announcement;
-		},
-
-		isPostAtMention(type) {
-			return type === notificationTypes.postAtMention;
-		},
-
-		isThreadAtMention(type) {
-			return type === notificationTypes.threadAtMention;
 		},
 
 		getPostUpvoteMessageBody(model) {
@@ -280,6 +266,32 @@ export default Component.extend(
 			return this.getTranslatedMessage('notifications-post-at-mention', {
 				postTitle: this.postTitleMarkup,
 				mentioner: model.get('latestActors.0.name')
+			});
+		},
+
+		getArticleCommentReplyMessageBody(model) {
+			const currentUserId = this.wdsOnSiteNotifications.currentUser.userId;
+			const messageKey = model.get('refersToAuthorId') === currentUserId
+				? 'notifications-article-comment-reply-own-comment'
+				: 'notifications-article-comment-reply-followed-comment';
+
+			return this.getTranslatedMessage(messageKey, {
+				user: model.get('latestActors.0.name'),
+				articleTitle: model.get('title')
+			});
+		},
+
+		getArticleCommentAtMentionMessageBody(model) {
+			return this.getTranslatedMessage('notifications-article-comment-comment-mention', {
+				user: model.get('latestActors.0.name'),
+				articleTitle: model.get('title')
+			});
+		},
+
+		getArticleCommentReplyAtMentionMessageBody(model) {
+			return this.getTranslatedMessage('notifications-article-comment-reply-mention', {
+				user: model.get('latestActors.0.name'),
+				articleTitle: model.get('title')
 			});
 		},
 
