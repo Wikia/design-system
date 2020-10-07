@@ -99,7 +99,7 @@
   "global-navigation-wikis-fandom-university": "Université FANDOM", 
   "global-navigation-wikis-header": "Wikis", 
   "hours-ago": "{hours}h", 
-  "license-description": "Sauf mention contraire, le contenu de la communauté est disponible sous licence {license} .", 
+  "license-description": "Sauf mention contraire, le contenu de la communauté est disponible sous licence {license}.", 
   "minutes-ago": "{minutes}min", 
   "notifications-article-comment-comment-mention": "{user} vous <b>a mentionné</b> dans un commentaire sur l'article : {articleTitle}", 
   "notifications-article-comment-followed-article-comment": "{user} <b>a ajouté un commentaire</b> sur l'article : {articleTitle}", 
