@@ -99,7 +99,7 @@
   "global-navigation-wikis-fandom-university": "Fandomユニバーシティ", 
   "global-navigation-wikis-header": "Wiki", 
   "hours-ago": "{hours}時間前", 
-  "license-description": "特に記載のない限り、コミュニティのコンテンツは{license} ライセンスの下で利用可能です。", 
+  "license-description": "特に記載のない限り、コミュニティのコンテンツは{license}ライセンスの下で利用可能です。", 
   "minutes-ago": "{minutes}分前", 
   "notifications-article-comment-comment-mention": "{user}さんが記事「{articleTitle}」のコメントにあなたの<b>名前を書き込み</b>ました", 
   "notifications-article-comment-followed-article-comment": "{user}さんが記事「{articleTitle}」に<b>コメントを投稿</b>しました", 
