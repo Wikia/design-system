@@ -234,6 +234,14 @@
 					"type": "link-text",
 					"title": {
 						"type": "text",
+						"value": "Cortex RPG"
+					},
+					"href": "https:\/\/www.cortexrpg.com\/"
+				},
+				{
+					"type": "link-text",
+					"title": {
+						"type": "text",
 						"value": "Muthead"
 					},
 					"href": "https:\/\/www.muthead.com\/"
