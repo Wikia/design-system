@@ -40,7 +40,7 @@ export default Component.extend(
 			}
 		}),
 
-		postTitleMarkup: computed('model.title', function () {
+		titleMarkup: computed('model.title', function () {
 			return wrapMeHelper.compute([
 				this.get('model.title')
 			], {
@@ -169,12 +169,12 @@ export default Component.extend(
 			if (hasTitle) {
 				if (hasMultipleUsers) {
 					return this.getTranslatedMessage('notifications-post-upvote-multiple-users-with-title', {
-						postTitle: this.postTitleMarkup,
+						postTitle: this.titleMarkup,
 						number: totalUniqueActors
 					});
 				} else {
 					return this.getTranslatedMessage('notifications-post-upvote-single-user-with-title', {
-						postTitle: this.postTitleMarkup,
+						postTitle: this.titleMarkup,
 					});
 				}
 			} else if (hasMultipleUsers) {
@@ -196,7 +196,7 @@ export default Component.extend(
 			if (hasTitle) {
 				if (hasThreeOrMoreUsers) {
 					return this.getTranslatedMessage('notifications-replied-by-multiple-users-with-title', {
-						postTitle: this.postTitleMarkup,
+						postTitle: this.titleMarkup,
 						mostRecentUser: firstReplierName,
 						number: totalUniqueActors - 1
 					});
@@ -204,12 +204,12 @@ export default Component.extend(
 					return this.getTranslatedMessage('notifications-replied-by-two-users-with-title', {
 						firstUser: firstReplierName,
 						secondUser: model.get('latestActors.1.name'),
-						postTitle: this.postTitleMarkup,
+						postTitle: this.titleMarkup,
 					});
 				} else {
 					return this.getTranslatedMessage('notifications-replied-by-with-title', {
 						user: firstReplierName,
-						postTitle: this.postTitleMarkup,
+						postTitle: this.titleMarkup,
 					});
 				}
 			} else if (hasThreeOrMoreUsers) {
@@ -238,12 +238,12 @@ export default Component.extend(
 			if (hasTitle) {
 				if (hasMultipleUsers) {
 					return this.getTranslatedMessage('notifications-reply-upvote-multiple-users-with-title', {
-						postTitle: this.postTitleMarkup,
+						postTitle: this.titleMarkup,
 						number: totalUniqueActors - 1
 					});
 				} else {
 					return this.getTranslatedMessage('notifications-reply-upvote-single-user-with-title', {
-						postTitle: this.postTitleMarkup,
+						postTitle: this.titleMarkup,
 					});
 				}
 			} else if (hasMultipleUsers) {
@@ -257,14 +257,14 @@ export default Component.extend(
 
 		getPostAtMentionMessageBody(model) {
 			return this.getTranslatedMessage('notifications-reply-at-mention', {
-				postTitle: this.postTitleMarkup,
+				postTitle: this.titleMarkup,
 				mentioner: model.get('latestActors.0.name')
 			});
 		},
 
 		getThreadAtMentionMessageBody(model) {
 			return this.getTranslatedMessage('notifications-post-at-mention', {
-				postTitle: this.postTitleMarkup,
+				postTitle: this.titleMarkup,
 				mentioner: model.get('latestActors.0.name')
 			});
 		},
@@ -277,21 +277,21 @@ export default Component.extend(
 
 			return this.getTranslatedMessage(messageKey, {
 				user: model.get('latestActors.0.name'),
-				articleTitle: model.get('title')
+				articleTitle: this.titleMarkup,
 			});
 		},
 
 		getArticleCommentAtMentionMessageBody(model) {
 			return this.getTranslatedMessage('notifications-article-comment-comment-mention', {
 				user: model.get('latestActors.0.name'),
-				articleTitle: model.get('title')
+				articleTitle: this.titleMarkup,
 			});
 		},
 
 		getArticleCommentReplyAtMentionMessageBody(model) {
 			return this.getTranslatedMessage('notifications-article-comment-reply-mention', {
 				user: model.get('latestActors.0.name'),
-				articleTitle: model.get('title')
+				articleTitle: this.titleMarkup,
 			});
 		},
 
