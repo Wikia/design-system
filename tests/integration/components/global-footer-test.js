@@ -36,7 +36,7 @@ module('Integration | Component | global-footer', function(hooks) {
 			'design-system:global-footer-fandom-overview-header',
 		);
 		assert.equal(GlobalFooter.main.fandom_overview.header, 'design-system:global-footer-fandom-overview-header');
-		assert.equal(GlobalFooter.main.fandom_overview.links.length, 5);
+		assert.equal(GlobalFooter.main.fandom_overview.links.length, 6);
 
 		assert.equal(GlobalFooter.main.follow.header, 'design-system:global-footer-follow-us-header');
 		assert.equal(GlobalFooter.main.follow.links.length, 5);
