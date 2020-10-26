@@ -49,8 +49,6 @@
   "global-footer-full-site-link": "View Full Site",
   "global-footer-mobile-site-link": "View Mobile Site",
   "global-footer-copyright-wikia": "Copyright {date} Fandom, Inc.",
-  "global-footer-wikia-org-logo-aria-label": "Wikia.org homepage",
-  "global-footer-fandom-logo-aria-label": "Fandom homepage",
   "global-footer-fandom-appstore-link-aria-label": "Fandom's Apple Store",
   "global-footer-fandom-googleplay-link-aria-label": "Fandom's Google Play",
   "global-footer-ddb-appstore-link-aria-label": "D&D Beyond's Apple Store",
@@ -77,7 +75,6 @@
   "global-navigation-search-select-in-wiki": "Within This Wiki",
   "global-navigation-search-select-wikis": "For a Wiki",
   "global-navigation-search-aria-label": "Search",
-  "global-navigation-fandom-logo-aria-label": "Fandom homepage",
   "global-navigation-user-help": "Help",
   "global-navigation-user-message-wall": "Message Wall",
   "global-navigation-user-my-preferences": "My Preferences",
@@ -158,5 +155,8 @@
   "minutes-ago": "{minutes}m",
   "now-label": "now",
   "back": "Back",
-  "license-description": "Community content is available under {license} unless otherwise noted."
+  "license-description": "Community content is available under {license} unless otherwise noted.",
+  "wikiaorg-homepage-aria-label": "Wikia.org homepage",
+  "fandom-homepage-aria-label": "Fandom homepage",
+  "gamepedia-homepage-aria-label": "Gamepedia homepage"
 }
