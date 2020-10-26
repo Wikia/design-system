@@ -156,7 +156,7 @@
   "now-label": "now",
   "back": "Back",
   "license-description": "Community content is available under {license} unless otherwise noted.",
-  "wikiaorg-homepage-aria-label": "Wikia.org homepage",
-  "fandom-homepage-aria-label": "Fandom homepage",
-  "gamepedia-homepage-aria-label": "Gamepedia homepage"
+  "wds-wikiaorg-homepage-aria-label": "Wikia.org homepage",
+  "wds-fandom-homepage-aria-label": "Fandom homepage",
+  "wds-gamepedia-homepage-aria-label": "Gamepedia homepage"
 }
