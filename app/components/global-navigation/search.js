@@ -56,13 +56,15 @@ export default Component.extend({
 
 		// key: query string, value: Array<SearchSuggestionItem>
 		this.cachedResults = {};
-		this.setScopeMessage(this.get('searchScope'));
+		this.setScopeMessage(this.getScope());
 	},
 
 	setScopeMessage(scope) {
 		if (scope === "cross-wiki") {
+			this.set('model.placeholder-active.key', "global-navigation-search-placeholder-all-wikis");
 			this.set("searchScopeMessageKey", "global-navigation-search-scope-all-wikis-short");
 		} else {
+			this.set('model.placeholder-active.key', "global-navigation-search-placeholder-in-wiki");
 			this.set("searchScopeMessageKey", "global-navigation-search-scope-this-wiki-short");
 		}
 	},
@@ -78,7 +80,7 @@ export default Component.extend({
 
 	requestSuggestionsFromAPI() {
 		const { query } = this.state;
-		const scope = this.get('searchScope');
+		const scope = this.getScope();
 		const uri = `${this.get('model.suggestions.url')}&scope=${scope}&query=${query}`;
 		const cacheKey = this.getCacheKey(scope, query);
 		/**
@@ -420,41 +422,24 @@ export default Component.extend({
 		}
 	},
 
-	actions: {
-		setScopeTranslations(scope) {
-			if ( scope === "cross-wiki" ) {
-				this.set('model.placeholder-active.key', "global-navigation-search-placeholder-all-wikis");
-				this.set('searchScopeMessageKey', "global-navigation-search-scope-all-wikis-short");
-			} else {
-				this.set('model.placeholder-active.key', "global-navigation-search-placeholder-in-wiki");
-				this.set('searchScopeMessageKey', "global-navigation-search-scope-this-wiki-short");
-			}
-		},
+	getScope() {
+		return this.get('searchScope') === "cross-wiki" ? "cross-wiki" : "internal";
+	},
 
+	actions: {
 		changeSearchScope(scope) {
-			if ( this.get('searchScope') === scope) {
+			if ( this.getScope() === scope) {
 				return;
 			}
 			this.set('searchScope', scope);
 			this.setScopeMessage(scope);
-			if ( scope === "cross-wiki" ) {
-				this.set('model.placeholder-active.key', "global-navigation-search-placeholder-all-wikis");
-			} else {
-				this.set('model.placeholder-active.key', "global-navigation-search-placeholder-in-wiki");
-			}
 
-			this.resetSearchState();
+			this.getSuggestions(scope, this.state.query);
 		},
 
 		openSearch() {
 			this.resetSearchState();
-			if ( this.get('searchScope') === "cross-wiki" ) {
-				this.set('model.placeholder-active.key', "global-navigation-search-placeholder-all-wikis");
-				this.set('searchScopeMessageKey', "global-navigation-search-scope-all-wikis-short");
-			} else {
-				this.set('model.placeholder-active.key', "global-navigation-search-placeholder-in-wiki");
-				this.set('searchScopeMessageKey', "global-navigation-search-scope-this-wiki-short");
-			}
+			this.setScopeMessage(this.getScope());
 			this.set('searchIsActive', true);
 			this.onSearchToggleClicked();
 			this.inputField.focus();
@@ -466,7 +451,7 @@ export default Component.extend({
 				selectedSuggestionIndex: -1
 			});
 
-			this.getSuggestions(this.get('searchScope'), this.state.query);
+			this.getSuggestions(this.getScope(), this.state.query);
 		},
 
 		onCloseSearchClick() {
