@@ -24,7 +24,7 @@
       <scope-dropdown.toggle
               class="wds-global-navigation__search-input-wrapper">
             <span>
-              {{i18n searchScopeMessageKey}}
+              {{i18n searchScopeMessageKey ns="design-system"}}
             </span>
         <Icon
                 @name="wds-icons-dropdown-tiny"
@@ -38,12 +38,12 @@
         <List @linked={{true}} @ellipsis={{true}}>
           <li {{action "changeSearchScope" 'internal' on "click"}}>
             <a>
-              {{i18n "global-navigation-search-scope-this-wiki"}}
+              {{i18n "global-navigation-search-scope-this-wiki" ns="design-system"}}
             </a>
           </li>
           <li {{action "changeSearchScope" 'cross-wiki' on "click"}}>
             <a>
-              {{i18n "global-navigation-search-scope-all-wikis"}}
+              {{i18n "global-navigation-search-scope-all-wikis" ns="design-system"}}
             </a>
           </li>
         </List>
