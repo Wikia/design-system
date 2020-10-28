@@ -60,12 +60,12 @@ export default Component.extend({
 	},
 
 	setScopeMessage(scope) {
-		if (scope === "cross-wiki") {
-			this.set('model.placeholder-active.key', "global-navigation-search-placeholder-all-wikis");
-			this.set("searchScopeMessageKey", "global-navigation-search-scope-all-wikis-short");
+		if (scope === 'cross-wiki') {
+			this.set('model.placeholder-active.key', 'global-navigation-search-placeholder-all-wikis');
+			this.set('searchScopeMessageKey', 'global-navigation-search-scope-all-wikis-short');
 		} else {
-			this.set('model.placeholder-active.key', "global-navigation-search-placeholder-in-wiki");
-			this.set("searchScopeMessageKey", "global-navigation-search-scope-this-wiki-short");
+			this.set('model.placeholder-active.key', 'global-navigation-search-placeholder-in-wiki');
+			this.set('searchScopeMessageKey', 'global-navigation-search-scope-this-wiki-short');
 		}
 	},
 
@@ -102,9 +102,10 @@ export default Component.extend({
 					if (this.isDestroyed) {
 						return;
 					}
+
 					return response.json().then((data) => {
 						let suggestions = [];
-						if (scope === "cross-wiki") {
+						if (scope === 'cross-wiki') {
 							suggestions = data.data.map((suggestion) => {
 								return EmberObject.create({
 									title: suggestion.title,
@@ -218,7 +219,7 @@ export default Component.extend({
 				className: 'wds-global-navigation__search-suggestion-highlight'
 			});
 
-		if (scope === "cross-wiki") {
+		if (scope === 'cross-wiki') {
 			suggestions.forEach(
 				/**
 				 * @param {SearchSuggestionItem} suggestion
@@ -346,7 +347,7 @@ export default Component.extend({
 	},
 
 	getCacheKey(scope, query) {
-		return String.prototype.concat("scope: ", scope, ", query: ", query)
+		return String.prototype.concat('scope: ', scope, '', query: '', query)
 	},
 
 	/**
@@ -423,12 +424,12 @@ export default Component.extend({
 	},
 
 	getScope() {
-		return this.get('searchScope') === "cross-wiki" ? "cross-wiki" : "internal";
+		return this.get('searchScope') === 'cross-wiki' ? 'cross-wiki' : 'internal';
 	},
 
 	actions: {
 		changeSearchScope(scope) {
-			if ( this.getScope() === scope) {
+			if (this.getScope() === scope) {
 				return;
 			}
 			this.set('searchScope', scope);
