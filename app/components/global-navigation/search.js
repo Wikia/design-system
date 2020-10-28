@@ -347,7 +347,7 @@ export default Component.extend({
 	},
 
 	getCacheKey(scope, query) {
-		return String.prototype.concat('scope: ', scope, '', query: '', query)
+		return String.prototype.concat('scope: ', scope, ' query: ', query)
 	},
 
 	/**
