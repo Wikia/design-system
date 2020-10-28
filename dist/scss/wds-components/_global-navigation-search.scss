@@ -1,10 +1,25 @@
 $toggle-active-margin-right: 17px;
+
 .wds-global-navigation__search {
 	align-items: center;
 	color: $wds-fandom-color-aqua;
 	display: flex;
 	height: 100%;
 	justify-content: flex-end;
+
+	&-scope-dropdown {
+		&::before, &::after {
+			z-index: 150 + 1;
+		}
+
+		&::after {
+			bottom: -13px !important;
+		}
+
+		&::before {
+			bottom: -12px;
+		}
+	}
 
 	&-container {
 		height: 100%;

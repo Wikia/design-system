@@ -19,9 +19,7 @@
   </div>
 
   {{#if showSearchScope}}
-    <Dropdown
-            @noChevron={{true}}
-            class="wds-global-navigation__search-scope-dropdown" as |scope-dropdown|>
+    <Dropdown class="wds-global-navigation__search-scope-dropdown" as |scope-dropdown|>
       <scope-dropdown.toggle
               class="wds-global-navigation__search-input-wrapper">
             <span>
@@ -32,7 +30,7 @@
                 @size="tiny"
                 class="wds-dropdown__toggle-chevron"
         />
-        &nbsp;|&nbsp;
+        &nbsp;
         <span class="wds-global-navigation__search-input"> </span>
       </scope-dropdown.toggle>
       <scope-dropdown.content style="z-index: 101" @class="wds-is-not-scrollable">
