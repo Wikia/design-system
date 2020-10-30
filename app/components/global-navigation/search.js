@@ -230,7 +230,7 @@ export default Component.extend({
 						uri: suggestion.url,
 						text: suggestion.title.replace(highlightRegexp, highlighted),
 						sitename: suggestion.sitename
-				 	});
+					});
 				}
 			);
 		} else {
