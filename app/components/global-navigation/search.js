@@ -60,12 +60,15 @@ export default Component.extend({
 	},
 
 	setScopeMessage(scope) {
+		const PLACEHOLDER_MESSAGE = 'model.placeholder-active.key';
+		const SCOPE_MESSAGE = 'searchScopeMessageKey';
+
 		if (scope === 'cross-wiki') {
-			this.set('model.placeholder-active.key', 'global-navigation-search-placeholder-all-wikis');
-			this.set('searchScopeMessageKey', 'global-navigation-search-scope-all-wikis-short');
+			this.set(PLACEHOLDER_MESSAGE, 'global-navigation-search-placeholder-all-wikis');
+			this.set(SCOPE_MESSAGE, 'global-navigation-search-scope-cross-wiki-short');
 		} else {
-			this.set('model.placeholder-active.key', 'global-navigation-search-placeholder-in-wiki');
-			this.set('searchScopeMessageKey', 'global-navigation-search-scope-this-wiki-short');
+			this.set(PLACEHOLDER_MESSAGE, 'global-navigation-search-placeholder-in-wiki');
+			this.set(SCOPE_MESSAGE, 'global-navigation-search-scope-internal-wiki-short');
 		}
 	},
 
