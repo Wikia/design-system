@@ -146,7 +146,7 @@
   "notifications-wall-post": "{firstUser} hat auf der Nachrichtenseite von {wallOwner} eine <b>neue Nachricht</b> hinterlassen <br><br> {postTitle}",
   "notifications-wall-post-removed": "<b>Nachricht</b> {postTitle} wurde von {wallOwner}s Nachrichtenseite <b>entfernt</b> <br><br> ",
   "notifications-wall-reply": "{firstUser} hat auf der Nachrichtenseite von {wallOwner} auf die Nachricht von {secondUser} <b>geantwortet</b> <br><br> {postTitle}",
- "notifications-wall-reply-multiple-users": "{firstUser} und {number} weitere(r) Benutzer hat/haben auf der Nachrichtenseite von {wallOwner} auf die Nachricht von {secondUser} <b>geantwortet</b> <br><br> {postTitle}",
+  "notifications-wall-reply-multiple-users": "{firstUser} und {number} weitere(r) Benutzer hat/haben auf der Nachrichtenseite von {wallOwner} auf die Nachricht von {secondUser} <b>geantwortet</b> <br><br> {postTitle}",
   "notifications-wall-reply-own-message": "{user} hat auf der Nachrichtenseite von {wallOwner} auf deine Nachricht <b>geantwortet</b> <br><br> {postTitle}",
   "now-label": "gerade eben", 
   "wds-avatar-badges-admin-tooltip": "Admin", 
