@@ -45,7 +45,6 @@
   "global-footer-ddb-googleplay-link-aria-label": "D&D Beyond в Google Play", 
   "global-footer-fandom-appstore-link-aria-label": "Фэндом в Apple Store", 
   "global-footer-fandom-googleplay-link-aria-label": "Фэндом в Google Play", 
-  "global-footer-fandom-logo-aria-label": "Домашняя страница Фэндома", 
   "global-footer-fandom-overview-header": "Наши ресурсы", 
   "global-footer-fandom-overview-link-explore-wikis": "Вики", 
   "global-footer-fandom-overview-link-vertical-games": "Видеоигры", 
@@ -79,14 +78,12 @@
   "global-footer-site-overview-link-privacy-policy": "Конфиден­циальность", 
   "global-footer-site-overview-link-terms-of-use": "Условия использования", 
   "global-footer-site-overview-link-wikia-inc": "© {year} Fandom, Inc.", 
-  "global-footer-wikia-org-logo-aria-label": "Домашняя страница Wikia.org", 
   "global-navigation-anon-my-account": "Мой аккаунт", 
   "global-navigation-anon-register": "Зарегистрироваться", 
   "global-navigation-anon-register-description": "Нет учётной записи?", 
   "global-navigation-anon-sign-in": "Войти", 
   "global-navigation-aria-label": "Навигация по Фэндому", 
   "global-navigation-create-wiki-link-start-wikia": "Создать вики", 
-  "global-navigation-fandom-logo-aria-label": "Домашняя страница Фэндома", 
   "global-navigation-fandom-overview-link-vertical-games": "Видеоигры", 
   "global-navigation-fandom-overview-link-vertical-movies": "Кино", 
   "global-navigation-fandom-overview-link-vertical-tv": "ТВ", 
@@ -159,5 +156,8 @@
   "wds-avatar-badges-helper-tooltip": "Помощник ФЭНДОМА", 
   "wds-avatar-badges-soap-tooltip": "SOAP", 
   "wds-avatar-badges-staff-tooltip": "Сотрудник ФЭНДОМА", 
-  "wds-avatar-badges-vstf-tooltip": "VSTF"
+  "wds-avatar-badges-vstf-tooltip": "VSTF", 
+  "wds-fandom-homepage-aria-label": "Домашняя страница Фэндома", 
+  "wds-gamepedia-homepage-aria-label": "Домашняя страница Gamepedia", 
+  "wds-wikiaorg-homepage-aria-label": "Домашняя страница Wikia.org"
 }

@@ -45,7 +45,6 @@
   "global-footer-ddb-googleplay-link-aria-label": "D&D Beyond's Google Play", 
   "global-footer-fandom-appstore-link-aria-label": "Fandom's Apple Store", 
   "global-footer-fandom-googleplay-link-aria-label": "Fandom's Google Play", 
-  "global-footer-fandom-logo-aria-label": "Fandom homepage", 
   "global-footer-fandom-overview-header": "Explore properties", 
   "global-footer-fandom-overview-link-explore-wikis": "위키", 
   "global-footer-fandom-overview-link-vertical-games": "게임", 
@@ -79,14 +78,12 @@
   "global-footer-site-overview-link-privacy-policy": "개인정보 보호정책", 
   "global-footer-site-overview-link-terms-of-use": "이용 약관", 
   "global-footer-site-overview-link-wikia-inc": "Copyright {year} Fandom, Inc.", 
-  "global-footer-wikia-org-logo-aria-label": "Wikia.org homepage", 
   "global-navigation-anon-my-account": "내 계정", 
   "global-navigation-anon-register": "가입하기", 
   "global-navigation-anon-register-description": "아직 계정이 없으신가요?", 
   "global-navigation-anon-sign-in": "로그인", 
   "global-navigation-aria-label": "Fandom navigation", 
   "global-navigation-create-wiki-link-start-wikia": "새 위키 만들기", 
-  "global-navigation-fandom-logo-aria-label": "Fandom homepage", 
   "global-navigation-fandom-overview-link-vertical-games": "게임", 
   "global-navigation-fandom-overview-link-vertical-movies": "영화", 
   "global-navigation-fandom-overview-link-vertical-tv": "TV", 
@@ -159,5 +156,8 @@
   "wds-avatar-badges-helper-tooltip": "팬덤 헬퍼", 
   "wds-avatar-badges-soap-tooltip": "SOAP", 
   "wds-avatar-badges-staff-tooltip": "팬덤 스태프", 
-  "wds-avatar-badges-vstf-tooltip": "VSTF"
+  "wds-avatar-badges-vstf-tooltip": "VSTF", 
+  "wds-fandom-homepage-aria-label": "Fandom homepage", 
+  "wds-gamepedia-homepage-aria-label": "Gamepedia homepage", 
+  "wds-wikiaorg-homepage-aria-label": "Wikia.org homepage"
 }

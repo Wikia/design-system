@@ -45,7 +45,6 @@
   "global-footer-ddb-googleplay-link-aria-label": "D&D Beyond Google Play", 
   "global-footer-fandom-appstore-link-aria-label": "Fandom Apple Store", 
   "global-footer-fandom-googleplay-link-aria-label": "Fandom Google Play", 
-  "global-footer-fandom-logo-aria-label": "Strona główna Fandomu", 
   "global-footer-fandom-overview-header": "Odwiedź nasze strony", 
   "global-footer-fandom-overview-link-explore-wikis": "Wiki", 
   "global-footer-fandom-overview-link-vertical-games": "Gry", 
@@ -79,14 +78,12 @@
   "global-footer-site-overview-link-privacy-policy": "Polityka prywatności", 
   "global-footer-site-overview-link-terms-of-use": "Zasady Użytkowania", 
   "global-footer-site-overview-link-wikia-inc": "Copyright {year} Fandom, Inc.", 
-  "global-footer-wikia-org-logo-aria-label": "Strona główna Wikia.org", 
   "global-navigation-anon-my-account": "Moje konto", 
   "global-navigation-anon-register": "Zarejestruj się", 
   "global-navigation-anon-register-description": "Nie masz konta?", 
   "global-navigation-anon-sign-in": "Zaloguj się", 
   "global-navigation-aria-label": "Nawigacja Fandomu", 
   "global-navigation-create-wiki-link-start-wikia": "Utwórz wiki", 
-  "global-navigation-fandom-logo-aria-label": "Strona główna Fandomu", 
   "global-navigation-fandom-overview-link-vertical-games": "Gry", 
   "global-navigation-fandom-overview-link-vertical-movies": "Filmy", 
   "global-navigation-fandom-overview-link-vertical-tv": "TV", 
@@ -159,5 +156,8 @@
   "wds-avatar-badges-helper-tooltip": "Helper", 
   "wds-avatar-badges-soap-tooltip": "SOAP", 
   "wds-avatar-badges-staff-tooltip": "FANDOM Staff", 
-  "wds-avatar-badges-vstf-tooltip": "VSTF"
+  "wds-avatar-badges-vstf-tooltip": "VSTF", 
+  "wds-fandom-homepage-aria-label": "Strona główna Fandomu", 
+  "wds-gamepedia-homepage-aria-label": "Strona główna Gamepedii", 
+  "wds-wikiaorg-homepage-aria-label": "Strona główna Wikia.org"
 }
