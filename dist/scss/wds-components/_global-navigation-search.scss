@@ -9,7 +9,7 @@ $toggle-active-margin-right: 17px;
 
 	&-scope-dropdown {
 		&::before, &::after {
-			z-index: 150 + 1;
+			z-index: 151;
 		}
 
 		&::after {
@@ -114,6 +114,10 @@ $toggle-active-margin-right: 17px;
 				color: darken($wds-color-white, 15%);
 			}
 		}
+	}
+
+	&-suggestions__community-name {
+		float: right;
 	}
 
 	&-suggestions.wds-dropdown__content {
