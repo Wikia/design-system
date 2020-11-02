@@ -45,7 +45,6 @@
   "global-footer-ddb-googleplay-link-aria-label": "D&D BeyondのGoogle Play", 
   "global-footer-fandom-appstore-link-aria-label": "FandomのApple App Store", 
   "global-footer-fandom-googleplay-link-aria-label": "FandomのGoogle Play", 
-  "global-footer-fandom-logo-aria-label": "Fandomホームページ", 
   "global-footer-fandom-overview-header": "各種プロパティ", 
   "global-footer-fandom-overview-link-explore-wikis": "Wiki", 
   "global-footer-fandom-overview-link-vertical-games": "ゲーム", 
@@ -79,14 +78,12 @@
   "global-footer-site-overview-link-privacy-policy": "プライバシー", 
   "global-footer-site-overview-link-terms-of-use": "利用規約", 
   "global-footer-site-overview-link-wikia-inc": "Copyright {year} Fandom, Inc.", 
-  "global-footer-wikia-org-logo-aria-label": "Wikia.orgホームページ", 
   "global-navigation-anon-my-account": "アカウント", 
   "global-navigation-anon-register": "登録", 
   "global-navigation-anon-register-description": "アカウントをお持ちでない場合", 
   "global-navigation-anon-sign-in": "ログイン", 
   "global-navigation-aria-label": "Fandomのナビゲーション", 
   "global-navigation-create-wiki-link-start-wikia": "Wikiをはじめよう", 
-  "global-navigation-fandom-logo-aria-label": "Fandomホームページ", 
   "global-navigation-fandom-overview-link-vertical-games": "ゲーム", 
   "global-navigation-fandom-overview-link-vertical-movies": "映画", 
   "global-navigation-fandom-overview-link-vertical-tv": "TV", 
@@ -159,5 +156,8 @@
   "wds-avatar-badges-helper-tooltip": "Fandomヘルパー", 
   "wds-avatar-badges-soap-tooltip": "SOAP", 
   "wds-avatar-badges-staff-tooltip": "Fandomスタッフ", 
-  "wds-avatar-badges-vstf-tooltip": "VSTF"
+  "wds-avatar-badges-vstf-tooltip": "VSTF", 
+  "wds-fandom-homepage-aria-label": "Fandomホームページ", 
+  "wds-gamepedia-homepage-aria-label": "Gamepediaホームページ", 
+  "wds-wikiaorg-homepage-aria-label": "Wikia.orgホームページ"
 }

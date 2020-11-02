@@ -45,7 +45,6 @@
   "global-footer-ddb-googleplay-link-aria-label": "D&D Beyond's Google Play", 
   "global-footer-fandom-appstore-link-aria-label": "Fandom's Apple Store", 
   "global-footer-fandom-googleplay-link-aria-label": "Fandom's Google Play", 
-  "global-footer-fandom-logo-aria-label": "Fandom homepage", 
   "global-footer-fandom-overview-header": "Explore properties", 
   "global-footer-fandom-overview-link-explore-wikis": "Wiki", 
   "global-footer-fandom-overview-link-vertical-games": "Permainan", 
@@ -79,14 +78,12 @@
   "global-footer-site-overview-link-privacy-policy": "Kebijakan Privasi", 
   "global-footer-site-overview-link-terms-of-use": "Syarat Penggunanaan", 
   "global-footer-site-overview-link-wikia-inc": "Hak Cipta {year} Wikia. inc.", 
-  "global-footer-wikia-org-logo-aria-label": "Wikia.org homepage", 
   "global-navigation-anon-my-account": "Akun Saya", 
   "global-navigation-anon-register": "Daftar", 
   "global-navigation-anon-register-description": "Belum mempunyai akun?", 
   "global-navigation-anon-sign-in": "Mendaftat", 
   "global-navigation-aria-label": "Fandom navigation", 
   "global-navigation-create-wiki-link-start-wikia": "Memulai Wiki", 
-  "global-navigation-fandom-logo-aria-label": "Fandom homepage", 
   "global-navigation-fandom-overview-link-vertical-games": "Permainan", 
   "global-navigation-fandom-overview-link-vertical-movies": "Film", 
   "global-navigation-fandom-overview-link-vertical-tv": "TV", 
@@ -159,5 +156,8 @@
   "wds-avatar-badges-helper-tooltip": "Penunjang FANDOM", 
   "wds-avatar-badges-soap-tooltip": "SOAP", 
   "wds-avatar-badges-staff-tooltip": "Staf FANDOM", 
-  "wds-avatar-badges-vstf-tooltip": "VSTF"
+  "wds-avatar-badges-vstf-tooltip": "VSTF", 
+  "wds-fandom-homepage-aria-label": "Fandom homepage", 
+  "wds-gamepedia-homepage-aria-label": "Gamepedia homepage", 
+  "wds-wikiaorg-homepage-aria-label": "Wikia.org homepage"
 }
