@@ -8,4 +8,6 @@ export default {
 	articleCommentReply: 'article-comment-reply',
 	articleCommentAtMention: 'article-comment-at-mention',
 	articleCommentReplyAtMention: 'article-comment-reply-at-mention',
+	messageWallPost: 'message-wall-post',
+	messageWallThread: 'message-wall-thread',
 };
