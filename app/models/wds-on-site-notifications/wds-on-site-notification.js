@@ -42,6 +42,7 @@ export default EmberObject.extend({
 			totalUniqueActors: get(notificationData, 'events.totalUniqueActors'),
 			latestActors: this.createActors(get(notificationData, 'events.latestActors')),
 			type: this.getTypeFromApiData(notificationData),
+			metadata: this.getMetadata(notificationData),
 		});
 	},
 
@@ -84,6 +85,18 @@ export default EmberObject.extend({
 			case 'wall-post-removed-notification':
 				return notificationTypes.messageWallPostRemoved;
 		}
+	},
+
+	getMetadata(notification) {
+		let metadata =
+			typeof notification.metadata === 'undefined' || notification.metadata === null ? null : notification.metadata;
+		if (typeof metadata === 'string') {
+			try {
+				metadata = JSON.parse(metadata);
+			} catch (e) {}
+		}
+		// Caveat: if the metadata was not serialized JSON, a string could be returned instead of an object
+		return metadata;
 	},
 
 	markAsRead(willUnloadPage) {
