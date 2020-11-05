@@ -79,8 +79,10 @@ export default EmberObject.extend({
 				return notificationTypes.articleCommentReplyAtMention;
 			case 'message-wall-post-notification':
 				return notificationTypes.messageWallPost;
-			case 'message-wall-thread-notification':
+			case 'message-wall-post-removed-notification':
 				return notificationTypes.messageWallThread;
+			case 'message-wall-reply-notification':
+				return notificationTypes.messageWallPost;
 		}
 	},
 
