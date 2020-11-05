@@ -86,12 +86,6 @@ export default Component.extend(
 					return this.getArticleCommentAtMentionMessageBody(this.model);
 				case notificationTypes.articleCommentReplyAtMention:
 					return this.getArticleCommentReplyAtMentionMessageBody(this.model);
-				case notificationTypes.messageWallPost:
-					return this.getMessageWallPostBody(this.model);
-				case notificationTypes.messageWallReply:
-					return this.getMessageWallReplyBody(this.model);
-				case notificationTypes.messageWallPostRemovedBody:
-					return this.getMessageWallPostRemovedBody();
 				default:
 					return null;
 			}
