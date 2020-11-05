@@ -96,7 +96,7 @@ export default EmberObject.extend({
 
 			return notification;
 		});
-
+		console.log('notification-models::', notificationModels);
 		this.data.pushObjects(notificationModels);
 	},
 
