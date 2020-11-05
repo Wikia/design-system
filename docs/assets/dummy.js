@@ -251,7 +251,7 @@ return this.fetch.fetchFromOnSiteNotifications(e).then(function(e){return t.addN
 return e.isUnread?e.markAsRead(t).then(function(){n.decrementProperty("unreadCount")}):Ember.RSVP.resolve()},markAllAsRead:function(){var e=this,t=this.getNewestNotificationISODate()
 return this.fetch.fetchFromOnSiteNotifications("/notifications/mark-all-as-read",{body:JSON.stringify({since:t}),headers:{"Content-Type":"application/json"},method:"POST"}).then(function(){e.data.setEach("isUnread",!1),e.set("unreadCount",0)})},addNotifications:function(e){var t=this,a=e.map(function(e){var a=n.default.create(Ember.getOwner(t).ownerInjection())
 return a.setNormalizedData(e),a})
-this.data.pushObjects(a)},loadUnreadNotificationCount:function(){var e=this
+console.log("notification-models::",a),this.data.pushObjects(a)},loadUnreadNotificationCount:function(){var e=this
 return this.fetch.fetchFromOnSiteNotifications("/notifications/unread-count?".concat(this.getContentTypesQueryParams())).then(function(t){e.set("unreadCount",t.unreadCount)}).catch(function(t){e.set("unreadCount",0),e.logger.error("Setting notifications unread count to 0 because of the API fetch error",t)})}})
 e.default=a}),define("dummy/resolver",["exports","ember-resolver"],function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var n=t.default
