@@ -27,6 +27,8 @@ export default Component.extend(
 				case notificationTypes.discussionReply:
 				case notificationTypes.postAtMention:
 				case notificationTypes.threadAtMention:
+				case notificationTypes.messageWallPost:
+				case notificationTypes.messageWallReply:
 					return 'wds-icons-comment-small';
 				case notificationTypes.announcement:
 					return 'wds-icons-flag-small';
@@ -393,7 +395,7 @@ export default Component.extend(
 		getPossiblyAnonActorName(model) {
 		return model.get('latestActors[0]') && model.get('latestActors[0].name')
 			? model.get('latestActors[0].name')
-			: this.i18n.t('anonymous-user');
+			: this.i18n.t('username-anonymous');
 		},
 
 		getTranslatedMessage(key, context) {
