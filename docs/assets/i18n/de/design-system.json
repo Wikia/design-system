@@ -159,5 +159,6 @@
   "wds-avatar-badges-vstf-tooltip": "VSTF", 
   "wds-fandom-homepage-aria-label": "Fandom-Homepage", 
   "wds-gamepedia-homepage-aria-label": "Gamepedia-Homepage", 
-  "wds-wikiaorg-homepage-aria-label": "Wikia.org-Homepage"
+  "wds-wikiaorg-homepage-aria-label": "Wikia.org-Homepage",
+  "anonymous-user": "Ein FANDOM-Benutzer"
 }
