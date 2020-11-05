@@ -237,7 +237,10 @@ case"post-at-mention-notification":return n.default.postAtMention
 case"thread-at-mention-notification":return n.default.threadAtMention
 case"article-comment-reply-notification":return n.default.articleCommentReply
 case"article-comment-at-mention-notification":return n.default.articleCommentAtMention
-case"article-comment-reply-at-mention-notification":return n.default.articleCommentReplyAtMention}},markAsRead:function(e){return e&&window.navigator.sendBeacon?this.markAsReadUsingSendBeacon():this.markAsReadUsingFetch(e)},markAsReadUsingSendBeacon:function(){var e=this,t=JSON.stringify([this.uri]),n=this.fetch.getServiceUrl("on-site-notifications","/notifications/mark-as-read/by-uri")
+case"article-comment-reply-at-mention-notification":return n.default.articleCommentReplyAtMention
+case"message-wall-post-notification":return n.default.messageWallPost
+case"message-wall-reply-notification":return n.default.messageWallReply
+case"wall-post-removed-notification":return n.default.messageWallPostRemoved}},markAsRead:function(e){return e&&window.navigator.sendBeacon?this.markAsReadUsingSendBeacon():this.markAsReadUsingFetch(e)},markAsReadUsingSendBeacon:function(){var e=this,t=JSON.stringify([this.uri]),n=this.fetch.getServiceUrl("on-site-notifications","/notifications/mark-as-read/by-uri")
 try{var a=new Blob([t],{type:"application/json"})
 return!0===window.navigator.sendBeacon(n,a)?Ember.RSVP.Promise.resolve().then(function(){e.set("isUnread",!1)}):this.markAsReadUsingFetch(!0)}catch(e){return this.logger.warn("Error when sending beacon",e),this.markAsReadUsingFetch(!0)}},markAsReadUsingFetch:function(e){var t=this,n={body:JSON.stringify([this.uri]),headers:{"Content-Type":"application/json"},method:"POST"}
 return e&&(n.timeout=500),this.fetch.fetchFromOnSiteNotifications("/notifications/mark-as-read/by-uri",n).then(function(){t.set("isUnread",!1)})}})
@@ -546,7 +549,7 @@ var n=!1
 try{var a="testLocalStorage"
 localStorage.setItem(a,a),localStorage.removeItem(a),n=!0}catch(e){n=!1}var o=n?window.localStorage:t
 e.default=o}),define("dummy/utils/notification-types",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default={discussionUpvotePost:"discussion-upvote-post",discussionUpvoteReply:"discussion-upvote-reply",discussionReply:"discussion-reply",announcement:"announcement",postAtMention:"post-at-mention",threadAtMention:"thread-at-mention",articleCommentReply:"article-comment-reply",articleCommentAtMention:"article-comment-at-mention",articleCommentReplyAtMention:"article-comment-reply-at-mention"}}),define("dummy/utils/string",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.normalizeToUnderscore=function(){return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:"").replace(/\s/g,"_").replace(/_+/g,"_")},e.getLastUrlFromText=function(e){var t=e.match(/(https?:\/\/[^\s]+)/gi)
+e.default={discussionUpvotePost:"discussion-upvote-post",discussionUpvoteReply:"discussion-upvote-reply",discussionReply:"discussion-reply",announcement:"announcement",postAtMention:"post-at-mention",threadAtMention:"thread-at-mention",articleCommentReply:"article-comment-reply",articleCommentAtMention:"article-comment-at-mention",articleCommentReplyAtMention:"article-comment-reply-at-mention",messageWallPost:"message-wall-post",messageWallReply:"message-wall-reply",messageWallPostRemoved:"message-wall-post-removed"}}),define("dummy/utils/string",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.normalizeToUnderscore=function(){return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:"").replace(/\s/g,"_").replace(/_+/g,"_")},e.getLastUrlFromText=function(e){var t=e.match(/(https?:\/\/[^\s]+)/gi)
 return t?t.pop():null},e.escapeRegex=function(e){return e.replace(/[-\/\\^$*+?.()|[\]{}]/g,"\\$&")}}),define("dummy/utils/thumbnail",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.normalizeThumbWidth=function(e){if(e<=t.small)return t.small
 if(e<=t.medium)return t.medium
 if(e<=t.large)return t.large
