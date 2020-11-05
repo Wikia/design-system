@@ -9,5 +9,6 @@ export default {
 	articleCommentAtMention: 'article-comment-at-mention',
 	articleCommentReplyAtMention: 'article-comment-reply-at-mention',
 	messageWallPost: 'message-wall-post',
-	messageWallThread: 'message-wall-thread',
+	messageWallPostRemoved: 'message-wall-post-removed',
+	messageWallReply: 'message-wall-reply',
 };
