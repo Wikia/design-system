@@ -328,50 +328,50 @@ export default Component.extend(
 		},
 
 		getMessageWallReplyBody(model) {
-		let wallOwner = model.get('metadata') && model.get('metadata.username');
-	
-		if (!wallOwner) {
-			wallOwner = this.getMessageWallOwner(model.get('uri'));
-		}
-	
-		const isOwnWall = wallOwner === this.usernameMarkup;
-		const args = {
-			postTitle: this.postTitleMarkup,
-			wallOwner,
-		};
-	
-		if (model.get('totalUniqueActors') > 1) {
-			args.number = model.get('totalUniqueActors') - 1;
-	
-			if (isOwnWall) {
-			args.user = this.getPossiblyAnonActorName(model);
-			// "{user} and {number} other users <b>replied</b> to a message on your wall <br><br> {postTitle}",
-			return this.getTranslatedMessage('notifications-own-wall-reply-multiple-users', args);
+			let wallOwner = model.get('metadata') && model.get('metadata.username');
+		
+			if (!wallOwner) {
+				wallOwner = this.getMessageWallOwner(model.get('uri'));
 			}
-	
+
+			const isOwnWall = wallOwner === this.usernameMarkup;
+			const args = {
+				postTitle: this.postTitleMarkup,
+				wallOwner,
+			};
+
+			if (model.get('totalUniqueActors') > 1) {
+				args.number = model.get('totalUniqueActors') - 1;
+		
+				if (isOwnWall) {
+					args.user = this.getPossiblyAnonActorName(model);
+					// "{user} and {number} other users <b>replied</b> to a message on your wall <br><br> {postTitle}",
+					return this.getTranslatedMessage('notifications-own-wall-reply-multiple-users', args);
+				}
+		
+				args.firstUser = this.getPossiblyAnonActorName(model);
+				args.secondUser = model.get('contentCreatorName');
+				//  "{firstUser} and {number} other users <b>replied</b> to {secondUser}'s message on {wallOwner}'s wall <br><br> {postTitle}"
+				return this.getTranslatedMessage('notifications-wall-reply-multiple-users', args);
+			}
+		
+			if (isOwnWall) {
+				args.user = this.getPossiblyAnonActorName(model);
+				// "{user} <b>replied</b> to a message on your wall <br><br> {postTitle}"
+				return this.getTranslatedMessage('notifications-own-wall-reply', args);
+			}
+		
+			if (model.get('contentCreatorName') === this.usernameMarkup) {
+				// Current user's own message
+				args.user = this.getPossiblyAnonActorName(model);
+				// "{user} <b>replied</b> to your message <br><br> {postTitle}"
+				return this.getTranslatedMessage('notifications-wall-reply-own-message', args);
+			}
+		
 			args.firstUser = this.getPossiblyAnonActorName(model);
 			args.secondUser = model.get('contentCreatorName');
-			//  "{firstUser} and {number} other users <b>replied</b> to {secondUser}'s message on {wallOwner}'s wall <br><br> {postTitle}"
-			return this.getTranslatedMessage('notifications-wall-reply-multiple-users', args);
-		}
-	
-		if (isOwnWall) {
-			args.user = this.getPossiblyAnonActorName(model);
-			// "{user} <b>replied</b> to a message on your wall <br><br> {postTitle}"
-			return this.getTranslatedMessage('notifications-own-wall-reply', args);
-		}
-	
-		if (model.get('contentCreatorName') === this.usernameMarkup) {
-			// Current user's own message
-			args.user = this.getPossiblyAnonActorName(model);
-			// "{user} <b>replied</b> to your message <br><br> {postTitle}"
-			return this.getTranslatedMessage('notifications-wall-reply-own-message', args);
-		}
-	
-		args.firstUser = this.getPossiblyAnonActorName(model);
-		args.secondUser = model.get('contentCreatorName');
-		// "{firstUser} <b>replied</b> to {secondUser}'s message <br><br> {postTitle}"
-		return this.getTranslatedMessage('notifications-wall-reply', args);
+			// "{firstUser} <b>replied</b> to {secondUser}'s message <br><br> {postTitle}"
+			return this.getTranslatedMessage('notifications-wall-reply', args);
 		},
 
 		getMessageWallPostRemovedBody() {
@@ -382,20 +382,20 @@ export default Component.extend(
 		},
 
 		getMessageWallOwner(url) {
-		const regex = /\/Message_Wall:(.+?)([?#/].*)?$/i;
-		const result = regex.exec(url);
-		
+			const regex = /\/Message_Wall:(.+?)([?#/].*)?$/i;
+			const result = regex.exec(url);
+
 			if (!result || !result[1]) {
 				return null;
 			}
-		
+
 			return result[1];
 		},
 
 		getPossiblyAnonActorName(model) {
-		return model.get('latestActors[0]') && model.get('latestActors[0].name')
-			? model.get('latestActors[0].name')
-			: this.getTranslatedMessage('username-anonymous');
+			return model.get('latestActors[0]') && model.get('latestActors[0].name')
+				? model.get('latestActors[0].name')
+				: this.getTranslatedMessage('username-anonymous');
 		},
 
 		getTranslatedMessage(key, context) {
