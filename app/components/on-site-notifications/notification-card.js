@@ -317,7 +317,6 @@ export default Component.extend(
 			};
 
 			if (isOwnWall) {
-				// "{user} left a <b>new message</b> on your wall <br><br> {postTitle}",
 				args.user = this.getPossiblyAnonActorName(model);
 				return this.getTranslatedMessage('notifications-own-wall-post', args);
 			}
