@@ -93,7 +93,9 @@ export default EmberObject.extend({
 		if (typeof metadata === 'string') {
 			try {
 				metadata = JSON.parse(metadata);
-			} catch (e) {}
+			} catch (e) {
+				// continue regardless of error
+			}
 		}
 		// Caveat: if the metadata was not serialized JSON, a string could be returned instead of an object
 		return metadata;
