@@ -93,7 +93,7 @@ export default Component.extend(
 				case notificationTypes.messageWallReply:
 					return this.getMessageWallReplyBody(this.model);
 				case notificationTypes.messageWallPostRemoved:
-					return this.getMessageWallPostRemovedBody();
+					return this.getMessageWallPostRemovedBody(this.model);
 				default:
 					return null;
 			}
@@ -305,79 +305,72 @@ export default Component.extend(
 
 		getMessageWallPostBody(model) {
 			let wallOwner = model.get('metadata') && model.get('metadata.username');
-		
+
 			if (!wallOwner) {
 				wallOwner = this.getMessageWallOwner(model.get('uri'));
 			}
-		
+
 			const isOwnWall = wallOwner === this.usernameMarkup;
 			const args = {
-				postTitle: this.postTitleMarkup,
+				postTitle: model.get('title'),
 				wallOwner,
 			};
-		
+
 			if (isOwnWall) {
 				// "{user} left a <b>new message</b> on your wall <br><br> {postTitle}",
 				args.user = this.getPossiblyAnonActorName(model);
 				return this.getTranslatedMessage('notifications-own-wall-post', args);
 			}
-		
+
 			args.firstUser = this.getPossiblyAnonActorName(model);
-			// "{firstUser} left a <b>new message</b> on {wallOwner}'s wall <br><br> {postTitle}"
 			return this.getTranslatedMessage('notifications-wall-post', args);
 		},
 
 		getMessageWallReplyBody(model) {
 			let wallOwner = model.get('metadata') && model.get('metadata.username');
-		
+
 			if (!wallOwner) {
 				wallOwner = this.getMessageWallOwner(model.get('uri'));
 			}
 
 			const isOwnWall = wallOwner === this.usernameMarkup;
 			const args = {
-				postTitle: this.postTitleMarkup,
+				postTitle: model.get('title'),
 				wallOwner,
 			};
 
 			if (model.get('totalUniqueActors') > 1) {
 				args.number = model.get('totalUniqueActors') - 1;
-		
+
 				if (isOwnWall) {
 					args.user = this.getPossiblyAnonActorName(model);
-					// "{user} and {number} other users <b>replied</b> to a message on your wall <br><br> {postTitle}",
 					return this.getTranslatedMessage('notifications-own-wall-reply-multiple-users', args);
 				}
 		
 				args.firstUser = this.getPossiblyAnonActorName(model);
-				args.secondUser = model.get('contentCreatorName');
-				//  "{firstUser} and {number} other users <b>replied</b> to {secondUser}'s message on {wallOwner}'s wall <br><br> {postTitle}"
+				args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('username-anonymous');
 				return this.getTranslatedMessage('notifications-wall-reply-multiple-users', args);
 			}
-		
+
 			if (isOwnWall) {
 				args.user = this.getPossiblyAnonActorName(model);
-				// "{user} <b>replied</b> to a message on your wall <br><br> {postTitle}"
 				return this.getTranslatedMessage('notifications-own-wall-reply', args);
 			}
 		
 			if (model.get('contentCreatorName') === this.usernameMarkup) {
 				// Current user's own message
 				args.user = this.getPossiblyAnonActorName(model);
-				// "{user} <b>replied</b> to your message <br><br> {postTitle}"
 				return this.getTranslatedMessage('notifications-wall-reply-own-message', args);
 			}
-		
+
 			args.firstUser = this.getPossiblyAnonActorName(model);
-			args.secondUser = model.get('contentCreatorName');
-			// "{firstUser} <b>replied</b> to {secondUser}'s message <br><br> {postTitle}"
+			args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('username-anonymous');
 			return this.getTranslatedMessage('notifications-wall-reply', args);
 		},
 
-		getMessageWallPostRemovedBody() {
-			// "<b>Message removed</b> from your wall <br><br> {postTitle}"
+		getMessageWallPostRemovedBody(model) {
 			return this.getTranslatedMessage('notifications-own-wall-post-removed', {
-				postTitle: this.postTitleMarkup,
+				postTitle: model.get('title'),
 			});
 		},
 
