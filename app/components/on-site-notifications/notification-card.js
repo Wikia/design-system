@@ -356,7 +356,7 @@ export default Component.extend(
 				args.user = this.getPossiblyAnonActorName(model);
 				return this.getTranslatedMessage('notifications-own-wall-reply', args);
 			}
-		
+
 			if (model.get('contentCreatorName') === this.usernameMarkup) {
 				// Current user's own message
 				args.user = this.getPossiblyAnonActorName(model);
