@@ -385,6 +385,7 @@ export default Component.extend(
 		},
 
 		getPossiblyAnonActorName(model) {
+			console.log('model::', model);
 			return model.get('latestActors[0]') && model.get('latestActors[0].name')
 				? model.get('latestActors[0].name')
 				: this.getTranslatedMessage('username-anonymous');
