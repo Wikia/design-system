@@ -56,6 +56,20 @@ export default Component.extend({
 
 		// key: query string, value: Array<SearchSuggestionItem>
 		this.cachedResults = {};
+		this.setScopeMessage(this.getScope());
+	},
+
+	setScopeMessage(scope) {
+		const PLACEHOLDER_MESSAGE = 'model.placeholder-active.key';
+		const SCOPE_MESSAGE = 'searchScopeMessageKey';
+
+		if (scope === 'cross-wiki') {
+			this.set(PLACEHOLDER_MESSAGE, 'global-navigation-search-placeholder-all-wikis');
+			this.set(SCOPE_MESSAGE, 'global-navigation-search-scope-cross-wiki-short');
+		} else {
+			this.set(PLACEHOLDER_MESSAGE, 'global-navigation-search-placeholder-in-wiki');
+			this.set(SCOPE_MESSAGE, 'global-navigation-search-scope-internal-wiki-short');
+		}
 	},
 
 	didInsertElement() {
@@ -69,8 +83,9 @@ export default Component.extend({
 
 	requestSuggestionsFromAPI() {
 		const { query } = this.state;
-		const uri = `${this.get('model.suggestions.url')}&query=${query}`;
-
+		const scope = this.getScope();
+		const uri = `${this.get('model.suggestions.url')}&scope=${scope}&query=${query}`;
+		const cacheKey = this.getCacheKey(scope, query);
 		/**
 		 * This was queued to run before the user has finished typing, and when they
 		 * finished typing it may have turned out that they were just backspacing OR
@@ -78,11 +93,11 @@ export default Component.extend({
 		 * we just ignore this request because the search fn already put the cached
 		 * value into the window.
 		 */
-		if (!query || this.hasCachedResult(query) || this.requestInProgress(query) || this.isDestroyed) {
+		if (!query || this.hasCachedResult(cacheKey) || this.requestInProgress(uri) || this.isDestroyed) {
 			return;
 		}
 
-		this.startedRequest(query);
+		this.startedRequest(uri);
 
 		fetch(uri)
 			.then((response) => {
@@ -92,13 +107,26 @@ export default Component.extend({
 					}
 
 					return response.json().then((data) => {
-						const suggestions = data.suggestions.map((suggestion) => {
-							return EmberObject.create({
-								title: suggestion,
-								articleId: data.ids && data.ids[suggestion],
-								query: data.query,
+						let suggestions = [];
+						if (scope === 'cross-wiki') {
+							suggestions = data.data.map((suggestion) => {
+								return EmberObject.create({
+									title: suggestion.title,
+									articleId: suggestion.pageId,
+									sitename: suggestion.sitename,
+									query: data.query,
+									url: suggestion.url
+								});
 							});
-						});
+						} else {
+							suggestions = data.suggestions.map((suggestion) => {
+								return EmberObject.create({
+									title: suggestion,
+									articleId: data.ids && data.ids[suggestion],
+									query: data.query,
+								});
+							});
+						}
 
 						/**
 						 * If the user makes one request, request A, and then keeps typing to make
@@ -109,18 +137,18 @@ export default Component.extend({
 						 * will be finished, what will happen if search request is still in progress.
 						 */
 						if (!this.searchRequestInProgress && query === this.state.query) {
-							this.setSearchSuggestionItems(suggestions);
+							this.setSearchSuggestionItems(scope, suggestions);
 						}
 
-						this.cacheResult(query, suggestions);
+						this.cacheResult(cacheKey, suggestions);
 					});
 				} else if (response.status === 404) {
 					// When we get a 404, it means there were no results
 					if (query === this.query) {
-						this.setSearchSuggestionItems();
+						this.setSearchSuggestionItems(scope);
 					}
 
-					this.cacheResult(query);
+					this.cacheResult(cacheKey);
 				} else {
 					this.logger.error('Search suggestions error', response);
 				}
@@ -139,11 +167,11 @@ export default Component.extend({
 	/**
 	 * Wrapper for search suggestions performing, that also checks the cache
 	 */
-	getSuggestions(query) {
+	getSuggestions(scope, query) {
 		if (this.isDestroyed) {
 			return;
 		}
-
+		const cacheKey = this.getCacheKey(scope, query);
 		this.setProperties({
 			suggestions: [],
 			searchRequestInProgress: false
@@ -152,8 +180,8 @@ export default Component.extend({
 		// If the query string is empty or shorter than the minimal length, return to leave the view blank
 		if (!query || query.length < this.minimalQueryLength) {
 			this.set('isLoadingResultsSuggestions', false);
-		} else if (this.hasCachedResult(query)) {
-			this.setSearchSuggestionItems(this.getCachedResult(query));
+		} else if (this.hasCachedResult(cacheKey)) {
+			this.setSearchSuggestionItems(scope, this.getCachedResult(cacheKey));
 		} else {
 			this.set('isLoadingResultsSuggestions', true);
 			run.debounce(this, this.runSuggestionsRequest, this.debounceDuration);
@@ -177,10 +205,11 @@ export default Component.extend({
 	},
 
 	/**
+	 * @param scope
 	 * @param {SearchSuggestionItem[]} [suggestions = []]
 	 * @returns {void}
 	 */
-	setSearchSuggestionItems(suggestions = []) {
+	setSearchSuggestionItems(scope, suggestions = []) {
 		this.suggestionId = uuid();
 
 		if (this.isDestroyed) {
@@ -193,18 +222,34 @@ export default Component.extend({
 				className: 'wds-global-navigation__search-suggestion-highlight'
 			});
 
-		suggestions.forEach(
-			/**
-			 * @param {SearchSuggestionItem} suggestion
-			 * @returns {void}
-			 */
-			(suggestion) => {
-				suggestion.setProperties({
-					uri: encodeURIComponent(this.normalizeToUnderscore(suggestion.title)),
-					text: suggestion.title.replace(highlightRegexp, highlighted)
-				});
-			}
-		);
+		if (scope === 'cross-wiki') {
+			suggestions.forEach(
+				/**
+				 * @param {SearchSuggestionItem} suggestion
+				 * @returns {void}
+				 */
+				(suggestion) => {
+					suggestion.setProperties({
+						uri: suggestion.url,
+						text: suggestion.title.replace(highlightRegexp, highlighted),
+						sitename: suggestion.sitename
+					});
+				}
+			);
+		} else {
+			suggestions.forEach(
+				/**
+				 * @param {SearchSuggestionItem} suggestion
+				 * @returns {void}
+				 */
+				(suggestion) => {
+					suggestion.setProperties({
+						uri: encodeURIComponent(this.normalizeToUnderscore(suggestion.title)),
+						text: suggestion.title.replace(highlightRegexp, highlighted)
+					});
+				}
+			);
+		}
 
 		suggestions.length && this.onSearchSuggestionsImpression && this.onSearchSuggestionsImpression(
 			suggestions,
@@ -297,11 +342,15 @@ export default Component.extend({
 	/**
 	 * Checks whether the result of the query has been cached
 	 *
-	 * @param {string} query
+	 * @param {string} key
 	 * @returns {boolean}
 	 */
-	hasCachedResult(query) {
-		return this.cachedResults.hasOwnProperty(query);
+	hasCachedResult(key) {
+		return this.cachedResults.hasOwnProperty(key);
+	},
+
+	getCacheKey(scope, query) {
+		return String.prototype.concat('scope: ', scope, ' query: ', query)
 	},
 
 	/**
@@ -377,9 +426,24 @@ export default Component.extend({
 		}
 	},
 
+	getScope() {
+		return this.get('searchScope') === 'cross-wiki' ? 'cross-wiki' : 'internal';
+	},
+
 	actions: {
+		changeSearchScope(scope) {
+			if (this.getScope() === scope) {
+				return;
+			}
+			this.set('searchScope', scope);
+			this.setScopeMessage(scope);
+
+			this.getSuggestions(scope, this.state.query);
+		},
+
 		openSearch() {
 			this.resetSearchState();
+			this.setScopeMessage(this.getScope());
 			this.set('searchIsActive', true);
 			this.onSearchToggleClicked();
 			this.inputField.focus();
@@ -391,7 +455,7 @@ export default Component.extend({
 				selectedSuggestionIndex: -1
 			});
 
-			this.getSuggestions(this.state.query);
+			this.getSuggestions(this.getScope(), this.state.query);
 		},
 
 		onCloseSearchClick() {
