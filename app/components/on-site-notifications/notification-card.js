@@ -305,21 +305,19 @@ export default Component.extend(
 
 		getMessageWallPostBody(model) {
 			let wallOwner = model.get('metadata') && model.get('metadata.username');
-
+			const authorId = model.get('refersToAuthorId');
 			const currentUserId = this.wdsOnSiteNotifications.currentUser.userId;
-
-			console.log('Post::wallOwner::', wallOwner);
 
 			if (!wallOwner) {
 				wallOwner = this.getMessageWallOwner(model.get('uri'));
 			}
 
-			const isOwnWall = wallOwner === this.usernameMarkup;
-			console.log('Post::currentUserId::', currentUserId);
 			const args = {
 				postTitle: model.get('title'),
 				wallOwner,
 			};
+
+			const isOwnWall = authorId === currentUserId;
 
 			if (isOwnWall) {
 				args.user = this.getPossiblyAnonActorName(model);
