@@ -29,6 +29,7 @@ export default EmberObject.extend({
 	},
 
 	setNormalizedData(notificationData) {
+		console.log('notificationData::', notificationData);
 		this.setProperties({
 			contentCreatorName: get(notificationData, 'refersTo.createdByName'),
 			title: get(notificationData, 'refersTo.title'),
@@ -89,6 +90,7 @@ export default EmberObject.extend({
 	},
 
 	getMetadata(notification) {
+		console.log('getMetaData::', notification);
 		let metadata =
 			typeof notification.metadata === 'undefined' || notification.metadata === null ? null : notification.metadata;
 		if (typeof metadata === 'string') {
