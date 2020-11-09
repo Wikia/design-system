@@ -30,6 +30,7 @@ export default EmberObject.extend({
 
 	setNormalizedData(notificationData) {
 		this.setProperties({
+			contentCreatorName: get(notificationData, 'refersTo.createdByName'),
 			title: get(notificationData, 'refersTo.title'),
 			snippet: get(notificationData, 'refersTo.snippet'),
 			uri: get(notificationData, 'refersTo.uri'),
