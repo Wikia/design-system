@@ -358,7 +358,10 @@ export default Component.extend(
 				return this.getTranslatedMessage('notifications-own-wall-reply', args);
 			}
 
-			if (model.get('contentCreatorName') === this.usernameMarkup) {
+			console.log('contentCreatorName::', model.get('contentCreatorName'));
+			console.log('currentUsername', currentUsername);
+
+			if (model.get('contentCreatorName') === currentUsername) {
 				// Current user's own message
 				args.user = this.getPossiblyAnonActorName(model);
 				return this.getTranslatedMessage('notifications-wall-reply-own-message', args);
