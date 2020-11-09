@@ -90,7 +90,6 @@ export default EmberObject.extend({
 	},
 
 	getMetadata(notification) {
-		console.log('getMetaData::', notification);
 		let metadata =
 			typeof notification.metadata === 'undefined' || notification.metadata === null ? null : notification.metadata;
 		if (typeof metadata === 'string') {
@@ -101,6 +100,7 @@ export default EmberObject.extend({
 			}
 		}
 		// Caveat: if the metadata was not serialized JSON, a string could be returned instead of an object
+		console.log('metadata::', metadata);
 		return metadata;
 	},
 
