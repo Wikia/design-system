@@ -306,11 +306,14 @@ export default Component.extend(
 		getMessageWallPostBody(model) {
 			let wallOwner = model.get('metadata') && model.get('metadata.username');
 
+			console.log('Post::wallOwner::', wallOwner);
+
 			if (!wallOwner) {
 				wallOwner = this.getMessageWallOwner(model.get('uri'));
 			}
 
 			const isOwnWall = wallOwner === this.usernameMarkup;
+			console.log('Post::usernameMarkup::', this.usernameMarkup);
 			const args = {
 				postTitle: model.get('title'),
 				wallOwner,
@@ -327,12 +330,10 @@ export default Component.extend(
 
 		getMessageWallReplyBody(model) {
 			let wallOwner = model.get('metadata') && model.get('metadata.username');
-			console.log('wallOwner::', wallOwner);
 			console.log('metadata::', model.get('metadata'));
 
 			if (!wallOwner) {
 				wallOwner = this.getMessageWallOwner(model.get('uri'));
-				console.log('wallOwnerFromUri::', wallOwner);
 			}
 
 			const isOwnWall = wallOwner === this.usernameMarkup;
@@ -343,10 +344,6 @@ export default Component.extend(
 
 			if (model.get('totalUniqueActors') > 1) {
 				args.number = model.get('totalUniqueActors') - 1;
-
-				console.log('usernameMarkup::', this.usernameMarkup);
-				console.log('contentCreatorName::', model.get('contentCreatorName'));
-				console.log('model::', model);
 
 				if (isOwnWall) {
 					args.user = this.getPossiblyAnonActorName(model);
