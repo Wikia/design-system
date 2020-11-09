@@ -308,6 +308,9 @@ export default Component.extend(
 			const authorId = model.get('refersToAuthorId');
 			const currentUserId = this.wdsOnSiteNotifications.currentUser.userId;
 
+			console.log('authorId::', authorId);
+			console.log('userId', currentUserId);
+
 			if (!wallOwner) {
 				wallOwner = this.getMessageWallOwner(model.get('uri'));
 			}
@@ -317,7 +320,9 @@ export default Component.extend(
 				wallOwner,
 			};
 
-			const isOwnWall = authorId === currentUserId;
+			const isOwnWall = authorId == currentUserId;
+
+			console.log('isOwnWall::', isOwnWall);
 
 			if (isOwnWall) {
 				args.user = this.getPossiblyAnonActorName(model);
