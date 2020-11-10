@@ -7,6 +7,20 @@ $toggle-active-margin-right: 17px;
 	height: 100%;
 	justify-content: flex-end;
 
+	&-scope-dropdown {
+		&::before, &::after {
+			z-index: 151;
+		}
+
+		&::after {
+			bottom: -13px !important;
+		}
+
+		&::before {
+			bottom: -12px;
+		}
+	}
+
 	&-container {
 		height: 100%;
 		flex: 1;
@@ -100,6 +114,10 @@ $toggle-active-margin-right: 17px;
 				color: darken($wds-color-white, 15%);
 			}
 		}
+	}
+
+	&-suggestions__community-name {
+		float: right;
 	}
 
 	&-suggestions.wds-dropdown__content {
