@@ -304,7 +304,7 @@ export default Component.extend(
 		},
 
 		getMessageWallPostBody(model) {
-			let wallOwner = model.get('metadata') && model.get('metadata.wallOwnerName');
+			let wallOwner = model.get('metadata.wallOwnerName');
 			const currentUsername = this.wdsOnSiteNotifications.currentUser.name;
 
 			if (!wallOwner) {
@@ -327,7 +327,7 @@ export default Component.extend(
 		},
 
 		getMessageWallReplyBody(model) {
-			let wallOwner = model.get('metadata') && model.get('metadata.wallOwnerName');
+			let wallOwner = model.get('metadata.wallOwnerName');
 			const currentUsername = this.wdsOnSiteNotifications.currentUser.name;
 
 			if (!wallOwner) {
