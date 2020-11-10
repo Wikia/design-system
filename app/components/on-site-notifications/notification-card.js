@@ -372,9 +372,6 @@ export default Component.extend(
 			args.firstUser = this.getPossiblyAnonActorName(model);
 			args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('username-anonymous');
 
-			console.log('secondUser', args.secondUser);
-			console.log('contentCreator', model.get('contentCreatorName'));
-			console.log('anonymousUser::', this.getTranslatedMessage('username-anonymous'));
 			return this.getTranslatedMessage('notifications-wall-reply', args);
 		},
 
