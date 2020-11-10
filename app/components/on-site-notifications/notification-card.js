@@ -304,7 +304,7 @@ export default Component.extend(
 		},
 
 		getMessageWallPostBody(model) {
-			let wallOwner = model.get('metadata') && model.get('metadata.username');
+			let wallOwner = model.get('metadata') && model.get('metadata.wallOwnerName');
 			const currentUsername = this.wdsOnSiteNotifications.currentUser.name;
 
 			if (!wallOwner) {
@@ -327,7 +327,7 @@ export default Component.extend(
 		},
 
 		getMessageWallReplyBody(model) {
-			let wallOwner = model.get('metadata') && model.get('metadata.username');
+			let wallOwner = model.get('metadata') && model.get('metadata.wallOwnerName');
 			const currentUsername = this.wdsOnSiteNotifications.currentUser.name;
 
 			if (!wallOwner) {
@@ -362,7 +362,7 @@ export default Component.extend(
 			console.log('currentUsername', currentUsername);
 
 			if (model.get('contentCreatorName') === currentUsername) {
-				// Current user's own message
+				// "{user} <b>replied</b> to your message on {wallOwner}'s wall <br><br> {postTitle}"
 				args.user = this.getPossiblyAnonActorName(model);
 				return this.getTranslatedMessage('notifications-wall-reply-own-message', args);
 			}
