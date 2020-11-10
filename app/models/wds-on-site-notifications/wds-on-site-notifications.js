@@ -96,6 +96,7 @@ export default EmberObject.extend({
 
 			return notification;
 		});
+
 		this.data.pushObjects(notificationModels);
 	},
 

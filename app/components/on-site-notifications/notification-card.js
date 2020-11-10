@@ -364,7 +364,6 @@ export default Component.extend(
 			}
 
 			if (model.get('contentCreatorName') === currentUsername) {
-				// "{user} <b>replied</b> to your message on {wallOwner}'s wall <br><br> {postTitle}"
 				args.user = this.getPossiblyAnonActorName(model);
 				return this.getTranslatedMessage('notifications-wall-reply-own-message', args);
 			}
