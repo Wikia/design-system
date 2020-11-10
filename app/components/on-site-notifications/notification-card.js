@@ -363,9 +363,6 @@ export default Component.extend(
 				return this.getTranslatedMessage('notifications-own-wall-reply', args);
 			}
 
-			console.log('contentCreatorName::', model.get('contentCreatorName'));
-			console.log('currentUsername', currentUsername);
-
 			if (model.get('contentCreatorName') === currentUsername) {
 				// "{user} <b>replied</b> to your message on {wallOwner}'s wall <br><br> {postTitle}"
 				args.user = this.getPossiblyAnonActorName(model);
@@ -374,6 +371,10 @@ export default Component.extend(
 
 			args.firstUser = this.getPossiblyAnonActorName(model);
 			args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('username-anonymous');
+
+			console.log('secondUser', args.secondUser);
+			console.log('contentCreator', model.get('contentCreatorName'));
+			console.log('anonymousUser::', this.getTranslatedMessage('username-anonymous'));
 			return this.getTranslatedMessage('notifications-wall-reply', args);
 		},
 
