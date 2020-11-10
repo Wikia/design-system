@@ -349,6 +349,11 @@ export default Component.extend(
 				}
 		
 				args.firstUser = this.getPossiblyAnonActorName(model);
+
+				if (model.get('contentCreatorName') === currentUsername) {
+					return this.getTranslatedMessage('notifications-wall-reply-multiple-users-own-message', args);
+				}
+
 				args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('username-anonymous');
 				return this.getTranslatedMessage('notifications-wall-reply-multiple-users', args);
 			}
