@@ -117,6 +117,7 @@
   "notifications-wall-post-removed": "<b>Message removed</b> from {wallOwner}'s wall <br><br> {postTitle}",
   "notifications-wall-reply": "{firstUser} <b>replied</b> to {secondUser}'s message on {wallOwner}'s wall <br><br> {postTitle}",
   "notifications-wall-reply-multiple-users": "{firstUser} and {number} other users <b>replied</b> to {secondUser}'s message on {wallOwner}'s wall <br><br> {postTitle}",
+  "notifications-wall-reply-multiple-users-own-message": "{firstUser} and {number} other users <b>replied</b> to your message on {wallOwner}'s wall <br><br> {postTitle}",
   "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message on {wallOwner}'s wall <br><br> {postTitle}",
   "notifications-article-comment-followed-article-comment": "{user} <b>commented</b> on the article: {articleTitle}",
   "notifications-article-comment-reply-own-comment": "{user} <b>replied</b> to your comment on the article: {articleTitle}",
@@ -162,5 +163,6 @@
   "license-description": "Community content is available under {license} unless otherwise noted.",
   "wds-wikiaorg-homepage-aria-label": "Wikia.org homepage",
   "wds-fandom-homepage-aria-label": "Fandom homepage",
-  "wds-gamepedia-homepage-aria-label": "Gamepedia homepage"
+  "wds-gamepedia-homepage-aria-label": "Gamepedia homepage",
+  "username-anonymous": "A Fandom User"
 }
