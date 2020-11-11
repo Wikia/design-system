@@ -89,8 +89,8 @@ export default EmberObject.extend({
 	},
 
 	getMetadata(notification) {
-		let metadata =
-			typeof notification.metadata === 'undefined' || notification.metadata === null ? null : notification.metadata;
+		let metadata = notification.metadata ?? null;
+		
 		if (typeof metadata === 'string') {
 			try {
 				metadata = JSON.parse(metadata);
