@@ -481,10 +481,10 @@ export default Component.extend({
 			if (this.getScope() === 'cross-wiki') {
 				if (this.track) {
 					this.track({
-								   action: 'click',
-								   category: 'navigation',
-								   label: 'search-open-suggestion-link'
-							   });
+						action: 'click',
+						category: 'navigation',
+						label: 'search-open-suggestion-link'
+					});
 				}
 				return;
 			}
