@@ -276,21 +276,21 @@ export default Component.extend(
 				: 'notifications-article-comment-reply-followed-comment';
 
 			return this.getTranslatedMessage(messageKey, {
-				user: model.get('latestActors.0.name'),
+				user: model.get('latestActors.0.name') || this.getTranslatedMessage('notifications-anon-user'),
 				articleTitle: this.titleMarkup,
 			});
 		},
 
 		getArticleCommentAtMentionMessageBody(model) {
 			return this.getTranslatedMessage('notifications-article-comment-comment-mention', {
-				user: model.get('latestActors.0.name'),
+				user: model.get('latestActors.0.name') || this.getTranslatedMessage('notifications-anon-user'),
 				articleTitle: this.titleMarkup,
 			});
 		},
 
 		getArticleCommentReplyAtMentionMessageBody(model) {
 			return this.getTranslatedMessage('notifications-article-comment-reply-mention', {
-				user: model.get('latestActors.0.name'),
+				user: model.get('latestActors.0.name') || this.getTranslatedMessage('notifications-anon-user'),
 				articleTitle: this.titleMarkup,
 			});
 		},
