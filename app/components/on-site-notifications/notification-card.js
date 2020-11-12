@@ -27,6 +27,8 @@ export default Component.extend(
 				case notificationTypes.discussionReply:
 				case notificationTypes.postAtMention:
 				case notificationTypes.threadAtMention:
+				case notificationTypes.messageWallPost:
+				case notificationTypes.messageWallReply:
 					return 'wds-icons-comment-small';
 				case notificationTypes.announcement:
 					return 'wds-icons-flag-small';
@@ -86,6 +88,12 @@ export default Component.extend(
 					return this.getArticleCommentAtMentionMessageBody(this.model);
 				case notificationTypes.articleCommentReplyAtMention:
 					return this.getArticleCommentReplyAtMentionMessageBody(this.model);
+				case notificationTypes.messageWallPost:
+					return this.getMessageWallPostBody(this.model);
+				case notificationTypes.messageWallReply:
+					return this.getMessageWallReplyBody(this.model);
+				case notificationTypes.messageWallPostRemoved:
+					return this.getMessageWallPostRemovedBody(this.model);
 				default:
 					return null;
 			}
@@ -293,6 +301,98 @@ export default Component.extend(
 				user: model.get('latestActors.0.name') || this.getTranslatedMessage('notifications-anon-user'),
 				articleTitle: this.titleMarkup,
 			});
+		},
+
+		getMessageWallPostBody(model) {
+			let wallOwner = model.get('metadata.wallOwnerName');
+			const currentUsername = this.wdsOnSiteNotifications.currentUser.name;
+
+			if (!wallOwner) {
+				wallOwner = this.getMessageWallOwner(model.get('uri'));
+			}
+
+			const isOwnWall = wallOwner === currentUsername;
+			const args = {
+				postTitle: model.get('title'),
+				wallOwner,
+			};
+
+			if (isOwnWall) {
+				args.user = this.getPossiblyAnonActorName(model);
+				return this.getTranslatedMessage('notifications-own-wall-post', args);
+			}
+
+			args.firstUser = this.getPossiblyAnonActorName(model);
+			return this.getTranslatedMessage('notifications-wall-post', args);
+		},
+
+		getMessageWallReplyBody(model) {
+			let wallOwner = model.get('metadata.wallOwnerName');
+			const currentUsername = this.wdsOnSiteNotifications.currentUser.name;
+
+			if (!wallOwner) {
+				wallOwner = this.getMessageWallOwner(model.get('uri'));
+			}
+
+			const isOwnWall = wallOwner === currentUsername;
+			const args = {
+				postTitle: model.get('title'),
+				wallOwner,
+			};
+
+			if (model.get('totalUniqueActors') > 1) {
+				args.number = model.get('totalUniqueActors') - 1;
+
+				if (isOwnWall) {
+					args.user = this.getPossiblyAnonActorName(model);
+					return this.getTranslatedMessage('notifications-own-wall-reply-multiple-users', args);
+				}
+		
+				args.firstUser = this.getPossiblyAnonActorName(model);
+
+				if (model.get('contentCreatorName') === currentUsername) {
+					return this.getTranslatedMessage('notifications-wall-reply-multiple-users-own-message', args);
+				}
+
+				args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('username-anonymous');
+				return this.getTranslatedMessage('notifications-wall-reply-multiple-users', args);
+			}
+
+			if (isOwnWall) {
+				args.user = this.getPossiblyAnonActorName(model);
+				return this.getTranslatedMessage('notifications-own-wall-reply', args);
+			}
+
+			if (model.get('contentCreatorName') === currentUsername) {
+				args.user = this.getPossiblyAnonActorName(model);
+				return this.getTranslatedMessage('notifications-wall-reply-own-message', args);
+			}
+
+			args.firstUser = this.getPossiblyAnonActorName(model);
+			args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('username-anonymous');
+
+			return this.getTranslatedMessage('notifications-wall-reply', args);
+		},
+
+		getMessageWallPostRemovedBody(model) {
+			return this.getTranslatedMessage('notifications-own-wall-post-removed', {
+				postTitle: model.get('title'),
+			});
+		},
+
+		getMessageWallOwner(url) {
+			const regex = /\/Message_Wall:(.+?)([?#/].*)?$/i;
+			const result = regex.exec(url);
+
+			if (!result || !result[1]) {
+				return null;
+			}
+
+			return result[1];
+		},
+
+		getPossiblyAnonActorName(model) {
+			return model.get('latestActors.0.name') ? model.get('latestActors.0.name') : this.getTranslatedMessage('username-anonymous');
 		},
 
 		getTranslatedMessage(key, context) {

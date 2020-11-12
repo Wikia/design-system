@@ -30,6 +30,7 @@ export default EmberObject.extend({
 
 	setNormalizedData(notificationData) {
 		this.setProperties({
+			contentCreatorName: get(notificationData, 'refersTo.createdByName'),
 			title: get(notificationData, 'refersTo.title'),
 			snippet: get(notificationData, 'refersTo.snippet'),
 			uri: get(notificationData, 'refersTo.uri'),
@@ -42,6 +43,7 @@ export default EmberObject.extend({
 			totalUniqueActors: get(notificationData, 'events.totalUniqueActors'),
 			latestActors: this.createActors(get(notificationData, 'events.latestActors')),
 			type: this.getTypeFromApiData(notificationData),
+			metadata: this.getMetadata(notificationData),
 		});
 	},
 
@@ -77,7 +79,27 @@ export default EmberObject.extend({
 				return notificationTypes.articleCommentAtMention;
 			case 'article-comment-reply-at-mention-notification':
 				return notificationTypes.articleCommentReplyAtMention;
+			case 'message-wall-post-notification':
+				return notificationTypes.messageWallPost;
+			case 'message-wall-reply-notification':
+				return notificationTypes.messageWallReply;
+			case 'wall-post-removed-notification':
+				return notificationTypes.messageWallPostRemoved;
 		}
+	},
+
+	getMetadata(notification) {
+		let metadata =
+			typeof notification.metadata === 'undefined' || notification.metadata === null ? null : notification.metadata;
+		if (typeof metadata === 'string') {
+			try {
+				metadata = JSON.parse(metadata);
+			} catch (e) {
+				// continue regardless of error
+			}
+		}
+		// Caveat: if the metadata was not serialized JSON, a string could be returned instead of an object
+		return metadata;
 	},
 
 	markAsRead(willUnloadPage) {
