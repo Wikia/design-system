@@ -125,6 +125,7 @@
   "notifications-article-comment-comment-mention": "{user} <b>mentioned</b> you in a comment on the article: {articleTitle}",
   "notifications-article-comment-reply-mention": "{user} <b>mentioned</b> you in a reply on the article: {articleTitle}",
   "notifications-notifications": "Notifications",
+  "notifications-anon-user": "A Fandom user",
   "community-header-page": "Page",
   "community-header-pages": "Pages",
   "community-header-add": "Add",
