@@ -97,7 +97,7 @@ export default Component.extend(
 				case notificationTypes.messageWallPostRemoved:
 					return this.getMessageWallPostRemovedBody(this.model);
 				case notificationTypes.talkPageMessage:
-					return this.getTalkPageMessageText(this.model);
+					return this.getTalkPageMessageBody(this.model);
 				default:
 					return null;
 			}
@@ -384,7 +384,7 @@ export default Component.extend(
 			});
 		},
 
-		getTalkPageMessageText(model) {
+		getTalkPageMessageBody(model) {
 			const userName = this.getPossiblyAnonActorName(model);
 			const args = {
 				user: userName,
