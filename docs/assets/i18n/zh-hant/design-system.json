@@ -118,6 +118,7 @@
   "hours-ago": "{hours}小時前", 
   "license-description": "除非另有註明，否則社區內容均使用{license}授權條款。", 
   "minutes-ago": "{minutes}分鐘前", 
+  "notifications-anon-user": "Fandom使用者", 
   "notifications-article-comment-comment-mention": "{user}在這個頁面的評論中<b>提到了</b>您：{articleTitle}", 
   "notifications-article-comment-followed-article-comment": "{user}在這個頁面留下了一則<b>評論</b>：{articleTitle}", 
   "notifications-article-comment-reply-followed-comment": "{user}在這個頁面中<b>回覆了</b>您關注的評論：{articleTitle}", 
@@ -162,6 +163,6 @@
   "wds-avatar-badges-staff-tooltip": "Fandom職員", 
   "wds-avatar-badges-vstf-tooltip": "反破壞小組", 
   "wds-fandom-homepage-aria-label": "Fandom首頁", 
-  "wds-gamepedia-homepage-aria-label": "Gamepedia首頁",
+  "wds-gamepedia-homepage-aria-label": "Gamepedia首頁", 
   "wds-wikiaorg-homepage-aria-label": "Wikia.org首頁"
 }

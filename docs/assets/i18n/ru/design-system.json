@@ -118,6 +118,7 @@
   "hours-ago": "{hours} ч.", 
   "license-description": "Материалы сообщества доступны в соответствии с условиями лицензии {license}, если не указано иное.", 
   "minutes-ago": "{minutes} мин.", 
+  "notifications-anon-user": "Участник ФЭНДОМА", 
   "notifications-article-comment-comment-mention": "{user} <b>упомянул(а)</b> вас в комментарии к статье: {articleTitle}", 
   "notifications-article-comment-followed-article-comment": "{user }<b>оставил(а) комментарий</b> к статье: {articleTitle}", 
   "notifications-article-comment-reply-followed-comment": "{user} <b>ответил(а)</b> на комментарий, который вы отслеживаете, к статье: {articleTitle}", 
@@ -162,6 +163,6 @@
   "wds-avatar-badges-staff-tooltip": "Сотрудник ФЭНДОМА", 
   "wds-avatar-badges-vstf-tooltip": "VSTF", 
   "wds-fandom-homepage-aria-label": "Домашняя страница Фэндома", 
-  "wds-gamepedia-homepage-aria-label": "Домашняя страница Gamepedia",
+  "wds-gamepedia-homepage-aria-label": "Домашняя страница Gamepedia", 
   "wds-wikiaorg-homepage-aria-label": "Домашняя страница Wikia.org"
 }

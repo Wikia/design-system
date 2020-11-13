@@ -358,7 +358,7 @@ export default Component.extend(
 					return this.getTranslatedMessage('notifications-wall-reply-multiple-users-own-message', args);
 				}
 
-				args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('username-anonymous');
+				args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('notifications-anon-user');
 				return this.getTranslatedMessage('notifications-wall-reply-multiple-users', args);
 			}
 
@@ -373,7 +373,7 @@ export default Component.extend(
 			}
 
 			args.firstUser = this.getPossiblyAnonActorName(model);
-			args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('username-anonymous');
+			args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('notifications-anon-user');
 
 			return this.getTranslatedMessage('notifications-wall-reply', args);
 		},
@@ -405,7 +405,7 @@ export default Component.extend(
 		},
 
 		getPossiblyAnonActorName(model) {
-			return model.get('latestActors.0.name') ? model.get('latestActors.0.name') : this.getTranslatedMessage('username-anonymous');
+			return model.get('latestActors.0.name') ? model.get('latestActors.0.name') : this.getTranslatedMessage('notifications-anon-user');
 		},
 
 		getTranslatedMessage(key, context) {
