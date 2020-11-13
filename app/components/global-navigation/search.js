@@ -420,7 +420,7 @@ export default Component.extend({
 
 				this.closeSearch();
 			} else if (this.goToSearchResults) {
-				this.goToSearchResults(this.state.query);
+				this.goToSearchResults(this.state.query, this.getScope());
 				return false;
 			}
 		}
@@ -478,6 +478,16 @@ export default Component.extend({
 		},
 
 		onSearchSuggestionClick(index) {
+			if (this.getScope() === 'cross-wiki') {
+				if (this.track) {
+					this.track({
+						action: 'click',
+						category: 'navigation',
+						label: 'search-open-suggestion-link'
+					});
+				}
+				return;
+			}
 			if (this.onSearchSuggestionChosen) {
 				this.onSearchSuggestionChosen(this.suggestions[index], this.suggestions, this.suggestionId);
 				this.closeSearch();
@@ -506,7 +516,7 @@ export default Component.extend({
 			}
 
 			if (this.goToSearchResults) {
-				this.goToSearchResults(this.state.query);
+				this.goToSearchResults(this.state.query, this.getScope());
 				return false;
 			} else {
 				this.set('searchRequestInProgress', true);
