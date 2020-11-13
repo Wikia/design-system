@@ -11,4 +11,5 @@ export default {
 	messageWallPost: 'message-wall-post',
 	messageWallReply: 'message-wall-reply',
 	messageWallPostRemoved: 'message-wall-post-removed',
+	talkPageMessage: 'talk-page-message',
 };

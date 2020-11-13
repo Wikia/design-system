@@ -37,6 +37,8 @@ export default Component.extend(
 				case notificationTypes.articleCommentAtMention:
 				case notificationTypes.articleCommentReplyAtMention:
 					return 'wds-icons-mention-small';
+				case notificationTypes.talkPageMessage:
+					return 'wds-icons-bubble-small';
 				default:
 					return 'wds-icons-heart-small';
 			}
@@ -94,6 +96,8 @@ export default Component.extend(
 					return this.getMessageWallReplyBody(this.model);
 				case notificationTypes.messageWallPostRemoved:
 					return this.getMessageWallPostRemovedBody(this.model);
+				case notificationTypes.talkPageMessage:
+					return this.getTalkPageMessageText(this.model);
 				default:
 					return null;
 			}
@@ -378,6 +382,15 @@ export default Component.extend(
 			return this.getTranslatedMessage('notifications-own-wall-post-removed', {
 				postTitle: model.get('title'),
 			});
+		},
+
+		getTalkPageMessageText(model) {
+			const userName = this.getPossiblyAnonActorName(model);
+			const args = {
+				user: userName,
+			};
+
+			return this.getTranslatedMessage('notifications-talk-page-message', args);
 		},
 
 		getMessageWallOwner(url) {
