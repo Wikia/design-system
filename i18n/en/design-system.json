@@ -167,6 +167,5 @@
   "license-description": "Community content is available under {license} unless otherwise noted.",
   "wds-wikiaorg-homepage-aria-label": "Wikia.org homepage",
   "wds-fandom-homepage-aria-label": "Fandom homepage",
-  "wds-gamepedia-homepage-aria-label": "Gamepedia homepage",
-  "username-anonymous": "A Fandom User"
+  "wds-gamepedia-homepage-aria-label": "Gamepedia homepage"
 }

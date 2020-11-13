@@ -85,6 +85,8 @@ export default EmberObject.extend({
 				return notificationTypes.messageWallReply;
 			case 'wall-post-removed-notification':
 				return notificationTypes.messageWallPostRemoved;
+			case 'talk-page-notification':
+				return notificationTypes.talkPageMessage;
 		}
 	},
 

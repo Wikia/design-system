@@ -114,6 +114,7 @@
   "hours-ago": "{hours}小时", 
   "license-description": "社区内容除另有注明外，均在{license}许可协议下提供。", 
   "minutes-ago": "{minutes}分钟", 
+  "notifications-anon-user": "Fandom用户", 
   "notifications-article-comment-comment-mention": "{user}在这个页面的评论中<b>提到了</b>您：{articleTitle}", 
   "notifications-article-comment-followed-article-comment": "{user}在这个页面留下了一则<b>评论</b>：{articleTitle}", 
   "notifications-article-comment-reply-followed-comment": "{user}在这个页面中<b>回复了</b>您关注的评论：{articleTitle}", 
@@ -158,6 +159,6 @@
   "wds-avatar-badges-staff-tooltip": "FANDOM职员", 
   "wds-avatar-badges-vstf-tooltip": "反破坏小组", 
   "wds-fandom-homepage-aria-label": "Fandom首页", 
-  "wds-gamepedia-homepage-aria-label": "Gamepedia首页",
+  "wds-gamepedia-homepage-aria-label": "Gamepedia首页", 
   "wds-wikiaorg-homepage-aria-label": "Wikia.org首页"
 }
