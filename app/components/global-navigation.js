@@ -167,9 +167,9 @@ export default Component.extend({
 			}
 		},
 
-		goToSearchResults(querystring) {
+		goToSearchResults(querystring, scope = null) {
 			this.closeModal();
-			this.goToSearchResults(querystring)
+			this.goToSearchResults(querystring, scope)
 		},
 
 		track(data) {

@@ -420,7 +420,7 @@ export default Component.extend({
 
 				this.closeSearch();
 			} else if (this.goToSearchResults) {
-				this.goToSearchResults(this.state.query);
+				this.goToSearchResults(this.state.query, this.getScope());
 				return false;
 			}
 		}
@@ -516,7 +516,7 @@ export default Component.extend({
 			}
 
 			if (this.goToSearchResults) {
-				this.goToSearchResults(this.state.query);
+				this.goToSearchResults(this.state.query, this.getScope());
 				return false;
 			} else {
 				this.set('searchRequestInProgress', true);
