@@ -152,6 +152,7 @@
   "notifications-wall-post-removed": "<b>Nachricht</b> {postTitle} wurde von {user}s Nachrichtenseite <b>entfernt</b> <br><br> ", 
   "notifications-wall-reply": "{firstUser} hat auf die Nachricht von {secondUser} <b>geantwortet</b> <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} und {number} andere Benutzer haben auf eine Nachricht auf der Nachrichtenseite von {secondUser} <b>geantwortet</b> <br><br> {postTitle}", 
+  "notifications-wall-reply-multiple-users-own-message": "{firstUser} und {number} weitere(r) Benutzer hat/haben auf der Nachrichtenseite von {wallOwner} auf deine Nachricht <b>geantwortet</b> <br><br> {postTitle}", 
   "notifications-wall-reply-own-message": "{user} hat auf deine Nachricht {postTitle} <b>geantwortet</b>", 
   "now-label": "gerade eben", 
   "wds-avatar-badges-admin-tooltip": "Admin", 

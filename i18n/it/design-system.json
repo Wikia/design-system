@@ -152,6 +152,7 @@
   "notifications-wall-post-removed": "<b>Messaggio rimosso</b> dalla bacheca di {user}<br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>ha risposto</b> al messaggio di {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} e {number} altri utenti <b>hanno risposto</b> nella bacheca di {secondUser} <br><br> {postTitle}", 
+  "notifications-wall-reply-multiple-users-own-message": "{firstUser} e {number} altri utenti <b>hanno risposto</b> al tuo messaggio nella bacheca di {wallOwner} <br><br> {postTitle}", 
   "notifications-wall-reply-own-message": "{user} <b>ha risposto</b> al tuo messaggio<br><br> {postTitle}", 
   "now-label": "adesso", 
   "wds-avatar-badges-admin-tooltip": "Amministratore della wiki", 

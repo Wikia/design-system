@@ -152,6 +152,7 @@
   "notifications-wall-post-removed": "{user}さんのメッセージウォールから<b>メッセージが削除</b>されました<br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser}さんが{secondUser}さんのメッセージに<b>返信</b>しました<br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser}さんと他{number}人が{secondUser}さんのメッセージウォールに<b>返信</b>しました<br><br> {postTitle}", 
+  "notifications-wall-reply-multiple-users-own-message": "{firstUser}さんと他{number}人が{wallOwner}さんのメッセージウォールであなたのメッセージに<b>返信</b>しました<br><br> {postTitle}", 
   "notifications-wall-reply-own-message": "{user}さんがあなたのメッセージに<b>返信</b>しました<br><br> {postTitle}", 
   "now-label": "たった今", 
   "wds-avatar-badges-admin-tooltip": "コミュニティ・アドミン", 

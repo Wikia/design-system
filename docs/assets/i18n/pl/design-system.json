@@ -152,6 +152,7 @@
   "notifications-wall-post-removed": "<b>Wiadomość usunięto</b> z tablicy {user} <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>odpowiedział(a)</b> na wiadomość {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} i {number} innych użytkowników <b>odpowiedziało</b> na wiadomość na tablicy {secondUser} <br><br> {postTitle}", 
+  "notifications-wall-reply-multiple-users-own-message": "{firstUser} i {number} pozostałych użytkowników <b>odpowiedziało</b> na twoją wiadomość na tablicy {wallOwner} <br><br> {postTitle}", 
   "notifications-wall-reply-own-message": "{user} <b>odpowiedział(a)</b> na twoją wiadomość <br><br> {postTitle}", 
   "now-label": "teraz", 
   "wds-avatar-badges-admin-tooltip": "Administrator społeczności", 
