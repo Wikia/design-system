@@ -118,6 +118,7 @@
   "hours-ago": "{hours}h", 
   "license-description": "Community content is available under {license} unless otherwise noted.", 
   "minutes-ago": "{minutes}m", 
+  "notifications-anon-user": "Pengguna Fandom", 
   "notifications-article-comment-comment-mention": "{user} <b>mentioned</b> you in a comment on the article: {articleTitle}", 
   "notifications-article-comment-followed-article-comment": "{user} <b>commented</b> on the article: {articleTitle}", 
   "notifications-article-comment-reply-followed-comment": "{user} <b>replied</b> to a comment you are following on the article: {articleTitle}", 

@@ -109,7 +109,7 @@
             <li
               class="{{if (equal index selectedSuggestionIndex) "wds-is-selected"}} wds-global-navigation__search__suggestion"
               onmouseenter={{action (mut selectedSuggestionIndex) index}}
-              {{action "onSearchSuggestionClick" index}}
+              {{action "onSearchSuggestionClick" index preventDefault=(equal (equal searchScope "cross-wiki") false)}}
             >
               <a
                 href={{suggestion.uri}}

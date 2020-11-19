@@ -118,6 +118,7 @@
   "hours-ago": "{hours} Std.", 
   "license-description": "Nutzung von Community-Inhalten gemäß {license}, sofern nicht anders angegeben.", 
   "minutes-ago": "{minutes} Min.", 
+  "notifications-anon-user": "Ein Fandom-Benutzer", 
   "notifications-article-comment-comment-mention": "{user} hat dich in einem Kommentar zu Artikel {articleTitle}  <b>erwähnt</b>", 
   "notifications-article-comment-followed-article-comment": "{user} hat zu Artikel {articleTitle} <b>einen Kommentar hinterlassen</b>", 
   "notifications-article-comment-reply-followed-comment": "{user} hat auf einen Kommentar, den du verfolgst, zum Artikel {articleTitle} <b>geantwortet</b>", 

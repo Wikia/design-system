@@ -27,6 +27,8 @@ export default Component.extend(
 				case notificationTypes.discussionReply:
 				case notificationTypes.postAtMention:
 				case notificationTypes.threadAtMention:
+				case notificationTypes.messageWallPost:
+				case notificationTypes.messageWallReply:
 					return 'wds-icons-comment-small';
 				case notificationTypes.announcement:
 					return 'wds-icons-flag-small';
@@ -35,6 +37,8 @@ export default Component.extend(
 				case notificationTypes.articleCommentAtMention:
 				case notificationTypes.articleCommentReplyAtMention:
 					return 'wds-icons-mention-small';
+				case notificationTypes.talkPageMessage:
+					return 'wds-icons-bubble-small';
 				default:
 					return 'wds-icons-heart-small';
 			}
@@ -86,6 +90,14 @@ export default Component.extend(
 					return this.getArticleCommentAtMentionMessageBody(this.model);
 				case notificationTypes.articleCommentReplyAtMention:
 					return this.getArticleCommentReplyAtMentionMessageBody(this.model);
+				case notificationTypes.messageWallPost:
+					return this.getMessageWallPostBody(this.model);
+				case notificationTypes.messageWallReply:
+					return this.getMessageWallReplyBody(this.model);
+				case notificationTypes.messageWallPostRemoved:
+					return this.getMessageWallPostRemovedBody(this.model);
+				case notificationTypes.talkPageMessage:
+					return this.getTalkPageMessageBody(this.model);
 				default:
 					return null;
 			}
@@ -276,23 +288,124 @@ export default Component.extend(
 				: 'notifications-article-comment-reply-followed-comment';
 
 			return this.getTranslatedMessage(messageKey, {
-				user: model.get('latestActors.0.name'),
+				user: model.get('latestActors.0.name') || this.getTranslatedMessage('notifications-anon-user'),
 				articleTitle: this.titleMarkup,
 			});
 		},
 
 		getArticleCommentAtMentionMessageBody(model) {
 			return this.getTranslatedMessage('notifications-article-comment-comment-mention', {
-				user: model.get('latestActors.0.name'),
+				user: model.get('latestActors.0.name') || this.getTranslatedMessage('notifications-anon-user'),
 				articleTitle: this.titleMarkup,
 			});
 		},
 
 		getArticleCommentReplyAtMentionMessageBody(model) {
 			return this.getTranslatedMessage('notifications-article-comment-reply-mention', {
-				user: model.get('latestActors.0.name'),
+				user: model.get('latestActors.0.name') || this.getTranslatedMessage('notifications-anon-user'),
 				articleTitle: this.titleMarkup,
 			});
+		},
+
+		getMessageWallPostBody(model) {
+			let wallOwner = model.get('metadata.wallOwnerName');
+			const currentUsername = this.wdsOnSiteNotifications.currentUser.name;
+
+			if (!wallOwner) {
+				wallOwner = this.getMessageWallOwner(model.get('uri'));
+			}
+
+			const isOwnWall = wallOwner === currentUsername;
+			const args = {
+				postTitle: model.get('title'),
+				wallOwner,
+			};
+
+			if (isOwnWall) {
+				args.user = this.getPossiblyAnonActorName(model);
+				return this.getTranslatedMessage('notifications-own-wall-post', args);
+			}
+
+			args.firstUser = this.getPossiblyAnonActorName(model);
+			return this.getTranslatedMessage('notifications-wall-post', args);
+		},
+
+		getMessageWallReplyBody(model) {
+			let wallOwner = model.get('metadata.wallOwnerName');
+			const currentUsername = this.wdsOnSiteNotifications.currentUser.name;
+
+			if (!wallOwner) {
+				wallOwner = this.getMessageWallOwner(model.get('uri'));
+			}
+
+			const isOwnWall = wallOwner === currentUsername;
+			const args = {
+				postTitle: model.get('title'),
+				wallOwner,
+			};
+
+			if (model.get('totalUniqueActors') > 1) {
+				args.number = model.get('totalUniqueActors') - 1;
+
+				if (isOwnWall) {
+					args.user = this.getPossiblyAnonActorName(model);
+					return this.getTranslatedMessage('notifications-own-wall-reply-multiple-users', args);
+				}
+		
+				args.firstUser = this.getPossiblyAnonActorName(model);
+
+				if (model.get('contentCreatorName') === currentUsername) {
+					return this.getTranslatedMessage('notifications-wall-reply-multiple-users-own-message', args);
+				}
+
+				args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('notifications-anon-user');
+				return this.getTranslatedMessage('notifications-wall-reply-multiple-users', args);
+			}
+
+			if (isOwnWall) {
+				args.user = this.getPossiblyAnonActorName(model);
+				return this.getTranslatedMessage('notifications-own-wall-reply', args);
+			}
+
+			if (model.get('contentCreatorName') === currentUsername) {
+				args.user = this.getPossiblyAnonActorName(model);
+				return this.getTranslatedMessage('notifications-wall-reply-own-message', args);
+			}
+
+			args.firstUser = this.getPossiblyAnonActorName(model);
+			args.secondUser = model.get('contentCreatorName') || this.getTranslatedMessage('notifications-anon-user');
+
+			return this.getTranslatedMessage('notifications-wall-reply', args);
+		},
+
+		getMessageWallPostRemovedBody(model) {
+			return this.getTranslatedMessage('notifications-own-wall-post-removed', {
+				postTitle: model.get('title'),
+			});
+		},
+
+		getTalkPageMessageBody(model) {
+			const userName = this.getPossiblyAnonActorName(model);
+			const args = {
+				user: userName,
+			};
+
+			return this.getTranslatedMessage('notifications-talk-page-message', args);
+		},
+
+		getMessageWallOwner(url) {
+			const regex = /\/Message_Wall:(.+?)([?#/].*)?$/i;
+			const result = regex.exec(url);
+
+			if (!result || !result[1]) {
+				return null;
+			}
+
+			return result[1];
+		},
+
+		getPossiblyAnonActorName(model) {
+			return model.get('latestActors.0.name') ? model.get('latestActors.0.name') : this.getTranslatedMessage('notifications-anon-user');
 		},
 
 		getTranslatedMessage(key, context) {

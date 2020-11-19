@@ -118,6 +118,7 @@
   "hours-ago": "{hours} godz.", 
   "license-description": "Treści społeczności są dostępne na podstawie licencji {license}, o ile nie zaznaczono inaczej.", 
   "minutes-ago": "{minutes} min.", 
+  "notifications-anon-user": "Użytkownik Fandomu", 
   "notifications-article-comment-comment-mention": "{user} <b>wspomniał(a)</b> Ciebie w komentarzu, w artykule: {articleTitle}", 
   "notifications-article-comment-followed-article-comment": "{user} <b>skomentował(a)</b> artykuł: {articleTitle}", 
   "notifications-article-comment-reply-followed-comment": "{user} <b>odpowiedział(a)</b> na obserwowany komentarz w artykule: {articleTitle}", 

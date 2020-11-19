@@ -29,6 +29,9 @@ export default EmberObject.extend({
 			'article-comment-reply',
 			'article-comment-at-mention',
 			'article-comment-reply-at-mention',
+			'message-wall-post',
+			'message-wall-thread',
+			'talk-page-message',
 		];
 
 		return `contentType=${supportedContentTypes.join('&contentType=')}`;
