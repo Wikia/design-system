@@ -151,6 +151,7 @@
   "notifications-wall-post-removed": "<b>Сообщение удалено</b> со стены {user} <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>ответил(а)</b> на сообщение {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} и еще {number} других участника(ов) <b>ответили</b> на сообщение на стене {secondUser} <br><br> {postTitle}", 
+  "notifications-wall-reply-multiple-users-own-message": "{firstUser} и другие участники ({number}) <b>ответили</b> на ваше сообщение на стене {wallOwner} <br><br> {postTitle}", 
   "notifications-wall-reply-own-message": "{user} <b>ответил(а)</b> на ваше сообщение <br><br> {postTitle}", 
   "now-label": "сейчас", 
   "wds-avatar-badges-admin-tooltip": "Администратор сообщества", 

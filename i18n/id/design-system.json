@@ -151,6 +151,7 @@
   "notifications-wall-post-removed": "<b>Message removed</b> from {user}'s wall <br><br> {postTitle}", 
   "notifications-wall-reply": "{firstUser} <b>replied</b> to {secondUser}'s message <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser} and {number} other users <b>replied</b> to {secondUser}'s wall <br><br> {postTitle}", 
+  "notifications-wall-reply-multiple-users-own-message": "{firstUser} and {number} other users <b>replied</b> to your message on {wallOwner}'s wall <br><br> {postTitle}", 
   "notifications-wall-reply-own-message": "{user} <b>replied</b> to your message <br><br> {postTitle}", 
   "now-label": "sekarang", 
   "wds-avatar-badges-admin-tooltip": "Admin Komunitas", 
