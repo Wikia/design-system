@@ -153,7 +153,7 @@
   "notifications-wall-reply": "{firstUser}<b>回覆了</b>{secondUser}的留言<br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users": "{firstUser}和其他{number}個使用者在{secondUser}的留言牆<b>回覆了</b>留言<br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users-own-message": "{firstUser}和其他{number}位使用者在{wallOwner}的留言牆<b>回覆了</b>您的留言<br><br> {postTitle}", 
-  "notifications-wall-reply-own-message": "{user}<b>已回覆</b>您的訊息<br><br>{postTitle}", 
+  "notifications-wall-reply-own-message": "{user}<b>已回覆</b>您的留言<br><br>{postTitle}", 
   "now-label": "現在", 
   "wds-avatar-badges-admin-tooltip": "社區管理員", 
   "wds-avatar-badges-content-moderator-tooltip": "內容版主", 
