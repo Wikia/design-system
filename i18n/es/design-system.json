@@ -157,7 +157,7 @@
   "notifications-wall-reply-multiple-users": "{firstUser} y otros {number} usuarios <b>respondieron</b> al muro de {secondUser} <br><br> {postTitle}", 
   "notifications-wall-reply-multiple-users-own-message": "{firstUser} y {number} usuarios más <b>respondieron</b> a tu mensaje en el muro de {wallOwner} <br><br> {postTitle}", 
   "notifications-wall-reply-own-message": "{user} <b>respondió</b> a tu mensaje <br><br> {postTitle}", 
-  "now-label": "ahora", 
+  "now-label": "Ahora", 
   "wds-avatar-badges-admin-tooltip": "Administrador", 
   "wds-avatar-badges-content-moderator-tooltip": "Moderador de contenido", 
   "wds-avatar-badges-discussion-moderator-tooltip": "Moderador de discusiones", 
