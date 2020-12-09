@@ -7,6 +7,7 @@ import { inject as service } from '@ember/service';
 import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
 import fetch from 'fetch';
 import { v4 as uuid } from 'ember-uuid';
+import Cookies from 'ember-cli-js-cookie';
 
 export default Component.extend({
 	tagName: 'form',
@@ -56,7 +57,9 @@ export default Component.extend({
 
 		// key: query string, value: Array<SearchSuggestionItem>
 		this.cachedResults = {};
-		this.setScopeMessage(this.getScope());
+		const scope = this.getDefaultScope();
+		this.set('searchScope', scope);
+		this.setScopeMessage(scope);
 	},
 
 	setScopeMessage(scope) {
@@ -430,6 +433,15 @@ export default Component.extend({
 		return this.get('searchScope') === 'cross-wiki' ? 'cross-wiki' : 'internal';
 	},
 
+	getDefaultScope() {
+		const savedSearchScope = Cookies.get('DEFAULT_SEARCH_SCOPE');
+		if (savedSearchScope === 'cross-wiki' || savedSearchScope === 'internal') {
+			return savedSearchScope;
+		} else {
+			return 'internal';
+		}
+	},
+
 	actions: {
 		changeSearchScope(scope) {
 			if (this.getScope() === scope) {
@@ -437,6 +449,11 @@ export default Component.extend({
 			}
 			this.set('searchScope', scope);
 			this.setScopeMessage(scope);
+
+			Cookies.set('DEFAULT_SEARCH_SCOPE', scope, {
+				path: '/',
+				domain: this.get('wikiVariables.cookieDomain'),
+			});
 
 			this.getSuggestions(scope, this.state.query);
 		},

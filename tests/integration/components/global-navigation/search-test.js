@@ -111,6 +111,7 @@ module('Integration | Component | global-navigation/search', function (hooks) {
 		await render(hbs`
 		{{global-navigation/search
 			model=model.search
+			showSearchScope=true
 			goToSearchResults=goToSearchResults
 			onSearchSuggestionChosen=onSearchSuggestionChosen
 			onSearchSuggestionsImpression=onSearchSuggestionsImpression

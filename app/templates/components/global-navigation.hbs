@@ -47,7 +47,6 @@
   <div class="wds-global-navigation__dropdown-controls">
     {{global-navigation/search
       model=model.search
-      defaultSearchScope=defaultSearchScope
       showSearchScope=showSearchScope
       onSearchToggleClicked=(action "onSearchToggleClicked")
       onSearchCloseClicked=(action "onSearchCloseClicked")
@@ -76,7 +75,6 @@
   <div class="wds-global-navigation__modal-controls">
     {{global-navigation/search-modal
       model=model.search
-      defaultSearchScope=defaultSearchScope
       showSearchScope=showSearchScope
       navigationModel=model.main-navigation
       isOpen=isSearchModalOpen
