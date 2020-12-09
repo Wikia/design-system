@@ -7,7 +7,7 @@ import { inject as service } from '@ember/service';
 import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
 import fetch from 'fetch';
 import { v4 as uuid } from 'ember-uuid';
-import Cookies from 'js-cookie';
+import Cookies from 'ember-cli-js-cookie';
 
 export default Component.extend({
 	tagName: 'form',
