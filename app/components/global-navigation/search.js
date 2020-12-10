@@ -414,6 +414,10 @@ export default Component.extend({
 		// ENTER key
 		} else if (keyCode === 13) {
 			if (this.selectedSuggestionIndex !== -1) {
+				if (this.getScope() === 'cross-wiki') {
+					window.location.replace(this.suggestions[this.selectedSuggestionIndex].uri);
+					return;
+				}
 				this.onSearchSuggestionChosen(
 					this.suggestions[this.selectedSuggestionIndex],
 					this.suggestions,
