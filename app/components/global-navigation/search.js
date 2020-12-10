@@ -254,6 +254,7 @@ export default Component.extend({
 		suggestions.length && this.onSearchSuggestionsImpression && this.onSearchSuggestionsImpression(
 			suggestions,
 			this.suggestionId
+
 		);
 
 		this.setProperties({
