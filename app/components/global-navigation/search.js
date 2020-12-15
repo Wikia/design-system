@@ -7,6 +7,11 @@ import { inject as service } from '@ember/service';
 import wrapMeHelper from '@wikia/ember-fandom/helpers/wrap-me';
 import fetch from 'fetch';
 import { v4 as uuid } from 'ember-uuid';
+import Cookies from 'ember-cli-js-cookie';
+
+const CROSS_WIKI_SCOPE = 'cross-wiki';
+const THIS_WIKI_SCOPE = 'internal';
+const SCOPE_COOKIE_NAME = 'DEFAULT_SEARCH_SCOPE';
 
 export default Component.extend({
 	tagName: 'form',
@@ -56,14 +61,16 @@ export default Component.extend({
 
 		// key: query string, value: Array<SearchSuggestionItem>
 		this.cachedResults = {};
-		this.setScopeMessage(this.getScope());
+		const scope = this.getDefaultScope();
+		this.set('searchScope', scope);
+		this.setScopeMessage(scope);
 	},
 
 	setScopeMessage(scope) {
 		const PLACEHOLDER_MESSAGE = 'model.placeholder-active.key';
 		const SCOPE_MESSAGE = 'searchScopeMessageKey';
 
-		if (scope === 'cross-wiki') {
+		if (scope === CROSS_WIKI_SCOPE) {
 			this.set(PLACEHOLDER_MESSAGE, 'global-navigation-search-placeholder-all-wikis');
 			this.set(SCOPE_MESSAGE, 'global-navigation-search-scope-cross-wiki-short');
 		} else {
@@ -108,7 +115,7 @@ export default Component.extend({
 
 					return response.json().then((data) => {
 						let suggestions = [];
-						if (scope === 'cross-wiki') {
+						if (scope === CROSS_WIKI_SCOPE) {
 							suggestions = data.data.map((suggestion) => {
 								return EmberObject.create({
 									title: suggestion.title,
@@ -222,7 +229,7 @@ export default Component.extend({
 				className: 'wds-global-navigation__search-suggestion-highlight'
 			});
 
-		if (scope === 'cross-wiki') {
+		if (scope === CROSS_WIKI_SCOPE) {
 			suggestions.forEach(
 				/**
 				 * @param {SearchSuggestionItem} suggestion
@@ -411,6 +418,10 @@ export default Component.extend({
 		// ENTER key
 		} else if (keyCode === 13) {
 			if (this.selectedSuggestionIndex !== -1) {
+				if (this.getScope() === CROSS_WIKI_SCOPE) {
+					window.location.replace(this.suggestions[this.selectedSuggestionIndex].uri);
+					return;
+				}
 				this.onSearchSuggestionChosen(
 					this.suggestions[this.selectedSuggestionIndex],
 					this.suggestions,
@@ -427,7 +438,16 @@ export default Component.extend({
 	},
 
 	getScope() {
-		return this.get('searchScope') === 'cross-wiki' ? 'cross-wiki' : 'internal';
+		return this.get('searchScope') === CROSS_WIKI_SCOPE ? CROSS_WIKI_SCOPE : THIS_WIKI_SCOPE;
+	},
+
+	getDefaultScope() {
+		const savedSearchScope = Cookies.get(SCOPE_COOKIE_NAME);
+		if (savedSearchScope === CROSS_WIKI_SCOPE || savedSearchScope === THIS_WIKI_SCOPE) {
+			return savedSearchScope;
+		} else {
+			return THIS_WIKI_SCOPE;
+		}
 	},
 
 	actions: {
@@ -437,6 +457,11 @@ export default Component.extend({
 			}
 			this.set('searchScope', scope);
 			this.setScopeMessage(scope);
+
+			Cookies.set(SCOPE_COOKIE_NAME, scope, {
+				path: '/',
+				domain: this.get('wikiVariables.cookieDomain'),
+			});
 
 			this.getSuggestions(scope, this.state.query);
 		},
@@ -478,7 +503,7 @@ export default Component.extend({
 		},
 
 		onSearchSuggestionClick(index) {
-			if (this.getScope() === 'cross-wiki') {
+			if (this.getScope() === CROSS_WIKI_SCOPE) {
 				if (this.track) {
 					this.track({
 						action: 'click',
