@@ -42,22 +42,6 @@
 		font-size: $wds-typescale-size-minus-1;
 		line-height: 1.29;
 		padding: 13px 12px;
-
-		.wds-alert & a {
-			color: $wds-color-alert;
-		}
-
-		.wds-warning & a {
-			color: $wds-color-warning;
-		}
-
-		.wds-success & a {
-			color: $wds-color-success;
-		}
-
-		.wds-message & a {
-			color: $wds-color-message;
-		}
 	}
 
 	&__close {
