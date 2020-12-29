@@ -1,6 +1,6 @@
 {
   "name": "@fandom/design-system",
-  "version": "23.20.1-test.2",
+  "version": "23.20.1-test.3",
   "description": "Design System developed for Fandom",
   "keywords": [
     "ember-addon"
@@ -101,8 +101,5 @@
   "peerDependencies": {
     "ember-fetch": "*",
     "i18next": "10.5.0"
-  },
-  "publishConfig": {
-    "registry": ""
   }
 }
