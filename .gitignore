@@ -4,6 +4,7 @@
 /tmp/
 /docs-dev/
 /test-dist/
+/dist/
 
 # dependencies
 /bower_components/
@@ -24,7 +25,6 @@
 /package.json.ember-try
 
 # other
-/docs-dev/
 .idea/
 /design-system.iml
 *.DS_Store
