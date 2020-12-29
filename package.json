@@ -10,26 +10,30 @@
     "url": "git+https://github.com/Wikia/design-system.git"
   },
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": ">= 10.*"
   },
   "scripts": {
     "prepare": "yarn build",
-    "build": "yarn svgo-source && cp -R style-guide/styles dist/scss && yarn svgo-dist",
-    "build:docs": "yarn clean:docs && ember b -prod && mv docs-dev/ docs && cp CNAME docs/",
+    "build": "yarn clean:build && yarn svg && cp -R style-guide/styles dist/scss",
+    "build:docs": "yarn clean:docs && ember b -prod && cp -R docs-dev/ docs && cp CNAME docs/",
     "build-test": "ember build --output-path=\"test-dist\" --environment=test",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
-    "clean:build": "rm -rf dist",
+    "clean:build": "rm -rf dist && mkdir dist",
     "clean:docs": "rm -rf docs-dev docs",
     "dev": "ember s",
     "release-breaking": "git checkout master && git pull && npm version major && git push --follow-tags",
     "release-feature": "git checkout master && git pull && npm version minor && git push --follow-tags",
     "release-fix": "git checkout master && git pull && npm version patch && git push --follow-tags",
-    "setup": "yarn i",
-    "svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/svg",
-    "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets",
+    "setup": "yarn install",
+    "svg": "yarn svg:copy && yarn svg:sprite && yarn svg:svgo-dist && yarn svg:svgo-source",
+    "svg:copy": "cp style-guide/assets/*.svg dist/svg/",
+    "svg:sprite": "node ./scripts/create-svg-sprite.js",
+    "svg:svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/svg",
+    "svg:svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets",
     "test-existing": "ember test --path=\"test-dist\"",
-    "test": "ember test"
+    "test": "ember test",
+    "ci": "yarn setup && yarn build"
   },
   "devDependencies": {
     "@ember/optional-features": "0.7.0",
@@ -54,7 +58,7 @@
     "ember-cli-json-module": "1.0.0",
     "ember-cli-numeral": "1.0.0",
     "ember-cli-page-object": "1.15.1",
-    "ember-cli-sass": "8.0.1",
+    "ember-cli-sass": "10.0.0",
     "ember-cli-template-lint": "github:ember-template-lint/ember-cli-template-lint#v1.0.0-beta.2",
     "ember-cli-uglify": "2.1.0",
     "ember-code-snippet": "2.3.1",
@@ -78,8 +82,9 @@
     "i18next": "10.5.0",
     "loader.js": "4.7.0",
     "qunit-dom": "0.8.3",
-    "sass": "1.15.2",
-    "svgo": "1.1.1"
+    "sass": "1.30.0",
+    "svgo": "1.1.1",
+    "svgstore": "3.0.0-2"
   },
   "bugs": {
     "url": "https://github.com/Wikia/design-system/issues"
@@ -99,7 +104,7 @@
     "ember-cli-js-cookie": "0.1.1"
   },
   "peerDependencies": {
-    "i18next": "10.5.0",
-    "ember-fetch": "*"
+    "ember-fetch": "*",
+    "i18next": "10.5.0"
   }
 }
