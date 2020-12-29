@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "23.20.1-test.0",
+  "version": "23.20.1-test.1",
   "description": "Design System developed for Fandom",
   "keywords": [
     "ember-addon"
@@ -23,6 +23,7 @@
     "release-breaking": "yarn version --major && yarn publish",
     "release-feature": "yarn version --minor && yarn publish",
     "release-fix": "yarn version --patch && yarn publish",
+    "release-test": "yarn version --prerelease --preid test && yarn publish",
     "build": "yarn clean:build && yarn styles && yarn svg && cp -R style-guide/styles dist/scss",
     "build:docs": "yarn build && yarn clean:docs && ember b -prod && mv docs-dev/ docs && cp CNAME docs/",
     "build-test": "ember build --output-path=\"test-dist\" --environment=test",
