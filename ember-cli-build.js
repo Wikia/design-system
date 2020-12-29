@@ -2,7 +2,6 @@
 
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 const Funnel = require('broccoli-funnel');
-const SvgStore = require('broccoli-svgstore');
 
 module.exports = function(defaults) {
 	const inlineScriptsPath = 'vendor/inline-scripts';
@@ -31,23 +30,9 @@ module.exports = function(defaults) {
 			app: {
 				css: {
 					'app': '/assets/design-system.css',
-					// This one is copied after build to /dist for use by other apps, see postBuildCopy below
-					'wds': '/assets/wds.css'
 				}
 			}
 		},
-		postBuildCopy: [
-			{
-				src: '/assets/wds.css',
-				dest: 'dist/css/styles.css',
-				enabled: EmberAddon.env() === 'production'
-			},
-			{
-				src: '/svg/*.svg',
-				dest: 'dist/svg/',
-				enabled: EmberAddon.env() === 'production'
-			}
-		],
 		sassOptions: {
 			includePaths: [
 				'style-guide/styles',
@@ -59,28 +44,10 @@ module.exports = function(defaults) {
 
 	var additionalTrees = [];
 
-	if (app.env === 'production') {
-		// We build separate SVG files just for the /dist
-		// Don't waste resources during development
-		additionalTrees.push(new Funnel('style-guide/assets', {
-			include: ['*.svg'],
-			destDir: 'svg'
-		}));
-	}
-
-	additionalTrees.push(SvgStore('style-guide/assets', {
-		outputFile: '/svg/sprite.svg',
-		svgstoreOpts: {
-			inline: true,
-			svgAttrs: {
-				style: 'position: absolute; width: 0; height: 0;',
-				width: '0',
-				height: '0',
-				version: '1.1',
-				xmlns: 'http://www.w3.org/2000/svg',
-				'xmlns:xlink': 'http://www.w3.org/1999/xlink'
-			}
-		}
+	// Copy already built SVG files from dist directory
+	additionalTrees.push(new Funnel('dist/svg', {
+		include: ['*.svg'],
+		destDir: '/svg'
 	}));
 
 	additionalTrees.push(new Funnel('i18n', {

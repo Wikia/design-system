@@ -23,7 +23,7 @@
     "release-feature": "git checkout master && git pull && npm version minor && git push --follow-tags",
     "release-fix": "git checkout master && git pull && npm version patch && git push --follow-tags",
     "build": "yarn clean:build && yarn styles && yarn svg && cp -R style-guide/styles dist/scss",
-    "build:docs": "yarn build && yarn clean:docs && ember b -prod && cp -R docs-dev/ docs && cp CNAME docs/",
+    "build:docs": "yarn build && yarn clean:docs && ember b -prod && mv docs-dev/ docs && cp CNAME docs/",
     "build-test": "ember build --output-path=\"test-dist\" --environment=test",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
@@ -91,14 +91,6 @@
     "url": "https://github.com/Wikia/design-system/issues"
   },
   "homepage": "https://github.com/Wikia/design-system#readme",
-  "ember-addon": {
-    "paths": [
-      "lib/post-build-copy"
-    ],
-    "versionCompatibility": {
-      "ember": ">=3 <=3.1"
-    }
-  },
   "dependencies": {
     "ember-autoresize": "1.3.2",
     "ember-cli-babel": "7.2.0",
