@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "23.20.1-0",
+  "version": "23.20.1-test.0",
   "description": "Design System developed for Fandom",
   "keywords": [
     "ember-addon"
