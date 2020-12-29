@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "23.20.0",
+  "version": "23.21.0-0",
   "description": "Design System developed for Fandom",
   "keywords": [
     "ember-addon"
@@ -13,15 +13,16 @@
     "node": ">= 10.*"
   },
   "scripts": {
+    "preversion": "git checkout IW-4970 && git pull",
     "prepare": "yarn build",
     "setup": "yarn install",
     "test": "ember test",
     "test-existing": "ember test --path=\"test-dist\"",
     "ci": "yarn setup && yarn build",
     "dev": "ember s",
-    "release-breaking": "git checkout master && git pull && npm version major && git push --follow-tags",
-    "release-feature": "git checkout master && git pull && npm version minor && git push --follow-tags",
-    "release-fix": "git checkout master && git pull && npm version patch && git push --follow-tags",
+    "release-breaking": "yarn version --major && yarn publish",
+    "release-feature": "yarn version --minor && yarn publish",
+    "release-fix": "yarn version --patch && yarn publish",
     "build": "yarn clean:build && yarn styles && yarn svg && cp -R style-guide/styles dist/scss",
     "build:docs": "yarn build && yarn clean:docs && ember b -prod && mv docs-dev/ docs && cp CNAME docs/",
     "build-test": "ember build --output-path=\"test-dist\" --environment=test",
