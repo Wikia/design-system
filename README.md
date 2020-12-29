@@ -25,7 +25,7 @@ Code and documentation copyright 2018 Fandom, Inc.
 
 * `git clone <repository-url>` this repository
 * `cd my-app`
-* `npm install`
+* `yarn install`
 
 ## Running / Development
 
@@ -44,9 +44,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `yarn lint:hbs`
+* `yarn lint:js`
+* `yarn lint:js -- --fix`
 
 ### Building
 
