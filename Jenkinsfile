@@ -7,12 +7,12 @@ pipeline {
   }
 
   stages {
-    stage('npm ci') {
+    stage('yarn ci') {
       options {
         timeout(time: 2, unit: 'MINUTES')
       }
       steps {
-        sh 'npm ci'
+        sh 'yarn ci'
       }
     }
     stage('Build and Test') {
