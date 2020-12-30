@@ -10,7 +10,7 @@
     "url": "git+https://github.com/Wikia/design-system.git"
   },
   "engines": {
-    "node": ">= 10.*"
+    "node": "8.* || >= 10.*"
   },
   "scripts": {
     "preversion": "git checkout IW-4970 && git pull",

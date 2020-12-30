@@ -23,7 +23,7 @@ pipeline {
         timeout(time: 2, unit: 'MINUTES')
       }
       steps {
-        sh 'ember test'
+        sh 'yarn test'
       }
     }
   }
