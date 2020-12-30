@@ -1,0 +1,66 @@
+import groovy.json.JsonSlurperClassic
+
+def gitCommit = "${params.commit}"
+def labels = ""
+
+def publishPatchLabel = "publish-patch-on-merge"
+def publishMinorLabel = "publish-minor-on-merge"
+def publishMajorLabel = "publish-major-on-merge"
+
+node('qa-executors') {
+	stage('Clone repo and validate') {
+		nodejs('v10 LTS') {
+			git credentialsId: 'bd3cf712-39a7-4b16-979e-ff86208ab2ea', url: 'git@github.com:Wikia/design-system.git', branch: "master"
+			currentBuild.description = "commit: ${params.commit}, PR: ${params.pull_num}"
+
+			stage('Check Pull Request labels') {
+				def json = sh(returnStdout: true, script: "curl -X GET ${authHeader} ${contentTypeHeader} ${issueUrl}/labels")
+				def parsed = new JsonSlurperClassic().parseText(json)
+				labels = parsed.name
+				println "Labels found: " + labels
+			}
+
+			stage('Install dependencies') {
+				try {
+					sh returnStdout: true, script: 'yarn setup'
+				} catch (e) {
+					error 'FAIL'
+				}
+			}
+
+			stage('Run linter') {
+				try {
+					sh returnStdout: true, script: 'yarn lint:jenkins'
+				} catch (e) {
+					error 'FAIL'
+				}
+			}
+
+			stage('Run tests') {
+				try {
+					sh returnStdout: true, script: 'yarn test:jenkins'
+				} catch (e) {
+					error 'FAIL'
+				}
+			}
+
+
+			if (currentBuild.currentResult.equals("SUCCESS")) {
+				if (labels.contains(publishMajorLabel)) {
+					stage('Publish version: major') {
+						sh returnStdout: true, script: 'yarn release-major'
+					}
+				} else if (labels.contains(publishMinorLabel)) {
+					stage('Publish version: minor') {
+						sh returnStdout: true, script: 'yarn release-minor'
+					}
+				} else if (labels.contains(publishPatchLabel)) {
+					stage('Publish version: patch') {
+						sh returnStdout: true, script: 'yarn release-patch'
+					}
+				}
+			}
+
+		}
+	}
+}
