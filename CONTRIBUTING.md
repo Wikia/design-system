@@ -4,23 +4,24 @@
 
 * `git clone <repository-url>`
 * `cd design-system`
-* `npm install`
+* `yarn install`
 
 ## Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `yarn lint:hbs`
+* `yarn lint:js`
+* `yarn lint:js -- --fix`
 
 ## Running tests
 
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `ember try:each` – Runs the test suite against multiple Ember versions
+`yarn test`
 
 ## Running the dummy application
 
-* `ember serve`
+* `yarn dev`
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+## Creating Pull Requests
+
+In order to update documentation you need to run `yarn build:docs`.
+The `yarn build` script will only build necessary files that can be used by other codebases without updating the documentation.

@@ -29,7 +29,7 @@ Code and documentation copyright 2018 Fandom, Inc.
 
 ## Running / Development
 
-* `ember serve`
+* `yarn dev`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
