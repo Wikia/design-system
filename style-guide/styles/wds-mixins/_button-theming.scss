@@ -17,6 +17,7 @@
 
 	color: $color-primary-text;
 	background: none;
+	border: 1px solid greenyellow;
 
 	&:not(.wds-is-text):not(.wds-is-secondary) {
 		background-color: $color-primary;
