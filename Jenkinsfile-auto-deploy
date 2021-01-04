@@ -23,32 +23,32 @@ node('qa-executors') {
 				println "Labels found: " + labels
 			}
 
-			stage('Install dependencies') {
-				try {
-					sh 'yarn setup'
-				} catch (e) {
-					error 'FAIL'
+			withEnv(["ARTIFACTORY_NPM_TOKEN=${env.JENKINS_ARTIFACTORY_PASSWORD}"]) {
+				stage('Install dependencies') {
+					try {
+						sh 'yarn setup'
+					} catch (e) {
+						error 'FAIL'
+					}
 				}
-			}
 
-			stage('Run linter') {
-				try {
-					sh 'yarn lint:jenkins'
-				} catch (e) {
-					error 'FAIL'
+				stage('Run linter') {
+					try {
+						sh 'yarn lint:jenkins'
+					} catch (e) {
+						error 'FAIL'
+					}
 				}
-			}
 
-			stage('Run tests') {
-				try {
-					sh 'yarn test:jenkins'
-				} catch (e) {
-					error 'FAIL'
+				stage('Run tests') {
+					try {
+						sh 'yarn test:jenkins'
+					} catch (e) {
+						error 'FAIL'
+					}
 				}
-			}
 
-			if (currentBuild.currentResult.equals("SUCCESS")) {
-				withEnv(["ARTIFACTORY_NPM_TOKEN=${env.JENKINS_ARTIFACTORY_PASSWORD}"]) {
+				if (currentBuild.currentResult.equals("SUCCESS")) {
 					if (labels.contains(publishMajorLabel)) {
 						stage('Publish version: major') {
 							sh 'yarn release-major'
@@ -62,17 +62,17 @@ node('qa-executors') {
 							sh 'yarn release-patch'
 						}
 					}
-				}
 
-				if (labels.contains(deployDocsLabel)) {
-					stage('Deploy documentation') {
-						def currentPackageVersion = sh script: "egrep '\"version\": \".+\"' package.json | cut -d '\"' -f4", returnStdout: true
+					if (labels.contains(deployDocsLabel)) {
+						stage('Deploy documentation') {
+							def currentPackageVersion = sh script: "egrep '\"version\": \".+\"' package.json | cut -d '\"' -f4", returnStdout: true
 
-						sh 'yarn build:docs'
+							sh 'yarn build:docs'
 
-						git credentialsId: 'bd3cf712-39a7-4b16-979e-ff86208ab2ea', branch: "${githubPagesBranch}", url: 'git@github.com:Wikia/design-system.git'
-						sh "git commit -am 'New version: '"
-						sh "git push origin ${githubPagesBranch}"
+							git credentialsId: 'bd3cf712-39a7-4b16-979e-ff86208ab2ea', branch: "${githubPagesBranch}", url: 'git@github.com:Wikia/design-system.git'
+							sh "git commit -am 'New version: '"
+							sh "git push origin ${githubPagesBranch}"
+						}
 					}
 				}
 			}
