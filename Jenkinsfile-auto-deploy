@@ -68,7 +68,7 @@ node('qa-executors') {
 							def currentPackageVersion = sh script: "egrep '\"version\": \".+\"' package.json | cut -d '\"' -f4", returnStdout: true
 							sh 'yarn build:docs'
 							sh "git stash"
-							sh "git checkout ${githubPagesBranch} && git pull"
+							sh "git checkout ${githubPagesBranch} && git pull origin ${githubPagesBranch}"
 							sh "git stash pop --force"
 							sh "git add docs/"
 							sh "git commit -m 'New version: ${currentPackageVersion}'"
