@@ -32,14 +32,6 @@ node('qa-executors') {
 					}
 				}
 
-				stage('Run linter') {
-					try {
-						sh 'yarn lint:jenkins'
-					} catch (e) {
-						error 'FAIL'
-					}
-				}
-
 				stage('Run tests') {
 					try {
 						sh 'yarn test:jenkins'
@@ -76,11 +68,11 @@ node('qa-executors') {
 								cp docs/CNAME ./CNAME
 								git add docs/ ./CNAME
 
-								if [ -n "\$(git status --porcelain)" ]; then
+								if git diff --exit-code --staged; then
+								  	echo "No changes detected. Will not commit to ${githubPagesBranch}";
+								else
 									git commit -m 'Documentation for ${currentPackageVersion}\nBased on ${params.pull_num} pull request'
 									git push origin ${githubPagesBranch}
-								else
-								  	echo "No changes. Will not commit to ${githubPagesBranch}";
 								fi
 								"""
 							}
