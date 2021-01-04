@@ -68,12 +68,14 @@ node('qa-executors') {
 							def currentPackageVersion = sh script: "egrep '\"version\": \".+\"' package.json | cut -d '\"' -f4", returnStdout: true
 							sh 'yarn build:docs'
 
-							sh "git stash"
-							sh "git fetch origin ${githubPagesBranch} && git checkout ${githubPagesBranch}"
-							sh "git stash pop"
-							sh "git add docs/"
-							sh "git commit -m 'New version: ${currentPackageVersion}'"
-							sh "git push origin ${githubPagesBranch}"
+							sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
+								sh "git stash"
+								sh "git fetch origin ${githubPagesBranch} && git checkout ${githubPagesBranch}"
+								sh "git stash pop"
+								sh "git add docs/"
+								sh "git commit -m 'New version: ${currentPackageVersion}'"
+								sh "git push origin ${githubPagesBranch}"
+							  }
 						}
 					}
 				}
