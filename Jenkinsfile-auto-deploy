@@ -69,8 +69,7 @@ node('qa-executors') {
 							sh 'yarn build:docs'
 
 							sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
-								sh"""
-								#!/bin/sh
+								sh"""#!/bin/sh
 								git fetch origin ${githubPagesBranch}
 								git checkout ${githubPagesBranch}
 								cp docs/CNAME ./CNAME
