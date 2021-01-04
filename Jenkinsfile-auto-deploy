@@ -1,0 +1,85 @@
+import groovy.json.JsonSlurperClassic
+
+def authHeader = "-H 'Authorization: token ${GITHUB_TOKEN}'"
+def contentTypeHeader = "-H 'Content-type: application/json'"
+def issueUrl = "https://api.github.com/repos/Wikia/design-system/issues/${params.pull_num}"
+def labels = ""
+def githubPagesBranch = "gh-pages"
+def publishPatchLabel = "publish-patch-on-merge"
+def publishMinorLabel = "publish-minor-on-merge"
+def publishMajorLabel = "publish-major-on-merge"
+def deployDocsLabel = "deploy-docs-on-merge"
+
+node('qa-executors') {
+	stage('Clone repo and validate') {
+		nodejs('v10 LTS') {
+			git credentialsId: 'bd3cf712-39a7-4b16-979e-ff86208ab2ea', url: 'git@github.com:Wikia/design-system.git', branch: "master"
+			currentBuild.description = "commit: ${params.commit}, PR: ${params.pull_num}"
+
+			stage('Check Pull Request labels') {
+				def json = sh(returnStdout: true, script: "curl -X GET ${authHeader} ${contentTypeHeader} ${issueUrl}/labels")
+				def parsed = new JsonSlurperClassic().parseText(json)
+				labels = parsed.name
+				println "Labels found: " + labels
+			}
+
+			withEnv(["ARTIFACTORY_NPM_TOKEN=${env.JENKINS_ARTIFACTORY_PASSWORD}"]) {
+				stage('Install dependencies') {
+					try {
+						sh 'yarn install'
+					} catch (e) {
+						error 'FAIL'
+					}
+				}
+
+				stage('Run tests') {
+					try {
+						sh 'yarn test:jenkins'
+					} catch (e) {
+						error 'FAIL'
+					}
+				}
+
+				if (currentBuild.currentResult.equals("SUCCESS")) {
+					if (labels.contains(publishMajorLabel)) {
+						stage('Publish version: major') {
+							sh 'yarn release-major'
+						}
+					} else if (labels.contains(publishMinorLabel)) {
+						stage('Publish version: minor') {
+							sh 'yarn release-minor'
+						}
+					} else if (labels.contains(publishPatchLabel)) {
+						stage('Publish version: patch') {
+							sh 'yarn release-patch'
+						}
+					}
+
+					if (labels.contains(deployDocsLabel)) {
+						stage('Deploy documentation') {
+							def currentPackageVersion = sh script: "egrep '\"version\": \".+\"' package.json | cut -d '\"' -f4", returnStdout: true
+							sh 'yarn build:docs'
+
+							sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
+								sh """
+								git fetch origin ${githubPagesBranch}
+								git checkout ${githubPagesBranch}
+
+								cp docs/CNAME ./CNAME
+								git add docs/ ./CNAME
+
+								if git diff --cached --exit-code --quiet; then
+								  	echo "No changes detected. Will not commit to ${githubPagesBranch}";
+								else
+									git commit -m 'Documentation for ${currentPackageVersion}\nBased on ${params.pull_num} pull request'
+									git push origin ${githubPagesBranch}
+								fi
+								"""
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

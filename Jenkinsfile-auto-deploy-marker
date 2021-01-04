@@ -1,0 +1,32 @@
+def issueUrl = "https://api.github.com/repos/Wikia/design-system/issues/${params.pull_num}"
+def authHeader = "-H 'Authorization: token ${GITHUB_TOKEN}'"
+def contentTypeHeader = "-H 'Content-type: application/json'"
+def labels = "${params.labels}"
+
+node('linux') {
+	try {
+		stage('Add label to GitHub repo') {
+			def githubUsername = "WikiaJenkins"
+
+			def publishMinorLabel = "publish-minor-on-merge"
+			def deployDocsLabel = "deploy-docs-on-merge"
+
+			if (!labels.contains(publishMinorLabel)) {
+				sh "curl -X POST ${authHeader} ${contentTypeHeader} --data '[ \"${publishMinorLabel}\" ]' ${issueUrl}/labels"
+
+				def message = "**Watch out!** This PR will start deployment to **artifactory**.\\n \\n If you do not want it, please remove the `publish-minor-on-merge` label to disable it. Keep in mind that this **label will be re-applied if new commits will be added to this PR**."
+				sh "curl -X POST ${authHeader} ${contentTypeHeader} --data '{ \"body\": \"${message}\"}' ${issueUrl}/comments"
+			}
+
+			if (!labels.contains(deployDocsLabel)) {
+				sh "curl -X POST ${authHeader} ${contentTypeHeader} --data '[ \"${deployDocsLabel}\" ]' ${issueUrl}/labels"
+
+				def message = "**Watch out!** This PR will start **documentation deployment**.\\n \\n If you do not want it, please remove the `deploy-docs-on-merge` label to disable it. Keep in mind that this **label will be re-applied if new commits will be added to this PR**."
+				sh "curl -X POST ${authHeader} ${contentTypeHeader} --data '{ \"body\": \"${message}\" }' ${issueUrl}/comments"
+			}
+		}
+	} catch (Exception e) {
+		currentBuild.result = 'FAILURE'
+        println e
+	}
+}
