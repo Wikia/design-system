@@ -5,6 +5,7 @@
 /docs-dev/
 /test-dist/
 /dist/
+/docs/
 
 # dependencies
 /bower_components/
