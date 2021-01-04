@@ -1,5 +1,7 @@
 import groovy.json.JsonSlurperClassic
 
+def artifactoryUsername = env.JENKINS_ARTIFACTORY_USERNAME
+def artifactoryPassword = env.JENKINS_ARTIFACTORY_PASSWORD
 def authHeader = "-H 'Authorization: token ${GITHUB_TOKEN}'"
 def contentTypeHeader = "-H 'Content-type: application/json'"
 def issueUrl = "https://api.github.com/repos/Wikia/design-system/issues/${params.pull_num}"
@@ -48,6 +50,10 @@ node('qa-executors') {
 			}
 
 			if (currentBuild.currentResult.equals("SUCCESS")) {
+				stage('Artifactory login') {
+					sh "echo '//artifactory.wikia-inc.com/artifactory/api/npm/wikia-npm/:_authToken=${artifactoryPassword}' >> .npmrc"
+				}
+
 				if (labels.contains(publishMajorLabel)) {
 					stage('Publish version: major') {
 						sh "echo TOKEN: ${env.NPM_TOKEN}"
