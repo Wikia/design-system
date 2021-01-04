@@ -33,6 +33,8 @@ node('qa-executors') {
 
 			stage('Run linter') {
 				try {
+					sh 'pwd'
+					sh 'ls -al'
 					sh 'yarn run lint:jenkins'
 				} catch (e) {
 					error 'FAIL'
