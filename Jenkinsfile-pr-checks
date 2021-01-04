@@ -7,7 +7,7 @@ pipeline {
   }
 
   stages {
-    stage('yarn ci') {
+    stage('Build') {
       options {
         timeout(time: 2, unit: 'MINUTES')
       }
@@ -15,7 +15,15 @@ pipeline {
         sh 'yarn ci'
       }
     }
-    stage('Build and Test') {
+    stage('Lint') {
+      options {
+        timeout(time: 2, unit: 'MINUTES')
+      }
+      steps {
+      	sh 'yarn lint:jenkins'
+      }
+    }
+    stage('Test') {
       environment {
         COVERAGE = true
       }
