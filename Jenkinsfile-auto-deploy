@@ -50,14 +50,17 @@ node('qa-executors') {
 			if (currentBuild.currentResult.equals("SUCCESS")) {
 				if (labels.contains(publishMajorLabel)) {
 					stage('Publish version: major') {
+						sh "echo TOKEN: ${env.NPM_TOKEN}"
 						sh 'yarn release-major'
 					}
 				} else if (labels.contains(publishMinorLabel)) {
 					stage('Publish version: minor') {
+						sh "echo TOKEN: ${env.NPM_TOKEN}"
 						sh 'yarn release-minor'
 					}
 				} else if (labels.contains(publishPatchLabel)) {
 					stage('Publish version: patch') {
+						sh "echo TOKEN: ${env.NPM_TOKEN}"
 						sh 'yarn release-patch'
 					}
 				}
