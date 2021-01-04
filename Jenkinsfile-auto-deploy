@@ -68,7 +68,7 @@ node('qa-executors') {
 								cp docs/CNAME ./CNAME
 								git add docs/ ./CNAME
 
-								if git diff --exit-code --staged; then
+								if git diff --exit-code --staged --quiet; then
 								  	echo "No changes detected. Will not commit to ${githubPagesBranch}";
 								else
 									git commit -m 'Documentation for ${currentPackageVersion}\nBased on ${params.pull_num} pull request'
