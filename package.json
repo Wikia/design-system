@@ -13,7 +13,6 @@
     "node": "8.* || >= 10.*"
   },
   "scripts": {
-    "preversion": "git checkout IW-4970 && git pull",
     "prepare": "yarn build",
     "setup": "yarn install",
     "test": "ember test",
