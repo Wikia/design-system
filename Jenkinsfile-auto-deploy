@@ -71,9 +71,9 @@ node('qa-executors') {
 							sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
 								sh "git fetch origin ${githubPagesBranch}"
 								sh "git checkout ${githubPagesBranch}"
-								sh "cp docs/CNAME CNAME"
-								sh "git add docs/ CNAME"
-								sh "git commit -m 'Documentation for ${currentPackageVersion}\\n Based on ${params.pull_num} pull request'"
+								sh "cp docs/CNAME ./CNAME"
+								sh "git add docs/ ./CNAME"
+								sh "git commit -m 'Documentation for ${currentPackageVersion}\nBased on ${params.pull_num} pull request'"
 								sh "git push origin ${githubPagesBranch}"
 							  }
 						}
