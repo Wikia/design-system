@@ -1,11 +1,14 @@
 import groovy.json.JsonSlurperClassic
 
-def gitCommit = "${params.commit}"
+def authHeader = "-H 'Authorization: token ${GITHUB_TOKEN}'"
+def contentTypeHeader = "-H 'Content-type: application/json'"
+def issueUrl = "https://api.github.com/repos/Wikia/design-system/issues/${params.pull_num}"
 def labels = ""
-
+def githubPagesBranch = "gh-pages"
 def publishPatchLabel = "publish-patch-on-merge"
 def publishMinorLabel = "publish-minor-on-merge"
 def publishMajorLabel = "publish-major-on-merge"
+def deployDocsLabel = "deploy-docs-on-merge"
 
 node('qa-executors') {
 	stage('Clone repo and validate') {
@@ -22,7 +25,7 @@ node('qa-executors') {
 
 			stage('Install dependencies') {
 				try {
-					sh returnStdout: true, script: 'yarn setup'
+					sh 'yarn setup'
 				} catch (e) {
 					error 'FAIL'
 				}
@@ -30,7 +33,7 @@ node('qa-executors') {
 
 			stage('Run linter') {
 				try {
-					sh returnStdout: true, script: 'yarn lint:jenkins'
+					sh 'yarn lint:jenkins'
 				} catch (e) {
 					error 'FAIL'
 				}
@@ -38,29 +41,39 @@ node('qa-executors') {
 
 			stage('Run tests') {
 				try {
-					sh returnStdout: true, script: 'yarn test:jenkins'
+					sh 'yarn test:jenkins'
 				} catch (e) {
 					error 'FAIL'
 				}
 			}
 
-
 			if (currentBuild.currentResult.equals("SUCCESS")) {
 				if (labels.contains(publishMajorLabel)) {
 					stage('Publish version: major') {
-						sh returnStdout: true, script: 'yarn release-major'
+						sh 'yarn release-major'
 					}
 				} else if (labels.contains(publishMinorLabel)) {
 					stage('Publish version: minor') {
-						sh returnStdout: true, script: 'yarn release-minor'
+						sh 'yarn release-minor'
 					}
 				} else if (labels.contains(publishPatchLabel)) {
 					stage('Publish version: patch') {
-						sh returnStdout: true, script: 'yarn release-patch'
+						sh 'yarn release-patch'
+					}
+				}
+
+				if (labels.contains(deployDocsLabel)) {
+					stage('Deploy documentation') {
+						def currentPackageVersion = sh script: "egrep '\"version\": \".+\"' package.json | cut -d '\"' -f4", returnStdout: true
+
+						sh 'yarn build:docs'
+
+						git credentialsId: 'bd3cf712-39a7-4b16-979e-ff86208ab2ea', branch: "${githubPagesBranch}", url: 'git@github.com:Wikia/design-system.git'
+						sh "git commit -am 'New version: '"
+						sh "git push origin ${githubPagesBranch}"
 					}
 				}
 			}
-
 		}
 	}
 }
