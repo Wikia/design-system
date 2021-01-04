@@ -69,13 +69,16 @@ node('qa-executors') {
 							sh 'yarn build:docs'
 
 							sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
-								sh "git fetch origin ${githubPagesBranch}"
-								sh "git checkout ${githubPagesBranch}"
-								sh "cp docs/CNAME ./CNAME"
-								sh "git add docs/ ./CNAME"
-								sh "git commit -m 'Documentation for ${currentPackageVersion}\nBased on ${params.pull_num} pull request'"
-								sh "git push origin ${githubPagesBranch}"
-							  }
+								sh'''
+								#!/bin/sh
+								git fetch origin ${githubPagesBranch}
+								git checkout ${githubPagesBranch}
+								cp docs/CNAME ./CNAME
+								git add docs/ ./CNAME
+								git commit -m 'Documentation for ${currentPackageVersion}\nBased on ${params.pull_num} pull request'
+								git push origin ${githubPagesBranch}
+								'''
+							}
 						}
 					}
 				}
