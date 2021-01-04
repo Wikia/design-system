@@ -67,10 +67,8 @@ node('qa-executors') {
 						stage('Deploy documentation') {
 							def currentPackageVersion = sh script: "egrep '\"version\": \".+\"' package.json | cut -d '\"' -f4", returnStdout: true
 							sh 'yarn build:docs'
-							sh 'git status'
-							sh 'ls -al'
-
-							git credentialsId: 'bd3cf712-39a7-4b16-979e-ff86208ab2ea', branch: "${githubPagesBranch}", url: 'git@github.com:Wikia/design-system.git'
+							sh 'git checkout ${githubPagesBranch}'
+							sh 'git add docs/'
 							sh "git commit -am 'New version: ${currentPackageVersion}'"
 							sh "git push origin ${githubPagesBranch}"
 						}
