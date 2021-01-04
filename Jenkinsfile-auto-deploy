@@ -13,7 +13,7 @@ def deployDocsLabel = "deploy-docs-on-merge"
 node('qa-executors') {
 	stage('Clone repo and validate') {
 		nodejs('v10 LTS') {
-			git credentialsId: 'b133f478-47bf-4a73-817a-c618cee7da55', url: 'git@github.com:Wikia/design-system.git', branch: "IW-4970-jenkins"
+			git credentialsId: 'wikia-jenkins-github', url: 'git@github.com:Wikia/design-system.git', branch: "IW-4970-jenkins"
 			currentBuild.description = "commit: ${params.commit}, PR: ${params.pull_num}"
 
 			stage('Check Pull Request labels') {
