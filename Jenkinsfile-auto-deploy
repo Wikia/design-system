@@ -69,9 +69,13 @@ node('qa-executors') {
 							sh 'yarn build:docs'
 
 							sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
-								sh "git fetch origin ${githubPagesBranch} && git checkout ${githubPagesBranch}"
-								sh "cp docs/CNAME ./CNAME && git add docs/ ./CNAME"
 								sh """
+								git fetch origin ${githubPagesBranch}
+								git checkout ${githubPagesBranch}
+
+								cp docs/CNAME ./CNAME
+								git add docs/ ./CNAME
+
 								if [ -n "\$(git status --porcelain)" ]; then
 									git commit -m 'Documentation for ${currentPackageVersion}\nBased on ${params.pull_num} pull request'
 									git push origin ${githubPagesBranch}
