@@ -6,11 +6,12 @@ pipeline {
     }
   }
 
+  environment {
+  	ARTIFACTORY_NPM_TOKEN = "${env.JENKINS_ARTIFACTORY_PASSWORD}"
+  }
+
   stages {
     stage('Build') {
-      environment {
-      	ARTIFACTORY_NPM_TOKEN = "${env.JENKINS_ARTIFACTORY_PASSWORD}"
-      }
       options {
         timeout(time: 2, unit: 'MINUTES')
       }
