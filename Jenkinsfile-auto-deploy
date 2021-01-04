@@ -4,7 +4,7 @@ def authHeader = "-H 'Authorization: token ${GITHUB_TOKEN}'"
 def contentTypeHeader = "-H 'Content-type: application/json'"
 def issueUrl = "https://api.github.com/repos/Wikia/design-system/issues/${params.pull_num}"
 def labels = ""
-def githubPagesBranch = "gh-pages-test"
+def githubPagesBranch = "gh-pages"
 def publishPatchLabel = "publish-patch-on-merge"
 def publishMinorLabel = "publish-minor-on-merge"
 def publishMajorLabel = "publish-major-on-merge"
@@ -13,7 +13,7 @@ def deployDocsLabel = "deploy-docs-on-merge"
 node('qa-executors') {
 	stage('Clone repo and validate') {
 		nodejs('v10 LTS') {
-			git credentialsId: 'bd3cf712-39a7-4b16-979e-ff86208ab2ea', url: 'git@github.com:Wikia/design-system.git', branch: "IW-4970-jenkins"
+			git credentialsId: 'bd3cf712-39a7-4b16-979e-ff86208ab2ea', url: 'git@github.com:Wikia/design-system.git', branch: "master"
 			currentBuild.description = "commit: ${params.commit}, PR: ${params.pull_num}"
 
 			stage('Check Pull Request labels') {
