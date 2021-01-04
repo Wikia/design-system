@@ -26,7 +26,8 @@ node('qa-executors') {
 			withEnv(["ARTIFACTORY_NPM_TOKEN=${env.JENKINS_ARTIFACTORY_PASSWORD}"]) {
 				stage('Install dependencies') {
 					try {
-						sh 'yarn setup'
+						sh 'echo $ARTIFACTORY_NPM_TOKEN'
+						sh 'yarn install'
 					} catch (e) {
 						error 'FAIL'
 					}

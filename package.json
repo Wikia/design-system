@@ -14,11 +14,10 @@
   },
   "scripts": {
     "prepare": "yarn build",
-    "setup": "yarn install",
     "test": "ember test",
     "test-existing": "ember test --path=\"test-dist\"",
     "test:jenkins": "yarn test",
-    "ci": "yarn setup && yarn build",
+    "ci": "yarn install && yarn build",
     "dev": "ember s",
     "release-major": "yarn version --major && yarn publish",
     "release-minor": "yarn version --minor && yarn publish",
