@@ -1,7 +1,5 @@
 import groovy.json.JsonSlurperClassic
 
-def artifactoryUsername = env.JENKINS_ARTIFACTORY_USERNAME
-def artifactoryPassword = env.JENKINS_ARTIFACTORY_PASSWORD
 def authHeader = "-H 'Authorization: token ${GITHUB_TOKEN}'"
 def contentTypeHeader = "-H 'Content-type: application/json'"
 def issueUrl = "https://api.github.com/repos/Wikia/design-system/issues/${params.pull_num}"
@@ -50,24 +48,19 @@ node('qa-executors') {
 			}
 
 			if (currentBuild.currentResult.equals("SUCCESS")) {
-				stage('Artifactory login') {
-					sh "echo '//artifactory.wikia-inc.com/artifactory/api/npm/wikia-npm/:_authToken=${artifactoryPassword}' >> .npmrc"
-				}
-
-				if (labels.contains(publishMajorLabel)) {
-					stage('Publish version: major') {
-						sh "echo TOKEN: ${env.NPM_TOKEN}"
-						sh 'yarn release-major'
-					}
-				} else if (labels.contains(publishMinorLabel)) {
-					stage('Publish version: minor') {
-						sh "echo TOKEN: ${env.NPM_TOKEN}"
-						sh 'yarn release-minor'
-					}
-				} else if (labels.contains(publishPatchLabel)) {
-					stage('Publish version: patch') {
-						sh "echo TOKEN: ${env.NPM_TOKEN}"
-						sh 'yarn release-patch'
+				withEnv(["ARTIFACTORY_NPM_TOKEN=${env.JENKINS_ARTIFACTORY_PASSWORD}"]) {
+					if (labels.contains(publishMajorLabel)) {
+						stage('Publish version: major') {
+							sh 'yarn release-major'
+						}
+					} else if (labels.contains(publishMinorLabel)) {
+						stage('Publish version: minor') {
+							sh 'yarn release-minor'
+						}
+					} else if (labels.contains(publishPatchLabel)) {
+						stage('Publish version: patch') {
+							sh 'yarn release-patch'
+						}
 					}
 				}
 
