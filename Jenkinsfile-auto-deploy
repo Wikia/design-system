@@ -67,7 +67,7 @@ node('qa-executors') {
 								if git diff --cached --exit-code --quiet; then
 								  	echo "No changes detected. Will not commit to ${githubPagesBranch}";
 								else
-									git commit -m 'Documentation for \$CURRENT_PACKAGE_VERSION\nBased on ${params.pull_num} pull request'
+									git commit -m "Documentation for \$CURRENT_PACKAGE_VERSION\nBased on ${params.pull_num} pull request"
 									git push origin ${githubPagesBranch}
 								fi
 								"""
