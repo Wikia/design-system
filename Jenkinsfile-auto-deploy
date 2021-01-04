@@ -70,7 +70,7 @@ node('qa-executors') {
 
 							sh "git stash"
 							sh "git fetch origin ${githubPagesBranch} && git checkout ${githubPagesBranch}"
-							sh "git stash pop --force"
+							sh "git stash pop"
 							sh "git add docs/"
 							sh "git commit -m 'New version: ${currentPackageVersion}'"
 							sh "git push origin ${githubPagesBranch}"
