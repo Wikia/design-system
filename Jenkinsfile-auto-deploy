@@ -13,7 +13,7 @@ def deployDocsLabel = "deploy-docs-on-merge"
 node('qa-executors') {
 	stage('Clone repo and validate') {
 		nodejs('v10 LTS') {
-			git credentialsId: 'bd3cf712-39a7-4b16-979e-ff86208ab2ea', url: 'git@github.com:Wikia/design-system.git', branch: "IW-4970-jenkins"
+			git credentialsId: 'b133f478-47bf-4a73-817a-c618cee7da55', url: 'git@github.com:Wikia/design-system.git', branch: "IW-4970-jenkins"
 			currentBuild.description = "commit: ${params.commit}, PR: ${params.pull_num}"
 
 			stage('Check Pull Request labels') {
@@ -67,8 +67,9 @@ node('qa-executors') {
 						stage('Deploy documentation') {
 							def currentPackageVersion = sh script: "egrep '\"version\": \".+\"' package.json | cut -d '\"' -f4", returnStdout: true
 							sh 'yarn build:docs'
+
 							sh "git stash"
-							sh "git checkout ${githubPagesBranch} && git pull origin ${githubPagesBranch}"
+							sh "git checkout ${githubPagesBranch}"
 							sh "git stash pop --force"
 							sh "git add docs/"
 							sh "git commit -m 'New version: ${currentPackageVersion}'"
