@@ -70,8 +70,8 @@ node('qa-executors') {
 
 							sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
 								sh"""#!/bin/sh
-								git fetch origin ${githubPagesBranch}
-								git checkout ${githubPagesBranch}
+								git fetch origin "${githubPagesBranch}"
+								git checkout "${githubPagesBranch}"
 								cp docs/CNAME ./CNAME
 								git add docs/ ./CNAME
 
