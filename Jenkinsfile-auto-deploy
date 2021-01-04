@@ -35,6 +35,7 @@ node('qa-executors') {
 				try {
 					sh 'pwd'
 					sh 'ls -al'
+					sh 'cat package.json'
 					sh 'yarn run lint:jenkins'
 				} catch (e) {
 					error 'FAIL'
