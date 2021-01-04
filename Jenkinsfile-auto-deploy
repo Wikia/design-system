@@ -69,7 +69,7 @@ node('qa-executors') {
 							sh 'yarn build:docs'
 
 							sh "git stash"
-							sh "git checkout ${githubPagesBranch}"
+							sh "git fetch origin ${githubPagesBranch} && git checkout ${githubPagesBranch}"
 							sh "git stash pop --force"
 							sh "git add docs/"
 							sh "git commit -m 'New version: ${currentPackageVersion}'"
