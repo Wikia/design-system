@@ -33,7 +33,7 @@ node('qa-executors') {
 
 			stage('Run linter') {
 				try {
-					sh 'yarn lint:jenkins'
+					sh 'yarn run lint:jenkins'
 				} catch (e) {
 					error 'FAIL'
 				}
