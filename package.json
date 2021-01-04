@@ -1,7 +1,7 @@
 {
-  "name": "design-system",
-  "version": "23.20.0",
-  "description": "Design System developed for Wikia",
+  "name": "@fandom/design-system",
+  "version": "23.21.0",
+  "description": "Design System developed for Fandom",
   "keywords": [
     "ember-addon"
   ],
@@ -10,24 +10,33 @@
     "url": "git+https://github.com/Wikia/design-system.git"
   },
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": "8.* || >= 10.*"
   },
   "scripts": {
-    "build": "npm run clean-build && npm run svgo-source && ember b -prod && cp -R style-guide/styles dist/scss && mv docs-dev/ docs &&  npm run svgo-dist && cp CNAME docs/",
+    "prepare": "yarn build",
+    "test": "ember test",
+    "test-existing": "ember test --path=\"test-dist\"",
+    "test:jenkins": "yarn test",
+    "ci": "yarn install && yarn build",
+    "dev": "ember s",
+    "release-major": "yarn version --major && yarn publish",
+    "release-minor": "yarn version --minor && yarn publish",
+    "release-patch": "yarn version --patch && yarn publish",
+    "release-test": "yarn version --prerelease --preid test && yarn publish",
+    "build": "yarn clean:build && yarn styles && yarn svg && cp -R style-guide/styles dist/scss",
+    "build:docs": "yarn build && yarn clean:docs && ember b -prod && mv docs-dev/ docs && cp CNAME docs/",
     "build-test": "ember build --output-path=\"test-dist\" --environment=test",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
-    "clean-build": "rm -rf dist docs-dev docs",
-    "dev": "ember s",
-    "release-breaking": "git checkout master && git pull && npm version major && git push --follow-tags",
-    "release-feature": "git checkout master && git pull && npm version minor && git push --follow-tags",
-    "release-fix": "git checkout master && git pull && npm version patch && git push --follow-tags",
-    "setup": "npm i",
-    "svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/svg",
-    "svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets",
-    "regenerate-lock": "npm cache clean --force && rm -rf node_modules package-lock.json && npm run setup",
-    "test-existing": "ember test --path=\"test-dist\"",
-    "test": "ember test"
+    "lint:jenkins": "yarn lint:js",
+    "clean:build": "rm -rf dist && mkdir dist",
+    "clean:docs": "rm -rf docs-dev docs",
+    "svg": "yarn svg:svgo-source && yarn svg:copy && yarn svg:sprite && yarn svg:svgo-dist",
+    "svg:copy": "mkdir -p dist/svg && cp style-guide/assets/*.svg dist/svg/",
+    "svg:sprite": "node ./scripts/create-svg-sprite.js",
+    "svg:svgo-dist": "svgo --config .svgo-dist.yml --quiet --folder dist/svg",
+    "svg:svgo-source": "svgo --precision 3 --config .svgo-source.yml --quiet --folder style-guide/assets",
+    "styles": "sass --no-source-map style-guide/styles/index.scss dist/css/styles.css"
   },
   "devDependencies": {
     "@ember/optional-features": "0.7.0",
@@ -52,7 +61,7 @@
     "ember-cli-json-module": "1.0.0",
     "ember-cli-numeral": "1.0.0",
     "ember-cli-page-object": "1.15.1",
-    "ember-cli-sass": "8.0.1",
+    "ember-cli-sass": "10.0.0",
     "ember-cli-template-lint": "github:ember-template-lint/ember-cli-template-lint#v1.0.0-beta.2",
     "ember-cli-uglify": "2.1.0",
     "ember-code-snippet": "2.3.1",
@@ -76,28 +85,21 @@
     "i18next": "10.5.0",
     "loader.js": "4.7.0",
     "qunit-dom": "0.8.3",
-    "sass": "1.15.2",
-    "svgo": "1.1.1"
+    "sass": "1.30.0",
+    "svgo": "1.1.1",
+    "svgstore": "3.0.0-2"
   },
   "bugs": {
     "url": "https://github.com/Wikia/design-system/issues"
   },
   "homepage": "https://github.com/Wikia/design-system#readme",
-  "ember-addon": {
-    "paths": [
-      "lib/post-build-copy"
-    ],
-    "versionCompatibility": {
-      "ember": ">=3 <=3.1"
-    }
-  },
   "dependencies": {
     "ember-autoresize": "1.3.2",
     "ember-cli-babel": "7.2.0",
     "ember-cli-js-cookie": "0.1.1"
   },
   "peerDependencies": {
-    "i18next": "10.5.0",
-    "ember-fetch": "*"
+    "ember-fetch": "*",
+    "i18next": "10.5.0"
   }
 }
