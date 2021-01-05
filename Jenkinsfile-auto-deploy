@@ -64,7 +64,7 @@ node('qa-executors') {
 								git fetch origin ${githubPagesBranch}
 								git checkout ${githubPagesBranch}
 
-								cp -R /tmp/docs ./docs
+								cp -R /tmp/docs/* ./docs/
 								rm -rf /tmp/docs
 
 								cp docs/CNAME ./CNAME
@@ -76,10 +76,6 @@ node('qa-executors') {
 									git commit -m "Documentation for \$CURRENT_PACKAGE_VERSION\nBased on ${params.pull_num} pull request and ${params.commit} commit"
 									git push origin ${githubPagesBranch}
 								fi
-
-								git diff --staged --quiet && \
-									git commit -m "Documentation for \$CURRENT_PACKAGE_VERSION\nBased on ${params.pull_num} pull request and ${params.commit} commit" && \
-									git push origin ${githubPagesBranch}
 								"""
 							}
 						}
