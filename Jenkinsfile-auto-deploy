@@ -39,15 +39,15 @@ node('qa-executors') {
 					sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
 						if (labels.contains(publishMajorLabel)) {
 							stage('Publish version: major') {
-								sh 'yarn release-major'
+								sh './scripts/release.sh major'
 							}
 						} else if (labels.contains(publishMinorLabel)) {
 							stage('Publish version: minor') {
-								sh 'yarn release-minor'
+								sh './scripts/release.sh minor'
 							}
 						} else if (labels.contains(publishPatchLabel)) {
 							stage('Publish version: patch') {
-								sh 'yarn release-patch'
+								sh './scripts/release.sh patch'
 							}
 						}
 					}
@@ -64,9 +64,18 @@ node('qa-executors') {
 								git fetch origin ${githubPagesBranch}
 								git checkout ${githubPagesBranch}
 
-								cp -R /tmp/docs ./docs && rm -rf /tmp/docs
+								cp -R /tmp/docs ./docs
+								rm -rf /tmp/docs
+
 								cp docs/CNAME ./CNAME
 								git add docs/ ./CNAME
+
+								if git diff --cached --exit-code --quiet; then
+								  	echo "No changes detected. Will not commit to ${githubPagesBranch}";
+								else
+									git commit -m "Documentation for \$CURRENT_PACKAGE_VERSION\nBased on ${params.pull_num} pull request and ${params.commit} commit"
+									git push origin ${githubPagesBranch}
+								fi
 
 								git diff --staged --quiet && \
 									git commit -m "Documentation for \$CURRENT_PACKAGE_VERSION\nBased on ${params.pull_num} pull request and ${params.commit} commit" && \
