@@ -6,6 +6,6 @@ if [[ -f "$HOME/.npmrc" ]]; then
 	echo "Found token in $HOME/.npmrc"
 	export ARTIFACTORY_NPM_TOKEN="$AUTH_TOKEN"
 else
-	echo "Didn't found token. Setting placeholder value"
+	echo "There's no token available at $HOME/.npmrc. Setting placeholder value"
 	export ARTIFACTORY_NPM_TOKEN="placeholder"
 fi
