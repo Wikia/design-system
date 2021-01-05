@@ -36,17 +36,19 @@ node('qa-executors') {
 				}
 
 				if (currentBuild.currentResult.equals("SUCCESS")) {
-					if (labels.contains(publishMajorLabel)) {
-						stage('Publish version: major') {
-							sh 'yarn release-major'
-						}
-					} else if (labels.contains(publishMinorLabel)) {
-						stage('Publish version: minor') {
-							sh 'yarn release-minor'
-						}
-					} else if (labels.contains(publishPatchLabel)) {
-						stage('Publish version: patch') {
-							sh 'yarn release-patch'
+					sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
+						if (labels.contains(publishMajorLabel)) {
+							stage('Publish version: major') {
+								sh 'yarn release-major'
+							}
+						} else if (labels.contains(publishMinorLabel)) {
+							stage('Publish version: minor') {
+								sh 'yarn release-minor'
+							}
+						} else if (labels.contains(publishPatchLabel)) {
+							stage('Publish version: patch') {
+								sh 'yarn release-patch'
+							}
 						}
 					}
 
