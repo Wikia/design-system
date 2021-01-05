@@ -21,7 +21,18 @@
 * `yarn dev`
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
-## Creating Pull Requests
+## Publishing new version
 
-In order to update documentation you need to run `yarn build:docs`.
-The `yarn build` script will only build necessary files that can be used by other codebases without updating the documentation.
+If you wish to publish a new version, add 1 of 3 available tags:
+
+* publish-major-on-merge
+* publish-minor-on-merge
+* publish-patch-on-merge
+
+Release process will be handled by Jenkins pipeline.
+
+## Deploying documentation
+
+We host our documentation on GitHub Pages. Code lives inside `gh-pages` branch.
+To deploy a new version of documentation please add `deploy-docs-on-merge` label to your pull request.
+Documentation deployment is handled by Jenkins, so it'll be fired after merge to master.
