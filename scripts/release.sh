@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if ! [[ "$1" =~ ^(patch|minor|major)$ ]]; then
 	echo "Valid parameters are: patch, minor or major"
