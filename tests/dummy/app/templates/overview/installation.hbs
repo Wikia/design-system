@@ -1,10 +1,9 @@
 <h1>Installation</h1>
 
 <p>
-  To install Design System you can use <a target="_blank" rel="noopener" href="https://docs.npmjs.com/">NPM</a>:
+  To install Design System you can use <a target="_blank" rel="noopener" href="https://docs.npmjs.com/">Yarn</a>:
 </p>
-<pre>npm install Wikia/design-system --save</pre>
-<p>It is advised to use <code class="format-code">--save</code> to add it to your package.json.</p>
+<pre>yarn add @fandom/design-system</pre>
 
 <section>
   <h2>How to install SVG</h2>
@@ -28,7 +27,7 @@
     in your main SCSS file:
 
     <Demo @name="path-to-design-system" @language="scss" @codeOnly={{true}}>
-      @import "path/to/design-system/dist/scss/index"
+      @import "path/to/@fandom/design-system/dist/scss/index"
     </Demo>
 
     Note that
@@ -56,7 +55,7 @@
     </a>
     in your project:
   </p>
-  <pre>path/to/design-system/dist/css/styles.css</pre>
+  <pre>path/to/@fandom/design-system/dist/css/styles.css</pre>
   <p>
     Note that compiled CSS for Design System include prefixes managed by autoprefixer and
     targets 4 last versions of major browsers. As configured here:
@@ -83,7 +82,7 @@
       dist/scss/wds-variables/index.scss
     </a>:
     <Demo @name="path-to-variables" @language="scss" @codeOnly={{true}}>
-      @import "path/to/design-system/dist/scss/wds-variables/index"
+      @import "path/to/@fandom/design-system/dist/scss/wds-variables/index"
     </Demo>
   </p>
 </section>

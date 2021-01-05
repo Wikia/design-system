@@ -20,11 +20,10 @@
   <p>If you want to contribute to DS follow the steps:</p>
   <ul>
     <li>Clone <a href="https://github.com/Wikia/design-system" target="_blank" rel="noopener">Design System</a> repository</li>
-    <li>Install dependencies with <code class="format-code">npm run setup</code></li>
-    <li>Run <code class="format-code">npm run dev</code> to build the Reference Page and start file watchers</li>
+    <li>Install dependencies with <code class="format-code">yarn install</code></li>
+    <li>Run <code class="format-code">yarn dev</code> to build the Reference Page and start file watchers</li>
     <li>Open <a href="http://localhost:4200" target="_blank" rel="noopener">http://localhost:4200</a> to see the Reference Page</li>
     <li>Modify the Design System or Reference Page source files as you see fit, Ember CLI will rebuild the RP app and reload the page</li>
-    <li>Run <code class="format-code">npm run build</code> to update dist directory and commit your changes.</li>
     <li>If you want to release your change see the "How to release new version" section below</li>
     <li>If you want to present the results of your work using devbox see the "How to deploy Reference Page to devbox" section below</li>
   </ul>
@@ -33,38 +32,32 @@
 <section>
   <h2>Versioning</h2>
   <p>
-    We follow <a href="http://semver.org/" target="_blank" rel="noopener">SemVer</a> with a
-    <a
-      href="https://medium.com/javascript-scene/software-versions-are-broken-3d2dc0da0783#70a1"
-      target="_blank"
-      rel="noopener"
-    >
-      slight modification
-    </a>
-    where the version roles are based on the scheme: <strong>Breaking.Feature.Fix</strong>. Paraphrasing the linked article:
+    We follow <a href="http://semver.org/" target="_blank" rel="noopener">SemVer</a>
+    where the version roles are based on the scheme: <strong>Major.Minor.Patch</strong>.
   </p>
-  <p>We don"t decide what the version will be. The API changes decide. Version numbers are for computers, not people.</p>
+  <p>We don't decide what the version will be. The API changes decide. Version numbers are for computers, not people.</p>
   <ul>
-    <li>Breaking — Any breaking change, no matter how small increments the Breaking version number.</li>
-    <li>Feature — When any new feature is added. This could be as small as a new variable, or as large as a new component.</li>
-    <li>Fix — When a documented feature does not behave as documented (and no client relies on the broken behavior).</li>
+    <li>Major — Any breaking change, no matter how small increments the Breaking version number.</li>
+    <li>Minor — When any new feature is added. This could be as small as a new variable, or as large as a new component.</li>
+    <li>Patch — When a documented feature does not behave as documented (and no client relies on the broken behavior).</li>
   </ul>
 </section>
 
 <section>
   <h2>How to release new version</h2>
-  <p>When you merge changes to the <code class="format-code">master</code> branch you have to release them.</p>
+  <p>Releasing new version happens automatically. It's published by Jenkins pipeline to artifactory repository.</p>
+  <p>All you need to do is to make sure that you've added correct label. When your pull request will be merge with that label, Jenkins will handle publishing process on its own.</p>
   <ul>
     <li>
-      Release the new version, use one of the following commands:
+      There are 3 available labels. Pick the one you need.
       <ul>
-        <li><code class="format-code">npm run release-breaking</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">2.0.0</code></li>
-        <li><code class="format-code">npm run release-feature</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">1.1.0</code></li>
-        <li><code class="format-code">npm run release-fix</code> — bumps <code class="format-code">1.0.0</code> to <code class="format-code">1.0.1</code></li>
+        <li><code class="format-code">publish-major-on-merge</code></li>
+        <li><code class="format-code">publish-minor-on-merge</code></li>
+        <li><code class="format-code">publish-patch-on-merge</code></li>
       </ul>
-      It will checkout the latest master,
-      use <a href="https://docs.npmjs.com/cli/version" target="_blank" rel="noopener">npm version</a>
-      to bump the version and push the updated <code class="format-code">package.json</code> and the new tag.
+      <p>
+        <em>Side note: If you add multiple labels, <strong>major</strong> has priority over <strong>minor</strong> and <strong>minor</strong> has priority over <strong>patch</strong>.</em>
+      </p>
     </li>
     <li>
       Update changelog on <a href="https://github.com/Wikia/design-system/releases">github</a>.
@@ -112,18 +105,6 @@
       </ul>
     </li>
     <li><code class="format-code">config</code> — configuration for Reference Page. It"s unlikely that you will need to touch it.</li>
-    <li>
-      <code class="format-code">dist</code> — Design System distributable files.
-      It shouldn"t be modified manually as it"s built by Ember CLI when using <code class="format-code">npm run build</code>.
-    </li>
-    <li>
-      <code class="format-code">docs</code> — built and ready to use Reference Page. This is what GitHub Pages display on
-      <a href="http://fandomdesignsystem.com">fandomdesignsystem.com</a> (using version from the master branch).
-    </li>
-    <li>
-      <code class="format-code">docs-dev</code> — development version of Reference Page.
-      It"s built when using npm run dev and is accessible on <a href="http://localhost:4200" target="_blank" rel="noopener">http://localhost:4200</a>.
-    </li>
     <li><code class="format-code">lib</code> — Ember"s in-repo addons</li>
     <li><code class="format-code">style-guide</code> — source files for Design System. This is what gets compiled to dist.</li>
     <li><code class="format-code">tests</code> — tests as well as reference page code (<code class="format-code">tests/dummy</code>).</li>
