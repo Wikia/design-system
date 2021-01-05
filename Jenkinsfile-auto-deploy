@@ -55,6 +55,7 @@ node('qa-executors') {
 					if (labels.contains(deployDocsLabel)) {
 						stage('Deploy documentation') {
 							sh 'yarn build:docs'
+							sh 'cp -R docs/ /tmp/docs'
 
 							sshagent(['bd3cf712-39a7-4b16-979e-ff86208ab2ea']) {
 								sh """
@@ -63,15 +64,13 @@ node('qa-executors') {
 								git fetch origin ${githubPagesBranch}
 								git checkout ${githubPagesBranch}
 
+								cp -R /tmp/docs ./docs && rm -rf /tmp/docs
 								cp docs/CNAME ./CNAME
 								git add docs/ ./CNAME
 
-								if git diff --cached --exit-code --quiet; then
-								  	echo "No changes detected. Will not commit to ${githubPagesBranch}";
-								else
-									git commit -m "Documentation for \$CURRENT_PACKAGE_VERSION\nBased on ${params.pull_num} pull request"
+								git diff --staged --quiet && \
+									git commit -m "Documentation for \$CURRENT_PACKAGE_VERSION\nBased on ${params.pull_num} pull request and ${params.commit} commit" && \
 									git push origin ${githubPagesBranch}
-								fi
 								"""
 							}
 						}
