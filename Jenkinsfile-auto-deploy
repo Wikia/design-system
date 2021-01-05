@@ -63,6 +63,7 @@ node('qa-executors') {
 
 								git fetch origin ${githubPagesBranch}
 								git checkout ${githubPagesBranch}
+								git pull origin ${githubPagesBranch}
 
 								cp -R /tmp/docs/* ./docs/
 								rm -rf /tmp/docs
