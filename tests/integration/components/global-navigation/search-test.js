@@ -7,7 +7,7 @@ import {
 } from '@ember/test-helpers';
 import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import { module, test } from 'qunit';
+import { module, test, skip } from 'qunit';
 import modelStub from '../../../mocks/search-model';
 
 module('Integration | Component | global-navigation/search', function (hooks) {
