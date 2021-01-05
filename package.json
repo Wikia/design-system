@@ -1,6 +1,6 @@
 {
   "name": "@fandom/design-system",
-  "version": "23.22.0",
+  "version": "23.23.0",
   "description": "Design System developed for Fandom",
   "keywords": [
     "ember-addon"
@@ -19,9 +19,9 @@
     "test:jenkins": "yarn test",
     "ci": "yarn install && yarn build",
     "dev": "ember s",
-    "release-major": "yarn version --major && yarn publish",
-    "release-minor": "yarn version --minor && yarn publish",
-    "release-patch": "yarn version --patch && yarn publish",
+    "release-major": "yarn version --major && yarn publish && git push origin master",
+    "release-minor": "yarn version --minor && yarn publish && git push origin master",
+    "release-patch": "yarn version --patch && yarn publish && git push origin master",
     "release-test": "yarn version --prerelease --preid test && yarn publish",
     "build": "yarn clean:build && yarn styles && yarn svg && cp -R style-guide/styles dist/scss",
     "build:docs": "yarn build && yarn clean:docs && ember b -prod && mv docs-dev/ docs && cp CNAME docs/",

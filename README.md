@@ -2,6 +2,15 @@
 
 Reference Page and documentation are available at [http://fandomdesignsystem.com](http://fandomdesignsystem.com).
 
+## Setup
+
+To install packages you need to set `ARTIFACTORY_NPM_TOKEN` environment value first. You might already have this token set in your global .npmrc file,
+because you've executed `npm login --scope=fandom` script before. In order to make your life easier we prepared a command that will retrieve this token automatically. Just run this command:
+
+```shell
+source scripts/set-artifactory-token.sh
+```
+
 ## Confluence page
 https://wikia-inc.atlassian.net/wiki/display/DESYS/Design+System
 
