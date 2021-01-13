@@ -42,6 +42,7 @@ Router.map(function () {
 		this.route('floating-buttons');
 		this.route('dialogs');
 		this.route('toggles');
+		this.route('pills');
 		this.route('dropdowns');
 		this.route('lists');
 		this.route('progress-indicators');

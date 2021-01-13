@@ -1,0 +1,13 @@
+@mixin pill-theming($text-color, $border-color, $active-color) {
+	background-color: rgba($text-color, 0.05);
+	border-color: $border-color;
+
+	.wds-pill__label {
+		color: $text-color;
+	}
+
+	&.wds-is-active {
+		background-color: rgba($active-color, 0.15);
+		border-color: $active-color;
+	}
+}

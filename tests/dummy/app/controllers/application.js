@@ -100,6 +100,10 @@ export default Controller.extend({
 						location: 'route-components.toggles'
 					},
 					{
+						name: 'Pills',
+						location: 'route-components.pills'
+					},
+					{
 						name: 'Dropdowns',
 						location: 'route-components.dropdowns'
 					},

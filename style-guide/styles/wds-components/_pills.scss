@@ -1,0 +1,43 @@
+@import '../wds-mixins/pill-theming';
+
+.wds-pills {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+}
+
+.wds-pill {
+	@include pill-theming($wds-fandom-color-black, $wds-fandom-color-middle-gray, $wds-fandom-color-button-background);
+
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 27px;
+	display: inline-block;
+	font-size: $wds-font-size-s;
+	font-weight: $wds-font-weight-medium;
+	letter-spacing: 0.25px;
+	line-height: $wds-line-height-none;
+	margin: 3px 6px 3px 0;
+
+	&__label {
+		align-items: center;
+		display: inline-flex;
+		padding: 9px 12px;
+		white-space: nowrap;
+
+		.wds-icon {
+			margin-right: 6px;
+		}
+	}
+
+	&.wds-is-active {
+		cursor: default;
+		font-weight: $wds-font-weight-bold;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
