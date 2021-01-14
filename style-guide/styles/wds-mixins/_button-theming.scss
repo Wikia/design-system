@@ -21,7 +21,6 @@
 	&:not(.wds-is-text):not(.wds-is-secondary) {
 		background-color: $color-primary;
 
-		&:focus:not(:disabled),
 		&:hover:not(:disabled),
 		&:active,
 		&.wds-is-active {
@@ -38,7 +37,6 @@
 		border-color: $color-secondary;
 		color: $color-secondary;
 
-		&:focus:not(:disabled),
 		&:hover:not(:disabled),
 		&:active,
 		&.wds-is-active {
@@ -50,7 +48,6 @@
 	&.wds-is-text {
 		color: $color-secondary;
 
-		&:focus:not(:disabled),
 		&:hover:not(:disabled),
 		&:active,
 		&.wds-is-active {
