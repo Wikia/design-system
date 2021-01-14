@@ -4,7 +4,7 @@
 		border-bottom: 1px solid $wds-color-faint-gray;
 		border-top: 6px solid $wds-color-dark-blue;
 
-		.wds-avatar {
+		.wds-global-navigation__modal-control-user .wds-avatar {
 			@include wds-avatar(30px, $wds-color-slate-gray, $wds-fandom-color-aqua, $wds-color-white);
 		}
 
