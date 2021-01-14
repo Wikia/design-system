@@ -1,9 +1,7 @@
-@import '../wds-mixins/global-navigation-wikia-org-theming';
+@import '../wds-mixins/wikia-org-theming';
 
 .wds-global-navigation {
 	&.wds-is-wikia-org {
-		@include global-navigation-wikia-org-theming($wds-color-light-blue);
-
 		background-color: $wds-color-white;
 		border-bottom: 1px solid $wds-color-faint-gray;
 		border-top: 6px solid $wds-color-dark-blue;
@@ -213,6 +211,8 @@
 }
 
 .wds-is-wikia-org {
+	@include wikia-org-theming($wds-color-light-blue);
+
 	.wds-search-modal {
 		&__form-and-links-wrapper {
 			background-color: $wds-color-white;

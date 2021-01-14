@@ -1,4 +1,4 @@
-@mixin global-navigation-wikia-org-theming($linksColor) {
+@mixin wikia-org-theming($linksColor) {
 	.wds-notifications__mark-all-as-read,
 	.wds-user-modal__sign-out-container .wds-sign-out__button {
 		color: $linksColor;
