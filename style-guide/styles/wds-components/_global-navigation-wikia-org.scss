@@ -1,11 +1,13 @@
+@import '../wds-mixins/wikia-org-theming';
+
 .wds-global-navigation {
 	&.wds-is-wikia-org {
 		background-color: $wds-color-white;
 		border-bottom: 1px solid $wds-color-faint-gray;
 		border-top: 6px solid $wds-color-dark-blue;
 
-		.wds-avatar {
-			@include wds-avatar(30px, $wds-color-slate-gray, $wds-fandom-color-aqua, $wds-color-white);
+		.wds-global-navigation__modal-control-user .wds-avatar {
+			@include wds-avatar(30px, $wds-color-slate-gray, $wds-color-light-blue, $wds-color-white);
 		}
 
 		.wds-global-navigation__modal-control {
@@ -47,11 +49,6 @@
 			&:hover {
 				color: $wds-color-light-blue;
 			}
-		}
-
-		.wds-notifications__mark-all-as-read,
-		.wds-user-modal__sign-out-container .wds-sign-out__button {
-			color: $wds-color-light-blue;
 		}
 
 		.wds-dropdown {
@@ -110,16 +107,6 @@
 			&:hover {
 				fill: $wds-color-white;
 			}
-		}
-
-		.wds-dropdown__content .wds-list.wds-is-linked > li > a:not(.wds-button) {
-			color: $wds-color-light-blue;
-		}
-
-		.wds-dropdown__content .wds-list.wds-is-linked > li:hover > a:not(.wds-button),
-		.wds-dropdown__content .wds-list.wds-is-linked > li.selected > a:not(.wds-button),
-		.wds-sign-out__button:hover {
-			background-color: rgba($wds-color-light-blue, 0.1);
 		}
 
 		.wds-sign-out__button {
@@ -224,6 +211,8 @@
 }
 
 .wds-is-wikia-org {
+	@include wikia-org-theming($wds-color-light-blue);
+
 	.wds-search-modal {
 		&__form-and-links-wrapper {
 			background-color: $wds-color-white;
