@@ -1,0 +1,22 @@
+@mixin wikia-org-theming($linksColor) {
+	.wds-notifications__mark-all-as-read,
+	.wds-user-modal__sign-out-container .wds-sign-out__button {
+		color: $linksColor;
+	}
+
+	.wds-dropdown__content .wds-list.wds-is-linked > li:hover > a:not(.wds-button),
+	.wds-dropdown__content .wds-list.wds-is-linked > li.selected > a:not(.wds-button),
+	.wds-sign-out__button:hover {
+		background-color: rgba($linksColor, 0.1);
+		color: $linksColor;
+	}
+
+	&__link,
+	&__start-a-wiki {
+		&:hover,
+		&:focus,
+		&:active {
+			color: $linksColor !important;
+		}
+	}
+}
