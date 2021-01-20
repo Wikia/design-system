@@ -19,7 +19,7 @@
     "test:jenkins": "yarn test",
     "ci": "yarn install && yarn build",
     "dev": "ember s",
-    "release-test": "yarn version --prerelease --preid test && yarn publish",
+    "release-test": "./scripts/release-test.sh",
     "build": "yarn clean:build && yarn styles && yarn svg && cp -R style-guide/styles dist/scss",
     "build:docs": "yarn build && yarn clean:docs && ember b -prod && mv docs-dev/ docs && cp CNAME docs/",
     "build-test": "ember build --output-path=\"test-dist\" --environment=test",
