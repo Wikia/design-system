@@ -11,6 +11,21 @@ because you've executed `npm login --scope=fandom` script before. In order to ma
 source scripts/set-artifactory-token.sh
 ```
 
+## Deploying test version
+
+To deploy test version you need to run:
+```shell
+yarn release-test
+```
+This command will update package patch version + it will append `-test.<number>` tag.
+If you need to use another tag (i.e. if tag is already in use) you can pass it as argument to release-test script, like so:
+```shell
+yarn release-test <custom-tag>
+# e.g.
+yarn release-test my-test
+```
+Running release-test command multiple times will increment tag number, so you can deploy multiple versions.
+
 ## Confluence page
 https://wikia-inc.atlassian.net/wiki/display/DESYS/Design+System
 
@@ -56,15 +71,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `yarn lint:hbs`
 * `yarn lint:js`
 * `yarn lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
