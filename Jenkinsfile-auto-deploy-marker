@@ -9,9 +9,11 @@ node('linux') {
 			def githubUsername = "WikiaJenkins"
 
 			def publishMinorLabel = "publish-minor-on-merge"
+			def publishLabels = ["publish-major-on-merge", publishMinorLabel, "publish-patch-on-merge"]
+
 			def deployDocsLabel = "deploy-docs-on-merge"
 
-			if (!labels.contains(publishMinorLabel)) {
+			if (!labels.intersect(publishLabels)) {
 				sh "curl -X POST ${authHeader} ${contentTypeHeader} --data '[ \"${publishMinorLabel}\" ]' ${issueUrl}/labels"
 
 				def message = "**Watch out!** This PR will start deployment to **artifactory**.\\n \\n If you do not want it, please remove the `publish-minor-on-merge` label to disable it. Keep in mind that this **label will be re-applied if new commits will be added to this PR**."
