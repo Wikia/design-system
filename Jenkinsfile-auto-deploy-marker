@@ -7,7 +7,6 @@ node('linux') {
 	try {
 		stage('Add label to GitHub repo') {
 			def githubUsername = "WikiaJenkins"
-
 			def publishMajorLabel = "publish-major-on-merge"
 			def publishMinorLabel = "publish-minor-on-merge"
 			def publishPatchLabel = "publish-patch-on-merge"
