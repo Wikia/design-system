@@ -1,15 +1,25 @@
-.wds-button {
-	@include button-theming($wds-fandom-color-button-background, $wds-fandom-color-black, $wds-fandom-color-dark-gray);
+.fds-button {
+	--wds-primary-button--background: #{$wds-fandom-color-button-background};
+	--wds-primary-button--background--active: #{lighten($wds-fandom-color-button-background, 20%)};
+	--wds-primary-button--label: #{$wds-fandom-color-text-dark};
+
+	--wds-secondary-button--label: #{$wds-fandom-color-dark-gray};
+	--wds-secondary-button--label--active: #{darken($wds-fandom-color-dark-gray, 20%)};
+
+	--wds-text-button--label: #{$wds-fandom-color-dark-gray};
+	--wds-text-button--label--active: #{darken($wds-fandom-color-dark-gray, 20%)};
 
 	align-items: center;
-	border-style: solid;
-	border-width: 1px;
+	-webkit-appearance: none;
+	background-color: var(--wds-primary-button--background);
+	border: 1px solid var(--wds-primary-button--background);
 	border-radius: $wds-rounded-corner-radius;
 	box-sizing: content-box;
+	color: var(--wds-primary-button--label);
 	cursor: default;
 	display: inline-flex;
-	font-size: $wds-typescale-size-minus-2;
-	font-weight: 600;
+	font-size: $wds-font-size-xs;
+	font-weight: $wds-font-weight-medium;
 	justify-content: center;
 	letter-spacing: .15px;
 	line-height: 16px;
@@ -22,21 +32,27 @@
 	transition-duration: $wds-button-transition-duration;
 	transition-property: background-color, border-color, color;
 	vertical-align: top;
-	-webkit-appearance: none;
 
 	@at-root button#{&}, a#{&} {
 		cursor: pointer;
 	}
 
-	&:disabled {
-		@include is-disabled();
-	}
-
-	&:focus:not(:disabled),
-	&:hover:not(:disabled),
+	// active state
+	&:focus-visible,
+	&:hover,
 	&:active,
 	&.wds-is-active {
+		background-color: var(--wds-primary-button--background--active);
+		border-color: var(--wds-primary-button--background--active);
 		text-decoration: none;
+	}
+
+	&:disabled {
+		background-color: var(--wds-primary-button--background);
+		border: 1px solid var(--wds-primary-button--background);
+		cursor: default;
+		opacity: .5;
+		pointer-events: none;
 	}
 
 	&.wds-is-full-width {
@@ -52,22 +68,47 @@
 		padding: 0;
 	}
 
-	&.wds-is-text {
-		border: 0;
+	&.fds-is-secondary {
+		&, &:disabled {
+			background: none;
+			border-color: currentColor;
+			color: var(--wds-secondary-button--label);
+		}
+
+		&:focus-visible,
+		&:hover,
+		&:active,
+		&.wds-is-active {
+			color: var(--wds-secondary-button--label--active);
+		}
+	}
+
+	&.fds-is-text {
+		&, &:disabled {
+			background: none;
+			border: 0;
+			color: var(--wds-text-button--label);
+		}
+
+		&:focus-visible,
+		&:hover,
+		&:active,
+		&.wds-is-active {
+			color: var(--wds-text-button--label--active);
+		}
 	}
 
 	.wds-icon {
 		align-self: center;
 		pointer-events: none;
+		margin: 0 $wds-button-horizontal-gap;
 
-		&:not(:only-child) {
-			&:first-child {
-				margin-right: $wds-button-horizontal-gap;
-			}
+		&:first-child {
+			margin-left: 0;
+		}
 
-			&:last-child {
-				margin-left: $wds-button-horizontal-gap;
-			}
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 
@@ -75,17 +116,11 @@
 		color: $wds-color-black;
 		font-weight: normal;
 		letter-spacing: normal;
-		text-transform: none;
 		text-align: left;
+		text-transform: none;
 	}
 
 	.wds-dropdown__content {
 		top: calc(100% + 1px);
-	}
-
-	&.wds-is-text, &.wds-is-secondary {
-		&.wds-is-light {
-			@include button-theming($wds-fandom-color-mid-light-gray, $wds-fandom-color-mid-light-gray);
-		}
 	}
 }
