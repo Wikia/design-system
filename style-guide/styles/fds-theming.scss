@@ -1,0 +1,10 @@
+:root {
+	--fds-text-color: #{$wds-fandom-color-text-dark};
+	--fds-text-color--active: #{lighten($wds-fandom-color-text-dark, $active-color-modification-factor)};
+
+	--fds-link-color: #{$wds-fandom-color-link};
+
+	--fds-button-background-color: #{$wds-fandom-color-button-background};
+	--fds-button-background-color--active: #{lighten($wds-fandom-color-button-background, $active-color-modification-factor)};
+	--fds-button-label-color: #{$wds-fandom-color-text-dark};
+}
