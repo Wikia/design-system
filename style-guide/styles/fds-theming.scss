@@ -1,3 +1,5 @@
+$active-color-modification-factor: 20%;
+
 :root {
 	--fds-text-color: #{$wds-fandom-color-text-dark};
 	--fds-text-color--active: #{lighten($wds-fandom-color-text-dark, $active-color-modification-factor)};
