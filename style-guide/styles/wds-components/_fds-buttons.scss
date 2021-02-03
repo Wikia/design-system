@@ -1,0 +1,126 @@
+.fds-button {
+	--fds-primary-button--background: var(--fds-button-background-color);
+	--fds-primary-button--background--active: var(--fds-button-background-color--active);
+	--fds-primary-button--label: var(--fds-button-label-color);
+
+	--fds-secondary-button--label: var(--fds-text-color);
+	--fds-secondary-button--label--active: var(--fds-text-color--active);
+
+	--fds-text-button--label: var(--fds-text-color);
+	--fds-text-button--label--active: var(--fds-text-color--active);
+
+	align-items: center;
+	-webkit-appearance: none;
+	background-color: var(--fds-primary-button--background);
+	border: 1px solid var(--fds-primary-button--background);
+	border-radius: $wds-rounded-corner-radius;
+	box-sizing: content-box;
+	color: var(--fds-primary-button--label);
+	cursor: default;
+	display: inline-flex;
+	font-size: $wds-font-size-xs;
+	font-weight: $wds-font-weight-medium;
+	justify-content: center;
+	letter-spacing: .15px;
+	line-height: 16px;
+	margin: 0;
+	min-height: $wds-icon-small-size;
+	outline: none;
+	padding: $wds-button-vertical-padding $wds-button-horizontal-padding;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition-duration: $wds-button-transition-duration;
+	transition-property: background-color, border-color, color;
+	vertical-align: top;
+
+	@at-root button#{&}, a#{&} {
+		cursor: pointer;
+	}
+
+	// active state
+	&:focus-visible,
+	&:hover,
+	&:active,
+	&.fds-is-active {
+		background-color: var(--fds-primary-button--background--active);
+		border-color: var(--fds-primary-button--background--active);
+		text-decoration: none;
+	}
+
+	&:disabled {
+		background-color: var(--fds-primary-button--background);
+		border: 1px solid var(--fds-primary-button--background);
+		cursor: default;
+		opacity: .5;
+		pointer-events: none;
+	}
+
+	&.fds-is-full-width {
+		display: flex;
+	}
+
+	&.fds-is-square {
+		@include square(36px);
+
+		align-items: center;
+		display: inline-flex;
+		justify-content: center;
+		padding: 0;
+	}
+
+	&.fds-is-secondary {
+		&, &:disabled {
+			background: none;
+			border-color: currentColor;
+			color: var(--fds-secondary-button--label);
+		}
+
+		&:focus-visible,
+		&:hover,
+		&:active,
+		&.fds-is-active {
+			color: var(--fds-secondary-button--label--active);
+		}
+	}
+
+	&.fds-is-text {
+		&, &:disabled {
+			background: none;
+			border: 0;
+			color: var(--fds-text-button--label);
+		}
+
+		&:focus-visible,
+		&:hover,
+		&:active,
+		&.fds-is-active {
+			color: var(--fds-text-button--label--active);
+		}
+	}
+
+	.wds-icon {
+		align-self: center;
+		pointer-events: none;
+		margin: 0 $wds-button-horizontal-gap;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.wds-list {
+		color: $wds-color-black;
+		font-weight: normal;
+		letter-spacing: normal;
+		text-align: left;
+		text-transform: none;
+	}
+
+	.wds-dropdown__content {
+		top: calc(100% + 1px);
+	}
+}

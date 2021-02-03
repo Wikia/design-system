@@ -23,6 +23,9 @@
 @import 'tabs';
 @import 'toggles';
 
+@import 'fds-buttons';
+@import 'fds-tabs';
+
 // Components using other components have to be at the end of file. We need atomic components defined to use them.
 @import 'community-bar';
 @import 'community-header';
