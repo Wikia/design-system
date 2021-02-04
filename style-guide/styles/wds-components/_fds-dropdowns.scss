@@ -110,8 +110,8 @@
 
 					&:hover, &.wds-is-selected {
 						> a:not(.wds-button) {
-							background-color: var(--fds-dropdown--linked-item--color);
-							color: var(--fds-dropdown--linked-item--background);
+							background-color: var(--fds-dropdown--linked-item--background);
+							color: var(--fds-dropdown--linked-item--color);
 						}
 					}
 				}
