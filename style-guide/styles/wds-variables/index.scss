@@ -10,7 +10,8 @@
 
 $wds-rounded-corner-radius: 3px;
 // Component variables
-$wds-button-transition-duration: 300ms;
+$wds-default-transition-duration: 300ms;
+$wds-button-transition-duration: $wds-default-transition-duration;
 $wds-community-header-background-height: 105px;
 // Keep in sync with ThemeSettings::BACKGROUND_HEIGHT
 $wds-community-header-background-height-small-breakpoint: 115px;

@@ -1,0 +1,256 @@
+.wds-dropdown {
+	$content-z-index: 1;
+
+	--fds-dropdown--background: var(--fds-page-background-color--secondary);
+	--fds-dropdown--border-color: var(--fds-border-color);
+	--fds-dropdown--text-color: var(--fds-text-color);
+	--fds-dropdown--linked-item--color: var(--fds-link-color);
+	--fds-dropdown--linked-item--background: var(--fds-link-color--opacity-10);
+	--fds-dropdown--shadow-color: var(--fds-box-shadow-color);
+
+	display: inline-block;
+	position: relative;
+
+	&__toggle {
+		cursor: default;
+		position: relative;
+
+		.wds-is-clickable & {
+			cursor: pointer;
+		}
+	}
+
+	&__content {
+		background-color: var(--fds-dropdown--background);
+		border: $wds-dropdown-border-width solid var(--fds-dropdown--border-color);
+		color: var(--fds-dropdown--text-color);
+		border-radius: $wds-dropdown-border-radius;
+		display: none;
+		left: 50%;
+		// it's for long dropdowns toggles, to make sure dropdown content is always below the nodge
+		min-width: 70%;
+		// we assume that there will be regular size .wds-list inside the dropdown content
+		padding: $wds-dropdown-padding - $wds-list-item-vertical-padding 0;
+		position: absolute;
+		top: 100%;
+		transform: translateX(-50%);
+		z-index: $content-z-index;
+
+		&.wds-is-right-aligned {
+			left: auto;
+			right: 0;
+			transform: none;
+		}
+
+		&.wds-is-left-aligned {
+			left: 0;
+			transform: none;
+		}
+
+		// The default is to show scroll on long dropdowns
+		&:not(.wds-is-not-scrollable) {
+			.wds-list {
+				background: {
+					image: var(--fds-dropdown--shadow-color);
+					position: 0 0, 0 100%;
+					repeat: no-repeat;
+					size: 100% 9px;
+				}
+				max-height: $wds-dropdown-height;
+				overflow-y: auto;
+				position: relative;
+				z-index: 1;
+
+				&::after,
+				&::before {
+					background-color: var(--fds-dropdown--background);
+					content: '';
+					display: block;
+					height: 30px;
+					margin: 0 0 -30px;
+					position: relative;
+					z-index: -1;
+				}
+
+				&::after {
+					background-color: var(--fds-dropdown--background);
+					margin: -29px 0 0;
+				}
+			}
+		}
+
+		&.wds-is-not-scrollable {
+			.wds-list {
+				position: relative;
+			}
+		}
+
+		.wds-list {
+			padding: 0;
+
+			> li {
+				margin: 0 $wds-dropdown-padding / 2;
+				padding-left: $wds-dropdown-padding / 2;
+				padding-right: $wds-dropdown-padding / 2;
+				white-space: nowrap;
+			}
+
+			&.wds-is-linked {
+				> li {
+					padding: 0;
+
+					> a:not(.wds-button) {
+						color: var(--fds-dropdown--text-color);
+						padding-left: $wds-dropdown-padding / 2;
+						padding-right: $wds-dropdown-padding / 2;
+						text-decoration: none;
+						transition-duration: $wds-default-transition-duration;
+						transition-property: background-color, color;
+					}
+
+					&:hover, &.wds-is-selected {
+						> a:not(.wds-button) {
+							background-color: var(--fds-dropdown--linked-item--color);
+							color: var(--fds-dropdown--linked-item--background);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&::before, &::after {
+		bottom: -$wds-dropdown-border-width;
+		content: '';
+		display: none;
+		height: 0;
+		left: 50%;
+		pointer-events: none;
+		position: absolute;
+		width: 0;
+		z-index: $content-z-index + 1;
+	}
+
+	&::after {
+		border: 8px solid transparent;
+		margin-left: -8px;
+		border-bottom-color: var(--fds-dropdown--background);
+	}
+
+	&::before {
+		border: 9px solid transparent;
+		margin-left: -9px;
+		border-bottom-color: var(--fds-dropdown--border-color);
+	}
+
+	&.wds-is-active,
+	&:not(.wds-is-touch-device):not(.wds-is-not-hoverable):hover {
+		&:not(.wds-no-chevron) {
+			&::before, &::after {
+				display: block;
+			}
+		}
+
+		.wds-dropdown__content {
+			display: inline-block;
+		}
+
+		.wds-dropdown__toggle-chevron {
+			transform: rotate(180deg);
+		}
+
+		&.wds-has-shadow, &.wds-has-dark-shadow {
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&.wds-has-shadow {
+		.wds-dropdown__content {
+			box-shadow: 0 0 10px 0 rgba($wds-color-black, .2);
+		}
+	}
+
+	&.wds-has-dark-shadow {
+		.wds-dropdown__content {
+			box-shadow: 0 0 20px 0 rgba($wds-color-black, .3);
+		}
+	}
+
+	&.wds-has-shadow, &.wds-has-dark-shadow {
+		.wds-dropdown__content {
+			border: 0;
+		}
+	}
+
+	&.wds-is-flipped {
+		&::before, &::after {
+			bottom: unset;
+			top: -$wds-dropdown-border-width;
+
+		}
+
+		&::before {
+			border-bottom-color: transparent;
+			border-top-color: var(--fds-dropdown--border-color);
+		}
+
+		&::after {
+			border-bottom-color: transparent;
+			border-top-color: var(--fds-dropdown--background);
+		}
+
+		.wds-dropdown__content {
+			bottom: 100%;
+			top: unset;
+		}
+	}
+}
+
+.wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 {
+	margin-right: 0;
+
+	> a {
+		padding-right: $wds-dropdown-padding;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.wds-dropdown-chevron {
+		transform: rotate(-90deg);
+		margin-left: 18px;
+	}
+
+	&.wds-is-sticked-to-parent {
+		position: relative;
+
+		.wds-dropdown-level-2__content {
+			top: auto;
+			bottom: -($wds-dropdown-padding - $wds-list-item-vertical-padding + $wds-dropdown-border-width);
+		}
+	}
+
+	.wds-dropdown-level-2__content {
+		background-color: var(--fds-dropdown--background);
+		border: $wds-dropdown-border-width solid var(--fds-dropdown--border-color);
+		color: var(--fds-dropdown--text-color);
+		border-radius: $wds-dropdown-border-radius;
+		display: none;
+		left: 100%;
+		padding: $wds-dropdown-padding - $wds-list-item-vertical-padding 0;
+		position: absolute;
+		top: -($wds-dropdown-padding - $wds-list-item-vertical-padding + $wds-dropdown-border-width);
+
+		.wds-list.wds-is-linked > li > a {
+			font-size: $wds-typescale-size-minus-2;
+		}
+	}
+
+	&.wds-is-active,
+	&:not(.wds-is-touch-device):hover {
+		.wds-dropdown-level-2__content {
+			display: block;
+		}
+	}
+}

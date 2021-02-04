@@ -1,6 +1,6 @@
-.fds-tabs {
+.wds-tabs {
 	--fds-tab-color: var(--fds-text-color);
-	--fds-tab-color--active: var(--fds-link-color);
+	--fds-tab-color--hover: var(--fds-link-color);
 
 	align-items: flex-end;
 	display: flex;
@@ -9,7 +9,7 @@
 	padding: 0;
 }
 
-.fds-tabs__tab {
+.wds-tabs__tab {
 	$tab-margin-horizontal: 11px;
 
 	color: var(--fds-tab-color);
@@ -54,11 +54,11 @@
 	}
 
 	&:hover {
-		color: var(--fds-tab-color--active);
+		color: var(--fds-tab-color--hover);
 	}
 
-	&.fds-is-current {
-		color: var(--fds-tab-color--active);
+	&.wds-is-current {
+		color: var(--fds-tab-color--hover);
 		box-shadow: inset 0 -2px 0 0 currentColor;
 	}
 

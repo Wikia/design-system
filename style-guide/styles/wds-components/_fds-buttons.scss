@@ -1,13 +1,13 @@
-.fds-button {
+.wds-button {
 	--fds-primary-button--background: var(--fds-button-background-color);
-	--fds-primary-button--background--active: var(--fds-button-background-color--active);
+	--fds-primary-button--background--hover: var(--fds-button-background-color--hover);
 	--fds-primary-button--label: var(--fds-button-label-color);
 
 	--fds-secondary-button--label: var(--fds-text-color);
-	--fds-secondary-button--label--active: var(--fds-text-color--active);
+	--fds-secondary-button--label--hover: var(--fds-text-color--hover);
 
 	--fds-text-button--label: var(--fds-text-color);
-	--fds-text-button--label--active: var(--fds-text-color--active);
+	--fds-text-button--label--hover: var(--fds-text-color--hover);
 
 	align-items: center;
 	-webkit-appearance: none;
@@ -41,9 +41,9 @@
 	&:focus-visible,
 	&:hover,
 	&:active,
-	&.fds-is-active {
-		background-color: var(--fds-primary-button--background--active);
-		border-color: var(--fds-primary-button--background--active);
+	&.wds-is-active {
+		background-color: var(--fds-primary-button--background--hover);
+		border-color: var(--fds-primary-button--background--hover);
 		color: var(--fds-primary-button--label);
 		text-decoration: none;
 	}
@@ -56,11 +56,11 @@
 		pointer-events: none;
 	}
 
-	&.fds-is-full-width {
+	&.wds-is-full-width {
 		display: flex;
 	}
 
-	&.fds-is-square {
+	&.wds-is-square {
 		@include square(36px);
 
 		align-items: center;
@@ -69,7 +69,7 @@
 		padding: 0;
 	}
 
-	&.fds-is-secondary {
+	&.wds-is-secondary {
 		&, &:disabled {
 			background: none;
 			border-color: currentColor;
@@ -79,12 +79,12 @@
 		&:focus-visible,
 		&:hover,
 		&:active,
-		&.fds-is-active {
-			color: var(--fds-secondary-button--label--active);
+		&.wds-is-active {
+			color: var(--fds-secondary-button--label--hover);
 		}
 	}
 
-	&.fds-is-text {
+	&.wds-is-text {
 		&, &:disabled {
 			background: none;
 			border: 0;
@@ -94,8 +94,8 @@
 		&:focus-visible,
 		&:hover,
 		&:active,
-		&.fds-is-active {
-			color: var(--fds-text-button--label--active);
+		&.wds-is-active {
+			color: var(--fds-text-button--label--hover);
 		}
 	}
 

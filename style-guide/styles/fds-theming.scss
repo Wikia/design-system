@@ -1,12 +1,30 @@
 $active-color-modification-factor: 20%;
+$header-background-color: $wds-fandom-color-navy;
 
 :root {
+	--fds-page-background-color: #{$wds-color-white};
+	--fds-page-background-color--secondary: #{$wds-color-white};
+
 	--fds-text-color: #{$wds-fandom-color-text-dark};
-	--fds-text-color--active: #{lighten($wds-fandom-color-text-dark, $active-color-modification-factor)};
+	--fds-text-color--hover: #{lighten($wds-fandom-color-text-dark, $active-color-modification-factor)};
 
 	--fds-link-color: #{$wds-fandom-color-link};
+	--fds-link-color--opacity-10: #{rgba($wds-fandom-color-link, 0.1)};
+
+	--fds-border-color: #{$wds-color-faint-gray};
 
 	--fds-button-background-color: #{$wds-fandom-color-button-background};
-	--fds-button-background-color--active: #{lighten($wds-fandom-color-button-background, $active-color-modification-factor)};
+	--fds-button-background-color--hover: #{lighten($wds-fandom-color-button-background, $active-color-modification-factor)};
 	--fds-button-label-color: #{$wds-fandom-color-text-dark};
+
+	--fds-dropdown--shadow-color: radial-gradient(farthest-side at 50% 0, #{rgba($wds-color-black, .12)}, transparent),
+		radial-gradient(farthest-side at 50% 100%, #{rgba($wds-color-black, .12)}, transparent);
+
+	--fds-header--background-color: #{$header-background-color};
+	--fds-header--background-color--opacity-40: #{rgba($header-background-color, 0.4)};
+	--fds-header--background-color--opacity-20: #{rgba($header-background-color, 0.2)};
+	--fds-header--text-color: #{$wds-color-white};
+	--fds-header--text-color--hover: #{darken($wds-color-white, $active-color-modification-factor)};
+	--fds-header--gradient: linear-gradient(to right, rgba($header-background-color, .5), rgba($header-background-color, .5)),
+		linear-gradient(to left, rgba($header-background-color, 0) var(--fds-header--gradient-start), $header-background-color var(--fds-header--gradient-end));
 }
