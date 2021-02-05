@@ -1,13 +1,8 @@
 .wds-button {
 	--fds-primary-button--background: var(--fds-button-background-color);
-	--fds-primary-button--background--hover: var(--fds-button-background-color--hover);
 	--fds-primary-button--label: var(--fds-button-label-color);
-
 	--fds-secondary-button--label: var(--fds-text-color);
-	--fds-secondary-button--label--hover: var(--fds-text-color--hover);
-
 	--fds-text-button--label: var(--fds-text-color);
-	--fds-text-button--label--hover: var(--fds-text-color--hover);
 
 	align-items: center;
 	-webkit-appearance: none;
@@ -42,8 +37,8 @@
 	&:hover,
 	&:active,
 	&.wds-is-active {
-		background-color: var(--fds-primary-button--background--hover);
-		border-color: var(--fds-primary-button--background--hover);
+		--fds-primary-button--background: var(--fds-button-background-color--hover);
+
 		color: var(--fds-primary-button--label);
 		text-decoration: none;
 	}
@@ -80,7 +75,7 @@
 		&:hover,
 		&:active,
 		&.wds-is-active {
-			color: var(--fds-secondary-button--label--hover);
+			--fds-secondary-button--label: var(--fds-text-color--hover);
 		}
 	}
 
@@ -95,7 +90,7 @@
 		&:hover,
 		&:active,
 		&.wds-is-active {
-			color: var(--fds-text-button--label--hover);
+			--fds-text-button--label: var(--fds-text-color--hover);
 		}
 	}
 

@@ -1,15 +1,22 @@
 $active-color-modification-factor: 20%;
 $header-background-color: $wds-fandom-color-navy;
 
+$fds-page-background-color: $wds-color-white;
+$fds-text-color: $wds-fandom-color-text-dark;
+$fds-link-color: $wds-fandom-color-link;
+
 :root {
-	--fds-page-background-color: #{$wds-color-white};
-	--fds-page-background-color--secondary: #{$wds-color-white};
+	--fds-page-background-color: #{$fds-page-background-color};
+	--fds-page-background-color--secondary: #{$fds-page-background-color};
 
-	--fds-text-color: #{$wds-fandom-color-text-dark};
-	--fds-text-color--hover: #{lighten($wds-fandom-color-text-dark, $active-color-modification-factor)};
+	--fds-text-color: #{$fds-text-color};
+	--fds-text-color--hover: #{lighten($fds-text-color, $active-color-modification-factor)};
+	--fds-text-color--opacity-5: #{rgba($fds-text-color, 0.05)};
 
-	--fds-link-color: #{$wds-fandom-color-link};
-	--fds-link-color--opacity-10: #{rgba($wds-fandom-color-link, 0.1)};
+	--fds-link-color: #{$fds-link-color};
+	--fds-link-color--hover: #{lighten($fds-link-color, $active-color-modification-factor)};
+	--fds-link-color--opacity-10: #{rgba($fds-link-color, 0.1)};
+	--fds-link-color--opacity-15: #{rgba($fds-link-color, 0.15)};
 
 	--fds-border-color: #{$wds-color-faint-gray};
 
@@ -27,4 +34,9 @@ $header-background-color: $wds-fandom-color-navy;
 	--fds-header--text-color--hover: #{darken($wds-color-white, $active-color-modification-factor)};
 	--fds-header--gradient: linear-gradient(to right, rgba($header-background-color, .5), rgba($header-background-color, .5)),
 		linear-gradient(to left, rgba($header-background-color, 0) var(--fds-header--gradient-start), $header-background-color var(--fds-header--gradient-end));
+
+	--fds-overlay-color: #{rgba($wds-color-black, 0.5)};
+
+	--fds-page-text-mix-50: mix($fds-page-background-color, $fds-text-color, 50%);
+	--fds-page-link-mix-50: mix($fds-page-background-color, $fds-link-color, 50%);
 }

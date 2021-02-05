@@ -1,0 +1,50 @@
+.wds-pill {
+	--fds-pill--background: var(--fds-text-color--opacity-5);
+	--fds-pill--border-color: var(--fds-border-color);
+	--fds-pill--label-color: var(--fds-text-color);
+
+	background-color: var(--fds-pill--background);
+	border: 1px solid var(--fds-pill--border-color);
+	border-radius: 27px;
+	display: inline-block;
+	font-size: $wds-font-size-s;
+	font-weight: $wds-font-weight-medium;
+	letter-spacing: 0.25px;
+	line-height: $wds-line-height-none;
+	margin: 3px 6px 3px 0;
+	transition: border $wds-default-transition-duration, background-color $wds-default-transition-duration;
+
+	&__label {
+		color: var(--fds-pill--label-color);
+		align-items: center;
+		display: inline-flex;
+		padding: 9px 12px;
+		white-space: nowrap;
+		transition: color $wds-default-transition-duration;
+
+		.wds-icon {
+			margin-right: 6px;
+		}
+	}
+
+	&.wds-is-active {
+		--fds-pill--background: var(--fds-link-color--opacity-15);
+		--fds-pill--border-color: var(--fds-link-color);
+		--fds-pill--label-color: var(--fds-text-color);
+
+		cursor: default;
+		font-weight: $wds-font-weight-bold;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.wds-pills {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+}

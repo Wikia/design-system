@@ -1,7 +1,4 @@
 .wds-tabs {
-	--fds-tab-color: var(--fds-text-color);
-	--fds-tab-color--hover: var(--fds-link-color);
-
 	align-items: flex-end;
 	display: flex;
 	list-style: none;
@@ -10,6 +7,8 @@
 }
 
 .wds-tabs__tab {
+	--fds-tab-color: var(--fds-text-color);
+
 	$tab-margin-horizontal: 11px;
 
 	color: var(--fds-tab-color);
@@ -53,12 +52,12 @@
 		}
 	}
 
-	&:hover {
-		color: var(--fds-tab-color--hover);
+	&:hover,
+	&.wds-is-current {
+		--fds-tab-color: var(--fds-link-color);
 	}
 
 	&.wds-is-current {
-		color: var(--fds-tab-color--hover);
 		box-shadow: inset 0 -2px 0 0 currentColor;
 	}
 

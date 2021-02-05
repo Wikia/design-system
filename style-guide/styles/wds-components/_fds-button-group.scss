@@ -1,0 +1,56 @@
+.wds-button-group {
+	--fds-button-group--border-color: var(--fds-page-background-color);
+
+	align-items: stretch;
+	display: inline-flex;
+	justify-content: flex-start;
+
+	> .wds-button {
+		border-radius: 0;
+		height: auto;
+		margin-left: auto;
+		margin-right: -1px;
+		padding: 7px 12px;
+
+		&:first-child {
+			border-radius: $wds-rounded-corner-radius 0 0 $wds-rounded-corner-radius;
+		}
+
+		&:last-child {
+			border-radius: 0 $wds-rounded-corner-radius $wds-rounded-corner-radius 0;
+		}
+
+		//on hover we want to show whole border of a button
+		&:hover {
+			z-index: 1;
+		}
+
+		&:not(.wds-is-secondary) {
+			&:not(:last-child) {
+				border-right: 1px solid var(--fds-button-group--border-color);
+			}
+
+			&:not(:first-child) {
+				border-left: 1px solid var(--fds-button-group--border-color);
+			}
+		}
+	}
+
+	> .wds-dropdown {
+		&:first-child .wds-button {
+			border-radius: $wds-rounded-corner-radius 0 0 $wds-rounded-corner-radius;
+		}
+
+		&:last-child .wds-button {
+			border-radius: 0 $wds-rounded-corner-radius $wds-rounded-corner-radius 0;
+		}
+
+		&:not(:last-child) .wds-button {
+			border-right: 1px solid var(--fds-button-group--border-color);
+		}
+
+		&:not(:first-child) .wds-button {
+			border-left: 1px solid var(--fds-button-group--border-color);
+		}
+	}
+}
