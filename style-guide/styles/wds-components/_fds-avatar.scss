@@ -1,0 +1,50 @@
+.wds-avatar {
+	--fds-avatar--border-width: 2px;
+	--fds-avatar--border-color: var(--fds-border-color);
+	--fds-avatar--border-color--hover: var(--fds-link-color);
+	--fds-avatar--background-color: var(--fds-page-background-color);
+
+	display: inline-block;
+	position: relative;
+
+	@include square(var(--fds-avatar--size));
+
+	a {
+		color: var(--fds-avatar--border-color);
+		height: 100%;
+		width: 100%;
+
+		&:hover {
+			color: var(--fds-avatar--border-color--hover);
+		}
+	}
+
+	&__image {
+		@include square(100%);
+
+		display: inline-block;
+		border-radius: 50%;
+		box-sizing: border-box;
+		background-color: var(--fds-avatar--background-color);
+		fill: currentColor;
+	}
+
+	img.wds-avatar__image {
+		border: solid var(--fds-avatar--border-width) var(--fds-avatar--border-color);
+
+		&:hover {
+			border-color: var(--fds-avatar--border-color--hover);
+		}
+	}
+
+	&__badge {
+		@include square(var(--fds-avatar--badge-size));
+
+		line-height: 0;
+		position: absolute;
+
+		svg {
+			@include square(100%);
+		}
+	}
+}
