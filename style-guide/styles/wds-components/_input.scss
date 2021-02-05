@@ -12,7 +12,7 @@
 		border-bottom: 1px solid $wds-color-blue-gray;
 		box-sizing: border-box;
 		color: $wds-color-dark-blue-gray;
-		font-size: $wds-typescale-size-base;
+		font-size: $wds-font-size-base;
 		line-height: 1em;
 		padding: 0;
 		padding-bottom: 2px;
@@ -32,7 +32,7 @@
 
 	&__label {
 		color: $wds-color-blue-gray;
-		font-size: $wds-typescale-size-minus-2;
+		font-size: $wds-font-size-xs;
 		left: 0;
 		line-height: .75rem;
 		pointer-events: none;
@@ -43,7 +43,7 @@
 
 	&__hint {
 		color: $wds-color-blue-gray;
-		font-size: $wds-typescale-size-minus-2;
+		font-size: $wds-font-size-xs;
 		line-height: .75rem;
 		margin-top: 6px;
 	}
@@ -54,7 +54,7 @@
 	}
 
 	&.is-empty > &__field ~ &__label {
-		font-size: $wds-typescale-size-base;
+		font-size: $wds-font-size-base;
 		height: 1rem;
 		line-height: 1rem;
 		overflow: hidden;

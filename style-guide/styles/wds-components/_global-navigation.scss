@@ -219,7 +219,7 @@
 	}
 
 	&__user-menu-dropdown-caption {
-		font-size: $wds-typescale-size-minus-2;
+		font-size: $wds-font-size-xs;
 		padding-bottom: 10px;
 		text-align: center;
 	}
@@ -245,7 +245,7 @@
 		box-sizing: border-box;
 		color: $wds-fandom-color-navy;
 		display: flex;
-		font-size: $wds-typescale-size-minus-3;
+		font-size: $wds-font-size-xxs;
 		height: $notification-counter-size;
 		justify-content: center;
 		left: -5px;

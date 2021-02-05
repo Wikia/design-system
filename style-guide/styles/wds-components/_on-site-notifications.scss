@@ -13,7 +13,7 @@
 		border-bottom: solid 1px $wds-fandom-color-mid-light-gray;
 		color: $wds-fandom-color-link;
 		cursor: pointer;
-		font-size: $wds-typescale-size-minus-2;
+		font-size: $wds-font-size-xs;
 		font-weight: bold;
 		line-height: 14px;
 		padding: 15px $content-padding;
@@ -25,7 +25,7 @@
 		align-items: center;
 		color: $notifications-dropdown-content-color;
 		flex-direction: column;
-		font-size: $wds-typescale-size-minus-1;
+		font-size: $wds-font-size-s;
 		justify-content: center;
 		max-width: $content-padding * 2 + 320px;
 		min-height: 80px;
@@ -109,7 +109,7 @@
 
 	&__text {
 		color: $text-color;
-		font-size: $wds-typescale-size-minus-1;
+		font-size: $wds-font-size-s;
 		line-height: 18px;
 		margin: 0;
 		b {
@@ -120,13 +120,13 @@
 	&__last-actor {
 		color: $text-color;
 		font-weight: 200;
-		font-size: $wds-typescale-size-minus-2;
+		font-size: $wds-font-size-xs;
 		margin: 8px 0 0;
 	}
 
 	&__snippet {
 		color: $snippet-color;
-		font-size: $wds-typescale-size-minus-1;
+		font-size: $wds-font-size-s;
 		font-style: italic;
 		line-height: 18px;
 		margin: 8px 0 0;
@@ -135,7 +135,7 @@
 	&__context-list {
 		color: $context-color;
 		display: flex;
-		font-size: $wds-typescale-size-minus-2;
+		font-size: $wds-font-size-xs;
 		letter-spacing: .15px;
 		list-style-type: none;
 		margin: 0;
@@ -189,7 +189,7 @@
 
 		&__header {
 			font-weight: bold;
-			font-size: $wds-typescale-size-minus-1;
+			font-size: $wds-font-size-s;
 			margin-bottom: 6px;
 			margin-top: 14px;
 		}

@@ -6,7 +6,7 @@
 	padding: 7px 18px;
 
 	> li {
-		font-size: $wds-typescale-size-minus-1;
+		font-size: $wds-font-size-s;
 		font-weight: normal;
 		line-height: 1em;
 		padding: $list-item-padding;
@@ -19,7 +19,7 @@
 		};
 
 		> li {
-			font-size: $wds-typescale-size-base;
+			font-size: $wds-font-size-base;
 			padding: {
 				bottom: 16px;
 				top: 16px;
