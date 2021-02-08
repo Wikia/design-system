@@ -4,13 +4,13 @@
 	$badge-right: -$badge-size / 2.5;
 
 	--fds-avatar--size: $size;
+	--fds-avatar--border-width: 2px;
 	--fds-avatar--badge-size: $badge-size;
 	--fds-avatar--badge-left: $badge-left;
 	--fds-avatar--badge-right: $badge-right;
 
 	@if($size >= 48px) {
 		--fds-avatar--border-width: 3px;
-		--fds-avatar--badge-size: $badge-size;
 		--fds-avatar--badge-left: $badge-left / 4.5;
 		--fds-avatar--badge-right: $badge-right / 3.5;
 	}

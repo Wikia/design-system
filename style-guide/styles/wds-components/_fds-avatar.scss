@@ -1,5 +1,8 @@
+@import '../wds-mixins/wds-avatar';
+
 .wds-avatar {
-	--fds-avatar--border-width: 2px;
+	@include wds-avatar();
+
 	--fds-avatar--border-color: var(--fds-border-color);
 	--fds-avatar--border-color--hover: var(--fds-link-color);
 	--fds-avatar--background-color: var(--fds-page-background-color);
