@@ -1,4 +1,6 @@
 .wds-list {
+	--fds-list-border-color: var(--fds-border-color);
+
 	$list-item-padding: $wds-list-item-vertical-padding 0;
 
 	list-style-type: none;
@@ -34,7 +36,7 @@
 	}
 
 	&.wds-has-lines-between > li {
-		border-bottom: solid 1px $wds-fandom-color-mid-light-gray;
+		border-bottom: solid 1px var(--fds-list-border-color);
 
 		&:last-child {
 			border: 0;

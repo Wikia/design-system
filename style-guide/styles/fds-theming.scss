@@ -12,6 +12,7 @@ $fds-link-color: $wds-fandom-color-link;
 	--fds-text-color: #{$fds-text-color};
 	--fds-text-color--hover: #{lighten($fds-text-color, $active-color-modification-factor)};
 	--fds-text-color--opacity-5: #{rgba($fds-text-color, 0.05)};
+	--fds-text-color--opacity-50: #{rgba($fds-text-color, 0.5)};
 
 	--fds-link-color: #{$fds-link-color};
 	--fds-link-color--hover: #{lighten($fds-link-color, $active-color-modification-factor)};

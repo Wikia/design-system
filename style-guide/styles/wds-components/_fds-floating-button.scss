@@ -1,6 +1,8 @@
 .wds-floating-button {
+	--fds-floating-button-background: var(--fds-page-background-color);
+
 	align-items: center;
-	background: $wds-color-white;
+	background: var(--fds-floating-button-background);
 	border-radius: 50%;
 	border: 0;
 	box-shadow: 0 0 10px 0 rgba(26,26,26,.2);
