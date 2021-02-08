@@ -7,7 +7,7 @@
 		border-top: 6px solid $wds-color-dark-blue;
 
 		.wds-global-navigation__modal-control-user .wds-avatar {
-			@include wds-avatar(30px);
+			//@include wds-avatar(30px);
 
 			--avatar-border-color: $wds-color-slate-gray;
 			--avatar-border-color--hover: $wds-color-light-blue;

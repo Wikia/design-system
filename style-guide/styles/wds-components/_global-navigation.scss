@@ -204,7 +204,8 @@
 		}
 
 		.wds-button.wds-is-secondary:not(:disabled) {
-			--secondary-button-label-color--hover: darken($wds-fandom-color-mid-light-gray, $wds-active-color-modification-factor);
+			--secondary-button-label-color: #{$wds-fandom-color-mid-light-gray};
+			--secondary-button-label-color--hover: #{darken($wds-fandom-color-mid-light-gray, $wds-active-color-modification-factor)};
 		}
 	}
 
@@ -261,26 +262,13 @@
 	}
 
 	.wds-avatar {
-		@include wds-avatar(30px, $wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-navy);
+		--avatar-border-color: #{$wds-fandom-color-aqua};
+		--avatar-border-color--hover: #{$wds-color-white};
+		--avatar-background-color: #{$wds-fandom-color-navy};
 	}
 
 	&__user-menu {
 		margin-left: 12px;
-
-		.wds-avatar__image {
-			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
-		}
-
-		.wds-button {
-			color: $wds-fandom-color-black;
-		}
-
-		&:hover {
-			.wds-avatar__image {
-				border-color: $wds-color-white;
-				fill: $wds-color-white;
-			}
-		}
 	}
 
 	&__link-group, &__user-menu {
@@ -314,6 +302,9 @@
 				color: $wds-color-dark-blue-gray;
 
 				.wds-button {
+					--secondary-button-label-color: #{$wds-fandom-color-dark-gray};
+					--secondary-button-label-color--hover: #{lighten($wds-fandom-color-dark-gray, $wds-active-color-modification-factor)};
+
 					padding-bottom: 7px;
 					padding-top: 8px;
 				}
@@ -334,6 +325,9 @@
 	}
 
 	&__link-button {
+		--secondary-button-label-color: #{$wds-fandom-color-dark-gray};
+		--secondary-button-label-color--hover: #{lighten($wds-fandom-color-dark-gray, $wds-active-color-modification-factor)};
+
 		margin: 6px;
 		text-align: center;
 	}

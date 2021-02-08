@@ -40,7 +40,8 @@
 	&:hover,
 	&:active,
 	&.wds-is-active {
-		--primary-button-background-color: var(--primary-button-background-color--hover);
+		background-color: var(--primary-button-background-color--hover);
+		border: 1px solid var(--primary-button-background-color--hover);
 
 		color: var(--primary-button-label-color);
 		text-decoration: none;
@@ -76,7 +77,7 @@
 		&:hover,
 		&:active,
 		&.wds-is-active {
-			--secondary-button-label-color: var(--secondary-button-label-color--hover);
+			color: var(--secondary-button-label-color--hover);
 		}
 	}
 
@@ -91,7 +92,7 @@
 		&:hover,
 		&:active,
 		&.wds-is-active {
-			--text-button-label-color: var(--text-button-label-color--hover);
+			color: var(--text-button-label-color--hover);
 		}
 	}
 

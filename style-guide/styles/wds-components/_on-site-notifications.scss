@@ -159,7 +159,7 @@
 
 	.wds-global-navigation & {
 		.wds-avatar {
-			@include wds-avatar(30px);
+			//@include wds-avatar(30px);
 
 			--avatar-border-color: $wds-fandom-color-middle-gray;
 			--avatar-border-color--hover: $wds-fandom-color-middle-gray;
