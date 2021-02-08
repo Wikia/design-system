@@ -6,7 +6,8 @@
 	--dropdown-text-color: var(--custom-text-color);
 	--dropdown-linked-item-color: var(--custom-link-color);
 	--dropdown-linked-item-background-color: var(--custom-link-color--opacity-10);
-	--dropdown-shadow-color: var(--custom-dropdown-shadow-color);
+	--dropdown-scrollable-shadow-gradient: radial-gradient(farthest-side at 50% 0, var(--custom-text-color--opacity-10), transparent),
+		radial-gradient(farthest-side at 50% 100%, var(--custom-text-color--opacity-10), transparent);
 
 	display: inline-block;
 	position: relative;
@@ -51,7 +52,7 @@
 		&:not(.wds-is-not-scrollable) {
 			.wds-list {
 				background: {
-					image: var(--dropdown-shadow-color);
+					image: var(--dropdown-scrollable-shadow-gradient);
 					position: 0 0, 0 100%;
 					repeat: no-repeat;
 					size: 100% 9px;

@@ -13,6 +13,7 @@ $custom-border-color: $wds-color-faint-gray;
 	--custom-text-color--secondary: #{$wds-color-slate-gray};
 	--custom-text-color--hover: #{lighten($custom-text-color, $wds-active-color-modification-factor)};
 	--custom-text-color--opacity-5: #{rgba($custom-text-color, 0.05)};
+	--custom-text-color--opacity-10: #{rgba($custom-text-color, 0.1)};
 	--custom-text-color--opacity-50: #{rgba($custom-text-color, 0.5)};
 	--custom-text-color--placeholder: #{$wds-color-faint-gray};
 
@@ -28,21 +29,17 @@ $custom-border-color: $wds-color-faint-gray;
 	--custom-button-background-color--hover: #{darken($custom-button-color, $wds-active-color-modification-factor)};
 	--custom-button-label-color: #{$wds-fandom-color-text-dark};
 
-	--custom-dropdown-shadow-color: radial-gradient(farthest-side at 50% 0, #{rgba($wds-color-black, .12)}, transparent),
-		radial-gradient(farthest-side at 50% 100%, #{rgba($wds-color-black, .12)}, transparent);
-
-	--custom-overlay-color: #{rgba($wds-color-black, 0.5)};
+	--custom-overlay-color: #{rgba($custom-text-color, 0.5)};
 
 	--custom-page-text-mix-50: #{mix($custom-page-background-color, $custom-text-color, 50%)};
 	--custom-page-button-mix-50: #{mix($custom-page-background-color, $custom-button-color, 50%)};
 
 	--custom-header-background-color: #{$custom-header-background-color};
+	--custom-header-background-color--opacity-50: #{rgba($custom-header-background-color, 0.5)};
 	--custom-header-background-color--opacity-40: #{rgba($custom-header-background-color, 0.4)};
 	--custom-header-background-color--opacity-20: #{rgba($custom-header-background-color, 0.2)};
 	--custom-header-text-color: #{$wds-color-white};
 	--custom-header-text-color--hover: #{darken($wds-color-white, $wds-active-color-modification-factor)};
-	--custom-header-gradient: linear-gradient(to right, rgba($custom-header-background-color, .5), rgba($custom-header-background-color, .5)),
-		linear-gradient(to left, rgba($custom-header-background-color, 0) var(--custom-header-gradient-start), $custom-header-background-color var(--custom-header-gradient-end));
 
 	--global-navigation-background-color: #{$wds-fandom-color-navy};
 	--global-navigation-text-color: #{$custom-text-color};
