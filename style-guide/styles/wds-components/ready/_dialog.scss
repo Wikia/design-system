@@ -1,9 +1,7 @@
 .wds-dialog {
-	--dialog-background-color: var(--wds-page-background-color--secondary);
-	--dialog-border-color: var(--wds-border-color);
-	--dialog-overlay-color: var(--wds-overlay-color);
-
 	&__curtain {
+		--dialog-overlay-color: var(--wds-overlay-color);
+
 		background-color: var(--dialog-overlay-color);
 		animation: fade-in .2s;
 		bottom: 0;
@@ -17,6 +15,9 @@
 	}
 
 	&__wrapper {
+		--dialog-background-color: var(--wds-page-background-color--secondary);
+		--dialog-border-color: var(--wds-border-color);
+
 		align-self: center;
 		animation: move-in .2s;
 		border-radius: $wds-rounded-corner-radius;

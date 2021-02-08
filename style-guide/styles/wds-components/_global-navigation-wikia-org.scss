@@ -7,7 +7,11 @@
 		border-top: 6px solid $wds-color-dark-blue;
 
 		.wds-global-navigation__modal-control-user .wds-avatar {
-			@include wds-avatar(30px, $wds-color-slate-gray, $wds-color-light-blue, $wds-color-white);
+			@include wds-avatar(30px);
+
+			--avatar-border-color: $wds-color-slate-gray;
+			--avatar-border-color--hover: $wds-color-light-blue;
+			--avatar-background-color: $wds-color-white;
 		}
 
 		.wds-global-navigation__modal-control {
@@ -114,18 +118,11 @@
 		}
 
 		.wds-button:not(.wds-is-text) {
-			@include button-theming($wds-color-light-blue, $wds-color-white, $wds-color-light-blue, 'darker');
-
-			&.wds-is-secondary {
-				background: $wds-color-white;
-				border: 1px solid $wds-color-light-blue;
-				color: $wds-color-light-blue;
-
-				&:hover {
-					color: $wds-color-slate-gray;
-					border-color: $wds-color-slate-gray;
-				}
-			}
+			--primary-button-background-color: $wds-color-light-blue;
+			--primary-button-background-color--hover: darken($wds-color-light-blue, $active-color-modification-factor);
+			--primary-button-label-color: $wds-color-white;
+			--secondary-button-label-color: $wds-color-light-blue;
+			--secondary-button-label-color--hover: $wds-color-slate-gray;
 		}
 	}
 }
@@ -161,7 +158,10 @@
 		}
 
 		&-submit {
-			@include button-theming($wds-color-slate-gray, $wds-color-white, $wds-color-white, 'darker');
+			--primary-button-background-color: $wds-color-slate-gray;
+			--primary-button-background-color--hover: darken($wds-color-slate-gray, $active-color-modification-factor);
+			--primary-button-label-color: $wds-color-white;
+
 			border-radius: 3px;
 			padding: 4px 10px;
 

@@ -1,5 +1,6 @@
 .wds-notifications {
-	$notifications-dropdown-content-color: $wds-color-slate-gray;
+	--notifications-text-color: var(--wds-text-color--secondary);
+
 	$content-padding: 18px;
 
 	&__mark-all-as-read-button {
@@ -23,7 +24,7 @@
 
 	&__dropdown-content {
 		align-items: center;
-		color: $notifications-dropdown-content-color;
+		color: var(--notifications-text-color);
 		flex-direction: column;
 		font-size: $wds-font-size-s;
 		justify-content: center;
@@ -58,7 +59,7 @@
 	&__zero-state {
 		display: block;
 		padding: $content-padding $content-padding 4px;
-		color: $notifications-dropdown-content-color;
+		color: var(--notifications-text-color);
 	}
 }
 
@@ -158,7 +159,11 @@
 
 	.wds-global-navigation & {
 		.wds-avatar {
-			@include wds-avatar(30px, $wds-fandom-color-middle-gray, $wds-fandom-color-middle-gray, $wds-color-white);
+			@include wds-avatar(30px);
+
+			--avatar-border-color: $wds-fandom-color-middle-gray;
+			--avatar-border-color--hover: $wds-fandom-color-middle-gray;
+			--avatar-background-color: $wds-color-white;
 		}
 	}
 }

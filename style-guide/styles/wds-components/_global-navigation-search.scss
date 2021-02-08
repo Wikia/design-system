@@ -91,7 +91,10 @@ $toggle-active-margin-right: 17px;
 	}
 
 	&-submit {
-		@include button-theming($wds-fandom-color-aqua, $wds-color-white, $wds-color-white, 'darker');
+		--primary-button-background-color: $wds-fandom-color-aqua;
+		--primary-button-background-color--hover: darken($wds-fandom-color-aqua, $active-color-modification-factor);
+		--primary-button-label-color: $wds-color-white;
+
 		border-radius: 3px;
 		display: none;
 		padding: 4px 10px;

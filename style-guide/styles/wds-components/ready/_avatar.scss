@@ -25,26 +25,30 @@
 	&__image {
 		@include square(100%);
 
-		display: inline-block;
 		border-radius: 50%;
 		box-sizing: border-box;
 		background-color: var(--avatar-background-color);
+		color: var(--avatar-border-color);
+		display: inline-block;
 		fill: currentColor;
+		transition: border-color $wds-button-transition-duration, color $wds-button-transition-duration;
+
+		&:hover {
+			color: var(--avatar-border-color--hover);
+		}
 	}
 
 	img.wds-avatar__image {
-		border: solid var(--avatar-border-width) var(--avatar-border-color);
-
-		&:hover {
-			border-color: var(--avatar-border-color--hover);
-		}
+		border: solid var(--avatar-border-width) currentColor;
 	}
 
 	&__badge {
 		@include square(var(--avatar-badge-size));
 
+		left: var(--avatar-badge-left);
 		line-height: 0;
 		position: absolute;
+		top: var(--avatar-badge-top);
 
 		svg {
 			@include square(100%);

@@ -1,15 +1,16 @@
-$active-color-modification-factor: 20%;
 $header-background-color: $wds-fandom-color-navy;
 
 $wds-page-background-color: $wds-color-white;
 $wds-text-color: $wds-fandom-color-text-dark;
 $wds-link-color: $wds-fandom-color-link;
+$wds-button-color: $wds-fandom-color-button-background;
 
 :root {
 	--wds-page-background-color: #{$wds-page-background-color};
 	--wds-page-background-color--secondary: #{$wds-page-background-color};
 
 	--wds-text-color: #{$wds-text-color};
+	--wds-text-color--secondary: #{$wds-color-slate-gray};
 	--wds-text-color--hover: #{lighten($wds-text-color, $active-color-modification-factor)};
 	--wds-text-color--opacity-5: #{rgba($wds-text-color, 0.05)};
 	--wds-text-color--opacity-50: #{rgba($wds-text-color, 0.5)};
@@ -21,8 +22,9 @@ $wds-link-color: $wds-fandom-color-link;
 
 	--wds-border-color: #{$wds-color-faint-gray};
 
-	--wds-button-background-color: #{$wds-fandom-color-button-background};
-	--wds-button-background-color--hover: #{lighten($wds-fandom-color-button-background, $active-color-modification-factor)};
+	--wds-button-background-color: #{$wds-button-color};
+	--wds-button-background-color--opacity-15: #{rgba($wds-button-color, 0.15)};
+	--wds-button-background-color--hover: #{darken($wds-button-color, $active-color-modification-factor)};
 	--wds-button-label-color: #{$wds-fandom-color-text-dark};
 
 	--wds-dropdown--shadow-color: radial-gradient(farthest-side at 50% 0, #{rgba($wds-color-black, .12)}, transparent),
@@ -38,6 +40,6 @@ $wds-link-color: $wds-fandom-color-link;
 
 	--wds-overlay-color: #{rgba($wds-color-black, 0.5)};
 
-	--wds-page-text-mix-50: mix($wds-page-background-color, $wds-text-color, 50%);
-	--wds-page-link-mix-50: mix($wds-page-background-color, $wds-link-color, 50%);
+	--wds-page-text-mix-50: #{mix($wds-page-background-color, $wds-text-color, 50%)};
+	--wds-page-button-mix-50: #{mix($wds-page-background-color, $wds-button-color, 50%)};
 }

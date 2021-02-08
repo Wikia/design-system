@@ -204,7 +204,7 @@
 		}
 
 		.wds-button.wds-is-secondary:not(:disabled) {
-			@include button-theming($wds-fandom-color-mid-light-gray, $wds-fandom-color-mid-light-gray);
+			--secondary-button-label-color--hover: darken($wds-fandom-color-mid-light-gray, $active-color-modification-factor);
 		}
 	}
 
