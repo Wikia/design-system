@@ -1,6 +1,8 @@
 .wds-toggle {
-	--fds-toggle--background-color: var(--fds-page-text-mix-50);
-	--fds-toggle--switch-color: var(--fds-page-background-color);
+	--toggle-background-color: var(--wds-page-text-mix-50);
+	--toggle-switch-color: var(--wds-page-background-color);
+	--toggle-background-color--checked: var(--wds-page-link-mix-50);
+	--toggle-switch-color--checked: var(--wds-link-color);
 
 	&__input {
 		display: none;
@@ -33,7 +35,7 @@
 		}
 
 		&::before {
-			background-color: var(--fds-toggle--background-color);
+			background-color: var(--toggle-background-color);
 			border-radius: 8px;
 			height: 14px;
 			left: 6px;
@@ -43,14 +45,14 @@
 		&::after {
 			@include square(20px);
 
-			background-color: var(--fds-toggle--switch-color);
+			background-color: var(--toggle-switch-color);
 			border-radius: 50%;
 			left: 5px;
 		}
 
 		&__input:checked + .wds-toggle__label {
-			--fds-toggle--background-color: var(--fds-page-link-mix-50);
-			--fds-toggle--switch-color: var(--fds-link-color);
+			--toggle-background-color: var(--toggle-background-color--checked);
+			--toggle-switch-color: var(--toggle-switch-color--checked);
 
 			&::after {
 				transform: translate(80%, -50%);

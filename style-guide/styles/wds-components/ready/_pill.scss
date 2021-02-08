@@ -1,10 +1,14 @@
 .wds-pill {
-	--fds-pill--background: var(--fds-text-color--opacity-5);
-	--fds-pill--border-color: var(--fds-border-color);
-	--fds-pill--label-color: var(--fds-text-color);
+	--pill-background-color: var(--wds-text-color--opacity-5);
+	--pill-border-color: var(--wds-border-color);
+	--pill-label-color: var(--wds-text-color);
+	--pill-background-color--active: var(--wds-link-color--opacity-15);
+	--pill-border-color--active: var(--wds-link-color);
+	--pill-label-color--active: var(--wds-text-color);
 
-	background-color: var(--fds-pill--background);
-	border: 1px solid var(--fds-pill--border-color);
+
+	background-color: var(--pill-background-color);
+	border: 1px solid var(--pill-border-color);
 	border-radius: 27px;
 	display: inline-block;
 	font-size: $wds-font-size-s;
@@ -15,7 +19,7 @@
 	transition: border $wds-default-transition-duration, background-color $wds-default-transition-duration;
 
 	&__label {
-		color: var(--fds-pill--label-color);
+		color: var(--pill-label-color);
 		align-items: center;
 		display: inline-flex;
 		padding: 9px 12px;
@@ -28,9 +32,9 @@
 	}
 
 	&.wds-is-active {
-		--fds-pill--background: var(--fds-link-color--opacity-15);
-		--fds-pill--border-color: var(--fds-link-color);
-		--fds-pill--label-color: var(--fds-text-color);
+		--pill-background-color: var(--pill-background-color--active);
+		--pill-border-color: var(--pill-border-color--active);
+		--pill-label-color: var(--pill-label-color--active);
 
 		cursor: default;
 		font-weight: $wds-font-weight-bold;

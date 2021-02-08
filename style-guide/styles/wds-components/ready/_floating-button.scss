@@ -1,8 +1,8 @@
 .wds-floating-button {
-	--fds-floating-button-background: var(--fds-page-background-color);
+	--floating-button-background-color: var(--fds-page-background-color--secondary);
 
 	align-items: center;
-	background: var(--fds-floating-button-background);
+	background: var(--floating-button-background-color);
 	border-radius: 50%;
 	border: 0;
 	box-shadow: 0 0 10px 0 rgba(26,26,26,.2);
@@ -12,7 +12,7 @@
 	margin: 0;
 	outline: none;
 	padding: 0;
-	transition-duration: $wds-button-transition-duration;
+	transition-duration: $wds-default-transition-duration;
 	transition-property: box-shadow;
 	width: 36px;
 

@@ -1,0 +1,53 @@
+@import '../../wds-mixins/ready/wds-avatar';
+
+.wds-avatar {
+	@include wds-avatar();
+
+	--avatar-border-color: var(--wds-border-color);
+	--avatar-border-color--hover: var(--wds-link-color);
+	--avatar-background-color: var(--wds-page-background-color);
+
+	display: inline-block;
+	position: relative;
+
+	@include square(var(--avatar-size));
+
+	a {
+		color: var(--avatar-border-color);
+		height: 100%;
+		width: 100%;
+
+		&:hover {
+			color: var(--avatar-border-color--hover);
+		}
+	}
+
+	&__image {
+		@include square(100%);
+
+		display: inline-block;
+		border-radius: 50%;
+		box-sizing: border-box;
+		background-color: var(--avatar-background-color);
+		fill: currentColor;
+	}
+
+	img.wds-avatar__image {
+		border: solid var(--avatar-border-width) var(--avatar-border-color);
+
+		&:hover {
+			border-color: var(--avatar-border-color--hover);
+		}
+	}
+
+	&__badge {
+		@include square(var(--avatar-badge-size));
+
+		line-height: 0;
+		position: absolute;
+
+		svg {
+			@include square(100%);
+		}
+	}
+}

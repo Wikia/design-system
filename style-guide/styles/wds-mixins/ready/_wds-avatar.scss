@@ -1,0 +1,21 @@
+@mixin wds-avatar($size: 30px) {
+	$badge-size: (0.2539 * $size) + 8px;
+	$badge-left: -$badge-size / 3.5;
+	$badge-right: -$badge-size / 2.5;
+
+	--avatar-size: $size;
+	--avatar-border-width: 2px;
+	--avatar-badge-size: $badge-size;
+	--avatar-badge-left: $badge-left;
+	--avatar-badge-right: $badge-right;
+
+	@if($size >= 48px) {
+		--avatar-border-width: 3px;
+		--avatar-badge-left: $badge-left / 4.5;
+		--avatar-badge-right: $badge-right / 3.5;
+	}
+
+	@if($size >= 120px) {
+		--avatar-border-width: 4px;
+	}
+}

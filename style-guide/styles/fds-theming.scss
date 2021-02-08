@@ -6,38 +6,38 @@ $fds-text-color: $wds-fandom-color-text-dark;
 $fds-link-color: $wds-fandom-color-link;
 
 :root {
-	--fds-page-background-color: #{$fds-page-background-color};
-	--fds-page-background-color--secondary: #{$fds-page-background-color};
+	--wds-page-background-color: #{$fds-page-background-color};
+	--wds-page-background-color--secondary: #{$fds-page-background-color};
 
-	--fds-text-color: #{$fds-text-color};
-	--fds-text-color--hover: #{lighten($fds-text-color, $active-color-modification-factor)};
-	--fds-text-color--opacity-5: #{rgba($fds-text-color, 0.05)};
-	--fds-text-color--opacity-50: #{rgba($fds-text-color, 0.5)};
+	--wds-text-color: #{$fds-text-color};
+	--wds-text-color--hover: #{lighten($fds-text-color, $active-color-modification-factor)};
+	--wds-text-color--opacity-5: #{rgba($fds-text-color, 0.05)};
+	--wds-text-color--opacity-50: #{rgba($fds-text-color, 0.5)};
 
-	--fds-link-color: #{$fds-link-color};
-	--fds-link-color--hover: #{lighten($fds-link-color, $active-color-modification-factor)};
-	--fds-link-color--opacity-10: #{rgba($fds-link-color, 0.1)};
-	--fds-link-color--opacity-15: #{rgba($fds-link-color, 0.15)};
+	--wds-link-color: #{$fds-link-color};
+	--wds-link-color--hover: #{lighten($fds-link-color, $active-color-modification-factor)};
+	--wds-link-color--opacity-10: #{rgba($fds-link-color, 0.1)};
+	--wds-link-color--opacity-15: #{rgba($fds-link-color, 0.15)};
 
-	--fds-border-color: #{$wds-color-faint-gray};
+	--wds-border-color: #{$wds-color-faint-gray};
 
-	--fds-button-background-color: #{$wds-fandom-color-button-background};
-	--fds-button-background-color--hover: #{lighten($wds-fandom-color-button-background, $active-color-modification-factor)};
-	--fds-button-label-color: #{$wds-fandom-color-text-dark};
+	--wds-button-background-color: #{$wds-fandom-color-button-background};
+	--wds-button-background-color--hover: #{lighten($wds-fandom-color-button-background, $active-color-modification-factor)};
+	--wds-button-label-color: #{$wds-fandom-color-text-dark};
 
-	--fds-dropdown--shadow-color: radial-gradient(farthest-side at 50% 0, #{rgba($wds-color-black, .12)}, transparent),
+	--wds-dropdown--shadow-color: radial-gradient(farthest-side at 50% 0, #{rgba($wds-color-black, .12)}, transparent),
 		radial-gradient(farthest-side at 50% 100%, #{rgba($wds-color-black, .12)}, transparent);
 
-	--fds-header--background-color: #{$header-background-color};
-	--fds-header--background-color--opacity-40: #{rgba($header-background-color, 0.4)};
-	--fds-header--background-color--opacity-20: #{rgba($header-background-color, 0.2)};
-	--fds-header--text-color: #{$wds-color-white};
-	--fds-header--text-color--hover: #{darken($wds-color-white, $active-color-modification-factor)};
-	--fds-header--gradient: linear-gradient(to right, rgba($header-background-color, .5), rgba($header-background-color, .5)),
-		linear-gradient(to left, rgba($header-background-color, 0) var(--fds-header--gradient-start), $header-background-color var(--fds-header--gradient-end));
+	--wds-header--background-color: #{$header-background-color};
+	--wds-header--background-color--opacity-40: #{rgba($header-background-color, 0.4)};
+	--wds-header--background-color--opacity-20: #{rgba($header-background-color, 0.2)};
+	--wds-header--text-color: #{$wds-color-white};
+	--wds-header--text-color--hover: #{darken($wds-color-white, $active-color-modification-factor)};
+	--wds-header--gradient: linear-gradient(to right, rgba($header-background-color, .5), rgba($header-background-color, .5)),
+		linear-gradient(to left, rgba($header-background-color, 0) var(--wds-header--gradient-start), $header-background-color var(--wds-header--gradient-end));
 
-	--fds-overlay-color: #{rgba($wds-color-black, 0.5)};
+	--wds-overlay-color: #{rgba($wds-color-black, 0.5)};
 
-	--fds-page-text-mix-50: mix($fds-page-background-color, $fds-text-color, 50%);
-	--fds-page-link-mix-50: mix($fds-page-background-color, $fds-link-color, 50%);
+	--wds-page-text-mix-50: mix($fds-page-background-color, $fds-text-color, 50%);
+	--wds-page-link-mix-50: mix($fds-page-background-color, $fds-link-color, 50%);
 }

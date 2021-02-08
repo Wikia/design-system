@@ -7,11 +7,12 @@
 }
 
 .wds-tabs__tab {
-	--fds-tab-color: var(--fds-text-color);
+	--tab-color: var(--wds-text-color);
+	--tab-color--active: var(--wds-link-color);
 
 	$tab-margin-horizontal: 11px;
 
-	color: var(--fds-tab-color);
+	color: var(--tab-color);
 	cursor: default;
 	flex-shrink: 0;
 	line-height: 14px;
@@ -54,7 +55,7 @@
 
 	&:hover,
 	&.wds-is-current {
-		--fds-tab-color: var(--fds-link-color);
+		--tab-color: var(--tab-color--active);
 	}
 
 	&.wds-is-current {
