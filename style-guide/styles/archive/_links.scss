@@ -1,0 +1,5 @@
+@import 'link-theming';
+
+.wds-link {
+	@include link-theming($wds-fandom-color-link, $wds-fandom-color-link-hover);
+}

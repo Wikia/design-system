@@ -1,12 +1,8 @@
 .wds-community-header {
-	$wds-community-header-background-height: 105px;
-	$wds-community-header-background-height-small-breakpoint: 115px;
-	$wds-community-header-background-width: 430px;
-	$wds-community-header-background-width-small-breakpoint: 471px;
-
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	background: var(--custom-header-background-color) no-repeat right center;
+	background-position: right center;
+	background-repeat: no-repeat;
 	background-size: contain;
 	height: $wds-community-header-background-height;
 	position: relative;
@@ -17,20 +13,12 @@
 	}
 
 	&::before {
-		--wds-header--gradient-start: 200px;
-		--wds-header--gradient-end: $wds-community-header-background-width;
-
-		background: var(--wds-header--gradient);
 		content: '';
 		display: block;
 		height: 100%;
 		position: absolute;
 		width: 100%;
 		z-index: -1;
-
-		@media #{$wds-breakpoint-l-down} {
-			--wds-header--gradient-end: $wds-community-header-background-width-small-breakpoint;
-		}
 	}
 
 	&__wordmark {
@@ -72,13 +60,7 @@
 		overflow: hidden;
 
 		a {
-			color: var(--wds-header--text-color);
 			text-decoration: none;
-			transition: color $wds-default-transition-duration;
-
-			&:hover {
-				color: var(--wds-header--text-color--hover);
-			}
 
 			@media #{$wds-breakpoint-xl-up} {
 				display: inline-block;
@@ -92,7 +74,7 @@
 		@media #{$wds-breakpoint-l-down} {
 			font-size: $wds-font-size-xl;
 			margin-top: 20px;
-			max-height: 3 * $wds-font-size-xl;
+			max-height: 3*$wds-font-size-xl;
 			white-space: normal;
 			word-wrap: break-word;
 		}
@@ -104,7 +86,6 @@
 	}
 
 	&__counter {
-		color: var(--wds-header--text-color);
 		font-weight: 600;
 		text-align: right;
 		margin: 17px 0 20px 20px;
@@ -120,7 +101,7 @@
 		line-height: 1;
 
 		@media #{$wds-breakpoint-l-down} {
-			font-size: $wds-font-size-l;
+			font-size: $wds-typescale-size-plus-1;
 		}
 	}
 
@@ -172,30 +153,5 @@
 				font-size: $wds-font-size-xxs;
 			}
 		}
-	}
-
-	.wds-button.wds-is-secondary {
-		--secondary-button--label: var(--wds-header--text-color);
-		--secondary-button--label--hover: var(--wds-header--text-color--hover);
-
-		background-color: var(--wds-header--background-color--opacity-20);
-		transition-property: border-color, background-color, color;
-
-		&:hover {
-			background-color: var(--wds-header--background-color--opacity-40);
-		}
-	}
-
-	.wds-button-group {
-		--button-group-border-color: var(--wds-header--text-color);
-	}
-
-	.wds-tabs {
-		--tab-color: var(--wds-header--text-color);
-		--tab-color--active: var(--wds-header--text-color--hover);
-	}
-
-	.wds-avatar-stack .user-avatar .avatar .user-avatar__image {
-		border-color: var(--wds-header--text-color);
 	}
 }

@@ -3,19 +3,19 @@
 	$badge-left: -$badge-size / 3.5;
 	$badge-top: -$badge-size / 2.5;
 
-	--avatar-size: #{$size};
-	--avatar-border-width: 2px;
-	--avatar-badge-size: #{$badge-size};
-	--avatar-badge-left: #{$badge-left};
-	--avatar-badge-top: #{$badge-top};
+	--wds-avatar-size: #{$size};
+	--wds-avatar-border-width: 2px;
+	--wds-avatar-badge-size: #{$badge-size};
+	--wds-avatar-badge-left: #{$badge-left};
+	--wds-avatar-badge-top: #{$badge-top};
 
 	@if($size >= 48px) {
-		--avatar-border-width: 3px;
-		--avatar-badge-left: #{$badge-left / 4.5};
-		--avatar-badge-top: #{$badge-top / 3.5};
+		--wds-avatar-border-width: 3px;
+		--wds-avatar-badge-left: #{$badge-left / 4.5};
+		--wds-avatar-badge-top: #{$badge-top / 3.5};
 	}
 
 	@if($size >= 120px) {
-		--avatar-border-width: 4px;
+		--wds-avatar-border-width: 4px;
 	}
 }

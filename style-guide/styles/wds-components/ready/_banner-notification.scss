@@ -1,9 +1,9 @@
 .wds-banner-notification {
-	--banner-notification-background-color: var(--wds-page-background-color--secondary);
-	--banner-notification-text-color: var(--wds-text-color);
+	--wds-banner-notification-background-color: var(--custom-page-background-color--secondary);
+	--wds-banner-notification-text-color: var(--custom-text-color);
 
-	background-color: var(--banner-notification-background-color);
-	color: var(--banner-notification-text-color);
+	background-color: var(--wds-banner-notification-background-color);
+	color: var(--wds-banner-notification-text-color);
 	display: flex;
 	transition: opacity 0.4s;
 

@@ -5,7 +5,7 @@
 
 	&__content {
 		align-items: center;
-		border-bottom: 1px solid var(--global-navigation-border-color);
+		border-bottom: 1px solid var(--wds-global-navigation-border-color);
 		display: flex;
 		height: $community-bar-height;
 		margin: 0 12px;
@@ -22,7 +22,7 @@
 		white-space: nowrap;
 
 		a {
-			color: var(--global-navigation-text-color);
+			color: var(--wds-global-navigation-text-color);
 		}
 
 		@supports (-webkit-line-clamp: 2) {
@@ -49,7 +49,7 @@
 
 	&__navigation {
 		.wds-dropdown__toggle svg {
-			color: var(--global-navigation-link-color);
+			color: var(--wds-global-navigation-link-color);
 			margin-left: $wds-button-horizontal-gap;
 		}
 
@@ -96,7 +96,7 @@
 
 			&.wds-is-active {
 				.wds-dropdown__toggle {
-					color: var(--global-navigation-link-color);
+					color: var(--wds-global-navigation-link-color);
 				}
 			}
 		}
@@ -104,7 +104,7 @@
 
 	&__navigation-back {
 		align-items: center;
-		border-bottom: 1px solid var(--global-navigation-border-color);
+		border-bottom: 1px solid var(--wds-global-navigation-border-color);
 		display: flex;
 		font-weight: bold;
 		margin-bottom: 6px;
@@ -117,7 +117,7 @@
 	}
 
 	&__navigation-header {
-		color: var(--global-navigation-text-color);
+		color: var(--wds-global-navigation-text-color);
 		display: block;
 		font-weight: bold;
 		margin: 0 9px;

@@ -204,8 +204,8 @@
 		}
 
 		.wds-button.wds-is-secondary:not(:disabled) {
-			--secondary-button-label-color: #{$wds-fandom-color-mid-light-gray};
-			--secondary-button-label-color--hover: #{darken($wds-fandom-color-mid-light-gray, $wds-active-color-modification-factor)};
+			--wds-secondary-button-label-color: #{$wds-fandom-color-mid-light-gray};
+			--wds-secondary-button-label-color--hover: #{darken($wds-fandom-color-mid-light-gray, $wds-active-color-modification-factor)};
 		}
 	}
 
@@ -262,9 +262,9 @@
 	}
 
 	.wds-avatar {
-		--avatar-border-color: #{$wds-fandom-color-aqua};
-		--avatar-border-color--hover: #{$wds-color-white};
-		--avatar-background-color: #{$wds-fandom-color-navy};
+		--wds-avatar-border-color: #{$wds-fandom-color-aqua};
+		--wds-avatar-border-color--hover: #{$wds-color-white};
+		--wds-avatar-background-color: #{$wds-fandom-color-navy};
 	}
 
 	&__user-menu {
@@ -302,8 +302,8 @@
 				color: $wds-color-dark-blue-gray;
 
 				.wds-button {
-					--secondary-button-label-color: #{$wds-fandom-color-dark-gray};
-					--secondary-button-label-color--hover: #{lighten($wds-fandom-color-dark-gray, $wds-active-color-modification-factor)};
+					--wds-secondary-button-label-color: #{$wds-fandom-color-dark-gray};
+					--wds-secondary-button-label-color--hover: #{lighten($wds-fandom-color-dark-gray, $wds-active-color-modification-factor)};
 
 					padding-bottom: 7px;
 					padding-top: 8px;
@@ -325,8 +325,8 @@
 	}
 
 	&__link-button {
-		--secondary-button-label-color: #{$wds-fandom-color-dark-gray};
-		--secondary-button-label-color--hover: #{lighten($wds-fandom-color-dark-gray, $wds-active-color-modification-factor)};
+		--wds-secondary-button-label-color: #{$wds-fandom-color-dark-gray};
+		--wds-secondary-button-label-color--hover: #{lighten($wds-fandom-color-dark-gray, $wds-active-color-modification-factor)};
 
 		margin: 6px;
 		text-align: center;

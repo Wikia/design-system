@@ -1,12 +1,6 @@
 .wds-dropdown {
 	$content-z-index: 1;
-
-	--dropdown-background-color: var(--custom-page-background-color--secondary);
-	--dropdown-border-color: var(--custom-border-color);
-	--dropdown-text-color: var(--custom-text-color);
-	--dropdown-linked-item-color: var(--custom-link-color);
-	--dropdown-linked-item-background-color: var(--custom-link-color--opacity-10);
-	--dropdown-shadow-color: var(--custom-dropdown-shadow-color);
+	$link-transition-duration: 0.2s;
 
 	display: inline-block;
 	position: relative;
@@ -21,9 +15,8 @@
 	}
 
 	&__content {
-		background-color: var(--dropdown-background-color);
-		border: $wds-dropdown-border-width solid var(--dropdown-border-color);
-		color: var(--dropdown-text-color);
+		background-color: $wds-color-white;
+		border: $wds-dropdown-border-width solid $wds-color-faint-gray;
 		border-radius: $wds-dropdown-border-radius;
 		display: none;
 		left: 50%;
@@ -37,9 +30,7 @@
 		z-index: $content-z-index;
 
 		&.wds-is-right-aligned {
-			left: auto;
-			right: 0;
-			transform: none;
+			@include is-right-aligned;
 		}
 
 		&.wds-is-left-aligned {
@@ -50,32 +41,7 @@
 		// The default is to show scroll on long dropdowns
 		&:not(.wds-is-not-scrollable) {
 			.wds-list {
-				background: {
-					image: var(--dropdown-shadow-color);
-					position: 0 0, 0 100%;
-					repeat: no-repeat;
-					size: 100% 9px;
-				}
-				max-height: $wds-dropdown-height;
-				overflow-y: auto;
-				position: relative;
-				z-index: 1;
-
-				&::after,
-				&::before {
-					background-color: var(--dropdown-background-color);
-					content: '';
-					display: block;
-					height: 30px;
-					margin: 0 0 -30px;
-					position: relative;
-					z-index: -1;
-				}
-
-				&::after {
-					background-color: var(--dropdown-background-color);
-					margin: -29px 0 0;
-				}
+				@include scrollable-list($wds-dropdown-height);
 			}
 		}
 
@@ -100,18 +66,17 @@
 					padding: 0;
 
 					> a:not(.wds-button) {
-						color: var(--dropdown-text-color);
+						color: $wds-color-dark-blue-gray;
 						padding-left: $wds-dropdown-padding / 2;
 						padding-right: $wds-dropdown-padding / 2;
 						text-decoration: none;
-						transition-duration: $wds-default-transition-duration;
+						transition-duration: $link-transition-duration;
 						transition-property: background-color, color;
 					}
 
 					&:hover, &.wds-is-selected {
 						> a:not(.wds-button) {
-							background-color: var(--dropdown-linked-item-background-color);
-							color: var(--dropdown-linked-item-color);
+							@include wds-dropdown-linked-list-item-hover;
 						}
 					}
 				}
@@ -133,14 +98,14 @@
 
 	&::after {
 		border: 8px solid transparent;
+		border-bottom-color: $wds-color-white;
 		margin-left: -8px;
-		border-bottom-color: var(--dropdown-background-color);
 	}
 
 	&::before {
 		border: 9px solid transparent;
+		border-bottom-color: $wds-color-faint-gray;
 		margin-left: -9px;
-		border-bottom-color: var(--dropdown-border-color);
 	}
 
 	&.wds-is-active,
@@ -188,17 +153,16 @@
 		&::before, &::after {
 			bottom: unset;
 			top: -$wds-dropdown-border-width;
-
 		}
 
 		&::before {
 			border-bottom-color: transparent;
-			border-top-color: var(--dropdown-border-color);
+			border-top-color: $wds-color-faint-gray;
 		}
 
 		&::after {
 			border-bottom-color: transparent;
-			border-top-color: var(--dropdown-background-color);
+			border-top-color: $wds-color-white;
 		}
 
 		.wds-dropdown__content {
@@ -232,9 +196,8 @@
 	}
 
 	.wds-dropdown-level-2__content {
-		background-color: var(--dropdown-background-color);
-		border: $wds-dropdown-border-width solid var(--dropdown-border-color);
-		color: var(--dropdown-text-color);
+		background-color: $wds-color-white;
+		border: $wds-dropdown-border-width solid $wds-color-faint-gray;
 		border-radius: $wds-dropdown-border-radius;
 		display: none;
 		left: 100%;

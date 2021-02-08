@@ -1,5 +1,5 @@
 .wds-notifications {
-	--notifications-text-color: var(--wds-text-color--secondary);
+	--wds-notifications-text-color: var(--custom-text-color--secondary);
 
 	$content-padding: 18px;
 
@@ -24,7 +24,7 @@
 
 	&__dropdown-content {
 		align-items: center;
-		color: var(--notifications-text-color);
+		color: var(--wds-notifications-text-color);
 		flex-direction: column;
 		font-size: $wds-font-size-s;
 		justify-content: center;
@@ -59,7 +59,7 @@
 	&__zero-state {
 		display: block;
 		padding: $content-padding $content-padding 4px;
-		color: var(--notifications-text-color);
+		color: var(--wds-notifications-text-color);
 	}
 }
 
@@ -161,9 +161,9 @@
 		.wds-avatar {
 			//@include wds-avatar(30px);
 
-			--avatar-border-color: $wds-fandom-color-middle-gray;
-			--avatar-border-color--hover: $wds-fandom-color-middle-gray;
-			--avatar-background-color: $wds-color-white;
+			--wds-avatar-border-color: $wds-fandom-color-middle-gray;
+			--wds-avatar-border-color--hover: $wds-fandom-color-middle-gray;
+			--wds-avatar-background-color: $wds-color-white;
 		}
 	}
 }

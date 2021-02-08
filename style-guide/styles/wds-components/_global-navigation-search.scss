@@ -91,9 +91,9 @@ $toggle-active-margin-right: 17px;
 	}
 
 	&-submit {
-		--primary-button-background-color: $wds-fandom-color-aqua;
-		--primary-button-background-color--hover: darken($wds-fandom-color-aqua, $wds-active-color-modification-factor);
-		--primary-button-label-color: $wds-color-white;
+		--wds-primary-button-background-color: $wds-fandom-color-aqua;
+		--wds-primary-button-background-color--hover: darken($wds-fandom-color-aqua, $wds-active-color-modification-factor);
+		--wds-primary-button-label-color: $wds-color-white;
 
 		border-radius: 3px;
 		display: none;

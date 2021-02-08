@@ -1,5 +1,5 @@
 .wds-button-group {
-	--button-group-border-color: var(--wds-page-background-color);
+	--wds-button-group-border-color: var(--custom-page-background-color);
 
 	align-items: stretch;
 	display: inline-flex;
@@ -27,7 +27,7 @@
 
 		&:not(.wds-is-secondary) {
 			&:not(:last-child) {
-				border-right: 1px solid var(--button-group-border-color);
+				border-right: 1px solid var(--wds-button-group-border-color);
 			}
 
 			&:not(:first-child) {

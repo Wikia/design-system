@@ -9,9 +9,9 @@
 		.wds-global-navigation__modal-control-user .wds-avatar {
 			//@include wds-avatar(30px);
 
-			--avatar-border-color: $wds-color-slate-gray;
-			--avatar-border-color--hover: $wds-color-light-blue;
-			--avatar-background-color: $wds-color-white;
+			--wds-avatar-border-color: $wds-color-slate-gray;
+			--wds-avatar-border-color--hover: $wds-color-light-blue;
+			--wds-avatar-background-color: $wds-color-white;
 		}
 
 		.wds-global-navigation__modal-control {
@@ -118,11 +118,11 @@
 		}
 
 		.wds-button:not(.wds-is-text) {
-			--primary-button-background-color: $wds-color-light-blue;
-			--primary-button-background-color--hover: darken($wds-color-light-blue, $wds-active-color-modification-factor);
-			--primary-button-label-color: $wds-color-white;
-			--secondary-button-label-color: $wds-color-light-blue;
-			--secondary-button-label-color--hover: $wds-color-slate-gray;
+			--wds-primary-button-background-color: $wds-color-light-blue;
+			--wds-primary-button-background-color--hover: darken($wds-color-light-blue, $wds-active-color-modification-factor);
+			--wds-primary-button-label-color: $wds-color-white;
+			--wds-secondary-button-label-color: $wds-color-light-blue;
+			--wds-secondary-button-label-color--hover: $wds-color-slate-gray;
 		}
 	}
 }
@@ -158,9 +158,9 @@
 		}
 
 		&-submit {
-			--primary-button-background-color: $wds-color-slate-gray;
-			--primary-button-background-color--hover: darken($wds-color-slate-gray, $wds-active-color-modification-factor);
-			--primary-button-label-color: $wds-color-white;
+			--wds-primary-button-background-color: $wds-color-slate-gray;
+			--wds-primary-button-background-color--hover: darken($wds-color-slate-gray, $wds-active-color-modification-factor);
+			--wds-primary-button-label-color: $wds-color-white;
 
 			border-radius: 3px;
 			padding: 4px 10px;
