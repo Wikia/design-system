@@ -54,10 +54,12 @@
 	}
 
 	&__input:checked + .wds-toggle__label {
-		--toggle-background-color: var(--toggle-background-color--checked);
-		--toggle-switch-color: var(--toggle-switch-color--checked);
+		&::before {
+			background-color: var(--toggle-background-color--checked);
+		}
 
 		&::after {
+			background-color: var(--toggle-switch-color--checked);
 			transform: translate(80%, -50%);
 		}
 	}

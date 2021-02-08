@@ -32,12 +32,14 @@
 	}
 
 	&.wds-is-active {
-		--pill-background-color: var(--pill-background-color--active);
-		--pill-border-color: var(--pill-border-color--active);
-		--pill-label-color: var(--pill-label-color--active);
-
+		background-color: var(--pill-background-color--active);
+		border-color: var(--pill-border-color--active);
 		cursor: default;
 		font-weight: $wds-font-weight-bold;
+
+		&__label {
+			color: var(--pill-label-color--active);
+		}
 	}
 
 	&:last-child {

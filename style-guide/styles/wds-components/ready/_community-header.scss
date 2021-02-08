@@ -6,7 +6,7 @@
 
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	background: var(--fds-header--background-color) no-repeat right center;
+	background: var(--wds-header--background-color) no-repeat right center;
 	background-size: contain;
 	height: $wds-community-header-background-height;
 	position: relative;
@@ -17,10 +17,10 @@
 	}
 
 	&::before {
-		--fds-header--gradient-start: 200px;
-		--fds-header--gradient-end: $wds-community-header-background-width;
+		--wds-header--gradient-start: 200px;
+		--wds-header--gradient-end: $wds-community-header-background-width;
 
-		background: var(--fds-header--gradient);
+		background: var(--wds-header--gradient);
 		content: '';
 		display: block;
 		height: 100%;
@@ -29,7 +29,7 @@
 		z-index: -1;
 
 		@media #{$wds-breakpoint-l-down} {
-			--fds-header--gradient-end: $wds-community-header-background-width-small-breakpoint;
+			--wds-header--gradient-end: $wds-community-header-background-width-small-breakpoint;
 		}
 	}
 
@@ -72,12 +72,12 @@
 		overflow: hidden;
 
 		a {
-			color: var(--fds-header--text-color);
+			color: var(--wds-header--text-color);
 			text-decoration: none;
 			transition: color $wds-default-transition-duration;
 
 			&:hover {
-				--fds-header--text-color: var(--fds-header--text-color--hover);
+				color: var(--wds-header--text-color--hover);
 			}
 
 			@media #{$wds-breakpoint-xl-up} {
@@ -104,7 +104,7 @@
 	}
 
 	&__counter {
-		color: var(--fds-header--text-color);
+		color: var(--wds-header--text-color);
 		font-weight: 600;
 		text-align: right;
 		margin: 17px 0 20px 20px;
@@ -175,27 +175,27 @@
 	}
 
 	.wds-button.wds-is-secondary {
-		--fds-secondary-button--label: var(--fds-header--text-color);
-		--fds-secondary-button--label--hover: var(--fds-header--text-color--hover);
+		--secondary-button--label: var(--wds-header--text-color);
+		--secondary-button--label--hover: var(--wds-header--text-color--hover);
 
-		background-color: var(--fds-header--background-color--opacity-20);
+		background-color: var(--wds-header--background-color--opacity-20);
 		transition-property: border-color, background-color, color;
 
 		&:hover {
-			background-color: var(--fds-header--background-color--opacity-40);
+			background-color: var(--wds-header--background-color--opacity-40);
 		}
 	}
 
 	.wds-button-group {
-		--button-group-border-color: var(--fds-header--text-color);
+		--button-group-border-color: var(--wds-header--text-color);
 	}
 
 	.wds-tabs {
-		--fds-tab-color: var(--fds-header--text-color);
-		--fds-tab-color--hover: var(--fds-header--text-color--hover);
+		--tab-color: var(--wds-header--text-color);
+		--tab-color--active: var(--wds-header--text-color--hover);
 	}
 
 	.wds-avatar-stack .user-avatar .avatar .user-avatar__image {
-		border-color: var(--fds-header--text-color);
+		border-color: var(--wds-header--text-color);
 	}
 }

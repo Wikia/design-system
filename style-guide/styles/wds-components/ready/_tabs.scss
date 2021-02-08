@@ -1,4 +1,7 @@
 .wds-tabs {
+	--tab-color: var(--wds-text-color);
+	--tab-color--active: var(--wds-link-color);
+
 	align-items: flex-end;
 	display: flex;
 	list-style: none;
@@ -7,9 +10,6 @@
 }
 
 .wds-tabs__tab {
-	--tab-color: var(--wds-text-color);
-	--tab-color--active: var(--wds-link-color);
-
 	$tab-margin-horizontal: 11px;
 
 	color: var(--tab-color);
@@ -55,7 +55,7 @@
 
 	&:hover,
 	&.wds-is-current {
-		--tab-color: var(--tab-color--active);
+		color: var(--tab-color--active);
 	}
 
 	&.wds-is-current {
