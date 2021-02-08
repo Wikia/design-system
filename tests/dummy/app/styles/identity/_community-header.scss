@@ -18,38 +18,35 @@
 }
 
 .wds-community-header {
-	$background-color: #006CB0;
-	$local-nav-base-bg: white;
-	$local-nav-border-color: #CCC;
-	$local-nav-text-color: #3A3A3A;
-	$local-nav-hover-text-color: #006CB0;
-	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+	--custom-header-background-color: #006CB0;
+	--custom-header-background-color--opacity-40: #{rgba(#006CB0, 0.4)};
+	--custom-header-background-color--opacity-20: #{rgba(#006CB0, 0.2)};
+	--custom-header-text-color: #3A3A3A;
+	--custom-header-text-color--hover: #006CB0;
 
 	z-index: $z-4;
 }
 
 .color-5F1023.wds-community-header {
-	$background-color: black;
-	$local-nav-base-bg: #181818;
-	$local-nav-border-color: #464646;
-	$local-nav-text-color: #D5D4D4;
-	$local-nav-hover-text-color: #5A91CF;
-	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+	--custom-header-background-color: #000;
+	--custom-header-background-color--opacity-40: #{rgba(#000, 0.4)};
+	--custom-header-background-color--opacity-20: #{rgba(#000, 0.2)};
+	--custom-header-text-color: #D5D4D4;
+	--custom-header-text-color--hover: #5A91CF;
 
 	z-index: $z-3;
 }
 
-.separator-5F1023 {
+.separator-5F1023 {;;;;;
 	background-color: #181818;
 }
 
 .color-787878.wds-community-header {
-	$background-color: #2193D7;
-	$local-nav-base-bg: #0E182B;
-	$local-nav-border-color: #3E4757;
-	$local-nav-text-color: #D5D4D4;
-	$local-nav-hover-text-color: #71D1EF;
-	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+	--custom-header-background-color: #2193D7;
+	--custom-header-background-color--opacity-40: #{rgba(#2193D7, 0.4)};
+	--custom-header-background-color--opacity-20: #{rgba(#2193D7, 0.2)};
+	--custom-header-text-color: #D5D4D4;
+	--custom-header-text-color--hover: #71D1EF;
 
 	z-index: $z-2;
 }
@@ -59,12 +56,11 @@
 }
 
 .color-FB7383.wds-community-header {
-	$background-color: #FE7E03;
-	$local-nav-base-bg: #FEE77D;
-	$local-nav-border-color: #CBB964;
-	$local-nav-text-color: #3A3A3A;
-	$local-nav-hover-text-color: #7E0400;
-	@include community-header-theming($background-color, $local-nav-text-color, $local-nav-hover-text-color, $local-nav-base-bg, $local-nav-border-color);
+	--custom-header-background-color: #FE7E03;
+	--custom-header-background-color--opacity-40: #{rgba(#FE7E03, 0.4)};
+	--custom-header-background-color--opacity-20: #{rgba(#FE7E03, 0.2)};
+	--custom-header-text-color: #3A3A3A;
+	--custom-header-text-color--hover: #7E0400;
 
 	z-index: $z-1;
 }

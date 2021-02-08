@@ -3,11 +3,13 @@
 }
 
 .button-theming .primary-only.wds-button {
-	@include button-theming($wds-color-dark-blue, $wds-color-white);
+	--primary-button-background-color: #{$wds-color-dark-blue};
+	--primary-button-background-color--hover: #{lighten($wds-color-dark-blue, $wds-active-color-modification-factor)};
+	--primary-button-label-color: #{$wds-color-white};
 }
 
 .button-theming .different-secondary.wds-button {
-	@include button-theming($wds-color-slate-gray, $wds-color-white, $wds-color-link);
+	//@include button-theming($wds-color-slate-gray, $wds-color-white, $wds-color-link);
 }
 
 /* Button group sections */
@@ -18,7 +20,7 @@
 	}
 
 	.white-theme .wds-button {
-		@include button-theming(white, blue);
+		//@include button-theming(white, blue);
 	}
 }
 

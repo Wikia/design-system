@@ -7,9 +7,9 @@
 }
 
 .dropdowns-theming {
-	$color-page: #0E182B;
-	$color-page-border: #3E4757;
-	$color-text: #D5D4D4;
-	$color-links: #71D1EF;
-	@include dropdown-theming($color-page, $color-text, $color-links, $color-page-border);
+	--dropdown-background-color: #0E182B;
+	--dropdown-border-color: #3E4757;
+	--dropdown-text-color: #D5D4D4;
+	--dropdown-linked-item-color: #71D1EF;
+	--dropdown-linked-item-background-color: #{rgba(#71D1EF, 0.1)};
 }

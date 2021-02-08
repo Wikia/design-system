@@ -42,7 +42,7 @@ $custom-border-color: $wds-color-faint-gray;
 	--custom-header-text-color: #{$wds-color-white};
 	--custom-header-text-color--hover: #{darken($wds-color-white, $wds-active-color-modification-factor)};
 	--custom-header-gradient: linear-gradient(to right, rgba($custom-header-background-color, .5), rgba($custom-header-background-color, .5)),
-	linear-gradient(to left, rgba($custom-header-background-color, 0) var(--custom-header-gradient-start), $custom-header-background-color var(--custom-header-gradient-end));
+		linear-gradient(to left, rgba($custom-header-background-color, 0) var(--custom-header-gradient-start), $custom-header-background-color var(--custom-header-gradient-end));
 
 	--global-navigation-background-color: #{$wds-fandom-color-navy};
 	--global-navigation-text-color: #{$custom-text-color};
