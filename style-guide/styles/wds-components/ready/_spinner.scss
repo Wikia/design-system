@@ -1,5 +1,6 @@
 .wds-spinner {
-	--fds-spinner-color: var(--fds-link-color);
+	--spinner-color: var(--wds-link-color);
+	--spinner-overlay-color: var(--wds-overlay-color);
 
 	$duration: 0.5s;
 
@@ -35,11 +36,11 @@
 	&__stroke {
 		-webkit-backface-visibility: hidden;
 		animation: dash ($duration * 2.5) linear infinite alternate-reverse;
-		stroke: var(--fds-spinner-color);
+		stroke: var(--spinner-color);
 	}
 
 	&__overlay {
-		background: var(--fds-overlay-color);
+		background: var(--spinner-overlay-color);
 		bottom: 0;
 		left: 0;
 		position: fixed;
