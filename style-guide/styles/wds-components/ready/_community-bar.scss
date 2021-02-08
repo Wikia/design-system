@@ -5,7 +5,7 @@
 
 	&__content {
 		align-items: center;
-		border-bottom: 1px solid $wds-fandom-color-mid-light-gray;
+		border-bottom: 1px solid var(--global-navigation-border-color);
 		display: flex;
 		height: $community-bar-height;
 		margin: 0 12px;
@@ -22,7 +22,7 @@
 		white-space: nowrap;
 
 		a {
-			color: $wds-fandom-color-navy;
+			color: var(--global-navigation-text-color);
 		}
 
 		@supports (-webkit-line-clamp: 2) {
@@ -35,7 +35,6 @@
 
 	&__discussions, &__navigation {
 		align-items: center;
-		color: $wds-fandom-color-dark-gray;
 		display: flex;
 		height: 44px;
 		justify-content: center;
@@ -50,8 +49,8 @@
 
 	&__navigation {
 		.wds-dropdown__toggle svg {
+			color: var(--global-navigation-link-color);
 			margin-left: $wds-button-horizontal-gap;
-			opacity: .5;
 		}
 
 		.wds-dropdown {
@@ -78,12 +77,14 @@
 				}
 
 				.wds-dropdown__toggle-chevron {
+					opacity: 0.5;
 					transform: none;
 				}
 			}
 
 			&__toggle {
 				align-items: center;
+				color: pink;
 				display: flex;
 			}
 
@@ -95,7 +96,7 @@
 
 			&.wds-is-active {
 				.wds-dropdown__toggle {
-					color: $wds-fandom-color-aqua;
+					color: var(--global-navigation-link-color);
 				}
 			}
 		}
@@ -103,8 +104,7 @@
 
 	&__navigation-back {
 		align-items: center;
-		border-bottom: 1px solid $wds-color-faint-gray;
-		color: $wds-fandom-color-dark-gray;
+		border-bottom: 1px solid var(--global-navigation-border-color);
 		display: flex;
 		font-weight: bold;
 		margin-bottom: 6px;
@@ -117,7 +117,7 @@
 	}
 
 	&__navigation-header {
-		color: $wds-fandom-color-navy;
+		color: var(--global-navigation-text-color);
 		display: block;
 		font-weight: bold;
 		margin: 0 9px;

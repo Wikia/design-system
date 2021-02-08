@@ -1,4 +1,9 @@
 .wds-community-header {
+	$wds-community-header-background-height: 105px;
+	$wds-community-header-background-height-small-breakpoint: 115px;
+	$wds-community-header-background-width: 430px;
+	$wds-community-header-background-width-small-breakpoint: 471px;
+
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	background: var(--fds-header--background-color) no-repeat right center;
@@ -72,7 +77,7 @@
 			transition: color $wds-default-transition-duration;
 
 			&:hover {
-				color: var(--fds-header--text-color--hover);
+				--fds-header--text-color: var(--fds-header--text-color--hover);
 			}
 
 			@media #{$wds-breakpoint-xl-up} {
@@ -182,7 +187,7 @@
 	}
 
 	.wds-button-group {
-		//@include button-group-theming($text-color);
+		--button-group-border-color: var(--fds-header--text-color);
 	}
 
 	.wds-tabs {

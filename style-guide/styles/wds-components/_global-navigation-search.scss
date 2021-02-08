@@ -92,7 +92,7 @@ $toggle-active-margin-right: 17px;
 
 	&-submit {
 		--primary-button-background-color: $wds-fandom-color-aqua;
-		--primary-button-background-color--hover: darken($wds-fandom-color-aqua, $active-color-modification-factor);
+		--primary-button-background-color--hover: darken($wds-fandom-color-aqua, $wds-active-color-modification-factor);
 		--primary-button-label-color: $wds-color-white;
 
 		border-radius: 3px;

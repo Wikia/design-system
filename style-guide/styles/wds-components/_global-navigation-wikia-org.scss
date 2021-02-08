@@ -119,7 +119,7 @@
 
 		.wds-button:not(.wds-is-text) {
 			--primary-button-background-color: $wds-color-light-blue;
-			--primary-button-background-color--hover: darken($wds-color-light-blue, $active-color-modification-factor);
+			--primary-button-background-color--hover: darken($wds-color-light-blue, $wds-active-color-modification-factor);
 			--primary-button-label-color: $wds-color-white;
 			--secondary-button-label-color: $wds-color-light-blue;
 			--secondary-button-label-color--hover: $wds-color-slate-gray;
@@ -159,7 +159,7 @@
 
 		&-submit {
 			--primary-button-background-color: $wds-color-slate-gray;
-			--primary-button-background-color--hover: darken($wds-color-slate-gray, $active-color-modification-factor);
+			--primary-button-background-color--hover: darken($wds-color-slate-gray, $wds-active-color-modification-factor);
 			--primary-button-label-color: $wds-color-white;
 
 			border-radius: 3px;

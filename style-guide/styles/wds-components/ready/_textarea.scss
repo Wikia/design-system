@@ -1,4 +1,9 @@
 .wds-textarea {
+	--textarea-border-color: var(--wds-border-color);
+	--textarea-text-color: var(--wds-text-color);
+	--textarea-placeholder-color: var(--wds-text-color--placeholder);
+	--textarea-hint-color: var(--wds-text-color--placeholder);
+
 	$field-bottom-padding: 6px;
 
 	margin: 30px 0 18px;
@@ -11,9 +16,9 @@
 	&__field {
 		background-color: transparent;
 		border: 0;
-		border-bottom: 1px solid $wds-color-blue-gray;
+		border-bottom: 1px solid var(--wds-border-color);
 		box-sizing: border-box;
-		color: $wds-color-dark-blue-gray;
+		color: var(--textarea-text-color);
 		font-size: $wds-font-size-base;
 		line-height: 1rem;
 		outline: 0;
@@ -22,12 +27,12 @@
 		width: 100%;
 
 		&::placeholder {
-			color: $wds-color-faint-gray;
+			color: var(--textarea-placeholder-color);
 		}
 	}
 
 	&__hint {
-		color: $wds-color-faint-gray;
+		color: var(--textarea-hint-color);
 		display: flex;
 		font-size: 12px;
 		justify-content: space-between;
@@ -36,7 +41,7 @@
 
 	&__length-hint {
 		bottom: $field-bottom-padding;
-		color: $wds-color-faint-gray;
+		color:var(--textarea-hint-color);
 		font-size: 12px;
 		position: absolute;
 		right: 0;
@@ -45,11 +50,11 @@
 	&.wds-has-error {
 		.wds-textarea {
 			&__field {
-				border-color: $wds-fandom-color-red;
+				border-color: $wds-color-alert;
 			}
 
 			&__hint {
-				color: $wds-fandom-color-red;
+				color: $wds-color-alert;
 			}
 		}
 	}

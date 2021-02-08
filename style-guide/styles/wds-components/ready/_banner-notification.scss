@@ -1,6 +1,9 @@
 .wds-banner-notification {
-	background-color: $wds-color-white;
-	color: $wds-color-light-gray;
+	--banner-notification-background-color: var(--wds-page-background-color--secondary);
+	--banner-notification-text-color: var(--wds-text-color);
+
+	background-color: var(--banner-notification-background-color);
+	color: var(--banner-notification-text-color);
 	display: flex;
 	transition: opacity 0.4s;
 
@@ -37,7 +40,6 @@
 	}
 
 	&__text {
-		color: $wds-color-medium-gray;
 		flex: 1;
 		font-size: $wds-font-size-s;
 		line-height: 1.29;
