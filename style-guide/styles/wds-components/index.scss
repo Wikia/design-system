@@ -37,8 +37,8 @@
 // Components using other components have to be at the end of file. We need atomic components defined to use them.
 @import 'ready/community-bar';
 //@import 'community-header';
-@import 'global-footer';
-@import 'global-footer-wikia-org';
+@import 'ready/global-footer';
+@import 'ready/global-footer-wikia-org';
 @import 'ready/global-navigation';
 @import 'global-navigation-content-recommendations';
 @import 'global-navigation-user-modal';
