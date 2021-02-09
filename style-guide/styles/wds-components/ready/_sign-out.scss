@@ -1,7 +1,7 @@
 .wds-sign-out {
 	&__button {
-		--wds-sign-out-button-background-color--hover: var(--custom-link-color--opacity-10);
-		--wds-sign-out-button-label-color--hover: var(--custom-link-color);
+		--wds-sign-out-button-background-color--hover: var(--theme-link-color--opacity-10);
+		--wds-sign-out-button-label-color--hover: var(--theme-link-color);
 
 		background: transparent;
 		border: none;

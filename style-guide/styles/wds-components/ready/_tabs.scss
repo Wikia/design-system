@@ -1,6 +1,6 @@
 .wds-tabs {
-	--tab-color: var(--custom-text-color);
-	--tab-color--active: var(--custom-link-color);
+	--tab-color: var(--theme-text-color);
+	--tab-color--active: var(--theme-link-color);
 
 	align-items: flex-end;
 	display: flex;

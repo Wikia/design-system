@@ -8,10 +8,10 @@
 	}
 
 	&__label {
-		--wds-toggle-background-color: var(--custom-page-text-mix-50);
-		--wds-toggle-switch-color: var(--custom-page-background-color);
-		--wds-toggle-background-color--checked: var(--custom-page-button-mix-50);
-		--wds-toggle-switch-color--checked: var(--custom-button-background-color);
+		--wds-toggle-background-color: var(--theme-page-text-mix-50);
+		--wds-toggle-switch-color: var(--theme-page-background-color);
+		--wds-toggle-background-color--checked: var(--theme-page-button-mix-50);
+		--wds-toggle-switch-color--checked: var(--theme-button-background-color);
 
 		cursor: pointer;
 		font-size: $wds-font-size-base;

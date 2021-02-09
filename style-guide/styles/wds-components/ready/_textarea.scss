@@ -1,8 +1,8 @@
 .wds-textarea {
-	--wds-textarea-border-color: var(--custom-border-color);
-	--wds-textarea-text-color: var(--custom-text-color);
-	--wds-textarea-placeholder-color: var(--custom-text-color--placeholder);
-	--textarea-hint-color: var(--custom-text-color--placeholder);
+	--wds-textarea-border-color: var(--theme-border-color);
+	--wds-textarea-text-color: var(--theme-text-color);
+	--wds-textarea-placeholder-color: var(--theme-text-color--placeholder);
+	--textarea-hint-color: var(--theme-text-color--placeholder);
 
 	$field-bottom-padding: 6px;
 
@@ -16,7 +16,7 @@
 	&__field {
 		background-color: transparent;
 		border: 0;
-		border-bottom: 1px solid var(--custom-border-color);
+		border-bottom: 1px solid var(--theme-border-color);
 		box-sizing: border-box;
 		color: var(--textarea-text-color);
 		font-size: $wds-font-size-base;

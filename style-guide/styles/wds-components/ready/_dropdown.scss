@@ -1,13 +1,13 @@
 .wds-dropdown {
 	$content-z-index: 1;
 
-	--dropdown-background-color: var(--custom-page-background-color--secondary);
-	--dropdown-border-color: var(--custom-border-color);
-	--dropdown-text-color: var(--custom-text-color);
-	--dropdown-linked-item-color: var(--custom-link-color);
-	--dropdown-linked-item-background-color: var(--custom-link-color--opacity-10);
-	--dropdown-scrollable-shadow-gradient: radial-gradient(farthest-side at 50% 0, var(--custom-text-color--opacity-10), transparent),
-		radial-gradient(farthest-side at 50% 100%, var(--custom-text-color--opacity-10), transparent);
+	--dropdown-background-color: var(--theme-page-background-color--secondary);
+	--dropdown-border-color: var(--theme-border-color);
+	--dropdown-text-color: var(--theme-text-color);
+	--dropdown-linked-item-color: var(--theme-link-color);
+	--dropdown-linked-item-background-color: var(--theme-link-color--opacity-10);
+	--dropdown-scrollable-shadow-gradient: radial-gradient(farthest-side at 50% 0, var(--theme-text-color--opacity-10), transparent),
+		radial-gradient(farthest-side at 50% 100%, var(--theme-text-color--opacity-10), transparent);
 
 	display: inline-block;
 	position: relative;

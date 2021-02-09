@@ -1,9 +1,9 @@
 .wds-link {
-	color: var(--custom-link-color);
+	color: var(--theme-link-color);
 
 	transition: color $wds-button-transition-duration;
 
 	&:hover, &:focus, &:active {
-		color: var(--custom-link-color--hover);
+		color: var(--theme-link-color--hover);
 	}
 }

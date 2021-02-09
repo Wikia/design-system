@@ -3,9 +3,9 @@
 .wds-avatar {
 	@include wds-avatar();
 
-	--wds-avatar-border-color: var(--custom-border-color);
-	--wds-avatar-border-color--hover: var(--custom-link-color);
-	--wds-avatar-background-color: var(--custom-page-background-color);
+	--wds-avatar-border-color: var(--theme-border-color);
+	--wds-avatar-border-color--hover: var(--theme-link-color);
+	--wds-avatar-background-color: var(--theme-page-background-color);
 
 	display: inline-block;
 	position: relative;

@@ -1,0 +1,47 @@
+$theme-header-background-color: $wds-fandom-color-navy;
+$theme-page-background-color: $wds-color-white;
+$theme-text-color: $wds-fandom-color-text-dark;
+$theme-link-color: $wds-fandom-color-link;
+$theme-button-color: $wds-fandom-color-button-background;
+$theme-border-color: $wds-color-faint-gray;
+
+:root {
+	--theme-page-background-color: #{$theme-page-background-color};
+	--theme-page-background-color--secondary: #{$theme-page-background-color};
+
+	--theme-text-color: #{$theme-text-color};
+	--theme-text-color--hover: #{lighten($theme-text-color, $wds-active-color-modification-factor)};
+	--theme-text-color--opacity-5: #{rgba($theme-text-color, 0.05)};
+	--theme-text-color--opacity-10: #{rgba($theme-text-color, 0.1)};
+	--theme-text-color--opacity-50: #{rgba($theme-text-color, 0.5)};
+	--theme-text-color--placeholder: #{$wds-color-faint-gray};
+
+	--theme-link-color: #{$theme-link-color};
+	--theme-link-color--hover: #{lighten($theme-link-color, $wds-active-color-modification-factor)};
+	--theme-link-color--opacity-10: #{rgba($theme-link-color, 0.1)};
+	--theme-link-color--opacity-15: #{rgba($theme-link-color, 0.15)};
+
+	--theme-border-color: #{$theme-border-color};
+
+	--theme-button-background-color: #{$theme-button-color};
+	--theme-button-background-color--opacity-15: #{rgba($theme-button-color, 0.15)};
+	--theme-button-background-color--hover: #{darken($theme-button-color, $wds-active-color-modification-factor)};
+	--theme-button-label-color: #{$wds-color-white};
+
+	--theme-overlay-color: #{rgba($theme-text-color, 0.5)};
+
+	--theme-page-text-mix-50: #{mix($theme-page-background-color, $theme-text-color, 50%)};
+	--theme-page-button-mix-50: #{mix($theme-page-background-color, $theme-button-color, 50%)};
+
+	--theme-header-background-color: #{$theme-header-background-color};
+	--theme-header-background-color--opacity-50: #{rgba($theme-header-background-color, 0.5)};
+	--theme-header-background-color--opacity-40: #{rgba($theme-header-background-color, 0.4)};
+	--theme-header-background-color--opacity-20: #{rgba($theme-header-background-color, 0.2)};
+	--theme-header-text-color: #{$wds-color-white};
+	--theme-header-text-color--hover: #{darken($wds-color-white, $wds-active-color-modification-factor)};
+
+	--global-navigation-background-color: #{$wds-fandom-color-navy};
+	--global-navigation-link-color: #{$wds-fandom-color-aqua};
+	--global-navigation-text-color: #{$wds-color-white};
+	--global-navigation-border-color: #{$theme-border-color};
+}

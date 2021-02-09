@@ -1,10 +1,10 @@
 .wds-pill {
-	--wds-pill-background-color: var(--custom-text-color--opacity-5);
-	--wds-pill-border-color: var(--custom-border-color);
-	--wds-pill-label-color: var(--custom-text-color);
-	--wds-pill-background-color--active: var(--custom-button-background-color--opacity-15);
-	--wds-pill-border-color--active: var(--custom-button-background-color);
-	--wds-pill-label-color--active: var(--custom-text-color);
+	--wds-pill-background-color: var(--theme-text-color--opacity-5);
+	--wds-pill-border-color: var(--theme-border-color);
+	--wds-pill-label-color: var(--theme-text-color);
+	--wds-pill-background-color--active: var(--theme-button-background-color--opacity-15);
+	--wds-pill-border-color--active: var(--theme-button-background-color);
+	--wds-pill-label-color--active: var(--theme-text-color);
 
 
 	background-color: var(--wds-pill-background-color);

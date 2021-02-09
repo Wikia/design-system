@@ -1,6 +1,6 @@
 .wds-dialog {
 	&__curtain {
-		--wds-dialog-overlay-color: var(--custom-overlay-color);
+		--wds-dialog-overlay-color: var(--theme-overlay-color);
 
 		background-color: var(--wds-dialog-overlay-color);
 		animation: fade-in .2s;
@@ -15,8 +15,8 @@
 	}
 
 	&__wrapper {
-		--wds-dialog-background-color: var(--custom-page-background-color--secondary);
-		--wds-dialog-border-color: var(--custom-border-color);
+		--wds-dialog-background-color: var(--theme-page-background-color--secondary);
+		--wds-dialog-border-color: var(--theme-border-color);
 
 		align-self: center;
 		animation: move-in .2s;

@@ -1,11 +1,11 @@
 .wds-button {
-	--wds-primary-button-background-color: var(--custom-button-background-color);
-	--wds-primary-button-background-color--hover: var(--custom-button-background-color--hover);
-	--wds-primary-button-label-color: var(--custom-button-label-color);
-	--wds-secondary-button-label-color: var(--custom-text-color);
-	--wds-secondary-button-label-color--hover: var(--custom-text-color--hover);
-	--wds-text-button-label-color: var(--custom-text-color);
-	--wds-text-button-label-color--hover: var(--custom-text-color--hover);
+	--wds-primary-button-background-color: var(--theme-button-background-color);
+	--wds-primary-button-background-color--hover: var(--theme-button-background-color--hover);
+	--wds-primary-button-label-color: var(--theme-button-label-color);
+	--wds-secondary-button-label-color: var(--theme-text-color);
+	--wds-secondary-button-label-color--hover: var(--theme-text-color--hover);
+	--wds-text-button-label-color: var(--theme-text-color);
+	--wds-text-button-label-color--hover: var(--theme-text-color--hover);
 
 	align-items: center;
 	-webkit-appearance: none;

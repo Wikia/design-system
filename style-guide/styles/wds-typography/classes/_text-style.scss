@@ -23,7 +23,7 @@
 }
 
 .wds-midlight {
-	--wds-midlight--color: var(--custom-button-background-color--opacity-15);
+	--wds-midlight--color: var(--theme-button-background-color--opacity-15);
 
 	background-image: linear-gradient(to top, var(--wds-midlight--color) 54%, transparent 54%, transparent 100%);
 	box-decoration-break: clone;

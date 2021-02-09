@@ -6,7 +6,7 @@
 
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	background: var(--custom-header-background-color) no-repeat right center;
+	background: var(--theme-header-background-color) no-repeat right center;
 	background-size: contain;
 	height: $wds-community-header-background-height;
 	position: relative;
@@ -17,11 +17,11 @@
 	}
 
 	&::before {
-		--custom-header-gradient-start: 200px;
-		--custom-header-gradient-end: #{$wds-community-header-background-width};
+		--theme-header-gradient-start: 200px;
+		--theme-header-gradient-end: #{$wds-community-header-background-width};
 
-		background: linear-gradient(to right, var(--custom-header-background-color--opacity-50), var(--custom-header-background-color--opacity-50)),
-			linear-gradient(to left, transparent var(--custom-header-gradient-start), var(--custom-header-background-color) var(--custom-header-gradient-end));
+		background: linear-gradient(to right, var(--theme-header-background-color--opacity-50), var(--theme-header-background-color--opacity-50)),
+			linear-gradient(to left, transparent var(--theme-header-gradient-start), var(--theme-header-background-color) var(--theme-header-gradient-end));
 		content: '';
 		display: block;
 		height: 100%;
@@ -30,7 +30,7 @@
 		z-index: -1;
 
 		@media #{$wds-breakpoint-l-down} {
-			--custom-header-gradient-end: #{$wds-community-header-background-width-small-breakpoint};
+			--theme-header-gradient-end: #{$wds-community-header-background-width-small-breakpoint};
 		}
 	}
 
@@ -73,12 +73,12 @@
 		overflow: hidden;
 
 		a {
-			color: var(--custom-header-text-color);
+			color: var(--theme-header-text-color);
 			text-decoration: none;
 			transition: color $wds-default-transition-duration;
 
 			&:hover {
-				color: var(--custom-header-text-color--hover);
+				color: var(--theme-header-text-color--hover);
 			}
 
 			@media #{$wds-breakpoint-xl-up} {
@@ -105,7 +105,7 @@
 	}
 
 	&__counter {
-		color: var(--custom-header-text-color);
+		color: var(--theme-header-text-color);
 		font-weight: 600;
 		text-align: right;
 		margin: 17px 0 20px 20px;
@@ -176,27 +176,27 @@
 	}
 
 	.wds-button.wds-is-secondary {
-		--wds-secondary-button--label: var(--custom-header-text-color);
-		--wds-secondary-button--label--hover: var(--custom-header-text-color--hover);
+		--wds-secondary-button--label: var(--theme-header-text-color);
+		--wds-secondary-button--label--hover: var(--theme-header-text-color--hover);
 
-		background-color: var(--custom-header-background-color--opacity-20);
+		background-color: var(--theme-header-background-color--opacity-20);
 		transition-property: border-color, background-color, color;
 
 		&:hover {
-			background-color: var(--custom-header-background-color--opacity-40);
+			background-color: var(--theme-header-background-color--opacity-40);
 		}
 	}
 
 	.wds-button-group {
-		--button-group-border-color: var(--custom-header-text-color);
+		--button-group-border-color: var(--theme-header-text-color);
 	}
 
 	.wds-tabs {
-		--tab-color: var(--custom-header-text-color);
-		--tab-color--active: var(--custom-header-text-color--hover);
+		--tab-color: var(--theme-header-text-color);
+		--tab-color--active: var(--theme-header-text-color--hover);
 	}
 
 	.wds-avatar-stack .user-avatar .avatar .user-avatar__image {
-		border-color: var(--custom-header-text-color);
+		border-color: var(--theme-header-text-color);
 	}
 }
