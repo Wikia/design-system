@@ -73,12 +73,12 @@
 		overflow: hidden;
 
 		a {
-			color: var(--wds-header--text-color);
+			color: var(--custom-header-text-color);
 			text-decoration: none;
 			transition: color $wds-default-transition-duration;
 
 			&:hover {
-				color: var(--wds-header--text-color--hover);
+				color: var(--custom-header-text-color--hover);
 			}
 
 			@media #{$wds-breakpoint-xl-up} {
@@ -105,7 +105,7 @@
 	}
 
 	&__counter {
-		color: var(--wds-header--text-color);
+		color: var(--custom-header-text-color);
 		font-weight: 600;
 		text-align: right;
 		margin: 17px 0 20px 20px;
@@ -176,27 +176,27 @@
 	}
 
 	.wds-button.wds-is-secondary {
-		--secondary-button--label: var(--wds-header--text-color);
-		--secondary-button--label--hover: var(--wds-header--text-color--hover);
+		--secondary-button--label: var(--custom-header-text-color);
+		--secondary-button--label--hover: var(--custom-header-text-color--hover);
 
-		background-color: var(--wds-header--background-color--opacity-20);
+		background-color: var(--custom-header-background-color--opacity-20);
 		transition-property: border-color, background-color, color;
 
 		&:hover {
-			background-color: var(--wds-header--background-color--opacity-40);
+			background-color: var(--custom-header-background-color--opacity-40);
 		}
 	}
 
 	.wds-button-group {
-		--button-group-border-color: var(--wds-header--text-color);
+		--button-group-border-color: var(--custom-header-text-color);
 	}
 
 	.wds-tabs {
-		--tab-color: var(--wds-header--text-color);
-		--tab-color--active: var(--wds-header--text-color--hover);
+		--tab-color: var(--custom-header-text-color);
+		--tab-color--active: var(--custom-header-text-color--hover);
 	}
 
 	.wds-avatar-stack .user-avatar .avatar .user-avatar__image {
-		border-color: var(--wds-header--text-color);
+		border-color: var(--custom-header-text-color);
 	}
 }

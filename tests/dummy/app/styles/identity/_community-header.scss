@@ -19,6 +19,7 @@
 
 .wds-community-header {
 	--custom-header-background-color: #006CB0;
+	--custom-header-background-color--opacity-50: #{rgba(#006CB0, 0.5)};
 	--custom-header-background-color--opacity-40: #{rgba(#006CB0, 0.4)};
 	--custom-header-background-color--opacity-20: #{rgba(#006CB0, 0.2)};
 	--custom-header-text-color: #3A3A3A;
@@ -29,6 +30,7 @@
 
 .color-5F1023.wds-community-header {
 	--custom-header-background-color: #000;
+	--custom-header-background-color--opacity-50: #{rgba(#000, 0.5)};
 	--custom-header-background-color--opacity-40: #{rgba(#000, 0.4)};
 	--custom-header-background-color--opacity-20: #{rgba(#000, 0.2)};
 	--custom-header-text-color: #D5D4D4;
@@ -43,6 +45,7 @@
 
 .color-787878.wds-community-header {
 	--custom-header-background-color: #2193D7;
+	--custom-header-background-color--opacity-50: #{rgba(#2193D7, 0.5)};
 	--custom-header-background-color--opacity-40: #{rgba(#2193D7, 0.4)};
 	--custom-header-background-color--opacity-20: #{rgba(#2193D7, 0.2)};
 	--custom-header-text-color: #D5D4D4;
@@ -57,6 +60,7 @@
 
 .color-FB7383.wds-community-header {
 	--custom-header-background-color: #FE7E03;
+	--custom-header-background-color--opacity-50: #{rgba(#FE7E03, 0.5)};
 	--custom-header-background-color--opacity-40: #{rgba(#FE7E03, 0.4)};
 	--custom-header-background-color--opacity-20: #{rgba(#FE7E03, 0.2)};
 	--custom-header-text-color: #3A3A3A;
