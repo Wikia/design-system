@@ -2,7 +2,7 @@ $toggle-active-margin-right: 17px;
 
 .wds-global-navigation__search {
 	align-items: center;
-	color: $wds-fandom-color-aqua;
+	color: var(--global-navigation-link-color);
 	display: flex;
 	height: 100%;
 	justify-content: flex-end;
@@ -39,12 +39,9 @@ $toggle-active-margin-right: 17px;
 	}
 
 	&-clear {
+		color: var(--global-navigation-text-color);
 		padding: 2px;
 		transform: rotate(45deg);
-
-		svg {
-			fill: $wds-color-white;
-		}
 
 		@media #{$wds-breakpoint-medium-up} {
 			display: none;
@@ -56,7 +53,7 @@ $toggle-active-margin-right: 17px;
 		background: transparent;
 		border: 0;
 		box-sizing: border-box;
-		color: $wds-color-white;
+		color: var(--global-navigation-text-color);
 		//display: none;
 		// Safari doesn't set default flex values if we use `flex: 1;`
 		// it requires us to put these values explicitly.
@@ -78,7 +75,7 @@ $toggle-active-margin-right: 17px;
 		}
 
 		&::placeholder {
-			color: $wds-color-white;
+			color: var(--global-navigation-text-color);
 		}
 
 		&::-ms-clear {
@@ -91,10 +88,6 @@ $toggle-active-margin-right: 17px;
 	}
 
 	&-submit {
-		--wds-primary-button-background-color: $wds-fandom-color-aqua;
-		--wds-primary-button-background-color--hover: darken($wds-fandom-color-aqua, $wds-active-color-modification-factor);
-		--wds-primary-button-label-color: $wds-color-white;
-
 		border-radius: 3px;
 		display: none;
 		padding: 4px 10px;
@@ -110,11 +103,11 @@ $toggle-active-margin-right: 17px;
 
 		&.wds-button.wds-is-text {
 			transition: color, $wds-button-transition-duration;
-			color: $wds-color-white;
+			color: var(--global-navigation-text-color);
 
 			&:hover {
 				background-color: transparent;
-				color: darken($wds-color-white, 15%);
+				color: var(--global-navigation-border-color);
 			}
 		}
 	}
@@ -173,7 +166,7 @@ $toggle-active-margin-right: 17px;
 		transition: color $wds-button-transition-duration;
 
 		&:hover {
-			color: $wds-color-white;
+			color: var(--global-navigation-text-color);
 		}
 
 		&-icon {
@@ -213,7 +206,7 @@ $toggle-active-margin-right: 17px;
 			}
 
 			&-input-wrapper {
-				border-bottom: 2px solid $wds-fandom-color-aqua;
+				border-bottom: 2px solid var(--global-navigation-link-color);
 				width: 100%;
 			}
 

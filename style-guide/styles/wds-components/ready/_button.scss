@@ -1,19 +1,19 @@
 .wds-button {
-	--primary-button-background-color: var(--custom-button-background-color);
-	--primary-button-background-color--hover: var(--custom-button-background-color--hover);
-	--primary-button-label-color: var(--custom-button-label-color);
-	--secondary-button-label-color: var(--custom-text-color);
-	--secondary-button-label-color--hover: var(--custom-text-color--hover);
-	--text-button-label-color: var(--custom-text-color);
-	--text-button-label-color--hover: var(--custom-text-color--hover);
+	--wds-primary-button-background-color: var(--custom-button-background-color);
+	--wds-primary-button-background-color--hover: var(--custom-button-background-color--hover);
+	--wds-primary-button-label-color: var(--custom-button-label-color);
+	--wds-secondary-button-label-color: var(--custom-text-color);
+	--wds-secondary-button-label-color--hover: var(--custom-text-color--hover);
+	--wds-text-button-label-color: var(--custom-text-color);
+	--wds-text-button-label-color--hover: var(--custom-text-color--hover);
 
 	align-items: center;
 	-webkit-appearance: none;
-	background-color: var(--primary-button-background-color);
-	border: 1px solid var(--primary-button-background-color);
+	background-color: var(--wds-primary-button-background-color);
+	border: 1px solid var(--wds-primary-button-background-color);
 	border-radius: $wds-rounded-corner-radius;
 	box-sizing: content-box;
-	color: var(--primary-button-label-color);
+	color: var(--wds-primary-button-label-color);
 	cursor: default;
 	display: inline-flex;
 	font-size: $wds-font-size-xs;
@@ -40,10 +40,10 @@
 	&:hover,
 	&:active,
 	&.wds-is-active {
-		background-color: var(--primary-button-background-color--hover);
-		border: 1px solid var(--primary-button-background-color--hover);
+		background-color: var(--wds-primary-button-background-color--hover);
+		border: 1px solid var(--wds-primary-button-background-color--hover);
 
-		color: var(--primary-button-label-color);
+		color: var(--wds-primary-button-label-color);
 		text-decoration: none;
 	}
 
@@ -70,14 +70,14 @@
 		&, &:disabled {
 			background: none;
 			border-color: currentColor;
-			color: var(--secondary-button-label-color);
+			color: var(--wds-secondary-button-label-color);
 		}
 
 		&:focus-visible,
 		&:hover,
 		&:active,
 		&.wds-is-active {
-			color: var(--secondary-button-label-color--hover);
+			color: var(--wds-secondary-button-label-color--hover);
 		}
 	}
 
@@ -85,14 +85,14 @@
 		&, &:disabled {
 			background: none;
 			border: 0;
-			color: var(--text-button-label-color);
+			color: var(--wds-text-button-label-color);
 		}
 
 		&:focus-visible,
 		&:hover,
 		&:active,
 		&.wds-is-active {
-			color: var(--text-button-label-color--hover);
+			color: var(--wds-text-button-label-color--hover);
 		}
 	}
 

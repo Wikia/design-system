@@ -176,8 +176,8 @@
 	}
 
 	.wds-button.wds-is-secondary {
-		--secondary-button--label: var(--custom-header-text-color);
-		--secondary-button--label--hover: var(--custom-header-text-color--hover);
+		--wds-secondary-button--label: var(--custom-header-text-color);
+		--wds-secondary-button--label--hover: var(--custom-header-text-color--hover);
 
 		background-color: var(--custom-header-background-color--opacity-20);
 		transition-property: border-color, background-color, color;
