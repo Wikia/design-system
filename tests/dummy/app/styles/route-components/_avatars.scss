@@ -4,48 +4,48 @@
 
 #avatar-24 {
 	.wds-avatar {
-		@include wds-avatar(24px);
+		@include wds-avatar-size(24px);
 	}
 }
 
 #avatar-30 {
 	.wds-avatar {
-		@include wds-avatar(30px);
+		@include wds-avatar-size(30px);
 	}
 }
 
 #avatar-36 {
 	.wds-avatar {
-		@include wds-avatar(36px);
+		@include wds-avatar-size(36px);
 	}
 }
 
 #avatar-42 {
 	.wds-avatar {
-		@include wds-avatar(42px);
+		@include wds-avatar-size(42px);
 	}
 }
 
 #avatar-48 {
 	.wds-avatar {
-		@include wds-avatar(48px);
+		@include wds-avatar-size(48px);
 	}
 }
 
 #avatar-60 {
 	.wds-avatar {
-		@include wds-avatar(60px);
+		@include wds-avatar-size(60px);
 	}
 }
 
 #avatar-100 {
 	.wds-avatar {
-		@include wds-avatar(100px);
+		@include wds-avatar-size(100px);
 	}
 }
 
 #avatar-150 {
 	.wds-avatar {
-		@include wds-avatar(150px);
+		@include wds-avatar-size(150px);
 	}
 }

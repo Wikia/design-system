@@ -1,6 +1,13 @@
+@mixin wds-tabs-theming($tab-color, $tab-color--active) {
+	--tab-color: #{$tab-color};
+	--tab-color--active: #{$tab-color--active};
+}
+
 .wds-tabs {
-	--tab-color: var(--theme-text-color);
-	--tab-color--active: var(--theme-link-color);
+	@include wds-tabs-theming(
+		var(--theme-text-color),
+		var(--theme-link-color)
+	);
 
 	align-items: flex-end;
 	display: flex;

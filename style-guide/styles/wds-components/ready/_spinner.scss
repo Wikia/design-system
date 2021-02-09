@@ -1,6 +1,13 @@
+@mixin wds-spinner-theming($spinner-color, $overlay-color) {
+	--wds-spinner-color: #{$spinner-color};
+	--wds-spinner-overlay-color: #{$overlay-color};
+}
+
 .wds-spinner {
-	--wds-spinner-color: var(--theme-link-color);
-	--wds-spinner-overlay-color: var(--theme-overlay-color);
+	@include wds-spinner-theming(
+		var(--theme-link-color),
+		var(--theme-overlay-color)
+	);
 
 	$duration: 0.5s;
 

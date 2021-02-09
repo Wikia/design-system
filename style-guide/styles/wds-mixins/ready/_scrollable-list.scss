@@ -1,8 +1,8 @@
-@mixin scrollable-list() {
-	--wds-scrollable-list-max-height: #{$wds-dropdown-height};
-	--wds-scrollable-list-background-color: var(--theme-page-background-color--secondary);
-	--wds-scrollable-list-shadow: radial-gradient(farthest-side at 50% 0, var(--theme-text-color--opacity-10), transparent),
-		radial-gradient(farthest-side at 50% 100%, var(--theme-text-color--opacity-10), transparent);
+@mixin scrollable-list($max-height, $bg-color, $shadow-color) {
+	--wds-scrollable-list-max-height: #{$max-height};
+	--wds-scrollable-list-background-color: #{$bg-color};
+	--wds-scrollable-list-shadow: radial-gradient(farthest-side at 50% 0, #{$shadow-color}, transparent),
+		radial-gradient(farthest-side at 50% 100%, #{$shadow-color}, transparent);
 
 	background: {
 		image: var(--wds-scrollable-list-shadow);

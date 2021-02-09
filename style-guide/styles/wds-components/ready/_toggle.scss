@@ -1,4 +1,20 @@
+@mixin wds-toggle-theming($bg-color, $switch-color, $bg-color--checked, $switch-color--checked) {
+	&__label {
+		--wds-toggle-background-color: #{$bg-color};
+		--wds-toggle-switch-color: #{$switch-color};
+		--wds-toggle-background-color--checked: #{$bg-color--checked};
+		--wds-toggle-switch-color--checked: #{$switch-color--checked};
+	}
+}
+
 .wds-toggle {
+	@include wds-toggle-theming(
+		var(--theme-page-text-mix-50),
+		var(--theme-page-background-color),
+		var(--theme-page-button-mix-50),
+		var(--theme-button-background-color)
+	);
+
 	&__input {
 		display: none;
 
@@ -8,11 +24,6 @@
 	}
 
 	&__label {
-		--wds-toggle-background-color: var(--theme-page-text-mix-50);
-		--wds-toggle-switch-color: var(--theme-page-background-color);
-		--wds-toggle-background-color--checked: var(--theme-page-button-mix-50);
-		--wds-toggle-switch-color--checked: var(--theme-button-background-color);
-
 		cursor: pointer;
 		font-size: $wds-font-size-base;
 		padding: 7px 5px 7px 52px;

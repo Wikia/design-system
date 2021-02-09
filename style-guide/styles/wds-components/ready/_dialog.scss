@@ -1,7 +1,22 @@
-.wds-dialog {
+@mixin wds-dialog-theming($bg-color, $border-color, $overlay-color) {
 	&__curtain {
-		--wds-dialog-overlay-color: var(--theme-overlay-color);
+		--wds-dialog-overlay-color: #{$overlay-color};
+	}
 
+	&__wrapper {
+		--wds-dialog-background-color: #{$bg-color};
+		--wds-dialog-border-color: #{$border-color};
+	}
+}
+
+.wds-dialog {
+	@include wds-dialog-theming(
+		var(--theme-page-background-color--secondary),
+		var(--theme-border-color),
+		var(--theme-overlay-color)
+	);
+
+	&__curtain {
 		background-color: var(--wds-dialog-overlay-color);
 		animation: fade-in .2s;
 		bottom: 0;
@@ -15,9 +30,6 @@
 	}
 
 	&__wrapper {
-		--wds-dialog-background-color: var(--theme-page-background-color--secondary);
-		--wds-dialog-border-color: var(--theme-border-color);
-
 		align-self: center;
 		animation: move-in .2s;
 		border-radius: $wds-rounded-corner-radius;

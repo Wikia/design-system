@@ -176,8 +176,10 @@
 	}
 
 	.wds-button.wds-is-secondary {
-		--wds-secondary-button--label: var(--theme-header-text-color);
-		--wds-secondary-button--label--hover: var(--theme-header-text-color--hover);
+		@include wds-secondary-button-theming(
+			var(--theme-header-text-color),
+			var(--theme-header-text-color--hover)
+		);
 
 		background-color: var(--theme-header-background-color--opacity-20);
 		transition-property: border-color, background-color, color;
@@ -185,10 +187,6 @@
 		&:hover {
 			background-color: var(--theme-header-background-color--opacity-40);
 		}
-	}
-
-	.wds-button-group {
-		--button-group-border-color: var(--theme-header-text-color);
 	}
 
 	.wds-tabs {

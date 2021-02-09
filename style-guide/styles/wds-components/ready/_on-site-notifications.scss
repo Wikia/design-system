@@ -158,7 +158,12 @@
 
 	.wds-global-navigation & {
 		.wds-avatar {
-			@include wds-avatar(30px, $wds-fandom-color-middle-gray, $wds-fandom-color-middle-gray, $wds-color-white);
+			@include wds-avatar-size($wds-default-avatar-size);
+			@include wds-avatar-theming(
+				$wds-fandom-color-middle-gray,
+				$wds-fandom-color-middle-gray,
+				$wds-color-white
+			);
 		}
 	}
 }

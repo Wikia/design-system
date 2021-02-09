@@ -1,6 +1,4 @@
 .wds-button-group {
-	--wds-button-group-border-color: var(--theme-page-background-color);
-
 	align-items: stretch;
 	display: inline-flex;
 	justify-content: flex-start;
@@ -9,7 +7,7 @@
 		border-radius: 0;
 		height: auto;
 		margin-left: auto;
-		margin-right: -1px;
+		margin-right: 1px;
 		padding: 7px 12px;
 
 		&:first-child {
@@ -27,11 +25,11 @@
 
 		&:not(.wds-is-secondary) {
 			&:not(:last-child) {
-				border-right: 1px solid var(--wds-button-group-border-color);
+				border-right: 0;
 			}
 
 			&:not(:first-child) {
-				border-left: 1px solid var(--button-group-border-color);
+				border-left: 0;
 			}
 		}
 	}
@@ -46,11 +44,11 @@
 		}
 
 		&:not(:last-child) .wds-button {
-			border-right: 1px solid var(--button-group-border-color);
+			border-right: 0;
 		}
 
 		&:not(:first-child) .wds-button {
-			border-left: 1px solid var(--button-group-border-color);
+			border-left: 0;
 		}
 	}
 }

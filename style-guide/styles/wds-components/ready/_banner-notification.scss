@@ -1,6 +1,13 @@
+@mixin wds-banner-notification-theming($bg-color, $text-color) {
+	--wds-banner-notification-background-color: #{$bg-color};
+	--wds-banner-notification-text-color: #{$text-color};
+}
+
 .wds-banner-notification {
-	--wds-banner-notification-background-color: var(--theme-page-background-color--secondary);
-	--wds-banner-notification-text-color: var(--theme-text-color);
+	@include wds-banner-notification-theming(
+		var(--theme-page-background-color--secondary),
+		var(--theme-text-color)
+	);
 
 	background-color: var(--wds-banner-notification-background-color);
 	color: var(--wds-banner-notification-text-color);

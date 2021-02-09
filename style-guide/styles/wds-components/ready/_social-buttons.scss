@@ -19,9 +19,11 @@
 
 	@each $social-name, $social-color in $social-colors {
 		&.wds-is-#{$social-name}-color {
-			--wds-primary-button-background-color: #{$social-color};
-			--wds-primary-button-background-color--hover: #{lighten($social-color, $wds-active-color-modification-factor)};
-			--wds-primary-button-label-color: #{$wds-color-white};
+			@include wds-primary-button-theming(
+				#{$social-color},
+				#{lighten($social-color, $wds-active-color-modification-factor)},
+				#{$wds-color-white}
+			);
 		}
 	}
 }

@@ -1,11 +1,21 @@
-.wds-pill {
-	--wds-pill-background-color: var(--theme-text-color--opacity-5);
-	--wds-pill-border-color: var(--theme-border-color);
-	--wds-pill-label-color: var(--theme-text-color);
-	--wds-pill-background-color--active: var(--theme-button-background-color--opacity-15);
-	--wds-pill-border-color--active: var(--theme-button-background-color);
-	--wds-pill-label-color--active: var(--theme-text-color);
+@mixin wds-pill-theming($bg-color, $border-color, $text-color, $bg-color--active, $border-color--active, $text-color--active) {
+	--wds-pill-background-color: #{$bg-color};
+	--wds-pill-border-color: #{$border-color};
+	--wds-pill-label-color: #{$text-color};
+	--wds-pill-background-color--active: #{$bg-color--active};
+	--wds-pill-border-color--active: #{$border-color--active};
+	--wds-pill-label-color--active: #{$text-color--active};
+}
 
+.wds-pill {
+	@include wds-pill-theming(
+		var(--theme-text-color--opacity-5),
+		var(--theme-border-color),
+		var(--theme-text-color),
+		var(--theme-button-background-color--opacity-15),
+		var(--theme-button-background-color),
+		var(--theme-text-color)
+	);
 
 	background-color: var(--wds-pill-background-color);
 	border: 1px solid var(--wds-pill-border-color);
@@ -32,13 +42,13 @@
 	}
 
 	&.wds-is-active {
-		background-color: var(--pill-background-color--active);
-		border-color: var(--pill-border-color--active);
+		background-color: var(--wds-pill-background-color--active);
+		border-color: var(--wds-pill-border-color--active);
 		cursor: default;
 		font-weight: $wds-font-weight-bold;
 
 		&__label {
-			color: var(--pill-label-color--active);
+			color: var(--wds-pill-label-color--active);
 		}
 	}
 

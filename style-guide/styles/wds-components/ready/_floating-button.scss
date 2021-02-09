@@ -1,5 +1,9 @@
+@mixin wds-floating-button-mixin($bg-color) {
+	--wds-floating-button-background-color: #{$bg-color};
+}
+
 .wds-floating-button {
-	--wds-floating-button-background-color: var(--theme-page-background-color--secondary);
+	@include wds-floating-button-mixin(var(--theme-page-background-color--secondary));
 
 	align-items: center;
 	background: var(--wds-floating-button-background-color);

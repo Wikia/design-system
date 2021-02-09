@@ -204,7 +204,10 @@
 		}
 
 		.wds-button.wds-is-secondary:not(:disabled) {
-			@include button-theming($wds-fandom-color-mid-light-gray, $wds-fandom-color-mid-light-gray);
+			@include wds-secondary-button-theming(
+				$wds-fandom-color-mid-light-gray,
+				darken($wds-fandom-color-mid-light-gray, $wds-active-color-modification-factor)
+			);
 		}
 	}
 
@@ -261,7 +264,8 @@
 	}
 
 	.wds-avatar {
-		@include wds-avatar(30px, $wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-navy);
+		@include wds-avatar-size($wds-default-avatar-size);
+		@include wds-avatar-theming($wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-navy);
 	}
 
 	&__user-menu {

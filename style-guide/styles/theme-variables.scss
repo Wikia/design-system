@@ -26,7 +26,7 @@ $theme-border-color: $wds-color-faint-gray;
 	--theme-button-background-color: #{$theme-button-color};
 	--theme-button-background-color--opacity-15: #{rgba($theme-button-color, 0.15)};
 	--theme-button-background-color--hover: #{darken($theme-button-color, $wds-active-color-modification-factor)};
-	--theme-button-label-color: #{$wds-color-white};
+	--theme-button-label-color: #{$wds-fandom-color-text-dark};
 
 	--theme-overlay-color: #{rgba($theme-text-color, 0.5)};
 

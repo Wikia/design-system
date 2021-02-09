@@ -1,11 +1,33 @@
+@mixin wds-primary-button-theming($button-color, $button-hover-color, $button-label-color) {
+	--wds-primary-button-background-color: #{$button-color};
+	--wds-primary-button-background-color--hover: #{$button-hover-color};
+	--wds-primary-button-label-color: #{$button-label-color};
+}
+
+@mixin wds-secondary-button-theming($button-color, $button-hover-color) {
+	--wds-secondary-button-label-color: #{$button-color};
+	--wds-secondary-button-label-color--hover: #{$button-hover-color};
+}
+
+@mixin wds-text-button-theming($button-color, $button-hover-color) {
+	--wds-text-button-label-color: #{$button-color};
+	--wds-text-button-label-color--hover: #{$button-hover-color};
+}
+
 .wds-button {
-	--wds-primary-button-background-color: var(--theme-button-background-color);
-	--wds-primary-button-background-color--hover: var(--theme-button-background-color--hover);
-	--wds-primary-button-label-color: var(--theme-button-label-color);
-	--wds-secondary-button-label-color: var(--theme-text-color);
-	--wds-secondary-button-label-color--hover: var(--theme-text-color--hover);
-	--wds-text-button-label-color: var(--theme-text-color);
-	--wds-text-button-label-color--hover: var(--theme-text-color--hover);
+	@include wds-primary-button-theming(
+		var(--theme-button-background-color),
+		var(--theme-button-background-color--hover),
+		var(--theme-button-label-color)
+	);
+	@include wds-secondary-button-theming(
+		var(--theme-text-color),
+		var(--theme-text-color--hover)
+	);
+	@include wds-text-button-theming(
+		var(--theme-text-color),
+		var(--theme-text-color--hover)
+	);
 
 	align-items: center;
 	-webkit-appearance: none;

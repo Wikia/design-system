@@ -1,11 +1,38 @@
-@import '../../wds-mixins/ready/wds-avatar';
+@mixin wds-avatar-size($size: $wds-default-avatar-size) {
+	$badge-size: (0.2539 * $size) + 8px;
+	$badge-left: -$badge-size / 3.5;
+	$badge-top: -$badge-size / 2.5;
+
+	--wds-avatar-size: #{$size};
+	--wds-avatar-border-width: 2px;
+	--wds-avatar-badge-size: #{$badge-size};
+	--wds-avatar-badge-left: #{$badge-left};
+	--wds-avatar-badge-top: #{$badge-top};
+
+	@if($size >= 48px) {
+		--wds-avatar-border-width: 3px;
+		--wds-avatar-badge-left: #{$badge-left / 4.5};
+		--wds-avatar-badge-top: #{$badge-top / 3.5};
+	}
+
+	@if($size >= 120px) {
+		--wds-avatar-border-width: 4px;
+	}
+}
+
+@mixin wds-avatar-theming($border-color, $hover-color, $bg-color) {
+	--wds-avatar-border-color: #{$border-color};
+	--wds-avatar-border-color--hover: #{$hover-color};
+	--wds-avatar-background-color: #{$bg-color};
+}
 
 .wds-avatar {
-	@include wds-avatar();
-
-	--wds-avatar-border-color: var(--theme-border-color);
-	--wds-avatar-border-color--hover: var(--theme-link-color);
-	--wds-avatar-background-color: var(--theme-page-background-color);
+	@include wds-avatar-size();
+	@include wds-avatar-theming(
+		var(--theme-border-color),
+		var(--theme-link-color),
+		var(--theme-page-background-color)
+	);
 
 	display: inline-block;
 	position: relative;

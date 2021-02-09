@@ -6,7 +6,8 @@
 		border-top: 6px solid $wds-color-dark-blue;
 
 		.wds-global-navigation__modal-control-user .wds-avatar {
-			@include wds-avatar(30px, $wds-color-slate-gray, $wds-color-light-blue, $wds-color-white);
+			@include wds-avatar-size($wds-default-avatar-size);
+			@include wds-avatar-theming($wds-color-slate-gray, $wds-color-light-blue, $wds-color-white);
 		}
 
 		.wds-global-navigation__modal-control {
@@ -113,17 +114,18 @@
 		}
 
 		.wds-button:not(.wds-is-text) {
-			@include button-theming($wds-color-light-blue, $wds-color-white, $wds-color-light-blue, 'darker');
+			@include wds-primary-button-theming(
+				$wds-color-light-blue,
+				darken($wds-color-light-blue, $wds-active-color-modification-factor),
+				$wds-color-white
+			);
+
+			@include wds-secondary-button-theming(
+					$wds-color-light-blue, $wds-color-slate-gray
+			);
 
 			&.wds-is-secondary {
 				background: $wds-color-white;
-				border: 1px solid $wds-color-light-blue;
-				color: $wds-color-light-blue;
-
-				&:hover {
-					color: $wds-color-slate-gray;
-					border-color: $wds-color-slate-gray;
-				}
 			}
 		}
 	}
@@ -160,8 +162,13 @@
 		}
 
 		&-submit {
-			@include button-theming($wds-color-slate-gray, $wds-color-white, $wds-color-white, 'darker');
-			border-radius: 3px;
+			@include wds-primary-button-theming(
+				$wds-color-slate-gray,
+				darken($wds-color-slate-gray, $wds-active-color-modification-factor),
+				$wds-color-white
+			);
+
+			border-radius: $wds-rounded-corner-radius;
 			padding: 4px 10px;
 
 			&-icon {

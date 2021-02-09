@@ -1,13 +1,23 @@
+@mixin wds-dropdown-theming($bg-color, $border-color, $text-color, $link-color, $link-bg-color, $shadow-color) {
+	--wds-dropdown-background-color: #{$bg-color};
+	--wds-dropdown-border-color: #{$border-color};
+	--wds-dropdown-text-color: #{$text-color};
+	--wds-dropdown-linked-item-color: #{$link-color};
+	--wds-dropdown-linked-item-background-color: #{$link-bg-color};
+	--wds-dropdown-scrollable-shadow-color: #{$shadow-color};
+}
+
 .wds-dropdown {
 	$content-z-index: 1;
 
-	--dropdown-background-color: var(--theme-page-background-color--secondary);
-	--dropdown-border-color: var(--theme-border-color);
-	--dropdown-text-color: var(--theme-text-color);
-	--dropdown-linked-item-color: var(--theme-link-color);
-	--dropdown-linked-item-background-color: var(--theme-link-color--opacity-10);
-	--dropdown-scrollable-shadow-gradient: radial-gradient(farthest-side at 50% 0, var(--theme-text-color--opacity-10), transparent),
-		radial-gradient(farthest-side at 50% 100%, var(--theme-text-color--opacity-10), transparent);
+	@include wds-dropdown-theming(
+		var(--theme-page-background-color--secondary),
+		var(--theme-border-color),
+		var(--theme-text-color),
+		var(--theme-link-color),
+		var(--theme-link-color--opacity-10),
+		var(--theme-text-color--opacity-10)
+	);
 
 	display: inline-block;
 	position: relative;
@@ -22,9 +32,9 @@
 	}
 
 	&__content {
-		background-color: var(--dropdown-background-color);
-		border: $wds-dropdown-border-width solid var(--dropdown-border-color);
-		color: var(--dropdown-text-color);
+		background-color: var(--wds-dropdown-background-color);
+		border: $wds-dropdown-border-width solid var(--wds-dropdown-border-color);
+		color: var(--wds-dropdown-text-color);
 		border-radius: $wds-dropdown-border-radius;
 		display: none;
 		left: 50%;
@@ -50,7 +60,11 @@
 
 		// The default is to show scroll on long dropdowns
 		&:not(.wds-is-not-scrollable) .wds-list {
-			@include scrollable-list();
+			@include scrollable-list(
+				$wds-dropdown-height,
+				var(--wds-dropdown-background-color),
+				var(--wds-dropdown-scrollable-shadow-color)
+			);
 		}
 
 		&.wds-is-not-scrollable {
@@ -74,7 +88,7 @@
 					padding: 0;
 
 					> a:not(.wds-button) {
-						color: var(--dropdown-text-color);
+						color: var(--wds-dropdown-text-color);
 						padding-left: $wds-dropdown-padding / 2;
 						padding-right: $wds-dropdown-padding / 2;
 						text-decoration: none;
@@ -84,8 +98,8 @@
 
 					&:hover, &.wds-is-selected {
 						> a:not(.wds-button) {
-							background-color: var(--dropdown-linked-item-background-color);
-							color: var(--dropdown-linked-item-color);
+							background-color: var(--wds-dropdown-linked-item-background-color);
+							color: var(--wds-dropdown-linked-item-color);
 						}
 					}
 				}
@@ -108,13 +122,13 @@
 	&::after {
 		border: 8px solid transparent;
 		margin-left: -8px;
-		border-bottom-color: var(--dropdown-background-color);
+		border-bottom-color: var(--wds-dropdown-background-color);
 	}
 
 	&::before {
 		border: 9px solid transparent;
 		margin-left: -9px;
-		border-bottom-color: var(--dropdown-border-color);
+		border-bottom-color: var(--wds-dropdown-border-color);
 	}
 
 	&.wds-is-active,
@@ -167,12 +181,12 @@
 
 		&::before {
 			border-bottom-color: transparent;
-			border-top-color: var(--dropdown-border-color);
+			border-top-color: var(--wds-dropdown-border-color);
 		}
 
 		&::after {
 			border-bottom-color: transparent;
-			border-top-color: var(--dropdown-background-color);
+			border-top-color: var(--wds-dropdown-background-color);
 		}
 
 		.wds-dropdown__content {
@@ -206,9 +220,9 @@
 	}
 
 	.wds-dropdown-level-2__content {
-		background-color: var(--dropdown-background-color);
-		border: $wds-dropdown-border-width solid var(--dropdown-border-color);
-		color: var(--dropdown-text-color);
+		background-color: var(--wds-dropdown-background-color);
+		border: $wds-dropdown-border-width solid var(--wds-dropdown-border-color);
+		color: var(--wds-dropdown-text-color);
 		border-radius: $wds-dropdown-border-radius;
 		display: none;
 		left: 100%;

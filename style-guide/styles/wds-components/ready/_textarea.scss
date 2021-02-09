@@ -1,8 +1,17 @@
+@mixin wds-textarea-theming($border-color, $text-color, $placeholder-color, $hint-color) {
+	--wds-textarea-border-color: #{$border-color};
+	--wds-textarea-text-color: #{$text-color};
+	--wds-textarea-placeholder-color: #{$placeholder-color};
+	--wds-textarea-hint-color: #{$hint-color};
+}
+
 .wds-textarea {
-	--wds-textarea-border-color: var(--theme-border-color);
-	--wds-textarea-text-color: var(--theme-text-color);
-	--wds-textarea-placeholder-color: var(--theme-text-color--placeholder);
-	--textarea-hint-color: var(--theme-text-color--placeholder);
+	@include wds-textarea-theming(
+		var(--theme-border-color),
+		var(--theme-text-color),
+		var(--theme-text-color--placeholder),
+		var(--theme-text-color--placeholder)
+	);
 
 	$field-bottom-padding: 6px;
 
@@ -32,7 +41,7 @@
 	}
 
 	&__hint {
-		color: var(--textarea-hint-color);
+		color: var(--wds-textarea-hint-color);
 		display: flex;
 		font-size: 12px;
 		justify-content: space-between;
@@ -41,7 +50,7 @@
 
 	&__length-hint {
 		bottom: $field-bottom-padding;
-		color:var(--textarea-hint-color);
+		color:var(--wds-textarea-hint-color);
 		font-size: 12px;
 		position: absolute;
 		right: 0;
