@@ -4,7 +4,7 @@
 	$notification-counter-size: 18px;
 	$scroll-animation-duration: .4s;
 
-	background-color: var(--global-navigation-background-color);
+	background-color: $wds-fandom-color-navy;
 	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
@@ -103,6 +103,11 @@
 		height: 100%;
 		padding: 10px;
 
+		svg,
+		.wds-avatar__image {
+			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
+		}
+
 		&-search {
 			// force search control to be over the community bar element
 			position: relative;
@@ -110,19 +115,27 @@
 
 		&-search,
 		&-close {
-			color: var(--global-navigation-link-color);
+			svg {
+				fill: $wds-fandom-color-aqua;
+			}
 		}
 
 		&-close {
-			color: var(--global-navigation-text-color);
 			display: none;
+
+			svg {
+				fill: $wds-color-white;
+			}
 		}
 
 		&:hover {
-			color: var(--global-navigation-text-color);
+			svg {
+				fill: $wds-color-white;
+			}
 
 			.wds-avatar__image {
-				--wds-avatar-border-color: var(--global-navigation-text-color);
+				border-color: $wds-color-white;
+				fill: $wds-color-white;
 			}
 		}
 	}
@@ -150,20 +163,20 @@
 	&__link,
 	&__start-a-wiki {
 		align-items: center;
-		color: var(--global-navigation-link-color);
+		color: $wds-fandom-color-aqua;
 		display: flex;
 		height: 100%;
 		margin-left: 30px;
 		text-decoration: none;
 
 		&:visited {
-			color: var(--global-navigation-link-color) !important;
+			color: $wds-fandom-color-aqua !important;
 		}
 
 		&:hover,
 		&:focus,
 		&:active {
-			color: var(--global-navigation-text-color) !important;
+			color: $wds-color-white !important;
 		}
 
 		.wds-dropdown__toggle-chevron {
@@ -191,8 +204,7 @@
 		}
 
 		.wds-button.wds-is-secondary:not(:disabled) {
-			--wds-secondary-button-label-color: #{$wds-fandom-color-mid-light-gray};
-			--wds-secondary-button-label-color--hover: #{darken($wds-fandom-color-mid-light-gray, $wds-active-color-modification-factor)};
+			@include button-theming($wds-fandom-color-mid-light-gray, $wds-fandom-color-mid-light-gray);
 		}
 	}
 
@@ -207,13 +219,13 @@
 	}
 
 	&__user-menu-dropdown-caption {
-		font-size: $wds-font-size-xs;
+		font-size: $wds-typescale-size-minus-2;
 		padding-bottom: 10px;
 		text-align: center;
 	}
 
 	&__notifications-dropdown {
-		color: var(--global-navigation-link-color);
+		color: $wds-fandom-color-aqua;
 		height: 100%;
 		margin-left: 12px;
 		position: relative;
@@ -221,7 +233,7 @@
 		width: 44px;
 
 		&:hover {
-			color: var(--global-navigation-text-color);
+			color: $wds-color-white;
 		}
 	}
 
@@ -233,7 +245,7 @@
 		box-sizing: border-box;
 		color: $wds-fandom-color-navy;
 		display: flex;
-		font-size: $wds-font-size-xxs;
+		font-size: $wds-typescale-size-minus-3;
 		height: $notification-counter-size;
 		justify-content: center;
 		left: -5px;
@@ -249,13 +261,26 @@
 	}
 
 	.wds-avatar {
-		--wds-avatar-border-color: var(--global-navigation-link-color);
-		--wds-avatar-border-color--hover: var(--global-navigation-text-color);
-		--wds-avatar-background-color: var(--global-navigation-background-color);
+		@include wds-avatar(30px, $wds-fandom-color-aqua, $wds-color-white, $wds-fandom-color-navy);
 	}
 
 	&__user-menu {
 		margin-left: 12px;
+
+		.wds-avatar__image {
+			transition: border-color $wds-button-transition-duration, fill $wds-button-transition-duration;
+		}
+
+		.wds-button {
+			color: $wds-fandom-color-black;
+		}
+
+		&:hover {
+			.wds-avatar__image {
+				border-color: $wds-color-white;
+				fill: $wds-color-white;
+			}
+		}
 	}
 
 	&__link-group, &__user-menu {
@@ -289,9 +314,6 @@
 				color: $wds-color-dark-blue-gray;
 
 				.wds-button {
-					--wds-secondary-button-label-color: #{$wds-fandom-color-dark-gray};
-					--wds-secondary-button-label-color--hover: #{lighten($wds-fandom-color-dark-gray, $wds-active-color-modification-factor)};
-
 					padding-bottom: 7px;
 					padding-top: 8px;
 				}
@@ -312,9 +334,6 @@
 	}
 
 	&__link-button {
-		--wds-secondary-button-label-color: #{$wds-fandom-color-dark-gray};
-		--wds-secondary-button-label-color--hover: #{lighten($wds-fandom-color-dark-gray, $wds-active-color-modification-factor)};
-
 		margin: 6px;
 		text-align: center;
 	}
@@ -344,7 +363,7 @@
 	}
 
 	&__logo-heart {
-		background-color: var(--global-navigation-background-color);
+		background-color: #002a33;
 		box-sizing: content-box;
 		height: 100%;
 		width: 27px;

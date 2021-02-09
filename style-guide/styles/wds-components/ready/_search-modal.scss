@@ -1,10 +1,10 @@
 .wds-search-modal {
-	background-color: rgba($wds-fandom-color-light-gray, .9);
+	background-color: var(--custom-page-background-color);
 	display: flex;
 	flex-direction: column;
 
 	&__form-and-links-wrapper {
-		background-color: $wds-fandom-color-navy;
+		background-color: var(--global-navigation-background-color);
 		padding: 0 12px 12px;
 
 		.wds-global-navigation__links {
@@ -25,11 +25,6 @@
 		.wds-global-navigation__search-suggestions {
 			top: calc(100% + 12px);
 		}
-	}
-
-	&__search-icon {
-		fill: $wds-color-white;
-		margin-right: 12px;
 	}
 }
 

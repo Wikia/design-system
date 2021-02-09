@@ -1,5 +1,10 @@
 .wds-notifications {
-	--wds-notifications-text-color: var(--custom-text-color--secondary);
+	--wds-notifications-text-color: var(--custom-text-color--opacity-50);
+	--wds-notifications-snippet-color: var($wds-fandom-color-dark-gray);
+
+	$snippet-color: $wds-fandom-color-dark-gray;
+	$context-color: $wds-fandom-color-dark-gray;
+	$icon-color: $wds-fandom-color-middle-gray;
 
 	$content-padding: 18px;
 
@@ -11,8 +16,8 @@
 	}
 
 	&__mark-all-as-read {
-		border-bottom: solid 1px $wds-fandom-color-mid-light-gray;
-		color: $wds-fandom-color-link;
+		border-bottom: solid 1px var(--custom-border-color);
+		color: var(--custom-link-color);
 		cursor: pointer;
 		font-size: $wds-font-size-xs;
 		font-weight: bold;
@@ -64,11 +69,6 @@
 }
 
 .wds-notification-card {
-	$text-color: $wds-fandom-color-black;
-	$snippet-color: $wds-fandom-color-dark-gray;
-	$context-color: $wds-fandom-color-dark-gray;
-	$icon-color: $wds-fandom-color-middle-gray;
-
 	padding: 12px 0 8px;
 	text-align: left;
 
@@ -109,7 +109,6 @@
 	}
 
 	&__text {
-		color: $text-color;
 		font-size: $wds-font-size-s;
 		line-height: 18px;
 		margin: 0;
@@ -119,7 +118,6 @@
 	}
 
 	&__last-actor {
-		color: $text-color;
 		font-weight: 200;
 		font-size: $wds-font-size-xs;
 		margin: 8px 0 0;
@@ -179,7 +177,7 @@
 
 		&__mark-all-as-read-button {
 			align-items: baseline;
-			border-bottom: 1px solid $wds-color-medium-gray;
+			border-bottom: 1px solid var(--custom-text-color);
 			justify-content: space-between;
 			margin: 0 12px;
 			width: unset;

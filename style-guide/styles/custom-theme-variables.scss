@@ -10,7 +10,6 @@ $custom-border-color: $wds-color-faint-gray;
 	--custom-page-background-color--secondary: #{$custom-page-background-color};
 
 	--custom-text-color: #{$custom-text-color};
-	--custom-text-color--secondary: #{$wds-color-slate-gray};
 	--custom-text-color--hover: #{lighten($custom-text-color, $wds-active-color-modification-factor)};
 	--custom-text-color--opacity-5: #{rgba($custom-text-color, 0.05)};
 	--custom-text-color--opacity-10: #{rgba($custom-text-color, 0.1)};
@@ -27,7 +26,7 @@ $custom-border-color: $wds-color-faint-gray;
 	--custom-button-background-color: #{$custom-button-color};
 	--custom-button-background-color--opacity-15: #{rgba($custom-button-color, 0.15)};
 	--custom-button-background-color--hover: #{darken($custom-button-color, $wds-active-color-modification-factor)};
-	--custom-button-label-color: #{$wds-fandom-color-text-dark};
+	--custom-button-label-color: #{$wds-color-white};
 
 	--custom-overlay-color: #{rgba($custom-text-color, 0.5)};
 
