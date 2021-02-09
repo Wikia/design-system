@@ -14,7 +14,6 @@ $theme-border-color: $wds-color-faint-gray;
 	--theme-text-color--opacity-5: #{rgba($theme-text-color, 0.05)};
 	--theme-text-color--opacity-10: #{rgba($theme-text-color, 0.1)};
 	--theme-text-color--opacity-50: #{rgba($theme-text-color, 0.5)};
-	--theme-text-color--placeholder: #{$wds-color-faint-gray};
 
 	--theme-link-color: #{$theme-link-color};
 	--theme-link-color--hover: #{lighten($theme-link-color, $wds-active-color-modification-factor)};
@@ -44,4 +43,6 @@ $theme-border-color: $wds-color-faint-gray;
 	--global-navigation-link-color: #{$wds-fandom-color-aqua};
 	--global-navigation-text-color: #{$wds-color-white};
 	--global-navigation-border-color: #{$theme-border-color};
+
+	--theme-alert-color: $wds-color-alert;
 }

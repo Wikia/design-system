@@ -1,4 +1,16 @@
+@mixin wds-input-theming($border-color, $text-color, $secondary-text-color) {
+	--wds-input-border-color: #{$border-color};
+	--wds-input-text-color: #{$text-color};
+	--wds-input-text-color--secondary: #{$secondary-text-color};
+}
+
 .wds-input {
+	@include wds-input-theming(
+		var(--theme-border-color),
+		var(--theme-text-color),
+		var(--theme-text-color--opacity-50)
+	);
+
 	margin: 30px 0 18px;
 	position: relative;
 
@@ -8,10 +20,9 @@
 
 	&__field {
 		border: 0;
-		// keep value in sync with `BOTTOM_BORDER_WIDTH` from Input component
-		border-bottom: 1px solid $wds-color-blue-gray;
+		border-bottom: 1px solid var(--wds-input-border-color);
 		box-sizing: border-box;
-		color: $wds-color-dark-blue-gray;
+		color: var(--wds-input-text-color);
 		font-size: $wds-font-size-base;
 		line-height: 1em;
 		padding: 0;
@@ -31,7 +42,7 @@
 	}
 
 	&__label {
-		color: $wds-color-blue-gray;
+		color: var(--wds-input-text-color--secondary);
 		font-size: $wds-font-size-xs;
 		left: 0;
 		line-height: .75rem;
@@ -42,15 +53,15 @@
 	}
 
 	&__hint {
-		color: $wds-color-blue-gray;
+		color: var(--wds-input-text-color--secondary);
 		font-size: $wds-font-size-xs;
 		line-height: .75rem;
 		margin-top: 6px;
 	}
 
 	&.is-empty > &__field {
-		border-bottom-color: $wds-color-blue-gray;
-		color: $wds-color-blue-gray;
+		border-bottom-color: var(--wds-input-border-color);
+		color: var(--wds-input-text-color--secondary);
 	}
 
 	&.is-empty > &__field ~ &__label {
@@ -65,33 +76,33 @@
 	}
 
 	&.is-empty > &__hint {
-		color: $wds-color-blue-gray;
+		color: var(--wds-input-text-color--secondary);
 	}
 
 	&.is-focused > &__field {
-		border-color: $wds-color-dark-blue-gray;
+		border-color: var(--wds-input-text-color);
 	}
 
 	&.is-focused > &__hint {
-		color: $wds-color-dark-blue-gray;
+		color: var(--wds-input-text-color);
 	}
 
 	&.has-error > &__label {
-		color: $wds-color-alert;
+		color: var(--theme-alert-color);
 	}
 
 	&.has-error > &__field {
-		border-bottom-color: $wds-color-alert;
+		border-bottom-color: var(--theme-alert-color);
 	}
 
 	&.has-error > &__hint {
-		color: $wds-color-alert;
+		color: var(--theme-alert-color);
 	}
 
 	&.is-disabled > &__field {
-		border-bottom-color: $wds-color-blue-gray;
+		border-bottom-color: var(--wds-input-border-color);
 		border-bottom-style: dashed;
-		color: $wds-color-blue-gray;
+		color: var(--wds-input-text-color--secondary);
 	}
 
 	&.is-readonly,

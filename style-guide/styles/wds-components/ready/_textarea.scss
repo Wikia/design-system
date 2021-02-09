@@ -1,16 +1,14 @@
-@mixin wds-textarea-theming($border-color, $text-color, $placeholder-color, $hint-color) {
+@mixin wds-textarea-theming($border-color, $text-color, $secondary-text-color) {
 	--wds-textarea-border-color: #{$border-color};
 	--wds-textarea-text-color: #{$text-color};
-	--wds-textarea-placeholder-color: #{$placeholder-color};
-	--wds-textarea-hint-color: #{$hint-color};
+	--wds-textarea-text-color--secondary: #{$secondary-text-color};
 }
 
 .wds-textarea {
 	@include wds-textarea-theming(
 		var(--theme-border-color),
 		var(--theme-text-color),
-		var(--theme-text-color--placeholder),
-		var(--theme-text-color--placeholder)
+		var(--theme-text-color--opacity-50)
 	);
 
 	$field-bottom-padding: 6px;
@@ -36,12 +34,12 @@
 		width: 100%;
 
 		&::placeholder {
-			color: var(--textarea-placeholder-color);
+			color: var(--wds-textarea-text-color--secondary);
 		}
 	}
 
 	&__hint {
-		color: var(--wds-textarea-hint-color);
+		color: var(--wds-textarea-text-color--secondary);
 		display: flex;
 		font-size: 12px;
 		justify-content: space-between;
@@ -50,7 +48,7 @@
 
 	&__length-hint {
 		bottom: $field-bottom-padding;
-		color:var(--wds-textarea-hint-color);
+		color:var(--wds-textarea-text-color--secondary);
 		font-size: 12px;
 		position: absolute;
 		right: 0;
@@ -59,11 +57,11 @@
 	&.wds-has-error {
 		.wds-textarea {
 			&__field {
-				border-color: $wds-color-alert;
+				border-color: var(--theme-alert-color);
 			}
 
 			&__hint {
-				color: $wds-color-alert;
+				color: var(--theme-alert-color);
 			}
 		}
 	}
