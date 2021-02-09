@@ -22,10 +22,13 @@
 	text-transform: none;
 }
 
-.wds-midlight-aqua {
-	@include wds-midlight(rgba($wds-fandom-color-aqua, .25));
+.wds-midlight {
+	--wds-midlight--color: var(--custom-button-background-color--opacity-15);
+
+	background-image: linear-gradient(to top, var(--wds-midlight--color) 54%, transparent 54%, transparent 100%);
+	box-decoration-break: clone;
+	display: inline;
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
-.wds-midlight-navy {
-	@include wds-midlight(rgba($wds-fandom-color-navy, .1));
-}

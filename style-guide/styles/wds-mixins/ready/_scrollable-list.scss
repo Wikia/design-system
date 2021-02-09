@@ -1,0 +1,33 @@
+@mixin scrollable-list() {
+	--wds-scrollable-list-max-height: #{$wds-dropdown-height};
+	--wds-scrollable-list-background-color: var(--custom-page-background-color--secondary);
+	--wds-scrollable-list-shadow: radial-gradient(farthest-side at 50% 0, var(--custom-text-color--opacity-10), transparent),
+		radial-gradient(farthest-side at 50% 100%, var(--custom-text-color--opacity-10), transparent);
+
+	background: {
+		image: var(--wds-scrollable-list-shadow);
+		position: 0 0, 0 100%;
+		repeat: no-repeat;
+		size: 100% 9px;
+	}
+	max-height: var(--wds-scrollable-list-max-height);
+	overflow-y: auto;
+	position: relative;
+	z-index: 1;
+
+	&::after,
+	&::before {
+		background-color: var(--wds-scrollable-list-background-color);
+		content: '';
+		display: block;
+		height: 30px;
+		margin: 0 0 -30px;
+		position: relative;
+		z-index: -1;
+	}
+
+	&::after {
+		background-color: var(--wds-scrollable-list-background-color);
+		margin: -29px 0 0;
+	}
+}

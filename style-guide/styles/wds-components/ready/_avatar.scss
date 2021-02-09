@@ -3,22 +3,22 @@
 .wds-avatar {
 	@include wds-avatar();
 
-	--avatar-border-color: var(--custom-border-color);
-	--avatar-border-color--hover: var(--custom-link-color);
-	--avatar-background-color: var(--custom-page-background-color);
+	--wds-avatar-border-color: var(--custom-border-color);
+	--wds-avatar-border-color--hover: var(--custom-link-color);
+	--wds-avatar-background-color: var(--custom-page-background-color);
 
 	display: inline-block;
 	position: relative;
 
-	@include square(var(--avatar-size));
+	@include square(var(--wds-avatar-size));
 
 	a {
-		color: var(--avatar-border-color);
+		color: var(--wds-avatar-border-color);
 		height: 100%;
 		width: 100%;
 
 		&:hover {
-			color: var(--avatar-border-color--hover);
+			color: var(--wds-avatar-border-color--hover);
 		}
 	}
 
@@ -27,28 +27,28 @@
 
 		border-radius: 50%;
 		box-sizing: border-box;
-		background-color: var(--avatar-background-color);
-		color: var(--avatar-border-color);
+		background-color: var(--wds-avatar-background-color);
+		color: var(--wds-avatar-border-color);
 		display: inline-block;
 		fill: currentColor;
 		transition: border-color $wds-button-transition-duration, color $wds-button-transition-duration;
 
 		&:hover {
-			color: var(--avatar-border-color--hover);
+			color: var(--wds-avatar-border-color--hover);
 		}
 	}
 
 	img.wds-avatar__image {
-		border: solid var(--avatar-border-width) currentColor;
+		border: solid var(--wds-avatar-border-width) currentColor;
 	}
 
 	&__badge {
-		@include square(var(--avatar-badge-size));
+		@include square(var(--wds-avatar-badge-size));
 
-		left: var(--avatar-badge-left);
+		left: var(--wds-avatar-badge-left);
 		line-height: 0;
 		position: absolute;
-		top: var(--avatar-badge-top);
+		top: var(--wds-avatar-badge-top);
 
 		svg {
 			@include square(100%);

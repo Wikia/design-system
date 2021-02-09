@@ -49,35 +49,8 @@
 		}
 
 		// The default is to show scroll on long dropdowns
-		&:not(.wds-is-not-scrollable) {
-			.wds-list {
-				background: {
-					image: var(--dropdown-scrollable-shadow-gradient);
-					position: 0 0, 0 100%;
-					repeat: no-repeat;
-					size: 100% 9px;
-				}
-				max-height: $wds-dropdown-height;
-				overflow-y: auto;
-				position: relative;
-				z-index: 1;
-
-				&::after,
-				&::before {
-					background-color: var(--dropdown-background-color);
-					content: '';
-					display: block;
-					height: 30px;
-					margin: 0 0 -30px;
-					position: relative;
-					z-index: -1;
-				}
-
-				&::after {
-					background-color: var(--dropdown-background-color);
-					margin: -29px 0 0;
-				}
-			}
+		&:not(.wds-is-not-scrollable) .wds-list {
+			@include scrollable-list();
 		}
 
 		&.wds-is-not-scrollable {
