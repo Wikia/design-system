@@ -15,8 +15,8 @@
 		var(--theme-border-color),
 		var(--theme-text-color),
 		var(--theme-link-color),
-		var(--theme-link-color--opacity-10),
-		var(--theme-text-color--opacity-10)
+		rgba(var(--theme-link-color--rgb), 0.1),
+		rgba(var(--theme-text-color--rgb), 0.1),
 	);
 
 	display: inline-block;

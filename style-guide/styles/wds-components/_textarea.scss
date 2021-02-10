@@ -8,7 +8,7 @@
 	@include wds-textarea-theming(
 		var(--theme-border-color),
 		var(--theme-text-color),
-		var(--theme-text-color--opacity-50)
+		rgba(var(--theme-text-color--rgb), 0.5)
 	);
 
 	$field-bottom-padding: 6px;

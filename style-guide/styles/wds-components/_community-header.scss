@@ -20,7 +20,7 @@
 		--theme-header-gradient-start: 200px;
 		--theme-header-gradient-end: #{$wds-community-header-background-width};
 
-		background: linear-gradient(to right, var(--theme-header-background-color--opacity-50), var(--theme-header-background-color--opacity-50)),
+		background: linear-gradient(to right, rgba(var(--theme-header-background-color--rgb), 0.5), rgba(var(--theme-header-background-color--rgb), 0.5)),
 			linear-gradient(to left, transparent var(--theme-header-gradient-start), var(--theme-header-background-color) var(--theme-header-gradient-end));
 		content: '';
 		display: block;
@@ -181,11 +181,11 @@
 			var(--theme-header-text-color--hover)
 		);
 
-		background-color: var(--theme-header-background-color--opacity-20);
+		background-color: rgba(var(--theme-header-background-color--rgb), 0.2);
 		transition-property: border-color, background-color, color;
 
 		&:hover {
-			background-color: var(--theme-header-background-color--opacity-40);
+			background-color: rgba(var(--theme-header-background-color--rgb), 0.4);
 		}
 	}
 

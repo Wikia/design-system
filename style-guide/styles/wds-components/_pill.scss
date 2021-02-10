@@ -9,10 +9,10 @@
 
 .wds-pill {
 	@include wds-pill-theming(
-		var(--theme-text-color--opacity-5),
+		rgba(var(--theme-text-color--rgb), 0.05),
 		var(--theme-border-color),
 		var(--theme-text-color),
-		var(--theme-button-background-color--opacity-15),
+		rgba(var(--theme-button-background-color--rgb), 0.15),
 		var(--theme-button-background-color),
 		var(--theme-text-color)
 	);
