@@ -2,6 +2,10 @@
 	background-image: linear-gradient(to top, $background-color 54%, transparent 54%, transparent 100%);
 	box-decoration-break: clone;
 	display: inline;
+	// Setting margins is to recompensate midlight paddings, which cause title element to be 6px wider than originally.
+	// That caused content shift in some cases, when en element with midlight didn't fit after styles loaded.
+	margin-left: -3px;
+	margin-right: -3px;
 	padding-left: 3px;
 	padding-right: 3px;
 }
