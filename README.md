@@ -1,3 +1,5 @@
+*This repository is deprecated - use https://github.com/Wikia/fandom-frontend instead*
+
 # Fandom Design System
 
 Reference Page and documentation are available at [http://fandomdesignsystem.com](http://fandomdesignsystem.com).
