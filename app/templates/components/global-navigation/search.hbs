@@ -18,38 +18,6 @@
     </span>
   </div>
 
-  {{#if showSearchScope}}
-    <Dropdown class="wds-global-navigation__search-scope-dropdown" as |scope-dropdown|>
-      <scope-dropdown.toggle
-              class="wds-global-navigation__search-input-wrapper">
-            <span>
-              {{i18n searchScopeMessageKey ns="design-system"}}
-            </span>
-        <Icon
-                @name="wds-icons-dropdown-tiny"
-                @size="tiny"
-                class="wds-dropdown__toggle-chevron"
-        />
-        &nbsp;
-        <span class="wds-global-navigation__search-input"> </span>
-      </scope-dropdown.toggle>
-      <scope-dropdown.content style="z-index: 101" @class="wds-is-not-scrollable">
-        <List @linked={{true}} @ellipsis={{true}}>
-          <li {{action "changeSearchScope" 'internal' on "click"}}>
-            <a>
-              {{i18n "global-navigation-search-scope-internal-wiki" ns="design-system"}}
-            </a>
-          </li>
-          <li {{action "changeSearchScope" 'cross-wiki' on "click"}}>
-            <a>
-              {{i18n "global-navigation-search-scope-cross-wiki" ns="design-system"}}
-            </a>
-          </li>
-        </List>
-      </scope-dropdown.content>
-    </Dropdown>
-  {{/if}}
-
   <Dropdown
     @dropdownExpanded={{hasSuggestions}}
     @noChevron={{true}}
