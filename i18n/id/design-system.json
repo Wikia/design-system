@@ -171,5 +171,6 @@
   "wds-avatar-badges-vstf-tooltip": "VSTF", 
   "wds-fandom-homepage-aria-label": "Beranda fandom", 
   "wds-gamepedia-homepage-aria-label": "Beranda Gamepedia", 
-  "wds-wikiaorg-homepage-aria-label": "Beranda wikia.org"
+  "wds-wikiaorg-homepage-aria-label": "Beranda wikia.org",
+  "global-footer-company-overview-link-what-is-fandom": "What is Fandom?"
 }
