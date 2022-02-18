@@ -60,9 +60,6 @@
     {{else if model.anon}}
       {{global-navigation/anon model=model.anon}}
     {{/if}}
-    {{#if model.user}}
-      {{on-site-notifications/notifications-dropdown track=track}}
-    {{/if}}
     {{#unless isWikiaOrg}}
       <div class="wds-global-navigation__start-a-wiki">
         {{global-navigation/link-button
@@ -95,18 +92,7 @@
         class="wds-global-navigation__modal-control wds-global-navigation__modal-control-user"
       >
         <Avatar @src={{model.user.avatar_url}} @alt={{model.user.username}} />
-        {{#if wdsOnSiteNotifications.unreadCountWithLimit}}
-          <span class="wds-global-navigation__avatar-notifications-counter">
-            {{wdsOnSiteNotifications.unreadCountWithLimit}}
-          </span>
-        {{/if}}
       </Button>
-      {{global-navigation/user-modal
-        isOpen=isUserModalOpen
-        user=model.user
-        header=model.notifications.header.title.key
-        track=track
-      }}
     {{else if model.anon}}
       <Button
         @onClick={{action closeModal}}
