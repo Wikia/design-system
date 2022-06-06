@@ -120,31 +120,6 @@
 				}
 			]
 		},
-		"ddb_stores": {
-			"image": {
-				"name": "wds-company-store-logo-ddb",
-				"caption": {
-					"type": "text",
-					"value": "D&D Beyond"
-				}
-			},
-			"links": [
-				{
-					"type": "link-image",
-					"image-data": {
-						"name": "wds-company-store-appstore"
-					},
-					"href": "https:\/\/apps.apple.com\/us\/app\/d-d-beyond\/id1263629972"
-				},
-				{
-					"type": "link-image",
-					"image-data": {
-						"name": "wds-company-store-googleplay"
-					},
-					"href": "https:\/\/play.google.com\/store\/apps\/details?id=com.curse.dndbeyond&hl=en"
-				}
-			]
-		},
 		"advertise": {
 			"header": {
 				"type": "line-text",
@@ -221,14 +196,6 @@
 						"value": "Gamepedia"
 					},
 					"href": "https:\/\/www.gamepedia.com\/"
-				},
-				{
-					"type": "link-text",
-					"title": {
-						"type": "text",
-						"value": "D&D Beyond"
-					},
-					"href": "https:\/\/www.dndbeyond.com\/"
 				},
 				{
 					"type": "link-text",

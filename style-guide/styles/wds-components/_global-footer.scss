@@ -147,29 +147,11 @@
 		}
 
 		&.wds-is-fandom-stores {
+			display: flex;
+			line-height: 0;
 			padding-bottom: 20px;
 			margin-top: 14px;
 			position: relative;
-
-			&::after {
-				border-bottom: 1px solid $wds-fandom-color-dark-gray;
-				display: block;
-				content: '';
-				position: absolute;
-				left: 0;
-				width: 230px;
-				bottom: 0;
-				height: 1px;
-			}
-		}
-
-		&.wds-is-ddb-stores {
-			margin-top: 20px;
-		}
-
-		&.wds-is-fandom-stores, &.wds-is-ddb-stores {
-			display: flex;
-			line-height: 0;
 
 			.wds-global-footer__image {
 				margin: 0 19px 0 0;
