@@ -91,18 +91,6 @@ export default {
 			),
 		},
 
-		ddb_stores: {
-			scope: 'section.wds-global-footer__section.wds-is-ddb-stores',
-
-			links: collection(
-				'ul.wds-global-footer__links-list li.wds-global-footer__links-list-item',
-				{
-					link: { scope: 'a' },
-					text: text('div'),
-				},
-			),
-		},
-
 		advertise: {
 			scope: 'section.wds-global-footer__section.wds-is-advertise',
 
