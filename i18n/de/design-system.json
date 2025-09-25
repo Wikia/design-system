@@ -171,5 +171,6 @@
   "wds-avatar-badges-vstf-tooltip": "VSTF", 
   "wds-fandom-homepage-aria-label": "Fandom-Homepage", 
   "wds-gamepedia-homepage-aria-label": "Gamepedia-Homepage", 
-  "wds-wikiaorg-homepage-aria-label": "Wikia.org-Homepage"
+  "wds-wikiaorg-homepage-aria-label": "Wikia.org-Homepage",
+  "global-footer-company-overview-link-what-is-fandom": "Was is Fandom?"
 }
