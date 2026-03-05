@@ -28,7 +28,7 @@ export default function () {
 
 	this.passthrough('/svg/**');
 
-	this.get('https://services.wikia.com/on-site-notifications/notifications/unread-count', () => {
+	this.get('https://services.fandom.com/on-site-notifications/notifications/unread-count', () => {
 		return {
 			"unreadCount": 1,
 			"_links": { "notificationsUrl": "/notifications?startingTimestamp=2018-06-01T10:44:13.309Z" }
@@ -45,7 +45,7 @@ export default function () {
 		};
 	});
 
-	this.get('https://services.wikia.com/on-site-notifications/notifications', () => {
+	this.get('https://services.fandom.com/on-site-notifications/notifications', () => {
 		return {
 			"notifications": [
 				{
