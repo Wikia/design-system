@@ -142,7 +142,7 @@
         "tracking-label": "account.register"
       }
     },
-    "services-domain": "https:\/\/services.wikia.com\/"
+    "services-domain": "https:\/\/services.fandom.com\/"
   },
   "logged-in-default": {
     "logo": {
@@ -336,7 +336,7 @@
         "url": "\/\/starwars.wikia.com\/wiki\/User_talk:Ryba777"
       }
     },
-    "services-domain": "https:\/\/services.wikia.com\/"
+    "services-domain": "https:\/\/services.fandom.com\/"
   },
   "logged-out-wikia-org": {
     "logo": {
@@ -417,6 +417,6 @@
         "tracking-label": "account.register"
       }
     },
-    "services-domain": "https:\/\/services.wikia.com\/"
+    "services-domain": "https:\/\/services.fandom.com\/"
   }
 }

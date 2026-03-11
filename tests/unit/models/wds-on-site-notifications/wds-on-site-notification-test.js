@@ -21,7 +21,7 @@ function getNotificationStub() {
 		type: 'announcement-notification',
 		community: { id: '1308778', name: 'Rybatest Wikia' },
 		refersTo: {
-			uri: 'https://services.wikia.com/announcements/announcements/3808',
+			uri: 'https://services.fandom.com/announcements/announcements/3808',
 			createdBy: '4083617',
 			type: 'announcement',
 			snippet: 'Hey Been trying to meet you!',
@@ -76,7 +76,7 @@ module(
 			assert.equal(notification.snippet, 'Hey Been trying to meet you!');
 			assert.equal(
 				notification.uri,
-				'https://services.wikia.com/announcements/announcements/3808',
+				'https://services.fandom.com/announcements/announcements/3808',
 			);
 			assert.equal(
 				notification.latestEventUri,
@@ -231,7 +231,7 @@ module(
 				assert.equal(uri, '/notifications/mark-as-read/by-uri');
 				assert.deepEqual(options, {
 					body:
-						'["https://services.wikia.com/announcements/announcements/3808"]',
+						'["https://services.fandom.com/announcements/announcements/3808"]',
 					headers: {
 						'Content-Type': 'application/json',
 					},
@@ -256,7 +256,7 @@ module(
 				assert.equal(uri, '/notifications/mark-as-read/by-uri');
 				assert.deepEqual(options, {
 					body:
-						'["https://services.wikia.com/announcements/announcements/3808"]',
+						'["https://services.fandom.com/announcements/announcements/3808"]',
 					headers: {
 						'Content-Type': 'application/json',
 					},
