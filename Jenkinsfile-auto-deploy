@@ -1,6 +1,5 @@
 import groovy.json.JsonSlurperClassic
 
-def authHeader = "-H 'Authorization: token ${GITHUB_TOKEN}'"
 def contentTypeHeader = "-H 'Content-type: application/json'"
 def issueUrl = "https://api.github.com/repos/Wikia/design-system/issues/${params.pull_num}"
 def labels = "${params.labels}"

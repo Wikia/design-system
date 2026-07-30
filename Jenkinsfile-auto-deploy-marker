@@ -1,9 +1,10 @@
 def issueUrl = "https://api.github.com/repos/Wikia/design-system/issues/${params.pull_num}"
-def authHeader = "-H 'Authorization: token ${GITHUB_TOKEN}'"
+def authHeader = "-H 'Authorization: token \$GITHUB_TOKEN'"
 def contentTypeHeader = "-H 'Content-type: application/json'"
 def labels = "${params.labels}"
 
 node('linux') {
+	withCredentials([usernamePassword(credentialsId: 'wikia-jenkins-github', usernameVariable: 'GITHUB_USERNAME', passwordVariable: 'GITHUB_TOKEN')]) {
 	try {
 		stage('Add label to GitHub repo') {
 			def githubUsername = "WikiaJenkins"
@@ -29,5 +30,6 @@ node('linux') {
 	} catch (Exception e) {
 		currentBuild.result = 'FAILURE'
         println e
+	}
 	}
 }
